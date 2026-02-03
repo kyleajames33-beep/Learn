@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 1 – The Mole & Avogadro's Number</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+--bg: #f8fafc;
+--surface: #ffffff;
+--surface-elevated: #f1f5f9;
+--primary: #2563eb;
+--secondary: #059669;
+--accent: #d97706;
+--critical: #7c3aed;
+--danger: #dc2626;
+--text: #0f172a;
+--text-muted: #64748b;
+--border: #e2e8f0;
+--gradient-1: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+--gradient-2: linear-gradient(135deg, #059669 0%, #2563eb 100%);
+--shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+--shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+font-size: 16px;
+padding: 40px 20px;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+/* Hero Header */
+.hero {
+position: relative;
+padding: 60px 40px;
+margin-bottom: 40px;
+background: var(--surface);
+border-radius: 16px;
+box-shadow: var(--shadow);
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 5px;
+background: var(--gradient-1);
+}
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr auto;
+gap: 40px;
+align-items: center;
+}
+
+.hero-content h1 {
+font-size: 42px;
+font-weight: 800;
+line-height: 1.1;
+margin-bottom: 16px;
+background: var(--gradient-1);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.hero-meta {
+display: flex;
+gap: 12px;
+align-items: center;
+flex-wrap: wrap;
+margin-bottom: 16px;
+}
+
+.badge {
+padding: 6px 14px;
+border-radius: 100px;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.badge-module {
+background: var(--primary);
+color: white;
+}
+
+.badge-foundational {
+background: var(--secondary);
+color: white;
+}
+
+.hero-description {
+color: var(--text-muted);
+font-size: 17px;
+line-height: 1.6;
+max-width: 600px;
+}
+
+.hero-icon {
+font-size: 120px;
+line-height: 1;
+opacity: 0.9;
+}
+
+/* Three-Column Intentions Grid */
+.intentions-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+margin-bottom: 40px;
+}
+
+.intention-card {
+background: var(--surface);
+border-radius: 12px;
+padding: 28px;
+box-shadow: var(--shadow);
+border-left: 4px solid var(--primary);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.intention-card:hover {
+transform: translateY(-2px);
+box-shadow: var(--shadow-hover);
+}
+
+.intention-card.blue {
+border-left-color: var(--primary);
+}
+
+.intention-card.purple {
+border-left-color: var(--critical);
+}
+
+.intention-card.green {
+border-left-color: var(--secondary);
+}
+
+.intention-card h3 {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 13px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 16px;
+color: var(--text);
+}
+
+.intention-card ul {
+list-style: none;
+padding: 0;
+}
+
+.intention-card li {
+padding: 8px 0;
+padding-left: 20px;
+position: relative;
+color: var(--text-muted);
+font-size: 14px;
+line-height: 1.5;
+}
+
+.intention-card li::before {
+content: '→';
+position: absolute;
+left: 0;
+font-weight: 700;
+}
+
+.intention-card.blue li::before {
+color: var(--primary);
+}
+
+.intention-card.purple li::before {
+color: var(--critical);
+}
+
+.intention-card.green li::before {
+color: var(--secondary);
+}
+
+/* Cards */
+.card {
+background: var(--surface);
+border-radius: 12px;
+padding: 32px;
+margin-bottom: 24px;
+box-shadow: var(--shadow);
+border-left: 4px solid var(--primary);
+transition: box-shadow 0.2s;
+}
+
+.card:hover {
+box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 20px;
+}
+
+.card-icon {
+width: 40px;
+height: 40px;
+background: var(--surface-elevated);
+border-radius: 10px;
+display: grid;
+place-items: center;
+font-size: 20px;
+}
+
+.card h2 {
+font-size: 24px;
+font-weight: 700;
+color: var(--text);
+}
+
+.card h3 {
+font-size: 18px;
+font-weight: 600;
+color: var(--text);
+margin: 24px 0 12px 0;
+}
+
+.card p {
+color: var(--text-muted);
+margin-bottom: 16px;
+line-height: 1.7;
+}
+
+/* Tables */
+.table-wrap {
+overflow-x: auto;
+border-radius: 10px;
+border: 1px solid var(--border);
+margin: 20px 0;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+font-size: 14px;
+}
+
+th {
+background: var(--surface-elevated);
+padding: 14px 16px;
+text-align: left;
+font-weight: 600;
+color: var(--text);
+text-transform: uppercase;
+font-size: 11px;
+letter-spacing: 0.5px;
+border-bottom: 2px solid var(--border);
+}
+
+td {
+padding: 14px 16px;
+border-bottom: 1px solid var(--border);
+color: var(--text-muted);
+}
+
+tr:last-child td {
+border-bottom: none;
+}
+
+tr:hover {
+background: var(--surface-elevated);
+}
+
+/* Highlight Boxes */
+.highlight-box {
+background: linear-gradient(135deg, rgba(217, 119, 6, 0.05) 0%, rgba(217, 119, 6, 0.1) 100%);
+border-left: 4px solid var(--accent);
+padding: 20px;
+border-radius: 0 8px 8px 0;
+margin: 20px 0;
+}
+
+.highlight-box strong {
+color: var(--accent);
+}
+
+.info-box {
+background: linear-gradient(135deg, rgba(5, 150, 105, 0.05) 0%, rgba(5, 150, 105, 0.1) 100%);
+border-left: 4px solid var(--secondary);
+padding: 20px;
+border-radius: 0 8px 8px 0;
+margin: 20px 0;
+}
+
+.info-box strong {
+color: var(--secondary);
+}
+
+/* Year 12 Banner */
+.y12-banner {
+background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+border: 2px solid rgba(124, 58, 237, 0.3);
+border-radius: 12px;
+padding: 20px 24px;
+margin: 24px 0;
+display: flex;
+gap: 16px;
+align-items: flex-start;
+}
+
+.y12-icon {
+font-size: 28px;
+flex-shrink: 0;
+}
+
+.y12-content strong {
+color: var(--critical);
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+font-weight: 700;
+}
+
+.y12-content p {
+margin: 8px 0 0 0;
+font-size: 14px;
+color: var(--text-muted);
+line-height: 1.6;
+}
+
+/* Copy Section */
+.copy-section {
+background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(217, 119, 6, 0.08) 100%);
+border: 3px solid var(--danger);
+border-radius: 12px;
+padding: 32px;
+margin: 32px 0;
+}
+
+.copy-section h2 {
+color: var(--danger);
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 22px;
+}
+
+.copy-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.copy-item {
+background: var(--surface);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.copy-item h4 {
+color: var(--text);
+margin-bottom: 12px;
+font-size: 14px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.copy-item ul {
+list-style: none;
+padding: 0;
+}
+
+.copy-item li {
+color: var(--text-muted);
+font-size: 13px;
+padding: 5px 0;
+padding-left: 16px;
+position: relative;
+line-height: 1.5;
+}
+
+.copy-item li::before {
+content: '•';
+position: absolute;
+left: 0;
+color: var(--primary);
+font-weight: 700;
+}
+
+/* Activity Cards */
+.activity {
+background: var(--surface);
+border-radius: 12px;
+padding: 32px;
+margin-bottom: 24px;
+box-shadow: var(--shadow);
+position: relative;
+border: 1px solid var(--border);
+}
+
+.activity-number {
+position: absolute;
+top: -14px;
+left: 32px;
+background: var(--gradient-2);
+color: white;
+padding: 8px 18px;
+border-radius: 100px;
+font-weight: 700;
+font-size: 13px;
+box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+letter-spacing: 0.5px;
+}
+
+.activity h3 {
+margin-top: 12px;
+font-size: 22px;
+font-weight: 700;
+color: var(--text);
+margin-bottom: 8px;
+}
+
+.activity-meta {
+color: var(--text-muted);
+font-size: 14px;
+margin-bottom: 20px;
+font-style: italic;
+}
+
+/* Answer Areas */
+.answer-area {
+background: var(--surface-elevated);
+border: 2px dashed var(--border);
+border-radius: 8px;
+padding: 20px;
+margin: 16px 0;
+min-height: 80px;
+font-family: 'JetBrains Mono', 'Courier New', monospace;
+color: var(--text-muted);
+font-size: 13px;
+transition: all 0.3s;
+}
+
+.answer-area:hover {
+border-color: var(--primary);
+background: rgba(37, 99, 235, 0.05);
+}
+
+/* Multiple Choice */
+.mc-option {
+display: flex;
+align-items: center;
+gap: 14px;
+padding: 14px 18px;
+margin: 10px 0;
+background: var(--surface-elevated);
+border-radius: 8px;
+border: 2px solid transparent;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+.mc-option:hover {
+background: white;
+border-color: var(--primary);
+transform: translateX(4px);
+}
+
+.mc-letter {
+width: 32px;
+height: 32px;
+background: white;
+border: 2px solid var(--border);
+border-radius: 6px;
+display: grid;
+place-items: center;
+font-weight: 700;
+font-size: 14px;
+color: var(--text);
+flex-shrink: 0;
+}
+
+.mc-option:hover .mc-letter {
+background: var(--primary);
+color: white;
+border-color: var(--primary);
+}
+
+.mc-text {
+color: var(--text-muted);
+font-size: 15px;
+}
+
+/* Marks Badge */
+.marks {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: var(--secondary);
+color: white;
+padding: 4px 12px;
+border-radius: 100px;
+font-size: 12px;
+font-weight: 700;
+float: right;
+}
+
+/* Questions Section */
+.question-item {
+margin: 28px 0;
+padding: 20px;
+background: var(--surface-elevated);
+border-radius: 8px;
+border-left: 4px solid var(--primary);
+}
+
+.question-item p {
+color: var(--text);
+font-weight: 500;
+margin-bottom: 16px;
+font-size: 15px;
+}
+
+/* Answers Section */
+.answers {
+background: var(--surface);
+border-radius: 16px;
+padding: 40px;
+margin-top: 48px;
+box-shadow: var(--shadow);
+border: 2px solid var(--secondary);
+}
+
+.answers-header {
+display: flex;
+align-items: center;
+gap: 16px;
+margin-bottom: 32px;
+padding-bottom: 20px;
+border-bottom: 2px solid var(--border);
+}
+
+.answers-header h2 {
+font-size: 28px;
+font-weight: 800;
+color: var(--text);
+}
+
+.answer-item {
+background: var(--surface-elevated);
+border-radius: 10px;
+padding: 20px 24px;
+margin-bottom: 16px;
+border-left: 4px solid var(--secondary);
+}
+
+.answer-item h4 {
+color: var(--secondary);
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 12px;
+display: flex;
+align-items: center;
+gap: 8px;
+font-weight: 700;
+}
+
+.answer-item p,
+.answer-item li {
+color: var(--text-muted);
+font-size: 14px;
+line-height: 1.8;
+margin-bottom: 8px;
+}
+
+.answer-item ol,
+.answer-item ul {
+margin-left: 20px;
+margin-top: 8px;
+}
+
+.answer-item strong {
+color: var(--text);
+}
+
+/* Formula Box */
+.formula-box {
+background: var(--surface-elevated);
+border: 2px solid var(--primary);
+border-radius: 10px;
+padding: 20px;
+text-align: center;
+font-size: 20px;
+color: var(--primary);
+margin: 20px 0;
+font-weight: 600;
+}
+
+/* Flowchart */
+.flowchart {
+background: var(--surface-elevated);
+border-radius: 10px;
+padding: 24px;
+margin: 20px 0;
+border: 1px solid var(--border);
+font-family: 'JetBrains Mono', monospace;
+font-size: 13px;
+line-height: 1.8;
+overflow-x: auto;
+color: var(--text-muted);
+}
+
+/* Extension Section */
+.extension-card {
+background: linear-gradient(135deg, rgba(217, 119, 6, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
+border: 2px solid var(--accent);
+border-radius: 12px;
+padding: 32px;
+margin: 32px 0;
+}
+
+.extension-card h2 {
+color: var(--accent);
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero-grid {
+grid-template-columns: 1fr;
+}
+
+.hero-icon {
+font-size: 80px;
+text-align: center;
+}
+
+.intentions-grid {
+grid-template-columns: 1fr;
+}
+
+.copy-grid {
+grid-template-columns: 1fr;
+}
+
+body {
+padding: 20px 12px;
+}
+
+.hero {
+padding: 40px 24px;
+}
+
+.card {
+padding: 24px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<div class="hero">
+<div class="hero-grid">
+<div class="hero-content">
+<div class="hero-meta">
+<span class="badge badge-module">Module 2</span>
+<span class="badge badge-foundational">Foundational</span>
+</div>
+<h1>The Mole & Avogadro's Number</h1>
+<p class="hero-description">
+Bridging the atomic scale to the laboratory: understanding the mole as the chemist's counting unit and Avogadro's number as the link between individual particles and measurable mass.
+</p>
+</div>
+<div class="hero-icon">⚖️</div>
+</div>
+</div>
+
+<!-- INTENTIONS GRID -->
+<div class="intentions-grid">
+<div class="intention-card blue">
+<h3>🎯 LEARNING INTENTIONS</h3>
+<ul>
+<li>Define the mole and explain its relationship to Avogadro's number</li>
+<li>Convert between number of particles, moles, and mass</li>
+<li>Apply \(N_A = 6.022 \times 10^{23}\) with correct significant figures</li>
+<li>Conceptualize the magnitude of a mole using real-world comparisons</li>
+<li>Calculate the number of atoms in molecules and formula units</li>
+</ul>
+</div>
+
+<div class="intention-card purple">
+<h3>🔗 YEAR 12 LINKS</h3>
+<ul>
+<li><strong>Module 5:</strong> Equilibrium calculations require mole-to-concentration conversions</li>
+<li><strong>Module 6:</strong> Acid-base stoichiometry uses mole ratios from balanced equations</li>
+<li><strong>Module 8:</strong> Gravimetric and volumetric analysis depend on mole concept precision</li>
+<li><strong>Module 9:</strong> Organic synthesis requires accurate mole calculations for yield</li>
+</ul>
+</div>
+
+<div class="intention-card green">
+<h3>✅ SUCCESS CRITERIA</h3>
+<ul>
+<li>Convert particles ↔ moles ↔ mass with correct significant figures</li>
+<li>Distinguish between atoms, molecules, and formula units</li>
+<li>Calculate total atoms in complex compounds (e.g., Ca(NO₃)₂)</li>
+<li>Explain why we use moles instead of counting particles</li>
+<li>Apply the "Equation First" rule to all calculations</li>
+</ul>
+</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="card">
+<div class="card-header">
+<div class="card-icon">🔢</div>
+<h2>What Is a Mole?</h2>
+</div>
+
+<p>
+The <strong>mole</strong> is the SI unit for amount of substance. One mole is defined as exactly \(6.022 \times 10^{23}\) elementary entities (atoms, molecules, ions, or particles). This number is called <strong>Avogadro's number</strong> (\(N_A\)).
+</p>
+
+<div class="formula-box">
+1 mole = \(6.022 \times 10^{23}\) particles
+</div>
+
+<p>
+The mole connects the microscopic world (individual atoms) to the macroscopic world (grams we can measure). Just as "dozen" means 12, "mole" means \(6.022 \times 10^{23}\).
+</p>
+
+<div class="info-box">
+<strong>Why 6.022 × 10²³?</strong><br>
+This number was chosen so that one mole of carbon-12 atoms has a mass of exactly 12 grams. It bridges atomic mass units (amu) to grams: 1 amu × \(N_A\) = 1 g/mol.
+</div>
+
+<h3>The Magnitude of a Mole</h3>
+
+<p>
+Avogadro's number is incomprehensibly large. Consider these comparisons:
+</p>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Comparison</th>
+<th>Illustration</th>
+</tr>
+<tr>
+<td>If you had a mole of rice grains</td>
+<td>It would cover the Earth's surface to a depth of ~75 meters</td>
+</tr>
+<tr>
+<td>If you counted 1 particle per second</td>
+<td>It would take ~19 trillion years (longer than the age of the universe)</td>
+</tr>
+<tr>
+<td>If a mole of basketballs</td>
+<td>They would fill the volume of Earth many times over</td>
+</tr>
+<tr>
+<td>A mole of dollars</td>
+<td>Would give every person on Earth ~$80 trillion</td>
+</tr>
+</table>
+</div>
+
+<div class="highlight-box">
+<strong>⚠️ Critical for HSC:</strong> Always use \(N_A = 6.022 \times 10^{23}\) (4 significant figures) unless the question specifies otherwise. Using \(6.02 \times 10^{23}\) loses precision and may cost marks.
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-icon">🔄</div>
+<h2>The Mole Conversion Triangle</h2>
+</div>
+
+<p>
+The mole sits at the center of all quantitative chemistry calculations. You must be fluent in three conversions:
+</p>
+
+<div class="flowchart">
+                Number of Particles (N)
+                        ↑
+                        | ÷ Nₐ
+                        |
+                    MOLES (n)
+                        |
+                        | × MM
+                        ↓
+                    MASS (m)
+
+<strong>Key Relationships:</strong>
+n = N / Nₐ          (moles = particles ÷ Avogadro's number)
+N = n × Nₐ          (particles = moles × Avogadro's number)
+m = n × MM          (mass = moles × molar mass)
+n = m / MM          (moles = mass ÷ molar mass)
+</div>
+
+<h3>Worked Example 1: Particles to Moles</h3>
+
+<div class="info-box">
+<strong>Question:</strong> How many moles are in \(1.806 \times 10^{24}\) water molecules?<br><br>
+
+<strong>Solution:</strong><br>
+<strong>Given:</strong> \(N = 1.806 \times 10^{24}\) molecules<br>
+<strong>Find:</strong> \(n = ?\) mol<br>
+<strong>Formula:</strong> \(n = \frac{N}{N_A}\)<br><br>
+
+\[n = \frac{1.806 \times 10^{24}}{6.022 \times 10^{23}} = 3.000 \text{ mol}\]<br>
+
+<strong>Answer:</strong> 3.000 mol (4 sig figs)
+</div>
+
+<h3>Worked Example 2: Moles to Particles</h3>
+
+<div class="info-box">
+<strong>Question:</strong> How many oxygen atoms are in 0.250 mol of O₂ gas?<br><br>
+
+<strong>Solution:</strong><br>
+<strong>Step 1:</strong> Convert moles of O₂ molecules to number of molecules<br>
+\[N_{\text{molecules}} = n \times N_A = 0.250 \times 6.022 \times 10^{23} = 1.51 \times 10^{23} \text{ molecules}\]<br>
+
+<strong>Step 2:</strong> Each O₂ molecule contains 2 oxygen atoms<br>
+\[N_{\text{atoms}} = 1.51 \times 10^{23} \times 2 = 3.02 \times 10^{23} \text{ atoms}\]<br>
+
+<strong>Answer:</strong> \(3.02 \times 10^{23}\) oxygen atoms
+</div>
+
+<div class="y12-banner">
+<div class="y12-icon">🔬</div>
+<div class="y12-content">
+<strong>Module 8 Connection: Precision in Analytical Chemistry</strong>
+<p>In gravimetric analysis, you'll precipitate ions and weigh them. If you miscount significant figures when converting mass → moles → particles, your percentage purity calculation will be incorrect. The HSC marking criteria penalize sig fig errors consistently.</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-icon">⚛️</div>
+<h2>Atoms, Molecules, and Formula Units</h2>
+</div>
+
+<p>
+Different substances require different terminology:
+</p>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Type</th>
+<th>Term Used</th>
+<th>Examples</th>
+<th>Note</th>
+</tr>
+<tr>
+<td><strong>Elements</strong></td>
+<td>Atoms</td>
+<td>1 mol Fe = \(6.022 \times 10^{23}\) atoms</td>
+<td>Monatomic elements</td>
+</tr>
+<tr>
+<td><strong>Molecular compounds</strong></td>
+<td>Molecules</td>
+<td>1 mol H₂O = \(6.022 \times 10^{23}\) molecules</td>
+<td>Covalent bonding</td>
+</tr>
+<tr>
+<td><strong>Ionic compounds</strong></td>
+<td>Formula units</td>
+<td>1 mol NaCl = \(6.022 \times 10^{23}\) formula units</td>
+<td>No discrete molecules</td>
+</tr>
+<tr>
+<td><strong>Diatomic gases</strong></td>
+<td>Molecules</td>
+<td>1 mol O₂ = \(6.022 \times 10^{23}\) molecules = \(1.204 \times 10^{24}\) atoms</td>
+<td>Two atoms per molecule</td>
+</tr>
+</table>
+</div>
+
+<h3>Worked Example 3: Counting Atoms in Compounds</h3>
+
+<div class="info-box">
+<strong>Question:</strong> How many total atoms are in 0.500 mol of calcium nitrate, Ca(NO₃)₂?<br><br>
+
+<strong>Solution:</strong><br>
+<strong>Step 1:</strong> Determine atoms per formula unit<br>
+Ca(NO₃)₂ contains: 1 Ca + 2 N + 6 O = <strong>9 atoms per formula unit</strong><br><br>
+
+<strong>Step 2:</strong> Calculate number of formula units<br>
+\[N_{\text{f.u.}} = 0.500 \times 6.022 \times 10^{23} = 3.01 \times 10^{23} \text{ formula units}\]<br>
+
+<strong>Step 3:</strong> Calculate total atoms<br>
+\[N_{\text{atoms}} = 3.01 \times 10^{23} \times 9 = 2.71 \times 10^{24} \text{ atoms}\]<br>
+
+<strong>Answer:</strong> \(2.71 \times 10^{24}\) total atoms
+</div>
+
+<div class="highlight-box">
+<strong>⚠️ Common Error:</strong> Students often forget to multiply by the number of atoms per formula unit. Always count ALL atoms, including those inside polyatomic ions.
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-icon">📏</div>
+<h2>Why Use Moles Instead of Counting Particles?</h2>
+</div>
+
+<p>
+Imagine trying to count individual atoms in a chemical reaction. For even a tiny reaction:
+</p>
+
+<div class="info-box">
+<strong>Example:</strong> Burning 1 gram of carbon<br>
+C + O₂ → CO₂<br><br>
+
+1 gram of carbon contains approximately \(5 \times 10^{22}\) atoms. It's impossible to count these individually, but weighing 1 gram is trivial. The mole allows us to "count by weighing."
+</div>
+
+<p>
+The mole provides three critical advantages:
+</p>
+
+<ol style="margin-left: 20px; color: var(--text-muted); line-height: 1.8;">
+<li><strong>Practicality:</strong> We can measure mass on a balance (macroscopic) rather than counting atoms (impossible)</li>
+<li><strong>Stoichiometry:</strong> Balanced equations give mole ratios, not particle ratios</li>
+<li><strong>Universality:</strong> The mole works for atoms, molecules, ions, electrons—any particle</li>
+</ol>
+
+<div class="y12-banner">
+<div class="y12-icon">⚖️</div>
+<div class="y12-content">
+<strong>Module 5 Connection: Equilibrium Calculations</strong>
+<p>In Year 12, you'll calculate equilibrium constants using molar concentrations: \(K_c = \frac{[\text{products}]}{[\text{reactants}]}\). Every concentration term is in mol/L. Without fluency in mole conversions now, equilibrium problems become impossible.</p>
+</div>
+</div>
+</div>
+
+<!-- COPY SECTION -->
+<div class="copy-section">
+<h2>📋 Copy into your books</h2>
+<div class="copy-grid">
+<div class="copy-item">
+<h4>The Mole Definition</h4>
+<ul>
+<li>1 mole = \(6.022 \times 10^{23}\) particles</li>
+<li>\(N_A = 6.022 \times 10^{23}\) mol⁻¹</li>
+<li>SI unit for amount of substance</li>
+<li>Bridges atomic scale to lab scale</li>
+</ul>
+</div>
+
+<div class="copy-item">
+<h4>Key Conversions</h4>
+<ul>
+<li>\(n = \frac{N}{N_A}\) (particles → moles)</li>
+<li>\(N = n \times N_A\) (moles → particles)</li>
+<li>Always use 4 sig figs for \(N_A\)</li>
+<li>"Equation First" rule applies</li>
+</ul>
+</div>
+
+<div class="copy-item">
+<h4>Terminology</h4>
+<ul>
+<li>Elements: atoms (Fe, C, He)</li>
+<li>Molecules: H₂O, CO₂, O₂</li>
+<li>Formula units: NaCl, CaCO₃</li>
+<li>Count ALL atoms in compounds</li>
+</ul>
+</div>
+
+<div class="copy-item">
+<h4>Year 12 Preparation</h4>
+<ul>
+<li>Mod 5: Moles → concentration</li>
+<li>Mod 6: Mole ratios in titrations</li>
+<li>Mod 8: Moles in gravimetric analysis</li>
+<li>Precision = HSC marks</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ACTIVITIES -->
+<div class="activity">
+<div class="activity-number">ACTIVITY 01</div>
+<h3>Mole Magnitude Challenge</h3>
+<p class="activity-meta">Develop intuition for the scale of Avogadro's number through creative comparisons.</p>
+
+<p style="color: var(--text-muted); margin-bottom: 16px;">
+If you had one mole of the following items, describe what would happen. Use calculations to support your answer.
+</p>
+
+<ol style="color: var(--text-muted); line-height: 2; margin-left: 20px;">
+<li>One mole of $1 coins (each coin is 3.2 g). Calculate the total mass and compare to Earth's mass (\(6.0 \times 10^{24}\) kg).</li>
+<div class="answer-area"></div>
+
+<li>One mole of sand grains (average diameter 0.5 mm). Calculate the volume and compare to Sydney Harbour (\(5.6 \times 10^{11}\) L).</li>
+<div class="answer-area"></div>
+</ol>
+</div>
+
+<div class="activity">
+<div class="activity-number">ACTIVITY 02</div>
+<h3>Particle-Mole-Mass Conversions</h3>
+<p class="activity-meta">Practice the fundamental conversion triangle with increasing complexity.</p>
+
+<p style="color: var(--text-muted); margin-bottom: 16px;">
+Complete the following conversions. Show ALL working and use correct significant figures.
+</p>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Given</th>
+<th>Find</th>
+<th>Working</th>
+</tr>
+<tr>
+<td>\(3.011 \times 10^{23}\) atoms of Ne</td>
+<td>Moles of Ne</td>
+<td class="answer-area" style="min-height: 60px;"></td>
+</tr>
+<tr>
+<td>2.50 mol of NH₃</td>
+<td>Number of NH₃ molecules</td>
+<td class="answer-area" style="min-height: 60px;"></td>
+</tr>
+<tr>
+<td>0.750 mol of CO₂</td>
+<td>Total number of atoms</td>
+<td class="answer-area" style="min-height: 60px;"></td>
+</tr>
+<tr>
+<td>\(1.204 \times 10^{24}\) formula units of NaCl</td>
+<td>Moles of Na⁺ ions</td>
+<td class="answer-area" style="min-height: 60px;"></td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class="activity">
+<div class="activity-number">ACTIVITY 03</div>
+<h3>Counting Atoms in Complex Compounds</h3>
+<p class="activity-meta">Apply systematic counting strategies to polyatomic ions and hydrated salts.</p>
+
+<p style="color: var(--text-muted); margin-bottom: 16px;">
+For each compound, determine: (a) atoms per formula unit, (b) total atoms in 0.500 mol.
+</p>
+
+<ol style="color: var(--text-muted); line-height: 2; margin-left: 20px;">
+<li>Aluminum sulfate, Al₂(SO₄)₃</li>
+<div class="answer-area"></div>
+
+<li>Copper(II) sulfate pentahydrate, CuSO₄·5H₂O</li>
+<div class="answer-area"></div>
+
+<li>Ammonium phosphate, (NH₄)₃PO₄</li>
+<div class="answer-area"></div>
+</ol>
+</div>
+
+<div class="activity">
+<div class="activity-number">ACTIVITY 04</div>
+<h3>Industrial Context: Fertilizer Production</h3>
+<p class="activity-meta">Apply mole concept to real-world chemical manufacturing (Module 9 context).</p>
+
+<p style="color: var(--text-muted); margin-bottom: 16px;">
+Ammonia (NH₃) is synthesized industrially via the Haber process. A production batch contains \(3.01 \times 10^{26}\) molecules of NH₃.
+</p>
+
+<ol style="color: var(--text-muted); line-height: 2; margin-left: 20px;">
+<li>Calculate the number of moles of NH₃ produced.</li>
+<div class="answer-area"></div>
+
+<li>How many nitrogen atoms are present? How many hydrogen atoms?</li>
+<div class="answer-area"></div>
+
+<li>Explain why manufacturers measure ammonia in tonnes (mass) rather than molecules, referencing the mole concept.</li>
+<div class="answer-area"></div>
+</ol>
+</div>
+
+<!-- ASSESSMENT QUESTIONS -->
+<div class="card">
+<div class="card-header">
+<div class="card-icon">❓</div>
+<h2>Assessment Questions</h2>
+</div>
+
+<h3>Multiple Choice <span class="marks">5 MARKS</span></h3>
+
+<div style="margin: 24px 0;">
+<p style="color: var(--text); margin-bottom: 12px; font-weight: 500;">1. Which statement about the mole is correct?</p>
+<div class="mc-option">
+<div class="mc-letter">A</div>
+<span class="mc-text">One mole of any substance contains the same number of atoms</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">B</div>
+<span class="mc-text">One mole of any substance contains the same mass</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">C</div>
+<span class="mc-text">One mole of any substance contains \(6.022 \times 10^{23}\) particles</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">D</div>
+<span class="mc-text">One mole of any gas occupies 22.4 L at all conditions</span>
+</div>
+</div>
+
+<div style="margin: 24px 0;">
+<p style="color: var(--text); margin-bottom: 12px; font-weight: 500;">2. How many oxygen atoms are in 0.250 mol of Al₂(SO₄)₃?</p>
+<div class="mc-option">
+<div class="mc-letter">A</div>
+<span class="mc-text">\(1.51 \times 10^{23}\)</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">B</div>
+<span class="mc-text">\(6.02 \times 10^{23}\)</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">C</div>
+<span class="mc-text">\(1.81 \times 10^{24}\)</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">D</div>
+<span class="mc-text">\(3.01 \times 10^{24}\)</span>
+</div>
+</div>
+
+<div style="margin: 24px 0;">
+<p style="color: var(--text); margin-bottom: 12px; font-weight: 500;">3. Which contains the greatest number of particles?</p>
+<div class="mc-option">
+<div class="mc-letter">A</div>
+<span class="mc-text">1 mol of O₂ molecules</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">B</div>
+<span class="mc-text">1 mol of O atoms</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">C</div>
+<span class="mc-text">0.5 mol of O₂ molecules</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">D</div>
+<span class="mc-text">All contain the same number of particles</span>
+</div>
+</div>
+
+<div style="margin: 24px 0;">
+<p style="color: var(--text); margin-bottom: 12px; font-weight: 500;">4. A sample contains \(3.011 \times 10^{22}\) molecules of glucose (C₆H₁₂O₆). How many moles of glucose is this?</p>
+<div class="mc-option">
+<div class="mc-letter">A</div>
+<span class="mc-text">0.0500 mol</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">B</div>
+<span class="mc-text">0.500 mol</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">C</div>
+<span class="mc-text">5.00 mol</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">D</div>
+<span class="mc-text">50.0 mol</span>
+</div>
+</div>
+
+<div style="margin: 24px 0;">
+<p style="color: var(--text); margin-bottom: 12px; font-weight: 500;">5. Why is the mole concept essential in chemistry?</p>
+<div class="mc-option">
+<div class="mc-letter">A</div>
+<span class="mc-text">It allows chemists to count particles by weighing samples</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">B</div>
+<span class="mc-text">It simplifies chemical formulas</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">C</div>
+<span class="mc-text">It eliminates the need for balanced equations</span>
+</div>
+<div class="mc-option">
+<div class="mc-letter">D</div>
+<span class="mc-text">It converts all substances to the same mass</span>
+</div>
+</div>
+
+<h3 style="margin-top: 40px;">Short Answer <span class="marks">15 MARKS</span></h3>
+
+<div class="question-item">
+<p>6. Calculate the number of iron atoms in \(4.50 \times 10^{-3}\) mol of iron metal. <span class="marks">2 MARKS</span></p>
+<div class="answer-area" style="min-height: 100px;"></div>
+</div>
+
+<div class="question-item">
+<p>7. A sample contains \(9.033 \times 10^{24}\) hydrogen atoms.<br>
+(a) Calculate the number of moles of hydrogen atoms. <span class="marks">2 MARKS</span><br>
+(b) If these atoms are in H₂ molecules, calculate the number of moles of H₂. <span class="marks">2 MARKS</span></p>
+<div class="answer-area" style="min-height: 120px;"></div>
+</div>
+
+<div class="question-item">
+<p>8. Calculate the total number of atoms in 0.350 mol of calcium nitrate, Ca(NO₃)₂. Show all working. <span class="marks">3 MARKS</span></p>
+<div class="answer-area" style="min-height: 120px;"></div>
+</div>
+
+<div class="question-item">
+<p>9. Explain why chemists use moles rather than counting individual particles. Support your answer with a specific example from chemical reactions. <span class="marks">3 MARKS</span></p>
+<div class="answer-area" style="min-height: 120px;"></div>
+</div>
+
+<div class="question-item">
+<p>10. In Module 8 (Analytical Chemistry), gravimetric analysis requires precipitating an ion as a pure compound, filtering, drying, and weighing. Explain why the mole concept is essential for calculating the percentage composition of the original sample from the precipitate mass. <span class="marks">3 MARKS</span></p>
+<div class="answer-area" style="min-height: 120px;"></div>
+</div>
+</div>
+
+<!-- EXTENSION -->
+<div class="extension-card">
+<h2>⭐ Extension Challenge</h2>
+
+<p style="color: var(--text-muted); margin-bottom: 20px;">
+These problems require university-level reasoning and integrate multiple concepts.
+</p>
+
+<div class="question-item" style="background: white;">
+<p><strong>Challenge 1: Avogadro's Limit</strong></p>
+<p>If you could remove one atom per nanosecond (\(10^{-9}\) s) from a 1-mole sample, how many years would it take to remove all atoms? Compare this to the age of the universe (\(1.38 \times 10^{10}\) years).</p>
+<div class="answer-area"></div>
+</div>
+
+<div class="question-item" style="background: white;">
+<p><strong>Challenge 2: Olympic Chemistry</strong></p>
+<p>An Olympic swimming pool contains \(2.5 \times 10^{6}\) L of water (density 1.00 g/mL). Calculate:<br>
+(a) Mass of water in kg<br>
+(b) Moles of H₂O (MM = 18.0 g/mol)<br>
+(c) Total number of hydrogen atoms in the pool</p>
+<div class="answer-area"></div>
+</div>
+
+<div class="question-item" style="background: white;">
+<p><strong>Challenge 3: Year 12 Preview (Module 5)</strong></p>
+<p>In equilibrium systems, concentrations are expressed in mol/L. If a 2.00 L flask contains \(3.011 \times 10^{23}\) molecules of N₂O₄, calculate the molar concentration [N₂O₄]. Explain why this unit is more useful than "molecules per liter" for equilibrium calculations.</p>
+<div class="answer-area"></div>
+</div>
+</div>
+
+<!-- ANSWERS SECTION -->
+<div class="answers">
+<div class="answers-header">
+<div style="font-size: 32px;">✅</div>
+<h2>Comprehensive Answers</h2>
+</div>
+
+<div class="answer-item">
+<h4>🎯 ACTIVITY 01 – Mole Magnitude</h4>
+<p><strong>1.</strong> Mass = \((6.022 \times 10^{23}) \times 3.2 \text{ g} = 1.93 \times 10^{24}\) g = \(1.93 \times 10^{21}\) kg. Earth's mass = \(6.0 \times 10^{24}\) kg. The coins would be about <strong>320 times the mass of Earth</strong>.</p>
+<p><strong>2.</strong> Volume of one grain ≈ \(\frac{4}{3}\pi r^3 = \frac{4}{3}\pi (0.25 \text{ mm})^3 = 6.5 \times 10^{-11}\) L. Total volume = \((6.022 \times 10^{23}) \times (6.5 \times 10^{-11}) = 3.9 \times 10^{13}\) L, which is about <strong>70 times Sydney Harbour's volume</strong>.</p>
+</div>
+
+<div class="answer-item">
+<h4>🧪 ACTIVITY 02 – Conversions</h4>
+<p><strong>Row 1:</strong> \(n = \frac{3.011 \times 10^{23}}{6.022 \times 10^{23}} = 0.5000\) mol Ne</p>
+<p><strong>Row 2:</strong> \(N = 2.50 \times 6.022 \times 10^{23} = 1.51 \times 10^{24}\) molecules NH₃</p>
+<p><strong>Row 3:</strong> Molecules CO₂ = \(0.750 \times 6.022 \times 10^{23} = 4.52 \times 10^{23}\). Each has 3 atoms, so total = \(4.52 \times 10^{23} \times 3 = 1.36 \times 10^{24}\) atoms</p>
+<p><strong>Row 4:</strong> Moles NaCl = \(\frac{1.204 \times 10^{24}}{6.022 \times 10^{23}} = 2.000\) mol. Since 1:1 ratio, <strong>2.000 mol Na⁺</strong></p>
+</div>
+
+<div class="answer-item">
+<h4>⚛️ ACTIVITY 03 – Complex Compounds</h4>
+<p><strong>1. Al₂(SO₄)₃:</strong> 2 Al + 3 S + 12 O = <strong>17 atoms/f.u.</strong><br>
+Total = \(0.500 \times 6.022 \times 10^{23} \times 17 = 5.12 \times 10^{24}\) atoms</p>
+
+<p><strong>2. CuSO₄·5H₂O:</strong> 1 Cu + 1 S + 4 O (from sulfate) + 10 H + 5 O (from water) = <strong>21 atoms/f.u.</strong><br>
+Total = \(0.500 \times 6.022 \times 10^{23} \times 21 = 6.32 \times 10^{24}\) atoms</p>
+
+<p><strong>3. (NH₄)₃PO₄:</strong> 3 N + 12 H + 1 P + 4 O = <strong>20 atoms/f.u.</strong><br>
+Total = \(0.500 \times 6.022 \times 10^{23} \times 20 = 6.02 \times 10^{24}\) atoms</p>
+</div>
+
+<div class="answer-item">
+<h4>🏭 ACTIVITY 04 – Fertilizer Production</h4>
+<p><strong>1.</strong> \(n = \frac{3.01 \times 10^{26}}{6.022 \times 10^{23}} = 500\) mol NH₃</p>
+<p><strong>2.</strong> N atoms: \(3.01 \times 10^{26} \times 1 = 3.01 \times 10^{26}\) atoms<br>
+H atoms: \(3.01 \times 10^{26} \times 3 = 9.03 \times 10^{26}\) atoms</p>
+<p><strong>3.</strong> Counting \(10^{26}\) molecules is impossible. The mole allows manufacturers to calculate mass from moles (\(m = n \times MM\)), then measure in tonnes using industrial scales. This bridges atomic-scale stoichiometry to practical manufacturing.</p>
+</div>
+
+<div class="answer-item">
+<h4>❓ MULTIPLE CHOICE</h4>
+<p><strong>1. C</strong> | <strong>2. C</strong> (12 O per f.u. × 0.250 mol × \(N_A\) = \(1.81 \times 10^{24}\)) | <strong>3. B</strong> (1 mol of anything = \(N_A\) particles) | <strong>4. A</strong> | <strong>5. A</strong></p>
+</div>
+
+<div class="answer-item">
+<h4>📝 SHORT ANSWER</h4>
+<p><strong>Q6:</strong> \(N = n \times N_A = 4.50 \times 10^{-3} \times 6.022 \times 10^{23} = 2.71 \times 10^{21}\) atoms</p>
+
+<p><strong>Q7:</strong><br>
+(a) \(n = \frac{9.033 \times 10^{24}}{6.022 \times 10^{23}} = 15.00\) mol H atoms<br>
+(b) Each H₂ has 2 H atoms, so \(n_{\text{H}_2} = \frac{15.00}{2} = 7.500\) mol H₂</p>
+
+<p><strong>Q8:</strong> Ca(NO₃)₂ has 1 + 2 + 6 = 9 atoms/f.u.<br>
+\(N = 0.350 \times 6.022 \times 10^{23} \times 9 = 1.90 \times 10^{24}\) atoms</p>
+
+<p><strong>Q9:</strong> Individual atoms are too small to count directly. For example, burning 12 g of carbon (C + O₂ → CO₂) involves ~\(6 \times 10^{23}\) atoms. Using moles, we recognize 12 g = 1 mol C, allowing us to "count by weighing" on a laboratory balance.</p>
+
+<p><strong>Q10:</strong> The precipitate mass (grams) must be converted to moles using \(n = m/MM\), then mole ratios from the balanced equation relate precipitate moles to original ion moles. Finally, convert back to mass for percentage calculation. Without the mole as an intermediate unit, mass ratios would vary with every substance pair.</p>
+</div>
+
+<div class="answer-item">
+<h4>⭐ EXTENSION ANSWERS</h4>
+<p><strong>Challenge 1:</strong> Time = \(\frac{6.022 \times 10^{23}}{10^9 \text{ s}^{-1}} = 6.022 \times 10^{14}\) s = \(1.91 \times 10^{7}\) years (19.1 million years). This is about <strong>0.14% of the universe's age</strong>—still incomprehensibly long!</p>
+
+<p><strong>Challenge 2:</strong><br>
+(a) Mass = \(2.5 \times 10^{6} \text{ L} \times 1000 \text{ g/L} = 2.5 \times 10^{9}\) g = \(2.5 \times 10^{6}\) kg<br>
+(b) \(n = \frac{2.5 \times 10^{9}}{18.0} = 1.39 \times 10^{8}\) mol H₂O<br>
+(c) H atoms = \(1.39 \times 10^{8} \times 6.022 \times 10^{23} \times 2 = 1.67 \times 10^{32}\) atoms</p>
+
+<p><strong>Challenge 3:</strong> \(n = \frac{3.011 \times 10^{23}}{6.022 \times 10^{23}} = 0.500\) mol<br>
+\([N_2O_4] = \frac{0.500}{2.00} = 0.250\) mol/L<br>
+Mol/L is preferred because equilibrium expressions (\(K_c\)) use concentration ratios, not absolute particle numbers. Concentrations are intensive properties (independent of volume), making comparisons across different systems meaningful.</p>
+</div>
+</div>
+
+</body>
+</html>
