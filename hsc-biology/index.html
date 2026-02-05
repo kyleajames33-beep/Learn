@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HSC Biology - 8 modules covering all HSC Biology syllabus content with interactive lessons, worked examples, and practice questions.">
+  <title>HSC Biology - Science Learning Hub</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons (Local) -->
+  <script src="/assets/js/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <i data-lucide="atom" class="icon-md"></i>
+        <span class="logo-text">Science Hub</span>
+      </a>
+
+      <div class="nav-search">
+        <i data-lucide="search" class="search-icon icon-sm"></i>
+        <input type="search" placeholder="Search lessons..." id="global-search" aria-label="Search lessons">
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-btn" aria-label="Settings">
+          <i data-lucide="settings" class="icon-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/" class="breadcrumb-link">
+          <i data-lucide="home" class="icon-sm"></i>
+          <span>Home</span>
+        </a>
+        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
+        <span class="breadcrumb-current">HSC Biology</span>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- HERO SECTION -->
+      <header class="subject-hero">
+        <div class="subject-icon-wrapper">
+          <div class="icon-wrapper icon-wrapper-critical icon-wrapper-lg">
+            <i data-lucide="dna" class="icon-xl"></i>
+          </div>
+        </div>
+
+        <div class="subject-header-content">
+          <div class="subject-badges">
+            <span class="badge badge-critical">HSC</span>
+            <span class="badge">Biology</span>
+          </div>
+
+          <h1 class="subject-title">HSC Biology</h1>
+
+          <p class="subject-description">
+            Master all 8 modules of the HSC Biology syllabus with comprehensive lessons,
+            interactive activities, and exam-style questions. Aligned with NSW curriculum.
+          </p>
+
+          <div class="subject-stats">
+            <div class="stat-item">
+              <i data-lucide="book-open" class="icon-sm"></i>
+              <span>8 Modules</span>
+            </div>
+            <div class="stat-item">
+              <i data-lucide="file-text" class="icon-sm"></i>
+              <span>~220 Lessons</span>
+            </div>
+            <div class="stat-item">
+              <i data-lucide="check-circle" class="icon-sm"></i>
+              <span>NSW Aligned</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- MODULES SECTION -->
+      <section class="modules-section">
+        <div class="section-header">
+          <h2 class="section-title">Course Modules</h2>
+          <p class="section-subtitle">
+            Select a module to begin exploring lessons
+          </p>
+        </div>
+
+        <div class="modules-grid">
+          <!-- Module 1 - AVAILABLE -->
+          <a href="/hsc-biology/module-1-cells/index.html" class="module-card card-available">
+            <div class="module-header">
+              <div class="module-number">Module 1</div>
+              <span class="status-badge status-available">Available Now</span>
+            </div>
+
+            <h3 class="module-title">Cells as the Basis of Life</h3>
+
+            <p class="module-description">
+              Cell structure, biochemistry, and function. Understanding cells as
+              the fundamental unit of life.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>30 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+
+            <div class="module-cta">
+              <span>Start Learning</span>
+              <i data-lucide="arrow-right" class="icon-sm"></i>
+            </div>
+          </a>
+
+          <!-- Module 2 -->
+          <a href="/hsc-biology/module-2-organisation/index.html" class="module-card card-coming-soon">
+            <div class="module-header">
+              <div class="module-number">Module 2</div>
+              <span class="status-badge status-coming-soon">Coming Soon</span>
+            </div>
+
+            <h3 class="module-title">Organisation of Living Things</h3>
+
+            <p class="module-description">
+              Body systems, homeostasis, and organ function. How organisms maintain
+              internal balance.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~25 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Module 3 -->
+          <a href="/hsc-biology/module-3-diversity/index.html" class="module-card card-coming-soon">
+            <div class="module-header">
+              <div class="module-number">Module 3</div>
+              <span class="status-badge status-coming-soon">Coming Soon</span>
+            </div>
+
+            <h3 class="module-title">Biological Diversity</h3>
+
+            <p class="module-description">
+              Classification, evolution, and biodiversity. Understanding the variety
+              of life on Earth.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~30 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Module 4 -->
+          <a href="/hsc-biology/module-4-ecosystems/index.html" class="module-card card-coming-soon">
+            <div class="module-header">
+              <div class="module-number">Module 4</div>
+              <span class="status-badge status-coming-soon">Coming Soon</span>
+            </div>
+
+            <h3 class="module-title">Ecosystem Dynamics</h3>
+
+            <p class="module-description">
+              Ecosystems, energy flow, and populations. How organisms interact with
+              each other and their environment.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~30 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Module 5 - AVAILABLE -->
+          <a href="/hsc-biology/module-5-heredity/index.html" class="module-card card-available">
+            <div class="module-header">
+              <div class="module-number">Module 5</div>
+              <span class="status-badge status-available">Available Now</span>
+            </div>
+
+            <h3 class="module-title">Heredity</h3>
+
+            <p class="module-description">
+              DNA, genes, and inheritance patterns. Mendelian genetics, chromosomes,
+              and heredity mechanisms.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~30 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+
+            <div class="module-cta">
+              <span>Start Learning</span>
+              <i data-lucide="arrow-right" class="icon-sm"></i>
+            </div>
+          </a>
+
+          <!-- Module 6 -->
+          <a href="/hsc-biology/module-6-genetic-change/index.html" class="module-card card-coming-soon">
+            <div class="module-header">
+              <div class="module-number">Module 6</div>
+              <span class="status-badge status-coming-soon">Coming Soon</span>
+            </div>
+
+            <h3 class="module-title">Genetic Change</h3>
+
+            <p class="module-description">
+              Mutations, biotechnology, and evolution. How genetic information changes
+              over time and generations.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~30 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Module 7 -->
+          <a href="/hsc-biology/module-7-infectious-disease/index.html" class="module-card card-coming-soon">
+            <div class="module-header">
+              <div class="module-number">Module 7</div>
+              <span class="status-badge status-coming-soon">Coming Soon</span>
+            </div>
+
+            <h3 class="module-title">Infectious Disease</h3>
+
+            <p class="module-description">
+              Pathogens, immune system, and epidemiology. How the body fights infection
+              and disease spreads.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~25 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Module 8 -->
+          <a href="/hsc-biology/module-8-non-infectious-disease/index.html" class="module-card card-coming-soon">
+            <div class="module-header">
+              <div class="module-number">Module 8</div>
+              <span class="status-badge status-coming-soon">Coming Soon</span>
+            </div>
+
+            <h3 class="module-title">Non-infectious Disease</h3>
+
+            <p class="module-description">
+              Cancer, genetic disorders, and prevention. Understanding diseases not
+              caused by pathogens.
+            </p>
+
+            <div class="module-meta">
+              <span class="meta-item">
+                <i data-lucide="layers" class="icon-sm"></i>
+                <span>~25 lessons</span>
+              </span>
+              <span class="meta-item">
+                <i data-lucide="clock" class="icon-sm"></i>
+                <span>1 term</span>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <i data-lucide="atom" class="icon-lg"></i>
+            <span>Science Hub</span>
+          </div>
+          <p class="footer-tagline">
+            Built with ❤️ for science students in NSW
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>HSC Biology</h4>
+            <ul>
+              <li><a href="/hsc-biology/module-1-cells/index.html">Module 1: Cells</a></li>
+              <li><a href="/hsc-biology/module-5-heredity/index.html">Module 5: Heredity</a></li>
+              <li><a href="/hsc-biology/index.html">All Modules</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Other Courses</h4>
+            <ul>
+              <li><a href="/year-8/index.html">Year 8 Science</a></li>
+              <li><a href="/year-9/index.html">Year 9 Science</a></li>
+              <li><a href="/">All Courses</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li><a href="/#features">Features</a></li>
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Science Hub. Educational use only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/storage.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

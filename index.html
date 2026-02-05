@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive science lessons for Years 7-12 students in NSW, Australia. Aligned with NSW syllabus.">
+  <meta name="keywords" content="science education, HSC Biology, HSC Chemistry, Year 8 Science, Year 9 Science, NSW syllabus">
+  <meta name="author" content="Kyle - Science Teacher, Sydney NSW">
+  <title>Science Learning Hub - Interactive Lessons for Years 7-12</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons (Local) -->
+  <script src="/assets/js/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <i data-lucide="atom" class="icon-md"></i>
+        <span class="logo-text">Science Hub</span>
+      </a>
+
+      <div class="nav-search">
+        <i data-lucide="search" class="search-icon icon-sm"></i>
+        <input type="search" placeholder="Search lessons..." id="global-search" aria-label="Search lessons">
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-btn" aria-label="Settings">
+          <i data-lucide="settings" class="icon-sm"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i data-lucide="sparkles" class="icon-sm"></i>
+          <span>Now Available</span>
+        </div>
+
+        <h1 class="hero-title">Science Learning Hub</h1>
+
+        <p class="hero-subtitle">
+          Interactive lessons for Years 7-12 Science, built by teachers for students
+        </p>
+
+        <div class="hero-cta">
+          <a href="#year-levels" class="btn btn-primary btn-lg">
+            <span>Start Learning</span>
+            <i data-lucide="arrow-right" class="icon-sm"></i>
+          </a>
+
+          <a href="#features" class="btn btn-secondary btn-lg">
+            <span>Learn More</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">HSC Modules</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Year 7-10 Modules</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">NSW Aligned</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Science Hub?</h2>
+        <p class="section-subtitle">
+          Everything you need to excel in science, all in one place
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="icon-wrapper icon-wrapper-primary">
+            <i data-lucide="book-open" class="icon-lg"></i>
+          </div>
+
+          <h3 class="feature-title">Comprehensive Content</h3>
+
+          <p class="feature-description">
+            Aligned with the NSW syllabus, our lessons cover every concept you need to master,
+            with clear explanations and worked examples.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="icon-wrapper icon-wrapper-secondary">
+            <i data-lucide="check-circle-2" class="icon-lg"></i>
+          </div>
+
+          <h3 class="feature-title">Track Your Progress</h3>
+
+          <p class="feature-description">
+            Automatic progress tracking shows you which lessons you've completed and helps
+            you pick up right where you left off.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="icon-wrapper icon-wrapper-accent">
+            <i data-lucide="smartphone" class="icon-lg"></i>
+          </div>
+
+          <h3 class="feature-title">Learn Anywhere</h3>
+
+          <p class="feature-description">
+            Fully responsive design works perfectly on phones, tablets, and computers.
+            Study at home or on the go.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="icon-wrapper icon-wrapper-critical">
+            <i data-lucide="target" class="icon-lg"></i>
+          </div>
+
+          <h3 class="feature-title">Interactive Activities</h3>
+
+          <p class="feature-description">
+            Practice problems, worked examples, and assessment questions help you apply
+            what you've learned and prepare for exams.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="icon-wrapper icon-wrapper-primary">
+            <i data-lucide="pencil" class="icon-lg"></i>
+          </div>
+
+          <h3 class="feature-title">Copy Into Books</h3>
+
+          <p class="feature-description">
+            Each lesson includes key notes formatted for easy copying into your science
+            notebook or study notes.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="icon-wrapper icon-wrapper-secondary">
+            <i data-lucide="graduation-cap" class="icon-lg"></i>
+          </div>
+
+          <h3 class="feature-title">Teacher Created</h3>
+
+          <p class="feature-description">
+            Designed by an experienced science teacher in Sydney, NSW, with deep
+            understanding of the local curriculum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Year Levels Section -->
+  <section class="year-levels-section" id="year-levels">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Choose Your Year Level</h2>
+        <p class="section-subtitle">
+          Select your year level to start exploring lessons
+        </p>
+      </div>
+
+      <div class="year-levels-grid">
+        <!-- HSC Biology -->
+        <a href="/hsc-biology/index.html" class="year-level-card card-hsc">
+          <div class="year-level-header">
+            <div class="icon-wrapper icon-wrapper-critical icon-wrapper-lg">
+              <i data-lucide="dna" class="icon-xl"></i>
+            </div>
+            <span class="year-badge">HSC</span>
+          </div>
+
+          <h3 class="year-level-title">HSC Biology</h3>
+
+          <p class="year-level-description">
+            8 modules covering all HSC Biology content. From cells to genetics to disease.
+          </p>
+
+          <div class="year-level-meta">
+            <span class="meta-item">
+              <i data-lucide="book-open" class="icon-sm"></i>
+              <span>8 Modules</span>
+            </span>
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>~200 Lessons</span>
+            </span>
+          </div>
+
+          <div class="year-level-status">
+            <span class="status-badge status-available">Available Now</span>
+          </div>
+        </a>
+
+        <!-- Year 8 Science -->
+        <a href="/year-8/index.html" class="year-level-card card-year8 card-coming-soon">
+          <div class="year-level-header">
+            <div class="icon-wrapper icon-wrapper-primary icon-wrapper-lg">
+              <i data-lucide="atom" class="icon-xl"></i>
+            </div>
+            <span class="year-badge">Year 8</span>
+          </div>
+
+          <h3 class="year-level-title">Year 8 Science</h3>
+
+          <p class="year-level-description">
+            Matter, energy, rocks, and cells. Foundation concepts for future learning.
+          </p>
+
+          <div class="year-level-meta">
+            <span class="meta-item">
+              <i data-lucide="book-open" class="icon-sm"></i>
+              <span>4 Modules</span>
+            </span>
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>~100 Lessons</span>
+            </span>
+          </div>
+
+          <div class="year-level-status">
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Year 9 Science -->
+        <a href="/year-9/index.html" class="year-level-card card-year9 card-coming-soon">
+          <div class="year-level-header">
+            <div class="icon-wrapper icon-wrapper-secondary icon-wrapper-lg">
+              <i data-lucide="waves" class="icon-xl"></i>
+            </div>
+            <span class="year-badge">Year 9</span>
+          </div>
+
+          <h3 class="year-level-title">Year 9 Science</h3>
+
+          <p class="year-level-description">
+            Ecosystems, atoms, waves, and body systems. Building advanced understanding.
+          </p>
+
+          <div class="year-level-meta">
+            <span class="meta-item">
+              <i data-lucide="book-open" class="icon-sm"></i>
+              <span>4 Modules</span>
+            </span>
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>~100 Lessons</span>
+            </span>
+          </div>
+
+          <div class="year-level-status">
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- HSC Chemistry -->
+        <a href="#" class="year-level-card card-hsc-chem card-coming-soon">
+          <div class="year-level-header">
+            <div class="icon-wrapper icon-wrapper-accent icon-wrapper-lg">
+              <i data-lucide="flask-conical" class="icon-xl"></i>
+            </div>
+            <span class="year-badge">HSC</span>
+          </div>
+
+          <h3 class="year-level-title">HSC Chemistry</h3>
+
+          <p class="year-level-description">
+            Complete HSC Chemistry course. Reactions, equilibrium, and organic chemistry.
+          </p>
+
+          <div class="year-level-meta">
+            <span class="meta-item">
+              <i data-lucide="book-open" class="icon-sm"></i>
+              <span>8 Modules</span>
+            </span>
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>~200 Lessons</span>
+            </span>
+          </div>
+
+          <div class="year-level-status">
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Start Learning?</h2>
+        <p class="cta-subtitle">
+          Join students across NSW using Science Hub to excel in their science studies
+        </p>
+        <a href="#year-levels" class="btn btn-primary btn-lg">
+          <span>Get Started Now</span>
+          <i data-lucide="arrow-right" class="icon-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <i data-lucide="atom" class="icon-lg"></i>
+            <span>Science Hub</span>
+          </div>
+          <p class="footer-tagline">
+            Built with ❤️ for science students in NSW
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Content</h4>
+            <ul>
+              <li><a href="/hsc-biology/index.html">HSC Biology</a></li>
+              <li><a href="/year-8/index.html">Year 8 Science</a></li>
+              <li><a href="/year-9/index.html">Year 9 Science</a></li>
+              <li><a href="#">HSC Chemistry</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Study Tips</a></li>
+              <li><a href="#">Exam Prep</a></li>
+              <li><a href="#">NSW Syllabus</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">About This Site</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="https://github.com/kyleajames33-beep/science-hub">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Science Hub. Educational use only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/storage.js"></script>
+  <script src="/assets/js/search.js"></script>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Last Visited Functionality -->
+  <script>
+    // Show "Continue Learning" section if user has visited lessons before
+    // This functionality can be added later when lessons are created
+  </script>
+</body>
+</html>

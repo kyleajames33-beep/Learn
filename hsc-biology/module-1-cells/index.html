@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HSC Biology Module 1: Cells as the Basis of Life. 30 comprehensive lessons covering cell structure, function, and processes.">
+  <title>Module 1: Cells as the Basis of Life - HSC Biology - Science Hub</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons (Local) -->
+  <script src="/assets/js/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <i data-lucide="atom" class="icon-md"></i>
+        <span class="logo-text">Science Hub</span>
+      </a>
+
+      <div class="nav-search">
+        <i data-lucide="search" class="search-icon icon-sm"></i>
+        <input type="search" placeholder="Search lessons..." id="global-search" aria-label="Search lessons">
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-btn" aria-label="Settings">
+          <i data-lucide="settings" class="icon-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/" class="breadcrumb-link">
+          <i data-lucide="home" class="icon-sm"></i>
+          <span>Home</span>
+        </a>
+        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
+        <a href="/hsc-biology/index.html" class="breadcrumb-link">
+          <span>HSC Biology</span>
+        </a>
+        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
+        <span class="breadcrumb-current">Module 1: Cells</span>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- MODULE HERO -->
+  <section class="module-hero">
+    <div class="container">
+      <div class="module-hero-content">
+        <div class="module-hero-badges">
+          <span class="badge badge-critical">HSC Biology</span>
+          <span class="badge badge-secondary">Year 11</span>
+        </div>
+
+        <h1 class="module-hero-title">Module 1: Cells as the Basis of Life</h1>
+
+        <p class="module-hero-description">
+          Explore the fundamental unit of life. From cell theory to organelle function, membrane transport to cellular processes,
+          this module builds your understanding of how cells work as the foundation of all living things.
+        </p>
+
+        <div class="module-hero-meta">
+          <div class="hero-meta-item">
+            <i data-lucide="book-open" class="icon-sm"></i>
+            <span>30 Lessons</span>
+          </div>
+          <div class="hero-meta-item">
+            <i data-lucide="clock" class="icon-sm"></i>
+            <span>~25 hours</span>
+          </div>
+          <div class="hero-meta-item">
+            <i data-lucide="graduation-cap" class="icon-sm"></i>
+            <span>Foundation Module</span>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+          <span class="progress-text">0/30 lessons completed (0%)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INQUIRY QUESTIONS -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Inquiry Questions</h2>
+        <p class="section-subtitle">
+          These are the key questions that guide your learning throughout Module 1
+        </p>
+      </div>
+
+      <div class="grid-2-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-primary icon-wrapper-sm">
+              <i data-lucide="help-circle" class="icon-sm"></i>
+            </div>
+            <h3 class="card-title">What distinguishes one cell from another?</h3>
+          </div>
+          <div class="card-content">
+            <p class="text-secondary">
+              Explore the diversity of cell types, from prokaryotes to eukaryotes, and understand how structure relates to function.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-secondary icon-wrapper-sm">
+              <i data-lucide="help-circle" class="icon-sm"></i>
+            </div>
+            <h3 class="card-title">How do cells coordinate activities within their internal environment?</h3>
+          </div>
+          <div class="card-content">
+            <p class="text-secondary">
+              Discover how organelles work together, how membranes control transport, and how cells maintain homeostasis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">All Lessons</h2>
+        <p class="section-subtitle">
+          Work through the lessons in order, or jump to specific topics you need to revise
+        </p>
+      </div>
+
+      <div class="lessons-grid">
+        <!-- Lesson 1 -->
+        <a href="/hsc-biology/module-1-cells/lesson-1.html" class="lesson-card">
+          <div class="lesson-card-number">1</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Introduction to Cells</h3>
+            <p class="lesson-card-description">
+              Discover the fundamental unit of life and explore why cells are the building blocks of all living organisms.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-available">Available</span>
+          </div>
+        </a>
+
+        <!-- Lesson 2 -->
+        <a href="/hsc-biology/module-1-cells/lesson-2.html" class="lesson-card">
+          <div class="lesson-card-number">2</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Prokaryotic Cells</h3>
+            <p class="lesson-card-description">
+              Examine the structure and function of bacterial and archaeal cells - the simplest forms of life.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-available">Available</span>
+          </div>
+        </a>
+
+        <!-- Lesson 3 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">3</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Eukaryotic Cells</h3>
+            <p class="lesson-card-description">
+              Explore the complex cells of plants, animals, fungi, and protists with their membrane-bound organelles.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 4 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">4</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Cell Membrane Structure</h3>
+            <p class="lesson-card-description">
+              Understand the fluid mosaic model and how the plasma membrane controls what enters and exits cells.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 5 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">5</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Passive Transport</h3>
+            <p class="lesson-card-description">
+              Learn how substances move across membranes without energy through diffusion and facilitated diffusion.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 6 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">6</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Active Transport</h3>
+            <p class="lesson-card-description">
+              Discover how cells use ATP energy to move substances against their concentration gradients.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 7 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">7</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Osmosis</h3>
+            <p class="lesson-card-description">
+              Explore water movement across membranes and understand hypotonic, hypertonic, and isotonic solutions.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 8 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">8</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Endocytosis & Exocytosis</h3>
+            <p class="lesson-card-description">
+              Learn how cells engulf materials and secrete substances using vesicle-mediated transport.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>40 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 9 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">9</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">The Nucleus</h3>
+            <p class="lesson-card-description">
+              Examine the control centre of the cell - the nucleus, nuclear envelope, and nucleolus.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 10 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">10</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Ribosomes & Protein Synthesis</h3>
+            <p class="lesson-card-description">
+              Discover the protein factories of the cell and their role in translation.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 11 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">11</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Endoplasmic Reticulum</h3>
+            <p class="lesson-card-description">
+              Compare rough and smooth ER and understand their roles in protein processing and lipid synthesis.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 12 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">12</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Golgi Apparatus</h3>
+            <p class="lesson-card-description">
+              Explore the cell's packaging and distribution centre for proteins and lipids.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>40 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 13 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">13</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Mitochondria</h3>
+            <p class="lesson-card-description">
+              Investigate the powerhouse of the cell and its role in cellular respiration and ATP production.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 14 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">14</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Chloroplasts</h3>
+            <p class="lesson-card-description">
+              Learn about photosynthesis organelles and how plants capture light energy.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 15 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">15</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Lysosomes & Peroxisomes</h3>
+            <p class="lesson-card-description">
+              Discover the cell's digestive system and detoxification organelles.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>40 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 16 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">16</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Vacuoles & Storage</h3>
+            <p class="lesson-card-description">
+              Compare plant and animal cell vacuoles and understand cellular storage mechanisms.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>35 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 17 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">17</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Cell Wall</h3>
+            <p class="lesson-card-description">
+              Examine the structure and function of plant, fungal, and bacterial cell walls.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>40 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 18 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">18</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Cytoskeleton</h3>
+            <p class="lesson-card-description">
+              Explore microfilaments, intermediate filaments, and microtubules that give cells shape and movement.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 19 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">19</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Centrioles & Cell Division</h3>
+            <p class="lesson-card-description">
+              Learn about centrioles and their role in organising microtubules during cell division.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>40 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 20 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">20</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Cell Theory</h3>
+            <p class="lesson-card-description">
+              Trace the historical development of cell theory and its key principles.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 21 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">21</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Microscopy Techniques</h3>
+            <p class="lesson-card-description">
+              Compare light and electron microscopy and understand their applications in cell biology.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 22 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">22</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Calculating Cell Size</h3>
+            <p class="lesson-card-description">
+              Master scale bars, magnification calculations, and estimating actual cell dimensions.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 23 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">23</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Surface Area to Volume Ratio</h3>
+            <p class="lesson-card-description">
+              Understand why cells are small and how SA:V ratio affects cell function.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 24 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">24</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Cell Fractionation</h3>
+            <p class="lesson-card-description">
+              Learn laboratory techniques for separating and studying cell components.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 25 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">25</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Biochemistry of Cells</h3>
+            <p class="lesson-card-description">
+              Explore the four major macromolecules: carbohydrates, lipids, proteins, and nucleic acids.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>55 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 26 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">26</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Enzymes in Cells</h3>
+            <p class="lesson-card-description">
+              Understand enzyme structure, function, and the factors that affect enzyme activity.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 27 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">27</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Energy in Cells</h3>
+            <p class="lesson-card-description">
+              Discover ATP, cellular respiration overview, and how cells use energy.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 28 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">28</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Cell Communication</h3>
+            <p class="lesson-card-description">
+              Explore how cells signal each other and respond to their environment.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>45 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 29 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">29</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Stem Cells & Technology</h3>
+            <p class="lesson-card-description">
+              Learn about stem cell types, applications, and technologies used to study cells.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>50 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Lesson 30 -->
+        <a href="#" class="lesson-card card-coming-soon">
+          <div class="lesson-card-number">30</div>
+          <div class="lesson-card-content">
+            <h3 class="lesson-card-title">Module 1 Review</h3>
+            <p class="lesson-card-description">
+              Comprehensive review of all Module 1 concepts with practice questions and exam preparation.
+            </p>
+          </div>
+          <div class="lesson-card-meta">
+            <span class="meta-item">
+              <i data-lucide="clock" class="icon-sm"></i>
+              <span>60 min</span>
+            </span>
+            <span class="status-badge status-coming-soon">Coming Soon</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <i data-lucide="atom" class="icon-lg"></i>
+            <span>Science Hub</span>
+          </div>
+          <p class="footer-tagline">
+            Built with care for science students in NSW
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Module 1</h4>
+            <ul>
+              <li><a href="/hsc-biology/module-1-cells/lesson-1.html">Lesson 1</a></li>
+              <li><a href="/hsc-biology/module-1-cells/index.html">All Lessons</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>HSC Biology</h4>
+            <ul>
+              <li><a href="/hsc-biology/index.html">All Modules</a></li>
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Study Tips</a></li>
+              <li><a href="#">NSW Syllabus</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Science Hub. Educational use only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/storage.js"></script>
+  <script src="/assets/js/progress.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Update progress display
+    const completedLessons = getModuleProgress('hsc-biology', 'module-1-cells');
+    const totalLessons = 30;
+    const completed = completedLessons.length;
+    const percentage = Math.round((completed / totalLessons) * 100);
+
+    const progressFill = document.querySelector('.progress-bar-fill');
+    const progressText = document.querySelector('.progress-text');
+
+    if (progressFill) {
+      progressFill.style.width = percentage + '%';
+    }
+
+    if (progressText) {
+      progressText.textContent = `${completed}/${totalLessons} lessons completed (${percentage}%)`;
+    }
+
+    // Mark completed lesson cards
+    completedLessons.forEach(lessonId => {
+      const lessonNum = lessonId.replace('lesson-', '');
+      const cards = document.querySelectorAll('.lesson-card');
+      cards.forEach(card => {
+        const numberEl = card.querySelector('.lesson-card-number');
+        if (numberEl && numberEl.textContent === lessonNum) {
+          card.classList.add('completed');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

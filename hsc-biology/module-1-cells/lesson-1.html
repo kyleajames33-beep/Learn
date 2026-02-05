@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 1: Introduction to Cells - Discover the fundamental unit of life and explore why cells are the building blocks of all living organisms. HSC Biology Module 1.">
+  <title>Lesson 1: Introduction to Cells - Module 1 - HSC Biology</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons (Local) -->
+  <script src="/assets/js/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <i data-lucide="atom" class="icon-md"></i>
+        <span class="logo-text">Science Hub</span>
+      </a>
+
+      <div class="nav-search">
+        <i data-lucide="search" class="search-icon icon-sm"></i>
+        <input type="search" placeholder="Search lessons..." id="global-search" aria-label="Search lessons">
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-btn" aria-label="Settings">
+          <i data-lucide="settings" class="icon-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/" class="breadcrumb-link">
+          <i data-lucide="home" class="icon-sm"></i>
+          <span>Home</span>
+        </a>
+        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
+        <a href="/hsc-biology/index.html" class="breadcrumb-link">
+          <span>HSC Biology</span>
+        </a>
+        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
+        <a href="/hsc-biology/module-1-cells/index.html" class="breadcrumb-link">
+          <span>Module 1</span>
+        </a>
+        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
+        <span class="breadcrumb-current">Lesson 1</span>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- MOBILE SIDEBAR TOGGLE -->
+  <button class="sidebar-toggle-btn" aria-label="Toggle lesson sidebar">
+    <i data-lucide="menu" class="icon-md"></i>
+  </button>
+
+  <!-- LESSON LAYOUT -->
+  <div class="lesson-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="lesson-sidebar" id="lesson-sidebar">
+      <div class="sidebar-header">
+        <h3>Module 1: Cells</h3>
+        <span class="module-subtitle">HSC Biology</span>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="sidebar-progress">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+        <span class="progress-text">0/30 lessons (0%)</span>
+      </div>
+
+      <!-- Lesson List -->
+      <nav class="lesson-list" aria-label="Lesson navigation">
+        <a href="/hsc-biology/module-1-cells/lesson-1.html" class="lesson-item active" data-lesson="lesson-1">
+          <span class="lesson-number">1</span>
+          <span class="lesson-title-text">Introduction to Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="/hsc-biology/module-1-cells/lesson-2.html" class="lesson-item" data-lesson="lesson-2">
+          <span class="lesson-number">2</span>
+          <span class="lesson-title-text">Prokaryotic Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-3">
+          <span class="lesson-number">3</span>
+          <span class="lesson-title-text">Eukaryotic Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-4">
+          <span class="lesson-number">4</span>
+          <span class="lesson-title-text">Cell Membrane Structure</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-5">
+          <span class="lesson-number">5</span>
+          <span class="lesson-title-text">Passive Transport</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-6">
+          <span class="lesson-number">6</span>
+          <span class="lesson-title-text">Active Transport</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-7">
+          <span class="lesson-number">7</span>
+          <span class="lesson-title-text">Osmosis</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-8">
+          <span class="lesson-number">8</span>
+          <span class="lesson-title-text">Endocytosis & Exocytosis</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-9">
+          <span class="lesson-number">9</span>
+          <span class="lesson-title-text">The Nucleus</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-10">
+          <span class="lesson-number">10</span>
+          <span class="lesson-title-text">Ribosomes & Protein Synthesis</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-11">
+          <span class="lesson-number">11</span>
+          <span class="lesson-title-text">Endoplasmic Reticulum</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-12">
+          <span class="lesson-number">12</span>
+          <span class="lesson-title-text">Golgi Apparatus</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-13">
+          <span class="lesson-number">13</span>
+          <span class="lesson-title-text">Mitochondria</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-14">
+          <span class="lesson-number">14</span>
+          <span class="lesson-title-text">Chloroplasts</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-15">
+          <span class="lesson-number">15</span>
+          <span class="lesson-title-text">Lysosomes & Peroxisomes</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-16">
+          <span class="lesson-number">16</span>
+          <span class="lesson-title-text">Vacuoles & Storage</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-17">
+          <span class="lesson-number">17</span>
+          <span class="lesson-title-text">Cell Wall</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-18">
+          <span class="lesson-number">18</span>
+          <span class="lesson-title-text">Cytoskeleton</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-19">
+          <span class="lesson-number">19</span>
+          <span class="lesson-title-text">Centrioles & Cell Division</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-20">
+          <span class="lesson-number">20</span>
+          <span class="lesson-title-text">Cell Theory</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-21">
+          <span class="lesson-number">21</span>
+          <span class="lesson-title-text">Microscopy Techniques</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-22">
+          <span class="lesson-number">22</span>
+          <span class="lesson-title-text">Calculating Cell Size</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-23">
+          <span class="lesson-number">23</span>
+          <span class="lesson-title-text">Surface Area to Volume Ratio</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-24">
+          <span class="lesson-number">24</span>
+          <span class="lesson-title-text">Cell Fractionation</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-25">
+          <span class="lesson-number">25</span>
+          <span class="lesson-title-text">Biochemistry of Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-26">
+          <span class="lesson-number">26</span>
+          <span class="lesson-title-text">Enzymes in Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-27">
+          <span class="lesson-number">27</span>
+          <span class="lesson-title-text">Energy in Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-28">
+          <span class="lesson-number">28</span>
+          <span class="lesson-title-text">Cell Communication</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-29">
+          <span class="lesson-number">29</span>
+          <span class="lesson-title-text">Stem Cells & Technology</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="#" class="lesson-item" data-lesson="lesson-30">
+          <span class="lesson-number">30</span>
+          <span class="lesson-title-text">Module 1 Review</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN LESSON CONTENT -->
+    <main class="lesson-content-wrapper">
+
+      <!-- LESSON HERO -->
+      <header class="lesson-hero">
+        <div class="lesson-hero-badges">
+          <span class="badge badge-critical">HSC Biology</span>
+          <span class="badge badge-secondary">Module 1</span>
+          <span class="badge">Lesson 1</span>
+        </div>
+
+        <h1 class="lesson-hero-title">Introduction to Cells</h1>
+
+        <p class="lesson-hero-description">
+          Discover the fundamental unit of life. Explore what cells are, why they are essential to all living things,
+          and how our understanding of cells has shaped modern biology and medicine.
+        </p>
+
+        <div class="lesson-hero-meta">
+          <div class="hero-meta-item">
+            <i data-lucide="clock" class="icon-sm"></i>
+            <span>45 minutes</span>
+          </div>
+          <div class="hero-meta-item">
+            <i data-lucide="book-open" class="icon-sm"></i>
+            <span>Lesson 1 of 30</span>
+          </div>
+          <div class="hero-meta-item">
+            <i data-lucide="bar-chart-3" class="icon-sm"></i>
+            <span>Foundation Level</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- LEARNING INTENTIONS GRID -->
+      <section class="section">
+        <div class="grid-3-col">
+          <!-- Learning Intentions Card -->
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-primary">
+                <i data-lucide="target" class="icon-md"></i>
+              </div>
+              <h2 class="card-title">Learning Intentions</h2>
+            </div>
+            <div class="card-content">
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li>Understand why cells are the basic unit of life</li>
+                <li>Distinguish between unicellular and multicellular organisms</li>
+                <li>Explain the significance of cell size</li>
+                <li>Recognise the diversity of cell types</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Syllabus Links Card -->
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-accent">
+                <i data-lucide="link" class="icon-md"></i>
+              </div>
+              <h2 class="card-title">Syllabus Links</h2>
+            </div>
+            <div class="card-content">
+              <p class="text-secondary">This lesson addresses:</p>
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-top: var(--space-2);">
+                <li>BIO11-8: Cells as the basis of life</li>
+                <li>Inquiry Question: What distinguishes one cell from another?</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Success Criteria Card -->
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-secondary">
+                <i data-lucide="check-circle-2" class="icon-md"></i>
+              </div>
+              <h2 class="card-title">Success Criteria</h2>
+            </div>
+            <div class="card-content">
+              <p class="text-secondary">By the end of this lesson, you can:</p>
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-top: var(--space-2);">
+                <li>Define what a cell is</li>
+                <li>Explain why cells must be small</li>
+                <li>Compare unicellular and multicellular organisms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENGAGEMENT HOOK -->
+      <section class="section">
+        <div class="card" style="background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-secondary) 100%); border-left: 4px solid var(--primary);">
+          <div class="card-content">
+            <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
+              <div class="icon-wrapper icon-wrapper-primary icon-wrapper-lg">
+                <i data-lucide="lightbulb" class="icon-lg"></i>
+              </div>
+              <div>
+                <h3 style="font-size: var(--text-xl); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-3);">
+                  Think About This...
+                </h3>
+                <p class="text-secondary" style="line-height: var(--leading-relaxed); font-size: var(--text-lg);">
+                  Your body contains approximately <strong>37 trillion cells</strong> - that's 37,000,000,000,000 individual living units
+                  working together right now. Each cell is a self-contained factory, taking in nutrients, producing energy,
+                  and carrying out specific functions. A single drop of your blood contains about 5 million red blood cells,
+                  each one completing a full circuit of your body in just 20 seconds. How do trillions of microscopic cells
+                  coordinate to keep you alive?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT: What is a Cell? -->
+      <section class="section">
+        <h2 class="section-title">What is a Cell?</h2>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+          A <strong>cell</strong> is the smallest structural and functional unit of life. All living organisms are made of cells -
+          from the simplest bacteria to complex organisms like humans. Cells are often called the "building blocks of life"
+          because they are the basic units from which all living things are constructed.
+        </p>
+
+        <div class="card" style="background: var(--bg-elevated); margin: var(--space-6) 0;">
+          <div class="card-content">
+            <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
+              Key Definition
+            </h3>
+            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+              <strong>Cell:</strong> The basic structural and functional unit of all living organisms. A cell is the smallest
+              unit that can carry out all the processes necessary for life, including metabolism, growth, reproduction,
+              and response to stimuli.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+          Every cell shares certain fundamental characteristics. All cells are surrounded by a <strong>plasma membrane</strong>
+          (also called the cell membrane) that separates the cell's internal environment from its external surroundings.
+          Inside every cell is <strong>cytoplasm</strong>, a gel-like substance where chemical reactions occur. All cells also
+          contain <strong>genetic material (DNA)</strong> that stores the instructions for the cell's activities and allows
+          the cell to reproduce.
+        </p>
+
+        <div class="grid-2-col" style="margin: var(--space-6) 0;">
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-primary icon-wrapper-sm">
+                <i data-lucide="check" class="icon-sm"></i>
+              </div>
+              <h3 class="card-title" style="font-size: var(--text-lg);">All Cells Have</h3>
+            </div>
+            <div class="card-content">
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li>Plasma membrane (cell membrane)</li>
+                <li>Cytoplasm</li>
+                <li>Genetic material (DNA)</li>
+                <li>Ribosomes for protein synthesis</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-secondary icon-wrapper-sm">
+                <i data-lucide="zap" class="icon-sm"></i>
+              </div>
+              <h3 class="card-title" style="font-size: var(--text-lg);">All Cells Can</h3>
+            </div>
+            <div class="card-content">
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li>Obtain and use energy (metabolism)</li>
+                <li>Respond to their environment</li>
+                <li>Grow and develop</li>
+                <li>Reproduce (make copies of themselves)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT: Why Must Cells Be Small? -->
+      <section class="section">
+        <h2 class="section-title">Why Must Cells Be Small?</h2>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+          Most cells are microscopic, typically ranging from 1 to 100 micrometres (μm) in diameter. A micrometre is
+          one-millionth of a metre (0.000001 m). This small size isn't accidental - it's essential for cell survival.
+          The reason relates to the <strong>surface area to volume ratio</strong>.
+        </p>
+
+        <div class="card" style="background: var(--bg-elevated); margin: var(--space-6) 0;">
+          <div class="card-content">
+            <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
+              The Surface Area to Volume Problem
+            </h3>
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
+              As a cell increases in size, its volume increases faster than its surface area. This creates a problem:
+              the cell membrane (surface area) is responsible for exchanging materials with the environment, while the
+              cytoplasm (volume) contains all the processes that need those materials.
+            </p>
+            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+              If a cell becomes too large, its surface area won't be sufficient to supply nutrients to, or remove
+              waste from, its large volume. The cell would essentially "starve" or be poisoned by its own waste products.
+              Small cells have a <strong>high surface area to volume ratio</strong>, allowing efficient exchange of materials.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+          Some cells, like nerve cells (neurons), solve this problem by being very long but thin. Others, like red
+          blood cells, have a flattened disc shape to maximise their surface area. The largest single cells, like
+          ostrich eggs, are mostly yolk (stored nutrients) with very little active cytoplasm.
+        </p>
+      </section>
+
+      <!-- WORKED EXAMPLE -->
+      <section class="section">
+        <div class="card" style="border: 2px solid var(--primary); background: var(--bg-primary);">
+          <div class="card-header" style="background: var(--primary); margin: -1px; padding: var(--space-4); border-radius: var(--rounded-lg) var(--rounded-lg) 0 0;">
+            <div class="icon-wrapper" style="background: white;">
+              <i data-lucide="pencil" class="icon-md" style="color: var(--primary);"></i>
+            </div>
+            <h3 class="card-title" style="color: white; font-size: var(--text-xl);">Worked Example: Calculating Surface Area to Volume Ratio</h3>
+          </div>
+          <div class="card-content" style="padding: var(--space-6);">
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+              <strong>Question:</strong> Compare the surface area to volume ratio of a cube-shaped cell with sides of
+              1 μm versus a cube with sides of 4 μm.
+            </p>
+
+            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Step 1: Calculate for the small cube (1 μm sides)
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                Surface Area = 6 × (1)² = 6 μm²<br>
+                Volume = (1)³ = 1 μm³<br>
+                SA:V ratio = 6:1 or <strong>6</strong>
+              </p>
+            </div>
+
+            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Step 2: Calculate for the large cube (4 μm sides)
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                Surface Area = 6 × (4)² = 96 μm²<br>
+                Volume = (4)³ = 64 μm³<br>
+                SA:V ratio = 96:64 = 1.5:1 or <strong>1.5</strong>
+              </p>
+            </div>
+
+            <div style="background: var(--bg-elevated); padding: var(--space-4); border-radius: var(--rounded-md); border-left: 4px solid var(--primary);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Conclusion:
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                The smaller cell has a SA:V ratio of 6, while the larger cell has a ratio of only 1.5. This means
+                the small cell has 4 times more surface area relative to its volume, allowing it to exchange materials
+                much more efficiently. This is why cells must remain small.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT: Unicellular vs Multicellular -->
+      <section class="section">
+        <h2 class="section-title">Unicellular vs Multicellular Organisms</h2>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+          Organisms can be classified based on the number of cells they contain. <strong>Unicellular organisms</strong>
+          consist of a single cell that performs all life functions. <strong>Multicellular organisms</strong> are made
+          of many cells that work together, often with specialised functions.
+        </p>
+
+        <div class="grid-2-col" style="margin: var(--space-6) 0;">
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-secondary icon-wrapper-sm">
+                <i data-lucide="circle" class="icon-sm"></i>
+              </div>
+              <h3 class="card-title" style="font-size: var(--text-lg);">Unicellular Organisms</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
+                The entire organism is a single cell. This one cell must perform all functions necessary for life:
+                obtaining nutrients, producing energy, removing waste, responding to stimuli, and reproducing.
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                <strong>Examples:</strong> Bacteria (e.g., <em>E. coli</em>), Archaea, many protists (e.g., Amoeba,
+                Paramecium), some fungi (yeasts)
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-primary icon-wrapper-sm">
+                <i data-lucide="layout-grid" class="icon-sm"></i>
+              </div>
+              <h3 class="card-title" style="font-size: var(--text-lg);">Multicellular Organisms</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
+                The organism contains many cells. Different cells become specialised for specific functions
+                (cell differentiation), allowing for greater complexity and efficiency.
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                <strong>Examples:</strong> Animals (including humans), plants, most fungi, some protists (e.g., seaweed)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="background: var(--bg-elevated); margin: var(--space-6) 0;">
+          <div class="card-content">
+            <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
+              Advantages of Multicellularity
+            </h3>
+            <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+              <li><strong>Cell specialisation:</strong> Cells can become highly efficient at specific tasks</li>
+              <li><strong>Larger body size:</strong> Allows organisms to exploit different ecological niches</li>
+              <li><strong>Longer lifespan:</strong> Individual cells can be replaced while the organism survives</li>
+              <li><strong>Greater complexity:</strong> Enables the development of organs and organ systems</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT: Diversity of Cell Types -->
+      <section class="section">
+        <h2 class="section-title">The Diversity of Cell Types</h2>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+          While all cells share fundamental features, there is remarkable diversity in cell structure. Scientists
+          classify cells into two main categories: <strong>prokaryotic cells</strong> and <strong>eukaryotic cells</strong>.
+        </p>
+
+        <div class="grid-2-col" style="margin: var(--space-6) 0;">
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-accent icon-wrapper-sm">
+                <i data-lucide="minus" class="icon-sm"></i>
+              </div>
+              <h3 class="card-title" style="font-size: var(--text-lg);">Prokaryotic Cells</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
+                Simple cells without a nucleus or membrane-bound organelles. Their DNA floats freely in the cytoplasm
+                in a region called the nucleoid.
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                <strong>Include:</strong> Bacteria and Archaea<br>
+                <strong>Size:</strong> Usually 0.1-5 μm<br>
+                <strong>Examples:</strong> <em>E. coli</em>, <em>Staphylococcus</em>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-critical icon-wrapper-sm">
+                <i data-lucide="hexagon" class="icon-sm"></i>
+              </div>
+              <h3 class="card-title" style="font-size: var(--text-lg);">Eukaryotic Cells</h3>
+            </div>
+            <div class="card-content">
+              <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
+                Complex cells with a true nucleus (containing DNA) and membrane-bound organelles like mitochondria,
+                endoplasmic reticulum, and Golgi apparatus.
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                <strong>Include:</strong> Animals, plants, fungi, protists<br>
+                <strong>Size:</strong> Usually 10-100 μm<br>
+                <strong>Examples:</strong> Human cells, plant cells
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+          We will explore both prokaryotic and eukaryotic cells in detail in the following lessons. Understanding the
+          differences between these cell types is fundamental to biology and helps explain the diversity of life on Earth.
+        </p>
+      </section>
+
+      <!-- ACTIVITY 1 -->
+      <section class="section">
+        <div class="activity-card activity-card--teal">
+          <div class="activity-card-header">
+            <i data-lucide="microscope" class="icon-lg" style="color: white;"></i>
+            <h3>Activity 1: Cell Size Comparison</h3>
+          </div>
+          <div class="activity-card-body">
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-5);">
+              Match each cell type with its approximate size. Write the letter in the space provided.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-bottom: var(--space-6);">
+              <div style="background: var(--bg-secondary); padding: var(--space-5); border-radius: var(--radius-lg);">
+                <p style="font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
+                  <i data-lucide="list-ordered" class="icon-sm" style="color: #0d9488;"></i> Cell Types
+                </p>
+                <ol class="text-secondary" style="line-height: 2; padding-left: var(--space-5);">
+                  <li>Bacterium (<em>E. coli</em>)</li>
+                  <li>Human red blood cell</li>
+                  <li>Human egg cell (ovum)</li>
+                  <li>Nerve cell (neuron)</li>
+                </ol>
+              </div>
+              <div style="background: var(--bg-secondary); padding: var(--space-5); border-radius: var(--radius-lg);">
+                <p style="font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
+                  <i data-lucide="ruler" class="icon-sm" style="color: #0d9488;"></i> Sizes
+                </p>
+                <ul class="text-secondary" style="line-height: 2; list-style: upper-alpha; padding-left: var(--space-5);">
+                  <li>100 μm diameter</li>
+                  <li>Up to 1 metre long</li>
+                  <li>2 μm long</li>
+                  <li>7-8 μm diameter</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); padding: var(--space-5); border-radius: var(--radius-lg); border: 2px solid #99f6e4;">
+              <p style="font-weight: var(--weight-bold); color: #0d9488; margin-bottom: var(--space-4);">Your Answers:</p>
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-bottom: var(--space-5);">
+                <div>
+                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-2); font-weight: var(--weight-medium);">1. Bacterium</label>
+                  <input type="text" id="act1-q1" class="modern-input modern-input--small activity-letter-input" maxlength="1" pattern="[A-Da-d]" style="font-size: var(--text-lg); font-weight: var(--weight-bold); text-transform: uppercase;">
+                </div>
+                <div>
+                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-2); font-weight: var(--weight-medium);">2. Red blood cell</label>
+                  <input type="text" id="act1-q2" class="modern-input modern-input--small activity-letter-input" maxlength="1" pattern="[A-Da-d]" style="font-size: var(--text-lg); font-weight: var(--weight-bold); text-transform: uppercase;">
+                </div>
+                <div>
+                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-2); font-weight: var(--weight-medium);">3. Egg cell</label>
+                  <input type="text" id="act1-q3" class="modern-input modern-input--small activity-letter-input" maxlength="1" pattern="[A-Da-d]" style="font-size: var(--text-lg); font-weight: var(--weight-bold); text-transform: uppercase;">
+                </div>
+                <div>
+                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-2); font-weight: var(--weight-medium);">4. Nerve cell</label>
+                  <input type="text" id="act1-q4" class="modern-input modern-input--small activity-letter-input" maxlength="1" pattern="[A-Da-d]" style="font-size: var(--text-lg); font-weight: var(--weight-bold); text-transform: uppercase;">
+                </div>
+              </div>
+              <div style="text-align: center;">
+                <button class="btn-check-answers" onclick="checkActivity1()" style="background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);">
+                  <i data-lucide="check-circle" class="icon-md"></i>
+                  Check Activity 1
+                </button>
+              </div>
+              <div id="act1-result" style="margin-top: var(--space-4); text-align: center;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVITY 2 -->
+      <section class="section">
+        <div class="activity-card activity-card--purple">
+          <div class="activity-card-header">
+            <i data-lucide="shapes" class="icon-lg" style="color: white;"></i>
+            <h3>Activity 2: Unicellular vs Multicellular</h3>
+          </div>
+          <div class="activity-card-body">
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-5);">
+              Classify each organism as <strong>U</strong> (unicellular) or <strong>M</strong> (multicellular).
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-bottom: var(--space-6);">
+              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--radius-lg); display: flex; align-items: center; gap: var(--space-3); border: 2px solid transparent; transition: all 0.2s;" onmouseover="this.style.borderColor='#8b5cf6'" onmouseout="this.style.borderColor='transparent'">
+                <input type="text" class="modern-input modern-input--small" maxlength="1" style="font-weight: var(--weight-bold);">
+                <span class="text-secondary" style="font-weight: var(--weight-medium);">Amoeba</span>
+              </div>
+              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--radius-lg); display: flex; align-items: center; gap: var(--space-3); border: 2px solid transparent; transition: all 0.2s;" onmouseover="this.style.borderColor='#8b5cf6'" onmouseout="this.style.borderColor='transparent'">
+                <input type="text" class="modern-input modern-input--small" maxlength="1" style="font-weight: var(--weight-bold);">
+                <span class="text-secondary" style="font-weight: var(--weight-medium);">Oak tree</span>
+              </div>
+              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--radius-lg); display: flex; align-items: center; gap: var(--space-3); border: 2px solid transparent; transition: all 0.2s;" onmouseover="this.style.borderColor='#8b5cf6'" onmouseout="this.style.borderColor='transparent'">
+                <input type="text" class="modern-input modern-input--small" maxlength="1" style="font-weight: var(--weight-bold);">
+                <span class="text-secondary" style="font-weight: var(--weight-medium);">E. coli</span>
+              </div>
+              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--radius-lg); display: flex; align-items: center; gap: var(--space-3); border: 2px solid transparent; transition: all 0.2s;" onmouseover="this.style.borderColor='#8b5cf6'" onmouseout="this.style.borderColor='transparent'">
+                <input type="text" class="modern-input modern-input--small" maxlength="1" style="font-weight: var(--weight-bold);">
+                <span class="text-secondary" style="font-weight: var(--weight-medium);">Mushroom</span>
+              </div>
+              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--radius-lg); display: flex; align-items: center; gap: var(--space-3); border: 2px solid transparent; transition: all 0.2s;" onmouseover="this.style.borderColor='#8b5cf6'" onmouseout="this.style.borderColor='transparent'">
+                <input type="text" class="modern-input modern-input--small" maxlength="1" style="font-weight: var(--weight-bold);">
+                <span class="text-secondary" style="font-weight: var(--weight-medium);">Yeast</span>
+              </div>
+              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--radius-lg); display: flex; align-items: center; gap: var(--space-3); border: 2px solid transparent; transition: all 0.2s;" onmouseover="this.style.borderColor='#8b5cf6'" onmouseout="this.style.borderColor='transparent'">
+                <input type="text" class="modern-input modern-input--small" maxlength="1" style="font-weight: var(--weight-bold);">
+                <span class="text-secondary" style="font-weight: var(--weight-medium);">Kangaroo</span>
+              </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: var(--space-5); border-radius: var(--radius-lg); border: 2px solid #c4b5fd;">
+              <p style="font-weight: var(--weight-bold); color: #7c3aed; margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
+                <i data-lucide="message-circle" class="icon-sm"></i> Reflection Question
+              </p>
+              <p class="text-secondary" style="margin-bottom: var(--space-3);">
+                Why might a unicellular organism like an amoeba be successful despite having only one cell?
+              </p>
+              <textarea class="short-answer-input" placeholder="Type your answer here..." style="min-height: 100px;"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COPY INTO BOOKS -->
+      <section class="section">
+        <div class="card" style="background: var(--bg-secondary); border: 2px dashed var(--border);">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-primary">
+              <i data-lucide="book-copy" class="icon-md"></i>
+            </div>
+            <h2 class="card-title" style="font-size: var(--text-xl);">Copy Into Your Books</h2>
+          </div>
+          <div class="card-content">
+            <div style="background: white; padding: var(--space-5); border-radius: var(--rounded-md); border: 1px solid var(--border);">
+              <h3 style="font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-4); text-decoration: underline;">
+                Lesson 1: Introduction to Cells
+              </h3>
+
+              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+                <strong>Definition:</strong> A cell is the basic structural and functional unit of all living organisms.
+                It is the smallest unit that can carry out all life processes.
+              </p>
+
+              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+                <strong>All cells have:</strong>
+              </p>
+              <ul style="color: var(--text-primary); line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-bottom: var(--space-4);">
+                <li>Plasma membrane - controls what enters and exits</li>
+                <li>Cytoplasm - gel-like substance where reactions occur</li>
+                <li>Genetic material (DNA) - contains instructions for cell activities</li>
+                <li>Ribosomes - for protein synthesis</li>
+              </ul>
+
+              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+                <strong>Why cells are small:</strong> Small cells have a high surface area to volume ratio, allowing
+                efficient exchange of materials across the membrane.
+              </p>
+
+              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+                <strong>Types of organisms:</strong>
+              </p>
+              <ul style="color: var(--text-primary); line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-bottom: var(--space-4);">
+                <li>Unicellular - one cell performs all functions (e.g., bacteria, amoeba)</li>
+                <li>Multicellular - many specialised cells work together (e.g., humans, plants)</li>
+              </ul>
+
+              <p style="color: var(--text-primary); line-height: var(--leading-relaxed);">
+                <strong>Two main cell types:</strong>
+              </p>
+              <ul style="color: var(--text-primary); line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li>Prokaryotic - no nucleus, simple (bacteria, archaea)</li>
+                <li>Eukaryotic - has nucleus and organelles (animals, plants, fungi)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ASSESSMENT QUESTIONS -->
+      <section class="section">
+        <h2 class="section-title">Check Your Understanding</h2>
+
+        <!-- Multiple Choice Questions -->
+        <div class="quiz-section">
+          <div class="quiz-header">
+            <div class="quiz-header-icon">
+              <i data-lucide="circle-check" class="icon-md"></i>
+            </div>
+            <h3>Multiple Choice Questions</h3>
+          </div>
+
+          <!-- Question 1 -->
+          <div class="quiz-question">
+            <p>
+              <span class="quiz-question-number">1</span>
+              <span class="quiz-question-text">Which of the following is NOT found in all cells?</span>
+            </p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="a">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">A</span>
+                <span class="quiz-option-text">Plasma membrane</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="b">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">B</span>
+                <span class="quiz-option-text">Nucleus</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="c">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">C</span>
+                <span class="quiz-option-text">Cytoplasm</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="d">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">D</span>
+                <span class="quiz-option-text">Genetic material</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="quiz-question">
+            <p>
+              <span class="quiz-question-number">2</span>
+              <span class="quiz-question-text">Why must cells be small?</span>
+            </p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="a">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">A</span>
+                <span class="quiz-option-text">Large cells cannot fit in organisms</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="b">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">B</span>
+                <span class="quiz-option-text">Small cells have a higher surface area to volume ratio for efficient exchange</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="c">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">C</span>
+                <span class="quiz-option-text">Large cells use too much energy</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="d">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">D</span>
+                <span class="quiz-option-text">Microscopes can only see small cells</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz-question">
+            <p>
+              <span class="quiz-question-number">3</span>
+              <span class="quiz-question-text">Which organism is unicellular?</span>
+            </p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="a">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">A</span>
+                <span class="quiz-option-text">Mushroom</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="b">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">B</span>
+                <span class="quiz-option-text">Fern</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="c">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">C</span>
+                <span class="quiz-option-text">Amoeba</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="d">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">D</span>
+                <span class="quiz-option-text">Jellyfish</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="quiz-question">
+            <p>
+              <span class="quiz-question-number">4</span>
+              <span class="quiz-question-text">Prokaryotic cells differ from eukaryotic cells because they:</span>
+            </p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="a">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">A</span>
+                <span class="quiz-option-text">Have no DNA</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="b">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">B</span>
+                <span class="quiz-option-text">Have no nucleus or membrane-bound organelles</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="c">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">C</span>
+                <span class="quiz-option-text">Are always larger</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="d">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">D</span>
+                <span class="quiz-option-text">Have no plasma membrane</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="quiz-question">
+            <p>
+              <span class="quiz-question-number">5</span>
+              <span class="quiz-question-text">An advantage of multicellularity is:</span>
+            </p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="a">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">A</span>
+                <span class="quiz-option-text">Simpler metabolism</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="b">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">B</span>
+                <span class="quiz-option-text">Faster reproduction</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="c">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">C</span>
+                <span class="quiz-option-text">Cell specialisation for specific functions</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="d">
+                <span class="quiz-option-circle"></span>
+                <span class="quiz-option-letter">D</span>
+                <span class="quiz-option-text">Independence from other cells</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-submit-section">
+            <button class="btn-check-answers" onclick="checkAnswers()">
+              <i data-lucide="check-circle" class="icon-md"></i>
+              Check My Answers
+            </button>
+          </div>
+        </div>
+
+        <!-- Short Answer Questions -->
+        <div class="short-answer-section">
+          <div class="quiz-header" style="margin-bottom: var(--space-6);">
+            <div class="quiz-header-icon" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);">
+              <i data-lucide="file-text" class="icon-md"></i>
+            </div>
+            <h3>Short Answer Questions</h3>
+          </div>
+
+          <div class="short-answer-question">
+            <div class="short-answer-header">
+              <span class="short-answer-number">6</span>
+              <span class="short-answer-text">Define the term "cell" and list three features common to all cells.</span>
+              <span class="short-answer-marks">3 marks</span>
+            </div>
+            <textarea class="short-answer-input" placeholder="Write your answer here..."></textarea>
+          </div>
+
+          <div class="short-answer-question">
+            <div class="short-answer-header">
+              <span class="short-answer-number">7</span>
+              <span class="short-answer-text">Explain why a cell with a cube shape and sides of 2 μm would be more efficient at exchanging materials than a cell with sides of 6 μm. Include calculations in your answer.</span>
+              <span class="short-answer-marks">4 marks</span>
+            </div>
+            <textarea class="short-answer-input" placeholder="Write your answer here..."></textarea>
+          </div>
+
+          <div class="short-answer-question">
+            <div class="short-answer-header">
+              <span class="short-answer-number">8</span>
+              <span class="short-answer-text">Compare prokaryotic and eukaryotic cells. Identify TWO similarities and TWO differences.</span>
+              <span class="short-answer-marks">4 marks</span>
+            </div>
+            <textarea class="short-answer-input" placeholder="Write your answer here..."></textarea>
+          </div>
+
+          <div class="short-answer-question">
+            <div class="short-answer-header">
+              <span class="short-answer-number">9</span>
+              <span class="short-answer-text">Discuss how multicellularity provides advantages over unicellularity. Use examples in your response.</span>
+              <span class="short-answer-marks">4 marks</span>
+            </div>
+            <textarea class="short-answer-input" placeholder="Write your answer here..."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANSWER KEY -->
+      <section class="section">
+        <details class="card">
+          <summary style="padding: var(--space-4); cursor: pointer; font-weight: var(--weight-semibold); color: var(--text-primary); display: flex; align-items: center; gap: var(--space-3);">
+            <i data-lucide="key" class="icon-sm"></i>
+            View Answer Key
+          </summary>
+          <div class="card-content" style="border-top: 1px solid var(--border);">
+            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
+              Activity 1: Cell Size Comparison
+            </h4>
+            <p class="text-secondary" style="margin-bottom: var(--space-4);">
+              1. C (2 μm) | 2. D (7-8 μm) | 3. A (100 μm) | 4. B (Up to 1 metre)
+            </p>
+
+            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
+              Activity 2: Unicellular vs Multicellular
+            </h4>
+            <p class="text-secondary" style="margin-bottom: var(--space-4);">
+              Amoeba: U | Oak tree: M | E. coli: U | Mushroom: M | Yeast: U | Kangaroo: M
+            </p>
+            <p class="text-secondary" style="margin-bottom: var(--space-6);">
+              <strong>Reflection:</strong> A unicellular organism like an amoeba can be successful because it can rapidly
+              reproduce, adapt quickly to environmental changes, requires minimal resources, and has a high surface area
+              to volume ratio allowing efficient nutrient exchange. Being small also allows it to live in diverse microenvironments.
+            </p>
+
+            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
+              Multiple Choice Answers
+            </h4>
+            <p class="text-secondary" style="margin-bottom: var(--space-6);">
+              1. B (Nucleus - prokaryotes don't have one)<br>
+              2. B (Small cells have a higher surface area to volume ratio for efficient exchange)<br>
+              3. C (Amoeba)<br>
+              4. B (Have no nucleus or membrane-bound organelles)<br>
+              5. C (Cell specialisation for specific functions)
+            </p>
+
+            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
+              Short Answer Marking Guidelines
+            </h4>
+
+            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Question 6 (3 marks):
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                Definition (1 mark): A cell is the basic structural and functional unit of all living organisms /
+                smallest unit capable of life processes.<br>
+                Three features (1 mark each, max 2): plasma membrane, cytoplasm, genetic material (DNA), ribosomes.
+              </p>
+            </div>
+
+            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Question 7 (4 marks):
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                2 μm cell: SA = 6 × 4 = 24 μm², V = 8 μm³, SA:V = 3 (1 mark)<br>
+                6 μm cell: SA = 6 × 36 = 216 μm², V = 216 μm³, SA:V = 1 (1 mark)<br>
+                Comparison: 2 μm cell has SA:V of 3 vs 1 for larger cell (1 mark)<br>
+                Explanation: Higher ratio means more surface area per unit volume for exchange of nutrients/waste (1 mark)
+              </p>
+            </div>
+
+            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Question 8 (4 marks):
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                Similarities (1 mark each): Both have plasma membrane, cytoplasm, ribosomes, DNA/genetic material.<br>
+                Differences (1 mark each): Eukaryotes have nucleus/prokaryotes don't; Eukaryotes have membrane-bound
+                organelles/prokaryotes don't; Eukaryotes generally larger; Eukaryotes have linear chromosomes/prokaryotes
+                have circular DNA.
+              </p>
+            </div>
+
+            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Question 9 (4 marks):
+              </p>
+              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
+                Advantages (1 mark each, max 3): Cell specialisation (cells can be efficient at specific tasks,
+                e.g., muscle cells for contraction); Larger body size (can exploit different ecological niches);
+                Longer lifespan (cells replaced while organism survives); Greater complexity (organs and organ systems).<br>
+                Examples (1 mark): Appropriate examples such as neurons for nerve impulses, red blood cells for oxygen
+                transport, root cells for absorption.
+              </p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- MARK COMPLETE SECTION -->
+      <section class="mark-complete-section">
+        <h3 style="font-size: var(--text-xl); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-4);">
+          Lesson Complete?
+        </h3>
+        <p class="text-secondary" style="margin-bottom: var(--space-6);">
+          Mark this lesson as complete to track your progress through Module 1.
+        </p>
+        <button id="mark-complete-btn" class="mark-complete-btn">
+          <i data-lucide="circle" class="icon-sm"></i>
+          <span>Mark as Complete</span>
+        </button>
+      </section>
+
+      <!-- LESSON NAVIGATION -->
+      <nav class="lesson-navigation" aria-label="Lesson navigation">
+        <a href="#" class="lesson-nav-btn disabled" aria-disabled="true">
+          <i data-lucide="chevron-left" class="icon-sm"></i>
+          <div class="nav-btn-content">
+            <span class="nav-btn-label">Previous</span>
+            <span class="nav-btn-title">No previous lesson</span>
+          </div>
+        </a>
+
+        <a href="/hsc-biology/module-1-cells/index.html" class="lesson-nav-home">
+          <i data-lucide="grid-3x3" class="icon-sm"></i>
+          <span>All Lessons</span>
+        </a>
+
+        <a href="/hsc-biology/module-1-cells/lesson-2.html" class="lesson-nav-btn">
+          <div class="nav-btn-content" style="text-align: right;">
+            <span class="nav-btn-label">Next</span>
+            <span class="nav-btn-title">Prokaryotic Cells</span>
+          </div>
+          <i data-lucide="chevron-right" class="icon-sm"></i>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <i data-lucide="atom" class="icon-lg"></i>
+            <span>Science Hub</span>
+          </div>
+          <p class="footer-tagline">
+            Built with care for science students in NSW
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Module 1</h4>
+            <ul>
+              <li><a href="/hsc-biology/module-1-cells/lesson-1.html">Lesson 1</a></li>
+              <li><a href="/hsc-biology/module-1-cells/index.html">All Lessons</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>HSC Biology</h4>
+            <ul>
+              <li><a href="/hsc-biology/index.html">All Modules</a></li>
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Study Tips</a></li>
+              <li><a href="#">NSW Syllabus</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Science Hub. Educational use only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/storage.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Track this lesson visit
+    saveLastVisited('hsc-biology', 'module-1-cells', 'lesson-1');
+
+    // Check if already completed
+    const isCompleted = isLessonComplete('hsc-biology', 'module-1-cells', 'lesson-1');
+    const completeBtn = document.getElementById('mark-complete-btn');
+
+    if (isCompleted && completeBtn) {
+      completeBtn.classList.add('completed');
+      completeBtn.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i><span>Completed</span>';
+      lucide.createIcons();
+    }
+
+    // Mark complete button handler
+    if (completeBtn) {
+      completeBtn.addEventListener('click', function() {
+        markLessonComplete('hsc-biology', 'module-1-cells', 'lesson-1');
+        this.classList.add('completed');
+        this.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i><span>Completed!</span>';
+        lucide.createIcons();
+
+        // Update sidebar
+        const sidebarItem = document.querySelector('.lesson-item.active');
+        if (sidebarItem) {
+          sidebarItem.classList.add('completed');
+        }
+
+        // Update progress bar
+        updateProgress();
+      });
+    }
+
+    // Sidebar toggle for mobile
+    const sidebarToggle = document.querySelector('.sidebar-toggle-btn');
+    const sidebar = document.querySelector('.lesson-sidebar');
+
+    if (sidebarToggle && sidebar) {
+      sidebarToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('open');
+      });
+    }
+
+    // Function to update progress
+    function updateProgress() {
+      const completedLessons = getModuleProgress('hsc-biology', 'module-1-cells');
+      const totalLessons = 30;
+      const completed = completedLessons.length;
+      const percentage = Math.round((completed / totalLessons) * 100);
+
+      const progressFill = document.querySelector('.progress-bar-fill');
+      const progressText = document.querySelector('.progress-text');
+
+      if (progressFill) {
+        progressFill.style.width = percentage + '%';
+      }
+
+      if (progressText) {
+        progressText.textContent = `${completed}/${totalLessons} lessons (${percentage}%)`;
+      }
+    }
+
+    // Load progress for all lessons
+    const completedLessons = getModuleProgress('hsc-biology', 'module-1-cells');
+    completedLessons.forEach(lessonId => {
+      const item = document.querySelector(`[data-lesson="${lessonId}"]`);
+      if (item) {
+        item.classList.add('completed');
+      }
+    });
+
+    // Check answers function for multiple choice
+    function checkAnswers() {
+      const answers = {
+        q1: 'b', // Nucleus
+        q2: 'b', // Surface area to volume ratio
+        q3: 'c', // Amoeba
+        q4: 'b', // No nucleus or membrane-bound organelles
+        q5: 'c'  // Cell specialisation
+      };
+
+      let correct = 0;
+      let total = Object.keys(answers).length;
+
+      // Check each question
+      Object.keys(answers).forEach(q => {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const options = document.querySelectorAll(`input[name="${q}"]`);
+
+        options.forEach(opt => {
+          const label = opt.closest('.quiz-option');
+          label.style.borderColor = '';
+          label.style.background = '';
+        });
+
+        if (selected) {
+          const label = selected.closest('.quiz-option');
+          if (selected.value === answers[q]) {
+            label.style.borderColor = '#10b981';
+            label.style.background = '#ecfdf5';
+            correct++;
+          } else {
+            label.style.borderColor = '#ef4444';
+            label.style.background = '#fef2f2';
+            // Highlight correct answer
+            options.forEach(opt => {
+              if (opt.value === answers[q]) {
+                const correctLabel = opt.closest('.quiz-option');
+                correctLabel.style.borderColor = '#10b981';
+                correctLabel.style.background = '#ecfdf5';
+              }
+            });
+          }
+        }
+      });
+
+      // Show result
+      const btn = document.querySelector('.btn-check-answers');
+      btn.innerHTML = `<i data-lucide="award" class="icon-md"></i> Score: ${correct}/${total}`;
+      lucide.createIcons();
+    }
+
+    // Update progress bar on load
+    updateProgress();
+  </script>
+</body>
+</html>
