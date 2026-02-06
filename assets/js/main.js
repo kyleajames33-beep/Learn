@@ -1,6 +1,9 @@
 /**
  * Science Learning Hub - Main JavaScript
- * Phase 00: Foundation
+ * Phase 0.1: Gamification Consolidation
+ * 
+ * Core functionality with consolidated gamification engine integration.
+ * Uses EventBus for decoupled communication between systems.
  */
 
 // ========================================
@@ -203,96 +206,6 @@ function updateSidebarProgress(yearLevel, moduleId, totalLessons) {
 }
 
 /**
- * Setup Mark Complete button
- */
-function setupMarkComplete(yearLevel, moduleId, lessonId) {
-  const btn = document.querySelector('.mark-complete-btn');
-  if (!btn) return;
-
-  // Check if already completed
-  if (StorageManager.isLessonComplete(yearLevel, moduleId, lessonId)) {
-    setButtonCompleted(btn);
-  }
-
-  btn.addEventListener('click', () => {
-    if (btn.classList.contains('completed')) return;
-
-    const success = StorageManager.markLessonComplete(yearLevel, moduleId, lessonId);
-    
-    if (success) {
-      setButtonCompleted(btn);
-      
-      // Update sidebar
-      const totalLessons = document.querySelectorAll('.lesson-item').length || 30;
-      updateSidebarProgress(yearLevel, moduleId, totalLessons);
-      
-      // Show success feedback
-      showToast('Lesson marked as complete!');
-      
-      // Award XP if system is available
-      if (window.XPManager) {
-        const streakInfo = StreakManager.getStreakInfo();
-        const xpResult = XPManager.awardLessonXP(lessonId, streakInfo.currentStreak);
-        
-        if (xpResult.awarded) {
-          let bonusText = null;
-          if (xpResult.details.firstLessonBonus) {
-            bonusText = 'First lesson of the day bonus!';
-          } else if (xpResult.details.streakBonus) {
-            bonusText = `${streakInfo.currentStreak} day streak bonus!`;
-          }
-          XPUI.showXPGain(xpResult.amount, bonusText);
-          
-          // Check for level up
-          if (xpResult.leveledUp) {
-            setTimeout(() => {
-              XPUI.showLevelUp(xpResult.newLevel, XPManager.getRankForLevel(xpResult.newLevel));
-            }, 1000);
-          }
-        }
-      }
-      
-      // Update streak if system is available
-      if (window.StreakManager) {
-        const result = StreakManager.checkIn();
-        if (result.streakUpdated) {
-          StreakUI.updateStreakDisplay();
-          if (result.milestoneReached) {
-            setTimeout(() => {
-              StreakUI.showCelebration(result.milestoneReached);
-            }, 1500);
-          }
-        }
-      }
-      
-      // Check achievements if system is available
-      if (window.AchievementManager) {
-        setTimeout(() => {
-          const newAchievements = AchievementManager.recordLessonComplete(lessonId, moduleId);
-          if (newAchievements.length > 0) {
-            newAchievements.forEach((achievement, index) => {
-              setTimeout(() => {
-                AchievementUI.showUnlockNotification(achievement);
-              }, index * 1500);
-            });
-          }
-          
-          // Check time-based achievements
-          const timeAchievements = AchievementManager.checkAchievements('time_check');
-          if (timeAchievements.length > 0) {
-            timeAchievements.forEach((achievement, index) => {
-              setTimeout(() => {
-                AchievementUI.showUnlockNotification(achievement);
-              }, (newAchievements.length * 1500) + (index * 1500));
-            });
-          }
-        }, 500);
-      }
-    }
-  });
-}
-
-/**
  * Set button to completed state
  */
 function setButtonCompleted(btn) {
@@ -335,6 +248,123 @@ function showToast(message) {
     toast.style.transition = 'opacity 0.3s ease';
     setTimeout(() => toast.remove(), 300);
   }, 3000);
+}
+
+/**
+ * Setup Mark Complete button - CONSOLIDATED VERSION
+ * Uses EventBus and GamificationEngine instead of old individual managers
+ */
+function setupMarkComplete(yearLevel, moduleId, lessonId) {
+  const btn = document.querySelector('.mark-complete-btn');
+  if (!btn) return;
+
+  // Check if already completed (via StorageManager for compatibility)
+  if (StorageManager.isLessonComplete(yearLevel, moduleId, lessonId)) {
+    setButtonCompleted(btn);
+  }
+
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('completed')) return;
+
+    // Save to storage (for backward compatibility)
+    const success = StorageManager.markLessonComplete(yearLevel, moduleId, lessonId);
+    
+    if (success) {
+      // Update sidebar immediately
+      const totalLessons = document.querySelectorAll('.lesson-item').length || 30;
+      updateSidebarProgress(yearLevel, moduleId, totalLessons);
+      
+      // Use new consolidated system if available
+      if (window.EventBus && window.GamificationEngine) {
+        // Emit event to trigger consolidated gamification flow
+        EventBus.emit('lesson:completed', {
+          yearLevel,
+          module: moduleId,
+          lesson: lessonId,
+          timestamp: new Date().toISOString()
+        });
+      } else {
+        // Fallback: show basic toast if new system not loaded
+        showToast('Lesson marked as complete!');
+        setButtonCompleted(btn);
+      }
+      
+      // Legacy fallback: if old managers still exist, call them too
+      // This allows parallel testing during migration
+      if (window.XPManager && !window.GamificationEngine) {
+        // Old system integration (for backward compatibility during transition)
+        legacyGamificationHandler(yearLevel, moduleId, lessonId);
+      }
+    }
+  });
+}
+
+/**
+ * Legacy gamification handler for backward compatibility
+ * Called only if new system is not available
+ */
+function legacyGamificationHandler(yearLevel, moduleId, lessonId) {
+  // Award XP if system is available
+  if (window.XPManager && window.StreakManager) {
+    const streakInfo = StreakManager.getStreakInfo();
+    const xpResult = XPManager.awardLessonXP(lessonId, streakInfo.currentStreak);
+    
+    if (xpResult.awarded && window.XPUI) {
+      let bonusText = null;
+      if (xpResult.details.firstLessonBonus) {
+        bonusText = 'First lesson of the day bonus!';
+      } else if (xpResult.details.streakBonus) {
+        bonusText = `${streakInfo.currentStreak} day streak bonus!`;
+      }
+      XPUI.showXPGain(xpResult.amount, bonusText);
+      
+      if (xpResult.leveledUp && window.XPUI) {
+        setTimeout(() => {
+          XPUI.showLevelUp(xpResult.newLevel, XPManager.getRankForLevel(xpResult.newLevel));
+        }, 1000);
+      }
+    }
+  }
+  
+  // Update streak if system is available
+  if (window.StreakManager && window.StreakUI) {
+    const result = StreakManager.checkIn();
+    if (result.streakUpdated) {
+      StreakUI.updateStreakDisplay();
+      if (result.milestoneReached) {
+        setTimeout(() => {
+          StreakUI.showCelebration(result.milestoneReached);
+        }, 1500);
+      }
+    }
+  }
+  
+  // Check achievements if system is available
+  if (window.AchievementManager && window.AchievementUI) {
+    setTimeout(() => {
+      const newAchievements = AchievementManager.recordLessonComplete(lessonId, moduleId);
+      if (newAchievements.length > 0) {
+        newAchievements.forEach((achievement, index) => {
+          setTimeout(() => {
+            AchievementUI.showUnlockNotification(achievement);
+          }, index * 1500);
+        });
+      }
+      
+      const timeAchievements = AchievementManager.checkAchievements('time_check');
+      if (timeAchievements.length > 0) {
+        timeAchievements.forEach((achievement, index) => {
+          setTimeout(() => {
+            AchievementUI.showUnlockNotification(achievement);
+          }, (newAchievements.length * 1500) + (index * 1500));
+        });
+      }
+    }, 500);
+  }
+  
+  showToast('Lesson marked as complete!');
+  const btn = document.querySelector('.mark-complete-btn');
+  if (btn) setButtonCompleted(btn);
 }
 
 /**
@@ -397,6 +427,16 @@ function setupQuizValidation() {
       else message += ' - Keep practicing!';
       
       scoreDisplay.textContent = message;
+      
+      // Emit quiz completed event for new gamification system
+      if (window.EventBus) {
+        EventBus.emit('quiz:completed', {
+          score: percentage,
+          perfect: percentage === 100,
+          correct,
+          total
+        });
+      }
     });
   });
 }
@@ -428,6 +468,14 @@ function setupActivityValidation() {
       });
 
       showToast(`${correct}/${items.length} correct`);
+      
+      // Emit activity completed if all correct
+      if (correct === items.length && window.EventBus) {
+        EventBus.emit('activity:completed', {
+          activityId: form.dataset.activity || 'matching',
+          perfect: true
+        });
+      }
     });
   });
 
@@ -454,6 +502,14 @@ function setupActivityValidation() {
       });
 
       showToast(`${correct}/${inputs.length} correct`);
+      
+      // Emit activity completed if all correct
+      if (correct === inputs.length && window.EventBus) {
+        EventBus.emit('activity:completed', {
+          activityId: form.dataset.activity || 'fill-blank',
+          perfect: true
+        });
+      }
     });
   });
 }
@@ -488,6 +544,19 @@ function setupAccordions() {
   // Auto-open specific accordions
   const autoOpenAccordions = document.querySelectorAll('details[data-open="true"]');
   autoOpenAccordions.forEach(acc => acc.open = true);
+  
+  // Track deep dive opens for achievements
+  const deepDives = document.querySelectorAll('details:not([data-open="true"])');
+  deepDives.forEach(dd => {
+    dd.addEventListener('toggle', () => {
+      if (dd.open && window.EventBus) {
+        EventBus.emit('deep-dive:opened', {
+          id: dd.id || 'unnamed',
+          timestamp: new Date().toISOString()
+        });
+      }
+    });
+  });
 }
 
 // ========================================
@@ -527,9 +596,12 @@ document.addEventListener('DOMContentLoaded', () => {
   setupAccordions();
   setupQuizValidation();
   setupActivityValidation();
+  
+  console.log('✓ Main.js initialized (Phase 0.1 - Gamification Consolidation)');
 });
 
 // Export for use in lesson files
 window.StorageManager = StorageManager;
 window.setupMarkComplete = setupMarkComplete;
 window.updateSidebarProgress = updateSidebarProgress;
+window.showToast = showToast;

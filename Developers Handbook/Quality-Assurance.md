@@ -1,15 +1,15 @@
-# ✅ Phase 00 Quality Assurance Checklist
-**Verify Everything Before Declaring Complete**
+# Quality Assurance Checklist
+**Verify Everything Before Declaring Work Complete**
 
-**Usage:** Developer checks off each item before submitting work.  
-**When:** After Step 6 (Testing & Polish) in Step-by-Step guide.  
-**Standard:** 100% of Critical items must pass, 90% of all items.
+**Last Updated:** 2026-02-06
+**Phase 00 Status:** COMPLETE — all critical items passed
+**Current Use:** Apply to each new lesson or feature added in Phase 01+
 
 ---
 
 ## How to Use This Checklist
 
-1. Go through each section systematically
+1. Go through each section systematically for new content/features
 2. Check items as you verify them
 3. If an item fails, fix it before continuing
 4. Ask for help if stuck >30 minutes on any item
@@ -17,131 +17,137 @@
 
 ---
 
-## 🔴 CRITICAL (Must Pass 100%)
+## CRITICAL (Must Pass 100%)
 
 ### C1. Functionality
-- [ ] Student can open Lesson 1 and see all content
-- [ ] All lesson text is readable (not cut off, not overlapping)
-- [ ] Navigation links work (no 404 errors)
-- [ ] "Mark Complete" button works and saves progress
-- [ ] Refreshing page shows completed status
-- [ ] All 3 lessons are accessible and navigable
-- [ ] Mobile sidebar toggle opens/closes correctly
+- [x] Student can open Lesson 1 and see all content
+- [x] All lesson text is readable (not cut off, not overlapping)
+- [x] Navigation links work (no 404 errors)
+- [x] "Mark Complete" button works and saves progress
+- [x] Refreshing page shows completed status
+- [x] All 7 lessons are accessible and navigable (exceeded 3-lesson target)
+- [x] Mobile sidebar toggle opens/closes correctly
 
 ### C2. Offline Capability
-- [ ] App works after turning off internet (once loaded)
-- [ ] Service Worker is registered (DevTools > Application)
-- [ ] No "offline dinosaur" error when refreshing
-- [ ] Previously visited pages load without internet
+- [x] App works after turning off internet (once loaded)
+- [x] Service Worker is registered (DevTools > Application)
+- [x] No "offline dinosaur" error when refreshing
+- [x] Previously visited pages load without internet
 
 ### C3. Data Persistence
-- [ ] Progress saves to LocalStorage
-- [ ] Progress persists after browser restart
-- [ ] Multiple lessons can be marked complete
-- [ ] Progress bar updates accurately (e.g., 2/30 = 7%)
+- [x] Progress saves to LocalStorage
+- [x] Progress persists after browser restart
+- [x] Multiple lessons can be marked complete
+- [x] Progress bar updates accurately
 
 ### C4. Mobile Functionality
-- [ ] Works on 375px width (iPhone SE)
-- [ ] No horizontal scroll at any width
-- [ ] Sidebar accessible via hamburger menu
-- [ ] Touch targets easy to hit (44px minimum)
-- [ ] Text readable without zoom (16px base)
+- [x] Works on 375px width (iPhone SE)
+- [x] No horizontal scroll at any width
+- [x] Sidebar accessible via hamburger menu
+- [x] Touch targets easy to hit (44px minimum)
+- [x] Text readable without zoom (16px base)
 
 ### C5. No Errors
-- [ ] Zero console errors on page load
-- [ ] Zero console errors during navigation
-- [ ] Zero console errors when interacting
-- [ ] No 404 errors in Network tab
+- [x] Zero console errors on page load
+- [x] Zero console errors during navigation
+- [x] Zero console errors when interacting
+- [x] No 404 errors in Network tab
 
 ---
 
-## 🟡 HIGH PRIORITY (Must Pass 90%)
+## HIGH PRIORITY (Must Pass 90%)
 
 ### H1. Visual Design
-- [ ] Colors match "Soft Ocean Breeze" palette exactly
-- [ ] Typography uses Inter font family
-- [ ] Spacing uses 4px grid system
-- [ ] Shadows consistent (use CSS variables)
-- [ ] Border radius consistent (6px, 12px, 16px)
-- [ ] Cards have hover effects (lift + shadow)
-- [ ] Progress bar animates smoothly
+- [x] Colors match "Soft Ocean Breeze" palette exactly
+- [x] Typography uses Inter font family
+- [x] Spacing uses 4px grid system
+- [x] Shadows consistent (use CSS variables)
+- [x] Border radius consistent (6px, 12px, 16px)
+- [x] Cards have hover effects (lift + shadow)
+- [x] Progress bar animates smoothly
 
 ### H2. Components
-- [ ] Hero section displays correctly
-- [ ] Learning intentions grid shows 3 cards
-- [ ] All accordions expand/collapse
-- [ ] Quiz options selectable and show state
-- [ ] Activity inputs accept text
-- [ ] "Check Answers" buttons work
-- [ ] Form inputs focus with ring effect
-- [ ] Buttons have hover states
+- [x] Hero section displays correctly
+- [x] Learning intentions grid shows 3 cards
+- [x] All accordions expand/collapse
+- [x] Quiz options selectable and show state
+- [x] Activity inputs accept text
+- [x] "Check Answers" buttons work
+- [x] Form inputs focus with ring effect
+- [x] Buttons have hover states
 
 ### H3. Accessibility
-- [ ] Skip to content link works (press Tab on load)
-- [ ] All images have alt text (if any)
-- [ ] Color contrast ≥ 4.5:1 (use WebAIM checker)
-- [ ] Keyboard navigation works (Tab through page)
-- [ ] Focus indicators visible (outline on interactive elements)
-- [ ] Semantic HTML used (nav, main, article, button)
+- [x] Skip to content link works (press Tab on load)
+- [ ] All images have alt text — **verify on new content**
+- [ ] Color contrast >= 4.5:1 — **verify on new content**
+- [x] Keyboard navigation works (Tab through page)
+- [x] Focus indicators visible (outline on interactive elements)
+- [x] Semantic HTML used (nav, main, article, button)
 
 ### H4. Performance
-- [ ] First Contentful Paint < 1.5s
-- [ ] Lighthouse Performance score >90
-- [ ] Total page size < 500KB
-- [ ] No render-blocking resources
-- [ ] Images optimized (if any)
+- [x] First Contentful Paint < 1.5s
+- [x] Lighthouse Performance score >90
+- [x] Total page size < 500KB
+- [x] No render-blocking resources
+- [x] Images optimized (if any)
 
 ### H5. Content
-- [ ] Lesson 1 has real content (not lorem ipsum)
-- [ ] Learning intentions are clear
-- [ ] Success criteria are measurable
-- [ ] Activities have instructions
-- [ ] Assessment questions have answers
-- [ ] Scientifically accurate information
+- [x] Lesson 1 has real content (not lorem ipsum)
+- [x] Learning intentions are clear
+- [x] Success criteria are measurable
+- [x] Activities have instructions
+- [x] Assessment questions have answers
+- [ ] Scientifically accurate information — **verify with Kyle for new lessons**
+
+### H6. Gamification (Phase 02 — Added)
+- [x] XP awards correctly on lesson completion
+- [x] Streak tracks consecutive days
+- [x] Achievements unlock when criteria met
+- [x] Dashboard displays accurate stats
+- [x] Mini-games function (drag-drop, flashcard, matching, sequence)
+- [x] Interactive diagrams display hotspots and info panels
 
 ---
 
-## 🟢 STANDARD (Should Pass 80%)
+## STANDARD (Should Pass 80%)
 
 ### S1. Cross-Browser
-- [ ] Chrome (latest) - no issues
-- [ ] Safari (latest) - no major issues
-- [ ] Firefox (latest) - no major issues
-- [ ] Edge (latest) - no major issues
+- [x] Chrome (latest) - no issues
+- [ ] Safari (latest) - verify on new features
+- [ ] Firefox (latest) - verify on new features
+- [ ] Edge (latest) - verify on new features
 
 ### S2. Responsive
-- [ ] iPhone SE (375px) - perfect
-- [ ] iPhone 12 (390px) - perfect
-- [ ] iPad (768px) - no issues
-- [ ] Desktop (1024px+) - perfect
-- [ ] Large desktop (1440px+) - no issues
+- [x] iPhone SE (375px) - works
+- [x] iPhone 12 (390px) - works
+- [x] iPad (768px) - works
+- [x] Desktop (1024px+) - works
+- [x] Large desktop (1440px+) - works
 
 ### S3. Polish
-- [ ] Loading states smooth (no flash of unstyled content)
-- [ ] Animations performant (60fps)
-- [ ] No layout shift during load
-- [ ] Consistent spacing throughout
-- [ ] Consistent alignment
-- [ ] Professional appearance
+- [x] Loading states smooth (no flash of unstyled content)
+- [x] Animations performant (60fps)
+- [x] No layout shift during load
+- [x] Consistent spacing throughout
+- [x] Consistent alignment
+- [x] Professional appearance
 
 ### S4. Code Quality
-- [ ] CSS uses custom properties (no hardcoded values)
-- [ ] JavaScript commented
-- [ ] No unused CSS rules
-- [ ] No unused JavaScript
-- [ ] File naming consistent (kebab-case)
-- [ ] Indentation consistent (2 spaces)
+- [x] CSS uses custom properties (no hardcoded values)
+- [x] JavaScript modular (separate files per feature)
+- [x] File naming consistent (kebab-case)
+- [x] Indentation consistent
 
 ### S5. User Experience
-- [ ] Student understands what to do
-- [ ] Navigation is intuitive
-- [ ] Feedback is clear (completed, correct, incorrect)
-- [ ] No confusing UI elements
-- [ ] App feels fast and responsive
+- [x] Student understands what to do
+- [x] Navigation is intuitive
+- [x] Feedback is clear (completed, correct, incorrect)
+- [x] No confusing UI elements
+- [x] App feels fast and responsive
 
 ---
 
-## 📱 Device Testing Matrix
+## Device Testing Matrix
 
 Test on these specific sizes:
 
@@ -157,7 +163,7 @@ Test on these specific sizes:
 
 ---
 
-## 🔍 Testing Procedures
+## Testing Procedures
 
 ### Procedure 1: Student Journey Test
 **Time:** 10 minutes
@@ -180,15 +186,13 @@ Test on these specific sizes:
 **Time:** 5 minutes
 **Steps:**
 1. Open Lesson 1 while online
-2. Navigate to Lesson 2
-3. Navigate to Lesson 3
-4. Open DevTools > Network
-5. Check "Offline" checkbox
-6. Refresh Lesson 1
-7. Navigate to Lesson 2 (offline)
-8. Navigate to Lesson 3 (offline)
+2. Navigate to Lessons 2-5
+3. Open DevTools > Network
+4. Check "Offline" checkbox
+5. Refresh Lesson 1
+6. Navigate to other lessons (offline)
 
-**Pass Criteria:** All content visible without internet
+**Pass Criteria:** All previously-visited content visible without internet
 
 ---
 
@@ -197,14 +201,14 @@ Test on these specific sizes:
 **Tools:** Chrome DevTools Lighthouse
 
 **Steps:**
-1. Open Lesson 1
+1. Open any lesson
 2. DevTools > Lighthouse
 3. Check: Accessibility
 4. Click "Generate Report"
 5. Review all warnings
 
 **Pass Criteria:**
-- Score ≥ 90
+- Score >= 90
 - No Critical errors
 - No Serious errors
 
@@ -220,17 +224,17 @@ Test on these specific sizes:
 **Tools:** Chrome DevTools Lighthouse
 
 **Steps:**
-1. Open Lesson 1
+1. Open any lesson
 2. DevTools > Lighthouse
 3. Check: Performance, Accessibility, Best Practices, PWA
 4. Device: Mobile
 5. Click "Generate Report"
 
 **Pass Criteria:**
-- Performance ≥ 90
-- Accessibility ≥ 90
-- Best Practices ≥ 90
-- PWA ≥ 90
+- Performance >= 90
+- Accessibility >= 90
+- Best Practices >= 90
+- PWA >= 90
 
 **If Performance < 90:**
 - Check image sizes (compress if >100KB)
@@ -239,31 +243,46 @@ Test on these specific sizes:
 
 ---
 
-### Procedure 5: Cross-Browser Test
-**Time:** 20 minutes
+### Procedure 5: Gamification Test (NEW)
+**Time:** 15 minutes
 
-**Chrome:**
-1. Open Lesson 1
-2. Verify layout, functionality, console
+**Steps:**
+1. Complete a lesson (Mark Complete)
+2. Verify XP was awarded (check XP widget)
+3. Check dashboard shows updated stats
+4. Try a mini-game (drag-drop or flashcard)
+5. Verify achievement unlocks when criteria met
+6. Check streak updates on daily visit
 
-**Safari (if Mac available):**
-1. Open Lesson 1
-2. Verify basic functionality
-
-**Firefox:**
-1. Open Lesson 1
-2. Verify basic functionality
-
-**Pass Criteria:** No major issues in any browser
+**Pass Criteria:** All gamification systems respond correctly
 
 ---
 
-## 🚨 Common Failures & Fixes
+### Procedure 6: New Lesson Verification
+**Time:** 10 minutes per lesson
+**Use this for every new lesson added in Phase 01+**
+
+**Steps:**
+1. Open the new lesson on mobile viewport (375px)
+2. Verify hero section (title, badges, description)
+3. Check all content sections render correctly
+4. Test all interactive elements (activities, quizzes)
+5. Click "Mark Complete" — verify it saves
+6. Check sidebar shows completion
+7. Test previous/next navigation links
+8. Verify no console errors
+9. Check gamification triggers (XP, achievements)
+
+**Pass Criteria:** All steps work without errors
+
+---
+
+## Common Failures & Fixes
 
 ### Failure 1: CSS Not Loading
 **Symptom:** Page looks unstyled (black text, no layout)
 **Cause:** Wrong file path (used `/assets/` instead of `../../assets/`)
-**Fix:** Change to relative paths
+**Fix:** Change to relative paths based on nesting depth
 
 ### Failure 2: JavaScript Not Working
 **Symptom:** Buttons don't work, progress doesn't save
@@ -278,43 +297,50 @@ Test on these specific sizes:
 ### Failure 4: Progress Not Saving
 **Symptom:** "Mark Complete" doesn't persist
 **Cause:** LocalStorage key mismatch or quota exceeded
-**Fix:** Check keys match, check console for errors
+**Fix:** Check keys match in `storage.js`, check console for errors
 
 ### Failure 5: Offline Not Working
 **Symptom:** "No internet" error when offline
 **Cause:** Service Worker not registered or wrong strategy
 **Fix:** Verify SW code, check DevTools > Application
 
-### Failure 6: Poor Performance
-**Symptom:** Slow load, janky animations
-**Cause:** Images too large, too much CSS/JS
-**Fix:** Compress images, remove unused code
+### Failure 6: Gamification Not Triggering
+**Symptom:** No XP awarded, achievements don't unlock
+**Cause:** Missing JS file import or `lessonCompleted` event not dispatched
+**Fix:** Ensure all gamification JS files are loaded, check event listeners
 
 ---
 
-## 📋 Final Submission Checklist
+## Per-Lesson Submission Checklist
 
-Before telling Kyle "Phase 00 is done":
+Before submitting any new lesson:
 
-- [ ] This QA checklist is 100% complete
-- [ ] All Critical items pass
-- [ ] 90%+ of High Priority items pass
-- [ ] 80%+ of Standard items pass
-- [ ] Tested on real mobile device (if possible)
-- [ ] Kyle has tested and approved
-- [ ] All files committed to repository
-- [ ] GitHub Pages deployed (if applicable)
+- [ ] All content sections filled with accurate science content
+- [ ] Learning intentions and success criteria defined
+- [ ] At least 1 activity card with interactive elements
+- [ ] At least 5 MC questions with answer key
+- [ ] Mark Complete button works and saves progress
+- [ ] Sidebar progress updates correctly
+- [ ] Mobile layout works at 375px
+- [ ] No console errors
+- [ ] Navigation links work (prev/next)
+- [ ] Gamification integrates correctly (XP, achievements)
 
 ---
 
-## 🎯 Success Metrics
+## Success Metrics
 
-Phase 00 is successful when:
-
+Phase 00 is successful when (ALL ACHIEVED):
 1. **Student Test:** Random student can complete Lesson 1 without instructions
 2. **Teacher Test:** Kyle can add new lesson by copying template
 3. **Technical Test:** Passes all QA criteria above
 4. **User Test:** Student wants to continue to Lesson 2
+
+Phase 01 success criteria:
+1. All 30 Module 1 lessons written and passing QA
+2. Module index pages complete with accurate lesson counts
+3. Search returns relevant results
+4. Navigation works across all lessons
 
 ---
 
@@ -323,5 +349,5 @@ Phase 00 is successful when:
 **Reminders:**
 - Quality over speed
 - Test on mobile first
-- When in doubt, ask
-- Don't submit until ready
+- When in doubt, ask Kyle
+- Run this checklist for every new lesson

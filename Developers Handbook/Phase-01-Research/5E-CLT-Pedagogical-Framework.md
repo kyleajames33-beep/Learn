@@ -1,8 +1,16 @@
 # 5E-CLT Pedagogical Framework for Phase 01
 
-**Status:** Research Complete - Ready for Implementation  
-**Phase:** 01 - Content Core (Weeks 3-6)  
-**Research Source:** Kimi Module Analysis  
+**Status:** Research Complete — Partially Implemented in existing lessons
+**Phase:** 01 - Content Core (Current Phase)
+**Research Source:** Kimi Module Analysis
+**Last Updated:** 2026-02-06
+
+**Implementation Notes:**
+- Core lesson template supports this framework (hook, content sections, activities, quizzes, copy into books)
+- Existing 7 lessons use elements of this framework but may need alignment review
+- Interactive components (accordions, activities, mini-games, diagrams) are all built and ready
+- Gamification layer (XP, streaks, achievements) already integrated into lesson flow
+- Use this framework as the guide for all new lessons written in Phase 01
 
 ---
 
@@ -289,19 +297,19 @@ Retrieval Arena
 ## Implementation Timeline (Phase 01)
 
 ### Week 1-2: Template Standardization
-- [ ] Create 5E-CLT template component library
-- [ ] Build interactive components (accordion, cloze, drag-drop)
-- [ ] Implement progress tracking enhancements
-- [ ] Add Retrieval Arena framework
+- [x] Create 5E-CLT template component library — **components built** (accordion, activity cards, quizzes, worked examples, copy into books)
+- [x] Build interactive components (accordion, cloze, drag-drop) — **implemented** in `minigames.js`, `diagrams.js`, `components.css`
+- [x] Implement progress tracking enhancements — **done** (XP, streaks, achievements, dashboard)
+- [ ] Add Retrieval Arena framework — **needs dedicated CSS class** (`.retrieval-arena` proposed above)
 
 ### Week 3-4: Content Conversion
-- [ ] Convert existing 3 lessons to 5E-CLT format
-- [ ] Write remaining Module 1 lessons (4-15)
+- [ ] Review existing 5 Module 1 lessons against 5E-CLT format — **needs review**
+- [ ] Write remaining Module 1 lessons (6-30) — **25 lessons remaining**
 - [ ] Add interleaving bridges between all lessons
 
 ### Week 5-6: Advanced Features
 - [ ] Implement spaced repetition priming
-- [ ] Add "Copy Into Books" structured summaries
+- [x] Add "Copy Into Books" structured summaries — **implemented** as accordion section in lessons
 - [ ] Build meta-cognitive close components
 - [ ] Create challenge question bank
 
@@ -350,14 +358,15 @@ Retrieval Arena
 
 ## Next Steps
 
-1. **Review with Kyle** - Get teacher approval on pedagogical approach
-2. **Prototype Lesson** - Build one full 5E-CLT lesson for testing
-3. **Student Testing** - Trial with target demographic
-4. **Iterate** - Refine based on feedback
-5. **Scale** - Apply framework to all 30 lessons
+1. **Review existing lessons** — Audit Lessons 1-5 against this framework for alignment
+2. **Review with Kyle** — Get teacher approval on pedagogical approach
+3. **Write Lesson 6** — First lesson built fully to 5E-CLT spec as a reference
+4. **Student Testing** — Trial with target demographic
+5. **Scale** — Apply framework to remaining 24 Module 1 lessons
+6. **Expand** — Use framework for Modules 2-8 and Year 7-10 content
 
 ---
 
-**Document Owner:** Development Team  
-**Last Updated:** February 2026  
-**Version:** 1.0 (Research Phase)
+**Document Owner:** Development Team
+**Last Updated:** 2026-02-06
+**Version:** 1.1 (Updated with implementation status)
