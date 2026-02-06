@@ -228,6 +228,66 @@ function setupMarkComplete(yearLevel, moduleId, lessonId) {
       
       // Show success feedback
       showToast('Lesson marked as complete!');
+      
+      // Award XP if system is available
+      if (window.XPManager) {
+        const streakInfo = StreakManager.getStreakInfo();
+        const xpResult = XPManager.awardLessonXP(lessonId, streakInfo.currentStreak);
+        
+        if (xpResult.awarded) {
+          let bonusText = null;
+          if (xpResult.details.firstLessonBonus) {
+            bonusText = 'First lesson of the day bonus!';
+          } else if (xpResult.details.streakBonus) {
+            bonusText = `${streakInfo.currentStreak} day streak bonus!`;
+          }
+          XPUI.showXPGain(xpResult.amount, bonusText);
+          
+          // Check for level up
+          if (xpResult.leveledUp) {
+            setTimeout(() => {
+              XPUI.showLevelUp(xpResult.newLevel, XPManager.getRankForLevel(xpResult.newLevel));
+            }, 1000);
+          }
+        }
+      }
+      
+      // Update streak if system is available
+      if (window.StreakManager) {
+        const result = StreakManager.checkIn();
+        if (result.streakUpdated) {
+          StreakUI.updateStreakDisplay();
+          if (result.milestoneReached) {
+            setTimeout(() => {
+              StreakUI.showCelebration(result.milestoneReached);
+            }, 1500);
+          }
+        }
+      }
+      
+      // Check achievements if system is available
+      if (window.AchievementManager) {
+        setTimeout(() => {
+          const newAchievements = AchievementManager.recordLessonComplete(lessonId, moduleId);
+          if (newAchievements.length > 0) {
+            newAchievements.forEach((achievement, index) => {
+              setTimeout(() => {
+                AchievementUI.showUnlockNotification(achievement);
+              }, index * 1500);
+            });
+          }
+          
+          // Check time-based achievements
+          const timeAchievements = AchievementManager.checkAchievements('time_check');
+          if (timeAchievements.length > 0) {
+            timeAchievements.forEach((achievement, index) => {
+              setTimeout(() => {
+                AchievementUI.showUnlockNotification(achievement);
+              }, (newAchievements.length * 1500) + (index * 1500));
+            });
+          }
+        }, 500);
+      }
     }
   });
 }

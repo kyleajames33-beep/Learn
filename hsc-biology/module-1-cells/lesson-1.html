@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../../assets/css/components.css?v=3">
   <link rel="stylesheet" href="../../assets/css/streak.css?v=1">
   <link rel="stylesheet" href="../../assets/css/xp.css?v=1">
+  <link rel="stylesheet" href="../../assets/css/achievements.css?v=1">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="manifest" href="../../assets/manifest.json">
   
@@ -643,6 +644,7 @@
   <script src="../../assets/js/main.js"></script>
   <script src="../../assets/js/streak.js"></script>
   <script src="../../assets/js/xp.js"></script>
+  <script src="../../assets/js/achievements.js"></script>
   <script>
     // Lesson-specific initialization
     document.addEventListener('DOMContentLoaded', () => {
@@ -696,6 +698,26 @@
                     StreakUI.showCelebration(result.milestoneReached);
                   }, xpResult.leveledUp ? 2500 : 1000);
                 }
+              }
+              
+              // Check for achievements
+              const newAchievements = AchievementManager.recordLessonComplete(lessonId, moduleId);
+              if (newAchievements.length > 0) {
+                newAchievements.forEach((achievement, index) => {
+                  setTimeout(() => {
+                    AchievementUI.showUnlockNotification(achievement);
+                  }, 3000 + (index * 1500));
+                });
+              }
+              
+              // Check time-based achievements
+              const timeAchievements = AchievementManager.checkAchievements('time_check');
+              if (timeAchievements.length > 0) {
+                timeAchievements.forEach((achievement, index) => {
+                  setTimeout(() => {
+                    AchievementUI.showUnlockNotification(achievement);
+                  }, 4000 + (index * 1500));
+                });
               }
             }, 500);
           }
