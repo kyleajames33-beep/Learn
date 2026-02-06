@@ -1015,18 +1015,23 @@ details.card[open] .card-content {
 .quiz-option {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
   background: var(--bg-main);
   border: 2px solid transparent;
-  border-radius: var(--radius-md);
+  border-radius: 8px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.15s ease;
 }
 
 .quiz-option:hover {
   background: var(--bg-elevated);
   border-color: var(--border-light);
+}
+
+.quiz-option:last-child {
+  margin-bottom: 0;
 }
 
 .quiz-option input[type="radio"] {
@@ -1064,12 +1069,16 @@ details.card[open] .card-content {
 .quiz-option-letter {
   font-weight: 700;
   color: var(--text-muted);
-  min-width: 20px;
+  min-width: 24px;
+  flex-shrink: 0;
+  display: inline-block;
 }
 
 .quiz-option-text {
   flex: 1;
   color: var(--text-secondary);
+  line-height: 1.5;
+  display: inline-block;
 }
 
 .quiz-option.correct {
@@ -1367,41 +1376,6 @@ textarea.modern-input {
 }
 
 /* ============================================
-   QUIZ OPTIONS SPACING FIX
-   ============================================ */
-
-.quiz-option {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 12px 16px;
-  background: var(--bg-main);
-  border: 2px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  margin-bottom: 8px;
-}
-
-.quiz-option:hover {
-  background: var(--bg-elevated);
-  border-color: var(--border-light);
-}
-
-.quiz-option-letter {
-  font-weight: 700;
-  color: var(--text-muted);
-  min-width: 24px;
-  flex-shrink: 0;
-}
-
-.quiz-option-text {
-  flex: 1;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ============================================
    ACTIVITY CARDS VISUAL SEPARATION
    ============================================ */
 
@@ -1617,4 +1591,108 @@ footer a[href="#"],
     font-size: 10px;
     color: #999;
   }
+}
+
+/* ============================================
+   ACTIVITY FORM CONTAINERS
+   ============================================ */
+
+.matching-form,
+.fill-blank-form {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.matching-form {
+  border: 1px solid rgba(13, 148, 136, 0.2);
+}
+
+.fill-blank-form {
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* Make matching items look better */
+.matching-item {
+  background: white;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.matching-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Better styling for fill-in-the-blank inputs */
+.fill-blank-form .modern-input--small {
+  background: white;
+  border: 2px solid var(--border-light);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fill-blank-form label {
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+/* ============================================
+   QUIZ OPTIONS - FORCE FIX
+   ============================================ */
+
+/* Force quiz options to display as block with proper spacing */
+.quiz-options .quiz-option {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding: 12px 16px !important;
+  margin-bottom: 8px !important;
+  background: var(--bg-main) !important;
+  border: 2px solid transparent !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+}
+
+.quiz-options .quiz-option:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Force letter and text to be separate blocks */
+.quiz-options .quiz-option-letter {
+  display: inline-block !important;
+  font-weight: 700 !important;
+  color: var(--text-muted) !important;
+  min-width: 24px !important;
+  flex-shrink: 0 !important;
+}
+
+.quiz-options .quiz-option-text {
+  display: inline-block !important;
+  flex: 1 !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.5 !important;
+}
+
+/* Ensure radio buttons are hidden but functional */
+.quiz-options .quiz-option input[type="radio"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Style the custom radio circle */
+.quiz-options .quiz-option-circle {
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid var(--border-medium) !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+  position: relative !important;
 }
