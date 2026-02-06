@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../../assets/css/global.css?v=3">
   <link rel="stylesheet" href="../../assets/css/components.css?v=3">
   <link rel="stylesheet" href="../../assets/css/streak.css?v=1">
+  <link rel="stylesheet" href="../../assets/css/xp.css?v=1">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="manifest" href="../../assets/manifest.json">
   
@@ -641,6 +642,7 @@
   <!-- Scripts -->
   <script src="../../assets/js/main.js"></script>
   <script src="../../assets/js/streak.js"></script>
+  <script src="../../assets/js/xp.js"></script>
   <script>
     // Lesson-specific initialization
     document.addEventListener('DOMContentLoaded', () => {
@@ -656,18 +658,43 @@
       // Save last visited
       StorageManager.saveLastVisited(yearLevel, moduleId, lessonId);
       
-      // Check for streak when marking complete
+      // Check for streak and award XP when marking complete
       const markCompleteBtn = document.querySelector('.mark-complete-btn');
       if (markCompleteBtn) {
         markCompleteBtn.addEventListener('click', function() {
           if (!this.classList.contains('completed')) {
             // Small delay to let the completion animation play
             setTimeout(() => {
+              // Award XP for lesson completion
+              const streakInfo = StreakManager.getStreakInfo();
+              const xpResult = XPManager.awardLessonXP(lessonId, streakInfo.currentStreak);
+              
+              if (xpResult.awarded) {
+                // Show XP gain notification
+                let bonusText = null;
+                if (xpResult.details.firstLessonBonus) {
+                  bonusText = 'First lesson of the day bonus!';
+                } else if (xpResult.details.streakBonus) {
+                  bonusText = `${streakInfo.currentStreak} day streak bonus!`;
+                }
+                XPUI.showXPGain(xpResult.amount, bonusText);
+                
+                // Check for level up
+                if (xpResult.leveledUp) {
+                  setTimeout(() => {
+                    XPUI.showLevelUp(xpResult.newLevel, XPManager.getRankForLevel(xpResult.newLevel));
+                  }, 1000);
+                }
+              }
+              
+              // Update streak
               const result = StreakManager.checkIn();
               if (result.streakUpdated) {
                 StreakUI.updateStreakDisplay();
                 if (result.milestoneReached) {
-                  StreakUI.showCelebration(result.milestoneReached);
+                  setTimeout(() => {
+                    StreakUI.showCelebration(result.milestoneReached);
+                  }, xpResult.leveledUp ? 2500 : 1000);
                 }
               }
             }, 500);
