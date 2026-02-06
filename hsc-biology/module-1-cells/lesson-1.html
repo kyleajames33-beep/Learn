@@ -3,732 +3,650 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lesson 1: Introduction to Cells - HSC Biology Module 1. Learn about cell theory, why cells are small, and surface area to volume ratio.">
-  <title>Lesson 1: Introduction to Cells - Science Hub</title>
+  <meta name="description" content="Introduction to Cells - Learn about the fundamental unit of life, cell theory, and why cells are small. HSC Biology Module 1.">
+  <title>Lesson 1: Introduction to Cells | HSC Biology | Science Hub</title>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts - Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Global CSS -->
+  <!-- Global Styles -->
   <link rel="stylesheet" href="../../assets/css/global.css">
   
-  <!-- Lucide Icons (Local - avoids CDN tracking issues) -->
-  <script src="../../assets/js/lucide.min.js"></script>
-  
-  <!-- Favicon (data URI to prevent 404) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
-  <!-- Skip to content link (accessibility) -->
-  <a href="#main-content" class="visually-hidden">Skip to main content</a>
-  
-  <!-- ============================================
-       TOP NAVIGATION (Mobile only on desktop)
-       ============================================ -->
-  <header class="top-nav" role="banner">
-    <button class="top-nav__menu-btn" aria-label="Open lesson menu" aria-expanded="false" aria-controls="sidebar">
-      <i data-lucide="menu" width="24" height="24"></i>
-    </button>
-    
-    <a href="../../index.html" class="top-nav__logo">
-      <div class="top-nav__logo-icon">
-        <i data-lucide="atom" width="20" height="20"></i>
-      </div>
-      <span>Science Hub</span>
-    </a>
-    
-    <div style="flex: 1;"></div>
-  </header>
-  
-  <!-- ============================================
-       MAIN LAYOUT
-       ============================================ -->
-  <div class="lesson-layout">
-    
-    <!-- ============================================
-         SIDEBAR
-         ============================================ -->
-    <aside class="sidebar" id="sidebar" role="complementary" aria-label="Lesson navigation">
-      <div class="sidebar__header">
-        <a href="../../index.html" class="sidebar__logo">
-          <i data-lucide="atom" width="24" height="24"></i>
-          <span>Science Hub</span>
-        </a>
-        
-        <p class="sidebar__module-title">Module 1: Cells as the Basis of Life</p>
-        
-        <!-- Progress Bar -->
-        <div class="sidebar__progress">
-          <div class="sidebar__progress-bar">
-            <div class="sidebar__progress-fill progress-animate" style="width: 0%;"></div>
-          </div>
-          <p class="sidebar__progress-text">0/3 lessons (0%)</p>
-        </div>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      
+      <a href="../../index.html" class="nav-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </a>
+      
+      <div class="nav-search">
+        <input type="search" placeholder="Search lessons..." aria-label="Search lessons">
       </div>
       
-      <!-- Lesson List -->
-      <nav class="sidebar__lessons" aria-label="Lessons in this module">
-        <a href="lesson-1.html" class="sidebar__lesson-link active" data-lesson-id="lesson-1">
-          <span class="sidebar__lesson-check sidebar__lesson-check--empty"></span>
-          <span class="sidebar__lesson-number">1</span>
-          <span>Introduction to Cells</span>
+      <!-- Spacer for balance on mobile -->
+      <div style="width: 40px;"></div>
+    </div>
+    
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../../index.html">Home</a>
+        <i data-lucide="chevron-right"></i>
+        <a href="../index.html">HSC Biology</a>
+        <i data-lucide="chevron-right"></i>
+        <span>Lesson 1</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Layout -->
+  <div class="lesson-layout">
+    <!-- Sidebar -->
+    <aside class="lesson-sidebar" id="lesson-sidebar" aria-label="Lesson navigation">
+      <div class="sidebar-header">
+        <h3>Module 1: Cells</h3>
+        <span>HSC Biology</span>
+      </div>
+      
+      <div class="sidebar-progress">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <span class="progress-text">0/30 lessons</span>
+      </div>
+      
+      <nav class="lesson-list" aria-label="Lessons in this module">
+        <a href="lesson-1.html" class="lesson-item active" data-lesson="1" aria-current="page">
+          <span class="lesson-number">1</span>
+          <span class="lesson-title-text">Introduction to Cells</span>
+          <i data-lucide="check" class="lesson-check"></i>
         </a>
-        
-        <a href="lesson-2.html" class="sidebar__lesson-link" data-lesson-id="lesson-2">
-          <span class="sidebar__lesson-check sidebar__lesson-check--empty"></span>
-          <span class="sidebar__lesson-number">2</span>
-          <span>Prokaryotic Cells</span>
+        <a href="lesson-2.html" class="lesson-item" data-lesson="2">
+          <span class="lesson-number">2</span>
+          <span class="lesson-title-text">Prokaryotic Cells</span>
+          <i data-lucide="check" class="lesson-check"></i>
         </a>
-        
-        <a href="lesson-3.html" class="sidebar__lesson-link" data-lesson-id="lesson-3">
-          <span class="sidebar__lesson-check sidebar__lesson-check--empty"></span>
-          <span class="sidebar__lesson-number">3</span>
-          <span>Eukaryotic Cell Structure</span>
+        <a href="lesson-3.html" class="lesson-item" data-lesson="3">
+          <span class="lesson-number">3</span>
+          <span class="lesson-title-text">Eukaryotic Cell Structure</span>
+          <i data-lucide="check" class="lesson-check"></i>
         </a>
       </nav>
     </aside>
-    
-    <!-- Sidebar overlay for mobile -->
-    <div class="sidebar-overlay" aria-hidden="true"></div>
-    
-    <!-- ============================================
-         MAIN CONTENT
-         ============================================ -->
-    <main class="main-content" id="main-content" role="main">
-      <div class="content-wrapper">
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <header class="lesson-hero">
+        <div class="lesson-hero-badges">
+          <span class="badge badge-critical">HSC Biology</span>
+          <span class="badge badge-secondary">Module 1</span>
+          <span class="badge">Lesson 1</span>
+        </div>
         
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../../index.html" class="breadcrumb__link">Home</a>
-          <i data-lucide="chevron-right" class="breadcrumb__separator" width="16" height="16"></i>
-          <a href="../index.html" class="breadcrumb__link">HSC Biology</a>
-          <i data-lucide="chevron-right" class="breadcrumb__separator" width="16" height="16"></i>
-          <a href="index.html" class="breadcrumb__link">Module 1</a>
-          <i data-lucide="chevron-right" class="breadcrumb__separator" width="16" height="16"></i>
-          <span>Lesson 1</span>
-        </nav>
+        <h1 class="lesson-hero-title">Introduction to Cells</h1>
         
-        <!-- ============================================
-             HERO SECTION
-             ============================================ -->
-        <section class="hero">
-          <div class="hero__badges">
-            <span class="badge badge--primary">HSC Biology</span>
-            <span class="badge badge--secondary">Module 1</span>
-            <span class="badge badge--outline">Lesson 1</span>
-          </div>
-          
-          <h1 class="hero__title">Introduction to Cells</h1>
-          
-          <p class="hero__description">
-            Discover the fundamental unit of life. Learn why cells are the building blocks of all living organisms 
-            and explore the fascinating reasons why they must remain microscopic.
-          </p>
-          
-          <div class="hero__meta">
-            <span class="hero__meta-item">
-              <i data-lucide="clock" width="16" height="16"></i>
-              45 minutes
-            </span>
-            <span class="hero__meta-item">
-              <i data-lucide="signal" width="16" height="16"></i>
-              Foundation Level
-            </span>
-            <span class="hero__meta-item">
-              <i data-lucide="wifi-off" width="16" height="16"></i>
-              Works Offline
-            </span>
-          </div>
-        </section>
+        <p class="lesson-hero-description">
+          Discover the fundamental unit of life. Learn what cells are, why they're so small, and how understanding cell biology forms the foundation for all life sciences.
+        </p>
         
-        <!-- ============================================
-             LEARNING INTENTIONS GRID
-             ============================================ -->
-        <section class="intentions-grid">
-          <div class="intention-card intention-card--learning">
-            <div class="intention-card__icon">
-              <i data-lucide="target" width="24" height="24"></i>
+        <div class="lesson-hero-meta">
+          <span class="hero-meta-item">
+            <i data-lucide="clock"></i>
+            <span>45 minutes</span>
+          </span>
+          <span class="hero-meta-item">
+            <i data-lucide="signal"></i>
+            <span>Foundation Level</span>
+          </span>
+          <span class="hero-meta-item">
+            <i data-lucide="wifi-off"></i>
+            <span>Works Offline</span>
+          </span>
+        </div>
+      </header>
+
+      <!-- Learning Intentions Grid -->
+      <div class="grid-3-col" style="margin-bottom: 48px;">
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-secondary">
+              <i data-lucide="target"></i>
             </div>
-            <h3 class="intention-card__title">Learning Intentions</h3>
-            <div class="intention-card__content">
-              <ul class="intention-card__list">
-                <li>Explain cell theory and its historical development</li>
-                <li>Describe why cells are small using SA:V ratio</li>
-                <li>Distinguish between unicellular and multicellular organisms</li>
-              </ul>
-            </div>
+            <h2 class="card-title">Learning Intentions</h2>
           </div>
-          
-          <div class="intention-card intention-card--syllabus">
-            <div class="intention-card__icon">
-              <i data-lucide="link" width="24" height="24"></i>
-            </div>
-            <h3 class="intention-card__title">Syllabus Links</h3>
-            <div class="intention-card__content">
-              <ul class="intention-card__list">
-                <li>BIO11-1: Develops understanding of cell structure</li>
-                <li>BIO11-2: Explains cell processes</li>
-                <li>BIO11-7: Communicates scientific understanding</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="intention-card intention-card--success">
-            <div class="intention-card__icon">
-              <i data-lucide="check-circle" width="24" height="24"></i>
-            </div>
-            <h3 class="intention-card__title">Success Criteria</h3>
-            <div class="intention-card__content">
-              <ul class="intention-card__list">
-                <li>I can state the three principles of cell theory</li>
-                <li>I can calculate SA:V ratio for cubes</li>
-                <li>I can explain the advantages of multicellularity</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             ENGAGEMENT HOOK
-             ============================================ -->
-        <section class="engagement-hook">
-          <div class="engagement-hook__icon">
-            <i data-lucide="lightbulb" width="24" height="24"></i>
-          </div>
-          <div class="engagement-hook__content">
-            <h3>Think About This...</h3>
-            <p>
-              If cells are so important, why aren't we just one giant cell? Why are we made of 
-              trillions of tiny cells instead? The answer lies in the mathematics of surface area 
-              and volume - and it might surprise you!
-            </p>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             CONTENT SECTION 1: WHAT IS A CELL?
-             ============================================ -->
-        <section class="content-section">
-          <h2 class="content-section__title">
-            <span class="content-section__title-icon">
-              <i data-lucide="microscope" width="18" height="18"></i>
-            </span>
-            What is a Cell?
-          </h2>
-          
-          <p>
-            A <strong>cell</strong> is the smallest unit of life that can carry out all life processes. 
-            Whether it's a bacterium swimming in a pond or a neuron firing in your brain, every living 
-            thing is made of cells. Some organisms are just one cell (unicellular), while others - like you - 
-            are made of trillions of cells working together (multicellular).
-          </p>
-          
-          <!-- Definition Box -->
-          <div class="definition-box">
-            <p class="definition-box__term">Cell</p>
-            <p class="definition-box__definition">
-              The basic structural and functional unit of all living organisms. 
-              The smallest unit of life that can exist independently.
-            </p>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             CONTENT SECTION 2: CELL THEORY
-             ============================================ -->
-        <section class="content-section">
-          <h2 class="content-section__title">
-            <span class="content-section__title-icon">
-              <i data-lucide="book-open" width="18" height="18"></i>
-            </span>
-            Cell Theory
-          </h2>
-          
-          <p>
-            Cell theory is one of the fundamental principles of biology. It states three key principles 
-            about the nature of cells:
-          </p>
-          
-          <div class="comparison-grid">
-            <div class="comparison-item">
-              <h4 class="comparison-item__title">Principle 1</h4>
-              <p>All living organisms are composed of one or more cells.</p>
-            </div>
-            
-            <div class="comparison-item">
-              <h4 class="comparison-item__title">Principle 2</h4>
-              <p>The cell is the basic unit of structure and organisation in organisms.</p>
-            </div>
-            
-            <div class="comparison-item">
-              <h4 class="comparison-item__title">Principle 3</h4>
-              <p>All cells come from pre-existing cells through cell division.</p>
-            </div>
-            
-            <div class="comparison-item">
-              <h4 class="comparison-item__title">Bonus Fact</h4>
-              <p>Energy flows occur within cells, and cells contain hereditary information (DNA).</p>
-            </div>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             ACCORDION: DEEP DIVE
-             ============================================ -->
-        <section class="content-section">
-          <div class="accordion">
-            <div class="accordion__item">
-              <button class="accordion__trigger" aria-expanded="false" aria-controls="deep-dive-content">
-                <span>
-                  <i data-lucide="zap" width="18" height="18" style="margin-right: 8px;"></i>
-                  Deep Dive: The Math Behind Cell Size
-                </span>
-                <i data-lucide="chevron-down" class="accordion__icon" width="20" height="20"></i>
-              </button>
-              <div class="accordion__content" id="deep-dive-content" aria-hidden="true">
-                <p>
-                  As a cell grows, its volume increases faster than its surface area. This creates a problem: 
-                  the cell needs more resources (oxygen, nutrients) but has relatively less surface area to 
-                  absorb them through.
-                </p>
-                <p style="margin-top: 12px;">
-                  <strong>Surface Area to Volume Ratio (SA:V)</strong> is the key concept here. Smaller cells 
-                  have a higher SA:V ratio, meaning they can exchange materials with their environment more 
-                  efficiently. When cells get too large, diffusion becomes too slow to meet their needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             WORKED EXAMPLE
-             ============================================ -->
-        <section class="content-section">
-          <div class="worked-example">
-            <div class="worked-example__header">
-              <i data-lucide="calculator" class="worked-example__header-icon" width="20" height="20"></i>
-              <span class="worked-example__header-title">Worked Example: Calculating SA:V Ratio</span>
-            </div>
-            
-            <div class="worked-example__content">
-              <div class="worked-example__step">
-                <span class="worked-example__step-number">1</span>
-                <div class="worked-example__step-content">
-                  <p><strong>Problem:</strong> Calculate the SA:V ratio for a cube with side length 2 cm.</p>
-                </div>
-              </div>
-              
-              <div class="worked-example__step">
-                <span class="worked-example__step-number">2</span>
-                <div class="worked-example__step-content">
-                  <p><strong>Surface Area:</strong></p>
-                  <div class="worked-example__calculation">
-                    SA = 6 × side² = 6 × 2² = 6 × 4 = 24 cm²
-                  </div>
-                </div>
-              </div>
-              
-              <div class="worked-example__step">
-                <span class="worked-example__step-number">3</span>
-                <div class="worked-example__step-content">
-                  <p><strong>Volume:</strong></p>
-                  <div class="worked-example__calculation">
-                    V = side³ = 2³ = 8 cm³
-                  </div>
-                </div>
-              </div>
-              
-              <div class="worked-example__step">
-                <span class="worked-example__step-number">4</span>
-                <div class="worked-example__step-content">
-                  <p><strong>SA:V Ratio:</strong></p>
-                  <div class="worked-example__calculation">
-                    SA:V = 24 ÷ 8 = 3:1 or simply 3
-                  </div>
-                </div>
-              </div>
-              
-              <div class="worked-example__answer">
-                ✓ Answer: The SA:V ratio is 3:1 (or 3)
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             ACTIVITY CARD 1
-             ============================================ -->
-        <section class="activity-card" data-activity="size-matching">
-          <div class="activity-card__header">
-            <span class="activity-card__badge">Activity 1</span>
-            <span class="activity-card__title">Cell Size Comparison</span>
-          </div>
-          
-          <div class="activity-card__content">
-            <p class="activity-card__instructions">
-              Calculate the SA:V ratio for each cube and identify which size is most efficient for a cell.
-            </p>
-            
-            <div class="form-group">
-              <label class="form-label">Cube A (side = 1 cm): SA:V =</label>
-              <input type="text" class="form-input" data-answer="6" placeholder="Enter ratio (e.g., 6)">
-            </div>
-            
-            <div class="form-group">
-              <label class="form-label">Cube B (side = 3 cm): SA:V =</label>
-              <input type="text" class="form-input" data-answer="2" placeholder="Enter ratio">
-            </div>
-            
-            <div class="form-group">
-              <label class="form-label">Cube C (side = 6 cm): SA:V =</label>
-              <input type="text" class="form-input" data-answer="1" placeholder="Enter ratio">
-            </div>
-            
-            <p style="margin-top: 16px; color: var(--text-secondary);">
-              <strong>Question:</strong> Which cube has the most efficient SA:V ratio for a cell? Why?
-            </p>
-          </div>
-          
-          <div class="activity-card__actions">
-            <button class="btn btn--primary" data-check-activity>Check Answers</button>
-            <button class="btn btn--ghost" onclick="this.closest('.activity-card').querySelectorAll('.form-input').forEach(i => {i.value=''; i.style='';})">Reset</button>
-          </div>
-          
-          <div class="activity-result"></div>
-        </section>
-        
-        <!-- ============================================
-             ACTIVITY CARD 2
-             ============================================ -->
-        <section class="activity-card" data-matching="cell-types">
-          <div class="activity-card__header">
-            <span class="activity-card__badge">Activity 2</span>
-            <span class="activity-card__title">Unicellular vs Multicellular</span>
-          </div>
-          
-          <div class="activity-card__content">
-            <p class="activity-card__instructions">
-              Match each characteristic to the correct cell type by clicking an item, then clicking its target.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
-              <!-- Items to match -->
-              <div>
-                <p style="font-weight: 600; margin-bottom: 8px;">Characteristics:</p>
-                <div data-match-item="unicellular" style="padding: 12px; background: var(--primary-light); border-radius: 8px; margin-bottom: 8px; cursor: pointer;">
-                  One cell performs all life functions
-                </div>
-                <div data-match-item="multicellular" style="padding: 12px; background: var(--primary-light); border-radius: 8px; margin-bottom: 8px; cursor: pointer;">
-                  Cells specialize for different tasks
-                </div>
-                <div data-match-item="unicellular" style="padding: 12px; background: var(--primary-light); border-radius: 8px; margin-bottom: 8px; cursor: pointer;">
-                  Examples: bacteria, amoeba, paramecium
-                </div>
-                <div data-match-item="multicellular" style="padding: 12px; background: var(--primary-light); border-radius: 8px; cursor: pointer;">
-                  Examples: plants, animals, fungi
-                </div>
-              </div>
-              
-              <!-- Targets -->
-              <div>
-                <p style="font-weight: 600; margin-bottom: 8px;">Cell Types:</p>
-                <div data-match-target="unicellular" style="padding: 12px; border: 2px dashed var(--border-default); border-radius: 8px; margin-bottom: 8px; min-height: 48px;">
-                  <strong>Unicellular</strong>
-                </div>
-                <div data-match-target="multicellular" style="padding: 12px; border: 2px dashed var(--border-default); border-radius: 8px; min-height: 48px;">
-                  <strong>Multicellular</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="activity-card__actions">
-            <button class="btn btn--primary" data-check-matching>Check Matches</button>
-            <button class="btn btn--ghost" onclick="location.reload()">Reset</button>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             COPY INTO BOOKS
-             ============================================ -->
-        <section class="content-section">
-          <div class="accordion">
-            <div class="accordion__item">
-              <button class="accordion__trigger" aria-expanded="true" aria-controls="copy-content">
-                <span>
-                  <i data-lucide="book" width="18" height="18" style="margin-right: 8px;"></i>
-                  Copy Into Books
-                </span>
-                <i data-lucide="chevron-down" class="accordion__icon" width="20" height="20"></i>
-              </button>
-              <div class="accordion__content" id="copy-content" aria-hidden="false" style="max-height: 1000px; padding: 0 16px 16px;">
-                <div style="background: var(--bg-sidebar); padding: 16px; border-radius: 8px;">
-                  <h4 style="margin-bottom: 12px;">Key Definitions</h4>
-                  <ul style="padding-left: 20px; line-height: 1.8;">
-                    <li><strong>Cell:</strong> The basic structural and functional unit of life</li>
-                    <li><strong>Cell Theory:</strong> All living things are made of cells; cells are the basic unit; cells come from cells</li>
-                    <li><strong>SA:V Ratio:</strong> Surface area to volume ratio - determines cell efficiency</li>
-                    <li><strong>Unicellular:</strong> Organism made of one cell</li>
-                    <li><strong>Multicellular:</strong> Organism made of many cells with specialized functions</li>
-                  </ul>
-                  
-                  <h4 style="margin: 16px 0 12px;">Key Points</h4>
-                  <ul style="padding-left: 20px; line-height: 1.8;">
-                    <li>Cells are small because of the SA:V ratio constraint</li>
-                    <li>Smaller cells have higher SA:V ratios (more efficient)</li>
-                    <li>Multicellularity allows for cell specialization and larger size</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             ASSESSMENT
-             ============================================ -->
-        <section class="assessment" data-quiz="lesson-1-assessment">
-          <h2 class="assessment__title">Knowledge Check</h2>
-          <p class="assessment__subtitle">Test your understanding before marking complete</p>
-          
-          <!-- Multiple Choice Section -->
-          <div class="assessment__section">
-            <h3 class="assessment__section-title">Multiple Choice</h3>
-            
-            <!-- Question 1 -->
-            <div class="question">
-              <p class="question__text">
-                <span class="question__number">1</span>
-                According to cell theory, where do cells come from?
-              </p>
-              <div class="question__options">
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q1" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">A. Spontaneous generation from non-living matter</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q1" data-correct="true" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">B. Pre-existing cells through cell division</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q1" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">C. Chemical reactions in the environment</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q1" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">D. They have always existed</span>
-                </label>
-              </div>
-            </div>
-            
-            <!-- Question 2 -->
-            <div class="question">
-              <p class="question__text">
-                <span class="question__number">2</span>
-                Why are most cells microscopic in size?
-              </p>
-              <div class="question__options">
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q2" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">A. They cannot grow larger than 1 mm</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q2" data-correct="true" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">B. The SA:V ratio becomes inefficient as they grow</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q2" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">C. They would burst from internal pressure</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q2" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">D. Large cells cannot fit through blood vessels</span>
-                </label>
-              </div>
-            </div>
-            
-            <!-- Question 3 -->
-            <div class="question">
-              <p class="question__text">
-                <span class="question__number">3</span>
-                Which organism is unicellular?
-              </p>
-              <div class="question__options">
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q3" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">A. Human</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q3" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">B. Oak tree</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q3" data-correct="true" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">C. Bacterium</span>
-                </label>
-                
-                <label class="quiz-option">
-                  <span class="quiz-option__radio"></span>
-                  <input type="radio" name="q3" data-correct="false" style="position: absolute; opacity: 0;">
-                  <span class="quiz-option__label">D. Mushroom</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Check Answers Button -->
-          <div style="text-align: center; margin: 24px 0;">
-            <button class="btn btn--primary btn--lg" data-check-answers>Check Answers</button>
-          </div>
-          
-          <!-- Answer Key Accordion -->
-          <div class="accordion" style="margin-top: 24px;">
-            <div class="accordion__item">
-              <button class="accordion__trigger" aria-expanded="false" aria-controls="answer-key">
-                <span>
-                  <i data-lucide="key" width="18" height="18" style="margin-right: 8px;"></i>
-                  Answer Key & Marking Guidelines
-                </span>
-                <i data-lucide="chevron-down" class="accordion__icon" width="20" height="20"></i>
-              </button>
-              <div class="accordion__content" id="answer-key" aria-hidden="true">
-                <div style="background: var(--bg-sidebar); padding: 16px; border-radius: 8px;">
-                  <p><strong>Q1:</strong> B - Pre-existing cells through cell division (Cell Theory Principle 3)</p>
-                  <p style="margin-top: 8px;"><strong>Q2:</strong> B - The SA:V ratio becomes inefficient as cells grow larger</p>
-                  <p style="margin-top: 8px;"><strong>Q3:</strong> C - Bacterium (single-celled organism)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             MARK COMPLETE
-             ============================================ -->
-        <section class="mark-complete" data-year="hsc-biology" data-module="module-1" data-lesson="lesson-1" data-total="3">
-          <h2 class="mark-complete__title">Ready to Complete?</h2>
-          <p class="mark-complete__text">
-            Mark this lesson as complete to track your progress and unlock the next lesson.
-          </p>
-          
-          <button class="btn btn--primary btn--lg mark-complete__btn">
-            <i data-lucide="check-circle" width="20" height="20"></i>
-            Mark as Complete
-          </button>
-          
-          <div class="mark-complete__status">
-            <i data-lucide="check" width="20" height="20"></i>
-            <span>Completed! Click to undo</span>
-          </div>
-        </section>
-        
-        <!-- ============================================
-             LESSON NAVIGATION
-             ============================================ -->
-        <nav class="lesson-nav" aria-label="Lesson navigation">
-          <a href="index.html" class="lesson-nav__link lesson-nav__link--overview">
-            <div>
-              <span class="lesson-nav__label">Overview</span>
-              <span class="lesson-nav__title">Module 1: Cells</span>
-            </div>
-          </a>
-          
-          <a href="lesson-2.html" class="lesson-nav__link lesson-nav__link--next">
-            <div style="text-align: right;">
-              <span class="lesson-nav__label">Next</span>
-              <span class="lesson-nav__title">Prokaryotic Cells</span>
-            </div>
-          </a>
-        </nav>
-        
-      </div>
-      
-      <!-- ============================================
-           FOOTER
-           ============================================ -->
-      <footer class="footer">
-        <div class="footer__content">
-          <div>
-            <div class="footer__brand">
-              <i data-lucide="atom" width="24" height="24"></i>
-              <span>Science Hub</span>
-            </div>
-            <p class="footer__tagline">Making science education accessible, engaging, and effective for every student.</p>
-          </div>
-          
-          <div>
-            <h4 class="footer__title">Quick Links</h4>
-            <div class="footer__links">
-              <a href="../../index.html" class="footer__link">Home</a>
-              <a href="../index.html" class="footer__link">HSC Biology</a>
-              <a href="index.html" class="footer__link">Module 1</a>
-            </div>
-          </div>
-          
-          <div>
-            <h4 class="footer__title">Resources</h4>
-            <div class="footer__links">
-              <a href="#" class="footer__link">Study Guide</a>
-              <a href="#" class="footer__link">Practice Exams</a>
-              <a href="#" class="footer__link">Syllabus</a>
-            </div>
-          </div>
-          
-          <div class="footer__copyright">
-            <p>&copy; 2026 Science Hub. Built for HSC Biology students.</p>
+          <div class="card-content">
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">Define what a cell is and explain cell theory</li>
+              <li style="margin-bottom: 8px;">Understand why cells are small (SA:V ratio)</li>
+              <li>Distinguish between unicellular and multicellular organisms</li>
+            </ul>
           </div>
         </div>
-      </footer>
+
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-critical">
+              <i data-lucide="link"></i>
+            </div>
+            <h2 class="card-title">Syllabus Links</h2>
+          </div>
+          <div class="card-content">
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">Module 1: Cells as the Basis of Life</li>
+              <li style="margin-bottom: 8px;">Inquiry Question: What distinguishes one cell from another?</li>
+              <li>Focus: Cell structure and function</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="icon-wrapper">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <h2 class="card-title">Success Criteria</h2>
+          </div>
+          <div class="card-content">
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">State the three principles of cell theory</li>
+              <li style="margin-bottom: 8px;">Calculate surface area to volume ratios</li>
+              <li>Classify organisms as unicellular or multicellular</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Engagement Hook -->
+      <div class="engagement-hook reveal">
+        <i data-lucide="lightbulb"></i>
+        <div>
+          <h4>Think About This...</h4>
+          <p>Your body contains approximately 37 trillion cells - that's more than 4,000 times the number of people on Earth! Yet every single one started from just two cells. How do cells know what to become and what to do?</p>
+        </div>
+      </div>
+
+      <!-- Content Section: What is a Cell? -->
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="microscope"></i>
+          What is a Cell?
+        </h2>
+        
+        <p>A <strong>cell</strong> is the smallest unit of life that can carry out all the processes necessary for life. Every living thing is made of cells - from the simplest bacteria to complex multicellular organisms like humans and whales.</p>
+        
+        <div class="definition-box">
+          <strong>Cell:</strong> The basic structural, functional, and biological unit of all known living organisms. A cell is the smallest unit of life that can replicate independently.
+        </div>
+
+        <p>Cells were first discovered in 1665 by Robert Hooke when he looked at a thin slice of cork through a microscope. He saw tiny compartments that reminded him of monastery cells, hence the name "cells."</p>
+      </section>
+
+      <!-- Content Section: Cell Theory -->
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="book-open"></i>
+          Cell Theory
+        </h2>
+        
+        <p>Cell theory is one of the fundamental principles of biology. It consists of three main principles:</p>
+
+        <div class="grid-3-col" style="margin: 24px 0;">
+          <div class="card" style="text-align: center;">
+            <div class="card-content">
+              <div style="width: 48px; height: 48px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                <span style="font-weight: 700; color: var(--primary-dark);">1</span>
+              </div>
+              <p style="color: var(--text-secondary);">All living organisms are composed of one or more cells</p>
+            </div>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div class="card-content">
+              <div style="width: 48px; height: 48px; background: var(--secondary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                <span style="font-weight: 700; color: #059669;">2</span>
+              </div>
+              <p style="color: var(--text-secondary);">The cell is the basic unit of structure and organisation in organisms</p>
+            </div>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div class="card-content">
+              <div style="width: 48px; height: 48px; background: var(--accent-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                <span style="font-weight: 700; color: #d97706;">3</span>
+              </div>
+              <p style="color: var(--text-secondary);">All cells come from pre-existing cells (cell division)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section: What All Cells Have -->
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="layers"></i>
+          What Do All Cells Have?
+        </h2>
+        
+        <div class="grid-2-col">
+          <div class="info-grid-item">
+            <h4>
+              <i data-lucide="check"></i>
+              All Cells Have:
+            </h4>
+            <ul>
+              <li>Cell membrane (plasma membrane)</li>
+              <li>Cytoplasm</li>
+              <li>DNA (genetic material)</li>
+              <li>Ribosomes (for protein synthesis)</li>
+            </ul>
+          </div>
+          <div class="info-grid-item">
+            <h4>
+              <i data-lucide="activity"></i>
+              All Cells Can:
+            </h4>
+            <ul>
+              <li>Obtain and use energy</li>
+              <li>Respond to their environment</li>
+              <li>Grow and develop</li>
+              <li>Reproduce (via cell division)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion: Deep Dive -->
+      <details class="card reveal">
+        <summary>
+          <div class="icon-wrapper icon-wrapper-critical">
+            <i data-lucide="book-open"></i>
+          </div>
+          <span>Deep Dive: The Math Behind Cell Size</span>
+        </summary>
+        <div class="card-content">
+          <p>As a cell grows larger, its volume increases faster than its surface area. This is because:</p>
+          <ul style="margin: 16px 0; padding-left: 24px; color: var(--text-secondary);">
+            <li style="margin-bottom: 8px;">Surface area increases by the square of the radius (4πr²)</li>
+            <li>Volume increases by the cube of the radius (4/3 πr³)</li>
+          </ul>
+          <p>This means larger cells have proportionally less surface area relative to their volume, making it harder to transport materials across the membrane efficiently.</p>
+        </div>
+      </details>
+
+      <!-- Worked Example -->
+      <div class="worked-example reveal">
+        <div class="worked-example-header">
+          <i data-lucide="calculator"></i>
+          Worked Example: Calculating SA:V Ratio
+        </div>
+        <p style="margin-bottom: 16px;"><strong>Problem:</strong> Calculate the surface area to volume ratio of a cube-shaped cell with sides of 2μm.</p>
+        <p style="margin-bottom: 8px;"><strong>Solution:</strong></p>
+        <ul style="padding-left: 24px; color: #78350f; margin-bottom: 16px;">
+          <li>Surface Area = 6 × side² = 6 × (2)² = 6 × 4 = 24 μm²</li>
+          <li>Volume = side³ = (2)³ = 8 μm³</li>
+          <li>SA:V Ratio = 24:8 = <strong>3:1</strong></li>
+        </ul>
+        <p style="background: white; padding: 12px; border-radius: 8px; font-weight: 600;">The SA:V ratio is 3:1, meaning the surface area is 3 times the volume.</p>
+      </div>
+
+      <!-- Activity 1: Cell Size Matching -->
+      <div class="activity-card activity-card--teal reveal">
+        <div class="activity-card-header">
+          <i data-lucide="microscope"></i>
+          <h3>Activity 1: Cell Size Matching</h3>
+        </div>
+        <div class="activity-card-body">
+          <p style="margin-bottom: 16px;">Match each cell type with its typical size:</p>
+          
+          <div class="matching-form">
+            <div class="matching-item" data-correct="b">
+              <span class="matching-term">Red blood cell</span>
+              <i data-lucide="arrow-right" class="matching-arrow"></i>
+              <select class="modern-input matching-select">
+                <option value="">Select size...</option>
+                <option value="a">1-5 μm</option>
+                <option value="b">6-8 μm</option>
+                <option value="c">10-100 μm</option>
+                <option value="d">100-1000 μm</option>
+              </select>
+            </div>
+            <div class="matching-item" data-correct="c">
+              <span class="matching-term">Human egg cell (ovum)</span>
+              <i data-lucide="arrow-right" class="matching-arrow"></i>
+              <select class="modern-input matching-select">
+                <option value="">Select size...</option>
+                <option value="a">1-5 μm</option>
+                <option value="b">6-8 μm</option>
+                <option value="c">10-100 μm</option>
+                <option value="d">100-1000 μm</option>
+              </select>
+            </div>
+            <div class="matching-item" data-correct="a">
+              <span class="matching-term">Bacteria</span>
+              <i data-lucide="arrow-right" class="matching-arrow"></i>
+              <select class="modern-input matching-select">
+                <option value="">Select size...</option>
+                <option value="a">1-5 μm</option>
+                <option value="b">6-8 μm</option>
+                <option value="c">10-100 μm</option>
+                <option value="d">100-1000 μm</option>
+              </select>
+            </div>
+            
+            <button class="btn btn-primary check-matching-btn" style="margin-top: 16px;">
+              <i data-lucide="check-circle"></i>
+              Check Answers
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 2: Unicellular vs Multicellular -->
+      <div class="activity-card activity-card--purple reveal">
+        <div class="activity-card-header">
+          <i data-lucide="list-checks"></i>
+          <h3>Activity 2: Unicellular vs Multicellular</h3>
+        </div>
+        <div class="activity-card-body">
+          <p style="margin-bottom: 16px;">Classify each organism as unicellular (U) or multicellular (M):</p>
+          
+          <div class="fill-blank-form">
+            <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+              <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">1. Bacterium</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="U" maxlength="1" placeholder="U/M">
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">2. Human</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="M" maxlength="1" placeholder="U/M">
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">3. Yeast</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="U" maxlength="1" placeholder="U/M">
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">4. Oak tree</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="M" maxlength="1" placeholder="U/M">
+              </div>
+            </div>
+            
+            <button class="btn btn-primary check-fill-btn" style="margin-top: 24px;">
+              <i data-lucide="check-circle"></i>
+              Check Answers
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy Into Books -->
+      <details class="card reveal" data-open="true">
+        <summary>
+          <div class="icon-wrapper">
+            <i data-lucide="pen-tool"></i>
+          </div>
+          <span>Copy Into Your Books</span>
+        </summary>
+        <div class="card-content">
+          <p style="margin-bottom: 16px;"><strong>Key Definitions:</strong></p>
+          <ul style="padding-left: 24px; color: var(--text-secondary); margin-bottom: 24px;">
+            <li style="margin-bottom: 8px;"><strong>Cell:</strong> The basic unit of life; the smallest unit that can carry out all life processes</li>
+            <li style="margin-bottom: 8px;"><strong>Cell Theory:</strong> States that all living things are made of cells, cells are the basic unit of structure, and cells come from pre-existing cells</li>
+            <li><strong>SA:V Ratio:</strong> The ratio of surface area to volume - as cells get larger, this ratio decreases, limiting cell size</li>
+          </ul>
+          
+          <p style="margin-bottom: 16px;"><strong>Key Points:</strong></p>
+          <ul style="padding-left: 24px; color: var(--text-secondary);">
+            <li style="margin-bottom: 8px;">Cells are limited in size by their surface area to volume ratio</li>
+            <li style="margin-bottom: 8px;">Prokaryotic cells lack a nucleus; eukaryotic cells have a nucleus</li>
+            <li>All cells have a cell membrane, cytoplasm, DNA, and ribosomes</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Assessment Questions -->
+      <section class="content-section reveal" style="margin-top: 48px;">
+        <h2>
+          <i data-lucide="clipboard-check"></i>
+          Assessment Questions
+        </h2>
+
+        <!-- Multiple Choice -->
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-header">
+            <div class="icon-wrapper">
+              <i data-lucide="circle-dot"></i>
+            </div>
+            <h3 class="card-title">Multiple Choice</h3>
+          </div>
+          <div class="card-content quiz-form">
+            
+            <!-- Question 1 -->
+            <div class="quiz-question" data-correct="b" style="margin-bottom: 32px;">
+              <p style="font-weight: 600; margin-bottom: 12px;">1. Which of the following is NOT one of the principles of cell theory?</p>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="a">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">A</span>
+                  <span class="quiz-option-text">All living organisms are composed of cells</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="b">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">B</span>
+                  <span class="quiz-option-text">Cells can spontaneously generate from non-living matter</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="c">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">C</span>
+                  <span class="quiz-option-text">The cell is the basic unit of structure</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="d">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">D</span>
+                  <span class="quiz-option-text">All cells come from pre-existing cells</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question" data-correct="c" style="margin-bottom: 32px;">
+              <p style="font-weight: 600; margin-bottom: 12px;">2. Why are cells generally small?</p>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="a">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">A</span>
+                  <span class="quiz-option-text">Large cells cannot fit inside organisms</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="b">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">B</span>
+                  <span class="quiz-option-text">Small cells are easier to see under microscopes</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="c">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">C</span>
+                  <span class="quiz-option-text">To maintain a high surface area to volume ratio for efficient transport</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="d">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">D</span>
+                  <span class="quiz-option-text">Small cells require less energy</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question" data-correct="a">
+              <p style="font-weight: 600; margin-bottom: 12px;">3. Which structure is found in ALL cells?</p>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="a">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">A</span>
+                  <span class="quiz-option-text">Cell membrane</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="b">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">B</span>
+                  <span class="quiz-option-text">Nucleus</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="c">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">C</span>
+                  <span class="quiz-option-text">Mitochondria</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="d">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">D</span>
+                  <span class="quiz-option-text">Chloroplasts</span>
+                </label>
+              </div>
+            </div>
+
+            <button class="btn btn-primary check-answers-btn" style="margin-top: 24px;">
+              <i data-lucide="check-circle"></i>
+              Check Answers
+            </button>
+          </div>
+        </div>
+
+        <!-- Short Answer -->
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-secondary">
+              <i data-lucide="align-left"></i>
+            </div>
+            <h3 class="card-title">Short Answer</h3>
+          </div>
+          <div class="card-content">
+            <div style="margin-bottom: 24px;">
+              <p style="font-weight: 600; margin-bottom: 8px;">1. Calculate the surface area to volume ratio of a cube with sides of 4μm. Show your working. (2 marks)</p>
+              <textarea class="modern-input" placeholder="Type your answer here..."></textarea>
+            </div>
+            <div>
+              <p style="font-weight: 600; margin-bottom: 8px;">2. Explain why the surface area to volume ratio limits cell size. (3 marks)</p>
+              <textarea class="modern-input" placeholder="Type your answer here..."></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Answer Key -->
+      <details class="card reveal">
+        <summary>
+          <div class="icon-wrapper icon-wrapper-accent">
+            <i data-lucide="key"></i>
+          </div>
+          <span>Answer Key</span>
+        </summary>
+        <div class="card-content">
+          <p style="font-weight: 600; margin-bottom: 8px;">Multiple Choice:</p>
+          <ol style="padding-left: 24px; color: var(--text-secondary); margin-bottom: 24px;">
+            <li style="margin-bottom: 4px;">B - Spontaneous generation was disproven</li>
+            <li style="margin-bottom: 4px;">C - High SA:V ratio allows efficient material transport</li>
+            <li>A - All cells have a cell membrane</li>
+          </ol>
+          
+          <p style="font-weight: 600; margin-bottom: 8px;">Short Answer:</p>
+          <p style="color: var(--text-secondary); margin-bottom: 8px;"><strong>1.</strong> SA = 6 × 4² = 96 μm², Volume = 4³ = 64 μm³, Ratio = 96:64 = 1.5:1</p>
+          <p style="color: var(--text-secondary);"><strong>2.</strong> As cells increase in size, volume increases faster than surface area (cube vs square). This reduces the SA:V ratio, making it harder to transport sufficient nutrients in and waste out across the membrane.</p>
+        </div>
+      </details>
+
+      <!-- Mark Complete -->
+      <div style="text-align: center; margin: 48px 0;">
+        <button class="mark-complete-btn" data-lesson="1">
+          <i data-lucide="circle"></i>
+          <span>Mark as Complete</span>
+        </button>
+      </div>
+
+      <!-- Lesson Navigation -->
+      <nav class="lesson-navigation reveal" aria-label="Lesson navigation">
+        <a href="" class="lesson-nav-btn" style="visibility: hidden;">
+          <i data-lucide="chevron-left"></i>
+          <div class="nav-btn-content">
+            <span class="nav-btn-label">Previous</span>
+            <span class="nav-btn-title">—</span>
+          </div>
+        </a>
+
+        <a href="../index.html" class="lesson-nav-home">
+          <i data-lucide="grid-3x3"></i>
+          <span>All Lessons</span>
+        </a>
+
+        <a href="lesson-2.html" class="lesson-nav-btn">
+          <div class="nav-btn-content" style="text-align: right;">
+            <span class="nav-btn-label">Next</span>
+            <span class="nav-btn-title">Prokaryotic Cells</span>
+          </div>
+          <i data-lucide="chevron-right"></i>
+        </a>
+      </nav>
     </main>
   </div>
-  
-  <!-- ============================================
-       INITIALIZATION
-       ============================================ -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </div>
+      <p class="footer-tagline">Making science education accessible, engaging, and effective.</p>
+      <div class="footer-links">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">HSC Biology</a>
+        <a href="../../year-7/index.html">Year 7</a>
+        <a href="../../year-8/index.html">Year 8</a>
+      </div>
+      <p class="footer-copyright">© 2026 Science Learning Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/main.js"></script>
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-    
-    // Initialize lesson-specific functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get lesson data from the mark-complete section
-      const markCompleteSection = document.querySelector('.mark-complete');
-      if (markCompleteSection && typeof updateSidebarProgress === 'function') {
-        const year = markCompleteSection.dataset.year;
-        const module = markCompleteSection.dataset.module;
-        const total = parseInt(markCompleteSection.dataset.total);
-        
-        // Update sidebar progress
-        updateSidebarProgress(year, module, total);
-        
-        // Setup mark complete button
-        const lesson = markCompleteSection.dataset.lesson;
-        if (typeof setupMarkComplete === 'function') {
-          setupMarkComplete(year, module, lesson, total);
-        }
-      }
+    // Lesson-specific initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearLevel = 'hsc-biology';
+      const moduleId = 'module-1-cells';
+      const lessonId = '1';
+      const totalLessons = 3;
+
+      // Initialize progress tracking
+      updateSidebarProgress(yearLevel, moduleId, totalLessons);
+      setupMarkComplete(yearLevel, moduleId, lessonId);
+      
+      // Save last visited
+      StorageManager.saveLastVisited(yearLevel, moduleId, lessonId);
     });
   </script>
 </body>

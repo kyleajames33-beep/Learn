@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 5: Passive Transport - Discover how cells move substances without energy using diffusion, facilitated diffusion, and osmosis. HSC Biology Module 1.">
+  <meta name="theme-color" content="#93e4f9">
+
+  <title>Lesson 5: Passive Transport - Module 1 - HSC Biology</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+
+  <style>
+    /* ============================================
+       LESSON 5 SPECIFIC STYLES
+       Passive Transport - No Energy Required
+       ============================================ */
+
+    /* The Hook - Diffusion Visual */
+    .hook-section {
+      background: linear-gradient(135deg, var(--secondary-light) 0%, var(--bg-elevated) 100%);
+      border-left: 4px solid var(--secondary-dark);
+      margin: var(--space-6) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diffusion-demo {
+      width: 100%;
+      height: 180px;
+      background: var(--bg-elevated);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-8);
+      padding: var(--space-6);
+      border-bottom: 2px solid var(--border-light);
+      position: relative;
+    }
+
+    .demo-cell {
+      width: 150px;
+      height: 150px;
+      border: 3px solid var(--primary-dark);
+      border-radius: 50%;
+      background: rgba(147, 228, 249, 0.1);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-2xl);
+    }
+
+    .molecule {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: diffuse 4s infinite ease-in-out;
+    }
+
+    .molecule:nth-child(1) { animation-delay: 0s; top: 30%; left: 20%; }
+    .molecule:nth-child(2) { animation-delay: 0.5s; top: 60%; left: 30%; }
+    .molecule:nth-child(3) { animation-delay: 1s; top: 40%; left: 70%; }
+    .molecule:nth-child(4) { animation-delay: 1.5s; top: 70%; left: 60%; }
+    .molecule:nth-child(5) { animation-delay: 2s; top: 20%; left: 50%; }
+
+    @keyframes diffuse {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+      25% { transform: translate(20px, -15px) scale(1.1); opacity: 1; }
+      50% { transform: translate(-10px, 20px) scale(0.9); opacity: 0.9; }
+      75% { transform: translate(15px, 10px) scale(1.05); opacity: 1; }
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(255,201,150,0.3) 0%, rgba(147,228,249,0.1) 100%);
+      pointer-events: none;
+    }
+
+    /* Accordion Component */
+    .accordion-container {
+      margin: var(--space-6) 0;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-surface);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: var(--space-4) var(--space-6);
+      background: var(--bg-sidebar);
+      border: none;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-family: var(--font-primary);
+      font-size: var(--text-base);
+      font-weight: var(--weight-semibold);
+      color: var(--text-primary);
+      transition: background var(--transition-fast);
+    }
+
+    .accordion-header:hover {
+      background: var(--bg-elevated);
+    }
+
+    .accordion-header[aria-expanded="true"] {
+      background: var(--secondary-light);
+      color: var(--text-primary);
+    }
+
+    .accordion-header[aria-expanded="true"] .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-icon {
+      transition: transform var(--transition-fast);
+      color: var(--text-muted);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-slow);
+      background: var(--bg-surface);
+    }
+
+    .accordion-content.active {
+      max-height: 500px;
+    }
+
+    .accordion-body {
+      padding: var(--space-6);
+      color: var(--text-secondary);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* Retrieval Arena */
+    .retrieval-arena {
+      background: linear-gradient(135deg, var(--bg-surface) 0%, var(--secondary-light) 100%);
+      border: 2px solid var(--secondary-dark);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin: var(--space-8) 0;
+    }
+
+    .arena-header {
+      text-align: center;
+      margin-bottom: var(--space-6);
+    }
+
+    .arena-title {
+      font-size: var(--text-2xl);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+
+    .retrieval-activity {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-bottom: var(--space-6);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .retrieval-label {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--text-primary);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-3);
+    }
+
+    .concentration-slider {
+      width: 100%;
+      margin: var(--space-4) 0;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-4) 0;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: var(--space-3);
+      text-align: left;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .comparison-table th {
+      background: var(--bg-elevated);
+      font-weight: var(--weight-semibold);
+      color: var(--text-primary);
+    }
+
+    /* Checkpoint */
+    .checkpoint {
+      background: var(--bg-elevated);
+      border-left: 4px solid var(--accent);
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-4) 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .checkpoint-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: var(--weight-semibold);
+      color: var(--text-primary);
+      margin-bottom: var(--space-3);
+    }
+
+    /* Bridge */
+    .bridge-section {
+      background: linear-gradient(90deg, var(--primary-light), transparent);
+      border-left: 4px solid var(--primary-dark);
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-6) 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
+    /* Diagram zones */
+    .diagram-zone {
+      background: var(--bg-elevated);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      text-align: center;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: var(--space-4) 0;
+    }
+
+    /* Copy books */
+    .copy-books-section {
+      background: white;
+      border: 2px dashed var(--secondary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin: var(--space-8) 0;
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+    }
+
+    .copy-header {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .copy-content {
+      white-space: pre-wrap;
+      color: var(--text-secondary);
+    }
+
+    /* Progress indicator */
+    .lesson-progress {
+      position: sticky;
+      top: var(--top-nav-height);
+      z-index: 90;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: var(--space-2) var(--space-4);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+    }
+
+    .progress-segment {
+      flex: 1;
+      height: 4px;
+      background: var(--bg-elevated);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      width: 0%;
+      transition: width var(--transition-slow);
+    }
+
+    /* Activity cards */
+    .activity-card--retrieval {
+      border-color: var(--secondary);
+      background: linear-gradient(135deg, white, var(--secondary-light));
+    }
+
+    .activity-card--practical {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, white, var(--accent-light));
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <a href="../../index.html" class="nav-logo">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">Science Hub</span>
+      </a>
+
+      <div class="nav-actions">
+        <span class="badge badge-secondary">Passive Transport</span>
+      </div>
+    </div>
+
+    <div class="breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="../index.html">HSC Biology</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="./index.html">Module 1</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Lesson 5</span>
+    </div>
+  </nav>
+
+  <!-- Progress Indicator -->
+  <div class="lesson-progress" id="progressBar">
+    <i data-lucide="book-open" style="width: 16px; height: 16px;"></i>
+    <span>Progress</span>
+    <div class="progress-segment">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span id="progressText">0%</span>
+  </div>
+
+  <div class="lesson-layout">
+    <!-- Sidebar -->
+    <aside class="lesson-sidebar" id="lessonSidebar">
+      <div class="sidebar-header">
+        <h3>Module 1: Cells</h3>
+        <span class="module-subtitle">Passive Transport</span>
+      </div>
+
+      <div class="sidebar-progress">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill" style="width: 16%;"></div>
+        </div>
+        <span class="progress-text">4/30 lessons (13%)</span>
+      </div>
+
+      <nav class="lesson-list">
+        <a href="lesson-1.html" class="lesson-item completed" data-lesson="lesson-1">
+          <span class="lesson-number">1</span>
+          <span class="lesson-title-text">Introduction to Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="lesson-2.html" class="lesson-item completed" data-lesson="lesson-2">
+          <span class="lesson-number">2</span>
+          <span class="lesson-title-text">Prokaryotic Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="lesson-3.html" class="lesson-item completed" data-lesson="lesson-3">
+          <span class="lesson-number">3</span>
+          <span class="lesson-title-text">Eukaryotic Cells</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="lesson-4.html" class="lesson-item completed" data-lesson="lesson-4">
+          <span class="lesson-number">4</span>
+          <span class="lesson-title-text">Cell Membrane Structure</span>
+          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="lesson-5.html" class="lesson-item active" data-lesson="lesson-5">
+          <span class="lesson-number">5</span>
+          <span class="lesson-title-text">Passive Transport</span>
+          <i data-lucide="circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="lesson-6.html" class="lesson-item" data-lesson="lesson-6">
+          <span class="lesson-number">6</span>
+          <span class="lesson-title-text">Active Transport</span>
+          <i data-lucide="circle" class="lesson-check icon-sm"></i>
+        </a>
+
+        <a href="lesson-7.html" class="lesson-item" data-lesson="lesson-7">
+          <span class="lesson-number">7</span>
+          <span class="lesson-title-text">Osmosis</span>
+          <i data-lucide="circle" class="lesson-check icon-sm"></i>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="lesson-content-wrapper">
+
+      <!-- Learning Intentions Grid -->
+      <section class="section" style="margin-top: var(--space-8);">
+        <div class="grid-3-col">
+          <!-- Learning Intentions -->
+          <div class="card intention-card">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-secondary">
+                <i data-lucide="target" class="icon-md"></i>
+              </div>
+              <h2 class="card-title">Learning Intentions</h2>
+            </div>
+            <div class="card-content">
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li>Explain the process of simple diffusion across membranes</li>
+                <li>Describe facilitated diffusion using channel/carrier proteins</li>
+                <li>Predict movement of substances based on concentration gradients</li>
+                <li>Identify factors affecting rates of passive transport</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- HSC Links -->
+          <div class="card intention-card card-purple">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-critical">
+                <i data-lucide="graduation-cap" class="icon-md"></i>
+              </div>
+              <h2 class="card-title">HSC Critical</h2>
+            </div>
+            <div class="card-content">
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li><strong>BIO11-1:</strong> Develops and evaluates questions</li>
+                <li><strong>Working Scientifically:</strong> Predicting outcomes</li>
+                <li><strong>Links to:</strong> Osmosis (Lesson 7), Kidney function (Module 4)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Success Criteria -->
+          <div class="card intention-card card-green">
+            <div class="card-header">
+              <div class="icon-wrapper icon-wrapper-primary">
+                <i data-lucide="check-circle-2" class="icon-md"></i>
+              </div>
+              <h2 class="card-title">Success Criteria</h2>
+            </div>
+            <div class="card-content">
+              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
+                <li>Define diffusion and state it requires no ATP</li>
+                <li>Compare simple vs facilitated diffusion</li>
+                <li>Calculate concentration gradients</li>
+                <li>Explain why cell size affects transport efficiency</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. THE HOOK -->
+      <section class="section hook-section" data-section="hook">
+        <div class="diffusion-demo">
+          <div class="gradient-overlay"></div>
+          <div class="demo-cell">
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <span style="z-index: 10; font-size: 40px;">🧫</span>
+          </div>
+          <div style="font-size: var(--text-2xl); color: var(--text-muted);">→</div>
+          <div style="text-align: center; color: var(--text-secondary);">
+            <div style="font-size: var(--text-4xl); margin-bottom: var(--space-2);">☕</div>
+            <div style="font-size: var(--text-sm);">No stirring required</div>
+          </div>
+        </div>
+
+        <div class="card-content" style="padding: var(--space-6);">
+          <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-4); color: var(--text-primary);">
+            The Invisible Current
+          </h2>
+
+          <p class="text-secondary" style="line-height: var(--leading-relaxed); font-size: var(--text-lg); margin-bottom: var(--space-4);">
+            You drop sugar into your tea. You don't stir, yet five minutes later, every sip is sweet. No energy expended, no proteins involved—just physics.
+          </p>
+
+          <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+            Your cells perform this same trick <strong>2 trillion times per second</strong>, moving oxygen and nutrients without spending a single ATP molecule. But there's a catch: they can't control where it goes.
+          </p>
+
+          <div style="background: var(--bg-elevated); padding: var(--space-4); border-radius: var(--radius-md); border-left: 4px solid var(--secondary-dark);">
+            <p style="font-weight: var(--weight-semibold); color: var(--text-primary);">
+              <i data-lucide="help-circle" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: var(--space-2);"></i>
+              Inquiry Question: How do cells move substances without energy?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. CORE UNIT 1: Simple Diffusion -->
+      <section class="section" data-section="unit1">
+        <h2 class="section-title">Unit 1: Simple Diffusion – Down the Gradient</h2>
+
+        <!-- Visual-First -->
+        <div class="diagram-zone">
+          <div style="display: flex; align-items: center; gap: var(--space-6); width: 100%; max-width: 500px;">
+            <div style="flex: 1; text-align: center; padding: var(--space-4); background: rgba(255,201,150,0.3); border-radius: var(--radius-md);">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">●●●●●</div>
+              <div style="font-size: var(--text-sm); color: var(--text-muted);">High Concentration</div>
+              <div style="font-size: var(--text-xs); color: var(--text-muted);">(Many molecules)</div>
+            </div>
+            <div style="font-size: var(--text-2xl); color: var(--secondary-dark);">→</div>
+            <div style="flex: 1; text-align: center; padding: var(--space-4); background: rgba(147,228,249,0.3); border-radius: var(--radius-md);">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">●</div>
+              <div style="font-size: var(--text-sm); color: var(--text-muted);">Low Concentration</div>
+              <div style="font-size: var(--text-xs); color: var(--text-muted);">(Few molecules)</div>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-4); color: var(--text-muted); font-size: var(--text-sm);">
+            Net movement from high to low concentration
+          </p>
+        </div>
+
+        <!-- Verbal-Visual Integration -->
+        <div class="content-card">
+          <div class="content-card__header">
+            <div class="content-card__icon" style="background: #f0fdf4; color: #16a34a;">🎯</div>
+            <h3 class="content-card__title">The Concentration Gradient</h3>
+          </div>
+          <div class="content-card__body">
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+              This diagram shows <strong>simple diffusion</strong>: the net movement of particles from an area of <span style="color: #ea580c; font-weight: 600;">high concentration</span> to <span style="color: #0891b2; font-weight: 600;">low concentration</span>.
+            </p>
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+              <strong>Key Principle:</strong> This is <em>passive</em>—it requires no metabolic energy (ATP). The cell doesn't "do" anything; the laws of thermodynamics drive the movement.
+            </p>
+            <div style="background: var(--bg-elevated); padding: var(--space-4); border-radius: var(--radius-md);">
+              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
+                Biological Example:
+              </p>
+              <p class="text-secondary" style="font-size: var(--text-sm);">
+                Oxygen diffuses from lungs (high O₂) into blood (lower O₂). Carbon dioxide diffuses out. Both follow their concentration gradients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkpoint -->
+        <div class="checkpoint">
+          <div class="checkpoint-header">
+            <i data-lucide="brain" style="color: var(--accent);"></i>
+            <span>Retrieval Checkpoint</span>
+          </div>
+          <p style="margin-bottom: var(--space-3); color: var(--text-secondary);">
+            If oxygen concentration inside a cell is 2% and outside is 21%, which direction will oxygen move?
+          </p>
+          <div class="mc-options" style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <label class="mc-option" onclick="checkCheckpoint(this, false)">
+              <input type="radio" name="checkpoint1" value="A">
+              <span class="option-letter">A</span>
+              <span class="option-text">Out of the cell (low to high)</span>
+            </label>
+            <label class="mc-option" onclick="checkCheckpoint(this, true)">
+              <input type="radio" name="checkpoint1" value="B">
+              <span class="option-letter">B</span>
+              <span class="option-text">Into the cell (high to low)</span>
+            </label>
+            <label class="mc-option" onclick="checkCheckpoint(this, false)">
+              <input type="radio" name="checkpoint1" value="C">
+              <span class="option-letter">C</span>
+              <span class="option-text">No movement (equilibrium)</span>
+            </label>
+          </div>
+          <div id="checkpoint-feedback" style="margin-top: var(--space-3); display: none;"></div>
+        </div>
+      </section>
+
+      <!-- 3. INTERLEAVING BRIDGE -->
+      <section class="section bridge-section" data-section="bridge">
+        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+          <i data-lucide="git-branch" style="color: var(--primary-dark);"></i>
+          <strong style="color: var(--text-primary);">Interleaving Bridge</strong>
+        </div>
+        <p style="margin: 0;">
+          <strong>Lesson 4 Connection:</strong> Remember the phospholipid bilayer? It blocks hydrophilic substances. So how do glucose or amino acids enter? They can't simply diffuse through the oily center—they need help. This is where <strong>facilitated diffusion</strong> bridges the gap between simple diffusion and the membrane structure.
+        </p>
+      </section>
+
+      <!-- 4. CORE UNIT 2: Facilitated Diffusion -->
+      <section class="section" data-section="unit2">
+        <h2 class="section-title">Unit 2: Facilitated Diffusion – Protein Assistance</h2>
+
+        <div class="content-card">
+          <div class="content-card__header">
+            <div class="content-card__icon" style="background: #e0e7ff; color: #4f46e5;">🚪</div>
+            <h3 class="content-card__title">Channel and Carrier Proteins</h3>
+          </div>
+          <div class="content-card__body">
+            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
+              Large or charged molecules cannot pass through the hydrophobic core. They require <strong>facilitated diffusion</strong>—still passive (no ATP), but using membrane proteins as tunnels or ferries.
+            </p>
+
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Channel Proteins</th>
+                  <th>Carrier Proteins</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Structure</td>
+                  <td>Pore/tunnel</td>
+                  <td>Binding site</td>
+                </tr>
+                <tr>
+                  <td>Movement</td>
+                  <td>Continuous flow</td>
+                  <td>Shape change</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Aquaporins (water)</td>
+                  <td>Glucose transporters</td>
+                </tr>
+                <tr>
+                  <td>Speed</td>
+                  <td>Very fast</td>
+                  <td>Slower (saturable)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Activity -->
+        <div class="activity-card activity-card--retrieval">
+          <div class="activity-card-header" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+            <i data-lucide="activity" class="icon-lg" style="color: white;"></i>
+            <h3>Activity: Transport Type Sorting</h3>
+          </div>
+          <div class="activity-card-body">
+            <p class="text-secondary" style="margin-bottom: var(--space-4);">
+              Classify each scenario as Simple Diffusion (S) or Facilitated Diffusion (F):
+            </p>
+            <div style="display: grid; gap: var(--space-3);">
+              <div style="display: flex; align-items: center; gap: var(--space-3); background: white; padding: var(--space-3); border-radius: var(--radius-md);">
+                <span style="font-weight: 600; color: var(--text-primary);">1.</span>
+                <span style="flex: 1;" class="text-secondary">Oxygen entering a red blood cell</span>
+                <select id="sort-q1" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); border: 1px solid var(--border-medium);">
+                  <option value="">Select...</option>
+                  <option value="S">Simple (S)</option>
+                  <option value="F">Facilitated (F)</option>
+                </select>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-3); background: white; padding: var(--space-3); border-radius: var(--radius-md);">
+                <span style="font-weight: 600; color: var(--text-primary);">2.</span>
+                <span style="flex: 1;" class="text-secondary">Water crossing via aquaporin</span>
+                <select id="sort-q2" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); border: 1px solid var(--border-medium);">
+                  <option value="">Select...</option>
+                  <option value="S">Simple (S)</option>
+                  <option value="F">Facilitated (F)</option>
+                </select>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-3); background: white; padding: var(--space-3); border-radius: var(--radius-md);">
+                <span style="font-weight: 600; color: var(--text-primary);">3.</span>
+                <span style="flex: 1;" class="text-secondary">Glucose entering muscle cell</span>
+                <select id="sort-q3" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm); border: 1px solid var(--border-medium);">
+                  <option value="">Select...</option>
+                  <option value="S">Simple (S)</option>
+                  <option value="F">Facilitated (F)</option>
+                </select>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: var(--space-4);">
+              <button class="btn-check-answers" onclick="checkSorting()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i data-lucide="check-circle"></i>
+                Check Sorting
+              </button>
+            </div>
+            <div id="sorting-result" style="margin-top: var(--space-3); text-align: center;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CORE UNIT 3: Rate Factors -->
+      <section class="section" data-section="unit3">
+        <h2 class="section-title">Unit 3: What Affects the Rate?</h2>
+
+        <div class="content-card">
+          <div class="content-card__header">
+            <div class="content-card__icon">⚡</div>
+            <h3 class="content-card__title">Factors Affecting Diffusion Rate</h3>
+          </div>
+          <div class="content-card__body">
+            <div class="grid-2-col" style="gap: var(--space-4);">
+              <div class="card" style="background: var(--bg-elevated);">
+                <div class="card-header">
+                  <h4 style="font-size: var(--text-base); margin: 0;">1. Concentration Gradient</h4>
+                </div>
+                <div class="card-content">
+                  <p style="font-size: var(--text-sm); color: var(--text-secondary);">
+                    Steeper gradient = faster rate. As equilibrium approaches, rate slows.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="background: var(--bg-elevated);">
+                <div class="card-header">
+                  <h4 style="font-size: var(--text-base); margin: 0;">2. Temperature</h4>
+                </div>
+                <div class="card-content">
+                  <p style="font-size: var(--text-sm); color: var(--text-secondary);">
+                    Higher temp = more kinetic energy = faster diffusion.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="background: var(--bg-elevated);">
+                <div class="card-header">
+                  <h4 style="font-size: var(--text-base); margin: 0;">3. Surface Area</h4>
+                </div>
+                <div class="card-content">
+                  <p style="font-size: var(--text-sm); color: var(--text-secondary);">
+                    More membrane area = more sites for entry (Lesson 1 connection!).
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="background: var(--bg-elevated);">
+                <div class="card-header">
+                  <h4 style="font-size: var(--text-base); margin: 0;">4. Membrane Thickness</h4>
+                </div>
+                <div class="card-content">
+                  <p style="font-size: var(--text-sm); color: var(--text-secondary);">
+                    Thinner membrane = shorter distance = faster diffusion.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. DEEP DIVE (Accordion) -->
+      <section class="section" data-section="deepdive">
+        <h2 class="section-title">Deep Dive: Extensions</h2>
+
+        <div class="accordion-container">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span style="display: flex; align-items: center; gap: var(--space-2);">
+                <i data-lucide="flask-conical" style="width: 18px; height: 18px;"></i>
+                Practical Investigation: Beetroot Lab
+              </span>
+              <i data-lucide="chevron-down" class="accordion-icon icon-sm"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p>The classic beetroot experiment tests membrane integrity. When heated, the membrane becomes more fluid (and leaky), allowing red pigment to diffuse out. This demonstrates how temperature affects membrane structure and therefore passive transport rates.</p>
+                <p style="margin-top: var(--space-3);"><strong>HSC Skill:</strong> You must be able to design an experiment to test factors affecting membrane permeability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span style="display: flex; align-items: center; gap: var(--space-2);">
+                <i data-lucide="heart-pulse" style="width: 18px; height: 18px;"></i>
+                Medical Connection: Cystic Fibrosis
+              </span>
+              <i data-lucide="chevron-down" class="accordion-icon icon-sm"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p>In cystic fibrosis, the CFTR channel protein (which facilitates chloride ion diffusion) is defective. This passive transport failure leads to thick mucus—demonstrating that even "simple" diffusion processes are critical for survival.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span style="display: flex; align-items: center; gap: var(--space-2);">
+                <i data-lucide="calculator" style="width: 18px; height: 18px;"></i>
+                Calculation Challenge
+              </span>
+              <i data-lucide="chevron-down" class="accordion-icon icon-sm"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <p>If the rate of diffusion doubles for every 10°C increase in temperature, and diffusion rate is 5 units at 20°C, what is the rate at 40°C?</p>
+                <p style="margin-top: var(--space-3); font-size: var(--text-sm); color: var(--text-muted);">Answer: 20 units (doubles twice: 5→10→20)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. RETRIEVAL ARENA -->
+      <section class="retrieval-arena" data-section="retrieval">
+        <div class="arena-header">
+          <h2 class="arena-title">
+            <i data-lucide="shield" style="color: var(--secondary-dark);"></i>
+            The Retrieval Arena
+          </h2>
+          <p style="color: var(--text-secondary); margin-top: var(--space-2);">Test your mastery of passive transport</p>
+        </div>
+
+        <!-- Activity 1 -->
+        <div class="retrieval-activity">
+          <span class="retrieval-label">Cued Recall</span>
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-4); color: var(--text-primary);">Complete the Concept Map</h3>
+          <p style="line-height: 2; color: var(--text-secondary); margin-bottom: var(--space-4);">
+            Passive transport requires
+            <input type="text" class="cloze-input" data-answer="no" placeholder="______">
+            ATP. Simple diffusion moves
+            <input type="text" class="cloze-input" data-answer="small" placeholder="______">
+            nonpolar molecules directly through the membrane. Facilitated diffusion uses
+            <input type="text" class="cloze-input" data-answer="proteins" placeholder="______">
+            to help larger or charged molecules cross. Both types move substances
+            <input type="text" class="cloze-input" data-answer="down" placeholder="______">
+            their concentration gradient.
+          </p>
+          <button class="btn-check-answers" onclick="checkCloze()">
+            <i data-lucide="check-circle"></i>
+            Check Answers
+          </button>
+          <div id="cloze-result" style="margin-top: var(--space-3); text-align: center;"></div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="retrieval-activity">
+          <span class="retrieval-label" style="background: var(--accent);">Application</span>
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-4); color: var(--text-primary);">Predict the Movement</h3>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+            A cell has 5% CO₂ inside and 0.04% CO₂ outside (atmospheric level). Will CO₂ move in or out? What type of transport is this?
+          </p>
+          <textarea class="short-answer-input" placeholder="Your answer..." style="min-height: 80px;"></textarea>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="retrieval-activity">
+          <span class="retrieval-label" style="background: var(--critical);">Elaboration</span>
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-4); color: var(--text-primary);">Explain the Limitation</h3>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+            Why can't cells rely solely on passive transport to accumulate nutrients? (Hint: Think about the direction of movement and concentration gradients)
+          </p>
+          <textarea class="short-answer-input" placeholder="Explain why passive transport alone is insufficient for nutrient accumulation..." style="min-height: 100px;"></textarea>
+        </div>
+      </section>
+
+      <!-- 8. META-COGNITIVE CLOSE -->
+      <section class="section" data-section="close">
+        <div class="copy-books-section">
+          <div class="copy-header">
+            <i data-lucide="book-copy"></i>
+            Copy Into Your Books
+          </div>
+          <div class="copy-content">
+<strong>Lesson 5: Passive Transport (No Energy Required)</strong>
+
+<strong>Simple Diffusion:</strong>
+• Movement of small, nonpolar molecules (O₂, CO₂, lipids)
+• Directly through phospholipid bilayer
+• Down concentration gradient (high → low)
+• Rate factors: gradient steepness, temperature, surface area, thickness
+
+<strong>Facilitated Diffusion:</strong>
+• Uses membrane proteins (channels or carriers)
+• For large or charged molecules (glucose, ions, water via aquaporins)
+• Still passive (no ATP)
+• Down concentration gradient
+• Saturable (limited by number of proteins)
+
+<strong>Key Differences:</strong>
+• Simple: No proteins, fast for small molecules
+• Facilitated: Requires proteins, specific/selective
+• Both: Passive, down gradient, no energy
+
+<strong>Why it matters:</strong>
+• Oxygen enters cells, CO₂ exits
+• Glucose enters cells for respiration
+• Water balance (osmosis - next lesson)
+• CFTR defect = cystic fibrosis (clinical link)
+          </div>
+        </div>
+
+        <!-- Self-Check -->
+        <div class="card" style="background: var(--success); border-color: #10b981; margin-top: var(--space-6);">
+          <div class="card-content" style="text-align: center;">
+            <h3 style="color: #065f46; margin-bottom: var(--space-3);">Can you answer the Inquiry Question?</h3>
+            <p style="color: #065f46; margin-bottom: var(--space-4);">
+              "How do cells move substances without energy?"
+            </p>
+            <p style="color: #065f46; font-size: var(--text-sm);">
+              If yes, mark complete. If no, review the concentration gradient section.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mark Complete -->
+        <section class="mark-complete-section" style="margin-top: var(--space-8);">
+          <h3 style="font-size: var(--text-xl); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-4);">
+            Lesson 5 Complete?
+          </h3>
+          <p class="text-secondary" style="margin-bottom: var(--space-6);">
+            Mark this lesson as complete to unlock: <strong>Active Transport (Lesson 6)</strong>
+          </p>
+          <button id="mark-complete-btn" class="mark-complete-btn" onclick="markLessonComplete()">
+            <i data-lucide="circle" class="icon-sm"></i>
+            <span>Mark as Complete</span>
+          </button>
+          <div id="completion-message" style="display: none; margin-top: var(--space-4); color: var(--secondary-dark); font-weight: 600;"></div>
+        </section>
+      </section>
+
+      <!-- Navigation -->
+      <nav class="lesson-navigation" style="margin-top: var(--space-12);">
+        <a href="lesson-4.html" class="lesson-nav-btn">
+          <i data-lucide="chevron-left" class="icon-sm"></i>
+          <div class="nav-btn-content">
+            <span class="nav-btn-label">Previous</span>
+            <span class="nav-btn-title">Cell Membrane Structure</span>
+          </div>
+        </a>
+
+        <a href="./index.html" class="lesson-nav-home">
+          <i data-lucide="grid-3x3" class="icon-sm"></i>
+          <span>All Lessons</span>
+        </a>
+
+        <a href="lesson-6.html" class="lesson-nav-btn" id="nextLessonBtn" style="opacity: 0.5; pointer-events: none;">
+          <div class="nav-btn-content" style="text-align: right;">
+            <span class="nav-btn-label">Next</span>
+            <span class="nav-btn-title">Active Transport</span>
+          </div>
+          <i data-lucide="chevron-right" class="icon-sm"></i>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Progress Tracking
+    let progress = 0;
+    function updateProgress() {
+      const scrollPos = window.scrollY + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      progress = Math.min(100, Math.round((scrollPos / docHeight) * 100));
+
+      document.getElementById('progressFill').style.width = progress + '%';
+      document.getElementById('progressText').textContent = progress + '%';
+    }
+    window.addEventListener('scroll', updateProgress);
+
+    // Accordion
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      button.setAttribute('aria-expanded', !isExpanded);
+      content.classList.toggle('active');
+
+      document.querySelectorAll('.accordion-header').forEach(other => {
+        if (other !== button && other.getAttribute('aria-expanded') === 'true') {
+          other.setAttribute('aria-expanded', 'false');
+          other.nextElementSibling.classList.remove('active');
+        }
+      });
+    }
+
+    // Checkpoint Quiz
+    function checkCheckpoint(element, isCorrect) {
+      const feedback = document.getElementById('checkpoint-feedback');
+      feedback.style.display = 'block';
+
+      if (isCorrect) {
+        feedback.innerHTML = '<span style="color: #059669;">✓ Correct! Oxygen moves down its concentration gradient (21% outside → 2% inside).</span>';
+        element.style.background = '#d1fae5';
+      } else {
+        feedback.innerHTML = '<span style="color: #dc2626;">✗ Remember: substances move from HIGH to LOW concentration.</span>';
+        element.style.background = '#fee2e2';
+      }
+
+      document.querySelectorAll('.checkpoint .mc-option').forEach(opt => {
+        opt.style.pointerEvents = 'none';
+      });
+    }
+
+    // Sorting Activity
+    function checkSorting() {
+      const answers = { 'sort-q1': 'S', 'sort-q2': 'F', 'sort-q3': 'F' };
+      let correct = 0;
+
+      Object.entries(answers).forEach(([id, answer]) => {
+        const select = document.getElementById(id);
+        if (select.value === answer) {
+          select.style.borderColor = '#059669';
+          select.style.background = '#d1fae5';
+          correct++;
+        } else {
+          select.style.borderColor = '#dc2626';
+          select.style.background = '#fee2e2';
+        }
+      });
+
+      const result = document.getElementById('sorting-result');
+      if (correct === 3) {
+        result.innerHTML = '<span style="color: #059669; font-weight: 600;">✓ All correct! O₂ is small & nonpolar (simple), while water via aquaporin and glucose both use proteins (facilitated).</span>';
+      } else {
+        result.innerHTML = '<span style="color: #dc2626; font-weight: 600;">✗ ' + correct + '/3 correct. Remember: if a protein is involved, it\'s facilitated diffusion.</span>';
+      }
+    }
+
+    // Cloze Activity
+    function checkCloze() {
+      const inputs = document.querySelectorAll('.cloze-input');
+      let correct = 0;
+
+      inputs.forEach(input => {
+        const answer = input.dataset.answer.toLowerCase();
+        const userAnswer = input.value.toLowerCase().trim();
+
+        if (userAnswer === answer) {
+          input.style.borderColor = '#059669';
+          input.style.background = '#d1fae5';
+          correct++;
+        } else {
+          input.style.borderColor = '#dc2626';
+          input.style.background = '#fee2e2';
+        }
+      });
+
+      const result = document.getElementById('cloze-result');
+      if (correct === inputs.length) {
+        result.innerHTML = '<span style="color: #059669; font-weight: 600;">✓ Perfect! All blanks correct.</span>';
+      } else {
+        result.innerHTML = '<span style="color: #dc2626; font-weight: 600;">✗ ' + correct + '/' + inputs.length + ' correct. Review the lesson content and try again.</span>';
+      }
+    }
+
+    // Mark Complete
+    function markLessonComplete() {
+      const btn = document.getElementById('mark-complete-btn');
+      const msg = document.getElementById('completion-message');
+      const nextBtn = document.getElementById('nextLessonBtn');
+
+      btn.classList.add('completed');
+      btn.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i><span>Completed!</span>';
+      lucide.createIcons();
+
+      msg.style.display = 'block';
+      msg.innerHTML = '🎉 Mastered Passive Transport! Ready for Active Transport (Lesson 6).';
+
+      nextBtn.style.opacity = '1';
+      nextBtn.style.pointerEvents = 'auto';
+
+      localStorage.setItem('lesson5_complete', 'true');
+      localStorage.setItem('last_lesson', 'lesson-5');
+
+      document.querySelector('.lesson-item.active').classList.add('completed');
+    }
+
+    // Mobile sidebar
+    function toggleSidebar() {
+      document.getElementById('lessonSidebar').classList.toggle('open');
+    }
+
+    // Check completion on load
+    window.addEventListener('load', () => {
+      if (localStorage.getItem('lesson5_complete') === 'true') {
+        document.getElementById('mark-complete-btn').classList.add('completed');
+        document.getElementById('mark-complete-btn').innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i><span>Completed</span>';
+        document.getElementById('nextLessonBtn').style.opacity = '1';
+        document.getElementById('nextLessonBtn').style.pointerEvents = 'auto';
+      }
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

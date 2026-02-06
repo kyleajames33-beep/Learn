@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HSC Biology Module 1: Cells as the Basis of Life. 30 comprehensive lessons covering cell structure, function, and processes.">
-  <title>Module 1: Cells as the Basis of Life - HSC Biology - Science Hub</title>
+  <title>Module 1: Cells - HSC Biology - Science Hub</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/global.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/global.css?v=2">
+  <link rel="stylesheet" href="../../assets/css/components.css?v=2">
+  <link rel="stylesheet" href="../../assets/css/layout.css?v=2">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons (Local) -->
-  <script src="../assets/js/lucide.min.js"></script>
+  <script src="../../assets/js/lucide.min.js?v=2"></script>
 </head>
 <body>
 
@@ -154,7 +157,7 @@
 
       <div class="lessons-grid">
         <!-- Lesson 1 -->
-        <a href="./module-1-cells/lesson-1.html" class="lesson-card">
+        <a href="./lesson-1.html" class="lesson-card">
           <div class="lesson-card-number">1</div>
           <div class="lesson-card-content">
             <h3 class="lesson-card-title">Introduction to Cells</h3>
@@ -172,7 +175,7 @@
         </a>
 
         <!-- Lesson 2 -->
-        <a href="./module-1-cells/lesson-2.html" class="lesson-card">
+        <a href="./lesson-2.html" class="lesson-card">
           <div class="lesson-card-number">2</div>
           <div class="lesson-card-content">
             <h3 class="lesson-card-title">Prokaryotic Cells</h3>
@@ -190,10 +193,10 @@
         </a>
 
         <!-- Lesson 3 -->
-        <a href="#" class="lesson-card card-coming-soon">
+        <a href="./lesson-3.html" class="lesson-card">
           <div class="lesson-card-number">3</div>
           <div class="lesson-card-content">
-            <h3 class="lesson-card-title">Eukaryotic Cells</h3>
+            <h3 class="lesson-card-title">Eukaryotic Cell Structure</h3>
             <p class="lesson-card-description">
               Explore the complex cells of plants, animals, fungi, and protists with their membrane-bound organelles.
             </p>
@@ -203,7 +206,7 @@
               <i data-lucide="clock" class="icon-sm"></i>
               <span>50 min</span>
             </span>
-            <span class="status-badge status-coming-soon">Coming Soon</span>
+            <span class="status-badge status-available">Available</span>
           </div>
         </a>
 
@@ -226,7 +229,7 @@
         </a>
 
         <!-- Lesson 5 -->
-        <a href="#" class="lesson-card card-coming-soon">
+        <a href="./lesson-5.html" class="lesson-card">
           <div class="lesson-card-number">5</div>
           <div class="lesson-card-content">
             <h3 class="lesson-card-title">Passive Transport</h3>
@@ -239,7 +242,7 @@
               <i data-lucide="clock" class="icon-sm"></i>
               <span>45 min</span>
             </span>
-            <span class="status-badge status-coming-soon">Coming Soon</span>
+            <span class="status-badge status-available">Available</span>
           </div>
         </a>
 
@@ -714,7 +717,7 @@
           <div class="footer-column">
             <h4>Module 1</h4>
             <ul>
-              <li><a href="./module-1-cells/lesson-1.html">Lesson 1</a></li>
+              <li><a href="./lesson-1.html">Lesson 1</a></li>
               <li><a href="./module-1-cells/index.html">All Lessons</a></li>
             </ul>
           </div>
@@ -744,9 +747,21 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script src="../assets/js/navigation.js"></script>
-  <script src="../assets/js/storage.js"></script>
-  <script src="../assets/js/progress.js"></script>
+  <script src="../../assets/js/navigation.js?v=2"></script>
+  <script src="../../assets/js/storage.js?v=2"></script>
+  <script src="../../assets/js/progress.js?v=2"></script>
+  
+  <!-- Debug click handling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Debug: Log all clicks on lesson cards
+      document.querySelectorAll('.lesson-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+          console.log('Clicked lesson card:', this.href);
+        });
+      });
+    });
+  </script>
   <script>
     // Initialize Lucide icons
     lucide.createIcons();

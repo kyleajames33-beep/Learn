@@ -3,1411 +3,540 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lesson 2: Prokaryotic Cells - Examine the structure and function of bacterial and archaeal cells. HSC Biology Module 1.">
-  <title>Lesson 2: Prokaryotic Cells - Module 1 - HSC Biology</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../../assets/css/global.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-
-  <!-- Google Fonts -->
+  <meta name="description" content="Prokaryotic Cells - Learn about bacterial cell structure, nucleoid region, plasmids, and binary fission. HSC Biology Module 1.">
+  <title>Lesson 2: Prokaryotic Cells | HSC Biology | Science Hub</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Lucide Icons (Local) -->
-  <script src="../../assets/js/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- TOP NAVIGATION -->
-  <nav class="top-nav">
+  <header class="top-nav">
     <div class="nav-container">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
       <a href="../../index.html" class="nav-logo">
-        <i data-lucide="atom" class="icon-md"></i>
-        <span class="logo-text">Science Hub</span>
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
       </a>
-
       <div class="nav-search">
-        <i data-lucide="search" class="search-icon icon-sm"></i>
-        <input type="search" placeholder="Search lessons..." id="global-search" aria-label="Search lessons">
+        <input type="search" placeholder="Search lessons..." aria-label="Search lessons">
       </div>
-
-      <div class="nav-actions">
-        <button class="nav-btn" aria-label="Settings">
-          <i data-lucide="settings" class="icon-sm"></i>
-        </button>
-      </div>
+      <div style="width: 40px;"></div>
     </div>
-
-    <!-- BREADCRUMB -->
     <div class="breadcrumb-container">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="../../index.html" class="breadcrumb-link">
-          <i data-lucide="home" class="icon-sm"></i>
-          <span>Home</span>
-        </a>
-        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
-        <a href="../index.html" class="breadcrumb-link">
-          <span>HSC Biology</span>
-        </a>
-        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
-        <a href="../module-1-cells/index.html" class="breadcrumb-link">
-          <span>Module 1</span>
-        </a>
-        <i data-lucide="chevron-right" class="breadcrumb-separator icon-sm"></i>
-        <span class="breadcrumb-current">Lesson 2</span>
+        <a href="../../index.html">Home</a>
+        <i data-lucide="chevron-right"></i>
+        <a href="../index.html">HSC Biology</a>
+        <i data-lucide="chevron-right"></i>
+        <span>Lesson 2</span>
       </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- MOBILE SIDEBAR TOGGLE -->
-  <button class="sidebar-toggle-btn" aria-label="Toggle lesson sidebar">
-    <i data-lucide="menu" class="icon-md"></i>
-  </button>
+  <div class="sidebar-overlay"></div>
 
-  <!-- LESSON LAYOUT -->
   <div class="lesson-layout">
-
-    <!-- SIDEBAR -->
-    <aside class="lesson-sidebar" id="lesson-sidebar">
+    <aside class="lesson-sidebar" id="lesson-sidebar" aria-label="Lesson navigation">
       <div class="sidebar-header">
         <h3>Module 1: Cells</h3>
-        <span class="module-subtitle">HSC Biology</span>
+        <span>HSC Biology</span>
       </div>
-
-      <!-- Progress Bar -->
       <div class="sidebar-progress">
         <div class="progress-bar-wrapper">
-          <div class="progress-bar-fill" style="width: 0%;"></div>
+          <div class="progress-bar-fill" style="width: 0%"></div>
         </div>
-        <span class="progress-text">0/30 lessons (0%)</span>
+        <span class="progress-text">0/30 lessons</span>
       </div>
-
-      <!-- Lesson List -->
-      <nav class="lesson-list" aria-label="Lesson navigation">
-        <a href="../module-1-cells/lesson-1.html" class="lesson-item" data-lesson="lesson-1">
+      <nav class="lesson-list" aria-label="Lessons in this module">
+        <a href="lesson-1.html" class="lesson-item" data-lesson="1">
           <span class="lesson-number">1</span>
           <span class="lesson-title-text">Introduction to Cells</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+          <i data-lucide="check" class="lesson-check"></i>
         </a>
-
-        <a href="../module-1-cells/lesson-2.html" class="lesson-item active" data-lesson="lesson-2">
+        <a href="lesson-2.html" class="lesson-item active" data-lesson="2" aria-current="page">
           <span class="lesson-number">2</span>
           <span class="lesson-title-text">Prokaryotic Cells</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+          <i data-lucide="check" class="lesson-check"></i>
         </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-3">
+        <a href="lesson-3.html" class="lesson-item" data-lesson="3">
           <span class="lesson-number">3</span>
-          <span class="lesson-title-text">Eukaryotic Cells</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-4">
-          <span class="lesson-number">4</span>
-          <span class="lesson-title-text">Cell Membrane Structure</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-5">
-          <span class="lesson-number">5</span>
-          <span class="lesson-title-text">Passive Transport</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-6">
-          <span class="lesson-number">6</span>
-          <span class="lesson-title-text">Active Transport</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-7">
-          <span class="lesson-number">7</span>
-          <span class="lesson-title-text">Osmosis</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-8">
-          <span class="lesson-number">8</span>
-          <span class="lesson-title-text">Endocytosis & Exocytosis</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-9">
-          <span class="lesson-number">9</span>
-          <span class="lesson-title-text">The Nucleus</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-10">
-          <span class="lesson-number">10</span>
-          <span class="lesson-title-text">Ribosomes & Protein Synthesis</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-11">
-          <span class="lesson-number">11</span>
-          <span class="lesson-title-text">Endoplasmic Reticulum</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-12">
-          <span class="lesson-number">12</span>
-          <span class="lesson-title-text">Golgi Apparatus</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-13">
-          <span class="lesson-number">13</span>
-          <span class="lesson-title-text">Mitochondria</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-14">
-          <span class="lesson-number">14</span>
-          <span class="lesson-title-text">Chloroplasts</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-15">
-          <span class="lesson-number">15</span>
-          <span class="lesson-title-text">Lysosomes & Peroxisomes</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-16">
-          <span class="lesson-number">16</span>
-          <span class="lesson-title-text">Vacuoles & Storage</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-17">
-          <span class="lesson-number">17</span>
-          <span class="lesson-title-text">Cell Wall</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-18">
-          <span class="lesson-number">18</span>
-          <span class="lesson-title-text">Cytoskeleton</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-19">
-          <span class="lesson-number">19</span>
-          <span class="lesson-title-text">Centrioles & Cell Division</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-20">
-          <span class="lesson-number">20</span>
-          <span class="lesson-title-text">Cell Theory</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-21">
-          <span class="lesson-number">21</span>
-          <span class="lesson-title-text">Microscopy Techniques</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-22">
-          <span class="lesson-number">22</span>
-          <span class="lesson-title-text">Calculating Cell Size</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-23">
-          <span class="lesson-number">23</span>
-          <span class="lesson-title-text">Surface Area to Volume Ratio</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-24">
-          <span class="lesson-number">24</span>
-          <span class="lesson-title-text">Cell Fractionation</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-25">
-          <span class="lesson-number">25</span>
-          <span class="lesson-title-text">Biochemistry of Cells</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-26">
-          <span class="lesson-number">26</span>
-          <span class="lesson-title-text">Enzymes in Cells</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-27">
-          <span class="lesson-number">27</span>
-          <span class="lesson-title-text">Energy in Cells</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-28">
-          <span class="lesson-number">28</span>
-          <span class="lesson-title-text">Cell Communication</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-29">
-          <span class="lesson-number">29</span>
-          <span class="lesson-title-text">Stem Cells & Technology</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
-        </a>
-
-        <a href="#" class="lesson-item" data-lesson="lesson-30">
-          <span class="lesson-number">30</span>
-          <span class="lesson-title-text">Module 1 Review</span>
-          <i data-lucide="check-circle" class="lesson-check icon-sm"></i>
+          <span class="lesson-title-text">Eukaryotic Cell Structure</span>
+          <i data-lucide="check" class="lesson-check"></i>
         </a>
       </nav>
     </aside>
 
-    <!-- MAIN LESSON CONTENT -->
-    <main class="lesson-content-wrapper">
-
-      <!-- LESSON HERO -->
+    <main id="main-content">
       <header class="lesson-hero">
         <div class="lesson-hero-badges">
           <span class="badge badge-critical">HSC Biology</span>
           <span class="badge badge-secondary">Module 1</span>
           <span class="badge">Lesson 2</span>
         </div>
-
         <h1 class="lesson-hero-title">Prokaryotic Cells</h1>
-
         <p class="lesson-hero-description">
-          Examine the structure and function of prokaryotic cells - the simplest and most ancient forms of life
-          on Earth. Learn about bacteria and archaea, and understand what makes these cells unique.
+          Explore the simplest living cells. Discover how bacteria are structured, how they reproduce, and what makes them different from all other life forms.
         </p>
-
         <div class="lesson-hero-meta">
-          <div class="hero-meta-item">
-            <i data-lucide="clock" class="icon-sm"></i>
-            <span>45 minutes</span>
-          </div>
-          <div class="hero-meta-item">
-            <i data-lucide="book-open" class="icon-sm"></i>
-            <span>Lesson 2 of 30</span>
-          </div>
-          <div class="hero-meta-item">
-            <i data-lucide="bar-chart-3" class="icon-sm"></i>
+          <span class="hero-meta-item">
+            <i data-lucide="clock"></i>
+            <span>40 minutes</span>
+          </span>
+          <span class="hero-meta-item">
+            <i data-lucide="signal"></i>
             <span>Foundation Level</span>
-          </div>
+          </span>
+          <span class="hero-meta-item">
+            <i data-lucide="wifi-off"></i>
+            <span>Works Offline</span>
+          </span>
         </div>
       </header>
 
-      <!-- LEARNING INTENTIONS GRID -->
-      <section class="section">
-        <div class="grid-3-col">
-          <!-- Learning Intentions Card -->
+      <div class="grid-3-col" style="margin-bottom: 48px;">
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-secondary">
+              <i data-lucide="target"></i>
+            </div>
+            <h2 class="card-title">Learning Intentions</h2>
+          </div>
+          <div class="card-content">
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">Identify the structures found in prokaryotic cells</li>
+              <li style="margin-bottom: 8px;">Compare prokaryotic and eukaryotic cells</li>
+              <li>Understand binary fission as reproduction method</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-critical">
+              <i data-lucide="link"></i>
+            </div>
+            <h2 class="card-title">Syllabus Links</h2>
+          </div>
+          <div class="card-content">
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">Module 1: Cells as the Basis of Life</li>
+              <li style="margin-bottom: 8px;">Cell structure differences</li>
+              <li>Prokaryotic vs eukaryotic organisation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="icon-wrapper">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <h2 class="card-title">Success Criteria</h2>
+          </div>
+          <div class="card-content">
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">Label prokaryotic cell structures</li>
+              <li style="margin-bottom: 8px;">Explain the role of plasmids and nucleoid</li>
+              <li>Describe binary fission process</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="engagement-hook reveal">
+        <i data-lucide="lightbulb"></i>
+        <div>
+          <h4>Did You Know?</h4>
+          <p>Bacteria are the most abundant organisms on Earth. There are more bacterial cells in your body than human cells! Don't worry though - most bacteria are harmless or even beneficial to our health.</p>
+        </div>
+      </div>
+
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="microscope"></i>
+          What are Prokaryotic Cells?
+        </h2>
+        <p><strong>Prokaryotic cells</strong> are the simplest type of cells. They lack a membrane-bound nucleus and other membrane-bound organelles. The term "prokaryote" comes from Greek meaning "before kernel" (nucleus).</p>
+        
+        <div class="definition-box">
+          <strong>Prokaryotic Cell:</strong> A cell that lacks a membrane-bound nucleus and membrane-bound organelles. DNA is found in a region called the nucleoid. Includes bacteria and archaea.
+        </div>
+
+        <p>All prokaryotes are unicellular organisms. They are typically much smaller than eukaryotic cells (1-10 μm) and have a simpler internal structure.</p>
+      </section>
+
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="layout"></i>
+          Prokaryotic Cell Structure
+        </h2>
+
+        <div class="grid-2-col" style="margin: 24px 0;">
           <div class="card">
             <div class="card-header">
-              <div class="icon-wrapper icon-wrapper-primary">
-                <i data-lucide="target" class="icon-md"></i>
+              <div class="icon-wrapper">
+                <i data-lucide="shield"></i>
               </div>
-              <h2 class="card-title">Learning Intentions</h2>
+              <h3 class="card-title">Cell Wall</h3>
             </div>
             <div class="card-content">
-              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
-                <li>Identify the key features of prokaryotic cells</li>
-                <li>Describe the structure and function of bacterial cell components</li>
-                <li>Explain how prokaryotes reproduce</li>
-                <li>Compare bacteria and archaea</li>
-              </ul>
+              <p style="color: var(--text-secondary);">Provides structural support and protection. In bacteria, it contains peptidoglycan, a unique molecule not found in other organisms.</p>
             </div>
           </div>
-
-          <!-- Syllabus Links Card -->
           <div class="card">
             <div class="card-header">
-              <div class="icon-wrapper icon-wrapper-accent">
-                <i data-lucide="link" class="icon-md"></i>
+              <div class="icon-wrapper">
+                <i data-lucide="circle"></i>
               </div>
-              <h2 class="card-title">Syllabus Links</h2>
+              <h3 class="card-title">Cell Membrane</h3>
             </div>
             <div class="card-content">
-              <p class="text-secondary">This lesson addresses:</p>
-              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-top: var(--space-2);">
-                <li>BIO11-8: Cells as the basis of life</li>
-                <li>Inquiry Question: What distinguishes one cell from another?</li>
-              </ul>
+              <p style="color: var(--text-secondary);">Phospholipid bilayer that controls what enters and leaves the cell. Contains proteins for transport and other functions.</p>
             </div>
           </div>
-
-          <!-- Success Criteria Card -->
           <div class="card">
             <div class="card-header">
               <div class="icon-wrapper icon-wrapper-secondary">
-                <i data-lucide="check-circle-2" class="icon-md"></i>
+                <i data-lucide="dna"></i>
               </div>
-              <h2 class="card-title">Success Criteria</h2>
+              <h3 class="card-title">Nucleoid Region</h3>
             </div>
             <div class="card-content">
-              <p class="text-secondary">By the end of this lesson, you can:</p>
-              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-top: var(--space-2);">
-                <li>Draw and label a prokaryotic cell</li>
-                <li>Explain the function of each structure</li>
-                <li>Describe binary fission</li>
-              </ul>
+              <p style="color: var(--text-secondary);">Contains the main circular chromosome (DNA). Not enclosed by a membrane - this is the key difference from eukaryotes!</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- ENGAGEMENT HOOK -->
-      <section class="section">
-        <div class="card" style="background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-secondary) 100%); border-left: 4px solid var(--primary);">
-          <div class="card-content">
-            <div style="display: flex; align-items: flex-start; gap: var(--space-4);">
-              <div class="icon-wrapper icon-wrapper-primary icon-wrapper-lg">
-                <i data-lucide="lightbulb" class="icon-lg"></i>
-              </div>
-              <div>
-                <h3 style="font-size: var(--text-xl); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                  Think About This...
-                </h3>
-                <p class="text-secondary" style="line-height: var(--leading-relaxed); font-size: var(--text-lg);">
-                  Right now, your body contains <strong>more bacterial cells than human cells</strong>. Scientists estimate
-                  that around 38 trillion bacteria live in and on your body - about 1.3 bacteria for every human cell you have.
-                  Most of these are helpful, living in your gut and aiding digestion. Bacteria were the first life forms on Earth,
-                  appearing over 3.5 billion years ago. Despite being microscopic, they've shaped our planet's atmosphere,
-                  drive global nutrient cycles, and can survive in environments from boiling hot springs to frozen Antarctic ice.
-                  How can such simple cells be so successful?
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MAIN CONTENT: What are Prokaryotes? -->
-      <section class="section">
-        <h2 class="section-title">What are Prokaryotes?</h2>
-
-        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-          <strong>Prokaryotes</strong> are organisms whose cells lack a nucleus and other membrane-bound organelles.
-          The word "prokaryote" comes from Greek: <em>pro</em> (before) and <em>karyon</em> (kernel/nucleus), meaning
-          "before nucleus." Prokaryotes were the first cells to evolve on Earth and remain the most abundant organisms today.
-        </p>
-
-        <div class="card" style="background: var(--bg-elevated); margin: var(--space-6) 0;">
-          <div class="card-content">
-            <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-              Key Definition
-            </h3>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Prokaryotic cell:</strong> A cell that lacks a membrane-bound nucleus and membrane-bound organelles.
-              The DNA is located in a region called the nucleoid and floats freely in the cytoplasm. All prokaryotes are
-              single-celled (unicellular) organisms.
-            </p>
-          </div>
-        </div>
-
-        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-          Prokaryotes are divided into two domains of life: <strong>Bacteria</strong> and <strong>Archaea</strong>.
-          While they share basic structural features, they differ significantly in their biochemistry, genetics,
-          and the environments where they thrive.
-        </p>
-
-        <div class="grid-2-col" style="margin: var(--space-6) 0;">
           <div class="card">
             <div class="card-header">
-              <div class="icon-wrapper icon-wrapper-primary icon-wrapper-sm">
-                <i data-lucide="circle-dot" class="icon-sm"></i>
+              <div class="icon-wrapper icon-wrapper-critical">
+                <i data-lucide="circle-dot"></i>
               </div>
-              <h3 class="card-title" style="font-size: var(--text-lg);">Bacteria</h3>
+              <h3 class="card-title">Plasmids</h3>
             </div>
             <div class="card-content">
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                The most familiar prokaryotes. Found everywhere on Earth - in soil, water, air, and living organisms.
-                Most are harmless or beneficial; some cause disease.
-              </p>
-              <p class="text-secondary" style="margin-top: var(--space-2);">
-                <strong>Examples:</strong> <em>E. coli</em>, <em>Streptococcus</em>, <em>Lactobacillus</em>
-              </p>
+              <p style="color: var(--text-secondary);">Small circular DNA molecules separate from the main chromosome. Often carry genes for antibiotic resistance.</p>
             </div>
           </div>
-
           <div class="card">
             <div class="card-header">
-              <div class="icon-wrapper icon-wrapper-accent icon-wrapper-sm">
-                <i data-lucide="flame" class="icon-sm"></i>
+              <div class="icon-wrapper icon-wrapper-accent">
+                <i data-lucide="factory"></i>
               </div>
-              <h3 class="card-title" style="font-size: var(--text-lg);">Archaea</h3>
+              <h3 class="card-title">Ribosomes</h3>
             </div>
             <div class="card-content">
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                Often called "extremophiles" because many live in extreme environments. However, archaea also live
-                in moderate environments including soils, oceans, and the human gut.
-              </p>
-              <p class="text-secondary" style="margin-top: var(--space-2);">
-                <strong>Examples:</strong> Methanogens, thermophiles, halophiles
-              </p>
+              <p style="color: var(--text-secondary);">Smaller than eukaryotic ribosomes (70S vs 80S). Site of protein synthesis. Free in cytoplasm.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-wrapper">
+                <i data-lucide="droplets"></i>
+              </div>
+              <h3 class="card-title">Cytoplasm</h3>
+            </div>
+            <div class="card-content">
+              <p style="color: var(--text-secondary);">Gel-like substance filling the cell. Contains enzymes and other molecules needed for metabolism.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- MAIN CONTENT: Structure of a Prokaryotic Cell -->
-      <section class="section">
-        <h2 class="section-title">Structure of a Prokaryotic Cell</h2>
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="split"></i>
+          Binary Fission
+        </h2>
+        <p>Prokaryotes reproduce asexually through a process called <strong>binary fission</strong>. This is a simple form of cell division where one cell divides into two identical daughter cells.</p>
 
-        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-          Prokaryotic cells have a relatively simple structure compared to eukaryotic cells. Despite this simplicity,
-          each component plays a vital role in the cell's survival. Let's examine each structure in detail.
-        </p>
-
-        <!-- Cell Membrane -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-secondary icon-wrapper-sm">
-              <i data-lucide="circle" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Plasma Membrane (Cell Membrane)</h3>
+        <div class="worked-example">
+          <div class="worked-example-header">
+            <i data-lucide="refresh-cw"></i>
+            Stages of Binary Fission
           </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Structure:</strong> A phospholipid bilayer with embedded proteins, similar to eukaryotic membranes.
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Function:</strong> Controls what enters and exits the cell (selectively permeable). Also the site
-              of cellular respiration in prokaryotes, as they lack mitochondria.
-            </p>
-          </div>
+          <ol style="padding-left: 24px; color: #78350f;">
+            <li style="margin-bottom: 8px;"><strong>DNA Replication:</strong> The circular chromosome is copied</li>
+            <li style="margin-bottom: 8px;"><strong>Cell Elongation:</strong> The cell grows longer</li>
+            <li style="margin-bottom: 8px;"><strong>Chromosome Separation:</strong> Copies move to opposite ends</li>
+            <li><strong>Cytokinesis:</strong> Cell membrane pinches in, creating two cells</li>
+          </ol>
         </div>
 
-        <!-- Cell Wall -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-primary icon-wrapper-sm">
-              <i data-lucide="box" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Cell Wall</h3>
-          </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Structure:</strong> A rigid layer outside the plasma membrane. In most bacteria, it contains
-              <strong>peptidoglycan</strong> (a polymer of sugars and amino acids). Archaeal cell walls have different
-              compositions (often pseudopeptidoglycan or protein).
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Function:</strong> Provides structural support, maintains cell shape, and protects against osmotic lysis
-              (bursting due to water intake). The cell wall is the target of many antibiotics (e.g., penicillin).
-            </p>
-          </div>
-        </div>
-
-        <!-- Capsule -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-accent icon-wrapper-sm">
-              <i data-lucide="shield" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Capsule (in some bacteria)</h3>
-          </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Structure:</strong> A sticky, gel-like layer of polysaccharides outside the cell wall. Not all
-              bacteria have capsules.
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Function:</strong> Protects against dehydration, helps bacteria stick to surfaces (biofilm formation),
-              and helps pathogenic bacteria evade the immune system. Encapsulated bacteria are often more virulent (disease-causing).
-            </p>
-          </div>
-        </div>
-
-        <!-- Nucleoid -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-critical icon-wrapper-sm">
-              <i data-lucide="dna" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Nucleoid</h3>
-          </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Structure:</strong> A region in the cytoplasm where the single, circular chromosome is located.
-              Unlike a nucleus, the nucleoid has <strong>no membrane</strong> surrounding it.
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Function:</strong> Contains the cell's main genetic information (DNA) that controls all cell activities
-              and is passed to daughter cells during reproduction.
-            </p>
-          </div>
-        </div>
-
-        <!-- Plasmids -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-secondary icon-wrapper-sm">
-              <i data-lucide="git-branch" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Plasmids</h3>
-          </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Structure:</strong> Small, circular DNA molecules that are separate from the main chromosome.
-              Bacteria may have zero, one, or many plasmids.
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Function:</strong> Often carry genes for antibiotic resistance, toxin production, or other advantageous
-              traits. Plasmids can be transferred between bacteria, spreading these traits through populations.
-              This is why antibiotic resistance can spread rapidly.
-            </p>
-          </div>
-        </div>
-
-        <!-- Ribosomes -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-primary icon-wrapper-sm">
-              <i data-lucide="factory" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Ribosomes</h3>
-          </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Structure:</strong> Small granular structures made of RNA and protein. Prokaryotic ribosomes are
-              <strong>70S</strong> (smaller than eukaryotic 80S ribosomes). They have no membrane.
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Function:</strong> The site of protein synthesis. Ribosomes read the genetic code from mRNA
-              and assemble amino acids into proteins. A single bacterial cell may contain thousands of ribosomes.
-            </p>
-          </div>
-        </div>
-
-        <!-- Flagella and Pili -->
-        <div class="card" style="margin: var(--space-4) 0;">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-accent icon-wrapper-sm">
-              <i data-lucide="move" class="icon-sm"></i>
-            </div>
-            <h3 class="card-title" style="font-size: var(--text-lg);">Flagella and Pili</h3>
-          </div>
-          <div class="card-content">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              <strong>Flagella:</strong> Long, whip-like projections made of the protein flagellin. They rotate like propellers
-              to move the bacterium. Not all bacteria have flagella.
-            </p>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Pili (singular: pilus):</strong> Short, hair-like projections. Used for attachment to surfaces and to
-              other bacteria during <strong>conjugation</strong> (transfer of genetic material between bacteria).
-            </p>
-          </div>
-        </div>
+        <p>Under ideal conditions, some bacteria can divide every 20 minutes! This rapid reproduction is why bacterial infections can spread so quickly.</p>
       </section>
 
-      <!-- WORKED EXAMPLE: Labelling a Prokaryotic Cell -->
-      <section class="section">
-        <div class="card" style="border: 2px solid var(--primary); background: var(--bg-primary);">
-          <div class="card-header" style="background: var(--primary); margin: -1px; padding: var(--space-4); border-radius: var(--rounded-lg) var(--rounded-lg) 0 0;">
-            <div class="icon-wrapper" style="background: white;">
-              <i data-lucide="pencil" class="icon-md" style="color: var(--primary);"></i>
-            </div>
-            <h3 class="card-title" style="color: white; font-size: var(--text-xl);">Worked Example: Identifying Prokaryotic Structures</h3>
-          </div>
-          <div class="card-content" style="padding: var(--space-6);">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-              <strong>Question:</strong> A student observes a cell with the following features: circular DNA without a membrane,
-              70S ribosomes, a cell wall containing peptidoglycan, and no mitochondria. Is this cell prokaryotic or eukaryotic?
-              Justify your answer.
-            </p>
+      <section class="content-section reveal">
+        <h2>
+          <i data-lucide="git-compare"></i>
+          Prokaryotic vs Eukaryotic Cells
+        </h2>
 
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Step 1: Identify the key features
-              </p>
-              <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
-                <li>Circular DNA without a membrane = nucleoid (no true nucleus)</li>
-                <li>70S ribosomes = prokaryotic (eukaryotes have 80S)</li>
-                <li>Peptidoglycan cell wall = characteristic of bacteria</li>
-                <li>No mitochondria = prokaryotic characteristic</li>
-              </ul>
-            </div>
-
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Step 2: Compare to cell characteristics
-              </p>
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                Prokaryotic cells lack a membrane-bound nucleus, have 70S ribosomes, possess cell walls (often with
-                peptidoglycan in bacteria), and lack membrane-bound organelles like mitochondria. All features match.
-              </p>
-            </div>
-
-            <div style="background: var(--bg-elevated); padding: var(--space-4); border-radius: var(--rounded-md); border-left: 4px solid var(--primary);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Answer:
-              </p>
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                This cell is <strong>prokaryotic</strong>, specifically a <strong>bacterium</strong>. The circular DNA
-                without a surrounding membrane indicates a nucleoid rather than a true nucleus. The 70S ribosomes are
-                characteristic of prokaryotes, as eukaryotes have larger 80S ribosomes. The peptidoglycan cell wall is
-                unique to bacteria. The absence of mitochondria further confirms this, as prokaryotes perform cellular
-                respiration across their plasma membrane instead.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MAIN CONTENT: Prokaryotic Reproduction -->
-      <section class="section">
-        <h2 class="section-title">Prokaryotic Reproduction: Binary Fission</h2>
-
-        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-          Prokaryotes reproduce asexually through a process called <strong>binary fission</strong>. This is a simple
-          and rapid form of cell division that produces two genetically identical daughter cells.
-        </p>
-
-        <div class="card" style="background: var(--bg-elevated); margin: var(--space-6) 0;">
-          <div class="card-content">
-            <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-              Key Definition
-            </h3>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-              <strong>Binary fission:</strong> A type of asexual reproduction where a prokaryotic cell divides into two
-              identical daughter cells. "Binary" means two, and "fission" means splitting.
-            </p>
-          </div>
-        </div>
-
-        <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin: var(--space-6) 0 var(--space-4);">
-          Steps of Binary Fission
-        </h3>
-
-        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-          <div class="card">
-            <div class="card-content" style="display: flex; align-items: flex-start; gap: var(--space-4);">
-              <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: var(--weight-bold); flex-shrink: 0;">1</div>
-              <div>
-                <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-1);">DNA Replication</p>
-                <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                  The circular chromosome replicates, producing two identical copies of the DNA.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-content" style="display: flex; align-items: flex-start; gap: var(--space-4);">
-              <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: var(--weight-bold); flex-shrink: 0;">2</div>
-              <div>
-                <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-1);">Cell Elongation</p>
-                <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                  The cell grows longer. The two copies of the chromosome move to opposite ends of the cell.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-content" style="display: flex; align-items: flex-start; gap: var(--space-4);">
-              <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: var(--weight-bold); flex-shrink: 0;">3</div>
-              <div>
-                <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-1);">Septum Formation</p>
-                <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                  New plasma membrane and cell wall material grow inward at the middle of the cell, forming a septum
-                  (dividing wall).
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-content" style="display: flex; align-items: flex-start; gap: var(--space-4);">
-              <div style="background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: var(--weight-bold); flex-shrink: 0;">4</div>
-              <div>
-                <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-1);">Cell Division</p>
-                <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                  The septum closes completely, and the two daughter cells separate. Each daughter cell is genetically
-                  identical to the parent cell.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-top: var(--space-6);">
-          Binary fission is extremely rapid. Under optimal conditions, <em>E. coli</em> can divide every 20 minutes.
-          This means a single bacterium could theoretically produce over 4 billion descendants in just 12 hours!
-          This rapid reproduction allows bacteria to quickly adapt to changing environments through natural selection.
-        </p>
-      </section>
-
-      <!-- MAIN CONTENT: Bacteria vs Archaea -->
-      <section class="section">
-        <h2 class="section-title">Bacteria vs Archaea</h2>
-
-        <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-          Although bacteria and archaea are both prokaryotes, they are as different from each other as they are from
-          eukaryotes. In fact, archaea are more closely related to eukaryotes in some ways than to bacteria.
-        </p>
-
-        <div class="card" style="margin: var(--space-6) 0; overflow-x: auto;">
+        <div class="card">
           <div class="card-content">
             <table style="width: 100%; border-collapse: collapse;">
               <thead>
-                <tr style="background: var(--bg-secondary);">
-                  <th style="padding: var(--space-3); text-align: left; border-bottom: 2px solid var(--border);">Feature</th>
-                  <th style="padding: var(--space-3); text-align: left; border-bottom: 2px solid var(--border);">Bacteria</th>
-                  <th style="padding: var(--space-3); text-align: left; border-bottom: 2px solid var(--border);">Archaea</th>
+                <tr style="border-bottom: 2px solid var(--border-light);">
+                  <th style="text-align: left; padding: 12px; color: var(--text-primary);">Feature</th>
+                  <th style="text-align: center; padding: 12px; color: var(--text-primary);">Prokaryotic</th>
+                  <th style="text-align: center; padding: 12px; color: var(--text-primary);">Eukaryotic</th>
                 </tr>
               </thead>
-              <tbody class="text-secondary">
-                <tr>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);"><strong>Cell Wall</strong></td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">Contains peptidoglycan</td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">No peptidoglycan (pseudopeptidoglycan or protein)</td>
+              <tbody style="color: var(--text-secondary);">
+                <tr style="border-bottom: 1px solid var(--border-light);">
+                  <td style="padding: 12px;">Nucleus</td>
+                  <td style="text-align: center; padding: 12px;">No membrane-bound nucleus (nucleoid)</td>
+                  <td style="text-align: center; padding: 12px;">True nucleus with membrane</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-light);">
+                  <td style="padding: 12px;">DNA structure</td>
+                  <td style="text-align: center; padding: 12px;">Circular chromosome</td>
+                  <td style="text-align: center; padding: 12px;">Linear chromosomes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-light);">
+                  <td style="padding: 12px;">Organelles</td>
+                  <td style="text-align: center; padding: 12px;">No membrane-bound organelles</td>
+                  <td style="text-align: center; padding: 12px;">Many membrane-bound organelles</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-light);">
+                  <td style="padding: 12px;">Ribosome size</td>
+                  <td style="text-align: center; padding: 12px;">70S</td>
+                  <td style="text-align: center; padding: 12px;">80S</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-light);">
+                  <td style="padding: 12px;">Cell size</td>
+                  <td style="text-align: center; padding: 12px;">1-10 μm</td>
+                  <td style="text-align: center; padding: 12px;">10-100 μm</td>
                 </tr>
                 <tr>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);"><strong>Membrane Lipids</strong></td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">Ester-linked phospholipids</td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">Ether-linked lipids (more stable)</td>
-                </tr>
-                <tr>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);"><strong>Habitats</strong></td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">Found everywhere; soil, water, organisms</td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">Many in extreme environments; also soil, ocean, gut</td>
-                </tr>
-                <tr>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);"><strong>Human Pathogens</strong></td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">Many species cause disease</td>
-                  <td style="padding: var(--space-3); border-bottom: 1px solid var(--border);">No known human pathogens</td>
-                </tr>
-                <tr>
-                  <td style="padding: var(--space-3);"><strong>Antibiotic Sensitivity</strong></td>
-                  <td style="padding: var(--space-3);">Affected by many antibiotics</td>
-                  <td style="padding: var(--space-3);">Resistant to most antibiotics (different cell wall)</td>
+                  <td style="padding: 12px;">Examples</td>
+                  <td style="text-align: center; padding: 12px;">Bacteria, Archaea</td>
+                  <td style="text-align: center; padding: 12px;">Animals, Plants, Fungi, Protists</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-
-        <div class="card" style="background: var(--bg-elevated); margin: var(--space-6) 0;">
-          <div class="card-content">
-            <h3 style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-              Extremophile Archaea
-            </h3>
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-3);">
-              Some archaea thrive in environments that would kill most other organisms:
-            </p>
-            <ul class="text-secondary" style="line-height: var(--leading-relaxed); padding-left: var(--space-5);">
-              <li><strong>Thermophiles:</strong> Live in extremely hot environments (60-120°C), like hot springs and hydrothermal vents</li>
-              <li><strong>Halophiles:</strong> Live in extremely salty environments, like salt lakes and salt flats</li>
-              <li><strong>Methanogens:</strong> Produce methane gas; live in oxygen-free environments like swamps, cow stomachs, and sewage</li>
-              <li><strong>Acidophiles:</strong> Thrive in acidic conditions (pH below 5)</li>
-            </ul>
-          </div>
-        </div>
       </section>
 
-      <!-- ACTIVITY 1 -->
-      <section class="section">
-        <div class="card" style="border: 2px solid var(--secondary);">
-          <div class="card-header" style="background: var(--secondary); margin: -1px; padding: var(--space-4); border-radius: var(--rounded-lg) var(--rounded-lg) 0 0;">
-            <div class="icon-wrapper" style="background: white;">
-              <i data-lucide="pen-tool" class="icon-md" style="color: var(--secondary);"></i>
-            </div>
-            <h3 class="card-title" style="color: white; font-size: var(--text-xl);">Activity 1: Label the Prokaryotic Cell</h3>
-          </div>
-          <div class="card-content" style="padding: var(--space-6);">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-              Match each structure (1-8) with its correct name from the list. Write the letter in the space provided.
-            </p>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-bottom: var(--space-6);">
+      <div class="activity-card activity-card--teal reveal">
+        <div class="activity-card-header">
+          <i data-lucide="activity"></i>
+          <h3>Activity: Prokaryotic Cell Labeling</h3>
+        </div>
+        <div class="activity-card-body">
+          <p style="margin-bottom: 16px;">Label the following structures on a prokaryotic cell diagram:</p>
+          <div class="fill-blank-form">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
               <div>
-                <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">Structures:</p>
-                <ol class="text-secondary" style="line-height: var(--leading-loose); padding-left: var(--space-5);">
-                  <li>Region containing circular DNA</li>
-                  <li>Small circular DNA molecules</li>
-                  <li>Outer protective layer with peptidoglycan</li>
-                  <li>Controls what enters and exits</li>
-                  <li>Site of protein synthesis (70S)</li>
-                  <li>Long, whip-like projection for movement</li>
-                  <li>Short projections for attachment</li>
-                  <li>Sticky outer layer for protection</li>
-                </ol>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">1. Cell wall</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="A" maxlength="1" placeholder="Letter">
               </div>
               <div>
-                <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">Names:</p>
-                <ul class="text-secondary" style="line-height: var(--leading-loose); list-style: upper-alpha; padding-left: var(--space-5);">
-                  <li>Capsule</li>
-                  <li>Cell wall</li>
-                  <li>Flagellum</li>
-                  <li>Nucleoid</li>
-                  <li>Pili</li>
-                  <li>Plasma membrane</li>
-                  <li>Plasmids</li>
-                  <li>Ribosomes</li>
-                </ul>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">2. Cell membrane</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="B" maxlength="1" placeholder="Letter">
+              </div>
+              <div>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">3. Nucleoid</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="C" maxlength="1" placeholder="Letter">
+              </div>
+              <div>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">4. Plasmid</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="D" maxlength="1" placeholder="Letter">
+              </div>
+              <div>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">5. Ribosomes</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="E" maxlength="1" placeholder="Letter">
+              </div>
+              <div>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">6. Flagellum</label>
+                <input type="text" class="modern-input modern-input--small" data-correct="F" maxlength="1" placeholder="Letter">
+              </div>
+            </div>
+            <button class="btn btn-primary check-fill-btn" style="margin-top: 24px;">
+              <i data-lucide="check-circle"></i>
+              Check Answers
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <details class="card reveal" data-open="true">
+        <summary>
+          <div class="icon-wrapper">
+            <i data-lucide="pen-tool"></i>
+          </div>
+          <span>Copy Into Your Books</span>
+        </summary>
+        <div class="card-content">
+          <p style="font-weight: 600; margin-bottom: 8px;">Key Definitions:</p>
+          <ul style="padding-left: 24px; color: var(--text-secondary); margin-bottom: 24px;">
+            <li style="margin-bottom: 8px;"><strong>Prokaryote:</strong> Organism whose cells lack a membrane-bound nucleus and organelles</li>
+            <li style="margin-bottom: 8px;"><strong>Nucleoid:</strong> Region in prokaryotic cell where DNA is located (not membrane-bound)</li>
+            <li style="margin-bottom: 8px;"><strong>Plasmid:</strong> Small circular DNA molecule found in bacteria, separate from main chromosome</li>
+            <li><strong>Binary Fission:</strong> Asexual reproduction method where one cell divides into two identical cells</li>
+          </ul>
+        </div>
+      </details>
+
+      <section class="content-section reveal" style="margin-top: 48px;">
+        <h2>
+          <i data-lucide="clipboard-check"></i>
+          Assessment Questions
+        </h2>
+
+        <div class="card" style="margin-bottom: 24px;">
+          <div class="card-content quiz-form">
+            <div class="quiz-question" data-correct="b" style="margin-bottom: 32px;">
+              <p style="font-weight: 600; margin-bottom: 12px;">1. Where is the DNA located in a prokaryotic cell?</p>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="a">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">A</span>
+                  <span class="quiz-option-text">Inside a membrane-bound nucleus</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="b">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">B</span>
+                  <span class="quiz-option-text">In the nucleoid region</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="c">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">C</span>
+                  <span class="quiz-option-text">Only in plasmids</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="d">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">D</span>
+                  <span class="quiz-option-text">Floating freely in the cytoplasm with no organization</span>
+                </label>
               </div>
             </div>
 
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">Your Answers:</p>
-              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);">
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">1:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">2:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">3:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">4:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">5:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">6:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">7:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
-                <div>
-                  <label class="text-secondary" style="display: block; margin-bottom: var(--space-1);">8:</label>
-                  <input type="text" style="width: 100%; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md);" maxlength="1">
-                </div>
+            <div class="quiz-question" data-correct="a">
+              <p style="font-weight: 600; margin-bottom: 12px;">2. Which structure is found in prokaryotes but NOT in eukaryotes?</p>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="a">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">A</span>
+                  <span class="quiz-option-text">Plasmids</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="b">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">B</span>
+                  <span class="quiz-option-text">Ribosomes</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="c">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">C</span>
+                  <span class="quiz-option-text">Cell membrane</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="d">
+                  <span class="quiz-option-circle"></span>
+                  <span class="quiz-option-letter">D</span>
+                  <span class="quiz-option-text">DNA</span>
+                </label>
               </div>
             </div>
+
+            <button class="btn btn-primary check-answers-btn" style="margin-top: 24px;">
+              <i data-lucide="check-circle"></i>
+              Check Answers
+            </button>
           </div>
         </div>
       </section>
 
-      <!-- ACTIVITY 2 -->
-      <section class="section">
-        <div class="card" style="border: 2px solid var(--secondary);">
-          <div class="card-header" style="background: var(--secondary); margin: -1px; padding: var(--space-4); border-radius: var(--rounded-lg) var(--rounded-lg) 0 0;">
-            <div class="icon-wrapper" style="background: white;">
-              <i data-lucide="pen-tool" class="icon-md" style="color: var(--secondary);"></i>
-            </div>
-            <h3 class="card-title" style="color: white; font-size: var(--text-xl);">Activity 2: Binary Fission Sequence</h3>
+      <details class="card reveal">
+        <summary>
+          <div class="icon-wrapper icon-wrapper-accent">
+            <i data-lucide="key"></i>
           </div>
-          <div class="card-content" style="padding: var(--space-6);">
-            <p class="text-secondary" style="line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-              The steps of binary fission are listed below in the wrong order. Number them 1-4 in the correct sequence.
-            </p>
-
-            <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-6);">
-              <div style="display: flex; align-items: center; gap: var(--space-3);">
-                <input type="text" style="width: 40px; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md); text-align: center;" maxlength="1">
-                <span class="text-secondary">The septum forms and divides the cell into two daughter cells</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: var(--space-3);">
-                <input type="text" style="width: 40px; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md); text-align: center;" maxlength="1">
-                <span class="text-secondary">The circular chromosome replicates</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: var(--space-3);">
-                <input type="text" style="width: 40px; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md); text-align: center;" maxlength="1">
-                <span class="text-secondary">The cell elongates and chromosomes move to opposite ends</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: var(--space-3);">
-                <input type="text" style="width: 40px; padding: var(--space-2); border: 1px solid var(--border); border-radius: var(--rounded-md); text-align: center;" maxlength="1">
-                <span class="text-secondary">Plasma membrane and cell wall begin to grow inward</span>
-              </div>
-            </div>
-
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                Reflection: Why is binary fission advantageous for bacteria in a changing environment?
-              </p>
-              <textarea style="width: 100%; min-height: 100px; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--rounded-md); resize: vertical;"></textarea>
-            </div>
-          </div>
+          <span>Answer Key</span>
+        </summary>
+        <div class="card-content">
+          <p style="font-weight: 600;">Multiple Choice:</p>
+          <ol style="padding-left: 24px; color: var(--text-secondary);">
+            <li style="margin-bottom: 4px;">B - DNA is in the nucleoid region (not membrane-bound)</li>
+            <li>A - Plasmids are unique to prokaryotes</li>
+          </ol>
         </div>
-      </section>
+      </details>
 
-      <!-- COPY INTO BOOKS -->
-      <section class="section">
-        <div class="card" style="background: var(--bg-secondary); border: 2px dashed var(--border);">
-          <div class="card-header">
-            <div class="icon-wrapper icon-wrapper-primary">
-              <i data-lucide="book-copy" class="icon-md"></i>
-            </div>
-            <h2 class="card-title" style="font-size: var(--text-xl);">Copy Into Your Books</h2>
-          </div>
-          <div class="card-content">
-            <div style="background: white; padding: var(--space-5); border-radius: var(--rounded-md); border: 1px solid var(--border);">
-              <h3 style="font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-4); text-decoration: underline;">
-                Lesson 2: Prokaryotic Cells
-              </h3>
-
-              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-                <strong>Definition:</strong> Prokaryotic cells lack a membrane-bound nucleus and membrane-bound organelles.
-                DNA is located in the nucleoid region.
-              </p>
-
-              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-                <strong>Key structures of prokaryotic cells:</strong>
-              </p>
-              <ul style="color: var(--text-primary); line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-bottom: var(--space-4);">
-                <li>Plasma membrane - selectively permeable barrier; site of respiration</li>
-                <li>Cell wall - contains peptidoglycan (bacteria); provides support and shape</li>
-                <li>Nucleoid - region containing circular chromosome (DNA)</li>
-                <li>Plasmids - small circular DNA; carry genes for antibiotic resistance</li>
-                <li>Ribosomes (70S) - site of protein synthesis</li>
-                <li>Flagella - for movement</li>
-                <li>Pili - for attachment and DNA transfer</li>
-                <li>Capsule - sticky protective layer (some bacteria)</li>
-              </ul>
-
-              <p style="color: var(--text-primary); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-                <strong>Binary fission:</strong> Asexual reproduction in prokaryotes
-              </p>
-              <ol style="color: var(--text-primary); line-height: var(--leading-relaxed); padding-left: var(--space-5); margin-bottom: var(--space-4);">
-                <li>DNA replication</li>
-                <li>Cell elongation; chromosomes move apart</li>
-                <li>Septum formation</li>
-                <li>Cell division into two identical daughter cells</li>
-              </ol>
-
-              <p style="color: var(--text-primary); line-height: var(--leading-relaxed);">
-                <strong>Two domains of prokaryotes:</strong> Bacteria and Archaea (differ in cell wall composition,
-                membrane lipids, and habitats)
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ASSESSMENT QUESTIONS -->
-      <section class="section">
-        <h2 class="section-title">Check Your Understanding</h2>
-
-        <!-- Multiple Choice Questions -->
-        <div class="card" style="margin-bottom: var(--space-6);">
-          <div class="card-header">
-            <h3 class="card-title">Multiple Choice Questions</h3>
-          </div>
-          <div class="card-content">
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                1. Which structure is found in prokaryotic cells but NOT in eukaryotic cells?
-              </p>
-              <div style="display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4);">
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q1" value="a"> A. Plasma membrane
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q1" value="b"> B. Nucleoid
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q1" value="c"> C. Ribosomes
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q1" value="d"> D. DNA
-                </label>
-              </div>
-            </div>
-
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                2. What is the function of plasmids in bacterial cells?
-              </p>
-              <div style="display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4);">
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q2" value="a"> A. Protein synthesis
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q2" value="b"> B. Carrying additional genes such as antibiotic resistance
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q2" value="c"> C. Movement
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q2" value="d"> D. Cellular respiration
-                </label>
-              </div>
-            </div>
-
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                3. The bacterial cell wall contains:
-              </p>
-              <div style="display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4);">
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q3" value="a"> A. Cellulose
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q3" value="b"> B. Chitin
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q3" value="c"> C. Peptidoglycan
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q3" value="d"> D. Phospholipids
-                </label>
-              </div>
-            </div>
-
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                4. Binary fission differs from mitosis because:
-              </p>
-              <div style="display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4);">
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q4" value="a"> A. It produces more than two cells
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q4" value="b"> B. It does not involve DNA replication
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q4" value="c"> C. It does not involve a spindle or chromosomes condensing
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q4" value="d"> D. It only occurs in eukaryotes
-                </label>
-              </div>
-            </div>
-
-            <div>
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                5. Which of the following is TRUE about archaea?
-              </p>
-              <div style="display: flex; flex-direction: column; gap: var(--space-2); padding-left: var(--space-4);">
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q5" value="a"> A. They have peptidoglycan in their cell walls
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q5" value="b"> B. Many cause human diseases
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q5" value="c"> C. Some can live in extreme environments
-                </label>
-                <label class="text-secondary" style="display: flex; align-items: center; gap: var(--space-2); cursor: pointer;">
-                  <input type="radio" name="q5" value="d"> D. They have a membrane-bound nucleus
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Short Answer Questions -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Short Answer Questions</h3>
-          </div>
-          <div class="card-content">
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                6. Draw and label a prokaryotic cell, including at least six structures. (6 marks)
-              </p>
-              <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); min-height: 200px;">
-                <p class="text-secondary" style="font-style: italic;">[Drawing space - draw in your notebook]</p>
-              </div>
-            </div>
-
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                7. Explain why antibiotics that target peptidoglycan are effective against bacteria but not archaea. (3 marks)
-              </p>
-              <textarea style="width: 100%; min-height: 120px; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--rounded-md); resize: vertical;"></textarea>
-            </div>
-
-            <div style="margin-bottom: var(--space-6);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                8. Describe the process of binary fission. Explain why this method of reproduction allows bacteria
-                to adapt quickly to environmental changes. (5 marks)
-              </p>
-              <textarea style="width: 100%; min-height: 150px; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--rounded-md); resize: vertical;"></textarea>
-            </div>
-
-            <div>
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-3);">
-                9. Compare and contrast bacteria and archaea. Include at least three similarities and three differences. (6 marks)
-              </p>
-              <textarea style="width: 100%; min-height: 180px; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--rounded-md); resize: vertical;"></textarea>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ANSWER KEY -->
-      <section class="section">
-        <details class="card">
-          <summary style="padding: var(--space-4); cursor: pointer; font-weight: var(--weight-semibold); color: var(--text-primary); display: flex; align-items: center; gap: var(--space-3);">
-            <i data-lucide="key" class="icon-sm"></i>
-            View Answer Key
-          </summary>
-          <div class="card-content" style="border-top: 1px solid var(--border);">
-            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
-              Activity 1: Label the Prokaryotic Cell
-            </h4>
-            <p class="text-secondary" style="margin-bottom: var(--space-4);">
-              1. D (Nucleoid) | 2. G (Plasmids) | 3. B (Cell wall) | 4. F (Plasma membrane) |
-              5. H (Ribosomes) | 6. C (Flagellum) | 7. E (Pili) | 8. A (Capsule)
-            </p>
-
-            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
-              Activity 2: Binary Fission Sequence
-            </h4>
-            <p class="text-secondary" style="margin-bottom: var(--space-4);">
-              Correct order: 4, 1, 2, 3<br>
-              (1. Chromosome replicates → 2. Cell elongates → 3. Membrane/wall grow inward → 4. Septum divides cell)
-            </p>
-            <p class="text-secondary" style="margin-bottom: var(--space-6);">
-              <strong>Reflection:</strong> Binary fission is advantageous because it is rapid (can occur every 20 minutes),
-              allowing large populations to develop quickly. Random mutations during DNA replication create genetic variation,
-              and natural selection acts on this variation. Beneficial mutations (e.g., antibiotic resistance) spread quickly
-              through the population due to the fast generation time.
-            </p>
-
-            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
-              Multiple Choice Answers
-            </h4>
-            <p class="text-secondary" style="margin-bottom: var(--space-6);">
-              1. B (Nucleoid - eukaryotes have a membrane-bound nucleus instead)<br>
-              2. B (Carrying additional genes such as antibiotic resistance)<br>
-              3. C (Peptidoglycan)<br>
-              4. C (It does not involve a spindle or chromosomes condensing)<br>
-              5. C (Some can live in extreme environments)
-            </p>
-
-            <h4 style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-4);">
-              Short Answer Marking Guidelines
-            </h4>
-
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Question 6 (6 marks):
-              </p>
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                1 mark for each correctly drawn and labelled structure (max 6): plasma membrane, cell wall, nucleoid,
-                ribosomes, cytoplasm, flagella, pili, capsule, plasmid. Diagram should show appropriate relative positions
-                (e.g., cell wall outside membrane, nucleoid region in cytoplasm).
-              </p>
-            </div>
-
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Question 7 (3 marks):
-              </p>
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                Antibiotics target peptidoglycan synthesis (1 mark). Bacteria have peptidoglycan in cell walls (1 mark).
-                Archaea do not have peptidoglycan - they have different cell wall components (1 mark). Therefore, these
-                antibiotics cannot affect archaeal cells.
-              </p>
-            </div>
-
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md); margin-bottom: var(--space-4);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Question 8 (5 marks):
-              </p>
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                Binary fission steps (3 marks): DNA replication; cell elongation with chromosomes moving apart; septum
-                formation; division into two identical daughter cells.<br>
-                Rapid adaptation (2 marks): Fast reproduction rate (can be 20 min); mutations create genetic variation;
-                large populations mean more variation; natural selection selects advantageous traits; beneficial
-                mutations spread quickly.
-              </p>
-            </div>
-
-            <div style="background: var(--bg-secondary); padding: var(--space-4); border-radius: var(--rounded-md);">
-              <p style="font-weight: var(--weight-semibold); color: var(--text-primary); margin-bottom: var(--space-2);">
-                Question 9 (6 marks):
-              </p>
-              <p class="text-secondary" style="line-height: var(--leading-relaxed);">
-                Similarities (1 mark each, max 3): Both prokaryotes; no membrane-bound nucleus; no membrane-bound
-                organelles; have plasma membrane; have ribosomes; have circular DNA; unicellular; reproduce by binary fission.<br>
-                Differences (1 mark each, max 3): Cell wall composition (peptidoglycan vs no peptidoglycan); membrane lipids
-                (ester-linked vs ether-linked); some archaea are extremophiles; no known archaeal human pathogens; different
-                antibiotic sensitivity; different RNA polymerase structure.
-              </p>
-            </div>
-          </div>
-        </details>
-      </section>
-
-      <!-- MARK COMPLETE SECTION -->
-      <section class="mark-complete-section">
-        <h3 style="font-size: var(--text-xl); font-weight: var(--weight-bold); color: var(--text-primary); margin-bottom: var(--space-4);">
-          Lesson Complete?
-        </h3>
-        <p class="text-secondary" style="margin-bottom: var(--space-6);">
-          Mark this lesson as complete to track your progress through Module 1.
-        </p>
-        <button id="mark-complete-btn" class="mark-complete-btn">
-          <i data-lucide="circle" class="icon-sm"></i>
+      <div style="text-align: center; margin: 48px 0;">
+        <button class="mark-complete-btn" data-lesson="2">
+          <i data-lucide="circle"></i>
           <span>Mark as Complete</span>
         </button>
-      </section>
+      </div>
 
-      <!-- LESSON NAVIGATION -->
-      <nav class="lesson-navigation" aria-label="Lesson navigation">
-        <a href="../module-1-cells/lesson-1.html" class="lesson-nav-btn">
-          <i data-lucide="chevron-left" class="icon-sm"></i>
+      <nav class="lesson-navigation reveal" aria-label="Lesson navigation">
+        <a href="lesson-1.html" class="lesson-nav-btn">
+          <i data-lucide="chevron-left"></i>
           <div class="nav-btn-content">
             <span class="nav-btn-label">Previous</span>
             <span class="nav-btn-title">Introduction to Cells</span>
           </div>
         </a>
 
-        <a href="../module-1-cells/index.html" class="lesson-nav-home">
-          <i data-lucide="grid-3x3" class="icon-sm"></i>
+        <a href="../index.html" class="lesson-nav-home">
+          <i data-lucide="grid-3x3"></i>
           <span>All Lessons</span>
         </a>
 
-        <a href="#" class="lesson-nav-btn disabled" aria-disabled="true">
+        <a href="lesson-3.html" class="lesson-nav-btn">
           <div class="nav-btn-content" style="text-align: right;">
             <span class="nav-btn-label">Next</span>
-            <span class="nav-btn-title">Eukaryotic Cells (Coming Soon)</span>
+            <span class="nav-btn-title">Eukaryotic Cell Structure</span>
           </div>
-          <i data-lucide="chevron-right" class="icon-sm"></i>
+          <i data-lucide="chevron-right"></i>
         </a>
       </nav>
-
     </main>
   </div>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-branding">
-          <div class="footer-logo">
-            <i data-lucide="atom" class="icon-lg"></i>
-            <span>Science Hub</span>
-          </div>
-          <p class="footer-tagline">
-            Built with care for science students in NSW
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Module 1</h4>
-            <ul>
-              <li><a href="../module-1-cells/lesson-1.html">Lesson 1</a></li>
-              <li><a href="../module-1-cells/lesson-2.html">Lesson 2</a></li>
-              <li><a href="../module-1-cells/index.html">All Lessons</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h4>HSC Biology</h4>
-            <ul>
-              <li><a href="../index.html">All Modules</a></li>
-              <li><a href="../../index.html">Home</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#">Study Tips</a></li>
-              <li><a href="#">NSW Syllabus</a></li>
-            </ul>
-          </div>
-        </div>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Science Hub. Educational use only.</p>
+      <p class="footer-tagline">Making science education accessible, engaging, and effective.</p>
+      <div class="footer-links">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">HSC Biology</a>
+        <a href="../../year-7/index.html">Year 7</a>
+        <a href="../../year-8/index.html">Year 8</a>
       </div>
+      <p class="footer-copyright">© 2026 Science Learning Hub. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script src="../../assets/js/navigation.js"></script>
-  <script src="../../assets/js/storage.js"></script>
+  <script src="../../assets/js/main.js"></script>
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearLevel = 'hsc-biology';
+      const moduleId = 'module-1-cells';
+      const lessonId = '2';
+      const totalLessons = 3;
 
-    // Track this lesson visit
-    saveLastVisited('hsc-biology', 'module-1-cells', 'lesson-2');
-
-    // Check if already completed
-    const isCompleted = isLessonComplete('hsc-biology', 'module-1-cells', 'lesson-2');
-    const completeBtn = document.getElementById('mark-complete-btn');
-
-    if (isCompleted && completeBtn) {
-      completeBtn.classList.add('completed');
-      completeBtn.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i><span>Completed</span>';
-      lucide.createIcons();
-    }
-
-    // Mark complete button handler
-    if (completeBtn) {
-      completeBtn.addEventListener('click', function() {
-        markLessonComplete('hsc-biology', 'module-1-cells', 'lesson-2');
-        this.classList.add('completed');
-        this.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i><span>Completed!</span>';
-        lucide.createIcons();
-
-        // Update sidebar
-        const sidebarItem = document.querySelector('.lesson-item.active');
-        if (sidebarItem) {
-          sidebarItem.classList.add('completed');
-        }
-
-        // Update progress bar
-        updateProgress();
-      });
-    }
-
-    // Sidebar toggle for mobile
-    const sidebarToggle = document.querySelector('.sidebar-toggle-btn');
-    const sidebar = document.querySelector('.lesson-sidebar');
-
-    if (sidebarToggle && sidebar) {
-      sidebarToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('open');
-      });
-    }
-
-    // Function to update progress
-    function updateProgress() {
-      const completedLessons = getModuleProgress('hsc-biology', 'module-1-cells');
-      const totalLessons = 30;
-      const completed = completedLessons.length;
-      const percentage = Math.round((completed / totalLessons) * 100);
-
-      const progressFill = document.querySelector('.progress-bar-fill');
-      const progressText = document.querySelector('.progress-text');
-
-      if (progressFill) {
-        progressFill.style.width = percentage + '%';
-      }
-
-      if (progressText) {
-        progressText.textContent = `${completed}/${totalLessons} lessons (${percentage}%)`;
-      }
-    }
-
-    // Load progress for all lessons
-    const completedLessons = getModuleProgress('hsc-biology', 'module-1-cells');
-    completedLessons.forEach(lessonId => {
-      const item = document.querySelector(`[data-lesson="${lessonId}"]`);
-      if (item) {
-        item.classList.add('completed');
-      }
+      updateSidebarProgress(yearLevel, moduleId, totalLessons);
+      setupMarkComplete(yearLevel, moduleId, lessonId);
+      StorageManager.saveLastVisited(yearLevel, moduleId, lessonId);
     });
-
-    // Update progress bar on load
-    updateProgress();
   </script>
 </body>
 </html>
