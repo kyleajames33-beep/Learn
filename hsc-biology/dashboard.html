@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your learning dashboard - track progress, view stats, and see your achievements in HSC Biology.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Learning Dashboard | HSC Biology | Science Hub</title>
+  
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../assets/css/global.css?v=3">
+  <link rel="stylesheet" href="../assets/css/components.css?v=3">
+  <link rel="stylesheet" href="../assets/css/streak.css?v=1">
+  <link rel="stylesheet" href="../assets/css/xp.css?v=1">
+  <link rel="stylesheet" href="../assets/css/achievements.css?v=1">
+  <link rel="stylesheet" href="../assets/css/dashboard.css?v=1">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      
+      <a href="../index.html" class="nav-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </a>
+      
+      <div class="nav-search">
+        <input type="search" placeholder="Search..." aria-label="Search">
+      </div>
+      
+      <div style="width: 40px;"></div>
+    </div>
+    
+    <div class="breadcrumb-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <i data-lucide="chevron-right"></i>
+        <a href="./index.html">HSC Biology</a>
+        <i data-lucide="chevron-right"></i>
+        <span>Dashboard</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Content -->
+  <main class="dashboard-page">
+    <!-- Header -->
+    <div class="dashboard-header">
+      <div class="dashboard-header-content">
+        <h1><i data-lucide="layout-dashboard"></i> Learning Dashboard</h1>
+        <p>Track your progress, analyze your learning, and celebrate your achievements</p>
+      </div>
+      <div class="dashboard-quick-stats" id="quick-stats">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Overview Cards -->
+    <div class="dashboard-overview">
+      <!-- XP & Level Card -->
+      <div class="dashboard-card xp-card">
+        <div class="card-header">
+          <div class="card-icon xp-icon">
+            <i data-lucide="star"></i>
+          </div>
+          <div class="card-title-section">
+            <h3>Level Progress</h3>
+            <span class="card-subtitle">Keep learning to level up!</span>
+          </div>
+        </div>
+        <div class="xp-display" id="xp-display">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Streak Card -->
+      <div class="dashboard-card streak-card">
+        <div class="card-header">
+          <div class="card-icon streak-icon">
+            <i data-lucide="flame"></i>
+          </div>
+          <div class="card-title-section">
+            <h3>Learning Streak</h3>
+            <span class="card-subtitle">Consistency builds mastery</span>
+          </div>
+        </div>
+        <div class="streak-display" id="streak-display">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Achievements Card -->
+      <div class="dashboard-card achievements-card">
+        <div class="card-header">
+          <div class="card-icon achievements-icon">
+            <i data-lucide="trophy"></i>
+          </div>
+          <div class="card-title-section">
+            <h3>Achievements</h3>
+            <span class="card-subtitle">Badges earned so far</span>
+          </div>
+        </div>
+        <div class="achievements-display" id="achievements-display">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Time Stats Card -->
+      <div class="dashboard-card time-card">
+        <div class="card-header">
+          <div class="card-icon time-icon">
+            <i data-lucide="clock"></i>
+          </div>
+          <div class="card-title-section">
+            <h3>Study Time</h3>
+            <span class="card-subtitle">Your learning journey</span>
+          </div>
+        </div>
+        <div class="time-display" id="time-display">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Dashboard Grid -->
+    <div class="dashboard-grid">
+      <!-- Progress Section -->
+      <div class="dashboard-section progress-section">
+        <div class="section-header">
+          <h2><i data-lucide="bar-chart-2"></i> Module Progress</h2>
+          <span class="section-subtitle">Track completion across all modules</span>
+        </div>
+        <div class="module-progress-list" id="module-progress">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Activity Chart Section -->
+      <div class="dashboard-section activity-section">
+        <div class="section-header">
+          <h2><i data-lucide="activity"></i> Learning Activity</h2>
+          <span class="section-subtitle">Lessons completed over time</span>
+        </div>
+        <div class="activity-chart-container">
+          <div class="activity-chart" id="activity-chart">
+            <!-- CSS-based bar chart populated by JS -->
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot lessons"></span> Lessons</span>
+            <span class="legend-item"><span class="legend-dot quizzes"></span> Quizzes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Achievements Section -->
+      <div class="dashboard-section recent-achievements-section">
+        <div class="section-header">
+          <h2><i data-lucide="award"></i> Recent Achievements</h2>
+          <a href="./achievements.html" class="view-all-link">View All <i data-lucide="chevron-right"></i></a>
+        </div>
+        <div class="recent-achievements-list" id="recent-achievements">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Skills Breakdown Section -->
+      <div class="dashboard-section skills-section">
+        <div class="section-header">
+          <h2><i data-lucide="target"></i> Skills Analysis</h2>
+          <span class="section-subtitle">Your strengths across categories</span>
+        </div>
+        <div class="skills-radar" id="skills-radar">
+          <!-- CSS-based radar chart populated by JS -->
+        </div>
+      </div>
+
+      <!-- Mini-Game Stats Section -->
+      <div class="dashboard-section minigames-section">
+        <div class="section-header">
+          <h2><i data-lucide="gamepad-2"></i> Mini-Game Stats</h2>
+          <span class="section-subtitle">Practice makes perfect</span>
+        </div>
+        <div class="minigame-stats-grid" id="minigame-stats">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Study Recommendations -->
+      <div class="dashboard-section recommendations-section">
+        <div class="section-header">
+          <h2><i data-lucide="lightbulb"></i> Recommended For You</h2>
+          <span class="section-subtitle">Based on your progress</span>
+        </div>
+        <div class="recommendations-list" id="recommendations">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Goals & Milestones -->
+    <div class="dashboard-section goals-section">
+      <div class="section-header">
+        <h2><i data-lucide="flag"></i> Goals & Milestones</h2>
+        <span class="section-subtitle">What to aim for next</span>
+      </div>
+      <div class="goals-grid" id="goals-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </div>
+      <p class="footer-tagline">Making science education accessible, engaging, and effective.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="./index.html">HSC Biology</a>
+      </div>
+      <p class="footer-copyright">© 2026 Science Learning Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/streak.js"></script>
+  <script src="../assets/js/xp.js"></script>
+  <script src="../assets/js/achievements.js"></script>
+  <script src="../assets/js/minigames.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      DashboardManager.init();
+    });
+  </script>
+</body>
+</html>
