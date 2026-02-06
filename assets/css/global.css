@@ -1341,3 +1341,280 @@ textarea.modern-input {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ============================================
+   TABLET BREAKPOINT FIX (768px - 1024px)
+   Critical fix for content cutoff issue
+   ============================================ */
+
+@media (max-width: 1024px) {
+  #main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: var(--space-4);
+  }
+  
+  .lesson-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .lesson-sidebar {
+    position: fixed;
+    left: -100%;
+    z-index: 90;
+  }
+}
+
+/* ============================================
+   QUIZ OPTIONS SPACING FIX
+   ============================================ */
+
+.quiz-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-main);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 8px;
+}
+
+.quiz-option:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-light);
+}
+
+.quiz-option-letter {
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 24px;
+  flex-shrink: 0;
+}
+
+.quiz-option-text {
+  flex: 1;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ============================================
+   ACTIVITY CARDS VISUAL SEPARATION
+   ============================================ */
+
+.activity-card {
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 32px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+}
+
+.activity-card--teal {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+  border-color: #99f6e4;
+}
+
+.activity-card--purple {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-color: #d8b4fe;
+}
+
+.activity-card--orange {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border-color: #fdba74;
+}
+
+.activity-card-header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.activity-card--teal .activity-card-header {
+  background: #0d9488;
+  color: white;
+}
+
+.activity-card--purple .activity-card-header {
+  background: #7c3aed;
+  color: white;
+}
+
+.activity-card--orange .activity-card-header {
+  background: #ea580c;
+  color: white;
+}
+
+.activity-card-body {
+  padding: 24px;
+}
+
+/* ============================================
+   COMING SOON CARDS - DISABLED STATE
+   ============================================ */
+
+.card-coming-soon,
+.coming-soon {
+  pointer-events: none !important;
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+.card-coming-soon * {
+  pointer-events: none !important;
+}
+
+/* ============================================
+   MATH FORMULA BOXES
+   ============================================ */
+
+.formula-box {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: var(--text-base);
+  overflow-x: auto;
+}
+
+.formula-box code {
+  font-family: inherit;
+  color: var(--text-primary);
+}
+
+.formula-inline {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: var(--bg-elevated);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* ============================================
+   TYPOGRAPHY HIERARCHY FIXES
+   ============================================ */
+
+@media (max-width: 768px) {
+  .lesson-hero-title {
+    font-size: 28px !important;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* Ensure proper heading hierarchy */
+.content-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content-section h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.content-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   IMAGE PLACEHOLDERS
+   ============================================ */
+
+.image-placeholder {
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-sidebar) 100%);
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+  margin: 20px 0;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.image-placeholder svg {
+  width: 48px;
+  height: 48px;
+  opacity: 0.5;
+}
+
+/* ============================================
+   FOOTER LINKS - DISABLE EMPTY LINKS
+   ============================================ */
+
+footer a[href="#"],
+.site-footer a[href="#"] {
+  pointer-events: none;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* ============================================
+   ICON FALLBACKS
+   ============================================ */
+
+.icon-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--bg-elevated);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   PRINT STYLES ENHANCEMENT
+   ============================================ */
+
+@media print {
+  .mark-complete-btn {
+    display: none !important;
+  }
+  
+  .lesson-navigation {
+    display: none !important;
+  }
+  
+  .activity-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .retrieval-activity {
+    border: 1px solid #ccc;
+  }
+  
+  /* Add page URL in footer */
+  body::after {
+    content: "Printed from Science Hub - " attr(data-url);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #999;
+  }
+}
