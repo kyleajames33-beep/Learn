@@ -19,9 +19,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../../assets/css/global.css?v=3">
   <link rel="stylesheet" href="../../assets/css/components.css?v=3">
-  <link rel="stylesheet" href="../../assets/css/streak.css?v1
+  <link rel="stylesheet" href="../../assets/css/streak.css?v=1">
   <link rel="stylesheet" href="../../assets/css/xp.css?v=1">
-  <link rel="stylesheet" href="../../assets/css/achievements.css?v=1">">
+  <link rel="stylesheet" href="../../assets/css/achievements.css?v=1">
+  <link rel="stylesheet" href="../../assets/css/minigames.css?v=1">">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="manifest" href="../../assets/manifest.json">
   
@@ -1072,6 +1073,27 @@
           </div>
         </div>
 
+        <!-- Flashcard Mini-Game -->
+        <div class="minigame-embed">
+          <div class="minigame-embed-header">
+            <i data-lucide="zap"></i>
+            <h4>Bonus: Flashcard Challenge</h4>
+          </div>
+          <div class="minigame-embed-content">
+            <div data-minigame="flashcards" data-game-data='{
+              "title": "Cell Membrane Key Terms",
+              "cards": [
+                {"term": "Phospholipid Bilayer", "definition": "The double layer of phospholipids that forms the basic structure of cell membranes, with hydrophilic heads facing outward and hydrophobic tails facing inward."},
+                {"term": "Fluid Mosaic Model", "definition": "The concept that cell membranes are dynamic structures where lipids and proteins can move freely within the membrane plane."},
+                {"term": "Integral Proteins", "definition": "Proteins embedded within the phospholipid bilayer that span the entire membrane, often functioning as channels or transporters."},
+                {"term": "Peripheral Proteins", "definition": "Proteins attached to the surface of the membrane (either inner or outer surface) that support cell structure and signaling."},
+                {"term": "Selective Permeability", "definition": "The property of cell membranes that allows certain substances to pass through while blocking others based on size, charge, and polarity."},
+                {"term": "Cholesterol", "definition": "A steroid molecule found in animal cell membranes that helps maintain membrane fluidity and stability at varying temperatures."}
+              ]
+            }'></div>
+          </div>
+        </div>
+
         <!-- Mark Complete -->
         <div style="text-align: center; margin: 48px 0;">
           <button class="mark-complete-btn" data-lesson="4">
@@ -1128,9 +1150,10 @@
 
   <!-- Scripts -->
   <script src="../../assets/js/main.js"></script>
-  <script src="../../assets/js/streak.js
+  <script src="../../assets/js/streak.js"></script>
   <script src="../../assets/js/xp.js"></script>
-  <script src="../../assets/js/achievements.js"></script>"></script>
+  <script src="../../assets/js/achievements.js"></script>
+  <script src="../../assets/js/minigames.js"></script>
   <script>
     // Initialize Lucide icons
     lucide.createIcons();

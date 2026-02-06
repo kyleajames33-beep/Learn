@@ -1,0 +1,803 @@
+/**
+ * Science Learning Hub - Mini-Games Styles
+ * Phase 02: Gamification Layer
+ * 
+ * Game Types:
+ * - Drag & Drop: Label diagrams
+ * - Flashcards: Flip to study
+ * - Matching: Memory pairs
+ * - Sequence: Order items
+ */
+
+/* ================================
+   BASE MINIGAME CONTAINER
+   ================================ */
+
+.minigame-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e5e7eb;
+}
+
+.minigame-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.minigame-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.minigame-score,
+.minigame-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.score-label,
+.progress-separator {
+  color: #6b7280;
+}
+
+.score-value,
+.progress-current {
+  color: #14b8a6;
+  font-size: 1.1rem;
+}
+
+.minigame-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.stat-item i {
+  width: 16px;
+  height: 16px;
+}
+
+.minigame-instructions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #93e4f920 0%, #a7f3e020 100%);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #0d9488;
+  font-size: 0.9rem;
+}
+
+.minigame-instructions i {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.minigame-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #f3f4f6;
+}
+
+.minigame-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+.minigame-actions .btn i {
+  width: 18px;
+  height: 18px;
+}
+
+.minigame-feedback {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.minigame-feedback.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.minigame-feedback.good {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.minigame-feedback.try-again {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.feedback-content i {
+  width: 24px;
+  height: 24px;
+}
+
+/* ================================
+   DRAG & DROP GAME
+   ================================ */
+
+.dragdrop-workspace {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.dragdrop-diagram {
+  flex: 1;
+  min-width: 300px;
+  min-height: 300px;
+  background: #f9fafb;
+  border-radius: 16px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px dashed #d1d5db;
+}
+
+.drop-zone {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  min-height: 40px;
+}
+
+.drop-zone.drag-over {
+  background: #93e4f940;
+  border-color: #14b8a6;
+  border-style: solid;
+}
+
+.drop-zone.filled {
+  background: #fff;
+  border-style: solid;
+  border-color: #14b8a6;
+  padding: 4px;
+}
+
+.drop-zone.correct {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.drop-zone.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+  animation: shake 0.5s ease;
+}
+
+.drop-hint {
+  color: #9ca3af;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dragdrop-labels {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.dragdrop-labels h4 {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.labels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.draggable-label {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #93e4f9 0%, #a7f3e0 100%);
+  border-radius: 8px;
+  cursor: grab;
+  font-weight: 500;
+  color: #0f766e;
+  text-align: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.draggable-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+}
+
+.draggable-label.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.draggable-label.placed {
+  width: 100%;
+  height: 100%;
+  font-size: 0.85rem;
+  padding: 4px;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* ================================
+   FLASHCARD GAME
+   ================================ */
+
+.flashcard-container {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.flashcard {
+  width: 100%;
+  max-width: 400px;
+  height: 280px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, #93e4f9 0%, #a7f3e0 100%);
+  color: #0f766e;
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, #fff 0%, #f0fdf4 100%);
+  color: #166534;
+  transform: rotateY(180deg);
+  border: 2px solid #14b8a6;
+}
+
+.flashcard-front h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.flashcard-front img {
+  max-width: 120px;
+  max-height: 120px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.flashcard-hint {
+  position: absolute;
+  bottom: 16px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.flashcard-back h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #14b8a6;
+}
+
+.flashcard-back p {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.flashcard-progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #06b6d4);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.flashcard-stats {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.flashcard-complete .completion-celebration {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.completion-celebration i {
+  width: 64px;
+  height: 64px;
+  color: #f59e0b;
+  margin-bottom: 16px;
+}
+
+.completion-celebration h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.completion-celebration p {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.completion-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.completion-stats .stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #14b8a6;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* ================================
+   MATCHING GAME
+   ================================ */
+
+.matching-grid {
+  display: grid;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.matching-card {
+  aspect-ratio: 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.matching-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.matching-card.flipped .matching-card-inner,
+.matching-card.matched .matching-card-inner {
+  transform: rotateY(180deg);
+}
+
+.matching-card-front,
+.matching-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.matching-card-front {
+  background: linear-gradient(135deg, #93e4f9 0%, #a7f3e0 100%);
+  color: #0f766e;
+}
+
+.matching-card-front i {
+  width: 32px;
+  height: 32px;
+}
+
+.matching-card-back {
+  background: #fff;
+  border: 2px solid #14b8a6;
+  color: #0f766e;
+  transform: rotateY(180deg);
+}
+
+.matching-card.matched .matching-card-back {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.matching-complete .stars {
+  font-size: 3rem;
+  color: #f59e0b;
+  margin-bottom: 16px;
+}
+
+/* ================================
+   SEQUENCE GAME
+   ================================ */
+
+.sequence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sequence-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.sequence-item:hover {
+  border-color: #14b8a6;
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.1);
+}
+
+.sequence-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.sequence-item.correct {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.sequence-item.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+.sequence-number {
+  width: 32px;
+  height: 32px;
+  background: #14b8a6;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sequence-content {
+  flex: 1;
+  font-weight: 500;
+  color: #374151;
+}
+
+.sequence-handle {
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+  cursor: grab;
+}
+
+/* ================================
+   GAME EMBED IN LESSONS
+   ================================ */
+
+.minigame-embed {
+  margin: 32px 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.minigame-embed-header {
+  background: linear-gradient(135deg, #93e4f9 0%, #a7f3e0 100%);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.minigame-embed-header i {
+  width: 24px;
+  height: 24px;
+  color: #0f766e;
+}
+
+.minigame-embed-header h4 {
+  margin: 0;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.minigame-embed-content {
+  background: #f9fafb;
+  padding: 24px;
+}
+
+/* ================================
+   GAME LAUNCHER / SELECTOR
+   ================================ */
+
+.minigame-launcher {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.minigame-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.minigame-card:hover {
+  border-color: #14b8a6;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.15);
+}
+
+.minigame-card-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #93e4f9 0%, #a7f3e0 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.minigame-card-icon i {
+  width: 28px;
+  height: 28px;
+  color: #0f766e;
+}
+
+.minigame-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.minigame-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.minigame-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: #14b8a6;
+  font-weight: 500;
+}
+
+/* ================================
+   GAME STATS WIDGET
+   ================================ */
+
+.minigame-stats-widget {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+  border: 2px solid #86efac;
+}
+
+.minigame-stats-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.minigame-stats-header i {
+  width: 24px;
+  height: 24px;
+  color: #22c55e;
+}
+
+.minigame-stats-header h4 {
+  margin: 0;
+  color: #166534;
+  font-weight: 700;
+}
+
+.minigame-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.minigame-stat {
+  text-align: center;
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.minigame-stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #22c55e;
+}
+
+.minigame-stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+  .minigame-container {
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  .dragdrop-workspace {
+    flex-direction: column;
+  }
+  
+  .dragdrop-labels {
+    width: 100%;
+  }
+  
+  .labels-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .draggable-label {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .flashcard {
+    height: 240px;
+  }
+  
+  .matching-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  .minigame-actions {
+    flex-wrap: wrap;
+  }
+  
+  .minigame-actions .btn {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+  
+  .completion-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .minigame-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .matching-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .flashcard {
+    height: 200px;
+  }
+  
+  .flashcard-front h4,
+  .flashcard-back h4 {
+    font-size: 1.1rem;
+  }
+}
