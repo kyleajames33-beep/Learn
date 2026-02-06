@@ -17,6 +17,7 @@
   <!-- Global Styles -->
   <link rel="stylesheet" href="../../assets/css/global.css?v=3">
   <link rel="stylesheet" href="../../assets/css/components.css?v=3">
+  <link rel="stylesheet" href="../../assets/css/streak.css?v=1">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="manifest" href="../../assets/manifest.json">
   
@@ -639,6 +640,7 @@
 
   <!-- Scripts -->
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/streak.js"></script>
   <script>
     // Lesson-specific initialization
     document.addEventListener('DOMContentLoaded', () => {
@@ -653,6 +655,25 @@
       
       // Save last visited
       StorageManager.saveLastVisited(yearLevel, moduleId, lessonId);
+      
+      // Check for streak when marking complete
+      const markCompleteBtn = document.querySelector('.mark-complete-btn');
+      if (markCompleteBtn) {
+        markCompleteBtn.addEventListener('click', function() {
+          if (!this.classList.contains('completed')) {
+            // Small delay to let the completion animation play
+            setTimeout(() => {
+              const result = StreakManager.checkIn();
+              if (result.streakUpdated) {
+                StreakUI.updateStreakDisplay();
+                if (result.milestoneReached) {
+                  StreakUI.showCelebration(result.milestoneReached);
+                }
+              }
+            }, 500);
+          }
+        });
+      }
     });
   </script>
 </body>

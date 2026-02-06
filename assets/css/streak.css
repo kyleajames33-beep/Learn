@@ -1,0 +1,306 @@
+/**
+ * Streak Widget Styles
+ * Phase 02: Gamification Layer
+ */
+
+/* ============================================
+   STREAK WIDGET (Sidebar)
+   ============================================ */
+
+.streak-widget {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 2px solid #fdba74;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.15);
+}
+
+.streak-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #c2410c;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.streak-header svg {
+  width: 20px;
+  height: 20px;
+  color: #ea580c;
+}
+
+.streak-display {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.streak-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ea580c;
+  line-height: 1;
+}
+
+.streak-label {
+  font-size: 18px;
+  color: #9a3412;
+  font-weight: 600;
+}
+
+/* Streak Status */
+.streak-status {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.status-new {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-checked {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-risk {
+  background: #fee2e2;
+  color: #991b1b;
+  animation: pulse-warning 2s infinite;
+}
+
+.status-expired {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+@keyframes pulse-warning {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Milestone Progress */
+.streak-next-milestone {
+  margin-bottom: 16px;
+}
+
+.milestone-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.milestone-bar {
+  height: 8px;
+  background: #fed7aa;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.milestone-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ea580c, #f97316);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.milestone-text {
+  font-size: 12px;
+  color: #c2410c;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mini Calendar */
+.streak-calendar {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  flex: 1;
+}
+
+.calendar-day.active {
+  background: #fed7aa;
+}
+
+.calendar-day.today {
+  background: #fdba74;
+  box-shadow: 0 0 0 2px #ea580c;
+}
+
+.day-name {
+  font-size: 11px;
+  color: #9a3412;
+  font-weight: 600;
+}
+
+.day-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fed7aa;
+}
+
+.calendar-day.active .day-dot,
+.calendar-day.today .day-dot {
+  background: #ea580c;
+}
+
+/* ============================================
+   CELEBRATION MODAL
+   ============================================ */
+
+.streak-celebration-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+
+.celebration-content {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: celebrationPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.celebration-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: flame 1s ease-in-out infinite;
+}
+
+@keyframes flame {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.celebration-content h2 {
+  font-size: 28px;
+  color: #ea580c;
+  margin-bottom: 12px;
+}
+
+.celebration-content p {
+  color: #6b7280;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+@keyframes celebrationPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Confetti effect for celebrations */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #f00;
+  animation: confetti-fall 3s linear forwards;
+  z-index: 1001;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   STREAK BADGE (Top Nav)
+   ============================================ */
+
+.streak-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 2px solid #fdba74;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: #c2410c;
+  font-size: 14px;
+}
+
+.streak-badge svg {
+  width: 16px;
+  height: 16px;
+  color: #ea580c;
+}
+
+/* ============================================
+   MOBILE ADAPTATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .streak-widget {
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  .streak-number {
+    font-size: 36px;
+  }
+  
+  .calendar-day {
+    padding: 6px 2px;
+  }
+  
+  .day-name {
+    font-size: 10px;
+  }
+  
+  .celebration-content {
+    padding: 30px 20px;
+  }
+  
+  .celebration-icon {
+    font-size: 48px;
+  }
+  
+  .celebration-content h2 {
+    font-size: 24px;
+  }
+}
