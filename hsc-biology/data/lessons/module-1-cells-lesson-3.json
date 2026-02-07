@@ -1,0 +1,259 @@
+{
+  "id": "module-1-cells-lesson-3",
+  "title": "Eukaryotic Cell Structure",
+  "module": "module-1-cells",
+  "moduleTitle": "Module 1: Cells",
+  "moduleNumber": 1,
+  "lessonNumber": 3,
+  "description": "Discover the complex internal structure of eukaryotic cells. Learn about organelles, their functions, and how they work together to keep cells alive.",
+  "duration": "50 minutes",
+  "difficulty": "Intermediate",
+  "worksOffline": true,
+  "learningIntentions": [
+    "Identify and describe major eukaryotic organelles",
+    "Explain the function of each organelle",
+    "Compare plant and animal cells"
+  ],
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "What distinguishes one cell from another?",
+    "focus": "Eukaryotic cell structure and organelles"
+  },
+  "successCriteria": [
+    "Label an animal and plant cell correctly",
+    "State the function of 8+ organelles",
+    "Explain three differences between plant and animal cells"
+  ],
+  "engagementHook": {
+    "title": "Cell City Analogy",
+    "content": "Imagine a cell as a city. The nucleus is like city hall (control center), mitochondria are power plants, and the cell membrane is like the city border. Just as a city needs all these parts working together, a cell needs its organelles to function!"
+  },
+  "moduleLessons": [
+    { "id": "module-1-cells-lesson-1", "number": 1, "title": "Introduction to Cells" },
+    { "id": "module-1-cells-lesson-2", "number": 2, "title": "Prokaryotic Cells" },
+    { "id": "module-1-cells-lesson-3", "number": 3, "title": "Eukaryotic Cell Structure" }
+  ],
+  "contentSections": [
+    {
+      "id": "what-are-eukaryotes",
+      "type": "content",
+      "title": "What are Eukaryotes?",
+      "icon": "microscope",
+      "content": "<p><strong>Eukaryotes</strong> are organisms whose cells contain a membrane-bound nucleus and other membrane-bound organelles. The word comes from Greek: 'eu' meaning true, and 'karyon' meaning nut or kernel.</p><p>Eukaryotes include animals, plants, fungi, and protists. They can be unicellular (like yeast or amoeba) or multicellular (like humans or trees).</p>",
+      "items": []
+    },
+    {
+      "id": "nucleus",
+      "type": "definition",
+      "title": "The Nucleus",
+      "icon": "circle-dot",
+      "term": "Nucleus",
+      "definition": "The control center of the cell containing genetic material (DNA) organized into chromosomes. It is surrounded by a double membrane called the nuclear envelope."
+    },
+    {
+      "id": "major-organelles",
+      "type": "grid",
+      "title": "Major Organelles",
+      "icon": "layout-grid",
+      "gridItems": [
+        {
+          "title": "Mitochondria",
+          "icon": "zap",
+          "items": [
+            "Powerhouse of the cell",
+            "Site of cellular respiration",
+            "Produces ATP (energy)",
+            "Has its own DNA"
+          ]
+        },
+        {
+          "title": "Ribosomes",
+          "icon": "loader",
+          "items": [
+            "Protein synthesis",
+            "Found free or on ER",
+            "Made of protein and rRNA",
+            "80S in eukaryotes"
+          ]
+        },
+        {
+          "title": "Endoplasmic Reticulum",
+          "icon": "waypoints",
+          "items": [
+            "Network of membranes",
+            "Rough ER: has ribosomes",
+            "Smooth ER: no ribosomes",
+            "Transport and synthesis"
+          ]
+        },
+        {
+          "title": "Golgi Apparatus",
+          "icon": "package",
+          "items": [
+            "Modifies proteins",
+            "Packages materials",
+            "Forms lysosomes",
+            "Shipping center of cell"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plant-vs-animal",
+      "type": "accordion",
+      "title": "Plant vs Animal Cells",
+      "icon": "git-compare",
+      "open": false,
+      "content": "<p>While plant and animal cells are both eukaryotic, they have important differences:</p>",
+      "items": [
+        "Plant cells have a cell wall; animal cells do not",
+        "Plant cells have chloroplasts for photosynthesis; animals do not",
+        "Plant cells have a large central vacuole; animals have small vacuoles",
+        "Animal cells have centrioles; most plant cells do not",
+        "Plant cells are generally more rectangular; animal cells are more irregular"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "organelle-functions",
+      "type": "matching",
+      "title": "Activity 1: Match Organelle to Function",
+      "description": "Match each organelle with its primary function:",
+      "theme": "teal",
+      "items": [
+        {
+          "term": "Mitochondria",
+          "correctValue": "b",
+          "options": [
+            { "value": "a", "label": "Protein synthesis" },
+            { "value": "b", "label": "Energy production" },
+            { "value": "c", "label": "Photosynthesis" },
+            { "value": "d", "label": "Cell division" }
+          ]
+        },
+        {
+          "term": "Chloroplast",
+          "correctValue": "c",
+          "options": [
+            { "value": "a", "label": "Protein synthesis" },
+            { "value": "b", "label": "Energy production" },
+            { "value": "c", "label": "Photosynthesis" },
+            { "value": "d", "label": "Cell division" }
+          ]
+        },
+        {
+          "term": "Ribosomes",
+          "correctValue": "a",
+          "options": [
+            { "value": "a", "label": "Protein synthesis" },
+            { "value": "b", "label": "Energy production" },
+            { "value": "c", "label": "Photosynthesis" },
+            { "value": "d", "label": "Cell division" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plant-animal-blanks",
+      "type": "fill-blank",
+      "title": "Activity 2: Plant vs Animal",
+      "description": "Fill in the blanks with 'Plant' or 'Animal':",
+      "theme": "purple",
+      "items": [
+        { "label": "Have cell walls", "correctAnswer": "Plant", "placeholder": "Plant/Animal", "maxLength": 10 },
+        { "label": "Have chloroplasts", "correctAnswer": "Plant", "placeholder": "Plant/Animal", "maxLength": 10 },
+        { "label": "Have centrioles", "correctAnswer": "Animal", "placeholder": "Plant/Animal", "maxLength": 10 },
+        { "label": "Large central vacuole", "correctAnswer": "Plant", "placeholder": "Plant/Animal", "maxLength": 10 }
+      ]
+    }
+  ],
+  "copyToBook": {
+    "open": true,
+    "definitions": [
+      "<strong>Eukaryote:</strong> An organism with cells containing a membrane-bound nucleus and organelles",
+      "<strong>Nucleus:</strong> The control center containing DNA, surrounded by a nuclear envelope",
+      "<strong>Mitochondria:</strong> Organelles that produce ATP through cellular respiration",
+      "<strong>Chloroplast:</strong> Organelle in plant cells where photosynthesis occurs"
+    ],
+    "keyPoints": [
+      "Eukaryotic cells have a nucleus and membrane-bound organelles",
+      "Major organelles: nucleus, mitochondria, ribosomes, ER, Golgi, lysosomes, vacuoles",
+      "Plant cells have: cell walls, chloroplasts, large central vacuoles",
+      "Animal cells have: centrioles, lack cell walls and chloroplasts"
+    ]
+  },
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "Which organelle is responsible for protein synthesis?",
+        "options": [
+          "Mitochondria",
+          "Ribosomes",
+          "Nucleus",
+          "Golgi apparatus"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q2",
+        "question": "Which structure is found in plant cells but NOT in animal cells?",
+        "options": [
+          "Nucleus",
+          "Mitochondria",
+          "Chloroplasts",
+          "Ribosomes"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "id": "q3",
+        "question": "What is the function of the Golgi apparatus?",
+        "options": [
+          "Protein synthesis",
+          "Energy production",
+          "Modifying and packaging proteins",
+          "Photosynthesis"
+        ],
+        "correctAnswer": "c"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Describe the structure and function of mitochondria.",
+        "marks": 3
+      },
+      {
+        "id": "sa2",
+        "question": "Explain three differences between plant and animal cells.",
+        "marks": 3
+      }
+    ]
+  },
+  "answerKey": {
+    "multipleChoice": [
+      "B - Ribosomes synthesize proteins",
+      "C - Chloroplasts are only in plant cells",
+      "C - Golgi modifies and packages proteins"
+    ],
+    "shortAnswer": [
+      "Mitochondria are double-membraned organelles with folded inner membrane (cristae). They are the site of cellular respiration and produce ATP for the cell.",
+      "Plant cells have cell walls, chloroplasts, and large central vacuoles. Animal cells have centrioles and lack the plant-specific structures."
+    ]
+  },
+  "navigation": {
+    "previous": "module-1-cells-lesson-2",
+    "previousTitle": "Prokaryotic Cells",
+    "next": null,
+    "nextTitle": null
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-07",
+    "lastModified": "2026-02-07",
+    "version": "1.0.0",
+    "tags": ["eukaryotes", "organelles", "cell-structure", "HSC-biology", "module-1"]
+  }
+}

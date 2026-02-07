@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HSC Biology interactive lesson. Learn with activities, assessments, and progress tracking.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Loading Lesson... | HSC Biology | Science Hub</title>
+  
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../assets/css/global.css?v=3">
+  <link rel="stylesheet" href="../assets/css/components.css?v=3">
+  <link rel="stylesheet" href="../assets/css/streak.css?v=1">
+  <link rel="stylesheet" href="../assets/css/xp.css?v=1">
+  <link rel="stylesheet" href="../assets/css/achievements.css?v=1">
+  <link rel="stylesheet" href="../assets/css/diagrams.css?v=1">
+  <link rel="stylesheet" href="../assets/css/loading-states.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="manifest" href="../assets/manifest.json">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <!-- Lesson Data Schema & Renderer -->
+  <script src="js/lesson-data-schema.js"></script>
+  <script src="js/lesson-renderer.js"></script>
+</head>
+<body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      
+      <a href="../index.html" class="nav-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </a>
+      
+      <div class="nav-search">
+        <input type="search" placeholder="Search lessons..." aria-label="Search lessons">
+      </div>
+      
+      <!-- Spacer for balance on mobile -->
+      <div style="width: 40px;"></div>
+    </div>
+    
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <i data-lucide="chevron-right"></i>
+        <a href="index.html">HSC Biology</a>
+        <i data-lucide="chevron-right"></i>
+        <span>Loading...</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Layout -->
+  <div class="lesson-layout">
+    <!-- Sidebar -->
+    <aside class="lesson-sidebar" id="lesson-sidebar" aria-label="Lesson navigation">
+      <div class="sidebar-header">
+        <h3>Loading...</h3>
+        <span>HSC Biology</span>
+      </div>
+      
+      <div class="sidebar-progress">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <span class="progress-text">Loading...</span>
+      </div>
+      
+      <nav class="lesson-list" aria-label="Lessons in this module">
+        <!-- Populated by renderer -->
+        <div style="padding: 24px; text-align: center; color: var(--text-secondary);">
+          <div class="loading-spinner" style="width: 24px; height: 24px; margin: 0 auto 12px;"></div>
+          <span style="font-size: 14px;">Loading lessons...</span>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Loading State -->
+      <div class="loading-state" style="padding: 48px; text-align: center;">
+        <div class="loading-spinner" style="width: 48px; height: 48px; margin: 0 auto 24px;"></div>
+        <h2 style="margin-bottom: 8px;">Loading Lesson</h2>
+        <p style="color: var(--text-secondary);">Please wait while we fetch your lesson...</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </div>
+      <p class="footer-tagline">Making science education accessible, engaging, and effective.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="index.html">HSC Biology</a>
+        <a href="../year-7/index.html">Year 7</a>
+        <a href="../year-8/index.html">Year 8</a>
+      </div>
+      <p class="footer-copyright">© 2026 Science Learning Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/streak.js"></script>
+  <script src="../assets/js/xp.js"></script>
+  <script src="../assets/js/achievements.js"></script>
+  
+  <!-- Initialize Lucide Icons -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+{
+  "id": "module-1-cells-lesson-2",
+  "title": "Prokaryotic Cells",
+  "module": "module-1-cells",
+  "moduleTitle": "Module 1: Cells",
+  "moduleNumber": 1,
+  "lessonNumber": 2,
+  "description": "Explore the simplest forms of life. Learn about prokaryotic cell structure, the features of bacteria and archaea, and how these cells function without a nucleus.",
+  "duration": "40 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  "learningIntentions": [
+    "Identify the key features of prokaryotic cells",
+    "Compare prokaryotic and eukaryotic cells",
+    "Explain how prokaryotes carry out life processes"
+  ],
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "What distinguishes one cell from another?",
+    "focus": "Prokaryotic cell structure and function"
+  },
+  "successCriteria": [
+    "Draw and label a prokaryotic cell",
+    "List features found only in prokaryotes",
+    "Explain binary fission"
+  ],
+  "engagementHook": {
+    "title": "Did You Know?",
+    "content": "There are more bacterial cells in your body than human cells! While human cells are larger, bacteria outnumber them by about 10 to 1. Most of these bacteria live in your gut and help with digestion."
+  },
+  "moduleLessons": [
+    { "id": "module-1-cells-lesson-1", "number": 1, "title": "Introduction to Cells" },
+    { "id": "module-1-cells-lesson-2", "number": 2, "title": "Prokaryotic Cells" },
+    { "id": "module-1-cells-lesson-3", "number": 3, "title": "Eukaryotic Cell Structure" }
+  ],
+  "contentSections": [
+    {
+      "id": "what-are-prokaryotes",
+      "type": "content",
+      "title": "What are Prokaryotes?",
+      "icon": "microscope",
+      "content": "<p><strong>Prokaryotes</strong> are single-celled organisms that lack a membrane-bound nucleus and other membrane-bound organelles. The word comes from Greek: 'pro' meaning before, and 'karyon' meaning nut or kernel (referring to the nucleus).</p><p>There are two domains of prokaryotes: <strong>Bacteria</strong> and <strong>Archaea</strong>. While they look similar under a microscope, they have significant genetic and biochemical differences.</p>",
+      "items": []
+    },
+    {
+      "id": "prokaryote-features",
+      "type": "definition",
+      "title": "Prokaryotic Cell Features",
+      "icon": "layers",
+      "term": "Prokaryotic Cell",
+      "definition": "A cell lacking a membrane-bound nucleus and membrane-bound organelles. DNA is located in a region called the nucleoid."
+    },
+    {
+      "id": "cell-structures",
+      "type": "grid",
+      "title": "Key Structures in Prokaryotic Cells",
+      "icon": "layers",
+      "gridItems": [
+        {
+          "title": "Cell Wall",
+          "icon": "shield",
+          "items": [
+            "Provides structural support",
+            "Made of peptidoglycan in bacteria",
+            "Prevents cell bursting"
+          ]
+        },
+        {
+          "title": "Cell Membrane",
+          "icon": "circle",
+          "items": [
+            "Phospholipid bilayer",
+            "Controls what enters/exits",
+            "Site of cellular respiration"
+          ]
+        },
+        {
+          "title": "Nucleoid",
+          "icon": "dna",
+          "items": [
+            "Contains circular DNA",
+            "Not membrane-bound",
+            "Single chromosome"
+          ]
+        },
+        {
+          "title": "Ribosomes",
+          "icon": "loader",
+          "items": [
+            "Smaller than eukaryotic (70S)",
+            "Protein synthesis",
+            "Free in cytoplasm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "binary-fission",
+      "type": "content",
+      "title": "Binary Fission",
+      "icon": "split",
+      "content": "<p>Prokaryotes reproduce asexually through <strong>binary fission</strong>. This process is rapid and can occur every 20 minutes under ideal conditions.</p><p><strong>The process:</strong></p>",
+      "items": [
+        "The circular DNA replicates",
+        "The cell elongates",
+        "The two DNA molecules move to opposite poles",
+        "The cell divides in the middle (cytokinesis)",
+        "Two identical daughter cells are formed"
+      ]
+    },
+    {
+      "id": "prokaryote-vs-eukaryote",
+      "type": "accordion",
+      "title": "Prokaryotes vs Eukaryotes",
+      "icon": "git-compare",
+      "open": false,
+      "content": "<p>Here are the key differences between prokaryotic and eukaryotic cells:</p>",
+      "items": [
+        "Prokaryotes: No nucleus; Eukaryotes: Have nucleus",
+        "Prokaryotes: No membrane-bound organelles; Eukaryotes: Have organelles",
+        "Prokaryotes: Circular DNA; Eukaryotes: Linear DNA",
+        "Prokaryotes: Smaller ribosomes (70S); Eukaryotes: Larger ribosomes (80S)",
+        "Prokaryotes: Always unicellular; Eukaryotes: Can be unicellular or multicellular"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "structure-matching",
+      "type": "matching",
+      "title": "Activity 1: Structure & Function Matching",
+      "description": "Match each structure with its function:",
+      "theme": "teal",
+      "items": [
+        {
+          "term": "Cell Wall",
+          "correctValue": "b",
+          "options": [
+            { "value": "a", "label": "Protein synthesis" },
+            { "value": "b", "label": "Structural support" },
+            { "value": "c", "label": "Contains DNA" },
+            { "value": "d", "label": "Controls transport" }
+          ]
+        },
+        {
+          "term": "Nucleoid",
+          "correctValue": "c",
+          "options": [
+            { "value": "a", "label": "Protein synthesis" },
+            { "value": "b", "label": "Structural support" },
+            { "value": "c", "label": "Contains DNA" },
+            { "value": "d", "label": "Controls transport" }
+          ]
+        },
+        {
+          "term": "Ribosomes",
+          "correctValue": "a",
+          "options": [
+            { "value": "a", "label": "Protein synthesis" },
+            { "value": "b", "label": "Structural support" },
+            { "value": "c", "label": "Contains DNA" },
+            { "value": "d", "label": "Controls transport" }
+          ]
+        }
+      ]
+    }
+  ],
+  "copyToBook": {
+    "open": true,
+    "definitions": [
+      "<strong>Prokaryote:</strong> A cell without a membrane-bound nucleus or organelles",
+      "<strong>Nucleoid:</strong> The region in a prokaryotic cell where the circular DNA is located",
+      "<strong>Binary Fission:</strong> Asexual reproduction in prokaryotes where one cell divides into two identical cells"
+    ],
+    "keyPoints": [
+      "Prokaryotes include bacteria and archaea",
+      "Prokaryotic cells have: cell wall, cell membrane, cytoplasm, ribosomes, nucleoid with DNA",
+      "Prokaryotes reproduce by binary fission every 20 minutes (under ideal conditions)",
+      "No membrane-bound organelles in prokaryotes"
+    ]
+  },
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "Which of the following is NOT found in prokaryotic cells?",
+        "options": [
+          "Ribosomes",
+          "Nucleus",
+          "Cell membrane",
+          "DNA"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q2",
+        "question": "Where is the DNA located in a prokaryotic cell?",
+        "options": [
+          "In the nucleus",
+          "In the nucleoid region",
+          "In mitochondria",
+          "Floating freely in cytoplasm"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q3",
+        "question": "What is the shape of prokaryotic DNA?",
+        "options": [
+          "Linear with ends",
+          "Circular",
+          "Helical only",
+          "Fragmented into pieces"
+        ],
+        "correctAnswer": "b"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "List three differences between prokaryotic and eukaryotic cells.",
+        "marks": 3
+      },
+      {
+        "id": "sa2",
+        "question": "Explain the process of binary fission.",
+        "marks": 4
+      }
+    ]
+  },
+  "answerKey": {
+    "multipleChoice": [
+      "B - Prokaryotes lack a membrane-bound nucleus",
+      "B - DNA is in the nucleoid region, not a nucleus",
+      "B - Prokaryotic DNA is circular"
+    ],
+    "shortAnswer": [
+      "Any three of: Prokaryotes have no nucleus, no membrane-bound organelles, circular DNA, smaller ribosomes, always unicellular",
+      "DNA replicates → cell elongates → DNA moves to opposite poles → cytokinesis occurs → two identical daughter cells form"
+    ]
+  },
+  "navigation": {
+    "previous": "module-1-cells-lesson-1",
+    "previousTitle": "Introduction to Cells",
+    "next": "module-1-cells-lesson-3",
+    "nextTitle": "Eukaryotic Cell Structure"
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-07",
+    "lastModified": "2026-02-07",
+    "version": "1.0.0",
+    "tags": ["prokaryotes", "bacteria", "cell-structure", "HSC-biology", "module-1"]
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "id": "module-1-cells-lesson-1",
+  "title": "Introduction to Cells",
+  "module": "module-1-cells",
+  "moduleTitle": "Module 1: Cells",
+  "moduleNumber": 1,
+  "lessonNumber": 1,
+  "description": "Discover the fundamental unit of life. Learn what cells are, why they're so small, and how understanding cell biology forms the foundation for all life sciences.",
+  "duration": "45 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  "learningIntentions": [
+    "Define what a cell is and explain cell theory",
+    "Understand why cells are small (SA:V ratio)",
+    "Distinguish between unicellular and multicellular organisms"
+  ],
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "What distinguishes one cell from another?",
+    "focus": "Cell structure and function"
+  },
+  "successCriteria": [
+    "State the three principles of cell theory",
+    "Calculate surface area to volume ratios",
+    "Classify organisms as unicellular or multicellular"
+  ],
+  "engagementHook": {
+    "title": "Think About This...",
+    "content": "Your body contains approximately 37 trillion cells - that's more than 4,000 times the number of people on Earth! Yet every single one started from just two cells. How do cells know what to become and what to do?"
+  },
+  "moduleLessons": [
+    { "id": "module-1-cells-lesson-1", "number": 1, "title": "Introduction to Cells" },
+    { "id": "module-1-cells-lesson-2", "number": 2, "title": "Prokaryotic Cells" },
+    { "id": "module-1-cells-lesson-3", "number": 3, "title": "Eukaryotic Cell Structure" }
+  ],
+  "contentSections": [
+    {
+      "id": "what-is-a-cell",
+      "type": "content",
+      "title": "What is a Cell?",
+      "icon": "microscope",
+      "content": "<p>A <strong>cell</strong> is the smallest unit of life that can carry out all the processes necessary for life. Every living thing is made of cells - from the simplest bacteria to complex multicellular organisms like humans and whales.</p><p>Cells were first discovered in 1665 by Robert Hooke when he looked at a thin slice of cork through a microscope. He saw tiny compartments that reminded him of monastery cells, hence the name 'cells.'</p>",
+      "items": []
+    },
+    {
+      "id": "cell-definition",
+      "type": "definition",
+      "title": "Cell Definition",
+      "icon": "book-open",
+      "term": "Cell",
+      "definition": "The basic structural, functional, and biological unit of all known living organisms. A cell is the smallest unit of life that can replicate independently."
+    },
+    {
+      "id": "cell-theory",
+      "type": "content",
+      "title": "Cell Theory",
+      "icon": "book-open",
+      "content": "<p>Cell theory is one of the fundamental principles of biology. It consists of three main principles:</p>",
+      "items": [
+        "All living organisms are composed of one or more cells",
+        "The cell is the basic unit of structure and organisation in organisms",
+        "All cells come from pre-existing cells (cell division)"
+      ]
+    },
+    {
+      "id": "what-cells-have",
+      "type": "grid",
+      "title": "What Do All Cells Have?",
+      "icon": "layers",
+      "gridItems": [
+        {
+          "title": "All Cells Have:",
+          "icon": "check",
+          "items": [
+            "Cell membrane (plasma membrane)",
+            "Cytoplasm",
+            "DNA (genetic material)",
+            "Ribosomes (for protein synthesis)"
+          ]
+        },
+        {
+          "title": "All Cells Can:",
+          "icon": "activity",
+          "items": [
+            "Obtain and use energy",
+            "Respond to their environment",
+            "Grow and develop",
+            "Reproduce (via cell division)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-dive",
+      "type": "accordion",
+      "title": "Deep Dive: The Math Behind Cell Size",
+      "icon": "book-open",
+      "open": false,
+      "content": "<p>As a cell grows larger, its volume increases faster than its surface area. This is because:</p>",
+      "items": [
+        "Surface area increases by the square of the radius (4πr²)",
+        "Volume increases by the cube of the radius (4/3 πr³)",
+        "This means larger cells have proportionally less surface area relative to their volume, making it harder to transport materials across the membrane efficiently."
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked-example",
+      "title": "Worked Example: Calculating SA:V Ratio",
+      "icon": "calculator",
+      "content": "<p style='margin-bottom: 16px;'><strong>Problem:</strong> Calculate the surface area to volume ratio of a cube-shaped cell with sides of 2μm.</p><p style='margin-bottom: 8px;'><strong>Solution:</strong></p><div class='formula-box' style='margin-bottom: 16px;'><code>Surface Area = 6 × side² = 6 × (2)² = 6 × 4 = <strong>24 μm²</strong></code><br><br><code>Volume = side³ = (2)³ = <strong>8 μm³</strong></code><br><br><code>SA:V Ratio = 24:8 = <strong>3:1</strong></code></div><p style='background: white; padding: 12px; border-radius: 8px; font-weight: 600;'>The SA:V ratio is 3:1, meaning the surface area is 3 times the volume.</p>"
+    }
+  ],
+  "activities": [
+    {
+      "id": "cell-size-matching",
+      "type": "matching",
+      "title": "Activity 1: Cell Size Matching",
+      "description": "Match each cell type with its typical size:",
+      "theme": "teal",
+      "items": [
+        {
+          "term": "Red blood cell",
+          "correctValue": "b",
+          "options": [
+            { "value": "a", "label": "1-5 μm" },
+            { "value": "b", "label": "6-8 μm" },
+            { "value": "c", "label": "10-100 μm" },
+            { "value": "d", "label": "100-1000 μm" }
+          ]
+        },
+        {
+          "term": "Human egg cell (ovum)",
+          "correctValue": "c",
+          "options": [
+            { "value": "a", "label": "1-5 μm" },
+            { "value": "b", "label": "6-8 μm" },
+            { "value": "c", "label": "10-100 μm" },
+            { "value": "d", "label": "100-1000 μm" }
+          ]
+        },
+        {
+          "term": "Bacteria",
+          "correctValue": "a",
+          "options": [
+            { "value": "a", "label": "1-5 μm" },
+            { "value": "b", "label": "6-8 μm" },
+            { "value": "c", "label": "10-100 μm" },
+            { "value": "d", "label": "100-1000 μm" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unicellular-multicellular",
+      "type": "fill-blank",
+      "title": "Activity 2: Unicellular vs Multicellular",
+      "description": "Classify each organism as unicellular (U) or multicellular (M):",
+      "theme": "purple",
+      "items": [
+        { "label": "Bacterium", "correctAnswer": "U", "placeholder": "U/M", "maxLength": 1 },
+        { "label": "Human", "correctAnswer": "M", "placeholder": "U/M", "maxLength": 1 },
+        { "label": "Yeast", "correctAnswer": "U", "placeholder": "U/M", "maxLength": 1 },
+        { "label": "Oak tree", "correctAnswer": "M", "placeholder": "U/M", "maxLength": 1 }
+      ]
+    }
+  ],
+  "copyToBook": {
+    "open": true,
+    "definitions": [
+      "<strong>Cell:</strong> The basic unit of life; the smallest unit that can carry out all life processes",
+      "<strong>Cell Theory:</strong> States that all living things are made of cells, cells are the basic unit of structure, and cells come from pre-existing cells",
+      "<strong>SA:V Ratio:</strong> The ratio of surface area to volume - as cells get larger, this ratio decreases, limiting cell size"
+    ],
+    "keyPoints": [
+      "Cells are limited in size by their surface area to volume ratio",
+      "Prokaryotic cells lack a nucleus; eukaryotic cells have a nucleus",
+      "All cells have a cell membrane, cytoplasm, DNA, and ribosomes"
+    ]
+  },
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "Which of the following is NOT one of the principles of cell theory?",
+        "options": [
+          "All living organisms are composed of cells",
+          "Cells can spontaneously generate from non-living matter",
+          "The cell is the basic unit of structure",
+          "All cells come from pre-existing cells"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q2",
+        "question": "Why are cells generally small?",
+        "options": [
+          "Large cells cannot fit inside organisms",
+          "Small cells are easier to see under microscopes",
+          "To maintain a high surface area to volume ratio for efficient transport",
+          "Small cells require less energy"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "id": "q3",
+        "question": "Which structure is found in ALL cells?",
+        "options": [
+          "Cell membrane",
+          "Nucleus",
+          "Mitochondria",
+          "Chloroplasts"
+        ],
+        "correctAnswer": "a"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Calculate the surface area to volume ratio of a cube with sides of 4μm. Show your working.",
+        "marks": 2
+      },
+      {
+        "id": "sa2",
+        "question": "Explain why the surface area to volume ratio limits cell size.",
+        "marks": 3
+      }
+    ]
+  },
+  "answerKey": {
+    "multipleChoice": [
+      "B - Spontaneous generation was disproven",
+      "C - High SA:V ratio allows efficient material transport",
+      "A - All cells have a cell membrane"
+    ],
+    "shortAnswer": [
+      "SA = 6 × 4² = 96 μm², Volume = 4³ = 64 μm³, Ratio = 96:64 = 1.5:1",
+      "As cells increase in size, volume increases faster than surface area (cube vs square). This reduces the SA:V ratio, making it harder to transport sufficient nutrients in and waste out across the membrane."
+    ]
+  },
+  "navigation": {
+    "previous": null,
+    "previousTitle": null,
+    "next": "module-1-cells-lesson-2",
+    "nextTitle": "Prokaryotic Cells"
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-07",
+    "lastModified": "2026-02-07",
+    "version": "1.0.0",
+    "tags": ["cells", "cell-theory", "HSC-biology", "module-1"]
+  }
+}

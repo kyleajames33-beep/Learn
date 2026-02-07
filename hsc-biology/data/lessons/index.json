@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-07",
+  "description": "HSC Biology Lesson Data Index",
+  "lessons": [
+    {
+      "id": "module-1-cells-lesson-1",
+      "title": "Introduction to Cells",
+      "module": "module-1-cells",
+      "moduleTitle": "Module 1: Cells",
+      "moduleNumber": 1,
+      "lessonNumber": 1,
+      "duration": "45 minutes",
+      "difficulty": "Foundation Level",
+      "file": "module-1-cells-lesson-1.json"
+    },
+    {
+      "id": "module-1-cells-lesson-2",
+      "title": "Prokaryotic Cells",
+      "module": "module-1-cells",
+      "moduleTitle": "Module 1: Cells",
+      "moduleNumber": 1,
+      "lessonNumber": 2,
+      "duration": "40 minutes",
+      "difficulty": "Foundation Level",
+      "file": "module-1-cells-lesson-2.json"
+    },
+    {
+      "id": "module-1-cells-lesson-3",
+      "title": "Eukaryotic Cell Structure",
+      "module": "module-1-cells",
+      "moduleTitle": "Module 1: Cells",
+      "moduleNumber": 1,
+      "lessonNumber": 3,
+      "duration": "50 minutes",
+      "difficulty": "Intermediate",
+      "file": "module-1-cells-lesson-3.json"
+    },
+    {
+      "id": "module-5-heredity-lesson-1",
+      "title": "Introduction to Heredity",
+      "module": "module-5-heredity",
+      "moduleTitle": "Module 5: Heredity",
+      "moduleNumber": 5,
+      "lessonNumber": 1,
+      "duration": "45 minutes",
+      "difficulty": "Foundation Level",
+      "file": "module-5-heredity-lesson-1.json"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1-cells",
+      "number": 1,
+      "title": "Cells as the Basis of Life",
+      "shortTitle": "Cells",
+      "description": "Cell structure, function, and organization",
+      "totalLessons": 3,
+      "availableLessons": 3
+    },
+    {
+      "id": "module-5-heredity",
+      "number": 5,
+      "title": "Heredity",
+      "shortTitle": "Heredity",
+      "description": "Inheritance patterns and genetic variation",
+      "totalLessons": 30,
+      "availableLessons": 1
+    }
+  ],
+  "schema": {
+    "version": "1.0.0",
+    "validator": "js/lesson-data-schema.js"
+  }
+}

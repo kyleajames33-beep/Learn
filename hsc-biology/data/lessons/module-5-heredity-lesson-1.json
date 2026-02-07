@@ -1,0 +1,285 @@
+{
+  "id": "module-5-heredity-lesson-1",
+  "title": "Introduction to Heredity",
+  "module": "module-5-heredity",
+  "moduleTitle": "Module 5: Heredity",
+  "moduleNumber": 5,
+  "lessonNumber": 1,
+  "description": "Explore the fundamental concepts of heredity and inheritance. Learn about the historical development of genetics, key terminology, and the importance of heredity in biology.",
+  "duration": "45 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  "learningIntentions": [
+    "Understand what heredity means",
+    "Recognize key historical contributions to genetics",
+    "Define essential genetics terminology",
+    "Appreciate the importance of heredity in biology"
+  ],
+  "syllabusLinks": {
+    "module": "Module 5: Heredity",
+    "inquiryQuestion": "How can the genetic makeup of a population change?",
+    "focus": "Introduction to genetics and inheritance patterns"
+  },
+  "successCriteria": [
+    "Define heredity and genetics",
+    "Explain the significance of Mendel's work",
+    "Use genetics terminology correctly"
+  ],
+  "engagementHook": {
+    "title": "Did You Know?",
+    "content": "You share about 50% of your DNA with each parent, but you also share 50% with your siblings! This is why siblings can look so different - it's all about which genes you inherit from each parent."
+  },
+  "moduleLessons": [
+    { "id": "module-5-heredity-lesson-1", "number": 1, "title": "Introduction to Heredity" },
+    { "id": "module-5-heredity-lesson-2", "number": 2, "title": "DNA Structure & Discovery" },
+    { "id": "module-5-heredity-lesson-3", "number": 3, "title": "DNA Replication" }
+  ],
+  "contentSections": [
+    {
+      "id": "what-is-heredity",
+      "type": "content",
+      "title": "What is Heredity?",
+      "icon": "dna",
+      "content": "<p><strong>Heredity</strong> is the passing of traits from parents to offspring through genetic information. It's the reason why you might have your mother's eyes or your father's height. This fundamental biological process occurs in all living organisms and is essential for the continuation of species.</p>",
+      "items": []
+    },
+    {
+      "id": "genetics-definition",
+      "type": "definition",
+      "title": "Key Definition",
+      "icon": "book-open",
+      "term": "Genetics",
+      "definition": "The scientific study of heredity and variation in living organisms. It examines how traits are passed down through generations and how genetic information is organized, expressed, and regulated."
+    },
+    {
+      "id": "historical-context",
+      "type": "content",
+      "title": "Historical Context",
+      "icon": "history",
+      "content": "<p>The modern understanding of heredity began with Gregor Mendel's experiments on pea plants in the 1860s. Though his work was initially overlooked, it laid the foundation for our current understanding of genetics.</p><p>Key milestones in genetics:</p>",
+      "items": [
+        "1866: Mendel publishes his laws of inheritance",
+        "1953: Watson and Crick discover DNA structure",
+        "1970s: Recombinant DNA technology developed",
+        "2003: Human Genome Project completed"
+      ]
+    },
+    {
+      "id": "essential-terminology",
+      "type": "grid",
+      "title": "Essential Terminology",
+      "icon": "list",
+      "gridItems": [
+        {
+          "title": "Gene",
+          "icon": "dna",
+          "items": [
+            "A unit of heredity",
+            "Made of DNA",
+            "Contains protein instructions",
+            "Transferred parent to offspring"
+          ]
+        },
+        {
+          "title": "Allele",
+          "icon": "split",
+          "items": [
+            "Different versions of a gene",
+            "Example: eye color variants",
+            "Can be dominant or recessive",
+            "Two per gene (one from each parent)"
+          ]
+        },
+        {
+          "title": "Phenotype",
+          "icon": "eye",
+          "items": [
+            "Observable characteristics",
+            "Physical appearance",
+            "Result of genotype + environment",
+            "Example: brown eyes, tall height"
+          ]
+        },
+        {
+          "title": "Genotype",
+          "icon": "file-code",
+          "items": [
+            "Genetic makeup of organism",
+            "Specific alleles possessed",
+            "Not always visible",
+            "Example: Bb, AA, homozygous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "importance",
+      "type": "accordion",
+      "title": "Why is Heredity Important?",
+      "icon": "help-circle",
+      "open": false,
+      "content": "<p>Understanding heredity is crucial for many reasons:</p>",
+      "items": [
+        "Medical: Diagnosing inherited disorders, predicting disease risk, personalized medicine",
+        "Agriculture: Selective breeding, genetic modification, improving crop yields",
+        "Forensics: DNA fingerprinting for criminal investigations",
+        "Evolution: Understanding how species change over time",
+        "Conservation: Protecting genetic diversity in endangered species"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "terminology-matching",
+      "type": "matching",
+      "title": "Activity 1: Match the Term",
+      "description": "Match each genetics term with its correct definition:",
+      "theme": "teal",
+      "items": [
+        {
+          "term": "Gene",
+          "correctValue": "b",
+          "options": [
+            { "value": "a", "label": "Observable characteristics" },
+            { "value": "b", "label": "Unit of heredity made of DNA" },
+            { "value": "c", "label": "Different versions of a gene" },
+            { "value": "d", "label": "Genetic makeup" }
+          ]
+        },
+        {
+          "term": "Allele",
+          "correctValue": "c",
+          "options": [
+            { "value": "a", "label": "Observable characteristics" },
+            { "value": "b", "label": "Unit of heredity made of DNA" },
+            { "value": "c", "label": "Different versions of a gene" },
+            { "value": "d", "label": "Genetic makeup" }
+          ]
+        },
+        {
+          "term": "Phenotype",
+          "correctValue": "a",
+          "options": [
+            { "value": "a", "label": "Observable characteristics" },
+            { "value": "b", "label": "Unit of heredity made of DNA" },
+            { "value": "c", "label": "Different versions of a gene" },
+            { "value": "d", "label": "Genetic makeup" }
+          ]
+        },
+        {
+          "term": "Genotype",
+          "correctValue": "d",
+          "options": [
+            { "value": "a", "label": "Observable characteristics" },
+            { "value": "b", "label": "Unit of heredity made of DNA" },
+            { "value": "c", "label": "Different versions of a gene" },
+            { "value": "d", "label": "Genetic makeup" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mendel-blanks",
+      "type": "fill-blank",
+      "title": "Activity 2: Mendel's Legacy",
+      "description": "Complete the sentences about Gregor Mendel:",
+      "theme": "purple",
+      "items": [
+        { "label": "Mendel experimented with ___ plants", "correctAnswer": "pea", "placeholder": "plant type", "maxLength": 10 },
+        { "label": "Mendel was a ___ by profession", "correctAnswer": "monk", "placeholder": "occupation", "maxLength": 10 },
+        { "label": "Mendel's work was published in ___", "correctAnswer": "1866", "placeholder": "year", "maxLength": 5 }
+      ]
+    }
+  ],
+  "copyToBook": {
+    "open": true,
+    "definitions": [
+      "<strong>Heredity:</strong> The passing of traits from parents to offspring through genetic information",
+      "<strong>Genetics:</strong> The scientific study of heredity and variation in living organisms",
+      "<strong>Gene:</strong> A unit of heredity made of DNA that contains instructions for building proteins",
+      "<strong>Allele:</strong> Different versions of the same gene (e.g., blue eye allele vs brown eye allele)",
+      "<strong>Phenotype:</strong> The observable characteristics of an organism",
+      "<strong>Genotype:</strong> The genetic makeup of an organism - the specific alleles it possesses"
+    ],
+    "keyPoints": [
+      "Heredity is essential for the continuation of species",
+      "Gregor Mendel established the principles of inheritance in 1866",
+      "Genes are made of DNA and passed from parents to offspring",
+      "Phenotype = observable traits; Genotype = genetic makeup",
+      "Understanding heredity has applications in medicine and agriculture"
+    ]
+  },
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "What is genetics?",
+        "options": [
+          "The study of geological formations",
+          "The scientific study of heredity and variation",
+          "The study of ancient civilizations",
+          "The study of chemical reactions"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q2",
+        "question": "Which scientist is known as the 'father of genetics'?",
+        "options": [
+          "Charles Darwin",
+          "Gregor Mendel",
+          "James Watson",
+          "Francis Crick"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q3",
+        "question": "What is the difference between genotype and phenotype?",
+        "options": [
+          "They are the same thing",
+          "Genotype is observable; phenotype is genetic",
+          "Genotype is genetic makeup; phenotype is observable characteristics",
+          "Genotype refers to plants; phenotype refers to animals"
+        ],
+        "correctAnswer": "c"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Explain why understanding heredity is important in modern medicine.",
+        "marks": 3
+      },
+      {
+        "id": "sa2",
+        "question": "Define the terms: gene, allele, and DNA. Explain how they are related.",
+        "marks": 4
+      }
+    ]
+  },
+  "answerKey": {
+    "multipleChoice": [
+      "B - Genetics is the study of heredity and variation",
+      "B - Gregor Mendel is known as the father of genetics",
+      "C - Genotype is genetic makeup; phenotype is what we observe"
+    ],
+    "shortAnswer": [
+      "Understanding heredity helps diagnose inherited disorders, predict disease risk, develop personalized medicine, and identify genetic predispositions to certain conditions.",
+      "DNA is the molecule that carries genetic information. A gene is a segment of DNA that codes for a specific trait. An allele is a variant form of a gene. DNA contains genes; genes have different alleles."
+    ]
+  },
+  "navigation": {
+    "previous": null,
+    "previousTitle": null,
+    "next": "module-5-heredity-lesson-2",
+    "nextTitle": "DNA Structure & Discovery"
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-07",
+    "lastModified": "2026-02-07",
+    "version": "1.0.0",
+    "tags": ["heredity", "genetics", "Mendel", "HSC-biology", "module-5"]
+  }
+}
