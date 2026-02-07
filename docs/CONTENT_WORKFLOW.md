@@ -1,9 +1,26 @@
 # Content Creation & Review Workflow
 
-## Phase 0.4 Status: CORE COMPLETE (Hybrid Approach)
+## Phase 0.4 Status: CORE COMPLETE (Manual Rebuild)
 
-**Completed:** Migration pipeline and 6 lessons (4 simplified + 2 full fidelity)  
+⚠️ **Important:** Automated migration tool failed. Lessons 4-5 manually recreated.
+
+**Completed:** 
+- Lessons 1-3: Created in Phase 0.2 (simplified)
+- Lessons 4-5: Manually recreated with full content
+- Lesson M5L1: Heredity (created in Builder)
+
 **Pending:** Lessons 6-8 creation (to be done in Phase 1 by Kyle)
+
+---
+
+## Migration Tool Status
+
+⚠️ **DEPRECATED:** The automated migration tool (`migration-tool.js`) did not work correctly:
+- Generated corrupted JSON with HTML embedded
+- Stripped content incorrectly
+- Failed to extract activities and assessment
+
+**New Process:** Manual creation in Lesson Builder for all new lessons.
 
 ---
 
@@ -14,8 +31,8 @@
 | M1L1: Introduction to Cells | ✅ Ready | Simplified (70%) | Phase 0.2 - Core content only |
 | M1L2: Prokaryotic Cells | ✅ Ready | Simplified (70%) | Phase 0.2 - Core content only |
 | M1L3: Eukaryotic Cells | ✅ Ready | Simplified (70%) | Phase 0.2 - Core content only |
-| M1L4: Cell Membrane | ✅ Ready | Full | Migrated from HTML |
-| M1L5: Passive Transport | ✅ Ready | Full | Migrated from HTML |
+| M1L4: Cell Membrane | ✅ Ready | Full | Manually recreated |
+| M1L5: Passive Transport | ✅ Ready | Full | Manually recreated |
 | M5L1: Heredity | ✅ Ready | Full | Created in Builder |
 | M1L6: Active Transport | ⏳ Phase 1 | - | Kyle creates NEW |
 | M1L7: Osmosis | ⏳ Phase 1 | - | Kyle creates NEW |
