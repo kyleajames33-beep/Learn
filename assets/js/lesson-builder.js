@@ -67,9 +67,26 @@ const LessonBuilder = {
   /**
    * Initialize the builder
    */
-  init() {
+  async init() {
     this.bindEvents();
-    this.loadFromLocalStorage();
+    
+    // Check for URL parameter ?edit=lesson-id
+    const urlParams = new URLSearchParams(window.location.search);
+    const editId = urlParams.get('edit');
+    
+    if (editId) {
+      // Try to load from data folder
+      const loaded = await this.loadLessonFromFile(editId);
+      if (loaded) {
+        console.log(`Loaded lesson: ${editId}`);
+      } else {
+        // Fall back to localStorage if file not found
+        this.loadFromLocalStorage();
+      }
+    } else {
+      this.loadFromLocalStorage();
+    }
+    
     this.updateUI();
     this.startAutoSave();
     
@@ -77,6 +94,33 @@ const LessonBuilder = {
     this.renderContentSections();
     this.renderActivities();
     this.renderAssessment();
+    this.initRichTextEditors();
+  },
+
+  /**
+   * Load lesson from JSON file
+   * @param {string} lessonId - The lesson ID to load
+   * @returns {Promise<boolean>} - Success status
+   */
+  async loadLessonFromFile(lessonId) {
+    try {
+      const response = await fetch(`hsc-biology/data/lessons/${lessonId}.json`);
+      if (!response.ok) {
+        console.warn(`Lesson file not found: ${lessonId}`);
+        return false;
+      }
+      
+      const lesson = await response.json();
+      this.state.lesson = { ...this.state.lesson, ...lesson };
+      
+      // Update last modified
+      this.state.lesson.meta.lastModified = new Date().toISOString().split('T')[0];
+      
+      return true;
+    } catch (error) {
+      console.error('Error loading lesson:', error);
+      return false;
+    }
   },
 
   /**
@@ -790,6 +834,12 @@ const LessonBuilder = {
    */
   markUnsaved() {
     this.state.unsavedChanges = true;
+    
+    // Show unsaved indicator
+    const indicator = document.getElementById('unsavedIndicator');
+    if (indicator) {
+      indicator.style.display = 'inline-flex';
+    }
   },
 
   /**
@@ -799,6 +849,13 @@ const LessonBuilder = {
     try {
       localStorage.setItem('lesson-builder-draft', JSON.stringify(this.state.lesson));
       this.state.unsavedChanges = false;
+      
+      // Hide unsaved indicator
+      const indicator = document.getElementById('unsavedIndicator');
+      if (indicator) {
+        indicator.style.display = 'none';
+      }
+      
       this.showAutosaveIndicator();
     } catch (e) {
       console.error('Failed to save to localStorage:', e);
@@ -988,6 +1045,118 @@ const LessonBuilder = {
         if (typeof lucide !== 'undefined') lucide.createIcons();
       }, 2000);
     });
+  },
+
+  /**
+   * Initialize rich text editors
+   */
+  initRichTextEditors() {
+    // Add rich text toolbar to existing textareas
+    document.querySelectorAll('.form-textarea:not([data-rich-init])').forEach(textarea => {
+      this.makeRichTextEditor(textarea);
+    });
+  },
+
+  /**
+   * Convert textarea to rich text editor
+   */
+  makeRichTextEditor(textarea) {
+    textarea.dataset.richInit = 'true';
+    
+    // Create wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'rich-editor-wrapper';
+    
+    // Create toolbar
+    const toolbar = document.createElement('div');
+    toolbar.className = 'rich-editor-toolbar';
+    toolbar.innerHTML = `
+      <button type="button" data-cmd="bold" title="Bold"><b>B</b></button>
+      <button type="button" data-cmd="italic" title="Italic"><i>I</i></button>
+      <button type="button" data-cmd="underline" title="Underline"><u>U</u></button>
+      <span class="toolbar-divider"></span>
+      <button type="button" data-cmd="insertUnorderedList" title="Bullet List">• List</button>
+      <button type="button" data-cmd="insertOrderedList" title="Numbered List">1. List</button>
+      <span class="toolbar-divider"></span>
+      <button type="button" data-cmd="createLink" title="Insert Link">🔗</button>
+      <button type="button" data-cmd="removeFormat" title="Clear Formatting">✕</button>
+    `;
+    
+    // Create editable div
+    const editor = document.createElement('div');
+    editor.className = 'rich-editor-content';
+    editor.contentEditable = true;
+    editor.innerHTML = textarea.value;
+    
+    // Style to match textarea
+    editor.style.minHeight = textarea.rows * 24 + 'px';
+    editor.style.padding = '10px 12px';
+    editor.style.border = '1px solid var(--border-color, #e2e8f0)';
+    editor.style.borderRadius = '8px';
+    editor.style.fontSize = '14px';
+    editor.style.lineHeight = '1.6';
+    editor.style.background = 'white';
+    
+    // Hide original textarea but keep it for form submission
+    textarea.style.display = 'none';
+    
+    // Insert wrapper
+    textarea.parentNode.insertBefore(wrapper, textarea);
+    wrapper.appendChild(toolbar);
+    wrapper.appendChild(editor);
+    wrapper.appendChild(textarea);
+    
+    // Toolbar events
+    toolbar.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const cmd = btn.dataset.cmd;
+        
+        if (cmd === 'createLink') {
+          const url = prompt('Enter URL:');
+          if (url) document.execCommand(cmd, false, url);
+        } else {
+          document.execCommand(cmd, false, null);
+        }
+        
+        editor.focus();
+        this.updateTextareaFromEditor(editor, textarea);
+      });
+    });
+    
+    // Sync editor to textarea
+    editor.addEventListener('input', () => {
+      this.updateTextareaFromEditor(editor, textarea);
+      this.markUnsaved();
+      this.debounceUpdate();
+    });
+    
+    // Sync textarea to editor (for external updates)
+    textarea.addEventListener('change', () => {
+      if (editor.innerHTML !== textarea.value) {
+        editor.innerHTML = textarea.value;
+      }
+    });
+  },
+
+  /**
+   * Sync editor content to textarea
+   */
+  updateTextareaFromEditor(editor, textarea) {
+    // Clean up the HTML
+    let content = editor.innerHTML;
+    
+    // Remove unnecessary attributes
+    content = content.replace(/ style="[^"]*"/g, '');
+    content = content.replace(/ class="[^"]*"/g, '');
+    content = content.replace(/ data-[^=]*="[^"]*"/g, '');
+    
+    // Convert divs to paragraphs
+    content = content.replace(/<div>/g, '<p>');
+    content = content.replace(/<\/div>/g, '</p>');
+    
+    textarea.value = content;
+    textarea.dispatchEvent(new Event('input', { bubbles: true }));
   },
 
   /**
