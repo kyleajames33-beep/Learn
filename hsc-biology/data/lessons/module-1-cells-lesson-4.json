@@ -1,0 +1,101 @@
+{
+  "id": "module-1-cells-lesson-4",
+  "title": "The Gatekeeper (Cell Membrane)",
+  "module": "module-1-cells",
+  "moduleTitle": "Module 1: Cells",
+  "moduleNumber": 1,
+  "lessonNumber": 4,
+  "description": "Lesson 4: Cell Membrane Structure - The Gatekeeper. Learn about the phospholipid bilayer, fluid mosaic model, and selective permeability.",
+  "duration": "45 minutes",
+  "difficulty": "Intermediate",
+  "worksOffline": true,
+  "learningIntentions": [
+    "Explain the fluid mosaic model of membrane structure",
+    "Describe the role of phospholipids and proteins",
+    "Connect membrane structure to medical applications"
+  ],
+  "successCriteria": [
+    "Label fluid mosaic model components",
+    "Explain why 0.9% saline is used in IV bags",
+    "Predict membrane behavior in solutions"
+  ],
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "What distinguishes one cell from another?",
+    "focus": "Cell structure and function"
+  },
+  "engagementHook": {
+    "title": "Think About This...",
+    "content": "This lesson explores important concepts in cell biology."
+  },
+  "contentSections": [
+    {
+      "id": "section-1",
+      "type": "content",
+      "title": "The Paradox of the Gatekeeper",
+      "icon": "book-open",
+      "content": "<p>🥀 Shriveled VS 💥 Burst The Paradox of the Gatekeeper Yesterday we calculated that a red blood cell has 600μm² of surface area —massive for its size. Yet if a nurse accidentally injects pure water into your bloodstream, these cells explode within seconds. Why does a cell with such sophisticated des...</p>"
+    },
+    {
+      "id": "section-2",
+      "type": "content",
+      "title": "",
+      "icon": "book-open",
+      "content": "<p>Unit 1: The Phospholipid Bilayer ● ● ● Hydrophobic Zone (Water-fearing) ● ● ● The phospholipid bilayer: Red spheres = hydrophilic heads, Blue lines = hydrophobic tails ● The Dual Nature of the Bilayer This diagram shows the phospholipid bilayer . Notice the red heads face outward toward water—these ...</p>"
+    },
+    {
+      "id": "section-3",
+      "type": "content",
+      "title": "Section 3",
+      "icon": "book-open",
+      "content": "<p>Interleaving Bridge Connect to Lesson 1: If a 10μm cell has 600μm² of surface area, and each phospholipid head occupies 0.5nm², approximately how many phospholipid molecules form this cell's membrane? (This is why cells are small—membrane synthesis is metabolically expensive!)...</p>"
+    },
+    {
+      "id": "section-4",
+      "type": "content",
+      "title": "",
+      "icon": "book-open",
+      "content": "<p>Unit 2: Transport Proteins Channels and Carriers The bilayer blocks everything, but cells need to import glucose, export waste, and maintain ion gradients. This requires transport proteins —specialized structures that create gates through the membrane. Channel Proteins Form pores through membrane Pa...</p>"
+    },
+    {
+      "id": "section-5",
+      "type": "content",
+      "title": "",
+      "icon": "book-open",
+      "content": "<p>Deep Dive: Optional Extensions Expand sections based on your interest: HSC Exam Connection: Cystic Fibrosis (Module 8) The CFTR protein is a chloride channel in the membrane. When mutated in cystic fibrosis, this channel fails to open, disrupting the osmotic balance in lung mucus. This connects memb...</p>"
+    },
+    {
+      "id": "section-6",
+      "type": "content",
+      "title": "",
+      "icon": "book-open",
+      "content": "<p>The Retrieval Arena Consolidate your learning through active recall Cued Recall (3 min) Complete the Concept The cell membrane consists of a bilayer. The heads are (water-loving) while the tails are (water-fearing). This arrangement creates a barrier that is selectively . Check Answers Recognition (...</p>"
+    },
+    {
+      "id": "section-7",
+      "type": "content",
+      "title": "Section 7",
+      "icon": "book-open",
+      "content": "<p>Copy Into Your Books Lesson 4: The Cell Membrane (The Gatekeeper) Structure: Fluid mosaic model • Phospholipid bilayer: Hydrophilic heads (out), hydrophobic tails (in) • Proteins embedded: Channels (pores) and carriers (shape-change) • Cholesterol: Maintains fluidity • Glycoproteins: Cell recognitio...</p>"
+    }
+  ],
+  "activities": [],
+  "assessment": {
+    "multipleChoice": [],
+    "shortAnswer": []
+  },
+  "navigation": {
+    "previous": "module-1-cells-lesson-3",
+    "previousTitle": "Lesson 3",
+    "next": "module-1-cells-lesson-5",
+    "nextTitle": "Lesson 5"
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-07",
+    "lastModified": "2026-02-07",
+    "version": "1.0.0",
+    "migratedFrom": "/workspaces/Learn/hsc-biology/module-1-cells/lesson-4.html",
+    "migrationDate": "2026-02-07T22:26:13.672Z"
+  }
+}
