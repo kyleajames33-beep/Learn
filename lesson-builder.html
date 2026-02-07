@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Builder | Science Hub</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="assets/css/global.css?v=3">
+  <link rel="stylesheet" href="assets/css/components.css?v=3">
+  
+  <!-- Builder Styles -->
+  <link rel="stylesheet" href="assets/css/lesson-builder.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="lesson-builder">
+  
+  <!-- Header -->
+  <header class="builder-header">
+    <div class="builder-header-left">
+      <a href="index.html" class="builder-logo">
+        <i data-lucide="atom"></i>
+        <span>Science Hub</span>
+      </a>
+      <span class="builder-version">Lesson Builder v0.3</span>
+    </div>
+    
+    <div class="builder-header-actions">
+      <button class="btn btn-secondary" id="loadExistingBtn">
+        <i data-lucide="folder-open"></i>
+        Load Existing
+      </button>
+      <button class="btn btn-secondary" id="saveDraftBtn">
+        <i data-lucide="save"></i>
+        Save Draft
+      </button>
+      <button class="btn btn-primary" id="exportJsonBtn">
+        <i data-lucide="download"></i>
+        Export JSON
+      </button>
+    </div>
+  </header>
+  
+  <!-- Toolbar -->
+  <div class="builder-toolbar">
+    <div class="view-toggle">
+      <button class="view-btn active" data-view="form">
+        <i data-lucide="form-input"></i>
+        Form
+      </button>
+      <button class="view-btn" data-view="split">
+        <i data-lucide="columns"></i>
+        Split View
+      </button>
+      <button class="view-btn" data-view="preview">
+        <i data-lucide="eye"></i>
+        Preview
+      </button>
+    </div>
+    
+    <div class="validation-status" id="validationStatus">
+      <i data-lucide="check-circle"></i>
+      <span>Valid</span>
+    </div>
+  </div>
+  
+  <!-- Main Builder Area -->
+  <div class="builder-container" id="builderContainer">
+    
+    <!-- Left Panel: Form -->
+    <div class="builder-panel builder-form-panel" id="formPanel">
+      
+      <!-- Lesson Metadata -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="file-text"></i>
+          Lesson Metadata
+        </h3>
+        
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="lessonTitle">Lesson Title *</label>
+            <input type="text" id="lessonTitle" class="form-input" placeholder="e.g., Introduction to Cells">
+          </div>
+          
+          <div class="form-group">
+            <label for="lessonId">Lesson ID *</label>
+            <input type="text" id="lessonId" class="form-input" placeholder="auto-generated" readonly>
+            <span class="form-hint">Auto-generated from title and module</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="moduleSelect">Module *</label>
+            <select id="moduleSelect" class="form-select">
+              <option value="">Select Module...</option>
+              <option value="module-1-cells">Module 1: Cells as the Basis of Life</option>
+              <option value="module-2-organisation">Module 2: Organisation of Living Things</option>
+              <option value="module-3-diversity">Module 3: Biological Diversity</option>
+              <option value="module-4-ecosystems">Module 4: Ecosystems</option>
+              <option value="module-5-heredity">Module 5: Heredity</option>
+              <option value="module-6-genetic-change">Module 6: Genetic Change</option>
+              <option value="module-7-infectious-disease">Module 7: Infectious Disease</option>
+              <option value="module-8-non-infectious-disease">Module 8: Non-Infectious Disease</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="moduleNumber">Module Number</label>
+            <input type="number" id="moduleNumber" class="form-input" min="1" max="8" readonly>
+          </div>
+          
+          <div class="form-group">
+            <label for="lessonNumber">Lesson Number *</label>
+            <input type="number" id="lessonNumber" class="form-input" min="1" placeholder="1">
+          </div>
+          
+          <div class="form-group">
+            <label for="duration">Duration *</label>
+            <select id="duration" class="form-select">
+              <option value="">Select...</option>
+              <option value="30 minutes">30 minutes</option>
+              <option value="40 minutes">40 minutes</option>
+              <option value="45 minutes">45 minutes</option>
+              <option value="50 minutes">50 minutes</option>
+              <option value="60 minutes">60 minutes</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Difficulty *</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="difficulty" value="Foundation Level" checked>
+                Foundation
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="difficulty" value="Intermediate">
+                Intermediate
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="difficulty" value="Advanced">
+                Advanced
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="description">Lesson Description *</label>
+            <textarea id="description" class="form-textarea" rows="3" placeholder="Brief description of what students will learn..."></textarea>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Learning Intentions -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="target"></i>
+          Learning Intentions
+          <button class="btn btn-sm btn-ghost" id="addIntentionBtn">
+            <i data-lucide="plus"></i>
+            Add
+          </button>
+        </h3>
+        <div id="learningIntentionsList" class="dynamic-list">
+          <div class="dynamic-item">
+            <input type="text" class="form-input intention-input" placeholder="Students will be able to...">
+            <button class="btn btn-icon btn-ghost remove-btn" title="Remove">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Success Criteria -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="check-circle"></i>
+          Success Criteria
+          <button class="btn btn-sm btn-ghost" id="addCriteriaBtn">
+            <i data-lucide="plus"></i>
+            Add
+          </button>
+        </h3>
+        <div id="successCriteriaList" class="dynamic-list">
+          <div class="dynamic-item">
+            <input type="text" class="form-input criteria-input" placeholder="By the end of this lesson, students will...">
+            <button class="btn btn-icon btn-ghost remove-btn" title="Remove">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Syllabus Links -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="link"></i>
+          Syllabus Links
+        </h3>
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="inquiryQuestion">Inquiry Question</label>
+            <input type="text" id="inquiryQuestion" class="form-input" placeholder="e.g., What distinguishes one cell from another?">
+          </div>
+          <div class="form-group full-width">
+            <label for="syllabusFocus">Focus Area</label>
+            <input type="text" id="syllabusFocus" class="form-input" placeholder="e.g., Cell structure and function">
+          </div>
+        </div>
+      </section>
+      
+      <!-- Engagement Hook -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="lightbulb"></i>
+          Engagement Hook
+        </h3>
+        <div class="form-group">
+          <label for="hookTitle">Hook Title</label>
+          <input type="text" id="hookTitle" class="form-input" placeholder="e.g., Think About This...">
+        </div>
+        <div class="form-group">
+          <label for="hookContent">Hook Content</label>
+          <textarea id="hookContent" class="form-textarea" rows="4" placeholder="An interesting fact or question to engage students..."></textarea>
+        </div>
+      </section>
+      
+      <!-- Content Sections -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="layers"></i>
+          Content Sections
+          <div class="dropdown">
+            <button class="btn btn-sm btn-primary" id="addSectionBtn">
+              <i data-lucide="plus"></i>
+              Add Section
+            </button>
+            <div class="dropdown-menu" id="sectionTypeMenu">
+              <button class="dropdown-item" data-type="content">Text Content</button>
+              <button class="dropdown-item" data-type="definition">Definition Box</button>
+              <button class="dropdown-item" data-type="grid">Two Column Grid</button>
+              <button class="dropdown-item" data-type="accordion">Accordion</button>
+              <button class="dropdown-item" data-type="worked-example">Worked Example</button>
+            </div>
+          </div>
+        </h3>
+        <div id="contentSectionsList" class="sections-list">
+          <!-- Sections added dynamically -->
+        </div>
+      </section>
+      
+      <!-- Activities -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="activity"></i>
+          Activities
+          <div class="dropdown">
+            <button class="btn btn-sm btn-primary" id="addActivityBtn">
+              <i data-lucide="plus"></i>
+              Add Activity
+            </button>
+            <div class="dropdown-menu" id="activityTypeMenu">
+              <button class="dropdown-item" data-type="matching">Matching</button>
+              <button class="dropdown-item" data-type="fill-blank">Fill in Blanks</button>
+            </div>
+          </div>
+        </h3>
+        <div id="activitiesList" class="activities-list">
+          <!-- Activities added dynamically -->
+        </div>
+      </section>
+      
+      <!-- Assessment -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="clipboard-check"></i>
+          Assessment
+          <button class="btn btn-sm btn-primary" id="addMCQBtn">
+            <i data-lucide="plus"></i>
+            Add MCQ
+          </button>
+        </h3>
+        <div id="assessmentList" class="assessment-list">
+          <!-- Assessment questions added dynamically -->
+        </div>
+      </section>
+      
+    </div>
+    
+    <!-- Right Panel: Preview -->
+    <div class="builder-panel builder-preview-panel" id="previewPanel">
+      <div class="preview-header">
+        <h3>
+          <i data-lucide="eye"></i>
+          Live Preview
+        </h3>
+        <span class="preview-badge">Updates automatically</span>
+      </div>
+      <div class="preview-content" id="previewContent">
+        <div class="preview-placeholder">
+          <i data-lucide="eye-off"></i>
+          <p>Start building your lesson to see the preview</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Panel: JSON Output (collapsible) -->
+    <div class="builder-panel builder-json-panel" id="jsonPanel">
+      <div class="json-header">
+        <h3>
+          <i data-lucide="code"></i>
+          JSON Output
+        </h3>
+        <div class="json-actions">
+          <button class="btn btn-icon btn-sm btn-ghost" id="copyJsonBtn" title="Copy to Clipboard">
+            <i data-lucide="copy"></i>
+          </button>
+          <button class="btn btn-icon btn-sm btn-ghost" id="toggleJsonBtn" title="Collapse">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="json-content" id="jsonContent">
+        <pre><code id="jsonOutput">{
+  "status": "Start building your lesson..."
+}</code></pre>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Load Existing Modal -->
+  <div class="modal" id="loadModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Load Existing Lesson</h3>
+        <button class="btn btn-icon btn-ghost modal-close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Paste JSON or Load from File</label>
+          <textarea id="loadJsonInput" class="form-textarea" rows="10" placeholder='Paste lesson JSON here...'></textarea>
+        </div>
+        <div class="form-group">
+          <label>Or Upload File</label>
+          <input type="file" id="loadJsonFile" accept=".json" class="form-input">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-cancel">Cancel</button>
+        <button class="btn btn-primary" id="confirmLoadBtn">Load Lesson</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Auto-save Indicator -->
+  <div class="autosave-indicator" id="autosaveIndicator">
+    <i data-lucide="check"></i>
+    <span>Saved to local storage</span>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="hsc-biology/js/lesson-data-schema.js"></script>
+  <script src="hsc-biology/js/lesson-renderer.js"></script>
+  <script src="assets/js/lesson-builder.js"></script>
+  
+  <script>
+    // Initialize icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
