@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="../../assets/css/streak.css?v=1">
   <link rel="stylesheet" href="../../assets/css/xp.css?v=1">
   <link rel="stylesheet" href="../../assets/css/achievements.css?v=1">
-  <link rel="stylesheet" href="../../assets/css/minigames.css?v=1">">
+  <link rel="stylesheet" href="../../assets/css/minigames.css?v=1">
+  <link rel="stylesheet" href="../../assets/css/loading-states.css">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="manifest" href="../../assets/manifest.json">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -75,6 +76,16 @@
         <a href="lesson-3.html" class="lesson-item active" data-lesson="3" aria-current="page">
           <span class="lesson-number">3</span>
           <span class="lesson-title-text">Eukaryotic Cell Structure</span>
+          <i data-lucide="check" class="lesson-check"></i>
+        </a>
+        <a href="lesson-4.html" class="lesson-item" data-lesson="4">
+          <span class="lesson-number">4</span>
+          <span class="lesson-title-text">The Gatekeeper</span>
+          <i data-lucide="check" class="lesson-check"></i>
+        </a>
+        <a href="lesson-5.html" class="lesson-item" data-lesson="5">
+          <span class="lesson-number">5</span>
+          <span class="lesson-title-text">Passive Transport</span>
           <i data-lucide="check" class="lesson-check"></i>
         </a>
       </nav>
@@ -627,10 +638,10 @@
           <span>All Lessons</span>
         </a>
 
-        <a href="" class="lesson-nav-btn" style="visibility: hidden;">
+        <a href="lesson-4.html" class="lesson-nav-btn">
           <div class="nav-btn-content" style="text-align: right;">
             <span class="nav-btn-label">Next</span>
-            <span class="nav-btn-title">—</span>
+            <span class="nav-btn-title">The Gatekeeper</span>
           </div>
           <i data-lucide="chevron-right"></i>
         </a>
@@ -665,7 +676,7 @@
       const yearLevel = 'hsc-biology';
       const moduleId = 'module-1-cells';
       const lessonId = '3';
-      const totalLessons = 3;
+      const totalLessons = 5;
 
       updateSidebarProgress(yearLevel, moduleId, totalLessons);
       setupMarkComplete(yearLevel, moduleId, lessonId);

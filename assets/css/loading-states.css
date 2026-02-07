@@ -1,0 +1,233 @@
+/**
+ * Loading States & Coming Soon Styles
+ * Phase 0.2 - Enhanced UX for incomplete content
+ */
+
+/* Skeleton Loading Animation */
+@keyframes skeleton-loading {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-elevated) 25%,
+    var(--bg-surface) 50%,
+    var(--bg-elevated) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.skeleton-title {
+  height: 24px;
+  width: 60%;
+  margin-bottom: 16px;
+}
+
+.skeleton-card {
+  height: 120px;
+  margin-bottom: 16px;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, var(--warning), #fbbf24);
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 9999px;
+}
+
+.coming-soon-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #92400e;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Locked Module Card */
+.module-card-locked {
+  position: relative;
+  opacity: 0.7;
+  pointer-events: none;
+  filter: grayscale(0.3);
+}
+
+.module-card-locked::after {
+  content: '🔒';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+/* Progress Indicator for Coming Soon */
+.progress-coming-soon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.progress-bar-coming-soon {
+  width: 100px;
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-coming-soon-fill {
+  height: 100%;
+  background: var(--warning);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+/* Notification Toast for Coming Soon */
+.toast-coming-soon {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--text-primary);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.toast-coming-soon.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.toast-coming-soon-icon {
+  font-size: 20px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--bg-elevated);
+  border-top-color: var(--primary-dark);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Content Placeholder Blocks */
+.content-placeholder {
+  padding: 48px;
+  text-align: center;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--border-light);
+}
+
+.content-placeholder-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.content-placeholder-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.content-placeholder-text {
+  color: var(--text-muted);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Disabled Button State */
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Module Progress Preview */
+.module-progress-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-sidebar);
+  border-radius: var(--radius-md);
+  margin-top: 16px;
+}
+
+.module-progress-preview-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-elevated);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.module-progress-preview-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--secondary-dark));
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .content-placeholder {
+    padding: 32px 24px;
+  }
+  
+  .content-placeholder-icon {
+    font-size: 36px;
+  }
+  
+  .toast-coming-soon {
+    left: 16px;
+    right: 16px;
+    transform: translateY(100px);
+  }
+  
+  .toast-coming-soon.show {
+    transform: translateY(0);
+  }
+}
