@@ -1,101 +1,175 @@
 {
   "id": "module-1-cells-lesson-4",
-  "title": "The Gatekeeper (Cell Membrane)",
+  "title": "The Cell Membrane",
   "module": "module-1-cells",
   "moduleTitle": "Module 1: Cells",
   "moduleNumber": 1,
   "lessonNumber": 4,
-  "description": "Lesson 4: Cell Membrane Structure - The Gatekeeper. Learn about the phospholipid bilayer, fluid mosaic model, and selective permeability.",
+  "description": "Explore the structure and function of the cell membrane. Learn about the phospholipid bilayer, fluid mosaic model, and how membranes control what enters and exits the cell.",
   "duration": "45 minutes",
   "difficulty": "Intermediate",
   "worksOffline": true,
   "learningIntentions": [
     "Explain the fluid mosaic model of membrane structure",
-    "Describe the role of phospholipids and proteins",
-    "Connect membrane structure to medical applications"
+    "Describe the role of phospholipids and membrane proteins",
+    "Understand selective permeability",
+    "Connect membrane structure to function"
   ],
   "successCriteria": [
-    "Label fluid mosaic model components",
-    "Explain why 0.9% saline is used in IV bags",
-    "Predict membrane behavior in solutions"
+    "Draw and label the fluid mosaic model",
+    "Explain why the membrane is called a 'fluid mosaic'",
+    "Predict which substances can cross the membrane",
+    "Describe the role of cholesterol in membranes"
   ],
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "What distinguishes one cell from another?",
-    "focus": "Cell structure and function"
+    "focus": "Cell membrane structure and function"
   },
   "engagementHook": {
-    "title": "Think About This...",
-    "content": "This lesson explores important concepts in cell biology."
+    "title": "The Gatekeeper",
+    "content": "Your cells are surrounded by a barrier just 7 nanometers thick—10,000 times thinner than a human hair. This fragile membrane decides what enters and exits, keeping you alive by blocking toxins while letting nutrients through."
   },
   "contentSections": [
     {
       "id": "section-1",
       "type": "content",
-      "title": "The Paradox of the Gatekeeper",
-      "icon": "book-open",
-      "content": "<p>🥀 Shriveled VS 💥 Burst The Paradox of the Gatekeeper Yesterday we calculated that a red blood cell has 600μm² of surface area —massive for its size. Yet if a nurse accidentally injects pure water into your bloodstream, these cells explode within seconds. Why does a cell with such sophisticated des...</p>"
+      "title": "The Phospholipid Bilayer",
+      "icon": "layers",
+      "content": "<p>The cell membrane is composed of a <strong>phospholipid bilayer</strong>. Each phospholipid molecule has:</p><ul><li><strong>Hydrophilic heads:</strong> Water-loving, phosphate group, face outward</li><li><strong>Hydrophobic tails:</strong> Water-fearing, fatty acid chains, face inward</li></ul><p>This arrangement creates a barrier that water-soluble substances cannot easily cross. The tails form an oily core that repels charged molecules while allowing small nonpolar molecules to pass through.</p>"
     },
     {
       "id": "section-2",
-      "type": "content",
-      "title": "",
+      "type": "definition",
+      "title": "Fluid Mosaic Model",
       "icon": "book-open",
-      "content": "<p>Unit 1: The Phospholipid Bilayer ● ● ● Hydrophobic Zone (Water-fearing) ● ● ● The phospholipid bilayer: Red spheres = hydrophilic heads, Blue lines = hydrophobic tails ● The Dual Nature of the Bilayer This diagram shows the phospholipid bilayer . Notice the red heads face outward toward water—these ...</p>"
+      "term": "Fluid Mosaic Model",
+      "definition": "A model describing the cell membrane as a fluid combination of phospholipids, cholesterol, and proteins that can move laterally within the membrane. The 'mosaic' refers to the pattern of proteins embedded in the lipid bilayer."
     },
     {
       "id": "section-3",
       "type": "content",
-      "title": "Section 3",
-      "icon": "book-open",
-      "content": "<p>Interleaving Bridge Connect to Lesson 1: If a 10μm cell has 600μm² of surface area, and each phospholipid head occupies 0.5nm², approximately how many phospholipid molecules form this cell's membrane? (This is why cells are small—membrane synthesis is metabolically expensive!)...</p>"
+      "title": "Membrane Proteins",
+      "icon": "activity",
+      "content": "<p>Proteins embedded in the membrane perform various functions:</p><h4>Integral Proteins</h4><ul><li>Span the entire membrane</li><li>Act as channels or carriers for transport</li><li>Include receptors for cell signaling</li></ul><h4>Peripheral Proteins</h4><ul><li>Attached to membrane surface</li><li>Function in cell recognition and signaling</li><li>Can be easily removed</li></ul>"
     },
     {
       "id": "section-4",
       "type": "content",
-      "title": "",
-      "icon": "book-open",
-      "content": "<p>Unit 2: Transport Proteins Channels and Carriers The bilayer blocks everything, but cells need to import glucose, export waste, and maintain ion gradients. This requires transport proteins —specialized structures that create gates through the membrane. Channel Proteins Form pores through membrane Pa...</p>"
+      "title": "Cholesterol and Membrane Fluidity",
+      "icon": "thermometer",
+      "content": "<p>Cholesterol molecules are scattered between phospholipids and help maintain appropriate membrane fluidity:</p><ul><li><strong>At high temperatures:</strong> Cholesterol restrains phospholipid movement, preventing excessive fluidity</li><li><strong>At low temperatures:</strong> Cholesterol prevents packing, maintaining fluidity</li></ul><p>This temperature buffering is essential for membrane function across varying conditions.</p>"
     },
     {
       "id": "section-5",
-      "type": "content",
-      "title": "",
-      "icon": "book-open",
-      "content": "<p>Deep Dive: Optional Extensions Expand sections based on your interest: HSC Exam Connection: Cystic Fibrosis (Module 8) The CFTR protein is a chloride channel in the membrane. When mutated in cystic fibrosis, this channel fails to open, disrupting the osmotic balance in lung mucus. This connects memb...</p>"
-    },
-    {
-      "id": "section-6",
-      "type": "content",
-      "title": "",
-      "icon": "book-open",
-      "content": "<p>The Retrieval Arena Consolidate your learning through active recall Cued Recall (3 min) Complete the Concept The cell membrane consists of a bilayer. The heads are (water-loving) while the tails are (water-fearing). This arrangement creates a barrier that is selectively . Check Answers Recognition (...</p>"
-    },
-    {
-      "id": "section-7",
-      "type": "content",
-      "title": "Section 7",
-      "icon": "book-open",
-      "content": "<p>Copy Into Your Books Lesson 4: The Cell Membrane (The Gatekeeper) Structure: Fluid mosaic model • Phospholipid bilayer: Hydrophilic heads (out), hydrophobic tails (in) • Proteins embedded: Channels (pores) and carriers (shape-change) • Cholesterol: Maintains fluidity • Glycoproteins: Cell recognitio...</p>"
+      "type": "accordion",
+      "title": "Clinical Connection: Cystic Fibrosis",
+      "icon": "heart-pulse",
+      "open": false,
+      "content": "<p>Cystic fibrosis is caused by a defect in the CFTR protein—a chloride channel in the cell membrane. When this protein doesn't function correctly:</p><ul><li>Chloride ions cannot exit cells</li><li>Water follows by osmosis (reduced)</li><li>Mucus becomes thick and sticky</li><li>Lungs and digestive system affected</li></ul><p>This demonstrates how critical membrane proteins are to health.</p>"
     }
   ],
-  "activities": [],
+  "activities": [
+    {
+      "id": "activity-1",
+      "type": "matching",
+      "title": "Membrane Component Matching",
+      "description": "Match each membrane component with its function:",
+      "theme": "teal",
+      "items": [
+        {
+          "term": "Phospholipid heads",
+          "correctValue": "b",
+          "options": [
+            { "value": "a", "label": "Form the inner barrier" },
+            { "value": "b", "label": "Face the aqueous environment" },
+            { "value": "c", "label": "Transport molecules" },
+            { "value": "d", "label": "Maintain fluidity" }
+          ]
+        },
+        {
+          "term": "Channel proteins",
+          "correctValue": "c",
+          "options": [
+            { "value": "a", "label": "Form the inner barrier" },
+            { "value": "b", "label": "Face the aqueous environment" },
+            { "value": "c", "label": "Transport molecules" },
+            { "value": "d", "label": "Maintain fluidity" }
+          ]
+        },
+        {
+          "term": "Cholesterol",
+          "correctValue": "d",
+          "options": [
+            { "value": "a", "label": "Form the inner barrier" },
+            { "value": "b", "label": "Face the aqueous environment" },
+            { "value": "c", "label": "Transport molecules" },
+            { "value": "d", "label": "Maintain fluidity" }
+          ]
+        }
+      ]
+    }
+  ],
   "assessment": {
-    "multipleChoice": [],
-    "shortAnswer": []
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "Which part of a phospholipid is hydrophobic?",
+        "options": [
+          "The phosphate head",
+          "The fatty acid tails",
+          "The glycerol backbone",
+          "The cholesterol attached"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q2",
+        "question": "Why is the membrane called 'fluid'?",
+        "options": [
+          "It contains water channels",
+          "It flows like a liquid",
+          "Components can move laterally",
+          "It melts at body temperature"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "id": "q3",
+        "question": "What would happen to membrane fluidity if all cholesterol were removed?",
+        "options": [
+          "Nothing—cholesterol is not important",
+          "The membrane would become too rigid",
+          "The membrane would become too fluid",
+          "Proteins would stop working"
+        ],
+        "correctAnswer": "c"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Explain how the structure of the phospholipid bilayer creates a barrier to water-soluble substances.",
+        "marks": 3
+      },
+      {
+        "id": "sa2",
+        "question": "Describe two functions of membrane proteins and give an example of each.",
+        "marks": 4
+      }
+    ]
   },
   "navigation": {
     "previous": "module-1-cells-lesson-3",
-    "previousTitle": "Lesson 3",
+    "previousTitle": "Eukaryotic Cell Structure",
     "next": "module-1-cells-lesson-5",
-    "nextTitle": "Lesson 5"
+    "nextTitle": "Passive Transport"
   },
   "meta": {
     "author": "Science Hub",
     "createdAt": "2026-02-07",
     "lastModified": "2026-02-07",
     "version": "1.0.0",
-    "migratedFrom": "/workspaces/Learn/hsc-biology/module-1-cells/lesson-4.html",
-    "migrationDate": "2026-02-07T22:26:13.672Z"
+    "tags": ["cell-membrane", "fluid-mosaic", "phospholipids", "HSC-biology", "module-1"]
   }
 }
