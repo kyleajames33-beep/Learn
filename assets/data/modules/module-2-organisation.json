@@ -1,0 +1,51 @@
+{
+  "id": "module-2-organisation",
+  "number": 2,
+  "title": "Organisation of Living Things",
+  "shortTitle": "Organisation",
+  "description": "Explore how cells organize into tissues, organs, and systems",
+  "color": "#7c3aed",
+  "totalLessons": 5,
+  "lessons": [
+    {
+      "id": "module-2-organisation-lesson-1",
+      "number": 1,
+      "title": "Tissues and Organs",
+      "duration": "45 minutes",
+      "difficulty": "Foundation",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-2-organisation-lesson-2",
+      "number": 2,
+      "title": "Organ Systems",
+      "duration": "45 minutes",
+      "difficulty": "Foundation",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-2-organisation-lesson-3",
+      "number": 3,
+      "title": "Plant Organisation",
+      "duration": "40 minutes",
+      "difficulty": "Foundation",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-2-organisation-lesson-4",
+      "number": 4,
+      "title": "Gas Exchange Systems",
+      "duration": "50 minutes",
+      "difficulty": "Intermediate",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-2-organisation-lesson-5",
+      "number": 5,
+      "title": "Transport Systems",
+      "duration": "50 minutes",
+      "difficulty": "Intermediate",
+      "status": "available"
+    }
+  ]
+}

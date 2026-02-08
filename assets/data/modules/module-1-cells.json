@@ -1,0 +1,75 @@
+{
+  "id": "module-1-cells",
+  "number": 1,
+  "title": "Cells as the Basis of Life",
+  "shortTitle": "Cells",
+  "description": "Learn about cell structure, function, and organization - the foundation of all biology",
+  "color": "#0891b2",
+  "totalLessons": 8,
+  "lessons": [
+    {
+      "id": "module-1-cells-lesson-1",
+      "number": 1,
+      "title": "Introduction to Cells",
+      "duration": "45 minutes",
+      "difficulty": "Foundation",
+      "status": "available"
+    },
+    {
+      "id": "module-1-cells-lesson-2",
+      "number": 2,
+      "title": "Prokaryotic Cells",
+      "duration": "40 minutes",
+      "difficulty": "Foundation",
+      "status": "available"
+    },
+    {
+      "id": "module-1-cells-lesson-3",
+      "number": 3,
+      "title": "Eukaryotic Cell Structure",
+      "duration": "50 minutes",
+      "difficulty": "Intermediate",
+      "status": "available"
+    },
+    {
+      "id": "module-1-cells-lesson-4",
+      "number": 4,
+      "title": "The Cell Membrane",
+      "duration": "45 minutes",
+      "difficulty": "Intermediate",
+      "status": "available"
+    },
+    {
+      "id": "module-1-cells-lesson-5",
+      "number": 5,
+      "title": "Passive Transport",
+      "duration": "45 minutes",
+      "difficulty": "Intermediate",
+      "status": "available"
+    },
+    {
+      "id": "module-1-cells-lesson-6",
+      "number": 6,
+      "title": "Active Transport",
+      "duration": "45 minutes",
+      "difficulty": "Intermediate",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-1-cells-lesson-7",
+      "number": 7,
+      "title": "Osmosis",
+      "duration": "45 minutes",
+      "difficulty": "Intermediate",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-1-cells-lesson-8",
+      "number": 8,
+      "title": "Enzymes",
+      "duration": "50 minutes",
+      "difficulty": "Advanced",
+      "status": "coming-soon"
+    }
+  ]
+}

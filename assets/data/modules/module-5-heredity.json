@@ -1,0 +1,51 @@
+{
+  "id": "module-5-heredity",
+  "number": 5,
+  "title": "Heredity",
+  "shortTitle": "Heredity",
+  "description": "Understand inheritance patterns and genetic variation",
+  "color": "#059669",
+  "totalLessons": 5,
+  "lessons": [
+    {
+      "id": "module-5-heredity-lesson-1",
+      "number": 1,
+      "title": "Introduction to Heredity",
+      "duration": "45 minutes",
+      "difficulty": "Foundation",
+      "status": "available"
+    },
+    {
+      "id": "module-5-heredity-lesson-2",
+      "number": 2,
+      "title": "DNA Structure",
+      "duration": "50 minutes",
+      "difficulty": "Intermediate",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-5-heredity-lesson-3",
+      "number": 3,
+      "title": "DNA Replication",
+      "duration": "50 minutes",
+      "difficulty": "Intermediate",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-5-heredity-lesson-4",
+      "number": 4,
+      "title": "Cell Division",
+      "duration": "55 minutes",
+      "difficulty": "Intermediate",
+      "status": "coming-soon"
+    },
+    {
+      "id": "module-5-heredity-lesson-5",
+      "number": 5,
+      "title": "Genetic Variation",
+      "duration": "50 minutes",
+      "difficulty": "Advanced",
+      "status": "coming-soon"
+    }
+  ]
+}

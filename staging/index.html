@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staging Environment | Science Hub</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../assets/css/global.css?v=3">
+  <link rel="stylesheet" href="../assets/css/components.css?v=3">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      padding: 40px;
+    }
+    
+    .staging-header {
+      background: #f59e0b;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .staging-header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    .staging-badge {
+      background: white;
+      color: #f59e0b;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .upload-area {
+      background: white;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .upload-area.dragover {
+      border-color: #0891b2;
+      background: #f0fdfa;
+    }
+    
+    .lesson-list {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    
+    .lesson-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .lesson-item:last-child {
+      border-bottom: none;
+    }
+    
+    .status-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    .status-valid {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    
+    .status-invalid {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    
+    .status-warning {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    
+    .validation-report {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background: #0891b2;
+      color: white;
+    }
+    
+    .btn-success {
+      background: #10b981;
+      color: white;
+    }
+    
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="staging-header">
+    <h1>🧪 Staging Environment</h1>
+    <span class="staging-badge">Internal Only</span>
+  </div>
+  
+  <div class="upload-area" id="uploadArea">
+    <h3>Drop JSON lesson file here</h3>
+    <p>Or click to select file</p>
+    <input type="file" id="fileInput" accept=".json" style="display: none;">
+    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+      Select File
+    </button>
+  </div>
+  
+  <div class="lesson-list" id="lessonList">
+    <h3>Staged Lessons</h3>
+    <p style="color: #64748b;">No lessons staged yet. Upload a JSON file to validate.</p>
+  </div>
+  
+  <script src="../assets/js/content-validator.js"></script>
+  <script>
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const lessonList = document.getElementById('lessonList');
+    
+    let stagedLessons = [];
+    
+    // Drag and drop
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('dragover');
+    });
+    
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('dragover');
+    });
+    
+    uploadArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('dragover');
+      
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleFile(files[0]);
+      }
+    });
+    
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleFile(e.target.files[0]);
+      }
+    });
+    
+    function handleFile(file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const content = e.target.result;
+        const result = ContentValidator.validateJSON(content);
+        
+        let lesson = null;
+        try {
+          lesson = JSON.parse(content);
+        } catch (err) {
+          console.error('Parse error:', err);
+        }
+        
+        stagedLessons.push({
+          file: file.name,
+          lesson: lesson,
+          result: result
+        });
+        
+        renderList();
+      };
+      reader.readAsText(file);
+    }
+    
+    function renderList() {
+      if (stagedLessons.length === 0) {
+        lessonList.innerHTML = '<p style="color: #64748b;">No lessons staged yet.</p>';
+        return;
+      }
+      
+      lessonList.innerHTML = '<h3>Staged Lessons</h3>' + stagedLessons.map((item, idx) => {
+        const status = item.result.valid 
+          ? (item.result.warnings.length > 0 ? 'warning' : 'valid')
+          : 'invalid';
+        
+        const statusText = item.result.valid
+          ? (item.result.warnings.length > 0 ? 'Valid with Warnings' : 'Valid')
+          : 'Invalid';
+        
+        return `
+          <div class="lesson-item">
+            <div>
+              <strong>${item.lesson?.title || 'Untitled'}</strong>
+              <div style="font-size: 12px; color: #64748b;">${item.file}</div>
+              ${!item.result.valid ? `
+                <div class="validation-report">
+                  <strong>Errors:</strong>
+                  <ul>${item.result.errors.map(e => `<li>${e}</li>`).join('')}</ul>
+                </div>
+              ` : ''}
+              ${item.result.warnings.length > 0 ? `
+                <div class="validation-report">
+                  <strong>Warnings:</strong>
+                  <ul>${item.result.warnings.map(w => `<li>${w}</li>`).join('')}</ul>
+                </div>
+              ` : ''}
+            </div>
+            <div style="text-align: right;">
+              <span class="status-badge status-${status}">${statusText}</span>
+              ${item.result.valid ? `
+                <button class="btn btn-success" style="margin-left: 10px;" onclick="approve(${idx})">
+                  Approve
+                </button>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+    
+    function approve(index) {
+      const item = stagedLessons[index];
+      if (!item || !item.result.valid) return;
+      
+      // In real implementation, this would move to production
+      alert(`Approved: ${item.lesson?.title}\n\nIn production, this would deploy to live site.`);
+    }
+  </script>
+</body>
+</html>
