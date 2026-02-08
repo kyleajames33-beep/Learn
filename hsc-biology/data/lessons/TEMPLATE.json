@@ -1,0 +1,141 @@
+{
+  "id": "module-X-topic-lesson-Y",
+  "title": "Lesson Title",
+  "module": "module-X-topic",
+  "moduleTitle": "Module X: Topic",
+  "moduleNumber": X,
+  "lessonNumber": Y,
+  "description": "Brief description of what students will learn in this lesson (1-2 sentences).",
+  "duration": "45 minutes",
+  "difficulty": "Foundation",
+  "worksOffline": true,
+  "learningIntentions": [
+    "Students will be able to explain key concept 1",
+    "Students will be able to apply concept 2 to solve problems",
+    "Students will be able to compare/contrast related ideas"
+  ],
+  "successCriteria": [
+    "Define key terminology correctly",
+    "Solve problems using the learned concept",
+    "Explain the relationship between concepts"
+  ],
+  "syllabusLinks": {
+    "module": "Module X: Full Module Title",
+    "inquiryQuestion": "What is the inquiry question for this module?",
+    "focus": "Specific focus area for this lesson"
+  },
+  "engagementHook": {
+    "title": "Hook Title",
+    "content": "An engaging question, scenario, or fact that draws students in. Make it relatable or surprising."
+  },
+  "contentSections": [
+    {
+      "id": "section-1",
+      "type": "content",
+      "title": "Main Concept",
+      "icon": "book-open",
+      "content": "<p>Explain the main concept here. Use <strong>bold</strong> for key terms.</p><ul><li>Key point 1</li><li>Key point 2</li></ul>"
+    },
+    {
+      "id": "section-2",
+      "type": "definition",
+      "title": "Key Definition",
+      "icon": "book-open",
+      "term": "Key Term",
+      "definition": "Clear, concise definition of the key term."
+    },
+    {
+      "id": "section-3",
+      "type": "content",
+      "title": "Application",
+      "icon": "activity",
+      "content": "<p>How does this concept apply in real life or biology?</p>"
+    }
+  ],
+  "activities": [
+    {
+      "id": "activity-1",
+      "type": "matching",
+      "title": "Matching Activity",
+      "description": "Match each term with its correct definition:",
+      "theme": "teal",
+      "items": [
+        {
+          "term": "Term 1",
+          "correctValue": "a",
+          "options": [
+            { "value": "a", "label": "Definition 1" },
+            { "value": "b", "label": "Definition 2" },
+            { "value": "c", "label": "Definition 3" }
+          ]
+        },
+        {
+          "term": "Term 2",
+          "correctValue": "b",
+          "options": [
+            { "value": "a", "label": "Definition 1" },
+            { "value": "b", "label": "Definition 2" },
+            { "value": "c", "label": "Definition 3" }
+          ]
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "What is the correct answer to this question?",
+        "options": [
+          "Incorrect option A",
+          "Correct option B",
+          "Incorrect option C",
+          "Incorrect option D"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "id": "q2",
+        "question": "Second question about the lesson content?",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "correctAnswer": "a"
+      },
+      {
+        "id": "q3",
+        "question": "Third question testing understanding?",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "correctAnswer": "c"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Explain the main concept in your own words. (2 marks)",
+        "marks": 2
+      }
+    ]
+  },
+  "navigation": {
+    "previous": "module-X-topic-lesson-Y-1",
+    "previousTitle": "Previous Lesson Title",
+    "next": "module-X-topic-lesson-Y+1",
+    "nextTitle": "Next Lesson Title"
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["tag1", "tag2", "HSC-biology", "module-X"]
+  }
+}
