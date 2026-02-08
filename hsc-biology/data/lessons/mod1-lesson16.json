@@ -1,0 +1,305 @@
+{
+  "id": "mod1-lesson16",
+  "title": "Lesson 16: Staining Techniques and Cell Viability Assays",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 16,
+  "description": "Understanding staining techniques for microscopy and cell viability assays including trypan blue exclusion and calculation of viability percentages.",
+  "duration": "50 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can describe the purpose of staining in light microscopy (contrast/identification) and name two common stains.",
+    "Students can distinguish between viable and non-viable cells using simple assays (trypan blue exclusion).",
+    "Students can interpret data from cell viability assays to determine proliferation rates."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Staining techniques and cell viability"
+  },
+  
+  "successCriteria": [
+    "I can explain why stains are necessary for viewing cells under a light microscope.",
+    "I can describe what happens to dead cells in a trypan blue assay.",
+    "I can calculate a simple percentage of viable cells from assay data."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "module-1-cells-lesson-3",
+      "description": "Microscopy basics",
+      "required": true
+    },
+    {
+      "lessonId": "mod1-lesson15",
+      "description": "Cell culture—need to assess cell health",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "Dead or Alive?",
+    "content": "'How do scientists know if their cultured cells are healthy before testing a new drug on them? They can't just ask. Instead, they use colour-changing assays that act like cellular 'vital signs.' Blue means dead, clear means alive, purple means metabolically active. Today we explore the staining techniques that make the invisible visible and the assays that separate the living from the dead.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Staining Principles",
+      "definition": "Living cells are mostly transparent; stains add colour/contrast to structures. Basic stains (methylene blue, crystal violet, iodine) bind acidic components (DNA). Acidic stains (eosin) bind basic components (cytoplasm)."
+    },
+    {
+      "term": "Gram Staining",
+      "definition": "Differential stain for bacteria (peptidoglycan wall retains crystal violet in Gram-positive; pink safranin in Gram-negative). Connects to Lesson 1 (cell wall differences)."
+    },
+    {
+      "term": "Viability Assays",
+      "definition": "Trypan blue (dead cells with damaged membranes take up blue dye; live cells exclude it). Metabolic assays (MTT—viable cells with active mitochondria reduce yellow dye to purple)."
+    },
+    {
+      "term": "Cell Counting",
+      "definition": "Hemocytometer (counting chamber); calculating concentration (cells per mL) and viability percentage (live/total × 100)."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "Stains kill cells",
+      "correction": "Some do (fixative stains), but vital stains (trypan blue) are used specifically to test if cells are already dead. Live cells exclude the dye."
+    },
+    {
+      "misconception": "All cells stain the same colour",
+      "correction": "Different structures take up different stains (Gram staining differentiates bacteria by wall type)."
+    },
+    {
+      "misconception": "Viability assays measure cell size",
+      "correction": "They measure membrane integrity (trypan) or metabolic activity (MTT), not physical dimensions."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "why-stain",
+      "type": "content",
+      "title": "Why Stain Cells?",
+      "icon": "palette",
+      "content": "Living cells are transparent (water + proteins). Stains bind specific structures to create contrast. Methylene blue stains nuclei (acidic DNA). Iodine stains starch/carbohydrates (glycogen in animal cells, starch in plants).",
+      "example": "Gram staining in hospital labs—rapid identification of bacterial infection type (Gram-positive purple = Staph; Gram-negative pink = E. coli)."
+    },
+    {
+      "id": "trypan-blue",
+      "type": "diagram",
+      "title": "Trypan Blue Viability Assay",
+      "icon": "droplet",
+      "content": "Side-by-side cells: Live cell (clear/white, membrane intact, dye excluded) vs Dead cell (blue, membrane compromised, dye entered).",
+      "keyPoints": [
+        "Membrane integrity test",
+        "Live cells have intact membranes that exclude large dye molecules"
+      ],
+      "example": "Counting live cells for cancer drug testing—only viable cells matter for drug response.",
+      "image": {
+        "src": "assets/images/mod1/lesson16/trypan-blue.webp",
+        "alt": "Diagram showing live cell excluding dye and dead cell taking up trypan blue",
+        "caption": "Trypan blue exclusion assay: membrane integrity test"
+      }
+    },
+    {
+      "id": "viability-calculation",
+      "type": "worked-example",
+      "title": "Calculating Viability",
+      "icon": "calculator",
+      "content": "Step-by-step calculation of cell viability percentage.",
+      "problem": "In a hemocytometer count, 100 cells are seen. 85 exclude trypan blue (clear), 15 take up trypan blue (blue). What is the viability percentage?",
+      "steps": [
+        "Identify live cells = 85",
+        "Total cells = 100",
+        "Calculate: (85/100) × 100 = 85% viability"
+      ],
+      "checkForUnderstanding": "Why don't we count the blue cells as viable? (Membrane is compromised/dead)."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "stain-matching",
+      "type": "matching",
+      "title": "Match Stains to Purposes",
+      "description": "Match each stain to its specific purpose or application.",
+      "learningObjective": "Match stains to purposes.",
+      "theme": "purple",
+      "xpReward": 50,
+      "items": [
+        { "id": "gram", "text": "Gram stain", "match": "Differentiates bacteria by cell wall" },
+        { "id": "methylene", "text": "Methylene blue", "match": "Stains nuclei/acidic structures" },
+        { "id": "trypan", "text": "Trypan blue", "match": "Identifies dead cells" },
+        { "id": "iodine", "text": "Iodine", "match": "Stains starch/carbohydrates" }
+      ]
+    },
+    {
+      "id": "viability-calc",
+      "type": "calculation",
+      "title": "Interpret Viability Data",
+      "description": "Calculate viability percentages from cell culture data.",
+      "learningObjective": "Interpret viability data.",
+      "theme": "teal",
+      "xpReward": 75,
+      "tolerance": 0.02,
+      "questions": [
+        {
+          "id": "day1",
+          "question": "Day 1: 200 total cells, 190 exclude trypan blue. Viability?",
+          "correctAnswer": 95,
+          "unit": "%"
+        },
+        {
+          "id": "day2",
+          "question": "Day 2: 200 total cells, 140 exclude trypan blue. Viability?",
+          "correctAnswer": 70,
+          "unit": "%"
+        },
+        {
+          "id": "day3",
+          "question": "Day 3: 200 total cells, 80 exclude trypan blue. Viability?",
+          "correctAnswer": 40,
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "In a trypan blue exclusion assay, live cells appear colourless because they:",
+        "options": [
+          "Metabolise the dye immediately",
+          "Have intact membranes that prevent dye entry",
+          "Are smaller than dead cells",
+          "Have already expelled the stain"
+        ],
+        "correctAnswer": "Have intact membranes that prevent dye entry",
+        "rationale": "Membrane integrity test. Live cells exclude the dye; dead cells with compromised membranes take it up."
+      },
+      {
+        "id": "mcq-2",
+        "question": "Which stain would be most appropriate for distinguishing between Gram-positive and Gram-negative bacteria?",
+        "options": [
+          "Methylene blue",
+          "Gram stain",
+          "Trypan blue",
+          "Iodine"
+        ],
+        "correctAnswer": "Gram stain",
+        "rationale": "Specific application of Gram stain. Differential stain based on cell wall composition."
+      },
+      {
+        "id": "mcq-3",
+        "question": "A cell culture has 200 total cells, of which 180 exclude trypan blue. The viability is:",
+        "options": [
+          "10%",
+          "90%",
+          "20%",
+          "100%"
+        ],
+        "correctAnswer": "90%",
+        "rationale": "Basic percentage calculation. (180/200) × 100 = 90%."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Explain why staining is necessary when viewing cells under a light microscope, and identify one specific cellular component that methylene blue stains. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Living cells are transparent/low contrast; stains add colour/make structures visible",
+          "1 mark: Methylene blue stains the nucleus/nucleic acids/DNA (or acidic structures)"
+        ],
+        "commonError": "Saying stains 'feed' cells or help them grow."
+      },
+      {
+        "id": "sa-2",
+        "question": "A researcher counts 50 cells in a hemocytometer. Ten cells appear blue with trypan blue stain, while 40 remain colourless. Calculate the percentage viability of the cell culture. (1 mark)",
+        "marks": 1,
+        "markingCriteria": [
+          "1 mark: 80% viable (40/50 × 100)"
+        ],
+        "commonError": "Calculating 20% (dead percentage) or 25% (10/40 instead of 40/50)."
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "Stains add contrast to transparent cells for light microscopy.",
+      "Methylene blue stains nuclei (acidic).",
+      "Gram stain differentiates bacteria by cell wall type (Gram-positive purple, Gram-negative pink).",
+      "Trypan blue assay: dead cells take up dye (blue), live cells exclude it (clear).",
+      "Viability % = (Live cells / Total cells) × 100."
+    ],
+    "keyPoints": [
+      "Living cells are transparent - need stains for contrast",
+      "Basic stains bind acidic components (DNA)",
+      "Trypan blue = membrane integrity test",
+      "Calculate viability: (Live/Total) × 100",
+      "Gram stain for bacterial identification"
+    ],
+    "diagrams": [
+      "Trypan blue exclusion diagram",
+      "Gram stain results comparison"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["B", "B", "B"],
+    "shortAnswer": [
+      "Staining is necessary because living cells are mostly transparent (composed primarily of water and proteins), making them difficult to see under a light microscope without added contrast. Stains bind to specific cellular structures and add colour, making the cells and their components visible. Methylene blue is a basic stain that specifically stains acidic structures, particularly the nucleus and nucleic acids (DNA).",
+      "Percentage viability = (Live cells / Total cells) × 100 = (40 / 50) × 100 = 80% viable."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson15",
+    "previousTitle": "Cell Culture Techniques and Applications",
+    "next": "mod1-lesson17",
+    "nextTitle": "The Cellular Basis of Disease"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["staining", "viability assays", "trypan blue", "Gram stain", "methylene blue", "microscopy", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "trypan-blue",
+      "src": "assets/images/mod1/lesson16/trypan-blue.webp",
+      "alt": "Diagram showing trypan blue exclusion assay",
+      "caption": "Trypan blue exclusion: live vs dead cells"
+    },
+    {
+      "id": "gram-stain",
+      "src": "assets/images/mod1/lesson16/gram-stain.webp",
+      "alt": "Gram-positive vs Gram-negative bacteria",
+      "caption": "Gram staining results"
+    },
+    {
+      "id": "hemocytometer",
+      "src": "assets/images/mod1/lesson16/hemocytometer.webp",
+      "alt": "Hemocytometer counting chamber",
+      "caption": "Cell counting with hemocytometer"
+    },
+    {
+      "id": "methylene-blue",
+      "src": "assets/images/mod1/lesson16/methylene-blue.webp",
+      "alt": "Cells stained with methylene blue",
+      "caption": "Methylene blue staining nuclei"
+    }
+  ]
+}

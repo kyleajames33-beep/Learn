@@ -1,0 +1,289 @@
+{
+  "id": "mod1-lesson20",
+  "title": "Lesson 20: Module Synthesis and Integration",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 20,
+  "description": "Synthesising all Module 1 concepts into an integrated understanding. Creating concept maps and answering extended response questions combining multiple dot points.",
+  "duration": "50 minutes",
+  "difficulty": "Advanced",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can synthesise knowledge of cell structure, function, replication, and technology to explain complex biological scenarios.",
+    "Students can evaluate the interconnectedness of cellular systems (e.g., how membrane structure affects transport, which affects cell signalling and disease).",
+    "Students can apply HSC command terms (analyse, evaluate, explain) to extended response questions."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Module synthesis and integration"
+  },
+  
+  "successCriteria": [
+    "I can create a concept map linking at least 10 module concepts.",
+    "I can answer an integrated HSC-style question combining multiple dot points.",
+    "I can explain how understanding cells underpins modern medicine."
+  ],
+  
+  "prerequisites": [
+    {"lessonId": "module-1-cells-lesson-1", "description": "Prokaryotic structure", "required": true},
+    {"lessonId": "module-1-cells-lesson-2", "description": "Eukaryotic structure", "required": true},
+    {"lessonId": "module-1-cells-lesson-3", "description": "Microscopy", "required": true},
+    {"lessonId": "module-1-cells-lesson-4", "description": "Nucleus and chromatin", "required": true},
+    {"lessonId": "module-1-cells-lesson-5", "description": "Endomembrane system", "required": true},
+    {"lessonId": "mod1-lesson06", "description": "Lysosomes", "required": true},
+    {"lessonId": "mod1-lesson07", "description": "Mitochondria and chloroplasts", "required": true},
+    {"lessonId": "mod1-lesson08", "description": "Cytoskeleton", "required": true},
+    {"lessonId": "mod1-lesson09", "description": "Cell membrane", "required": true},
+    {"lessonId": "mod1-lesson10", "description": "Transport", "required": true},
+    {"lessonId": "mod1-lesson11", "description": "Cell cycle", "required": true},
+    {"lessonId": "mod1-lesson12", "description": "Mitosis", "required": true},
+    {"lessonId": "mod1-lesson13", "description": "Cytokinesis", "required": true},
+    {"lessonId": "mod1-lesson14", "description": "Stem cells", "required": true},
+    {"lessonId": "mod1-lesson15", "description": "Cell culture", "required": true},
+    {"lessonId": "mod1-lesson16", "description": "Staining", "required": true},
+    {"lessonId": "mod1-lesson17", "description": "Disease", "required": true},
+    {"lessonId": "mod1-lesson18", "description": "Specialisation", "required": true},
+    {"lessonId": "mod1-lesson19", "description": "Working scientifically", "required": true}
+  ],
+  
+  "engagementHook": {
+    "title": "The Cell Completes the Circuit",
+    "content": "'Twenty lessons ago, we distinguished prokaryotes from eukaryotes. Today, we connect everything: from the first microscopes to stem cell therapies, from phospholipid bilayers to cancer treatments. The cell is not a list of parts—it's a dynamic system. Let's map the connections.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Integration Map",
+      "definition": "Structure (organelles) → Function (processes like respiration/photosynthesis) → Replication (cycle/mitosis) → Differentiation (specialisation) → Technology (culture/microscopy) → Medicine (disease treatment)."
+    },
+    {
+      "term": "Endosymbiosis connects evolution",
+      "definition": "to organelle structure."
+    },
+    {
+      "term": "Membrane structure",
+      "definition": "connects to transport, which connects to disease (CF), which connects to therapeutics."
+    },
+    {
+      "term": "HSC Command Terms",
+      "definition": "Identify: Name/recognise. Describe: Characteristics/features. Explain: Reason/cause (link structure to function). Analyse: Break into components, find relationships. Evaluate: Assess significance/make judgment."
+    },
+    {
+      "term": "Future Directions",
+      "definition": "Stem cell therapy, CRISPR gene editing (fixing CFTR mutations), personalised medicine based on cell culture."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "concept-map",
+      "type": "diagram",
+      "title": "Concept Integration Map",
+      "icon": "git-merge",
+      "content": "Spider diagram or flowchart connecting: Prokaryotic structure → Antibiotics; Eukaryotic organelles → Endosymbiosis → Energy; Membrane → Transport → CF; Cell cycle → Cancer; Stem cells → Therapy.",
+      "keyPoints": [
+        "All major module concepts interconnected"
+      ],
+      "example": "Students complete partially blank map.",
+      "image": {
+        "src": "assets/images/mod1/lesson20/concept-map.webp",
+        "alt": "Spider diagram connecting all Module 1 concepts",
+        "caption": "Module 1 Concept Integration Map"
+      }
+    },
+    {
+      "id": "cf-integration",
+      "type": "caseStudy",
+      "title": "Integrated Scenario – Cystic Fibrosis Treatment",
+      "icon": "activity",
+      "content": "Patient with CF. Analysis requires: Channel protein defect (membrane), osmosis (transport), gene therapy (stem cells/viral vectors—technology), cell culture (testing treatments).",
+      "example": "Task: 'Analyse how understanding cell membrane structure and cell culture technology has led to new treatments for cystic fibrosis.'"
+    },
+    {
+      "id": "hsc-strategy",
+      "type": "content",
+      "title": "HSC Exam Strategy",
+      "icon": "book-open",
+      "content": "Key verbs—Identify (list), Describe (what it is), Explain (how/why it works), Analyse (relationships between parts), Evaluate (pros/cons).",
+      "example": "'Evaluate the use of embryonic stem cells versus adult stem cells in treating mitochondrial disease' requires comparison, ethics, biological feasibility."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "extended-response",
+      "type": "content",
+      "title": "Extended Response Practice",
+      "description": "Answer an integrated HSC-style question combining multiple concepts.",
+      "learningObjective": "Synthesise multiple concepts.",
+      "theme": "critical",
+      "content": "Question: A patient has a disease affecting mitochondria. Explain how defects in this organelle affect cellular respiration, and discuss one potential stem cell-based therapy, including ethical considerations.\n\nConsider:\n- Mitochondrial function in ATP production\n- Effects on high-energy tissues\n- Stem cell therapy potential\n- Ethical issues (embryonic vs adult)\n- Current limitations"
+    },
+    {
+      "id": "concept-connections",
+      "type": "matching",
+      "title": "Multi-Concept Connections",
+      "description": "Match concepts to their multiple connections across the module.",
+      "learningObjective": "Link disparate concepts.",
+      "theme": "purple",
+      "xpReward": 100,
+      "items": [
+        { "id": "70s", "text": "70S ribosomes", "match": "Antibiotic targets AND Mitochondria" },
+        { "id": "checkpoints", "text": "Cell cycle checkpoints", "match": "Cancer when failed" },
+        { "id": "fluid", "text": "Fluid mosaic", "match": "Transport and CF" },
+        { "id": "binary", "text": "Binary fission", "match": "Prokaryotes AND Mitochondria reproduction" }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "Which of the following correctly links a cellular structure to its function and related disease?",
+        "options": [
+          "Lysosome → Energy production → Diabetes",
+          "Mitochondrion → Protein synthesis → Cystic fibrosis",
+          "CFTR channel → Ion transport → Cystic fibrosis",
+          "Nucleolus → DNA storage → Down syndrome"
+        ],
+        "correctAnswer": "CFTR channel → Ion transport → Cystic fibrosis",
+        "rationale": "Integrated knowledge check. Structure-function-disease connection."
+      },
+      {
+        "id": "mcq-2",
+        "question": "The endosymbiotic theory is supported by the presence of:",
+        "options": [
+          "80S ribosomes in the nucleus",
+          "70S ribosomes in mitochondria",
+          "Cell walls in animal cells",
+          "Linear DNA in bacteria"
+        ],
+        "correctAnswer": "70S ribosomes in mitochondria",
+        "rationale": "Evolution-cell structure link. Mitochondria have bacterial-like 70S ribosomes."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Analyse how a defect in the cell membrane can lead to disease, using cystic fibrosis as an example. (4 marks)",
+        "marks": 4,
+        "markingCriteria": [
+          "1 mark: CF is caused by faulty/missing CFTR channel protein in membrane",
+          "1 mark: This affects transport of chloride ions/active transport/ion channel function",
+          "1 mark: Leads to osmotic imbalance/water not moving correctly/thick mucus accumulation",
+          "1 mark: Consequences for patient (blocked airways, digestive problems, infection risk)"
+        ],
+        "integration": "Membrane structure + Transport + Osmosis + Disease"
+      },
+      {
+        "id": "sa-2",
+        "question": "Evaluate the use of cell culture technology in the development of new cancer treatments. (3 marks)",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Allows testing of drugs on cancer cells in vitro (without harming patients/animals initially)",
+          "1 mark: Can determine cytotoxicity/drug effectiveness/mitotic index effects in controlled environment",
+          "1 mark: Limitations—cells in culture may behave differently than in body (2D vs 3D, lack of immune system)/ethical issues with cell sources/cost and technical expertise required"
+        ],
+        "integration": "Cell culture + Cell cycle + Medicine + Ethics"
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "Module 1 connects structure to function at every level (organelles → cells → tissues).",
+      "Cell cycle regulation prevents cancer; membrane transport maintains homeostasis.",
+      "Technology (microscopy, culture) enables medical advances (stem cells, antibiotics).",
+      "Endosymbiosis explains organelle origins; evolution connects all life.",
+      "HSC questions often require linking 2-3 concepts (e.g., membrane + transport + disease)."
+    ],
+    "keyPoints": [
+      "Integration: All concepts are connected",
+      "Structure → Function → Disease → Treatment",
+      "Technology enables medical progress",
+      "Evolution explains organelle origins",
+      "HSC requires synthesis of multiple concepts",
+      "Module 1 Complete: 20 lessons, 2000 XP"
+    ],
+    "diagrams": [
+      "Complete concept integration map",
+      "Module summary mind map"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["C", "B"],
+    "shortAnswer": [
+      "Cystic fibrosis is caused by a mutation in the CFTR gene, which codes for a channel protein in the epithelial cell membrane. This channel normally transports chloride ions out of cells. When the CFTR protein is defective or missing, chloride ion transport is impaired. This disrupts the normal osmotic movement of water, as water normally follows the movement of ions by osmosis. Less water leaves the cells, causing the mucus outside the cells to become thick and dehydrated. This thick mucus accumulates and blocks airways, leading to breathing difficulties and frequent infections, and also blocks pancreatic ducts, causing digestive problems and malabsorption of nutrients.",
+      "Cell culture technology is valuable for developing cancer treatments because it allows researchers to test the effects of potential drugs on cancer cells in vitro before testing in living organisms. This reduces the need for animal testing and improves safety for human trials. Researchers can determine cytotoxicity (cell-killing ability), measure effects on mitotic index, and screen many compounds efficiently. However, there are limitations: cells grown in 2D culture may behave differently from cells in the 3D environment of a tumour, cultured cells lack the immune system interactions present in the body, and maintaining cell lines requires technical expertise and sterile facilities. Additionally, there are ethical considerations regarding the source of some cell lines (e.g., HeLa cells and consent issues)."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson19",
+    "previousTitle": "Working Scientifically",
+    "next": null,
+    "nextTitle": null
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["synthesis", "integration", "HSC exam strategy", "concept map", "Module 1 complete", "cells as basis of life"],
+    "completion": {
+      "module": "Module 1: Cells as the Basis of Life",
+      "lessonsCompleted": 20,
+      "totalXp": 2000,
+      "status": "Complete"
+    }
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "concept-map",
+      "src": "assets/images/mod1/lesson20/concept-map.webp",
+      "alt": "Complete Module 1 concept integration map",
+      "caption": "Module 1 Concept Integration Map"
+    },
+    {
+      "id": "module-summary",
+      "src": "assets/images/mod1/lesson20/module-summary.webp",
+      "alt": "Summary of all 20 lessons",
+      "caption": "Module 1: Complete Journey"
+    },
+    {
+      "id": "hsc-strategy",
+      "src": "assets/images/mod1/lesson20/hsc-strategy.webp",
+      "alt": "HSC command terms guide",
+      "caption": "HSC Exam Command Terms"
+    },
+    {
+      "id": "completion-badge",
+      "src": "assets/images/mod1/lesson20/completion-badge.webp",
+      "alt": "Module 1 completion badge",
+      "caption": "Congratulations! Module 1 Complete"
+    }
+  ],
+  
+  "celebration": {
+    "title": "🎉 Module 1 Complete!",
+    "message": "You have successfully completed all 20 lessons of 'Cells as the Basis of Life'!",
+    "achievements": [
+      "20 Lessons Completed",
+      "2000 XP Earned",
+      "Module Master Badge"
+    ],
+    "nextSteps": [
+      "Review concept maps",
+      "Practice past HSC questions",
+      "Prepare for Module 2: Organisation of Living Things"
+    ]
+  }
+}
