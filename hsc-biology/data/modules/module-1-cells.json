@@ -1,0 +1,147 @@
+{
+  "id": "module-1-cells",
+  "title": "Module 1: Cells as the Basis of Life",
+  "description": "Understanding cell structure, function, and processes that sustain life",
+  "lessons": [
+    {
+      "id": "module-1-cells-lesson-1",
+      "number": 1,
+      "title": "Cell Theory and the Modern Understanding",
+      "status": "available",
+      "duration": "45 min"
+    },
+    {
+      "id": "module-1-cells-lesson-2",
+      "number": 2,
+      "title": "Prokaryotic vs Eukaryotic Cells",
+      "status": "available",
+      "duration": "50 min"
+    },
+    {
+      "id": "module-1-cells-lesson-3",
+      "number": 3,
+      "title": "Plant and Animal Cell Structures",
+      "status": "available",
+      "duration": "55 min"
+    },
+    {
+      "id": "module-1-cells-lesson-4",
+      "number": 4,
+      "title": "The Nucleus and Genetic Control",
+      "status": "available",
+      "duration": "45 min"
+    },
+    {
+      "id": "module-1-cells-lesson-5",
+      "number": 5,
+      "title": "Membrane Structure and Function",
+      "status": "available",
+      "duration": "50 min"
+    },
+    {
+      "id": "mod1-lesson06",
+      "number": 6,
+      "title": "Cell Organelles Working Together",
+      "status": "available",
+      "duration": "45 min"
+    },
+    {
+      "id": "mod1-lesson07",
+      "number": 7,
+      "title": "Enzyme Structure and Function",
+      "status": "available",
+      "duration": "50 min"
+    },
+    {
+      "id": "mod1-lesson08",
+      "number": 8,
+      "title": "Factors Affecting Enzyme Activity",
+      "status": "available",
+      "duration": "40 min"
+    },
+    {
+      "id": "mod1-lesson09",
+      "number": 9,
+      "title": "Enzyme Inhibition and Regulation",
+      "status": "available",
+      "duration": "45 min"
+    },
+    {
+      "id": "mod1-lesson10",
+      "number": 10,
+      "title": "ATP: The Energy Currency",
+      "status": "available",
+      "duration": "40 min"
+    },
+    {
+      "id": "mod1-lesson11",
+      "number": 11,
+      "title": "Cellular Respiration – Glycolysis",
+      "status": "available",
+      "duration": "45 min"
+    },
+    {
+      "id": "mod1-lesson12",
+      "number": 12,
+      "title": "Mitosis – Nuclear Division",
+      "status": "available",
+      "duration": "40 min"
+    },
+    {
+      "id": "mod1-lesson13",
+      "number": 13,
+      "title": "Cytokinesis and Significance of Cell Division",
+      "status": "available",
+      "duration": "50 min"
+    },
+    {
+      "id": "mod1-lesson14",
+      "number": 14,
+      "title": "Stem Cells and Differentiation",
+      "status": "available",
+      "duration": "50 min"
+    },
+    {
+      "id": "mod1-lesson15",
+      "number": 15,
+      "title": "Cell Culture Techniques and Applications",
+      "status": "available",
+      "duration": "40 min"
+    },
+    {
+      "id": "mod1-lesson16",
+      "number": 16,
+      "title": "Staining Techniques and Cell Viability Assays",
+      "status": "available",
+      "duration": "35 min"
+    },
+    {
+      "id": "mod1-lesson17",
+      "number": 17,
+      "title": "Microscopy Calculations and Measurement",
+      "status": "available",
+      "duration": "40 min"
+    },
+    {
+      "id": "mod1-lesson18",
+      "number": 18,
+      "title": "Scientific Drawing and Data Presentation",
+      "status": "available",
+      "duration": "35 min"
+    },
+    {
+      "id": "mod1-lesson19",
+      "number": 19,
+      "title": "Experimental Design and Controls",
+      "status": "available",
+      "duration": "45 min"
+    },
+    {
+      "id": "mod1-lesson20",
+      "number": 20,
+      "title": "Module 1 Capstone – Integration and Review",
+      "status": "available",
+      "duration": "60 min"
+    }
+  ]
+}

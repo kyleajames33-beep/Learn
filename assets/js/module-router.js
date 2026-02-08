@@ -19,7 +19,7 @@ const ModuleRouter = {
     }
 
     try {
-      const response = await fetch(`/assets/data/modules/${moduleId}.json`);
+      const response = await fetch(`/Learn/hsc-biology/data/modules/${moduleId}.json`);
       if (!response.ok) {
         throw new Error(`Failed to load module: ${moduleId}`);
       }
