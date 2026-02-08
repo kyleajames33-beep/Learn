@@ -29,8 +29,15 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   
   <!-- Lesson Data Schema & Renderer -->
-  <script src="js/lesson-data-schema.js"></script>
-  <script src="js/lesson-renderer.js?v=1770581123"></script>
+  <script src="js/lesson-data-schema.js?v=1770582000"></script>
+  <script src="js/lesson-renderer.js?v=1770582000"></script>
+  <script>
+    // Debug: Check if LessonRenderer loaded
+    console.log('LessonRenderer check:', typeof LessonRenderer);
+    if (typeof LessonRenderer !== 'undefined') {
+      console.log('LessonRenderer version:', LessonRenderer.version);
+    }
+  </script>
 </head>
 <body>
   <!-- Skip to content link for accessibility -->
