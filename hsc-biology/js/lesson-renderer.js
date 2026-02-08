@@ -6,6 +6,82 @@
  * Renders lesson data from JSON into the lesson template
  */
 
+/**
+ * ActivityLabeling - Simple labeling activity component
+ */
+const ActivityLabeling = {
+  render(activity, options = {}) {
+    const theme = options.theme || 'biology';
+    const items = activity.items || [];
+    
+    return `
+      <div class="activity-card theme-${theme}" data-activity="labeling">
+        <div class="activity-header">
+          <h3>
+            <i data-lucide="tag"></i>
+            ${activity.title || 'Labeling Activity'}
+          </h3>
+          ${activity.xpReward ? `<span class="xp-badge">+${activity.xpReward} XP</span>` : ''}
+        </div>
+        <div class="activity-content">
+          ${activity.description ? `<p class="activity-description">${activity.description}</p>` : ''}
+          <div class="labeling-container">
+            ${items.map((item, idx) => `
+              <div class="labeling-item" data-item-id="${item.id}">
+                <span class="labeling-number">${idx + 1}</span>
+                <input type="text" 
+                       class="labeling-input" 
+                       placeholder="Enter label..."
+                       data-correct="${item.correctLabel.toLowerCase()}">
+                <span class="labeling-hint">${item.hint || ''}</span>
+              </div>
+            `).join('')}
+          </div>
+          <button class="activity-submit-btn" data-activity-type="labeling">Check Answers</button>
+          <div class="activity-feedback"></div>
+        </div>
+      </div>
+    `;
+  },
+
+  bindEvents(document) {
+    document.querySelectorAll('[data-activity="labeling"]').forEach(container => {
+      const submitBtn = container.querySelector('.activity-submit-btn');
+      const feedback = container.querySelector('.activity-feedback');
+      
+      if (submitBtn && !submitBtn.dataset.bound) {
+        submitBtn.dataset.bound = 'true';
+        submitBtn.addEventListener('click', () => {
+          const items = container.querySelectorAll('.labeling-item');
+          let correct = 0;
+          
+          items.forEach(item => {
+            const input = item.querySelector('.labeling-input');
+            const userAnswer = input.value.trim().toLowerCase();
+            const correctAnswer = input.dataset.correct;
+            
+            if (userAnswer === correctAnswer) {
+              input.classList.add('correct');
+              input.classList.remove('incorrect');
+              correct++;
+            } else {
+              input.classList.add('incorrect');
+              input.classList.remove('correct');
+            }
+          });
+          
+          if (feedback) {
+            const total = items.length;
+            feedback.innerHTML = `<p class="feedback-message ${correct === total ? 'success' : 'partial'}">
+              You got ${correct} out of ${total} correct!
+            </p>`;
+          }
+        });
+      }
+    });
+  }
+};
+
 const LessonRenderer = {
   version: '1.1.0',
   
