@@ -37,6 +37,28 @@
       "file": "module-1-cells-lesson-3.json"
     },
     {
+      "id": "module-1-cells-lesson-4",
+      "title": "The Cell Membrane",
+      "module": "module-1-cells",
+      "moduleTitle": "Module 1: Cells",
+      "moduleNumber": 1,
+      "lessonNumber": 4,
+      "duration": "45 minutes",
+      "difficulty": "Intermediate",
+      "file": "module-1-cells-lesson-4.json"
+    },
+    {
+      "id": "module-1-cells-lesson-5",
+      "title": "Passive Transport",
+      "module": "module-1-cells",
+      "moduleTitle": "Module 1: Cells",
+      "moduleNumber": 1,
+      "lessonNumber": 5,
+      "duration": "45 minutes",
+      "difficulty": "Intermediate",
+      "file": "module-1-cells-lesson-5.json"
+    },
+    {
       "id": "module-5-heredity-lesson-1",
       "title": "Introduction to Heredity",
       "module": "module-5-heredity",
@@ -55,8 +77,8 @@
       "title": "Cells as the Basis of Life",
       "shortTitle": "Cells",
       "description": "Cell structure, function, and organization",
-      "totalLessons": 3,
-      "availableLessons": 3
+      "totalLessons": 8,
+      "availableLessons": 5
     },
     {
       "id": "module-5-heredity",

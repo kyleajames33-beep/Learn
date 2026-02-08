@@ -59,6 +59,20 @@ const LessonSchema = {
         items: { type: 'string', minLength: 5 }
       },
       
+      prerequisites: {
+        type: 'array',
+        default: [],
+        items: {
+          type: 'object',
+          required: ['lessonId'],
+          fields: {
+            lessonId: { type: 'string', pattern: '^module-[0-9]+-[a-z-]+-lesson-[0-9]+$' },
+            description: { type: 'string' },
+            required: { type: 'boolean', default: true }
+          }
+        }
+      },
+      
       engagementHook: {
         type: 'object',
         fields: {
