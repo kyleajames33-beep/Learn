@@ -1,0 +1,332 @@
+{
+  "id": "mod1-lesson11",
+  "title": "Lesson 11: The Cell Cycle and Interphase",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 11,
+  "description": "Understanding the cell cycle phases with focus on interphase (G1, S, G2). Students learn about cell growth, DNA replication, and checkpoint control.",
+  "duration": "50 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can describe the three phases of interphase (G1, S, G2) and the activities occurring in each.",
+    "Students can explain why interphase occupies the majority of the cell cycle time.",
+    "Students can interpret data showing the relative duration of cell cycle phases."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Cell cycle and interphase"
+  },
+  
+  "successCriteria": [
+    "I can list the events of G1, S, and G2 in correct order.",
+    "I can explain why the S phase is critical for accurate cell division.",
+    "I can calculate the percentage of time a cell spends in interphase given total cycle data."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "module-1-cells-lesson-4",
+      "description": "DNA structure/chromatin",
+      "required": true
+    },
+    {
+      "lessonId": "mod1-lesson09",
+      "description": "Cell membrane—nutrient transport for growth",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "The Waiting Game",
+    "content": "'Your skin replaces itself every 2–4 weeks. If you look at skin cells under a microscope, 90% of them look 'boring'—no chromosomes moving, no cells pinching in half. Are they sleeping? No. They're preparing for the most complex operation a cell performs: creating an exact copy of itself. Today we explore the preparation phase that takes up 90% of a cell's life.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Cell Cycle Overview",
+      "definition": "Interphase (G1, S, G2) + Mitotic phase (M phase: mitosis + cytokinesis). Interphase = ~90% of cycle."
+    },
+    {
+      "term": "G1 Phase (Gap 1)",
+      "definition": "Cell growth, synthesis of organelles and proteins, normal metabolic activities. 'Decision point' here determines if cell will divide."
+    },
+    {
+      "term": "S Phase (Synthesis)",
+      "definition": "DNA replication (chromosomes duplicated to form sister chromatids), synthesis of histones, centrosome duplication begins."
+    },
+    {
+      "term": "G2 Phase (Gap 2)",
+      "definition": "Continued growth, synthesis of proteins needed for mitosis (tubulin for spindle), checks DNA for errors before M phase begins."
+    },
+    {
+      "term": "Checkpoints",
+      "definition": "Surveillance mechanisms ensuring previous phase completed correctly before proceeding (simplified as 'quality control')."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "The cell rests during interphase",
+      "correction": "Interphase is highly active—cell is growing and replicating DNA. 'Gap' refers to gap between divisions, not inactivity."
+    },
+    {
+      "misconception": "DNA replication happens during mitosis",
+      "correction": "DNA replication is in S phase (interphase), not during M phase. Mitosis is separation of already-replicated DNA."
+    },
+    {
+      "misconception": "All cells divide at the same rate",
+      "correction": "Different cell types have different cycle lengths (skin cells fast, nerve cells slow/non-dividing)."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "cell-cycle-clock",
+      "type": "diagram",
+      "title": "The Cell Cycle Clock",
+      "icon": "clock",
+      "content": "Circular diagram showing Interphase (G1 → S → G2) taking up 90% of circle, M phase (mitosis) small segment. Pie chart style or linear timeline.",
+      "keyPoints": [
+        "G1 (growth)",
+        "S (DNA synthesis)",
+        "G2 (preparation/check)",
+        "M (division)"
+      ],
+      "example": "Cancer cells often have shortened G1 or lost checkpoints (connect to uncontrolled division).",
+      "checkForUnderstanding": "If a total cell cycle is 20 hours, approximately how many hours are spent in interphase? (Answer: ~18 hours).",
+      "image": {
+        "src": "assets/images/mod1/lesson11/cell-cycle-clock.webp",
+        "alt": "Circular diagram of cell cycle showing G1, S, G2 phases and M phase with time durations",
+        "caption": "The cell cycle: Interphase occupies ~90% of the cycle"
+      }
+    },
+    {
+      "id": "interphase-events",
+      "type": "grid",
+      "title": "Interphase Events",
+      "icon": "list",
+      "gridItems": [
+        {
+          "header": "Phase",
+          "items": ["G1", "S", "G2"]
+        },
+        {
+          "header": "Key Events",
+          "items": [
+            "Cell growth, organelle duplication, protein synthesis",
+            "DNA replication (chromosomes duplicated)",
+            "Final growth, spindle protein synthesis, DNA repair"
+          ]
+        },
+        {
+          "header": "Products/Outcomes",
+          "items": [
+            "Larger cell, more organelles",
+            "Sister chromatids formed, centrosomes duplicated",
+            "Cell ready for mitosis, checkpoint verification"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checkpoint-failure",
+      "type": "content",
+      "title": "When Checkpoints Fail",
+      "icon": "alert-triangle",
+      "content": "Brief introduction to p53 as 'guardian of the genome' (simplified). If DNA damage detected in G1 or G2, cell cycle pauses for repair. If damage too severe, cell undergoes apoptosis (programmed death—link to Lesson 6 lysosomes/apoptosis).",
+      "example": "Skin cancer (melanoma) from UV damage—cells with damaged DNA divide uncontrollably because checkpoints failed."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "cycle-ordering",
+      "type": "ordering",
+      "title": "Sequence the Cell Cycle",
+      "description": "Arrange the phases of the cell cycle in correct order.",
+      "learningObjective": "Sequence cell cycle phases.",
+      "theme": "teal",
+      "xpReward": 50,
+      "shuffleDisplay": true,
+      "items": [
+        { "id": "g1", "text": "G1", "correctPosition": 1 },
+        { "id": "s", "text": "S", "correctPosition": 2 },
+        { "id": "g2", "text": "G2", "correctPosition": 3 },
+        { "id": "prophase", "text": "Prophase", "correctPosition": 4 },
+        { "id": "metaphase", "text": "Metaphase", "correctPosition": 5 },
+        { "id": "anaphase", "text": "Anaphase", "correctPosition": 6 },
+        { "id": "telophase", "text": "Telophase", "correctPosition": 7 },
+        { "id": "cytokinesis", "text": "Cytokinesis", "correctPosition": 8 }
+      ]
+    },
+    {
+      "id": "cycle-calculations",
+      "type": "calculation",
+      "title": "Cell Cycle Timing Calculations",
+      "description": "Calculate time spent in each phase based on percentage data.",
+      "learningObjective": "Analyse cell cycle timing data.",
+      "theme": "purple",
+      "xpReward": 75,
+      "tolerance": 0.02,
+      "questions": [
+        {
+          "id": "calc-1",
+          "question": "If G1 occupies 50% of a 24-hour cell cycle, how many hours are spent in G1?",
+          "correctAnswer": 12,
+          "unit": "hours"
+        },
+        {
+          "id": "calc-2",
+          "question": "Given: G1=50%, S=30%, G2=15%, M=5%. What percentage of time is spent in interphase (G1+S+G2)?",
+          "correctAnswer": 95,
+          "unit": "%"
+        },
+        {
+          "id": "calc-3",
+          "question": "If S phase is 8 hours in a 20-hour cycle, what percentage is S phase?",
+          "correctAnswer": 40,
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "During which phase of the cell cycle does DNA replication occur?",
+        "options": [
+          "G1",
+          "S phase",
+          "G2",
+          "M phase"
+        ],
+        "correctAnswer": "S phase",
+        "rationale": "Core S phase definition. DNA synthesis/replication occurs during S phase of interphase."
+      },
+      {
+        "id": "mcq-2",
+        "question": "A cell spends approximately 90% of its time in:",
+        "options": [
+          "Mitosis",
+          "Cytokinesis",
+          "Interphase",
+          "Prophase"
+        ],
+        "correctAnswer": "Interphase",
+        "rationale": "Interphase proportion. G1 + S + G2 = ~90% of cell cycle."
+      },
+      {
+        "id": "mcq-3",
+        "question": "The primary purpose of the G2 phase is to:",
+        "options": [
+          "Replicate DNA",
+          "Ensure the cell is ready for division and check for DNA errors",
+          "Divide the cytoplasm",
+          "Separate chromosomes"
+        ],
+        "correctAnswer": "Ensure the cell is ready for division and check for DNA errors",
+        "rationale": "G2 checkpoint concept. Cell prepares for mitosis and verifies DNA integrity."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Describe the events occurring during the S phase of the cell cycle. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: DNA replication occurs / chromosomes are duplicated (forming sister chromatids)",
+          "1 mark: Synthesis of histone proteins / duplication of centrosomes (or cell prepares for division)"
+        ],
+        "commonError": "Mentioning chromosome separation (that's mitosis)."
+      },
+      {
+        "id": "sa-2",
+        "question": "Explain why interphase occupies the majority of the cell cycle time. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Cell must grow (increase mass, duplicate organelles) and replicate DNA accurately (S phase takes time)",
+          "1 mark: Preparation and checking mechanisms (G2) ensure accurate division/prevent errors (or mention synthesis of proteins needed for division)"
+        ],
+        "commonError": "Saying 'the cell is resting' rather than preparing."
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "The cell cycle consists of Interphase (G1, S, G2) and the M phase (mitosis and cytokinesis).",
+      "Interphase occupies ~90% of the cycle.",
+      "G1: Cell growth and organelle duplication.",
+      "S phase: DNA replication (chromosomes duplicated).",
+      "G2: Preparation for mitosis and final growth/checks."
+    ],
+    "keyPoints": [
+      "G1 = growth phase",
+      "S = synthesis (DNA replication)",
+      "G2 = preparation and checkpoint",
+      "Interphase is active, not resting",
+      "Checkpoints ensure accuracy"
+    ],
+    "diagrams": [
+      "Cell cycle clock diagram",
+      "Interphase events table"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["B", "C", "B"],
+    "shortAnswer": [
+      "During the S phase of the cell cycle, DNA replication occurs. Each chromosome is duplicated to form two identical sister chromatids joined at the centromere. Additionally, histone proteins are synthesised to package the new DNA, and centrosome duplication begins in preparation for cell division.",
+      "Interphase occupies the majority of the cell cycle because the cell must complete several critical processes before division. During G1, the cell grows and duplicates organelles. During S phase, DNA replication must occur accurately, which requires significant time to ensure faithful copying of the entire genome. During G2, the cell synthesises proteins needed for mitosis (such as tubulin for spindle fibres) and performs quality control checks to verify DNA integrity. These preparation steps are essential for producing healthy daughter cells."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson10",
+    "previousTitle": "Transport Across Membranes",
+    "next": "mod1-lesson12",
+    "nextTitle": "Mitosis – Nuclear Division"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["cell cycle", "interphase", "G1", "S phase", "G2", "DNA replication", "checkpoints", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "cell-cycle-clock",
+      "src": "assets/images/mod1/lesson11/cell-cycle-clock.webp",
+      "alt": "Circular diagram of cell cycle phases",
+      "caption": "The cell cycle clock showing interphase and M phase"
+    },
+    {
+      "id": "interphase-tem",
+      "src": "assets/images/mod1/lesson11/interphase-tem.webp",
+      "alt": "TEM image of cell in interphase",
+      "caption": "Cell in interphase - nucleus intact, chromatin diffuse"
+    },
+    {
+      "id": "dna-replication",
+      "src": "assets/images/mod1/lesson11/dna-replication.webp",
+      "alt": "Diagram showing DNA replication fork",
+      "caption": "DNA replication during S phase"
+    },
+    {
+      "id": "checkpoint-diagram",
+      "src": "assets/images/mod1/lesson11/checkpoint-diagram.webp",
+      "alt": "Diagram showing cell cycle checkpoints",
+      "caption": "Cell cycle checkpoint control"
+    }
+  ]
+}

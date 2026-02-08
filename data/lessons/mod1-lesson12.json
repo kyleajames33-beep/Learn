@@ -1,0 +1,366 @@
+{
+  "id": "mod1-lesson12",
+  "title": "Lesson 12: Mitosis – Nuclear Division",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 12,
+  "description": "Understanding the four stages of mitosis (PMAT): prophase, metaphase, anaphase, and telophase. Focus on chromosome behaviour and spindle fibre function.",
+  "duration": "50 minutes",
+  "difficulty": "Intermediate",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can describe the four stages of mitosis (prophase, metaphase, anaphase, telophase) in correct sequence.",
+    "Students can identify the key events occurring at each stage (chromosome condensation, spindle formation, alignment, separation).",
+    "Students can explain the significance of sister chromatid separation in maintaining chromosome number."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Mitosis and nuclear division"
+  },
+  
+  "successCriteria": [
+    "I can label the stages of mitosis from micrographs or diagrams.",
+    "I can describe what happens to the chromosomes and nuclear envelope during each stage.",
+    "I can explain why mitosis produces two genetically identical nuclei."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "mod1-lesson11",
+      "description": "Cell cycle, S phase—DNA already replicated",
+      "required": true
+    },
+    {
+      "lessonId": "mod1-lesson08",
+      "description": "Microtubules/cytoskeleton—form spindle",
+      "required": true
+    },
+    {
+      "lessonId": "module-1-cells-lesson-4",
+      "description": "Chromatin condenses to chromosomes",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "The Molecular Dance",
+    "content": "Show time-lapse video of cell dividing. 'Watch carefully—those X-shaped structures are your chromosomes, and they're performing the most precise dance in biology. One mistake, and the daughter cells get the wrong genetic instructions. Today we break down this dance into four steps: Prophase, Metaphase, Anaphase, Telophase (PMAT).'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Mitosis (M Phase)",
+      "definition": "Division of the nucleus into two genetically identical daughter nuclei. Maintains chromosome number (2n → 2n)."
+    },
+    {
+      "term": "Prophase",
+      "definition": "Chromatin condenses into visible chromosomes (each with two sister chromatids joined at centromere); nuclear envelope breaks down; spindle forms (microtubules from centrioles in animal cells)."
+    },
+    {
+      "term": "Metaphase",
+      "definition": "Chromosomes align at the cell equator (metaphase plate); spindle fibres attach to centromeres (kinetochores)."
+    },
+    {
+      "term": "Anaphase",
+      "definition": "Sister chromatids separate and are pulled to opposite poles by spindle fibres (now called daughter chromosomes)."
+    },
+    {
+      "term": "Telophase",
+      "definition": "Chromosomes arrive at poles, decondense (uncoil), nuclear envelopes reform; spindle disassembles."
+    },
+    {
+      "term": "Chromosome Number",
+      "definition": "Remains constant (diploid to diploid) because sister chromatids separate (each new cell gets complete set)."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "Mitosis is cell division",
+      "correction": "Mitosis is nuclear division only. Cytokinesis (Lesson 13) is cell/cytoplasm division."
+    },
+    {
+      "misconception": "Chromosomes only exist during mitosis",
+      "correction": "Chromosomes exist as chromatin all the time but are only visible as distinct structures during prophase-metaphase."
+    },
+    {
+      "misconception": "The cell splits in half during anaphase",
+      "correction": "Anaphase separates chromosomes; cell division (cytokinesis) happens later."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "chromosome-structure",
+      "type": "diagram",
+      "title": "Chromosome Structure During Mitosis",
+      "icon": "x",
+      "content": "Show duplicated chromosome (X-shape) with two sister chromatids joined at centromere. Label: chromatid, centromere, kinetochore (where spindle attaches). Show condensation from chromatin thread to chromosome.",
+      "keyPoints": [
+        "Each chromosome replicated in S phase consists of two sister chromatids",
+        "They separate in anaphase"
+      ],
+      "example": "Down syndrome can result from nondisjunction (failure to separate properly—preview error).",
+      "image": {
+        "src": "assets/images/mod1/lesson12/chromosome-structure.webp",
+        "alt": "Diagram showing chromosome condensation from chromatin to X-shaped chromosome",
+        "caption": "Chromosome structure: from chromatin to condensed chromosome"
+      }
+    },
+    {
+      "id": "mitosis-stages",
+      "type": "diagram",
+      "title": "The Four Stages of Mitosis",
+      "icon": "git-commit",
+      "content": "Four panels showing: (1) Prophase—condensing chromosomes, breaking nucleus; (2) Metaphase—alignment at middle; (3) Anaphase—V-shape chromosomes moving apart; (4) Telophase—two forming nuclei.",
+      "keyPoints": [
+        "PMAT sequence",
+        "Spindle microtubules attach and move chromosomes",
+        "Nuclear envelope dynamics"
+      ],
+      "example": "Whitefish blastula or onion root tip cells (standard mitosis microscopy specimens).",
+      "image": {
+        "src": "assets/images/mod1/lesson12/mitosis-stages.webp",
+        "alt": "Four panels showing prophase, metaphase, anaphase, and telophase",
+        "caption": "The four stages of mitosis (PMAT)"
+      }
+    },
+    {
+      "id": "stage-events",
+      "type": "grid",
+      "title": "Stage-by-Stage Events",
+      "icon": "list-ordered",
+      "gridItems": [
+        {
+          "header": "Stage",
+          "items": ["Prophase", "Metaphase", "Anaphase", "Telophase"]
+        },
+        {
+          "header": "Chromosome Behaviour",
+          "items": [
+            "Condense, become visible",
+            "Align at equator (metaphase plate)",
+            "Sister chromatids separate, move to poles",
+            "Decondense (uncoil) back to chromatin"
+          ]
+        },
+        {
+          "header": "Spindle/Nuclear Envelope",
+          "items": [
+            "Spindle forms; nuclear envelope breaks down",
+            "Spindle fibres attach to centromeres",
+            "Spindle fibres shorten, pull chromosomes",
+            "Nuclear envelopes reform around each set"
+          ]
+        }
+      ]
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "mitosis-ordering",
+      "type": "ordering",
+      "title": "Sequence Mitotic Stages",
+      "description": "Arrange the stages of mitosis in correct order.",
+      "learningObjective": "Sequence mitotic stages.",
+      "theme": "teal",
+      "xpReward": 50,
+      "shuffleDisplay": true,
+      "items": [
+        { "id": "prophase", "text": "Prophase", "correctPosition": 1 },
+        { "id": "metaphase", "text": "Metaphase", "correctPosition": 2 },
+        { "id": "anaphase", "text": "Anaphase", "correctPosition": 3 },
+        { "id": "telophase", "text": "Telophase", "correctPosition": 4 }
+      ]
+    },
+    {
+      "id": "metaphase-labeling",
+      "type": "labeling",
+      "title": "Identify Metaphase Structures",
+      "description": "Label the structures visible in metaphase.",
+      "learningObjective": "Identify structures in mitosis.",
+      "theme": "purple",
+      "xpReward": 50,
+      "image": {
+        "src": "assets/images/mod1/lesson12/metaphase-diagram.webp",
+        "alt": "Metaphase diagram showing aligned chromosomes"
+      },
+      "labels": [
+        {
+          "id": "chromosome",
+          "zone": { "x": 45, "y": 45, "width": 10, "height": 15 },
+          "correctText": "Chromosome",
+          "alternatives": ["Duplicated chromosome"],
+          "hint": "The X-shaped structure aligned at the middle"
+        },
+        {
+          "id": "sister-chromatid",
+          "zone": { "x": 42, "y": 42, "width": 5, "height": 10 },
+          "correctText": "Sister chromatid",
+          "alternatives": ["Chromatid"],
+          "hint": "One half of the duplicated chromosome"
+        },
+        {
+          "id": "centromere",
+          "zone": { "x": 48, "y": 50, "width": 4, "height": 4 },
+          "correctText": "Centromere",
+          "alternatives": ["Kinetochore region"],
+          "hint": "The constricted region where sister chromatids join"
+        },
+        {
+          "id": "spindle-fibre",
+          "zone": { "x": 30, "y": 50, "width": 15, "height": 3 },
+          "correctText": "Spindle fibre",
+          "alternatives": ["Microtubule", "Spindle"],
+          "hint": "The thread-like structure attaching to chromosomes"
+        },
+        {
+          "id": "metaphase-plate",
+          "zone": { "x": 20, "y": 52, "width": 60, "height": 2 },
+          "correctText": "Metaphase plate",
+          "alternatives": ["Equator", "Cell equator"],
+          "hint": "The imaginary line where chromosomes align"
+        }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "During which stage of mitosis do the sister chromatids separate and move to opposite poles?",
+        "options": [
+          "Prophase",
+          "Metaphase",
+          "Anaphase",
+          "Telophase"
+        ],
+        "correctAnswer": "Anaphase",
+        "rationale": "Anaphase definition. Sister chromatids are pulled apart toward opposite poles."
+      },
+      {
+        "id": "mcq-2",
+        "question": "The nuclear envelope breaks down during:",
+        "options": [
+          "Prophase",
+          "Metaphase",
+          "Anaphase",
+          "Cytokinesis"
+        ],
+        "correctAnswer": "Prophase",
+        "rationale": "Prophase events. Nuclear envelope disassembles to allow spindle access to chromosomes."
+      },
+      {
+        "id": "mcq-3",
+        "question": "A cell with 46 chromosomes enters mitosis. After S phase but before anaphase, each chromosome consists of:",
+        "options": [
+          "46 chromatids",
+          "46 chromosomes each with 2 sister chromatids",
+          "23 chromosomes",
+          "92 separate chromosomes"
+        ],
+        "correctAnswer": "46 chromosomes each with 2 sister chromatids",
+        "rationale": "Chromosome vs chromatid counting. After S phase: 46 chromosomes, 92 chromatids."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Describe the events occurring during metaphase of mitosis. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Chromosomes align at the cell equator (metaphase plate/middle of cell)",
+          "1 mark: Spindle fibres (microtubules) attach to the centromeres of chromosomes"
+        ],
+        "commonError": "Describing anaphase separation instead."
+      },
+      {
+        "id": "sa-2",
+        "question": "Explain why mitosis is described as producing 'genetically identical' daughter nuclei. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Sister chromatids are identical copies of each other (from DNA replication in S phase)",
+          "1 mark: When they separate in anaphase, each daughter nucleus receives an identical set/complement of chromosomes (same genetic information)"
+        ],
+        "commonError": "Saying 'the DNA is copied' without explaining the separation mechanism."
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "Mitosis = division of the nucleus (PMAT).",
+      "Prophase: Chromosomes condense; nuclear envelope breaks down; spindle forms.",
+      "Metaphase: Chromosomes line up at the equator.",
+      "Anaphase: Sister chromatids separate and move to opposite poles.",
+      "Telophase: Nuclear envelopes reform; chromosomes decondense."
+    ],
+    "keyPoints": [
+      "PMAT = Prophase, Metaphase, Anaphase, Telophase",
+      "Chromosomes visible only during mitosis",
+      "Sister chromatids separate in anaphase",
+      "Genetically identical daughter nuclei produced",
+      "Maintains chromosome number (2n → 2n)"
+    ],
+    "diagrams": [
+      "Four stages of mitosis",
+      "Chromosome structure with sister chromatids"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["C", "A", "B"],
+    "shortAnswer": [
+      "During metaphase, the chromosomes align at the cell equator (also called the metaphase plate), which is the middle of the cell. Spindle fibres (microtubules) attach to the centromeres of each chromosome at specialised protein structures called kinetochores. This alignment ensures that when the sister chromatids separate, each daughter cell will receive an identical set of chromosomes.",
+      "Mitosis produces genetically identical daughter nuclei because the sister chromatids are identical copies of each other, having been produced by DNA replication during the S phase of interphase. During anaphase, these sister chromatids separate and move to opposite poles of the cell. As a result, each daughter nucleus receives an identical complement of chromosomes with the same genetic information as the parent cell."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson11",
+    "previousTitle": "The Cell Cycle and Interphase",
+    "next": "mod1-lesson13",
+    "nextTitle": "Cytokinesis and Significance of Cell Division"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["mitosis", "PMAT", "prophase", "metaphase", "anaphase", "telophase", "sister chromatids", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "mitosis-stages",
+      "src": "assets/images/mod1/lesson12/mitosis-stages.webp",
+      "alt": "Four panels showing stages of mitosis",
+      "caption": "The four stages of mitosis"
+    },
+    {
+      "id": "chromosome-structure",
+      "src": "assets/images/mod1/lesson12/chromosome-structure.webp",
+      "alt": "Diagram showing chromosome with sister chromatids",
+      "caption": "Chromosome structure during mitosis"
+    },
+    {
+      "id": "metaphase-diagram",
+      "src": "assets/images/mod1/lesson12/metaphase-diagram.webp",
+      "alt": "Metaphase plate with aligned chromosomes",
+      "caption": "Metaphase: chromosomes aligned at equator"
+    },
+    {
+      "id": "anaphase-tem",
+      "src": "assets/images/mod1/lesson12/anaphase-tem.webp",
+      "alt": "TEM image showing anaphase with chromosomes moving",
+      "caption": "Anaphase: sister chromatids separating"
+    }
+  ]
+}
