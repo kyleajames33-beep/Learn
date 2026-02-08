@@ -876,7 +876,7 @@ const LessonRenderer = {
             <div class="info-grid-item">
               <h4>
                 <i data-lucide="${item.icon || 'check'}"></i>
-                ${item.title}
+                ${item.header || item.title || ''}
               </h4>
               <ul>
                 ${item.items ? item.items.map(i => `<li>${i}</li>`).join('') : ''}
@@ -884,6 +884,8 @@ const LessonRenderer = {
             </div>
           `).join('')}
         </div>
+        ${section.note ? `<p style="margin-top: 16px; font-style: italic; color: var(--text-tertiary);"><i data-lucide="info" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i>${section.note}</p>` : ''}
+        ${section.example ? `<div class="example-box" style="background: rgba(245, 158, 11, 0.1); padding: 12px; border-radius: 8px; margin-top: 12px; border-left: 4px solid var(--warning);"><strong>Example:</strong> ${section.example}</div>` : ''}
       </section>
     `;
   },
