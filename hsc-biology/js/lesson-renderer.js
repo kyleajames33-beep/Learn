@@ -814,6 +814,8 @@ const LessonRenderer = {
           return this.renderAccordionSection(section, icon);
         case 'worked-example':
           return this.renderWorkedExample(section, icon);
+        case 'diagram':
+          return this.renderDiagramSection(section, icon);
         default:
           return this.renderContentSection(section, icon);
       }
@@ -922,6 +924,55 @@ const LessonRenderer = {
         </div>
         ${section.content || ''}
       </div>
+    `;
+  },
+
+  /**
+   * Render a diagram section with image and key points
+   */
+  renderDiagramSection(section, icon) {
+    const image = section.image || {};
+    const keyPoints = section.keyPoints || [];
+    
+    return `
+      <section class="content-section reveal" id="${section.id}">
+        <h2>
+          <i data-lucide="${icon}"></i>
+          ${section.title}
+        </h2>
+        <p>${section.content || ''}</p>
+        
+        ${image.src ? `
+          <figure class="diagram-figure" style="margin: 24px 0; text-align: center;">
+            <img src="${image.src}" alt="${image.alt || ''}" style="max-width: 100%; border-radius: 12px; box-shadow: var(--shadow-md);">
+            ${image.caption ? `<figcaption style="margin-top: 12px; color: var(--text-secondary); font-size: 0.9rem;">${image.caption}</figcaption>` : ''}
+          </figure>
+        ` : ''}
+        
+        ${keyPoints.length > 0 ? `
+          <div class="key-points-box" style="background: var(--bg-elevated); padding: 20px; border-radius: 12px; margin: 20px 0; border-left: 4px solid var(--primary);">
+            <h4 style="margin-bottom: 12px; color: var(--primary);">
+              <i data-lucide="key" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 8px;"></i>
+              Key Points
+            </h4>
+            <ul style="padding-left: 20px; color: var(--text-secondary);">
+              ${keyPoints.map(point => `<li style="margin-bottom: 8px;">${point}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+        
+        ${section.example ? `
+          <div class="example-box" style="background: rgba(245, 158, 11, 0.1); padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid var(--warning);">
+            <strong><i data-lucide="lightbulb" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> Example:</strong> ${section.example}
+          </div>
+        ` : ''}
+        
+        ${section.checkForUnderstanding ? `
+          <div class="check-understanding" style="background: rgba(99, 102, 241, 0.1); padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid var(--secondary);">
+            <strong><i data-lucide="help-circle" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;"></i> Check for Understanding:</strong> ${section.checkForUnderstanding}
+          </div>
+        ` : ''}
+      </section>
     `;
   },
   
