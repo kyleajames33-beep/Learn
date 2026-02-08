@@ -764,6 +764,31 @@
       });
     });
   </script>
+  <!-- Module Router for Dynamic Lesson Loading -->
+  <script src="../../assets/js/module-router.js?v=1"></script>
+  <script>
+    // Load module data dynamically
+    document.addEventListener('DOMContentLoaded', async function() {
+      const module = await ModuleRouter.loadModule('module-1-cells');
+      if (!module) return;
+      
+      // Update lesson count in hero
+      const lessonCountEl = document.querySelector('.module-hero-meta .hero-meta-item span');
+      if (lessonCountEl && lessonCountEl.textContent.includes('Lessons')) {
+        const availableCount = module.lessons.filter(l => l.status === 'available').length;
+        lessonCountEl.textContent = `${availableCount} of ${module.totalLessons} Lessons`;
+      }
+      
+      // Update progress calculation
+      const progress = await ModuleRouter.getProgress('module-1-cells');
+      const progressFill = document.querySelector('.progress-bar-fill');
+      const progressText = document.querySelector('.progress-text');
+      
+      if (progressFill) progressFill.style.width = progress.percentage + '%';
+      if (progressText) progressText.textContent = `${progress.completed}/${progress.total} lessons completed (${progress.percentage}%)`;
+    });
+  </script>
+  
   <script>
     // Initialize Lucide icons
     lucide.createIcons();
