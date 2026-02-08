@@ -1484,10 +1484,19 @@ const LessonRenderer = {
   initRevealAnimations() {
     const reveals = document.querySelectorAll('.reveal');
     
+    // Immediately make elements that are already in viewport visible
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      }
+    });
+    
+    // Set up observer for elements that come into view later
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
@@ -1851,12 +1860,6 @@ const LessonRenderer = {
     });
   }
 };
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  LessonRenderer.init();
-  LessonRenderer.loadLessonFromURL();
-});
 
 // Export for module environments
 if (typeof module !== 'undefined' && module.exports) {

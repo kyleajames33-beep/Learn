@@ -7,9 +7,11 @@
 const CACHE_NAME = 'science-hub-v1';
 
 // Assets to cache on install (critical assets only)
+// Use relative paths to work on GitHub Pages subdirectory deployments
+// Service worker is at /assets/js/, so paths are relative to that
 const PRECACHE_ASSETS = [
-  '/assets/css/global.css',
-  '/assets/js/main.js',
+  '../css/global.css',  // from /assets/js/ to /assets/css/
+  './main.js',          // same directory
 ];
 
 // ========================================

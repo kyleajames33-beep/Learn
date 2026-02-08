@@ -563,10 +563,23 @@ function setupAccordions() {
 // SERVICE WORKER REGISTRATION
 // ========================================
 
+// Capture script URL synchronously — document.currentScript is null inside async callbacks
+const _mainJsUrl = document.currentScript && document.currentScript.src;
+
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./assets/js/service-worker.js')
+    window.addEventListener('load', async () => {
+      // Unregister any stale service workers first
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      for (const reg of registrations) {
+        await reg.unregister();
+        console.log('[SW] Unregistered stale worker:', reg.scope);
+      }
+
+      if (!_mainJsUrl) return;
+      const swPath = new URL('service-worker.js', _mainJsUrl).href;
+
+      navigator.serviceWorker.register(swPath)
         .then((registration) => {
           console.log('[SW] Registered:', registration.scope);
         })
