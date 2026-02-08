@@ -138,11 +138,26 @@
   <script src="../assets/js/xp.js"></script>
   <script src="../assets/js/achievements.js"></script>
   
-  <!-- Initialize Lucide Icons -->
+  <!-- Initialize Lesson Renderer -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Lucide Icons
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
+      }
+      
+      // Load the lesson
+      if (typeof LessonRenderer !== 'undefined') {
+        console.log('Initializing LessonRenderer...');
+        LessonRenderer.loadLessonFromURL();
+      } else {
+        console.error('LessonRenderer not loaded!');
+        document.getElementById('main-content').innerHTML = `
+          <div style="padding: 48px; text-align: center;">
+            <h2>Error Loading Lesson</h2>
+            <p>Lesson renderer failed to load. Please refresh the page.</p>
+          </div>
+        `;
       }
     });
   </script>
