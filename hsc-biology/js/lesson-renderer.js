@@ -82,6 +82,177 @@ const ActivityLabeling = {
   }
 };
 
+/**
+ * ActivityOrdering - Simple ordering/sequencing activity component
+ */
+const ActivityOrdering = {
+  render(activity, options = {}) {
+    const theme = options.theme || 'biology';
+    const items = activity.items || [];
+    
+    return `
+      <div class="activity-card theme-${theme}" data-activity="ordering">
+        <div class="activity-header">
+          <h3>
+            <i data-lucide="arrow-up-down"></i>
+            ${activity.title || 'Ordering Activity'}
+          </h3>
+          ${activity.xpReward ? `<span class="xp-badge">+${activity.xpReward} XP</span>` : ''}
+        </div>
+        <div class="activity-content">
+          ${activity.description ? `<p class="activity-description">${activity.description}</p>` : ''}
+          <div class="ordering-container">
+            ${items.map((item, idx) => `
+              <div class="ordering-item" data-item-id="${item.id}" data-order="${item.correctOrder}">
+                <span class="order-number">${idx + 1}</span>
+                <span class="order-content">${item.content}</span>
+                <div class="order-controls">
+                  <button class="order-btn up" data-action="up"><i data-lucide="chevron-up"></i></button>
+                  <button class="order-btn down" data-action="down"><i data-lucide="chevron-down"></i></button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <button class="activity-submit-btn" data-activity-type="ordering">Check Order</button>
+          <div class="activity-feedback"></div>
+        </div>
+      </div>
+    `;
+  },
+
+  bindEvents(document) {
+    document.querySelectorAll('[data-activity="ordering"]').forEach(container => {
+      const itemsContainer = container.querySelector('.ordering-container');
+      
+      // Handle up/down buttons
+      container.querySelectorAll('.order-btn').forEach(btn => {
+        if (!btn.dataset.bound) {
+          btn.dataset.bound = 'true';
+          btn.addEventListener('click', (e) => {
+            const item = e.target.closest('.ordering-item');
+            const action = e.target.closest('.order-btn').dataset.action;
+            
+            if (action === 'up' && item.previousElementSibling) {
+              itemsContainer.insertBefore(item, item.previousElementSibling);
+            } else if (action === 'down' && item.nextElementSibling) {
+              itemsContainer.insertBefore(item.nextElementSibling, item);
+            }
+            
+            // Update order numbers
+            container.querySelectorAll('.ordering-item').forEach((el, idx) => {
+              el.querySelector('.order-number').textContent = idx + 1;
+            });
+          });
+        }
+      });
+      
+      // Handle check button
+      const submitBtn = container.querySelector('.activity-submit-btn');
+      const feedback = container.querySelector('.activity-feedback');
+      
+      if (submitBtn && !submitBtn.dataset.bound) {
+        submitBtn.dataset.bound = 'true';
+        submitBtn.addEventListener('click', () => {
+          const items = container.querySelectorAll('.ordering-item');
+          let correct = 0;
+          
+          items.forEach((item, idx) => {
+            const correctOrder = parseInt(item.dataset.order);
+            if (correctOrder === idx + 1) {
+              item.classList.add('correct');
+              item.classList.remove('incorrect');
+              correct++;
+            } else {
+              item.classList.add('incorrect');
+              item.classList.remove('correct');
+            }
+          });
+          
+          if (feedback) {
+            const total = items.length;
+            feedback.innerHTML = `<p class="feedback-message ${correct === total ? 'success' : 'partial'}">
+              You got ${correct} out of ${total} in correct order!
+            </p>`;
+          }
+        });
+      }
+    });
+  }
+};
+
+/**
+ * ActivityFillBlank - Fill in the blank activity component
+ */
+const ActivityFillBlank = {
+  render(activity, options = {}) {
+    const theme = options.theme || 'biology';
+    const blanks = activity.blanks || [];
+    let text = activity.text || '';
+    
+    // Replace [blank] placeholders with input fields
+    blanks.forEach((blank, idx) => {
+      text = text.replace(
+        '[blank]',
+        `<input type="text" class="fill-blank-input" data-blank-id="${blank.id}" data-correct="${blank.answer.toLowerCase()}" placeholder="...">`
+      );
+    });
+    
+    return `
+      <div class="activity-card theme-${theme}" data-activity="fillBlank">
+        <div class="activity-header">
+          <h3>
+            <i data-lucide="edit-3"></i>
+            ${activity.title || 'Fill in the Blanks'}
+          </h3>
+          ${activity.xpReward ? `<span class="xp-badge">+${activity.xpReward} XP</span>` : ''}
+        </div>
+        <div class="activity-content">
+          ${activity.description ? `<p class="activity-description">${activity.description}</p>` : ''}
+          <div class="fill-blank-text">${text}</div>
+          <button class="activity-submit-btn" data-activity-type="fillBlank">Check Answers</button>
+          <div class="activity-feedback"></div>
+        </div>
+      </div>
+    `;
+  },
+
+  bindEvents(document) {
+    document.querySelectorAll('[data-activity="fillBlank"]').forEach(container => {
+      const submitBtn = container.querySelector('.activity-submit-btn');
+      const feedback = container.querySelector('.activity-feedback');
+      
+      if (submitBtn && !submitBtn.dataset.bound) {
+        submitBtn.dataset.bound = 'true';
+        submitBtn.addEventListener('click', () => {
+          const inputs = container.querySelectorAll('.fill-blank-input');
+          let correct = 0;
+          
+          inputs.forEach(input => {
+            const userAnswer = input.value.trim().toLowerCase();
+            const correctAnswer = input.dataset.correct;
+            
+            if (userAnswer === correctAnswer) {
+              input.classList.add('correct');
+              input.classList.remove('incorrect');
+              correct++;
+            } else {
+              input.classList.add('incorrect');
+              input.classList.remove('correct');
+            }
+          });
+          
+          if (feedback) {
+            const total = inputs.length;
+            feedback.innerHTML = `<p class="feedback-message ${correct === total ? 'success' : 'partial'}">
+              You got ${correct} out of ${total} correct!
+            </p>`;
+          }
+        });
+      }
+    });
+  }
+};
+
 const LessonRenderer = {
   version: '1.1.0',
   
