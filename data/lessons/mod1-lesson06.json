@@ -1,0 +1,335 @@
+{
+  "id": "mod1-lesson06",
+  "title": "Lesson 6: Lysosomes, Peroxisomes and Cellular Digestion",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 6,
+  "description": "Understanding lysosomes and peroxisomes as membrane-bound organelles responsible for cellular digestion. Students learn about autophagy, heterophagy, and the clinical significance of lysosomal storage diseases.",
+  "duration": "50 minutes",
+  "difficulty": "Intermediate",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can describe the structure and function of lysosomes (membrane-bound sac containing digestive enzymes).",
+    "Students can distinguish between autophagy (digesting own material) and heterophagy/phagocytosis (digesting foreign material).",
+    "Students can explain why lysosomes have an acidic interior and how this protects the cell."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Lysosomes, peroxisomes, and cellular digestion"
+  },
+  
+  "successCriteria": [
+    "I can label a lysosome and list three types of molecules it digests.",
+    "I can explain what happens when a lysosome fuses with a food vacuole or a damaged mitochondrion.",
+    "I can predict what would happen if lysosomal enzymes leaked into the cytoplasm."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "module-1-cells-lesson-5",
+      "description": "Endomembrane system, Golgi apparatus, vesicle transport",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "The Recycling Centre",
+    "content": "Show an image of a child with Tay-Sachs disease (developmental delay, neurodegeneration). Explain: 'This child lacks one specific enzyme in their lysosomes. Without it, cellular 'trash' piles up in the brain. Lysosomes are the cell's recycling centres—when they fail, the cell fills with waste and dies. Today we explore how these 'suicide sacs' are actually essential for life.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Lysosomes",
+      "definition": "Membrane-bound organelles containing hydrolytic enzymes (acid hydrolases) that break down carbohydrates, lipids, proteins, and nucleic acids. Formed by budding from the Golgi apparatus."
+    },
+    {
+      "term": "Acidic Environment",
+      "definition": "Lysosomes maintain pH ~4.5–5.0 (more acidic than cytoplasm). This acidity activates the enzymes and keeps them contained—if leaked, they are less active at neutral pH."
+    },
+    {
+      "term": "Autophagy",
+      "definition": "Lysosomes digest worn-out organelles or cell components (recycling)."
+    },
+    {
+      "term": "Heterophagy/Phagocytosis",
+      "definition": "Lysosomes fuse with vesicles containing food or bacteria (digestion)."
+    },
+    {
+      "term": "Tay-Sachs Disease",
+      "definition": "Genetic disorder where a lysosomal enzyme is missing, causing fatty substances to accumulate in brain cells—demonstrates importance of lysosomal function."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "Lysosomes digest the cell from the inside out randomly",
+      "correction": "Emphasise they are membrane-bound and only fuse with specific targets (vacuoles or damaged organelles) under control."
+    },
+    {
+      "misconception": "Lysosomes are found only in animal cells",
+      "correction": "Plant cells have lysosome-like vacuoles with digestive functions, though typical lysosomes are animal cell features."
+    },
+    {
+      "misconception": "Lysosomes make enzymes",
+      "correction": "Lysosomes contain enzymes made by the rough ER and packaged by the Golgi (link to Lesson 5)."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "lysosome-formation",
+      "type": "diagram",
+      "title": "Lysosome Formation and Structure",
+      "icon": "recycle",
+      "content": "Golgi apparatus budding off vesicle → primary lysosome → fusing with food vacuole/phagosome → digestion. Shows single membrane enclosing enzymes.",
+      "keyPoints": [
+        "Buds from trans-Golgi",
+        "Contains hydrolytic enzymes",
+        "Acidic pH",
+        "Membrane keeps enzymes contained"
+      ],
+      "example": "White blood cell engulfing bacterium—lysosome fuses with phagosome to destroy invader.",
+      "checkForUnderstanding": "Why must lysosomal enzymes be enclosed by a membrane? (To protect cytoplasm from digestion.)",
+      "image": {
+        "src": "assets/images/mod1/lesson06/lysosome-formation.webp",
+        "alt": "Diagram showing Golgi apparatus budding vesicles that form lysosomes and fuse with vacuoles",
+        "caption": "Lysosome formation from the Golgi apparatus and fusion with target vesicles"
+      }
+    },
+    {
+      "id": "autophagy-vs-heterophagy",
+      "type": "grid",
+      "title": "Autophagy vs Heterophagy",
+      "icon": "columns",
+      "gridItems": [
+        {
+          "header": "Feature",
+          "items": ["Target", "Vesicle Source", "Purpose"]
+        },
+        {
+          "header": "Autophagy",
+          "items": [
+            "Cell's own damaged organelles/cytoplasm",
+            "Membrane wraps around own material",
+            "Recycling, renewal"
+          ]
+        },
+        {
+          "header": "Heterophagy (Phagocytosis)",
+          "items": [
+            "Foreign material (bacteria, food particles)",
+            "Plasma membrane engulfs external material",
+            "Nutrition, defence"
+          ]
+        }
+      ],
+      "example": "Autophagy during starvation (recycling proteins for energy); heterophagy in amoeba feeding or immune response."
+    },
+    {
+      "id": "lysosomal-diseases",
+      "type": "content",
+      "title": "Lysosomal Storage Diseases",
+      "icon": "alert-triangle",
+      "content": "Tay-Sachs (missing enzyme hexosaminidase A → GM2 ganglioside accumulates in brain neurons). Pompe disease (glycogen accumulates in muscles). Shows genetic basis of organelle function.",
+      "example": "Enzyme replacement therapy for some lysosomal diseases (intravenous enzymes taken up by cells)."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "digestion-classification",
+      "type": "matching",
+      "title": "Sort the Digestion Type",
+      "description": "Classify each scenario as autophagy or heterophagy.",
+      "learningObjective": "Distinguish lysosomal processes.",
+      "theme": "orange",
+      "xpReward": 50,
+      "items": [
+        { "id": "liver-mitochondrion", "text": "A liver cell digests its own damaged mitochondrion", "match": "Autophagy" },
+        { "id": "macrophage-virus", "text": "A macrophage destroys a virus", "match": "Heterophagy" },
+        { "id": "starvation-proteins", "text": "Cell recycles proteins during starvation", "match": "Autophagy" }
+      ],
+      "correctApproach": "Own material = Autophagy; Foreign = Heterophagy."
+    },
+    {
+      "id": "lysosome-labeling",
+      "type": "labeling",
+      "title": "Label the Lysosome Fusion",
+      "description": "Identify structures in the lysosome fusion diagram.",
+      "learningObjective": "Identify lysosome fusion components.",
+      "theme": "teal",
+      "xpReward": 50,
+      "image": {
+        "src": "assets/images/mod1/lesson06/lysosome-fusion.webp",
+        "alt": "Diagram showing lysosome approaching food vacuole for fusion"
+      },
+      "labels": [
+        {
+          "id": "lysosome-membrane",
+          "zone": { "x": 20, "y": 40, "width": 15, "height": 10 },
+          "correctText": "Lysosome membrane",
+          "alternatives": ["Membrane"],
+          "hint": "The boundary that keeps enzymes contained"
+        },
+        {
+          "id": "digestive-enzymes",
+          "zone": { "x": 25, "y": 45, "width": 10, "height": 8 },
+          "correctText": "Digestive enzymes",
+          "alternatives": ["Enzymes", "Acid hydrolases"],
+          "hint": "Hydrolytic enzymes inside the lysosome"
+        },
+        {
+          "id": "food-vacuole",
+          "zone": { "x": 60, "y": 40, "width": 20, "height": 15 },
+          "correctText": "Food vacuole",
+          "alternatives": ["Phagosome", "Vacuole"],
+          "hint": "The vesicle containing material to be digested"
+        },
+        {
+          "id": "digested-products",
+          "zone": { "x": 75, "y": 60, "width": 15, "height": 10 },
+          "correctText": "Digested products",
+          "alternatives": ["Amino acids", "Sugars", "Products"],
+          "hint": "Small molecules released after digestion (amino acids, sugars)"
+        }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "Lysosomes contain digestive enzymes that function best at:",
+        "options": [
+          "Neutral pH (same as cytoplasm)",
+          "Acidic pH",
+          "Alkaline pH",
+          "No specific pH requirement"
+        ],
+        "correctAnswer": "Acidic pH",
+        "rationale": "Acidity activates enzymes and containment. pH ~4.5-5.0 activates acid hydrolases."
+      },
+      {
+        "id": "mcq-2",
+        "question": "Which organelle packages the digestive enzymes that are found in lysosomes?",
+        "options": [
+          "Rough ER",
+          "Golgi apparatus",
+          "Nucleus",
+          "Mitochondria"
+        ],
+        "correctAnswer": "Golgi apparatus",
+        "rationale": "Link to endomembrane system. Rough ER makes enzymes; Golgi packages them into lysosomes."
+      },
+      {
+        "id": "mcq-3",
+        "question": "When a lysosome fuses with a vacuole containing a bacterium, this process is an example of:",
+        "options": [
+          "Autophagy",
+          "Heterophagy",
+          "Exocytosis",
+          "Binary fission"
+        ],
+        "correctAnswer": "Heterophagy",
+        "rationale": "Distinguishing digestion types. Foreign material = heterophagy; own material = autophagy."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Outline the role of lysosomes in digesting material within the cell. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Contain hydrolytic/digestive enzymes that break down macromolecules (proteins, lipids, carbs)",
+          "1 mark: Fuse with vacuoles containing food/foreign material (heterophagy) or damaged organelles (autophagy)"
+        ],
+        "commonError": "Saying they 'make' enzymes rather than contain them."
+      },
+      {
+        "id": "sa-2",
+        "question": "Explain why the membrane surrounding a lysosome is essential for the survival of the cell. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Membrane separates/isolates digestive enzymes from cytoplasm/prevents self-digestion",
+          "1 mark: Enzymes are acidic and would damage cytoplasm if released/maintains different pH"
+        ],
+        "commonError": "Only mentioning 'protection' without explaining enzyme damage."
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "Lysosomes are membrane-bound sacs containing digestive enzymes (acid hydrolases).",
+      "They bud from the Golgi apparatus.",
+      "They have an acidic interior (pH ~5) to activate enzymes.",
+      "Autophagy = digesting own material; Heterophagy = digesting foreign material.",
+      "Lysosomal storage diseases (e.g., Tay-Sachs) occur when enzymes are missing."
+    ],
+    "keyPoints": [
+      "Lysosomes contain hydrolytic enzymes for breaking down macromolecules",
+      "Acidic pH (~4.5-5.0) activates enzymes and protects cytoplasm",
+      "Membrane keeps enzymes contained - leakage would digest the cell",
+      "Tay-Sachs: missing hexosaminidase A → brain damage"
+    ],
+    "diagrams": [
+      "Lysosome formation: Golgi → primary lysosome → fusion",
+      "Autophagy vs heterophagy comparison"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["B", "B", "B"],
+    "shortAnswer": [
+      "Lysosomes are membrane-bound organelles that contain hydrolytic (acid hydrolase) enzymes capable of breaking down macromolecules including proteins, lipids, carbohydrates and nucleic acids. They fuse with vacuoles containing foreign material (heterophagy) or with vesicles containing damaged organelles (autophagy) to digest the contents into smaller molecules that can be recycled by the cell.",
+      "The membrane surrounding a lysosome is essential because it isolates the digestive enzymes from the cytoplasm, preventing the cell from digesting itself. The membrane maintains an acidic interior (pH ~4.5-5.0) which activates the enzymes. If the membrane were breached and enzymes leaked into the cytoplasm (which has neutral pH), they would be less active but could still cause significant damage to cellular components."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "module-1-cells-lesson-5",
+    "previousTitle": "The Endomembrane System",
+    "next": "mod1-lesson07",
+    "nextTitle": "Mitochondria, Chloroplasts and Endosymbiosis"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["lysosomes", "peroxisomes", "autophagy", "heterophagy", "Tay-Sachs", "cellular digestion", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "lysosome-formation",
+      "src": "assets/images/mod1/lesson06/lysosome-formation.webp",
+      "alt": "Diagram of lysosome formation from Golgi and fusion process",
+      "caption": "Lysosome formation and fusion with target vesicles"
+    },
+    {
+      "id": "lysosome-fusion",
+      "src": "assets/images/mod1/lesson06/lysosome-fusion.webp",
+      "alt": "Diagram showing lysosome fusing with food vacuole",
+      "caption": "Lysosome fusion with phagosome for digestion"
+    },
+    {
+      "id": "autophagy-tem",
+      "src": "assets/images/mod1/lesson06/autophagy-tem.webp",
+      "alt": "TEM image showing autophagy in progress",
+      "caption": "Transmission electron micrograph of autophagy"
+    },
+    {
+      "id": "tay-sachs-brain",
+      "src": "assets/images/mod1/lesson06/tay-sachs-brain.webp",
+      "alt": "Brain tissue comparison showing Tay-Sachs disease effects",
+      "caption": "Neuronal damage in lysosomal storage disease"
+    }
+  ]
+}

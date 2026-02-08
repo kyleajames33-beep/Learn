@@ -1,0 +1,353 @@
+{
+  "id": "mod1-lesson10",
+  "title": "Lesson 10: Transport Across Membranes",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 10,
+  "description": "Understanding transport mechanisms across cell membranes including passive transport, active transport, osmosis, and bulk transport.",
+  "duration": "50 minutes",
+  "difficulty": "Intermediate",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can distinguish between passive transport (simple diffusion, facilitated diffusion, osmosis) and active transport.",
+    "Students can explain the role of membrane proteins in facilitated diffusion and active transport.",
+    "Students can describe bulk transport mechanisms (endocytosis and exocytosis)."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Transport across membranes"
+  },
+  
+  "successCriteria": [
+    "I can define osmosis as the movement of water across a selectively permeable membrane.",
+    "I can explain why active transport requires energy and moves substances against their concentration gradient.",
+    "I can give examples of substances crossing by simple diffusion, facilitated diffusion, and active transport."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "mod1-lesson09",
+      "description": "Membrane structure, phospholipid bilayer, proteins",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "The Cell's Border Control",
+    "content": "'How does a glucose molecule get into your muscle cells after you eat, when the cell already has high glucose inside? Why can't water just rush in and burst the cell? And how does a white blood cell eat a bacterium? Today we explore how the membrane controls what enters and leaves through different transport strategies.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Passive Transport",
+      "definition": "No energy (ATP) required. Movement down concentration gradient (high to low)."
+    },
+    {
+      "term": "Simple Diffusion",
+      "definition": "Small, non-polar molecules (O₂, CO₂, lipids) pass through phospholipid bilayer."
+    },
+    {
+      "term": "Facilitated Diffusion",
+      "definition": "Polar/charged molecules (glucose, ions) use channel or carrier proteins."
+    },
+    {
+      "term": "Osmosis",
+      "definition": "Diffusion of water across membrane (high water concentration/low solute to low water/high solute)."
+    },
+    {
+      "term": "Active Transport",
+      "definition": "Requires ATP. Moves substances against concentration gradient (low to high). Uses carrier proteins (pumps)."
+    },
+    {
+      "term": "Bulk Transport",
+      "definition": "For large molecules/particles. Endocytosis (brings in), Exocytosis (releases out)."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "Active transport means fast and passive means slow",
+      "correction": "Speed varies; the difference is energy use and direction relative to gradient."
+    },
+    {
+      "misconception": "Osmosis is only about concentration of solute",
+      "correction": "It's about water moving toward areas of lower water potential (higher solute), but emphasise water movement specifically."
+    },
+    {
+      "misconception": "Facilitated diffusion doesn't use proteins",
+      "correction": "Explicitly requires channel or carrier proteins—distinguish from simple diffusion."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "passive-vs-active",
+      "type": "grid",
+      "title": "Passive vs Active Transport",
+      "icon": "arrow-right-left",
+      "gridItems": [
+        {
+          "header": "Feature",
+          "items": ["Energy", "Direction", "Proteins", "Examples"]
+        },
+        {
+          "header": "Passive Transport",
+          "items": [
+            "No ATP required",
+            "Down concentration gradient (high→low)",
+            "Facilitated needs proteins; simple does not",
+            "Oxygen, CO₂, water (osmosis), glucose (facilitated)"
+          ]
+        },
+        {
+          "header": "Active Transport",
+          "items": [
+            "Requires ATP",
+            "Against gradient (low→high)",
+            "Requires carrier/pump proteins",
+            "Mineral ions, amino acids, glucose (intestine/kidney)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osmosis-diagram",
+      "type": "diagram",
+      "title": "Osmosis",
+      "icon": "droplets",
+      "content": "Two beakers separated by membrane. Side A: low solute (more water). Side B: high solute (less water). Arrow showing water movement from A to B. Cell in hypotonic solution (swelling) vs hypertonic (shrinking).",
+      "keyPoints": [
+        "Water moves toward higher solute concentration",
+        "Affects cell volume",
+        "Lysis/cytolysis vs crenation in animal cells",
+        "Turgidity/plasmolysis in plant cells"
+      ],
+      "example": "Red blood cells in distilled water (burst) vs seawater (shrink); plant cells in freshwater (turgid) vs salt water (plasmolysed).",
+      "image": {
+        "src": "assets/images/mod1/lesson10/osmosis.webp",
+        "alt": "Diagram showing osmosis with beakers and cells in different solutions",
+        "caption": "Osmosis: water movement across membranes"
+      }
+    },
+    {
+      "id": "bulk-transport",
+      "type": "diagram",
+      "title": "Bulk Transport",
+      "icon": "package-open",
+      "content": "Endocytosis (membrane wrapping around particle → vesicle) vs Exocytosis (vesicle fusing with membrane → release).",
+      "keyPoints": [
+        "Endocytosis brings large materials in",
+        "Exocytosis secretes materials out",
+        "Requires membrane flexibility"
+      ],
+      "example": "Phagocytosis by white blood cells (immune defence); secretion of digestive enzymes by pancreatic cells (exocytosis).",
+      "image": {
+        "src": "assets/images/mod1/lesson10/bulk-transport.webp",
+        "alt": "Diagram comparing endocytosis and exocytosis",
+        "caption": "Bulk transport mechanisms"
+      }
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "transport-classification",
+      "type": "matching",
+      "title": "Sort Transport Types",
+      "description": "Classify each scenario by transport mechanism.",
+      "learningObjective": "Sort transport types.",
+      "theme": "orange",
+      "xpReward": 50,
+      "items": [
+        { "id": "oxygen", "text": "Oxygen entering lung cell", "match": "Simple diffusion" },
+        { "id": "water", "text": "Water moving into root hair cell", "match": "Osmosis" },
+        { "id": "glut", "text": "Glucose entering liver cell via GLUT protein", "match": "Facilitated diffusion" },
+        { "id": "sodium", "text": "Sodium pumped out of nerve cell", "match": "Active transport" },
+        { "id": "phagocytosis", "text": "White blood cell engulfs bacterium", "match": "Bulk transport" }
+      ]
+    },
+    {
+      "id": "osmosis-prediction",
+      "type": "multiple-choice",
+      "title": "Predict Osmotic Outcomes",
+      "description": "Predict water movement and cell appearance in different solutions.",
+      "learningObjective": "Predict osmotic outcomes.",
+      "theme": "teal",
+      "xpReward": 75,
+      "questions": [
+        {
+          "id": "rbc-water",
+          "question": "Red blood cell placed in distilled water (pure water) will:",
+          "options": [
+            "Shrink (crenation)",
+            "Stay the same",
+            "Swell and burst (lysis)",
+            "Divide"
+          ],
+          "correctAnswer": "Swell and burst (lysis)"
+        },
+        {
+          "id": "plant-salt",
+          "question": "Plant cell placed in concentrated salt water will:",
+          "options": [
+            "Become turgid",
+            "Undergo plasmolysis (shrink from wall)",
+            "Divide rapidly",
+            "Absorb more water"
+          ],
+          "correctAnswer": "Undergo plasmolysis (shrink from wall)"
+        },
+        {
+          "id": "bacteria-sugar",
+          "question": "Bacterium in hypertonic sugar solution will:",
+          "options": [
+            "Grow larger",
+            "Undergo crenation (shrink)",
+            "Reproduce faster",
+            "Absorb sugar"
+          ],
+          "correctAnswer": "Undergo crenation (shrink)"
+        }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "Which process requires ATP to move molecules across the membrane?",
+        "options": [
+          "Simple diffusion",
+          "Osmosis",
+          "Facilitated diffusion",
+          "Active transport"
+        ],
+        "correctAnswer": "Active transport",
+        "rationale": "Energy requirement definition. Active transport moves substances against their concentration gradient using ATP."
+      },
+      {
+        "id": "mcq-2",
+        "question": "The movement of water molecules across a selectively permeable membrane from an area of high water concentration to low water concentration is called:",
+        "options": [
+          "Diffusion",
+          "Active transport",
+          "Osmosis",
+          "Endocytosis"
+        ],
+        "correctAnswer": "Osmosis",
+        "rationale": "Specific definition of osmosis - the diffusion of water across a membrane."
+      },
+      {
+        "id": "mcq-3",
+        "question": "A substance moves across the membrane down its concentration gradient using a carrier protein but does not use ATP. This is:",
+        "options": [
+          "Simple diffusion",
+          "Facilitated diffusion",
+          "Active transport",
+          "Exocytosis"
+        ],
+        "correctAnswer": "Facilitated diffusion",
+        "rationale": "Facilitated diffusion characteristics - uses proteins, no ATP, down gradient."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Distinguish between simple diffusion and facilitated diffusion. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Simple diffusion = direct movement through phospholipid bilayer, no proteins needed (small/non-polar molecules)",
+          "1 mark: Facilitated diffusion = requires channel or carrier proteins, for molecules that cannot cross lipid bilayer (polar/charged/large)"
+        ],
+        "commonError": "Saying facilitated is 'helped by ATP' (confusing with active)."
+      },
+      {
+        "id": "sa-2",
+        "question": "Explain why active transport is necessary for root hair cells to absorb mineral ions from soil. (3 marks)",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Soil water has lower concentration of mineral ions than root hair cells (or concentration is against gradient)",
+          "1 mark: Therefore minerals must be moved against concentration gradient (from low to high)",
+          "1 mark: This requires energy (ATP) and specific carrier proteins (pumps)"
+        ],
+        "commonError": "Describing diffusion instead; not mentioning concentration gradient."
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "Passive transport requires no energy; moves down concentration gradient (high to low).",
+      "Simple diffusion: small/non-polar through bilayer; Facilitated: uses proteins for polar/large molecules.",
+      "Osmosis: diffusion of water across membrane (toward higher solute).",
+      "Active transport: requires ATP; moves against gradient (low to high); uses pumps.",
+      "Endocytosis (cell eating/drinking) and exocytosis (secretion) move large materials."
+    ],
+    "keyPoints": [
+      "Simple diffusion = no proteins, small/non-polar",
+      "Facilitated = proteins required, polar/large",
+      "Active = ATP required, against gradient",
+      "Osmosis = water moves to higher solute concentration",
+      "Lysis (burst) vs crenation (shrink) vs plasmolysis"
+    ],
+    "diagrams": [
+      "Passive vs active transport comparison",
+      "Osmosis in different solutions"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["D", "C", "B"],
+    "shortAnswer": [
+      "Simple diffusion is the movement of small, non-polar molecules (such as oxygen, carbon dioxide, and lipids) directly through the phospholipid bilayer without the help of proteins. Facilitated diffusion is the movement of polar, charged, or large molecules (such as glucose and ions) that cannot cross the lipid bilayer on their own. These molecules require channel proteins or carrier proteins to assist their movement across the membrane. Both processes move substances down their concentration gradient and do not require ATP.",
+      "Active transport is necessary for root hair cells because the concentration of mineral ions in the soil water is lower than inside the root hair cells. This means minerals must be absorbed against their concentration gradient, from an area of low concentration to high concentration. Moving substances against their gradient requires energy in the form of ATP. Additionally, specific carrier proteins (pumps) are needed to bind and transport these ions across the membrane. Without active transport, the plant would be unable to accumulate sufficient minerals for growth."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson09",
+    "previousTitle": "The Cell Membrane – Fluid Mosaic Structure",
+    "next": null,
+    "nextTitle": null
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["transport", "diffusion", "osmosis", "active transport", "facilitated diffusion", "endocytosis", "exocytosis", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "osmosis",
+      "src": "assets/images/mod1/lesson10/osmosis.webp",
+      "alt": "Diagram showing osmosis with cells in different solutions",
+      "caption": "Osmosis and cell response to different solutions"
+    },
+    {
+      "id": "bulk-transport",
+      "src": "assets/images/mod1/lesson10/bulk-transport.webp",
+      "alt": "Diagram of endocytosis and exocytosis",
+      "caption": "Bulk transport mechanisms"
+    },
+    {
+      "id": "transport-proteins",
+      "src": "assets/images/mod1/lesson10/transport-proteins.webp",
+      "alt": "Diagram showing channel and carrier proteins",
+      "caption": "Membrane proteins in transport"
+    },
+    {
+      "id": "phagocytosis",
+      "src": "assets/images/mod1/lesson10/phagocytosis.webp",
+      "alt": "Micrograph showing white blood cell engulfing bacterium",
+      "caption": "Phagocytosis in action"
+    }
+  ]
+}

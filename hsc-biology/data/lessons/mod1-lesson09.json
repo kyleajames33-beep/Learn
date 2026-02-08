@@ -1,0 +1,344 @@
+{
+  "id": "mod1-lesson09",
+  "title": "Lesson 9: The Cell Membrane – Fluid Mosaic Structure",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 9,
+  "description": "Understanding the fluid mosaic model of cell membranes including phospholipid bilayer structure, membrane proteins, cholesterol, and glycoproteins.",
+  "duration": "50 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can describe the fluid mosaic model of the cell membrane (phospholipid bilayer, proteins, cholesterol, carbohydrates).",
+    "Students can explain the arrangement of phospholipids (hydrophilic heads outward, hydrophobic tails inward) based on the aqueous environment.",
+    "Students can identify the roles of membrane proteins (transport, recognition, enzymes) and cholesterol (fluidity)."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Cell membrane structure and fluid mosaic model"
+  },
+  
+  "successCriteria": [
+    "I can draw a phospholipid bilayer with proteins embedded.",
+    "I can explain why the membrane is 'fluid' and 'mosaic.'",
+    "I can state the function of glycoproteins in cell recognition."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "mod1-lesson08",
+      "description": "Cell structure foundation",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "The Border Control",
+    "content": "'The cell membrane is the border between life and chaos. It must let nutrients in, keep toxins out, and recognise friend from foe—all while being flexible enough to move. How does a layer of fat molecules manage this? Today we explore the fluid mosaic that keeps your cells alive.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Fluid Mosaic Model",
+      "definition": "The membrane is a flexible (fluid) layer of phospholipids with proteins embedded (mosaic pattern)."
+    },
+    {
+      "term": "Phospholipid Bilayer",
+      "definition": "Two layers of phospholipids. Heads (hydrophilic/water-loving) face aqueous environment inside and outside cell. Tails (hydrophobic/water-fearing) face each other in membrane interior."
+    },
+    {
+      "term": "Membrane Proteins",
+      "definition": "Integral (spanning membrane): Channels for transport. Peripheral (on surface): Enzymes or recognition."
+    },
+    {
+      "term": "Cholesterol",
+      "definition": "Fits between phospholipids, stabilises membrane, affects fluidity (prevents over-solidification at low temperatures)."
+    },
+    {
+      "term": "Glycoproteins/Glycolipids",
+      "definition": "Carbohydrate chains on membrane surface for cell-cell recognition (e.g., immune system 'self' recognition, ABO blood types)."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "The membrane is solid/static",
+      "correction": "Emphasise 'fluid'—components move laterally (fluidity)."
+    },
+    {
+      "misconception": "Proteins are just stuck on the surface",
+      "correction": "Many span the membrane (integral), not just sit on top."
+    },
+    {
+      "misconception": "Cholesterol is always bad",
+      "correction": "In membranes it's essential for stability; dietary cholesterol is different context."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "phospholipid-bilayer",
+      "type": "diagram",
+      "title": "The Phospholipid Bilayer",
+      "icon": "layers",
+      "content": "Two layers of phospholipids (circles with two tails) arranged heads-out, tails-in. Proteins embedded (some spanning, some surface), cholesterol molecules between phospholipids, carbohydrate chains on outer surface.",
+      "keyPoints": [
+        "Hydrophilic phosphate heads",
+        "Hydrophobic fatty acid tails",
+        "Barrier properties",
+        "Proteins embedded"
+      ],
+      "example": "Artificial liposomes used in drug delivery (mRNA vaccines use lipid bilayers similar to cell membranes).",
+      "image": {
+        "src": "assets/images/mod1/lesson09/fluid-mosaic.webp",
+        "alt": "Diagram of fluid mosaic model showing phospholipid bilayer with proteins",
+        "caption": "The fluid mosaic model of the cell membrane"
+      }
+    },
+    {
+      "id": "membrane-components",
+      "type": "grid",
+      "title": "Membrane Components",
+      "icon": "grid-3x3",
+      "gridItems": [
+        {
+          "header": "Component",
+          "items": ["Phospholipids", "Proteins", "Cholesterol", "Carbohydrates"]
+        },
+        {
+          "header": "Structure",
+          "items": [
+            "Bilayer, heads out/tails in",
+            "Integral (span) or Peripheral (surface)",
+            "Between phospholipids",
+            "Attached to proteins/lipids (outer only)"
+          ]
+        },
+        {
+          "header": "Function",
+          "items": [
+            "Barrier, controls entry/exit",
+            "Transport, enzymes, receptors",
+            "Stabilises fluidity",
+            "Cell recognition, self markers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abo-blood-groups",
+      "type": "content",
+      "title": "ABO Blood Groups",
+      "icon": "droplet",
+      "content": "Carbohydrates on red blood cell surface determine blood type (A, B, AB, O). Immune system recognises these as 'self.' Transfusion mismatch causes immune reaction because membrane markers don't match.",
+      "example": "Blood typing for transfusions."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "membrane-labeling",
+      "type": "labeling",
+      "title": "Label the Fluid Mosaic",
+      "description": "Identify components in the membrane diagram.",
+      "learningObjective": "Identify membrane components.",
+      "theme": "teal",
+      "xpReward": 50,
+      "image": {
+        "src": "assets/images/mod1/lesson09/fluid-mosaic.webp",
+        "alt": "Fluid mosaic diagram for labeling"
+      },
+      "labels": [
+        {
+          "id": "phospholipid-head",
+          "zone": { "x": 25, "y": 20, "width": 10, "height": 8 },
+          "correctText": "Phospholipid head",
+          "alternatives": ["Hydrophilic head", "Head"],
+          "hint": "Round part facing water - hydrophilic"
+        },
+        {
+          "id": "phospholipid-tail",
+          "zone": { "x": 25, "y": 28, "width": 10, "height": 15 },
+          "correctText": "Phospholipid tail",
+          "alternatives": ["Hydrophobic tail", "Fatty acid tail", "Tail"],
+          "hint": "Two lines facing interior - hydrophobic"
+        },
+        {
+          "id": "integral-protein",
+          "zone": { "x": 50, "y": 30, "width": 8, "height": 25 },
+          "correctText": "Integral protein",
+          "alternatives": ["Transmembrane protein", "Channel protein", "Protein"],
+          "hint": "Spans entire membrane - for transport"
+        },
+        {
+          "id": "cholesterol",
+          "zone": { "x": 70, "y": 35, "width": 8, "height": 8 },
+          "correctText": "Cholesterol",
+          "alternatives": ["Cholesterol molecule"],
+          "hint": "Small molecule between phospholipids - stabilises fluidity"
+        },
+        {
+          "id": "glycoprotein",
+          "zone": { "x": 40, "y": 15, "width": 8, "height": 8 },
+          "correctText": "Glycoprotein",
+          "alternatives": ["Carbohydrate chain", "Sugar chain"],
+          "hint": "Branched chains on outer surface - for cell recognition"
+        }
+      ]
+    },
+    {
+      "id": "component-matching",
+      "type": "matching",
+      "title": "Match Components to Functions",
+      "description": "Match membrane components to their functions.",
+      "learningObjective": "Match components to functions.",
+      "theme": "purple",
+      "xpReward": 50,
+      "items": [
+        { "id": "phospholipids", "text": "Phospholipids", "match": "Selective barrier" },
+        { "id": "carbohydrates", "text": "Carbohydrates", "match": "Cell recognition" },
+        { "id": "integral", "text": "Integral protein", "match": "Transport channel" },
+        { "id": "cholesterol", "text": "Cholesterol", "match": "Fluidity control" }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "In the fluid mosaic model of the cell membrane, the 'mosaic' refers to:",
+        "options": [
+          "The phospholipids arranged in a pattern",
+          "The proteins embedded in the phospholipid bilayer",
+          "The cholesterol covering the surface",
+          "The carbohydrates inside the membrane"
+        ],
+        "correctAnswer": "The proteins embedded in the phospholipid bilayer",
+        "rationale": "Mosaic = scattered proteins embedded in the phospholipid bilayer."
+      },
+      {
+        "id": "mcq-2",
+        "question": "The hydrophobic tails of phospholipids face:",
+        "options": [
+          "The aqueous environment outside the cell",
+          "The aqueous cytoplasm inside the cell",
+          "Each other in the interior of the membrane",
+          "The cholesterol molecules only"
+        ],
+        "correctAnswer": "Each other in the interior of the membrane",
+        "rationale": "Hydrophobic exclusion from water - tails face each other in membrane interior."
+      },
+      {
+        "id": "mcq-3",
+        "question": "Glycoproteins on the cell surface are important for:",
+        "options": [
+          "Energy production",
+          "Cell-to-cell recognition",
+          "Transport of water-soluble molecules",
+          "Maintaining membrane thickness"
+        ],
+        "correctAnswer": "Cell-to-cell recognition",
+        "rationale": "Glycocalyx function. Carbohydrate chains act as identification markers."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Describe the arrangement of phospholipids in the cell membrane and explain how this arrangement creates a barrier to water-soluble substances. (3 marks)",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Phospholipids arranged in a bilayer (two layers)",
+          "1 mark: Hydrophilic heads face outward (aqueous environment) and hydrophobic tails face inward/together",
+          "1 mark: Hydrophobic core prevents water-soluble/hydrophilic substances crossing easily (barrier properties)"
+        ],
+        "commonError": "Not mentioning the hydrophobic core as the barrier."
+      },
+      {
+        "id": "sa-2",
+        "question": "Explain why the cell membrane is described as 'fluid.' (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Phospholipids can move laterally (side to side) within the layer",
+          "1 mark: Proteins can move within the membrane (or membrane is flexible/dynamic, not rigid)"
+        ],
+        "commonError": "Saying 'it contains water' or 'it is liquid.'"
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "The cell membrane follows the fluid mosaic model: phospholipid bilayer with embedded proteins.",
+      "Phospholipids have hydrophilic heads (outer) and hydrophobic tails (inner).",
+      "Proteins function in transport, recognition, and as enzymes.",
+      "Cholesterol stabilises membrane fluidity.",
+      "Carbohydrates on the outer surface (glycoproteins/glycolipids) are involved in cell recognition."
+    ],
+    "keyPoints": [
+      "Fluid = phospholipids can move laterally",
+      "Mosaic = proteins embedded throughout",
+      "Hydrophilic heads face water (inside/outside)",
+      "Hydrophobic tails face each other (barrier)",
+      "ABO blood groups determined by membrane carbohydrates"
+    ],
+    "diagrams": [
+      "Fluid mosaic model with labeled components",
+      "Phospholipid structure showing head and tails"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["B", "C", "B"],
+    "shortAnswer": [
+      "Phospholipids are arranged in a bilayer (two layers). The hydrophilic (water-loving) phosphate heads face outward toward the aqueous environments inside and outside the cell, while the hydrophobic (water-fearing) fatty acid tails face inward toward each other. This arrangement creates a hydrophobic core in the centre of the membrane that acts as a barrier, preventing water-soluble/hydrophilic substances from crossing easily while allowing lipid-soluble substances to pass through.",
+      "The cell membrane is described as 'fluid' because the phospholipid molecules are not fixed in place but can move laterally (side to side) within their layer. Additionally, the proteins embedded in the membrane can also move within the phospholipid bilayer. This gives the membrane flexibility and allows it to change shape, rather than being a rigid structure."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson08",
+    "previousTitle": "Cytoskeleton and Cell Walls",
+    "next": "mod1-lesson10",
+    "nextTitle": "Transport Across Membranes"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["cell membrane", "fluid mosaic", "phospholipid bilayer", "hydrophilic", "hydrophobic", "glycoproteins", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "fluid-mosaic",
+      "src": "assets/images/mod1/lesson09/fluid-mosaic.webp",
+      "alt": "Diagram of fluid mosaic model",
+      "caption": "The fluid mosaic model of cell membrane"
+    },
+    {
+      "id": "phospholipid",
+      "src": "assets/images/mod1/lesson09/phospholipid.webp",
+      "alt": "Diagram of phospholipid molecule",
+      "caption": "Phospholipid structure with hydrophilic head and hydrophobic tails"
+    },
+    {
+      "id": "membrane-tem",
+      "src": "assets/images/mod1/lesson09/membrane-tem.webp",
+      "alt": "TEM image of cell membrane showing bilayer",
+      "caption": "Transmission electron micrograph of membrane"
+    },
+    {
+      "id": "abo-blood",
+      "src": "assets/images/mod1/lesson09/abo-blood.webp",
+      "alt": "Diagram showing ABO blood group antigens",
+      "caption": "ABO blood group glycoproteins on red blood cells"
+    }
+  ]
+}

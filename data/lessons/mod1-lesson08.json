@@ -1,0 +1,299 @@
+{
+  "id": "mod1-lesson08",
+  "title": "Lesson 8: Cytoskeleton and Cell Walls",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 8,
+  "description": "Understanding the cytoskeleton's role in cell structure and movement, and comparing cell wall composition across bacteria, fungi, plants, and animals.",
+  "duration": "50 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can describe the structure and function of the cytoskeleton (microtubules, microfilaments).",
+    "Students can compare the cell wall composition of plants (cellulose), fungi (chitin), and bacteria (peptidoglycan).",
+    "Students can explain why animal cells lack cell walls and how the cytoskeleton provides support instead."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Cytoskeleton and cell walls"
+  },
+  
+  "successCriteria": [
+    "I can name two components of the cytoskeleton and their functions.",
+    "I can state the chemical composition of plant, fungal, and bacterial cell walls.",
+    "I can explain the advantages and disadvantages of having a cell wall."
+  ],
+  
+  "prerequisites": [
+    {
+      "lessonId": "mod1-lesson07",
+      "description": "Organelle structure",
+      "required": true
+    }
+  ],
+  
+  "engagementHook": {
+    "title": "The Bone and Muscle of the Cell",
+    "content": "Show video of amoeba moving (crawling) vs. plant cell with rigid walls. 'How does the amoeba change shape without a wall? And why can trees grow 100m tall without bones? Today we explore the cytoskeleton (cellular muscles and bones) and the walls that surround cells.'"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Cytoskeleton",
+      "definition": "Network of protein filaments providing shape, support, and movement. Includes microtubules, microfilaments, and intermediate filaments."
+    },
+    {
+      "term": "Microtubules",
+      "definition": "Hollow tubes (tubulin protein). Form cilia, flagella (9+2 arrangement), spindle fibres for cell division, and tracks for organelle movement."
+    },
+    {
+      "term": "Microfilaments (Actin)",
+      "definition": "Solid threads. Muscle contraction, cell division (cleavage furrow), amoeboid movement."
+    },
+    {
+      "term": "Cell Walls",
+      "definition": "Rigid outer layers outside the plasma membrane. Plants: cellulose; Fungi: chitin; Bacteria: peptidoglycan; Animals: none."
+    },
+    {
+      "term": "Plasmodesmata",
+      "definition": "Channels through plant cell walls connecting adjacent cells."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "Cell walls are alive/metabolically active",
+      "correction": "Cell walls are non-living secretions outside the plasma membrane. The living part is the cell membrane and cytoplasm."
+    },
+    {
+      "misconception": "All cell walls are the same",
+      "correction": "Emphasise the three different chemicals (cellulose, chitin, peptidoglycan) and that animal cells lack them entirely."
+    },
+    {
+      "misconception": "Cytoskeleton is only for movement",
+      "correction": "Also for structure and shape—like a skeleton for the cell."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "cytoskeleton-network",
+      "type": "diagram",
+      "title": "The Cytoskeleton Network",
+      "icon": "network",
+      "content": "Cell showing microtubules (radiating from centre), microfilaments (cortex/mesh), intermediate filaments (structural).",
+      "keyPoints": [
+        "Microtubules (hollow, tubulin) for shape and transport",
+        "Microfilaments (actin) for movement and division",
+        "No cell wall in animals"
+      ],
+      "example": "Cancer drugs (taxol) target microtubules to stop cell division; cystic fibrosis affects microtubule transport (cilia in lungs).",
+      "image": {
+        "src": "assets/images/mod1/lesson08/cytoskeleton.webp",
+        "alt": "Diagram showing microtubules, microfilaments, and intermediate filaments",
+        "caption": "The cytoskeleton network"
+      }
+    },
+    {
+      "id": "cell-wall-comparison",
+      "type": "grid",
+      "title": "Cell Wall Comparison",
+      "icon": "columns",
+      "gridItems": [
+        {
+          "header": "Organism",
+          "items": ["Bacteria", "Fungi", "Plants", "Animals"]
+        },
+        {
+          "header": "Wall Component",
+          "items": ["Peptidoglycan", "Chitin", "Cellulose", "None"]
+        },
+        {
+          "header": "Structure",
+          "items": ["Rigid mesh", "Tough, flexible", "Fibrous, rigid", "Flexible membrane"]
+        },
+        {
+          "header": "Function",
+          "items": ["Protection, shape", "Support, protection", "Structural support, prevents osmotic lysis", "Allows movement, phagocytosis"]
+        }
+      ]
+    },
+    {
+      "id": "cilia-flagella",
+      "type": "content",
+      "title": "Cilia and Flagella (Eukaryotic)",
+      "icon": "move",
+      "content": "Microtubule-based structures (9+2 arrangement) for cell movement. Different from bacterial flagella (protein filament, no microtubules—recall Lesson 1).",
+      "example": "Tracheal cilia sweep mucus (with trapped dust/bacteria) out of lungs; sperm flagella for swimming."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "cytoskeleton-matching",
+      "type": "matching",
+      "title": "Match Cytoskeleton Components",
+      "description": "Match cytoskeleton components to their functions.",
+      "learningObjective": "Match components to functions.",
+      "theme": "purple",
+      "xpReward": 50,
+      "items": [
+        { "id": "microtubules", "text": "Microtubules", "match": "Form spindle fibres/cilia/flagella" },
+        { "id": "microfilaments", "text": "Microfilaments", "match": "Muscle contraction/cell division" },
+        { "id": "intermediate", "text": "Intermediate filaments", "match": "Skin strength" }
+      ]
+    },
+    {
+      "id": "wall-classification",
+      "type": "matching",
+      "title": "Identify Wall Types",
+      "description": "Sort organisms by their cell wall composition.",
+      "learningObjective": "Identify wall types.",
+      "theme": "teal",
+      "xpReward": 50,
+      "items": [
+        { "id": "e-coli", "text": "E. coli", "match": "Peptidoglycan" },
+        { "id": "mushroom", "text": "Mushroom", "match": "Chitin" },
+        { "id": "grass", "text": "Grass", "match": "Cellulose" },
+        { "id": "human-skin", "text": "Human skin cell", "match": "No wall" }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "Which of the following is a component of the cytoskeleton?",
+        "options": [
+          "Cell wall",
+          "Microtubule",
+          "Chloroplast",
+          "Nucleolus"
+        ],
+        "correctAnswer": "Microtubule",
+        "rationale": "Basic cytoskeleton identification. Microtubules, microfilaments, and intermediate filaments make up the cytoskeleton."
+      },
+      {
+        "id": "mcq-2",
+        "question": "The cell walls of fungi are composed of:",
+        "options": [
+          "Cellulose",
+          "Chitin",
+          "Peptidoglycan",
+          "Protein"
+        ],
+        "correctAnswer": "Chitin",
+        "rationale": "Distinguishing wall types. Plants = cellulose, Fungi = chitin, Bacteria = peptidoglycan."
+      },
+      {
+        "id": "mcq-3",
+        "question": "Animal cells lack cell walls, which allows them to:",
+        "options": [
+          "Perform photosynthesis",
+          "Change shape and engulf particles by phagocytosis",
+          "Withstand high pressure",
+          "Store large amounts of water"
+        ],
+        "correctAnswer": "Change shape and engulf particles by phagocytosis",
+        "rationale": "Functional advantage of no wall. Flexibility allows movement and phagocytosis."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Compare the cell wall composition of bacteria and plant cells. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Bacterial walls contain peptidoglycan",
+          "1 mark: Plant walls contain cellulose (fibrous polysaccharide providing rigidity)"
+        ],
+        "commonError": "Stating both have cellulose."
+      },
+      {
+        "id": "sa-2",
+        "question": "Describe the role of microtubules in eukaryotic cells. (2 marks)",
+        "marks": 2,
+        "markingCriteria": [
+          "1 mark: Provide structural support/maintain cell shape OR form tracks for organelle movement",
+          "1 mark: Form spindle fibres during cell division OR form structure of cilia and flagella (9+2 arrangement)"
+        ],
+        "commonError": "Confusing with microfilaments/actin."
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "The cytoskeleton includes microtubules (shape, transport, division) and microfilaments (movement).",
+      "Plant cell walls contain cellulose; fungal walls contain chitin; bacterial walls contain peptidoglycan.",
+      "Animal cells lack cell walls, allowing flexibility and movement.",
+      "Eukaryotic cilia and flagella contain microtubules (9+2 structure).",
+      "Cell walls are non-living structures outside the cell membrane."
+    ],
+    "keyPoints": [
+      "Microtubules = hollow tubes made of tubulin",
+      "Microfilaments = actin fibres for muscle and movement",
+      "9+2 arrangement in eukaryotic flagella (different from bacterial)",
+      "Cellulose vs chitin vs peptidoglycan"
+    ],
+    "diagrams": [
+      "Cytoskeleton network showing three filament types",
+      "Cell wall comparison table"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["B", "B", "B"],
+    "shortAnswer": [
+      "Bacterial cell walls are composed of peptidoglycan, which forms a rigid mesh structure that provides protection and shape. Plant cell walls are composed of cellulose, a fibrous polysaccharide that provides rigidity and structural support while preventing the cell from bursting in hypotonic solutions.",
+      "Microtubules are hollow tubes made of tubulin protein that provide structural support and maintain cell shape. They also form the spindle fibres during cell division and make up the internal structure of cilia and flagella (arranged in a 9+2 pattern). Additionally, they act as tracks for organelle movement within the cell."
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson07",
+    "previousTitle": "Mitochondria, Chloroplasts and Endosymbiosis",
+    "next": "mod1-lesson09",
+    "nextTitle": "The Cell Membrane – Fluid Mosaic Structure"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-08",
+    "lastModified": "2026-02-08",
+    "version": "1.0.0",
+    "tags": ["cytoskeleton", "microtubules", "microfilaments", "cell walls", "cellulose", "chitin", "peptidoglycan", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "cytoskeleton",
+      "src": "assets/images/mod1/lesson08/cytoskeleton.webp",
+      "alt": "Diagram of cytoskeleton showing microtubules and filaments",
+      "caption": "The cytoskeleton network"
+    },
+    {
+      "id": "cell-wall-comparison",
+      "src": "assets/images/mod1/lesson08/cell-wall-comparison.webp",
+      "alt": "Comparison of bacterial, fungal and plant cell walls",
+      "caption": "Cell wall composition comparison"
+    },
+    {
+      "id": "cilia-flagella",
+      "src": "assets/images/mod1/lesson08/cilia-flagella.webp",
+      "alt": "Diagram showing 9+2 microtubule arrangement",
+      "caption": "Eukaryotic flagella 9+2 structure"
+    },
+    {
+      "id": "amoeba-movement",
+      "src": "assets/images/mod1/lesson08/amoeba-movement.webp",
+      "alt": "Micrograph showing amoeba with pseudopodia",
+      "caption": "Amoeboid movement via cytoskeleton"
+    }
+  ]
+}
