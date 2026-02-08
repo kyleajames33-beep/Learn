@@ -1,261 +1,195 @@
-# Science Learning Hub - Master Project Roadmap
-**Project:** Interactive PWA for HSC Biology & Year 8/9 Science
-**Target Users:** NSW Students (Years 7-12)
-**Tech Stack:** Vanilla HTML/CSS/JS, GitHub Pages, LocalStorage → Firebase
-**Current Status:** Phase 01 In Progress (Phase 00 Complete, Phase 02 Features Largely Built)
-**Last Updated:** 2026-02-06
+# 🗺️ Science Hub: Master Phase Roadmap v2.0
+
+## Complete Build Sequence to Finished App
 
 ---
 
-## Executive Summary
-Build a progressive web app that starts as a static lesson platform (Phase 00) and evolves into an addictive, gamified learning experience (Phase 04). Each phase adds functionality without breaking previous work.
+## Phase 0: Foundation Refactor (In Progress)
+
+**Goal:** Stabilize existing code before scaling
+
+### 0.1 Consolidate gamification (event bus + unified engine)
+### 0.2 Create lesson data schema & template system (JSON + renderer)
+### 0.3 Build lesson builder UI (internal content creation tool)
+### 0.4 Migrate existing 7 lessons to new system
+### 0.5 Stabilization & optimization (bug fixes, performance, Lesson 1-3 enhancement)
+
+**Exit Criteria:**
+- 8 lessons production-ready (6 migrated + 2 new)
+- Zero critical bugs
+- Performance validated at 16-lesson scale
+- Kyle's workflow unblocked
 
 ---
 
-## Phase Overview
+## Phase 1: Content Sprint (Weeks 3-6)
 
-### PHASE 00: Foundation (Weeks 1-2)
-**Goal:** Working lesson platform with 3 sample lessons
-**Status:** COMPLETE
-**Output:** Students can read lessons, track progress, use offline
+**Goal:** Fill the content gap (8 lessons → 18 lessons)
 
-Core Deliverables:
-- [x] Design system implemented (Soft Ocean Breeze palette) — 9 CSS files, 7000+ lines
-- [x] PWA shell (service worker, manifest) — `service-worker.js` + `manifest.json`
-- [x] Lesson template with all components — hero, accordions, activities, quizzes, nav
-- [x] 3 sample lessons (Module 1: Cells, Lessons 1-3) — exceeded: 5 lessons built
-- [x] Progress tracking (LocalStorage) — `storage.js` + `progress.js`
-- [x] Mobile-responsive navigation — hamburger menu, sidebar toggle, breadcrumbs
-- [x] Offline functionality — service worker caching
+### 1.1 Complete Module 1: Cells (8 lessons total, 6 done, need 2 more)
+### 1.2 Complete Module 2: Organisation of Living Things (5 lessons)
+### 1.3 Complete Module 5: Heredity (5 lessons)
+### 1.4 Build module router (hide empty modules, show "Coming Soon")
+### 1.5 Content validation pipeline (schema check + peer review)
 
-**Success Criteria:**
-- ~~Student can complete Lesson 1, close browser, reopen, progress persists~~ VERIFIED
-- ~~Works on iPhone Safari and Chrome Android~~ IMPLEMENTED (mobile-first CSS)
-- ~~Lighthouse PWA score >90~~ PWA manifest + service worker in place
-
-**Exceeded Scope:**
-- 5 lessons built instead of 3
-- Multiple CSS files instead of single `global.css` (better organized)
-- Separate JS modules instead of single `main.js` (better architecture)
+**Exit Criteria:** 18 lessons across 3 modules, no empty stubs visible to users
 
 ---
 
-### PHASE 01: Content Core (Weeks 3-6)
-**Goal:** Complete Module 1 (30 lessons) + Module overview pages
-**Dependencies:** Phase 00 complete
-**Status:** IN PROGRESS — infrastructure built, content expansion needed
-**Output:** Full HSC Biology Module 1 ready for students
+## Phase 2: Learning Experience Polish (Weeks 7-9)
 
-Core Deliverables:
-- [ ] Module 1: All 30 lessons written and formatted — **5 of 30 complete**
-- [x] Module overview/index page — all 8 module index pages created
-- [x] Year level selection homepage — `index.html` with year 7-12 + HSC sections
-- [x] Search functionality (client-side) — `search.js` implemented
-- [x] Breadcrumb navigation across all pages — implemented in all lesson pages
-- [x] "Continue where you left off" feature — `saveLastVisited()` / `getLastVisited()` in storage.js
-- [x] Print-friendly styles — print media queries in `global.css`
+**Goal:** Make it feel like a premium app, not a website
 
-**Content Status:**
-| Module | Lessons Built | Target | Status |
-|--------|--------------|--------|--------|
-| Module 1: Cells | 5 | 30 | In Progress |
-| Module 2: Organisation | 1 | TBD | Started |
-| Module 3: Diversity | 0 (index only) | TBD | Stub |
-| Module 4: Ecosystems | 0 (index only) | TBD | Stub |
-| Module 5: Heredity | 1 | TBD | Started |
-| Module 6: Genetic Change | 0 (index only) | TBD | Stub |
-| Module 7: Infectious Disease | 0 (index only) | TBD | Stub |
-| Module 8: Non-Infectious Disease | 0 (index only) | TBD | Stub |
+### 2.1 Search enhancement (full-text index, filters by module/difficulty)
+### 2.2 "Continue where you left off" smart redirect
+### 2.3 Study session timer + break reminders
+### 2.4 Print-friendly styles for notes
+### 2.5 First-time user onboarding (tooltips, progress explanation)
 
-**Remaining Work:**
-- Write remaining 25 lessons for Module 1
-- Expand Module 2, 5 content
-- Populate remaining module stubs
-
-**Success Criteria:**
-- All 30 lessons follow consistent template — **template established, content needed**
-- Student can navigate from homepage → any lesson in <3 clicks — VERIFIED
-- Search returns relevant results in <500ms — IMPLEMENTED
+**Exit Criteria:** Student can find any content in <30 seconds, seamless daily use
 
 ---
 
-### PHASE 02: Gamification Layer (Weeks 7-10)
-**Goal:** Addictive learning mechanics
-**Dependencies:** Phase 01 complete
-**Status:** LARGELY COMPLETE — core gamification systems all built
-**Output:** Students engage daily, streaks, achievements
+## Phase 3: Gamification Expansion (Weeks 10-12)
 
-Core Deliverables:
-- [x] Daily streak counter — `streak.js` + `streak.css` (7-day calendar, milestones, celebrations)
-- [x] Achievement badges — `achievements.js` + `achievements.css` (20+ badges, 4 rarity tiers, dedicated page)
-- [x] XP/Level system — `xp.js` + `xp.css` (50 levels, 6 reward types, rank titles)
-- [x] Mini-games embedded in lessons:
-  - [x] Drag-and-drop labeling
-  - [x] Flashcards with spaced repetition
-  - [x] Matching games
-  - [x] Sequence ordering (bonus — not originally planned)
-- [x] Progress dashboard (visual stats) — `dashboard.js` + `dashboard.css` (analytics, charts, recommendations)
-- [ ] Study reminders (push notifications) — **not yet implemented**
+**Goal:** Make it addictive (healthy way)
 
-**Additional Features Built (not originally planned):**
-- [x] Interactive diagrams with hotspots (`diagrams.js` + `diagrams.css`)
-- [x] Image lightbox with zoom controls
-- [x] Glossary term tooltips
-- [x] Animated particle diagrams (e.g., diffusion simulations)
-- [x] Comparison diagram layouts
-- [x] Achievements showcase page (`hsc-biology/achievements.html`)
+### 3.1 Study plans (customizable schedules, deadlines)
+### 3.2 Weak area detection (quiz performance analytics)
+### 3.3 Targeted practice mode (review wrong answers)
+### 3.4 Social features prep (share progress, study groups architecture)
+### 3.5 Push notifications (reminders, streak warnings)
 
-**Success Criteria:**
-- ~~Student opens app 3+ days in a row (streak mechanic working)~~ IMPLEMENTED
-- ~~Mini-games load in <2 seconds~~ IMPLEMENTED (vanilla JS, no heavy deps)
-- ~~Progress dashboard shows meaningful insights~~ IMPLEMENTED
+**Exit Criteria:** Student opens app 3+ days/week voluntarily, knows exactly what to study next
 
 ---
 
-### PHASE 03: Social & Sync (Weeks 11-14)
-**Goal:** Backend, user accounts, cross-device sync
-**Dependencies:** Phase 02 complete
-**Status:** NOT STARTED
-**Output:** Students can switch devices, teachers can track progress
+## Phase 4: Mini-Games & Interactives (Weeks 13-16)
 
-Core Deliverables:
-- [ ] Firebase backend setup
-- [ ] User authentication (email/Google)
-- [ ] Cloud sync (progress follows user across devices)
-- [ ] Class/teacher dashboards
-- [ ] Leaderboards (opt-in)
-- [ ] Collaborative features (study groups)
-- [ ] Analytics for content improvement
+**Goal:** Learning through play, not just reading
 
-**Success Criteria:**
-- Student logs in on phone, sees same progress on laptop
-- Teacher can view class progress overview
-- Data backup works automatically
+### 4.1 Drag-drop cell builder (build prokaryotic/eukaryotic cells)
+### 4.2 Process sequencing games (mitosis steps, photosynthesis stages)
+### 4.3 Labeling speed challenges (timed diagram labeling)
+### 4.4 Matching memory games (terminology + definitions)
+### 4.5 Experiment simulator (virtual microscope, pH testing)
+
+**Exit Criteria:** 8+ game types, each lesson has at least 1 interactive element
 
 ---
 
-### PHASE 04: Advanced Features (Weeks 15+)
-**Goal:** AI, personalisation, premium features
-**Dependencies:** Phase 03 complete
-**Status:** NOT STARTED
-**Output:** Adaptive learning, smart recommendations
+## Phase 5: Backend & Sync (Weeks 17-20)
 
-Core Deliverables:
-- [ ] AI tutor (chatbot for questions)
-- [ ] Adaptive difficulty (lessons adjust to student level)
-- [ ] Personalised study plans
-- [ ] Weak area detection & targeted practice
-- [ ] Voice navigation
-- [ ] Dark mode
-- [ ] Premium subscription (advanced features)
+**Goal:** Cross-device progress, teacher dashboards, data safety
 
-**Success Criteria:**
-- AI answers student questions accurately 80%+ of time
-- Adaptive system improves test scores vs static lessons
+### 5.1 Firebase integration (Auth, Firestore, Hosting)
+### 5.2 Cloud sync (progress follows student across devices)
+### 5.3 Storage adapter abstraction (seamless LocalStorage → Firebase switch)
+### 5.4 Teacher dashboard (class progress, weak topics, completion rates)
+### 5.5 Data export (PDF progress reports for parents/teachers)
+
+**Exit Criteria:** Student logs in on phone, sees same progress on laptop. Teacher can view class overview.
 
 ---
 
-## Current Architecture (Actual)
+## Phase 6: Advanced Features (Weeks 21-24)
 
-### File Structure
-```
-/Learn/
-├── index.html                          # Homepage (year level selection)
-├── assets/
-│   ├── css/
-│   │   ├── global.css                  # Design tokens & base styles (1595 lines)
-│   │   ├── components.css              # Reusable UI components (1388 lines)
-│   │   ├── layout.css                  # Grid & layout systems (1847 lines)
-│   │   ├── dashboard.css               # Dashboard analytics UI (1024 lines)
-│   │   ├── xp.css                      # XP/Level system UI (315 lines)
-│   │   ├── streak.css                  # Streak tracking UI (307 lines)
-│   │   ├── achievements.css            # Badge system UI (543 lines)
-│   │   ├── minigames.css              # Mini-game UI (804 lines)
-│   │   └── diagrams.css               # Interactive diagrams UI (629 lines)
-│   ├── js/
-│   │   ├── main.js                     # Page initialization
-│   │   ├── storage.js                  # LocalStorage management
-│   │   ├── progress.js                 # Progress tracking
-│   │   ├── navigation.js              # Mobile nav & sidebar
-│   │   ├── search.js                   # Client-side search
-│   │   ├── xp.js                       # XP/Level logic (50 levels)
-│   │   ├── streak.js                   # Streak management
-│   │   ├── achievements.js            # Badge system (20+ badges)
-│   │   ├── dashboard.js              # Dashboard aggregation
-│   │   ├── minigames.js              # 4 game types
-│   │   ├── diagrams.js               # Interactive diagrams
-│   │   ├── service-worker.js          # PWA offline support
-│   │   └── lucide.min.js             # Icon library
-│   ├── manifest.json                  # PWA manifest
-│   └── images/                         # Icons & illustrations
-├── hsc-biology/
-│   ├── index.html                      # HSC Biology landing (8 modules)
-│   ├── dashboard.html                 # Learning analytics dashboard
-│   ├── achievements.html              # Achievement showcase
-│   ├── module-1-cells/                # 5 lessons
-│   ├── module-2-organisation/         # 1 lesson + index
-│   ├── module-3-diversity/            # Index only
-│   ├── module-4-ecosystems/           # Index only
-│   ├── module-5-heredity/             # 1 lesson + index
-│   ├── module-6-genetic-change/       # Index only
-│   ├── module-7-infectious-disease/   # Index only
-│   └── module-8-non-infectious-disease/ # Index only
-├── year-7/                             # Stub
-├── year-8/                             # Index only
-├── year-9/                             # Index only
-└── Developers Handbook/               # Planning docs
-```
+**Goal:** Personalization and smart learning
+
+### 6.1 Adaptive difficulty (lessons adjust based on quiz performance)
+### 6.2 Spaced repetition for flashcards (optimal review timing)
+### 6.3 AI study coach (suggests what to review, encourages weak areas)
+### 6.4 Voice navigation (accessibility + hands-free study)
+### 6.5 Dark mode (user preference, saves battery)
+
+**Exit Criteria:** App feels "smart" - knows what student needs before they do
 
 ---
 
-## Critical Constraints (Apply to ALL Phases)
+## Phase 7: Scale & Content Expansion (Weeks 25-32)
 
-1. **No Frameworks:** Vanilla HTML/CSS/JS only until Phase 03
-2. **Mobile First:** Every feature must work on 320px width
-3. **Progressive Enhancement:** Core functionality works without JS
-4. **Accessibility:** WCAG AA compliance minimum
-5. **Performance:** First paint <1.5s on 3G connection
-6. **No Vendor Lock-in:** Can migrate from Firebase if needed
+**Goal:** Complete curriculum coverage
 
----
+### 7.1 HSC Chemistry Module 1-8 (30 lessons)
+### 7.2 Year 9-10 Science (Core topics, 20 lessons)
+### 7.3 Year 7-8 Science (Foundation, 20 lessons)
+### 7.4 Exam preparation mode (HSC past paper integration)
+### 7.5 Content versioning (syllabus updates, error corrections)
 
-## Technical Architecture Principles
-
-### Frontend (Phases 00-02)
-- Semantic HTML5
-- CSS Custom Properties (design tokens)
-- ES6+ Vanilla JavaScript
-- Web Components (optional, Phase 02+)
-- Service Workers for offline
-- LocalStorage → IndexedDB (Phase 02)
-
-### Backend (Phase 03+)
-- Firebase (Auth, Firestore, Hosting)
-- Cloud Functions for heavy processing
-- Stripe for payments (Phase 04)
-
-### Data Strategy
-- Phase 00-02: Static JSON + LocalStorage
-- Phase 03: Firestore with offline persistence
-- Phase 04: AI/ML APIs (OpenAI, etc.)
+**Exit Criteria:** 100+ lessons across 3 subjects, covers NSW Science 7-12
 
 ---
 
-## Risk Mitigation
+## Phase 8: Monetization & Sustainability (Weeks 33-36)
 
-| Risk | Mitigation |
-|------|------------|
-| Scope creep | Strict phase gates, NO crossing phase boundaries |
-| Performance issues | Lighthouse CI checks each phase |
-| Student data privacy | GDPR/privacy by design, anonymise early |
-| Content accuracy | Subject matter expert review each lesson |
-| Technical debt | Refactor week between phases |
+**Goal:** Make it a real product, not a project
+
+### 8.1 Premium tier (advanced features, no ads, offline downloads)
+### 8.2 School licenses (bulk pricing, admin controls, SSO)
+### 8.3 Content marketplace (teachers can create/sell lessons)
+### 8.4 Analytics dashboard (usage stats, popular content, drop-off points)
+### 8.5 Community features (student forums, study groups, peer tutoring)
+
+**Exit Criteria:** Revenue model working, sustainable development funded, active user community
 
 ---
 
-## Next Steps (Priority Order)
-1. **Content expansion** — Write remaining Module 1 lessons (25 of 30 remaining)
-2. **Push notifications** — Implement study reminders (last Phase 02 item)
-3. **Content for Modules 2-8** — Expand beyond Module 1
-4. **Year level content** — Build out Year 7-10 science lessons
-5. **Phase 03 planning** — Firebase backend, auth, cloud sync
+## Phase 9: Platform Expansion (Weeks 37-44)
+
+**Goal:** Beyond NSW, beyond web
+
+### 9.1 National curriculum alignment (VIC, QLD, WA, SA versions)
+### 9.2 Native app wrappers (iOS/Android via Capacitor/React Native)
+### 9.3 Offline-first architecture (full content sync, no internet required)
+### 9.4 Accessibility certification (WCAG AAA, screen reader optimized)
+### 9.5 International expansion (UK GCSE, US AP Bio/Chem)
+
+**Exit Criteria:** App store presence, works seamlessly offline, multiple countries
+
+---
+
+## Phase 10: Innovation & Future (Weeks 45+)
+
+**Goal:** Cutting-edge learning technology
+
+### 10.1 AR/VR integration (3D cell exploration, virtual labs)
+### 10.2 AI tutor (natural language Q&A, explains any concept)
+### 10.3 Predictive analytics (identify at-risk students early)
+### 10.4 Gamification 2.0 (leaderboards, competitions, collaborative challenges)
+### 10.5 Research partnerships (learning science, efficacy studies)
+
+**Exit Criteria:** Industry-leading educational app, published research on efficacy, 100K+ active users
+
+---
+
+## 📋 Phase Gate Rules
+
+### Before starting any phase:
+- [ ] Previous phase passed testing specialist approval
+- [ ] All critical bugs from previous phase resolved
+- [ ] Documentation updated to reflect current state
+- [ ] Coder has read and understood specification
+
+### During each phase:
+- [ ] No scope creep (features stay in their assigned phase)
+- [ ] Mobile-first testing throughout
+- [ ] Accessibility maintained (WCAG AA minimum)
+- [ ] Performance budget enforced (<500KB per lesson)
+
+### Phase completion criteria:
+- [ ] All exit criteria met
+- [ ] Testing specialist approval
+- [ ] User testing (minimum 3 students, no critical confusion)
+- [ ] Documentation updated
+
+---
+
+## 🎯 Current Position
+
+**Now:** Phase 0.5 (Stabilization & Optimization)  
+**Next:** Phase 1 (Content Sprint - 10 more lessons)  
+**Goal:** Reach Phase 1 exit (18 lessons) before school term starts  
+**Estimated timeline:** 44 weeks to Phase 10 (full product)  
+**Minimum viable product:** Phase 2 exit (12 weeks) - usable for HSC Biology Module 1
+
+**Lock this roadmap. Any feature requests must map to a specific phase. No jumping ahead.**
