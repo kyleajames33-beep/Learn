@@ -433,7 +433,19 @@ const LessonBuilder = {
     const container = document.getElementById('contentSectionsList');
     if (!container) return;
 
-    container.innerHTML = this.state.lesson.contentSections.map((section, index) => `
+    // Hide/show empty state
+    const emptyState = document.getElementById('emptySections');
+    if (emptyState) {
+      emptyState.style.display = this.state.lesson.contentSections.length > 0 ? 'none' : 'block';
+    }
+
+    // Remove existing cards (keep empty state)
+    container.querySelectorAll('.builder-section-card').forEach(el => el.remove());
+
+    if (this.state.lesson.contentSections.length === 0) return;
+
+    // Add section cards
+    const cardsHTML = this.state.lesson.contentSections.map((section, index) => `
       <div class="builder-section-card" data-index="${index}">
         <div class="builder-section-card-header">
           <span class="badge">${section.type}</span>
@@ -463,6 +475,8 @@ const LessonBuilder = {
         `}
       </div>
     `).join('');
+
+    container.insertAdjacentHTML('beforeend', cardsHTML);
 
     // Bind events
     container.querySelectorAll('.remove-section-btn').forEach(btn => {
@@ -552,7 +566,18 @@ const LessonBuilder = {
     const container = document.getElementById('activitiesList');
     if (!container) return;
 
-    container.innerHTML = this.state.lesson.activities.map((activity, index) => `
+    // Hide/show empty state
+    const emptyState = document.getElementById('emptyActivities');
+    if (emptyState) {
+      emptyState.style.display = this.state.lesson.activities.length > 0 ? 'none' : 'block';
+    }
+
+    // Remove existing cards
+    container.querySelectorAll('.activity-card').forEach(el => el.remove());
+
+    if (this.state.lesson.activities.length === 0) return;
+
+    const cardsHTML = this.state.lesson.activities.map((activity, index) => `
       <div class="activity-card" data-index="${index}">
         <div class="activity-header">
           <span class="badge">${activity.type}</span>
@@ -571,6 +596,8 @@ const LessonBuilder = {
         </div>
       </div>
     `).join('');
+
+    container.insertAdjacentHTML('beforeend', cardsHTML);
 
     container.querySelectorAll('.remove-activity-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -625,7 +652,19 @@ const LessonBuilder = {
     const container = document.getElementById('assessmentList');
     if (!container) return;
 
-    container.innerHTML = this.state.lesson.assessment.multipleChoice.map((mcq, index) => `
+    // Hide/show empty state
+    const emptyState = document.getElementById('emptyAssessment');
+    const totalQuestions = (this.state.lesson.assessment.multipleChoice?.length || 0) + (this.state.lesson.assessment.shortAnswer?.length || 0);
+    if (emptyState) {
+      emptyState.style.display = totalQuestions > 0 ? 'none' : 'block';
+    }
+
+    // Remove existing cards
+    container.querySelectorAll('.mcq-card').forEach(el => el.remove());
+
+    if (!this.state.lesson.assessment.multipleChoice || this.state.lesson.assessment.multipleChoice.length === 0) return;
+
+    const cardsHTML = this.state.lesson.assessment.multipleChoice.map((mcq, index) => `
       <div class="mcq-card" data-index="${index}">
         <div class="mcq-header">
           <div class="form-group">
@@ -646,6 +685,16 @@ const LessonBuilder = {
         </div>
       </div>
     `).join('');
+
+    // Insert HTML into container
+    container.insertAdjacentHTML('beforeend', cardsHTML);
+
+    // Initialize icons for new cards
+    if (typeof lucide !== 'undefined') {
+      container.querySelectorAll('.mcq-card i[data-lucide]').forEach(icon => {
+        lucide.createIcons({ icons: { [icon.dataset.lucide]: lucide.icons[icon.dataset.lucide] }, nameAttr: 'data-lucide' });
+      });
+    }
 
     container.querySelectorAll('.remove-mcq-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -1167,10 +1216,522 @@ const LessonBuilder = {
     this.updatePreview();
     this.updateJSON();
     this.validate();
+  },
+
+  // ==========================================
+  // PHASE 0.6 ENHANCEMENTS
+  // ==========================================
+
+  /**
+   * Initialize Phase 0.6 modules
+   */
+  initPhase06() {
+    // Initialize Image Manager
+    if (typeof ImageManager !== 'undefined') {
+      ImageManager.init({
+        lessonId: this.state.lesson.id || 'draft',
+        existingImages: this.state.lesson.imageLibrary || [],
+        callbacks: {
+          onImageAdded: (image) => {
+            this.state.lesson.imageLibrary = ImageManager.getImages();
+            this.renderImageGallery();
+            this.markUnsaved();
+          },
+          onImageRemoved: (image) => {
+            this.state.lesson.imageLibrary = ImageManager.getImages();
+            this.renderImageGallery();
+            this.markUnsaved();
+          },
+          onError: (error) => {
+            alert('Image Error: ' + error);
+          }
+        }
+      });
+      this.renderImageGallery();
+      this.bindImageUploadEvents();
+    }
+
+    // Initialize Template Library
+    if (typeof TemplateLibrary !== 'undefined') {
+      TemplateLibrary.init({
+        callbacks: {
+          onTemplateSelected: (templateId) => {
+            this.applyTemplate(templateId);
+          }
+        }
+      });
+    }
+
+    // Bind template library button
+    document.getElementById('openTemplateLibraryBtn')?.addEventListener('click', () => {
+      this.openTemplateLibrary();
+    });
+  },
+
+  /**
+   * Bind image upload events
+   */
+  bindImageUploadEvents() {
+    const uploadArea = document.getElementById('imageUploadArea');
+    const fileInput = document.getElementById('imageFileInput');
+
+    if (!uploadArea || !fileInput) return;
+
+    // Click to upload
+    uploadArea.addEventListener('click', () => fileInput.click());
+
+    // File selection
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        this.handleImageUpload(e.target.files);
+      }
+    });
+
+    // Drag and drop
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('drag-over');
+    });
+
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('drag-over');
+    });
+
+    uploadArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('drag-over');
+      
+      if (e.dataTransfer.files.length > 0) {
+        this.handleImageUpload(e.dataTransfer.files);
+      }
+    });
+
+    // Upload button
+    document.getElementById('uploadImageBtn')?.addEventListener('click', () => {
+      fileInput.click();
+    });
+  },
+
+  /**
+   * Handle image file upload
+   * @param {FileList} files 
+   */
+  async handleImageUpload(files) {
+    const uploadArea = document.getElementById('imageUploadArea');
+    uploadArea.classList.add('uploading');
+
+    try {
+      const { results, errors } = await ImageManager.uploadMultiple(files, (progress) => {
+        uploadArea.innerHTML = `
+          <div class="upload-progress">
+            <div class="upload-progress-bar" style="width: ${progress.percent}%"></div>
+            <span>Uploading ${progress.current} of ${progress.total}...</span>
+          </div>
+        `;
+      });
+
+      // Reset upload area
+      uploadArea.classList.remove('uploading');
+      uploadArea.innerHTML = `
+        <i data-lucide="upload-cloud"></i>
+        <p>Drag and drop images here, or click to browse</p>
+        <span class="upload-hint">JPG, PNG, GIF, SVG, WebP (max 2MB)</span>
+      `;
+
+      if (errors.length > 0) {
+        alert(`Uploaded ${results.filter(r => r.success).length} images.\nErrors: ${errors.map(e => e.filename + ': ' + e.error).join('\n')}`);
+      }
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    } catch (error) {
+      uploadArea.classList.remove('uploading');
+      alert('Upload failed: ' + error.message);
+    }
+  },
+
+  /**
+   * Render image gallery
+   */
+  renderImageGallery() {
+    const gallery = document.getElementById('imageGallery');
+    if (!gallery) return;
+
+    const images = ImageManager.getImages();
+
+    if (images.length === 0) {
+      gallery.innerHTML = '<p class="gallery-empty">No images uploaded yet</p>';
+      return;
+    }
+
+    gallery.innerHTML = images.map(img => `
+      <div class="image-card" data-image-id="${img.id}">
+        <img src="${img.thumbnail || img.src}" alt="${this.escapeHtml(img.alt)}" loading="lazy">
+        <div class="image-card-overlay">
+          <button class="btn btn-icon btn-sm btn-ghost image-insert-btn" data-image-id="${img.id}" title="Insert into content">
+            <i data-lucide="plus"></i>
+          </button>
+          <button class="btn btn-icon btn-sm btn-ghost image-use-diagram-btn" data-image-id="${img.id}" title="Use in diagram">
+            <i data-lucide="map"></i>
+          </button>
+          <button class="btn btn-icon btn-sm btn-ghost image-delete-btn" data-image-id="${img.id}" title="Delete">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+        ${img.alt ? `<span class="image-alt">${this.escapeHtml(img.alt.substring(0, 20))}${img.alt.length > 20 ? '...' : ''}</span>` : ''}
+      </div>
+    `).join('');
+
+    // Bind events
+    gallery.querySelectorAll('.image-insert-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const imageId = e.currentTarget.dataset.imageId;
+        this.insertImageIntoContent(imageId);
+      });
+    });
+
+    gallery.querySelectorAll('.image-use-diagram-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const imageId = e.currentTarget.dataset.imageId;
+        this.createDiagramFromImage(imageId);
+      });
+    });
+
+    gallery.querySelectorAll('.image-delete-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const imageId = e.currentTarget.dataset.imageId;
+        if (confirm('Delete this image?')) {
+          ImageManager.removeImage(imageId);
+        }
+      });
+    });
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  },
+
+  /**
+   * Insert image into content section
+   * @param {string} imageId 
+   */
+  insertImageIntoContent(imageId) {
+    const image = ImageManager.getImage(imageId);
+    if (!image) return;
+
+    // Add image section to content sections
+    const section = {
+      id: `section-${Date.now()}`,
+      type: 'image',
+      title: image.caption || image.alt || 'Image',
+      icon: 'image',
+      content: '',
+      image: {
+        src: image.src,
+        srcWebp: image.srcWebp,
+        thumbnail: image.thumbnail,
+        alt: image.alt,
+        caption: image.caption,
+        credit: image.credit,
+        width: image.width,
+        height: image.height
+      }
+    };
+
+    this.state.lesson.contentSections.push(section);
+    this.renderContentSections();
+    this.markUnsaved();
+    this.debounceUpdate();
+
+    // Scroll to new section
+    const sections = document.querySelectorAll('.builder-section-card');
+    if (sections.length > 0) {
+      sections[sections.length - 1].scrollIntoView({ behavior: 'smooth' });
+    }
+  },
+
+  /**
+   * Create diagram from image
+   * @param {string} imageId 
+   */
+  createDiagramFromImage(imageId) {
+    const image = ImageManager.getImage(imageId);
+    if (!image || typeof DiagramTool === 'undefined') return;
+
+    const diagram = DiagramTool.createDiagram(image, image.alt || 'Diagram');
+    
+    // Add diagram section
+    const section = {
+      id: `section-${Date.now()}`,
+      type: 'diagram',
+      title: diagram.title,
+      icon: 'map',
+      content: '',
+      diagram: diagram
+    };
+
+    this.state.lesson.contentSections.push(section);
+    this.renderContentSections();
+    this.markUnsaved();
+    this.debounceUpdate();
+
+    // Open diagram editor modal
+    this.openDiagramEditor(section.id);
+  },
+
+  /**
+   * Open diagram editor modal
+   * @param {string} sectionId 
+   */
+  openDiagramEditor(sectionId) {
+    const section = this.state.lesson.contentSections.find(s => s.id === sectionId);
+    if (!section || !section.diagram) return;
+
+    // Load diagram into tool
+    DiagramTool.loadDiagram(section.diagram);
+
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'modal open';
+    modal.id = 'diagramEditorModal';
+    modal.innerHTML = `
+      <div class="modal-overlay"></div>
+      <div class="modal-content modal-content--xlarge">
+        <div class="modal-header">
+          <h3>Edit Diagram: ${this.escapeHtml(section.diagram.title)}</h3>
+          <button class="btn btn-icon btn-ghost modal-close" onclick="document.getElementById('diagramEditorModal').remove()">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="diagram-editor-layout">
+            <div class="diagram-canvas-panel">
+              <div id="diagramBuilderCanvas"></div>
+            </div>
+            <div class="diagram-tools-panel">
+              <div class="tool-section">
+                <h4>Hotspots</h4>
+                <button class="btn btn-secondary btn-sm" id="addHotspotBtn">
+                  <i data-lucide="plus-circle"></i>
+                  Add Hotspot
+                </button>
+              </div>
+              <div class="tool-section" id="hotspotProperties" style="display: none;">
+                <h4>Hotspot Properties</h4>
+                <div class="form-group">
+                  <label>Type</label>
+                  <select class="form-select" id="hotspotType">
+                    <option value="popup">Info Popup</option>
+                    <option value="label">Label Reveal</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Title</label>
+                  <input type="text" class="form-input" id="hotspotTitle" placeholder="Hotspot title">
+                </div>
+                <div class="form-group">
+                  <label>Content</label>
+                  <textarea class="form-textarea" id="hotspotContent" rows="3" placeholder="Description..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Color</label>
+                  <div class="color-picker">
+                    ${DiagramTool.config.hotspotColors.map(c => `
+                      <button class="color-option" style="background-color: ${c.value};" 
+                              data-color="${c.value}" title="${c.name}"></button>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="document.getElementById('diagramEditorModal').remove()">Cancel</button>
+          <button class="btn btn-primary" id="saveDiagramBtn">Save Diagram</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Render diagram canvas
+    const canvasContainer = document.getElementById('diagramBuilderCanvas');
+    DiagramTool.renderBuilder(canvasContainer);
+
+    // Bind save
+    document.getElementById('saveDiagramBtn').addEventListener('click', () => {
+      section.diagram = DiagramTool.export();
+      this.renderContentSections();
+      this.markUnsaved();
+      this.debounceUpdate();
+      modal.remove();
+    });
+
+    // Bind add hotspot
+    document.getElementById('addHotspotBtn').addEventListener('click', () => {
+      DiagramTool.addHotspot({
+        x: 50,
+        y: 50,
+        type: 'popup',
+        title: 'New Hotspot',
+        content: 'Add description here...'
+      });
+      DiagramTool.renderBuilder(canvasContainer);
+    });
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  },
+
+  /**
+   * Open template library modal
+   */
+  openTemplateLibrary() {
+    const modal = document.createElement('div');
+    modal.className = 'modal open';
+    modal.id = 'templateLibraryModal';
+    modal.innerHTML = `
+      <div class="modal-overlay"></div>
+      <div class="modal-content modal-content--xlarge">
+        <div class="modal-header">
+          <h3>Template Library</h3>
+          <button class="btn btn-icon btn-ghost modal-close" onclick="document.getElementById('templateLibraryModal').remove()">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="templateBrowser"></div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Render template browser
+    const browser = document.getElementById('templateBrowser');
+    TemplateLibrary.renderBrowser(browser);
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  },
+
+  /**
+   * Apply a template
+   * @param {string} templateId 
+   */
+  applyTemplate(templateId) {
+    try {
+      const { template, diagram, labelingActivity } = TemplateLibrary.applyTemplate(templateId);
+
+      // Add diagram if created
+      if (diagram) {
+        const section = {
+          id: `section-${Date.now()}`,
+          type: 'diagram',
+          title: diagram.title,
+          icon: 'map',
+          content: '',
+          diagram: diagram
+        };
+        this.state.lesson.contentSections.push(section);
+      }
+
+      // Add labeling activity if created
+      if (labelingActivity) {
+        this.state.lesson.activities.push(labelingActivity);
+      }
+
+      this.renderContentSections();
+      this.renderActivities();
+      this.markUnsaved();
+      this.debounceUpdate();
+
+      // Close modal
+      document.getElementById('templateLibraryModal')?.remove();
+
+      alert(`Template "${template.name}" applied!`);
+
+    } catch (error) {
+      alert('Failed to apply template: ' + error.message);
+    }
+  },
+
+  /**
+   * Escape HTML entities
+   * @param {string} text 
+   * @returns {string}
+   */
+  escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  },
+
+  /**
+   * Handle new activity types (Phase 0.6)
+   * @param {string} type 
+   */
+  addActivityExtended(type) {
+    const baseActivity = {
+      id: `activity-${Date.now()}`,
+      type: type,
+      title: '',
+      description: '',
+      theme: 'teal'
+    };
+
+    let activity;
+
+    switch (type) {
+      case 'ordering':
+        activity = ActivityOrdering.create({
+          id: baseActivity.id,
+          title: 'Ordering Activity',
+          items: [
+            { id: '1', text: 'Step 1', correctPosition: 1 },
+            { id: '2', text: 'Step 2', correctPosition: 2 },
+            { id: '3', text: 'Step 3', correctPosition: 3 }
+          ]
+        });
+        break;
+
+      case 'labeling':
+        activity = ActivityLabeling.create({
+          id: baseActivity.id,
+          title: 'Label the Diagram',
+          image: null,
+          labels: []
+        });
+        break;
+
+      case 'fillBlank':
+        activity = ActivityFillBlank.create({
+          id: baseActivity.id,
+          title: 'Fill in the Blanks',
+          text: 'The [blank1] is the powerhouse of the cell. [blank2] is the process of cell division.',
+          blanks: [
+            { id: 'blank1', correct: 'mitochondria', alternatives: ['mitochondrion'] },
+            { id: 'blank2', correct: 'mitosis', alternatives: [] }
+          ]
+        });
+        break;
+
+      default:
+        // Fall back to original addActivity
+        return this.addActivity(type);
+    }
+
+    this.state.lesson.activities.push(activity);
+    this.renderActivities();
+    this.markUnsaved();
+    this.debounceUpdate();
   }
 };
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   LessonBuilder.init();
+  
+  // Initialize Phase 0.6 modules
+  setTimeout(() => {
+    LessonBuilder.initPhase06();
+  }, 100);
 });

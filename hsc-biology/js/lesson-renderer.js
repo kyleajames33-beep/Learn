@@ -1013,6 +1013,180 @@ const LessonRenderer = {
         lucide.createIcons();
       }
     }
+  },
+
+  // ==========================================
+  // PHASE 0.6 ENHANCEMENTS - RENDER FUNCTIONS
+  // ==========================================
+
+  /**
+   * Render image section
+   * @param {Object} section 
+   * @param {string} icon 
+   * @returns {string}
+   */
+  renderImageSection(section, icon) {
+    if (!section.image) return '';
+    
+    const img = section.image;
+    const pictureHtml = img.srcWebp 
+      ? `<source srcset="${img.srcWebp}" type="image/webp"><img src="${img.src}" alt="${img.alt || ''}" loading="lazy">`
+      : `<img src="${img.src}" alt="${img.alt || ''}" loading="lazy">`;
+    
+    return `
+      <section class="content-section reveal" id="${section.id}">
+        <h2>
+          <i data-lucide="${icon}"></i>
+          ${section.title}
+        </h2>
+        <figure class="lesson-figure">
+          <picture>${pictureHtml}</picture>
+          ${img.caption ? `<figcaption>${img.caption}</figcaption>` : ''}
+          ${img.credit ? `<cite>${img.credit}</cite>` : ''}
+        </figure>
+        ${section.content ? `<p>${section.content}</p>` : ''}
+      </section>
+    `;
+  },
+
+  /**
+   * Render diagram section
+   * @param {Object} section 
+   * @param {string} icon 
+   * @returns {string}
+   */
+  renderDiagramSection(section, icon) {
+    if (!section.diagram) return '';
+    
+    return `
+      <section class="content-section reveal" id="${section.id}">
+        <h2>
+          <i data-lucide="${icon}"></i>
+          ${section.title}
+        </h2>
+        ${DiagramTool ? DiagramTool.renderStudentView(section.diagram) : '<p>Diagram unavailable</p>'}
+      </section>
+    `;
+  },
+
+  /**
+   * Render video section
+   * @param {Object} section 
+   * @param {string} icon 
+   * @returns {string}
+   */
+  renderVideoSection(section, icon) {
+    if (!section.video) return '';
+    
+    return `
+      <section class="content-section reveal" id="${section.id}">
+        <h2>
+          <i data-lucide="${icon}"></i>
+          ${section.title}
+        </h2>
+        ${RichMedia ? RichMedia.renderVideo(section.video) : '<p>Video unavailable</p>'}
+      </section>
+    `;
+  },
+
+  /**
+   * Render simulation section
+   * @param {Object} section 
+   * @param {string} icon 
+   * @returns {string}
+   */
+  renderSimulationSection(section, icon) {
+    if (!section.simulation) return '';
+    
+    return `
+      <section class="content-section reveal" id="${section.id}">
+        <h2>
+          <i data-lucide="${icon}"></i>
+          ${section.title}
+        </h2>
+        ${RichMedia ? RichMedia.renderSimulation(section.simulation) : '<p>Simulation unavailable</p>'}
+      </section>
+    `;
+  },
+
+  /**
+   * Render activities - extended for Phase 0.6
+   */
+  renderActivities(activities) {
+    if (!activities || activities.length === 0) return '';
+    
+    return activities.map(activity => {
+      const theme = activity.theme || 'teal';
+      
+      switch (activity.type) {
+        case 'matching':
+          return this.renderMatchingActivity(activity, theme);
+        case 'fill-blank':
+          return this.renderFillBlankActivity(activity, theme);
+        case 'ordering':
+          return ActivityOrdering ? ActivityOrdering.render(activity, { theme }) : '';
+        case 'labeling':
+          return ActivityLabeling ? ActivityLabeling.render(activity, { theme }) : '';
+        case 'fillBlank':
+          return ActivityFillBlank ? ActivityFillBlank.render(activity, { theme }) : '';
+        default:
+          return '';
+      }
+    }).join('');
+  },
+
+  /**
+   * Bind activity handlers - extended for Phase 0.6
+   */
+  bindActivityHandlers() {
+    // Matching activities
+    document.querySelectorAll('.check-matching-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const activity = e.target.closest('[data-activity]');
+        const items = activity.querySelectorAll('.matching-item');
+        
+        items.forEach(item => {
+          const select = item.querySelector('select');
+          const correct = item.dataset.correct;
+          const selected = select.value;
+          
+          item.classList.remove('correct', 'incorrect');
+          item.classList.add(selected === correct ? 'correct' : 'incorrect');
+        });
+      });
+    });
+    
+    // Fill blank activities (legacy)
+    document.querySelectorAll('.check-fill-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const activity = e.target.closest('[data-activity]');
+        const inputs = activity.querySelectorAll('input[data-correct]');
+        
+        inputs.forEach(input => {
+          const correct = input.dataset.correct.toLowerCase();
+          const value = input.value.trim().toLowerCase();
+          
+          input.classList.remove('correct', 'incorrect');
+          input.classList.add(value === correct ? 'correct' : 'incorrect');
+        });
+      });
+    });
+
+    // Phase 0.6 activities
+    if (typeof ActivityOrdering !== 'undefined') {
+      ActivityOrdering.bindEvents(document);
+    }
+    if (typeof ActivityLabeling !== 'undefined') {
+      ActivityLabeling.bindEvents(document);
+    }
+    if (typeof ActivityFillBlank !== 'undefined') {
+      ActivityFillBlank.bindEvents(document);
+    }
+    if (typeof DiagramTool !== 'undefined') {
+      document.querySelectorAll('.diagram-viewer').forEach(container => {
+        DiagramTool.bindStudentView(container);
+      });
+    }
   }
 };
 

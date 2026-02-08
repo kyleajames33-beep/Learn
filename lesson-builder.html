@@ -16,6 +16,7 @@
   
   <!-- Builder Styles -->
   <link rel="stylesheet" href="assets/css/lesson-builder.css?v=2">
+  <link rel="stylesheet" href="assets/css/lesson-builder-phase06.css?v=1">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -29,7 +30,7 @@
         <i data-lucide="atom"></i>
         <span>Science Hub</span>
       </a>
-      <span class="builder-version">Lesson Builder v0.3</span>
+      <span class="builder-version">Lesson Builder v0.6</span>
       <span class="unsaved-indicator" id="unsavedIndicator" style="display: none;">
         <i data-lucide="alert-circle"></i>
         Unsaved changes
@@ -220,6 +221,42 @@
         </div>
       </section>
       
+      <!-- Template Library -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="layout-template"></i>
+          Template Library
+        </h3>
+        <div id="templateLibraryContainer">
+          <p class="form-hint" style="margin-bottom: 16px;">Browse pre-built templates for biology diagrams and activities.</p>
+          <button class="btn btn-primary" id="openTemplateLibraryBtn">
+            <i data-lucide="layout-template"></i>
+            Browse Templates
+          </button>
+        </div>
+      </section>
+      
+      <!-- Image Manager -->
+      <section class="builder-section">
+        <h3 class="builder-section-title">
+          <i data-lucide="images"></i>
+          Image Library
+          <button class="btn btn-sm btn-primary" id="uploadImageBtn">
+            <i data-lucide="upload"></i>
+            Upload Image
+          </button>
+        </h3>
+        <div id="imageManagerContainer">
+          <div class="image-upload-area" id="imageUploadArea">
+            <i data-lucide="upload-cloud"></i>
+            <p>Drag and drop images here, or click to browse</p>
+            <span class="upload-hint">JPG, PNG, GIF, SVG, WebP (max 2MB)</span>
+            <input type="file" id="imageFileInput" multiple accept="image/*" style="display: none;">
+          </div>
+          <div class="image-gallery" id="imageGallery"></div>
+        </div>
+      </section>
+      
       <!-- Engagement Hook -->
       <section class="builder-section">
         <h3 class="builder-section-title">
@@ -252,11 +289,19 @@
               <button class="dropdown-item" data-type="grid">Two Column Grid</button>
               <button class="dropdown-item" data-type="accordion">Accordion</button>
               <button class="dropdown-item" data-type="worked-example">Worked Example</button>
+              <button class="dropdown-item" data-type="image">Image</button>
+              <button class="dropdown-item" data-type="diagram">Interactive Diagram</button>
+              <button class="dropdown-item" data-type="video">Video Embed</button>
+              <button class="dropdown-item" data-type="simulation">Simulation</button>
             </div>
           </div>
         </h3>
         <div id="contentSectionsList" class="sections-list">
-          <!-- Sections added dynamically -->
+          <div class="empty-state" id="emptySections">
+            <p style="color: #64748b; text-align: center; padding: 20px;">
+              No sections yet. Click "Add Section" above to create content.
+            </p>
+          </div>
         </div>
       </section>
       
@@ -273,11 +318,18 @@
             <div class="dropdown-menu" id="activityTypeMenu">
               <button class="dropdown-item" data-type="matching">Matching</button>
               <button class="dropdown-item" data-type="fill-blank">Fill in Blanks</button>
+              <button class="dropdown-item" data-type="ordering">Ordering/Sequencing</button>
+              <button class="dropdown-item" data-type="labeling">Diagram Labeling</button>
+              <button class="dropdown-item" data-type="fillBlank">Fill-in-Blank (Cloze)</button>
             </div>
           </div>
         </h3>
         <div id="activitiesList" class="activities-list">
-          <!-- Activities added dynamically -->
+          <div class="empty-state" id="emptyActivities">
+            <p style="color: #64748b; text-align: center; padding: 20px;">
+              No activities yet. Click "Add Activity" above to create interactions.
+            </p>
+          </div>
         </div>
       </section>
       
@@ -292,7 +344,11 @@
           </button>
         </h3>
         <div id="assessmentList" class="assessment-list">
-          <!-- Assessment questions added dynamically -->
+          <div class="empty-state" id="emptyAssessment">
+            <p style="color: #64748b; text-align: center; padding: 20px;">
+              No questions yet. Click "Add MCQ" above to create assessment.
+            </p>
+          </div>
         </div>
       </section>
       
@@ -374,9 +430,16 @@
   </div>
   
   <!-- Scripts -->
-  <script src="hsc-biology/js/lesson-data-schema.js?v=2"></script>
-  <script src="hsc-biology/js/lesson-renderer.js?v=2"></script>
-  <script src="assets/js/lesson-builder.js?v=2"></script>
+  <script src="hsc-biology/js/lesson-data-schema.js?v=3"></script>
+  <script src="assets/js/image-manager.js?v=1"></script>
+  <script src="assets/js/diagram-tool.js?v=1"></script>
+  <script src="assets/js/activity-ordering.js?v=1"></script>
+  <script src="assets/js/activity-labeling.js?v=1"></script>
+  <script src="assets/js/activity-fillblank.js?v=1"></script>
+  <script src="assets/js/rich-media.js?v=1"></script>
+  <script src="assets/js/template-library.js?v=1"></script>
+  <script src="hsc-biology/js/lesson-renderer.js?v=3"></script>
+  <script src="assets/js/lesson-builder.js?v=3"></script>
   
   <script>
     // Initialize icons

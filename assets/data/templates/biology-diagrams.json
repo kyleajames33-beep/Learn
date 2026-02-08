@@ -1,0 +1,360 @@
+{
+  "name": "Biology Diagram Templates",
+  "version": "1.0.0",
+  "description": "Pre-built diagram templates for HSC Biology",
+  "categories": [
+    {
+      "id": "cell-structure",
+      "name": "Cell Structure",
+      "templates": [
+        {
+          "id": "animal-cell-blank",
+          "name": "Animal Cell (Blank)",
+          "description": "Blank animal cell diagram for labeling activities",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/animal-cell-blank.svg",
+            "alt": "Diagram of an animal cell showing organelles",
+            "width": 600,
+            "height": 400
+          },
+          "suggestedLabels": [
+            { "text": "Nucleus", "x": 50, "y": 50 },
+            { "text": "Mitochondria", "x": 25, "y": 65 },
+            { "text": "Ribosomes", "x": 75, "y": 35 },
+            { "text": "Endoplasmic Reticulum", "x": 30, "y": 40 },
+            { "text": "Golgi Apparatus", "x": 70, "y": 60 },
+            { "text": "Cell Membrane", "x": 15, "y": 50 },
+            { "text": "Cytoplasm", "x": 50, "y": 75 },
+            { "text": "Lysosome", "x": 35, "y": 80 }
+          ],
+          "syllabusTags": ["cell-structure", "eukaryotic", "module-1"]
+        },
+        {
+          "id": "plant-cell-blank",
+          "name": "Plant Cell (Blank)",
+          "description": "Blank plant cell diagram for labeling activities",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/plant-cell-blank.svg",
+            "alt": "Diagram of a plant cell showing organelles",
+            "width": 600,
+            "height": 400
+          },
+          "suggestedLabels": [
+            { "text": "Cell Wall", "x": 10, "y": 50 },
+            { "text": "Cell Membrane", "x": 15, "y": 50 },
+            { "text": "Nucleus", "x": 50, "y": 50 },
+            { "text": "Chloroplast", "x": 25, "y": 30 },
+            { "text": "Mitochondria", "x": 75, "y": 70 },
+            { "text": "Vacuole", "x": 60, "y": 35 },
+            { "text": "Cytoplasm", "x": 40, "y": 70 },
+            { "text": "Ribosomes", "x": 70, "y": 40 }
+          ],
+          "syllabusTags": ["cell-structure", "plant-cell", "module-1"]
+        },
+        {
+          "id": "prokaryotic-cell",
+          "name": "Prokaryotic Cell",
+          "description": "Bacterial cell structure diagram",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/prokaryotic-cell.svg",
+            "alt": "Diagram of a prokaryotic bacterial cell",
+            "width": 600,
+            "height": 400
+          },
+          "suggestedLabels": [
+            { "text": "Nucleoid", "x": 40, "y": 50 },
+            { "text": "Plasmid", "x": 65, "y": 35 },
+            { "text": "Ribosomes", "x": 70, "y": 60 },
+            { "text": "Cell Wall", "x": 15, "y": 50 },
+            { "text": "Cell Membrane", "x": 20, "y": 50 },
+            { "text": "Flagellum", "x": 5, "y": 50 },
+            { "text": "Capsule", "x": 8, "y": 50 },
+            { "text": "Pili", "x": 50, "y": 15 }
+          ],
+          "syllabusTags": ["prokaryotic", "bacteria", "module-1"]
+        },
+        {
+          "id": "phospholipid-bilayer",
+          "name": "Phospholipid Bilayer",
+          "description": "Cell membrane cross-section showing fluid mosaic model",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/phospholipid-bilayer.svg",
+            "alt": "Cross-section of cell membrane showing phospholipid bilayer",
+            "width": 800,
+            "height": 400
+          },
+          "hotspots": [
+            {
+              "x": 30, "y": 50, "title": "Hydrophilic Heads",
+              "content": "The phosphate heads face outward toward the water, making them hydrophilic (water-loving)."
+            },
+            {
+              "x": 50, "y": 30, "title": "Hydrophobic Tails",
+              "content": "The fatty acid tails face inward, away from water, making them hydrophobic (water-fearing)."
+            },
+            {
+              "x": 70, "y": 50, "title": "Integral Protein",
+              "content": "Span the entire membrane, often functioning as channels or transporters."
+            },
+            {
+              "x": 25, "y": 75, "title": "Peripheral Protein",
+              "content": "Attached to the surface of the membrane, often involved in cell signaling."
+            },
+            {
+              "x": 75, "y": 25, "title": "Cholesterol",
+              "content": "Helps maintain membrane fluidity and stability."
+            }
+          ],
+          "syllabusTags": ["membrane", "transport", "module-1"]
+        }
+      ]
+    },
+    {
+      "id": "genetics",
+      "name": "Genetics & DNA",
+      "templates": [
+        {
+          "id": "dna-structure",
+          "name": "DNA Double Helix",
+          "description": "DNA structure with base pairs labeled",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/dna-helix.svg",
+            "alt": "DNA double helix showing base pairing",
+            "width": 600,
+            "height": 500
+          },
+          "suggestedLabels": [
+            { "text": "Adenine (A)", "x": 35, "y": 40 },
+            { "text": "Thymine (T)", "x": 65, "y": 40 },
+            { "text": "Cytosine (C)", "x": 35, "y": 60 },
+            { "text": "Guanine (G)", "x": 65, "y": 60 },
+            { "text": "Sugar-Phosphate Backbone", "x": 15, "y": 50 },
+            { "text": "Hydrogen Bonds", "x": 50, "y": 50 }
+          ],
+          "syllabusTags": ["dna", "structure", "module-5"]
+        },
+        {
+          "id": "chromosome-structure",
+          "name": "Chromosome Structure",
+          "description": "Chromosome showing sister chromatids and centromere",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/chromosome.svg",
+            "alt": "Chromosome structure showing sister chromatids",
+            "width": 300,
+            "height": 500
+          },
+          "hotspots": [
+            {
+              "x": 50, "y": 50, "title": "Centromere",
+              "content": "The constricted region where sister chromatids are joined."
+            },
+            {
+              "x": 30, "y": 25, "title": "Sister Chromatid",
+              "content": "One of two identical copies of a chromosome formed during DNA replication."
+            },
+            {
+              "x": 70, "y": 75, "title": "Telomere",
+              "content": "Protective caps at the ends of chromosomes."
+            },
+            {
+              "x": 50, "y": 85, "title": "Short Arm (p)",
+              "content": "The shorter arm of the chromosome."
+            },
+            {
+              "x": 50, "y": 15, "title": "Long Arm (q)",
+              "content": "The longer arm of the chromosome."
+            }
+          ],
+          "syllabusTags": ["chromosome", "structure", "module-5"]
+        },
+        {
+          "id": "mitosis-stages",
+          "name": "Mitosis Stages",
+          "description": "Six panels showing stages of mitosis",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/mitosis-stages.svg",
+            "alt": "Stages of mitosis: prophase, metaphase, anaphase, telophase",
+            "width": 900,
+            "height": 300
+          },
+          "layers": [
+            {
+              "name": "All Stages",
+              "hotspots": ["prophase", "metaphase", "anaphase", "telophase"]
+            }
+          ],
+          "hotspots": [
+            {
+              "id": "prophase", "x": 15, "y": 50, "title": "Prophase",
+              "content": "Chromosomes condense, nuclear envelope breaks down, spindle fibers form."
+            },
+            {
+              "id": "metaphase", "x": 38, "y": 50, "title": "Metaphase",
+              "content": "Chromosomes line up at the metaphase plate, spindle fibers attach to centromeres."
+            },
+            {
+              "id": "anaphase", "x": 62, "y": 50, "title": "Anaphase",
+              "content": "Sister chromatids separate and are pulled to opposite poles."
+            },
+            {
+              "id": "telophase", "x": 85, "y": 50, "title": "Telophase",
+              "content": "Nuclear envelopes reform, chromosomes decondense, cytokinesis begins."
+            }
+          ],
+          "syllabusTags": ["mitosis", "cell-division", "module-5"]
+        }
+      ]
+    },
+    {
+      "id": "molecular-biology",
+      "name": "Molecular Biology",
+      "templates": [
+        {
+          "id": "enzyme-substrate",
+          "name": "Enzyme-Substrate Complex",
+          "description": "Lock and key model of enzyme action",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/enzyme-substrate.svg",
+            "alt": "Enzyme-substrate complex showing active site",
+            "width": 700,
+            "height": 400
+          },
+          "layers": [
+            {
+              "name": "Before Reaction",
+              "hotspots": ["enzyme", "substrate"]
+            },
+            {
+              "name": "During Reaction",
+              "hotspots": ["enzyme", "active-site", "substrate"]
+            },
+            {
+              "name": "After Reaction",
+              "hotspots": ["enzyme", "products"]
+            }
+          ],
+          "hotspots": [
+            {
+              "id": "enzyme", "x": 30, "y": 50, "title": "Enzyme",
+              "content": "A biological catalyst that speeds up chemical reactions without being consumed."
+            },
+            {
+              "id": "active-site", "x": 35, "y": 45, "title": "Active Site",
+              "content": "The specific region where the substrate binds to the enzyme."
+            },
+            {
+              "id": "substrate", "x": 50, "y": 35, "title": "Substrate",
+              "content": "The molecule that binds to the enzyme's active site."
+            },
+            {
+              "id": "products", "x": 70, "y": 50, "title": "Products",
+              "content": "The molecules produced after the enzyme catalyzes the reaction."
+            }
+          ],
+          "syllabusTags": ["enzymes", "catalysis", "module-1"]
+        },
+        {
+          "id": "transcription-translation",
+          "name": "Transcription & Translation",
+          "description": "Protein synthesis process diagram",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/protein-synthesis.svg",
+            "alt": "Diagram showing transcription in nucleus and translation at ribosome",
+            "width": 900,
+            "height": 500
+          },
+          "hotspots": [
+            {
+              "x": 20, "y": 30, "title": "Transcription",
+              "content": "DNA is transcribed into mRNA in the nucleus by RNA polymerase."
+            },
+            {
+              "x": 20, "y": 50, "title": "mRNA Processing",
+              "content": "Introns are removed and a 5' cap and poly-A tail are added."
+            },
+            {
+              "x": 50, "y": 70, "title": "Ribosome",
+              "content": "The site of protein synthesis where translation occurs."
+            },
+            {
+              "x": 65, "y": 65, "title": "tRNA",
+              "content": "Transfer RNA brings amino acids to the ribosome matching the mRNA codon."
+            },
+            {
+              "x": 80, "y": 70, "title": "Polypeptide Chain",
+              "content": "Growing chain of amino acids that will become a protein."
+            },
+            {
+              "x": 30, "y": 25, "title": "DNA Template",
+              "content": "One strand of DNA serves as the template for mRNA synthesis."
+            }
+          ],
+          "syllabusTags": ["transcription", "translation", "protein-synthesis", "module-5"]
+        }
+      ]
+    },
+    {
+      "id": "inheritance",
+      "name": "Inheritance Patterns",
+      "templates": [
+        {
+          "id": "punnett-square",
+          "name": "Punnett Square Template",
+          "description": "Blank Punnett square for inheritance problems",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/punnett-square.svg",
+            "alt": "Blank Punnett square for genetic crosses",
+            "width": 400,
+            "height": 400
+          },
+          "suggestedLabels": [
+            { "text": "Parent 1 Gametes", "x": 30, "y": 10 },
+            { "text": "Parent 2 Gametes", "x": 10, "y": 30 }
+          ],
+          "syllabusTags": ["inheritance", "punnett-square", "module-5"]
+        },
+        {
+          "id": "pedigree-chart",
+          "name": "Pedigree Chart",
+          "description": "Three-generation pedigree chart template",
+          "type": "diagram",
+          "image": {
+            "src": "/assets/images/templates/pedigree-chart.svg",
+            "alt": "Three-generation pedigree chart",
+            "width": 700,
+            "height": 400
+          },
+          "hotspots": [
+            {
+              "x": 15, "y": 75, "title": "Male (Unaffected)",
+              "content": "Square represents male. Empty = unaffected by trait."
+            },
+            {
+              "x": 25, "y": 75, "title": "Female (Unaffected)",
+              "content": "Circle represents female. Empty = unaffected by trait."
+            },
+            {
+              "x": 50, "y": 50, "title": "Affected Individual",
+              "content": "Filled shape indicates individual expresses the trait."
+            },
+            {
+              "x": 35, "y": 75, "title": "Carrier",
+              "content": "Half-filled indicates carrier (heterozygous for recessive trait)."
+            }
+          ],
+          "syllabusTags": ["pedigree", "inheritance", "module-5"]
+        }
+      ]
+    }
+  ]
+}

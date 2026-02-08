@@ -1,12 +1,12 @@
 /**
  * HSC Biology - Lesson Data Schema & Validation
- * Phase 0.2 - JSON Data System
- * Version: 1.0.0
+ * Phase 0.6 - Enhanced with Image Manager, Diagram Tool, Rich Media support
+ * Version: 1.1.0
  */
 
 const LessonSchema = {
-  version: '1.0.0',
-  lastUpdated: '2026-02-07',
+  version: '1.1.0',
+  lastUpdated: '2026-02-08',
   
   // Schema definition for lesson data
   definition: {
@@ -77,7 +77,7 @@ const LessonSchema = {
             id: { type: 'string' },
             type: { 
               type: 'string', 
-              enum: ['content', 'definition', 'grid', 'accordion', 'worked-example', 'activity', 'copy-to-book', 'assessment'] 
+              enum: ['content', 'definition', 'grid', 'accordion', 'worked-example', 'activity', 'copy-to-book', 'assessment', 'diagram', 'image', 'video', 'simulation'] 
             },
             title: { type: 'string' },
             icon: { type: 'string', default: 'book-open' },
@@ -86,7 +86,12 @@ const LessonSchema = {
             definition: { type: 'string' },
             term: { type: 'string' },
             gridItems: { type: 'array' },
-            open: { type: 'boolean', default: false }
+            open: { type: 'boolean', default: false },
+            // New Phase 0.6 fields
+            image: { type: 'object' },
+            diagram: { type: 'object' },
+            video: { type: 'object' },
+            simulation: { type: 'object' }
           }
         }
       },
@@ -98,11 +103,17 @@ const LessonSchema = {
           required: ['id', 'type', 'title'],
           fields: {
             id: { type: 'string' },
-            type: { type: 'string', enum: ['matching', 'fill-blank', 'multiple-choice', 'sorting'] },
+            type: { type: 'string', enum: ['matching', 'fill-blank', 'multiple-choice', 'ordering', 'labeling', 'fillBlank'] },
             title: { type: 'string' },
             description: { type: 'string' },
             items: { type: 'array' },
-            theme: { type: 'string', enum: ['teal', 'purple', 'orange', 'blue'], default: 'teal' }
+            theme: { type: 'string', enum: ['teal', 'purple', 'orange', 'blue'], default: 'teal' },
+            // Phase 0.6 activity-specific fields
+            labels: { type: 'array' },
+            blanks: { type: 'array' },
+            shuffleDisplay: { type: 'boolean' },
+            lockFirst: { type: 'boolean' },
+            xpReward: { type: 'number', default: 50 }
           }
         }
       },
@@ -174,6 +185,205 @@ const LessonSchema = {
           version: { type: 'string' },
           tags: { type: 'array', items: { type: 'string' } }
         }
+      },
+      
+      // Phase 0.6: Image library for the lesson
+      imageLibrary: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['id', 'src', 'alt'],
+          fields: {
+            id: { type: 'string' },
+            src: { type: 'string' },
+            srcWebp: { type: 'string' },
+            thumbnail: { type: 'string' },
+            alt: { type: 'string' },
+            caption: { type: 'string' },
+            credit: { type: 'string' },
+            width: { type: 'number' },
+            height: { type: 'number' },
+            size: { type: 'number' },
+            mimeType: { type: 'string' },
+            uploadedAt: { type: 'string' }
+          }
+        }
+      }
+    }
+  },
+  
+  /**
+   * Image object schema for validation
+   */
+  imageSchema: {
+    required: ['src', 'alt'],
+    fields: {
+      src: { type: 'string', minLength: 1 },
+      srcWebp: { type: 'string' },
+      thumbnail: { type: 'string' },
+      alt: { type: 'string', minLength: 1 },
+      caption: { type: 'string' },
+      credit: { type: 'string' },
+      width: { type: 'number', minimum: 1 },
+      height: { type: 'number', minimum: 1 }
+    }
+  },
+  
+  /**
+   * Diagram object schema for validation
+   */
+  diagramSchema: {
+    required: ['id', 'title', 'image'],
+    fields: {
+      id: { type: 'string' },
+      title: { type: 'string', minLength: 1 },
+      image: { type: 'object' },
+      hotspots: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['id', 'x', 'y', 'type'],
+          fields: {
+            id: { type: 'string' },
+            x: { type: 'number', minimum: 0, maximum: 100 },
+            y: { type: 'number', minimum: 0, maximum: 100 },
+            size: { type: 'number', minimum: 20, maximum: 100 },
+            color: { type: 'string' },
+            type: { type: 'string', enum: ['popup', 'label', 'layer'] },
+            title: { type: 'string' },
+            content: { type: 'string' },
+            labelText: { type: 'string' },
+            labelPosition: { type: 'string', enum: ['above', 'below', 'left', 'right'] },
+            detailImage: { type: 'string' }
+          }
+        }
+      },
+      layers: {
+        type: 'array',
+        items: {
+          type: 'object',
+          required: ['id', 'name'],
+          fields: {
+            id: { type: 'string' },
+            name: { type: 'string' },
+            visibleHotspots: { type: 'array', items: { type: 'string' } }
+          }
+        }
+      },
+      defaultZoom: { type: 'number', minimum: 0.5, maximum: 3 },
+      maxZoom: { type: 'number', minimum: 1, maximum: 5 },
+      minZoom: { type: 'number', minimum: 0.25, maximum: 1 }
+    }
+  },
+  
+  /**
+   * Video object schema for validation
+   */
+  videoSchema: {
+    required: ['id', 'type', 'title'],
+    fields: {
+      id: { type: 'string' },
+      type: { type: 'string', enum: ['video'] },
+      title: { type: 'string' },
+      provider: { type: 'string', enum: ['youtube', 'vimeo'] },
+      videoId: { type: 'string' },
+      url: { type: 'string' },
+      startTime: { type: 'number', minimum: 0 },
+      endTime: { type: 'number', minimum: 0 },
+      thumbnail: { type: 'string' },
+      transcript: { type: 'string' },
+      caption: { type: 'string' }
+    }
+  },
+  
+  /**
+   * Activity schemas for Phase 0.6
+   */
+  activitySchemas: {
+    ordering: {
+      required: ['type', 'title', 'items'],
+      fields: {
+        type: { type: 'string', enum: ['ordering'] },
+        title: { type: 'string' },
+        instructions: { type: 'string' },
+        items: {
+          type: 'array',
+          minItems: 2,
+          items: {
+            type: 'object',
+            required: ['id', 'text', 'correctPosition'],
+            fields: {
+              id: { type: 'string' },
+              text: { type: 'string' },
+              correctPosition: { type: 'number', minimum: 1 }
+            }
+          }
+        },
+        shuffleDisplay: { type: 'boolean', default: true },
+        lockFirst: { type: 'boolean', default: false },
+        xpReward: { type: 'number', default: 50 }
+      }
+    },
+    
+    labeling: {
+      required: ['type', 'title', 'image', 'labels'],
+      fields: {
+        type: { type: 'string', enum: ['labeling'] },
+        title: { type: 'string' },
+        image: { type: 'object' },
+        labels: {
+          type: 'array',
+          minItems: 1,
+          items: {
+            type: 'object',
+            required: ['id', 'zone', 'correctText'],
+            fields: {
+              id: { type: 'string' },
+              zone: {
+                type: 'object',
+                required: ['x', 'y', 'width', 'height'],
+                fields: {
+                  x: { type: 'number' },
+                  y: { type: 'number' },
+                  width: { type: 'number' },
+                  height: { type: 'number' },
+                  polygon: { type: 'array' }
+                }
+              },
+              correctText: { type: 'string' },
+              alternatives: { type: 'array', items: { type: 'string' } },
+              hint: { type: 'string' }
+            }
+          }
+        },
+        allowRetry: { type: 'boolean', default: true },
+        xpReward: { type: 'number', default: 50 }
+      }
+    },
+    
+    fillBlank: {
+      required: ['type', 'title', 'text', 'blanks'],
+      fields: {
+        type: { type: 'string', enum: ['fillBlank'] },
+        title: { type: 'string' },
+        text: { type: 'string' },
+        blanks: {
+          type: 'array',
+          minItems: 1,
+          items: {
+            type: 'object',
+            required: ['id', 'correct'],
+            fields: {
+              id: { type: 'string' },
+              correct: { type: 'string' },
+              alternatives: { type: 'array', items: { type: 'string' } },
+              hint: { type: 'string' },
+              caseSensitive: { type: 'boolean', default: false },
+              showFirstLetter: { type: 'boolean', default: false }
+            }
+          }
+        },
+        xpReward: { type: 'number', default: 50 }
       }
     }
   },
@@ -296,6 +506,7 @@ const LessonSchema = {
     if (!sanitized.activities) sanitized.activities = [];
     if (!sanitized.syllabusLinks) sanitized.syllabusLinks = {};
     if (!sanitized.meta) sanitized.meta = {};
+    if (!sanitized.imageLibrary) sanitized.imageLibrary = [];
     
     // Add schema version
     sanitized._schemaVersion = this.version;
@@ -332,6 +543,15 @@ const LessonSchema = {
       return `${match[1]}-lesson-${match[2]}`;
     }
     return null;
+  },
+  
+  /**
+   * Generate unique ID
+   * @param {string} prefix - ID prefix
+   * @returns {string}
+   */
+  generateId(prefix = 'item') {
+    return `${prefix}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 };
 
