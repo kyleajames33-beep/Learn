@@ -29,9 +29,21 @@
     "content": "Imagine a cell as a city. The nucleus is like city hall (control center), mitochondria are power plants, and the cell membrane is like the city border. Just as a city needs all these parts working together, a cell needs its organelles to function!"
   },
   "moduleLessons": [
-    { "id": "module-1-cells-lesson-1", "number": 1, "title": "Introduction to Cells" },
-    { "id": "module-1-cells-lesson-2", "number": 2, "title": "Prokaryotic Cells" },
-    { "id": "module-1-cells-lesson-3", "number": 3, "title": "Eukaryotic Cell Structure" }
+    {
+      "id": "module-1-cells-lesson-1",
+      "number": 1,
+      "title": "Introduction to Cells"
+    },
+    {
+      "id": "module-1-cells-lesson-2",
+      "number": 2,
+      "title": "Prokaryotic Cells"
+    },
+    {
+      "id": "module-1-cells-lesson-3",
+      "number": 3,
+      "title": "Eukaryotic Cell Structure"
+    }
   ],
   "contentSections": [
     {
@@ -126,30 +138,66 @@
           "term": "Mitochondria",
           "correctValue": "b",
           "options": [
-            { "value": "a", "label": "Protein synthesis" },
-            { "value": "b", "label": "Energy production" },
-            { "value": "c", "label": "Photosynthesis" },
-            { "value": "d", "label": "Cell division" }
+            {
+              "value": "a",
+              "label": "Protein synthesis"
+            },
+            {
+              "value": "b",
+              "label": "Energy production"
+            },
+            {
+              "value": "c",
+              "label": "Photosynthesis"
+            },
+            {
+              "value": "d",
+              "label": "Cell division"
+            }
           ]
         },
         {
           "term": "Chloroplast",
           "correctValue": "c",
           "options": [
-            { "value": "a", "label": "Protein synthesis" },
-            { "value": "b", "label": "Energy production" },
-            { "value": "c", "label": "Photosynthesis" },
-            { "value": "d", "label": "Cell division" }
+            {
+              "value": "a",
+              "label": "Protein synthesis"
+            },
+            {
+              "value": "b",
+              "label": "Energy production"
+            },
+            {
+              "value": "c",
+              "label": "Photosynthesis"
+            },
+            {
+              "value": "d",
+              "label": "Cell division"
+            }
           ]
         },
         {
           "term": "Ribosomes",
           "correctValue": "a",
           "options": [
-            { "value": "a", "label": "Protein synthesis" },
-            { "value": "b", "label": "Energy production" },
-            { "value": "c", "label": "Photosynthesis" },
-            { "value": "d", "label": "Cell division" }
+            {
+              "value": "a",
+              "label": "Protein synthesis"
+            },
+            {
+              "value": "b",
+              "label": "Energy production"
+            },
+            {
+              "value": "c",
+              "label": "Photosynthesis"
+            },
+            {
+              "value": "d",
+              "label": "Cell division"
+            }
           ]
         }
       ]
@@ -161,10 +209,30 @@
       "description": "Fill in the blanks with 'Plant' or 'Animal':",
       "theme": "purple",
       "items": [
-        { "label": "Have cell walls", "correctAnswer": "Plant", "placeholder": "Plant/Animal", "maxLength": 10 },
-        { "label": "Have chloroplasts", "correctAnswer": "Plant", "placeholder": "Plant/Animal", "maxLength": 10 },
-        { "label": "Have centrioles", "correctAnswer": "Animal", "placeholder": "Plant/Animal", "maxLength": 10 },
-        { "label": "Large central vacuole", "correctAnswer": "Plant", "placeholder": "Plant/Animal", "maxLength": 10 }
+        {
+          "label": "Have cell walls",
+          "correctAnswer": "Plant",
+          "placeholder": "Plant/Animal",
+          "maxLength": 10
+        },
+        {
+          "label": "Have chloroplasts",
+          "correctAnswer": "Plant",
+          "placeholder": "Plant/Animal",
+          "maxLength": 10
+        },
+        {
+          "label": "Have centrioles",
+          "correctAnswer": "Animal",
+          "placeholder": "Plant/Animal",
+          "maxLength": 10
+        },
+        {
+          "label": "Large central vacuole",
+          "correctAnswer": "Plant",
+          "placeholder": "Plant/Animal",
+          "maxLength": 10
+        }
       ]
     }
   ],
@@ -246,14 +314,20 @@
   "navigation": {
     "previous": "module-1-cells-lesson-2",
     "previousTitle": "Prokaryotic Cells",
-    "next": null,
-    "nextTitle": null
+    "next": "module-1-cells-lesson-4",
+    "nextTitle": "The Cell Membrane"
   },
   "meta": {
     "author": "Science Hub",
     "createdAt": "2026-02-07",
     "lastModified": "2026-02-07",
     "version": "1.0.0",
-    "tags": ["eukaryotes", "organelles", "cell-structure", "HSC-biology", "module-1"]
+    "tags": [
+      "eukaryotes",
+      "organelles",
+      "cell-structure",
+      "HSC-biology",
+      "module-1"
+    ]
   }
 }
