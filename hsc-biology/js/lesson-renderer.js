@@ -508,6 +508,8 @@ const LessonRenderer = {
       }
       
       const lessonData = await response.json();
+      console.log('Raw lesson data loaded:', lessonData.id);
+      console.log('Content sections in raw data:', lessonData.contentSections?.length || 0);
       
       // Validate the data
       const validation = LessonSchema.validate(lessonData);
