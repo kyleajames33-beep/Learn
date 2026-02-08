@@ -1,16 +1,19 @@
 /**
  * HSC Biology - Lesson Renderer
- * Phase 0.2 - Template Engine
- * Version: 1.0.0
+ * Phase 1.0 - With Prerequisite Lock, Calculation Tolerance, Completion Tracking
+ * Version: 1.1.0
  * 
  * Renders lesson data from JSON into the lesson template
  */
 
 const LessonRenderer = {
-  version: '1.0.0',
+  version: '1.1.0',
   
   // Current lesson data
   currentLesson: null,
+  
+  // Calculation tolerance percentage (default 5%)
+  calculationTolerance: 0.05,
   
   // Icon mapping for Lucide icons
   iconMap: {
@@ -40,6 +43,175 @@ const LessonRenderer = {
     'list-checks': 'list-checks'
   },
   
+  // ==========================================
+  // PRIORITY FEATURES: Prerequisites, Completion, Calculations
+  // ==========================================
+  
+  /**
+   * Check if a lesson is completed
+   * @param {string} lessonId - The lesson ID to check
+   * @returns {boolean}
+   */
+  isLessonCompleted(lessonId) {
+    try {
+      const key = 'hsc-biology-completed-lessons';
+      const data = localStorage.getItem(key);
+      if (data) {
+        const completed = JSON.parse(data);
+        return completed[lessonId] === true;
+      }
+    } catch (e) {
+      console.error('Error checking completion:', e);
+    }
+    return false;
+  },
+  
+  /**
+   * Mark a lesson as completed
+   * @param {string} lessonId - The lesson ID to mark
+   */
+  markLessonCompleted(lessonId) {
+    try {
+      const key = 'hsc-biology-completed-lessons';
+      let data = localStorage.getItem(key);
+      let completed = data ? JSON.parse(data) : {};
+      completed[lessonId] = true;
+      completed[`${lessonId}-completed-at`] = new Date().toISOString();
+      localStorage.setItem(key, JSON.stringify(completed));
+      console.log(`Lesson ${lessonId} marked as completed`);
+    } catch (e) {
+      console.error('Error saving completion:', e);
+    }
+  },
+  
+  /**
+   * Check if all prerequisites are met for a lesson
+   * @param {Object} lesson - The lesson data with prerequisites array
+   * @returns {Object} - { met: boolean, missing: string[] }
+   */
+  checkPrerequisites(lesson) {
+    if (!lesson.prerequisites || lesson.prerequisites.length === 0) {
+      return { met: true, missing: [] };
+    }
+    
+    const missing = [];
+    for (const prereq of lesson.prerequisites) {
+      if (prereq.required !== false) {
+        const isCompleted = this.isLessonCompleted(prereq.lessonId);
+        if (!isCompleted) {
+          missing.push({
+            lessonId: prereq.lessonId,
+            description: prereq.description || prereq.lessonId
+          });
+        }
+      }
+    }
+    
+    return {
+      met: missing.length === 0,
+      missing: missing
+    };
+  },
+  
+  /**
+   * Render prerequisite lock screen
+   * @param {Object} lesson - The lesson data
+   * @param {Object} prereqStatus - Status from checkPrerequisites()
+   * @returns {string} HTML for lock screen
+   */
+  renderPrerequisiteLock(lesson, prereqStatus) {
+    const missingList = prereqStatus.missing.map(m => `
+      <div class="prereq-item" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 8px;">
+        <i data-lucide="lock" style="color: var(--warning);"></i>
+        <div>
+          <strong>${m.description}</strong>
+          <div style="font-size: 0.875rem; color: var(--text-tertiary);">Complete this lesson first</div>
+        </div>
+      </div>
+    `).join('');
+    
+    return `
+      <div class="prerequisite-lock" style="max-width: 600px; margin: 48px auto; padding: 32px; background: var(--card-bg); border: 2px solid var(--warning); border-radius: 16px; text-align: center;">
+        <div style="width: 80px; height: 80px; background: var(--warning-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+          <i data-lucide="lock" style="width: 40px; height: 40px; color: var(--warning);"></i>
+        </div>
+        <h2 style="margin-bottom: 16px; color: var(--text-primary);">Lesson Locked</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;">
+          Complete the following prerequisite lessons to unlock <strong>${lesson.title}</strong>:
+        </p>
+        <div style="text-align: left; margin-bottom: 24px;">
+          ${missingList}
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <a href="index.html" class="btn btn-secondary">
+            <i data-lucide="arrow-left"></i>
+            Back to Modules
+          </a>
+          ${prereqStatus.missing.length > 0 ? `
+            <a href="lesson.html?lesson=${prereqStatus.missing[0].lessonId}" class="btn btn-primary">
+              <i data-lucide="play"></i>
+              Start Required Lesson
+            </a>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  },
+  
+  /**
+   * Validate calculation answer with tolerance
+   * @param {number} userAnswer - The user's answer
+   * @param {number} correctAnswer - The correct answer
+   * @param {number} tolerance - Tolerance as decimal (default 0.05 = 5%)
+   * @returns {Object} - { correct: boolean, withinTolerance: boolean, diff: number }
+   */
+  validateCalculation(userAnswer, correctAnswer, tolerance = null) {
+    const tol = tolerance !== null ? tolerance : this.calculationTolerance;
+    const diff = Math.abs(userAnswer - correctAnswer);
+    const percentDiff = diff / correctAnswer;
+    const withinTolerance = percentDiff <= tol;
+    
+    return {
+      correct: withinTolerance,
+      withinTolerance: withinTolerance,
+      diff: diff,
+      percentDiff: percentDiff,
+      tolerance: tol,
+      userAnswer: userAnswer,
+      correctAnswer: correctAnswer
+    };
+  },
+  
+  /**
+   * Show calculation feedback with tolerance info
+   * @param {HTMLElement} container - The feedback container
+   * @param {Object} result - Result from validateCalculation()
+   */
+  showCalculationFeedback(container, result) {
+    const tolPercent = (result.tolerance * 100).toFixed(0);
+    
+    if (result.correct) {
+      container.innerHTML = `
+        <div class="feedback correct" style="padding: 16px; background: var(--success-light); border-radius: 8px; color: var(--success);">
+          <i data-lucide="check-circle" style="display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+          <strong>Correct!</strong> Your answer (${result.userAnswer}) is within ±${tolPercent}% of the expected value (${result.correctAnswer}).
+        </div>
+      `;
+    } else {
+      container.innerHTML = `
+        <div class="feedback incorrect" style="padding: 16px; background: var(--critical-light); border-radius: 8px; color: var(--critical);">
+          <i data-lucide="x-circle" style="display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+          <strong>Not quite.</strong> Your answer (${result.userAnswer}) is outside the ±${tolPercent}% tolerance range. 
+          Expected: ${result.correctAnswer} (±${(result.correctAnswer * result.tolerance).toFixed(2)})
+        </div>
+      `;
+    }
+    
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  },
+
   /**
    * Initialize the renderer
    */
@@ -99,6 +271,15 @@ const LessonRenderer = {
       
       // Sanitize and store
       this.currentLesson = LessonSchema.sanitize(lessonData);
+      
+      // Check prerequisites before rendering
+      const prereqStatus = this.checkPrerequisites(this.currentLesson);
+      if (!prereqStatus.met) {
+        // Show prerequisite lock screen
+        this.renderPrerequisiteLockScreen(this.currentLesson, prereqStatus);
+        this.hideLoading();
+        return;
+      }
       
       // Render the lesson
       this.render(this.currentLesson);
@@ -204,6 +385,29 @@ const LessonRenderer = {
     return [];
   },
   
+  /**
+   * Render prerequisite lock screen to the page
+   * @param {Object} lesson - The lesson data
+   * @param {Object} prereqStatus - Status from checkPrerequisites()
+   */
+  renderPrerequisiteLockScreen(lesson, prereqStatus) {
+    const main = document.getElementById('main-content');
+    if (!main) return;
+    
+    main.innerHTML = this.renderPrerequisiteLock(lesson, prereqStatus);
+    
+    // Update page title
+    document.title = `Locked: ${lesson.title} | HSC Biology | Science Hub`;
+    
+    // Re-initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+  },
+
   /**
    * Render main content area
    */
@@ -705,12 +909,18 @@ const LessonRenderer = {
    * Render mark complete button
    */
   renderMarkComplete(lesson) {
+    const isCompleted = this.isLessonCompleted(lesson.id);
+    const btnClass = isCompleted ? 'mark-complete-btn completed' : 'mark-complete-btn';
+    const btnText = isCompleted ? 'Completed!' : 'Mark as Complete';
+    const iconName = isCompleted ? 'check-circle' : 'circle';
+    
     return `
       <div style="text-align: center; margin: 48px 0;">
-        <button class="mark-complete-btn" data-lesson="${lesson.lessonNumber}">
-          <i data-lucide="circle"></i>
-          <span>Mark as Complete</span>
+        <button class="${btnClass}" data-lesson-id="${lesson.id}" ${isCompleted ? 'disabled' : ''}>
+          <i data-lucide="${iconName}"></i>
+          <span>${btnText}</span>
         </button>
+        ${isCompleted ? '<p style="color: var(--success); margin-top: 12px;">You can now proceed to the next lesson!</p>' : ''}
       </div>
     `;
   },
@@ -1110,7 +1320,7 @@ const LessonRenderer = {
   },
 
   /**
-   * Render activities - extended for Phase 0.6
+   * Render activities - extended for Phase 0.6 and Phase 1.0
    */
   renderActivities(activities) {
     if (!activities || activities.length === 0) return '';
@@ -1129,10 +1339,63 @@ const LessonRenderer = {
           return ActivityLabeling ? ActivityLabeling.render(activity, { theme }) : '';
         case 'fillBlank':
           return ActivityFillBlank ? ActivityFillBlank.render(activity, { theme }) : '';
+        case 'calculation':
+          return this.renderCalculationActivity(activity, theme);
         default:
           return '';
       }
     }).join('');
+  },
+  
+  /**
+   * Render calculation activity with tolerance
+   * @param {Object} activity - The calculation activity
+   * @param {string} theme - The theme color
+   * @returns {string} HTML for calculation activity
+   */
+  renderCalculationActivity(activity, theme) {
+    const questions = activity.questions || [];
+    const tolerance = activity.tolerance || this.calculationTolerance;
+    const tolerancePercent = (tolerance * 100).toFixed(0);
+    
+    return `
+      <div class="activity-card theme-${theme}" data-activity="calculation" data-tolerance="${tolerance}">
+        <div class="activity-header">
+          <h3>
+            <i data-lucide="calculator"></i>
+            ${activity.title}
+          </h3>
+          ${activity.xpReward ? `<span class="xp-badge">+${activity.xpReward} XP</span>` : ''}
+        </div>
+        <div class="activity-content">
+          ${activity.description ? `<p class="activity-description">${activity.description}</p>` : ''}
+          <p style="color: var(--text-tertiary); font-size: 0.875rem; margin-bottom: 16px;">
+            <i data-lucide="info" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i>
+            Answers within ±${tolerancePercent}% are accepted
+          </p>
+          <div class="calculation-questions">
+            ${questions.map((q, idx) => `
+              <div class="calculation-question" data-question-id="${q.id}" data-correct="${q.correctAnswer}" data-tolerance="${tolerance}">
+                <p class="question-text">${idx + 1}. ${q.question}</p>
+                <div class="calculation-input-group">
+                  <input type="number" 
+                         class="calculation-input" 
+                         placeholder="Enter your answer"
+                         step="any"
+                         data-question-id="${q.id}">
+                  <span class="calculation-unit">${q.unit || ''}</span>
+                </div>
+                <div class="calculation-feedback" data-question-id="${q.id}"></div>
+              </div>
+            `).join('')}
+          </div>
+          <button class="check-calculation-btn btn btn-primary" style="margin-top: 24px;">
+            <i data-lucide="check-circle"></i>
+            Check Answers
+          </button>
+        </div>
+      </div>
+    `;
   },
 
   /**
@@ -1171,6 +1434,43 @@ const LessonRenderer = {
         });
       });
     });
+    
+    // Calculation activities with tolerance
+    document.querySelectorAll('.check-calculation-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const activity = e.target.closest('[data-activity]');
+        const questions = activity.querySelectorAll('.calculation-question');
+        
+        questions.forEach(question => {
+          const correctAnswer = parseFloat(question.dataset.correct);
+          const tolerance = parseFloat(question.dataset.tolerance) || this.calculationTolerance;
+          const input = question.querySelector('.calculation-input');
+          const feedbackContainer = question.querySelector('.calculation-feedback');
+          
+          const userAnswer = parseFloat(input.value);
+          
+          if (isNaN(userAnswer)) {
+            feedbackContainer.innerHTML = `
+              <div class="feedback" style="padding: 12px; background: var(--warning-light); border-radius: 8px; color: var(--warning);">
+                <i data-lucide="alert-circle" style="display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+                Please enter a valid number
+              </div>
+            `;
+          } else {
+            const result = this.validateCalculation(userAnswer, correctAnswer, tolerance);
+            this.showCalculationFeedback(feedbackContainer, result);
+            
+            // Visual feedback on input
+            input.classList.remove('correct', 'incorrect');
+            input.classList.add(result.correct ? 'correct' : 'incorrect');
+          }
+        });
+        
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+      });
+    });
 
     // Phase 0.6 activities
     if (typeof ActivityOrdering !== 'undefined') {
@@ -1187,6 +1487,47 @@ const LessonRenderer = {
         DiagramTool.bindStudentView(container);
       });
     }
+    
+    // Bind mark complete buttons
+    this.bindMarkCompleteHandler();
+  },
+  
+  /**
+   * Bind mark complete button handler
+   */
+  bindMarkCompleteHandler() {
+    document.querySelectorAll('.mark-complete-btn:not([disabled])').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const lessonId = e.currentTarget.dataset.lessonId;
+        if (lessonId) {
+          this.markLessonCompleted(lessonId);
+          
+          // Update button appearance
+          e.currentTarget.disabled = true;
+          e.currentTarget.classList.add('completed');
+          e.currentTarget.innerHTML = `
+            <i data-lucide="check-circle"></i>
+            <span>Completed!</span>
+          `;
+          
+          // Add success message
+          const msg = document.createElement('p');
+          msg.style.cssText = 'color: var(--success); margin-top: 12px;';
+          msg.textContent = 'You can now proceed to the next lesson!';
+          e.currentTarget.parentNode.appendChild(msg);
+          
+          // Re-initialize icons
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+          
+          // Update sidebar progress
+          if (this.currentLesson) {
+            this.updateProgress(this.currentLesson);
+          }
+        }
+      });
+    });
   }
 };
 
