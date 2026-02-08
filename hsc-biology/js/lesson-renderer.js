@@ -660,13 +660,22 @@ const LessonRenderer = {
    */
   renderMainContent(lesson) {
     const main = document.getElementById('main-content');
-    if (!main) return;
+    if (!main) {
+      console.error('Main content element not found');
+      return;
+    }
+    
+    console.log('Rendering lesson:', lesson.id);
+    console.log('Content sections:', lesson.contentSections?.length || 0);
+    
+    const contentSectionsHtml = this.renderContentSections(lesson.contentSections);
+    console.log('Content sections HTML length:', contentSectionsHtml.length);
     
     main.innerHTML = `
       ${this.renderHero(lesson)}
       ${this.renderInfoCards(lesson)}
       ${lesson.engagementHook ? this.renderEngagementHook(lesson.engagementHook) : ''}
-      ${this.renderContentSections(lesson.contentSections)}
+      ${contentSectionsHtml}
       ${this.renderActivities(lesson.activities)}
       ${this.renderCopyToBook(lesson.copyToBook)}
       ${this.renderAssessment(lesson.assessment)}
@@ -798,9 +807,14 @@ const LessonRenderer = {
    * Render content sections
    */
   renderContentSections(sections) {
-    if (!sections || sections.length === 0) return '';
+    console.log('renderContentSections called with:', sections?.length || 0, 'sections');
+    if (!sections || sections.length === 0) {
+      console.log('No sections to render');
+      return '';
+    }
     
     return sections.map(section => {
+      console.log('Rendering section:', section.type, section.title);
       const icon = section.icon || 'book-open';
       
       switch (section.type) {
