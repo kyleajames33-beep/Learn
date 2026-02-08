@@ -949,8 +949,12 @@ const LessonRenderer = {
    * Render matching activity
    */
   renderMatchingActivity(activity, theme) {
+    const items = activity.items || [];
+    // Create options from all match values
+    const allMatches = items.map(item => item.match || item.correctMatch || '');
+    
     return `
-      <div class="activity-card activity-card--${theme} reveal" data-activity="${activity.id}">
+      <div class="activity-card activity-card--${theme} reveal" data-activity="${activity.id}" data-activity-type="matching">
         <div class="activity-card-header">
           <i data-lucide="microscope"></i>
           <h3>${activity.title}</h3>
@@ -958,13 +962,13 @@ const LessonRenderer = {
         <div class="activity-card-body">
           ${activity.description ? `<p style="margin-bottom: 16px;">${activity.description}</p>` : ''}
           <div class="matching-form">
-            ${activity.items.map((item, index) => `
-              <div class="matching-item" data-correct="${item.correctValue}">
-                <span class="matching-term">${item.term}</span>
+            ${items.map((item, index) => `
+              <div class="matching-item" data-correct="${item.match || item.correctMatch || ''}">
+                <span class="matching-term">${item.text || item.term || item.label || ''}</span>
                 <i data-lucide="arrow-right" class="matching-arrow"></i>
                 <select class="modern-input matching-select">
                   <option value="">Select...</option>
-                  ${item.options.map(opt => `<option value="${opt.value}">${opt.label}</option>`).join('')}
+                  ${allMatches.map(match => `<option value="${match}">${match}</option>`).join('')}
                 </select>
               </div>
             `).join('')}
@@ -972,6 +976,7 @@ const LessonRenderer = {
               <i data-lucide="check-circle"></i>
               Check Answers
             </button>
+            <div class="matching-feedback" style="margin-top: 16px;"></div>
           </div>
         </div>
       </div>
