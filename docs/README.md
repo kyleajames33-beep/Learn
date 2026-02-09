@@ -1,76 +1,77 @@
-# Science Hub - Documentation Hub
+# Science Hub - Project Documentation
 
-This folder is the project's brain. Every question about the project maps to a specific file.
+## FOR AI AGENTS: START HERE
+
+You are working on **Science Hub**, an interactive HSC Biology learning platform. This folder contains everything you need to know.
+
+**Step 1:** Read `STATUS.md` in this folder. It has:
+- **NEXT TASK** — the exact thing to work on right now
+- **LAST SESSION LOG** — what the previous AI did, so you have context
+- **HANDOFF PROTOCOL** — what you MUST update before ending your session
+
+**Step 2:** If you need more context on the current milestone, read `goals/PHASE-1-CONTENT.md`.
+
+**Step 3:** If you need per-lesson status, read `trackers/MODULE-1-LESSONS.md`.
+
+**Step 4:** Do the work described in NEXT TASK.
+
+**Step 5:** Before ending, follow the HANDOFF PROTOCOL in STATUS.md. This is critical — the next AI depends on it.
 
 ---
 
-## Quick Start (New Chat Session)
+## Key Constraints (Never Violate)
 
-```
-1. Read docs/STATUS.md                → Where are we right now?
-2. Read docs/goals/PHASE-1-CONTENT.md → What milestone are we on?
-3. Read docs/trackers/MODULE-1-LESSONS.md → What specific task is next?
-4. Do the work.
-5. Update STATUS.md + relevant tracker.
-```
+1. **Vanilla JS only** — no React, Vue, jQuery, or any framework
+2. **Mobile-first** — 375px minimum viewport, 44px touch targets
+3. **Australian English** — specialised, behaviour, haemoglobin, fibre, centre
+4. **Relative paths only** — no absolute paths (site is hosted at GitHub Pages subdirectory)
+5. **Zero console errors** — every page must load clean
+
+Full constraints: `MASTER-PLAN.md` Section 2.
 
 ---
 
 ## File Map
 
-### "Where / What / How" Files
-
-| Question | File | Updated |
-|----------|------|---------|
-| Where are we right now? | `STATUS.md` | Daily |
-| What's the project vision? | `MASTER-PLAN.md` | Rarely |
-| How does work get done? | `WORKFLOW.md` | Rarely |
-
-### Goal Files (`goals/`)
-
-| Question | File | Updated |
-|----------|------|---------|
-| How does the goal system work? | `goals/OVERVIEW.md` | Rarely |
-| What did Phase 0 achieve? | `goals/PHASE-0-FOUNDATION.md` | Never (archived) |
-| What are we building right now? | `goals/PHASE-1-CONTENT.md` | Weekly |
-| What's planned for UX phase? | `goals/PHASE-2-UX.md` | When approached |
-| What's planned for gamification? | `goals/PHASE-3-GAMIFICATION.md` | When approached |
-| What's planned for mini-games? | `goals/PHASE-4-GAMES.md` | When approached |
-| What's planned for backend? | `goals/PHASE-5-BACKEND.md` | When approached |
-| What milestones are completed? | `goals/MILESTONE-LOG.md` | On completion |
-
-### Tracker Files (`trackers/`)
-
-| Question | File | Updated |
-|----------|------|---------|
-| What's the status of each lesson? | `trackers/MODULE-1-LESSONS.md` | Daily |
-| What features are done? | `trackers/FEATURE-MATRIX.md` | Weekly |
-| Are there open bugs? | `trackers/BUG-LOG.md` | As found/fixed |
-
-### Reference Files
-
-| Question | File | Updated |
-|----------|------|---------|
-| What are the technical specs? | `SPECS.md` | When specs change |
-| What's the quality bar? | `QUALITY-GATES.md` | When criteria change |
-| How are files organised? | `ARCHITECTURE.md` | When structure changes |
-| How does Kyle create content? | `CONTENT_WORKFLOW.md` | Rarely |
-| What's the HTML template? | `PAGE_TEMPLATE.html` | Rarely |
+| I need to know... | Read this |
+|--------------------|-----------|
+| What to do RIGHT NOW | `STATUS.md` → NEXT TASK section |
+| What the last AI did | `STATUS.md` → LAST SESSION LOG |
+| Current milestone details | `goals/PHASE-1-CONTENT.md` |
+| Status of each lesson | `trackers/MODULE-1-LESSONS.md` |
+| Open bugs | `trackers/BUG-LOG.md` |
+| Feature completion | `trackers/FEATURE-MATRIX.md` |
+| How the workflow works | `WORKFLOW.md` |
+| Project vision & constraints | `MASTER-PLAN.md` |
+| Technical specs | `SPECS.md` |
+| Quality checklist | `QUALITY-GATES.md` |
+| CSS/JS file organisation | `ARCHITECTURE.md` |
+| How Kyle creates content | `CONTENT_WORKFLOW.md` |
 
 ---
 
-## Current Project Status
+## Lesson Pipeline
+
+Every lesson goes through 6 stages:
+
+```
+OUTLINE → JSON → RENDER → WIRED → QA → LIVE
+```
+
+Track progress in `trackers/MODULE-1-LESSONS.md`. Full pipeline details in `WORKFLOW.md`.
+
+---
+
+## Project Status
 
 ```
 Phase 0: Foundation         COMPLETE
-Phase 1: Content Sprint     40% ACTIVE
+Phase 1: Content Sprint     40% ACTIVE ← we are here
 Phase 2: UX & Navigation    PLANNED
 Phase 3: Gamification       PLANNED
 Phase 4: Mini-Games         PLANNED
 Phase 5: Backend & Sync     PLANNED
 ```
-
-**Active Milestone:** M1.1 (Lessons 1-5 production-ready) + M1.2 (Lessons 6-10 integrated)
 
 ---
 
@@ -78,10 +79,10 @@ Phase 5: Backend & Sync     PLANNED
 
 ```
 docs/
-├── README.md                  # This file - documentation hub
-├── MASTER-PLAN.md             # Project constitution
+├── README.md                  # THIS FILE — start here
+├── STATUS.md                  # Current state + NEXT TASK + handoff
 ├── WORKFLOW.md                # How work gets done
-├── STATUS.md                  # Current state (update daily)
+├── MASTER-PLAN.md             # Project constitution
 ├── SPECS.md                   # Technical specifications
 ├── QUALITY-GATES.md           # Definition of done
 ├── ARCHITECTURE.md            # CSS/JS file organisation
@@ -91,17 +92,17 @@ docs/
 ├── goals/                     # Goal tracking system
 │   ├── OVERVIEW.md           # How goals work
 │   ├── PHASE-0-FOUNDATION.md # Archived (complete)
-│   ├── PHASE-1-CONTENT.md   # ACTIVE - Module 1 goals
+│   ├── PHASE-1-CONTENT.md   # ACTIVE — current milestone details
 │   ├── PHASE-2-UX.md        # Planned
-│   ├── PHASE-3-GAMIFICATION.md # Planned
-│   ├── PHASE-4-GAMES.md     # Planned
-│   ├── PHASE-5-BACKEND.md   # Planned
+│   ├── PHASE-3-GAMIFICATION.md
+│   ├── PHASE-4-GAMES.md
+│   ├── PHASE-5-BACKEND.md
 │   └── MILESTONE-LOG.md     # Completed milestones
 │
 └── trackers/                  # Granular progress tracking
-    ├── MODULE-1-LESSONS.md   # Per-lesson status
-    ├── FEATURE-MATRIX.md     # Feature completion
-    └── BUG-LOG.md            # Known issues
+    ├── MODULE-1-LESSONS.md   # Per-lesson pipeline status
+    ├── FEATURE-MATRIX.md     # Feature completion matrix
+    └── BUG-LOG.md            # Issues and fixes
 ```
 
 ---
