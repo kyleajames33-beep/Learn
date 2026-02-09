@@ -1,0 +1,391 @@
+{
+  "id": "mod1-lesson03",
+  "title": "Eukaryotic Animal Cells - Nucleus & Ribosomes",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 3,
+  "description": "Structure and function of the nucleus and ribosomes in eukaryotic animal cells. Compares eukaryotic 80S ribosomes with prokaryotic 70S ribosomes.",
+  "duration": "50 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can identify and describe the structure of the nuclear envelope and its components.",
+    "Students can explain the levels of DNA packaging from double helix to chromosome.",
+    "Students can distinguish between eukaryotic 80S and prokaryotic 70S ribosomes.",
+    "Students can describe the role of the nucleolus in ribosome assembly."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Eukaryotic nucleus structure and ribosome types"
+  },
+  
+  "successCriteria": [
+    "I can label the nuclear envelope, pores, lamina, and nucleolus.",
+    "I can explain the hierarchy: DNA → nucleosome → chromatin → chromosome.",
+    "I can compare 70S and 80S ribosomes (subunits, location, size).",
+    "I can explain why antibiotics target 70S but not 80S ribosomes."
+  ],
+  
+  "engagementHook": {
+    "title": "The Cell's Control Centre",
+    "content": "If the DNA from a single human cell were stretched out, it would be 2 metres long. Yet it fits inside a nucleus only 6 micrometres across—that's like packing 20km of thread into a backpack. How is this possible? And why does the cell need such complex packaging?"
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Nuclear Envelope",
+      "definition": "Double membrane surrounding the nucleus. Outer membrane continuous with ER. Contains nuclear pores for transport."
+    },
+    {
+      "term": "Nuclear Pore",
+      "definition": "Protein complex in nuclear envelope regulating passage of molecules. Allows RNA out, proteins in."
+    },
+    {
+      "term": "Nucleolus",
+      "definition": "Dense region inside nucleus where rRNA is synthesised and ribosomal subunits assembled. Not membrane-bound."
+    },
+    {
+      "term": "Chromatin",
+      "definition": "DNA + histone proteins. Exists as euchromatin (active, loose) or heterochromatin (inactive, condensed)."
+    },
+    {
+      "term": "Nucleosome",
+      "definition": "'Beads on a string'—DNA wrapped around histone octamer. Basic unit of DNA packaging."
+    },
+    {
+      "term": "80S Ribosome",
+      "definition": "Eukaryotic ribosome: 40S + 60S subunits. Found in cytoplasm and on rough ER. Larger than prokaryotic 70S."
+    }
+  ],
+  
+  "misconceptions": [
+    {
+      "misconception": "The nucleus is the only place with DNA",
+      "correction": "Mitochondria (and chloroplasts in plants) also contain DNA. Nuclear DNA is linear; mitochondrial DNA is circular like prokaryotes."
+    },
+    {
+      "misconception": "Chromosomes only exist during cell division",
+      "correction": "DNA is always organised into chromosomes, but they're only VISIBLE as distinct X-shapes during mitosis. In interphase, chromatin is diffuse."
+    },
+    {
+      "misconception": "70S and 80S ribosomes are completely different",
+      "correction": "Both are ribosomes (protein synthesis machines). The numbers refer to Svedberg units (sedimentation rate), not just size. Both have large and small subunits."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "nucleus-structure",
+      "type": "diagram",
+      "title": "Nuclear Envelope Structure",
+      "icon": "nucleus",
+      "content": "The nucleus is surrounded by a double membrane called the nuclear envelope. The outer membrane is continuous with the rough endoplasmic reticulum. Nuclear pores span both membranes, regulating transport between nucleus and cytoplasm. The nucleolus inside is the site of ribosome assembly.",
+      "keyPoints": [
+        "Double membrane = two lipid bilayers",
+        "Nuclear pores allow selective transport",
+        "Nuclear lamina provides structural support",
+        "Nucleolus has no membrane—it's a condensed region"
+      ],
+      "example": "mRNA produced in nucleus must exit through pores to reach cytoplasmic ribosomes. Ribosomal proteins made in cytoplasm must enter through pores to reach nucleolus.",
+      "checkForUnderstanding": "Why does the nuclear envelope have pores instead of being a solid barrier?"
+    },
+    {
+      "id": "dna-packaging",
+      "type": "content",
+      "title": "DNA Packaging Hierarchy",
+      "icon": "layers",
+      "content": "Human cells contain 2 metres of DNA that must fit in a 6 µm nucleus. This is achieved through multiple levels of packaging: DNA double helix wraps around histone proteins forming nucleosomes ('beads on a string'). Nucleosomes coil into chromatin fibres, which further condense into chromosomes during cell division.",
+      "keyPoints": [
+        "Histones are positively charged proteins (bind negatively charged DNA)",
+        "Nucleosome = 147 base pairs wrapped around histone octamer",
+        "'Beads on a string' condenses 7-fold",
+        "Further coiling achieves 10,000-fold compaction"
+      ],
+      "example": "Euchromatin (loose) = active genes can be transcribed. Heterochromatin (tight) = genes silenced. X-chromosome inactivation in females creates Barr body (heterochromatin).",
+      "checkForUnderstanding": "Why must DNA be able to uncoil from chromosomes back to accessible chromatin?"
+    },
+    {
+      "id": "ribosome-comparison",
+      "type": "grid",
+      "title": "Ribosome Comparison: 70S vs 80S",
+      "icon": "scale",
+      "gridItems": [
+        {
+          "header": "Prokaryotic 70S",
+          "items": [
+            "Subunits: 30S + 50S = 70S",
+            "Location: Cytoplasm only",
+            "Size: ~20nm diameter",
+            "Inhibited by: Tetracycline, streptomycin",
+            "Found in: Bacteria, archaea"
+          ]
+        },
+        {
+          "header": "Eukaryotic 80S (Cytoplasmic)",
+          "items": [
+            "Subunits: 40S + 60S = 80S",
+            "Location: Cytoplasm + Rough ER",
+            "Size: ~25-30nm diameter",
+            "Not affected by: Tetracycline",
+            "Found in: Animals, plants, fungi, protists"
+          ]
+        }
+      ],
+      "note": "Note: Eukaryotic mitochondria and chloroplasts have 70S ribosomes—evidence for endosymbiotic origin.",
+      "example": "Antibiotic selectivity: Tetracycline binds 30S subunit of bacterial ribosome but cannot bind eukaryotic 40S subunit (different shape)."
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "nuclear-envelope-labeling",
+      "type": "labeling",
+      "title": "Label the Nuclear Envelope",
+      "description": "Identify structures of the nuclear envelope and associated components.",
+      "learningObjective": "Identify nuclear envelope structures.",
+      "theme": "teal",
+      "xpReward": 50,
+      "image": {
+        "src": "assets/images/mod1/lesson03/nucleus-diagram.webp",
+        "alt": "Nuclear envelope diagram showing double membrane, pores, and nucleolus"
+      },
+      "labels": [
+        {
+          "id": "outer-membrane",
+          "zone": { "x": 20, "y": 15, "width": 60, "height": 10 },
+          "correctText": "Outer nuclear membrane",
+          "alternatives": ["Outer membrane"],
+          "hint": "Continuous with rough ER; has ribosomes attached"
+        },
+        {
+          "id": "inner-membrane",
+          "zone": { "x": 20, "y": 35, "width": 60, "height": 10 },
+          "correctText": "Inner nuclear membrane",
+          "alternatives": ["Inner membrane"],
+          "hint": "Lined with nuclear lamina for support"
+        },
+        {
+          "id": "nuclear-pore",
+          "zone": { "x": 45, "y": 25, "width": 10, "height": 10 },
+          "correctText": "Nuclear pore",
+          "alternatives": ["Pore complex"],
+          "hint": "Protein channel regulating transport"
+        },
+        {
+          "id": "nucleolus",
+          "zone": { "x": 40, "y": 55, "width": 20, "height": 15 },
+          "correctText": "Nucleolus",
+          "alternatives": ["Nucleoli"],
+          "hint": "Dark staining region where ribosomes are assembled"
+        },
+        {
+          "id": "chromatin",
+          "zone": { "x": 25, "y": 45, "width": 50, "height": 10 },
+          "correctText": "Chromatin",
+          "alternatives": ["DNA", "Genetic material"],
+          "hint": "DNA + histone proteins (diffuse in interphase)"
+        },
+        {
+          "id": "nuclear-lamina",
+          "zone": { "x": 20, "y": 42, "width": 60, "height": 5 },
+          "correctText": "Nuclear lamina",
+          "alternatives": ["Lamina"],
+          "hint": "Protein meshwork supporting inner membrane"
+        }
+      ]
+    },
+    {
+      "id": "dna-packaging-ordering",
+      "type": "ordering",
+      "title": "DNA Packaging Hierarchy",
+      "description": "Arrange the levels of DNA packaging from simplest to most complex.",
+      "learningObjective": "Understand the hierarchical organisation of DNA.",
+      "theme": "purple",
+      "xpReward": 50,
+      "instructions": "Order from least to most condensed: DNA double helix → Nucleosome → Chromatin fibre → Chromosome",
+      "items": [
+        {
+          "id": "chromatin-fibre",
+          "text": "Chromatin fibre (30nm fibre)",
+          "correctPosition": 3,
+          "detail": "Nucleosomes coiled and looped"
+        },
+        {
+          "id": "chromosome",
+          "text": "Condensed chromosome",
+          "correctPosition": 4,
+          "detail": "Visible during mitosis; 10,000× compacted"
+        },
+        {
+          "id": "dna-helix",
+          "text": "DNA double helix",
+          "correctPosition": 1,
+          "detail": "2nm diameter; base pairs exposed"
+        },
+        {
+          "id": "nucleosome",
+          "text": "Nucleosome (beads on string)",
+          "correctPosition": 2,
+          "detail": "DNA wrapped around histone octamer; 11nm fibre"
+        }
+      ]
+    },
+    {
+      "id": "ribosome-subunits-matching",
+      "type": "matching",
+      "title": "Ribosome Subunit Matching",
+      "description": "Match ribosome types with their subunit compositions and characteristics.",
+      "learningObjective": "Distinguish between prokaryotic and eukaryotic ribosomes.",
+      "theme": "green",
+      "xpReward": 50,
+      "items": [
+        {
+          "id": "prokaryotic-70s",
+          "text": "Prokaryotic 70S ribosome",
+          "match": "30S + 50S subunits; found in bacteria"
+        },
+        {
+          "id": "eukaryotic-80s",
+          "text": "Eukaryotic 80S ribosome",
+          "match": "40S + 60S subunits; found in cytoplasm and rough ER"
+        },
+        {
+          "id": "small-subunit",
+          "text": "Small subunit function",
+          "match": "Binds mRNA and initiates translation"
+        },
+        {
+          "id": "large-subunit",
+          "text": "Large subunit function",
+          "match": "Contains peptidyl transferase; forms peptide bonds"
+        }
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq-1",
+        "question": "Which statement correctly describes the nuclear envelope?",
+        "options": [
+          "Single membrane with ribosomes attached",
+          "Double membrane with nuclear pores",
+          "Double membrane with no openings",
+          "Single membrane continuous with Golgi"
+        ],
+        "correctAnswer": "Double membrane with nuclear pores",
+        "rationale": "The nuclear envelope consists of inner and outer membranes (like two parallel bilayers). Nuclear pores span both and regulate transport. Outer membrane is continuous with ER, not Golgi."
+      },
+      {
+        "id": "mcq-2",
+        "question": "The nucleolus is responsible for:",
+        "options": [
+          "Storing the cell's genetic information",
+          "Synthesising messenger RNA",
+          "Assembling ribosomal subunits",
+          "Regulating passage through nuclear pores"
+        ],
+        "correctAnswer": "Assembling ribosomal subunits",
+        "rationale": "The nucleolus is where rRNA is transcribed and combined with ribosomal proteins to form 40S and 60S subunits. DNA storage is throughout nucleus; mRNA synthesis is transcription; pore regulation is by pore proteins."
+      },
+      {
+        "id": "mcq-3",
+        "question": "Eukaryotic ribosomes are 80S. This means they:",
+        "options": [
+          "Have a mass of 80 kilodaltons",
+          "Sediment at 80 Svedberg units in centrifugation",
+          "Contain exactly 80 proteins",
+          "Are 80 nanometres in diameter"
+        ],
+        "correctAnswer": "Sediment at 80 Svedberg units in centrifugation",
+        "rationale": "The 'S' stands for Svedberg units—a measure of sedimentation rate during ultracentrifugation. It reflects size AND shape, not just mass or diameter. 80S ribosomes are ~25-30nm, not 80nm."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa-1",
+        "question": "Explain how the structure of eukaryotic 80S ribosomes makes them resistant to antibiotics that target prokaryotic 70S ribosomes. (3 marks)",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: 80S ribosomes have different subunit composition (40S + 60S) vs 70S (30S + 50S)",
+          "1 mark: Different molecular shape/size means antibiotics cannot bind effectively",
+          "1 mark: This is 'selective toxicity'—antibiotics exploit structural differences"
+        ],
+        "commonError": "Saying 'human cells are stronger' rather than explaining structural differences in ribosomes"
+      }
+    ]
+  },
+  
+  "copyToBook": {
+    "definitions": [
+      "Nuclear envelope: Double membrane surrounding nucleus; outer membrane continuous with ER.",
+      "Nuclear pore: Protein complex regulating transport between nucleus and cytoplasm.",
+      "Nucleolus: Region where rRNA is synthesised and ribosomal subunits assembled.",
+      "Nucleosome: DNA wrapped around histone octamer ('beads on a string').",
+      "Chromatin: DNA + histone proteins (euchromatin = active; heterochromatin = condensed).",
+      "80S ribosome: Eukaryotic ribosome (40S + 60S subunits); larger than prokaryotic 70S."
+    ],
+    "keyPoints": [
+      "DNA packaging: DNA → nucleosome → chromatin → chromosome",
+      "Nuclear pores allow mRNA out and proteins in",
+      "Nucleolus has no membrane; site of ribosome assembly",
+      "80S vs 70S ribosomes differ in subunit composition",
+      "Mitochondria have 70S ribosomes (evidence for endosymbiosis)"
+    ],
+    "diagrams": [
+      "Labelled nuclear envelope showing pores and membranes",
+      "DNA packaging hierarchy (4 levels)",
+      "Comparison of 70S and 80S ribosome subunits"
+    ]
+  },
+  
+  "answerKey": {
+    "multipleChoice": ["B", "C", "B"],
+    "shortAnswer": [
+      "Eukaryotic 80S ribosomes consist of 40S and 60S subunits, whereas prokaryotic 70S ribosomes have 30S and 50S subunits. The different sizes and shapes of these subunits mean that antibiotics like tetracycline, which bind to the 30S subunit of bacterial ribosomes, cannot bind effectively to the 40S subunit of eukaryotic ribosomes. This 'selective toxicity' allows antibiotics to kill bacteria without harming human cells."
+    ]
+  },
+  
+  "prerequisites": ["mod1-lesson02"],
+  
+  "navigation": {
+    "previous": "mod1-lesson02",
+    "previousTitle": "Prokaryotic Cell Structure",
+    "next": "mod1-lesson04",
+    "nextTitle": "Eukaryotic Animal Cells - Endomembrane System"
+  },
+  
+  "meta": {
+    "author": "HSC Biology Team",
+    "createdAt": "2026-02-09",
+    "lastModified": "2026-02-09",
+    "version": "3.0.0",
+    "tags": ["nucleus", "nuclear-envelope", "ribosomes", "80S", "chromatin", "nucleolus", "Module 1"]
+  },
+  
+  "imageLibrary": [
+    {
+      "id": "nucleus-structure",
+      "src": "assets/images/mod1/lesson03/nucleus-diagram.webp",
+      "alt": "Diagram of nuclear envelope showing double membrane and pores",
+      "caption": "The nuclear envelope and its components"
+    },
+    {
+      "id": "dna-packaging",
+      "src": "assets/images/mod1/lesson03/dna-packaging.webp",
+      "alt": "DNA packaging from double helix to chromosome",
+      "caption": "Levels of DNA organisation"
+    },
+    {
+      "id": "ribosome-comparison",
+      "src": "assets/images/mod1/lesson03/ribosome-70s-80s.webp",
+      "alt": "Comparison of 70S and 80S ribosome structures",
+      "caption": "Prokaryotic 70S vs Eukaryotic 80S ribosomes"
+    }
+  ]
+}

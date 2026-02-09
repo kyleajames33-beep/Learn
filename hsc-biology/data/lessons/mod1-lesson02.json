@@ -1,10 +1,10 @@
 {
-  "id": "module-1-cells-lesson-1",
+  "id": "mod1-lesson02",
   "title": "Prokaryotic Cell Structure",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
-  "lessonNumber": 1,
+  "lessonNumber": 2,
   "description": "Introduction to prokaryotic cell structure including nucleoid region, cell wall, ribosomes, and flagella. Students learn to distinguish prokaryotic from eukaryotic cells using key structural criteria.",
   "duration": "50 minutes",
   "difficulty": "Foundation Level",
@@ -198,21 +198,104 @@
       "correctApproach": "Drag labels to correct locations. Nucleoid must be inside cytoplasm (not in membrane-bound compartment)."
     },
     {
-      "id": "structure-function-matching",
-      "type": "matching",
-      "title": "Match Structures to Functions",
-      "description": "Match each prokaryotic structure with its correct function.",
-      "learningObjective": "Match structures to functions.",
+      "id": "structure-function-classification",
+      "type": "classification",
+      "title": "Sort Structures by Function",
+      "description": "Sort prokaryotic structures into their functional categories.",
+      "learningObjective": "Classify cellular structures by their primary function.",
       "theme": "purple",
       "xpReward": 50,
-      "items": [
-        { "id": "nucleoid", "text": "Nucleoid", "match": "Contains genetic information (circular DNA)" },
-        { "id": "ribosome", "text": "70S ribosome", "match": "Site of protein synthesis" },
-        { "id": "wall", "text": "Peptidoglycan wall", "match": "Provides protection and structure" },
-        { "id": "plasmid", "text": "Plasmid", "match": "Carries antibiotic resistance genes" }
+      "categories": [
+        {
+          "id": "genetic",
+          "label": "Genetic Information",
+          "description": "Structures involved in storing or transmitting genetic material"
+        },
+        {
+          "id": "motility",
+          "label": "Movement & Attachment",
+          "description": "Structures for movement or attaching to surfaces"
+        },
+        {
+          "id": "protection",
+          "label": "Protection & Structure",
+          "description": "Structures that provide shape, protection, or selective barrier"
+        },
+        {
+          "id": "synthesis",
+          "label": "Protein Synthesis",
+          "description": "Structures involved in making proteins"
+        }
       ],
-      "setup": "Cards with Structures and Functions to match.",
-      "correctApproach": "Nucleoid-DNA; Ribosome-Protein; Wall-Protection; Plasmid-Resistance genes."
+      "items": [
+        {
+          "id": "nucleoid",
+          "text": "Nucleoid region",
+          "category": "genetic",
+          "explanation": "Contains the circular chromosome (genetic information)"
+        },
+        {
+          "id": "plasmid",
+          "text": "Plasmid",
+          "category": "genetic",
+          "explanation": "Small circular DNA carrying extra genes like antibiotic resistance"
+        },
+        {
+          "id": "flagellum",
+          "text": "Flagellum",
+          "category": "motility",
+          "explanation": "Tail-like structure for swimming movement"
+        },
+        {
+          "id": "pili",
+          "text": "Pili",
+          "category": "motility",
+          "explanation": "Hair-like structures for attachment to surfaces and conjugation"
+        },
+        {
+          "id": "cell-wall",
+          "text": "Cell wall (peptidoglycan)",
+          "category": "protection",
+          "explanation": "Rigid outer layer providing shape and protection"
+        },
+        {
+          "id": "capsule",
+          "text": "Capsule (slime layer)",
+          "category": "protection",
+          "explanation": "Gelatinous outer layer for protection and adherence"
+        },
+        {
+          "id": "plasma-membrane",
+          "text": "Plasma membrane",
+          "category": "protection",
+          "explanation": "Selective barrier controlling what enters and exits"
+        },
+        {
+          "id": "ribosome",
+          "text": "70S ribosome",
+          "category": "synthesis",
+          "explanation": "Site of protein synthesis (smaller than eukaryotic 80S)"
+        }
+      ]
+    },
+    {
+      "id": "size-calculation",
+      "type": "calculation",
+      "title": "Size Calculation: How Many Ribosomes?",
+      "description": "Use your understanding of prokaryotic cell dimensions to solve this problem.",
+      "learningObjective": "Apply knowledge of cell and organelle dimensions.",
+      "theme": "orange",
+      "xpReward": 75,
+      "tolerance": 5,
+      "questions": [
+        {
+          "id": "ribosome-count",
+          "question": "A typical bacterial cell has a diameter of 2 µm (micrometres). A bacterial ribosome is approximately 20 nm (nanometres) in diameter. Assuming the ribosomes could be packed in a single layer across the cell diameter (simplified model), approximately how many ribosomes would fit across the cell?",
+          "correctAnswer": 100,
+          "unit": "ribosomes",
+          "hint": "Convert units first: 1 µm = 1000 nm. Then divide cell diameter by ribosome diameter."
+        }
+      ]
     }
   ],
   
@@ -306,13 +389,13 @@
     ]
   },
   
-  "prerequisites": [],
+  "prerequisites": ["mod1-lesson01"],
   
   "navigation": {
-    "previous": null,
-    "previousTitle": null,
-    "next": "module-1-cells-lesson-2",
-    "nextTitle": "Eukaryotic Cell Compartmentalisation"
+    "previous": "mod1-lesson01",
+    "previousTitle": "Cell Theory & Microscopy Basics",
+    "next": "mod1-lesson03",
+    "nextTitle": "Eukaryotic Animal Cells - Nucleus & Ribosomes"
   },
   
   "meta": {

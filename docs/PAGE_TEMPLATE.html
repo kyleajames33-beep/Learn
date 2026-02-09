@@ -1,0 +1,54 @@
+<!--
+  MASTER TEMPLATE for all HTML pages
+  Copy this structure and modify only the content section
+  
+  REQUIRED CSS FILES (always include in this order):
+  1. global.css - Base styles, variables, utilities
+  2. layout.css - Layout systems, grids, sidebar
+  3. components.css - Buttons, cards, forms
+  4. page-specific.css - Only if needed
+  
+  REQUIRED JS FILES (always include):
+  1. lucide.min.js - Icons
+  2. main.js - Core functionality, service worker
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PAGE DESCRIPTION HERE">
+  
+  <title>PAGE TITLE | Science Hub</title>
+  
+  <!-- REQUIRED: Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/global.css?v=3">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=3">
+  <link rel="stylesheet" href="../assets/css/components.css?v=3">
+  
+  <!-- Optional: Feature-specific stylesheets -->
+  <!-- <link rel="stylesheet" href="../assets/css/streak.css"> -->
+  <!-- <link rel="stylesheet" href="../assets/css/xp.css"> -->
+  <!-- <link rel="stylesheet" href="../assets/css/achievements.css"> -->
+  <!-- <link rel="stylesheet" href="../assets/css/diagrams.css"> -->
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+  <!-- REQUIRED: Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <!-- Standard Navigation -->
+  <header class="top-nav">
+    <!-- ... -->
+  </header>
+  
+  <!-- CONTENT AREA - MODIFY THIS PER PAGE -->
+  <main id="main-content">
+    <!-- Page-specific content here -->
+  </main>
+  
+  <!-- REQUIRED: Core JavaScript -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

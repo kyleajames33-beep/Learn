@@ -989,23 +989,6 @@ const LessonRenderer = {
   /**
    * Render activities
    */
-  renderActivities(activities) {
-    if (!activities || activities.length === 0) return '';
-    
-    return activities.map(activity => {
-      const theme = activity.theme || 'teal';
-      
-      switch (activity.type) {
-        case 'matching':
-          return this.renderMatchingActivity(activity, theme);
-        case 'fill-blank':
-          return this.renderFillBlankActivity(activity, theme);
-        default:
-          return '';
-      }
-    }).join('');
-  },
-  
   /**
    * Render matching activity
    */
@@ -1074,6 +1057,105 @@ const LessonRenderer = {
               Check Answers
             </button>
           </div>
+        </div>
+      </div>
+    `;
+  },
+  
+  /**
+   * Render classification activity (drag-and-drop categories)
+   */
+  renderClassificationActivity(activity, theme) {
+    const categories = activity.categories || [];
+    const items = activity.items || [];
+    
+    return `
+      <div class="activity-card activity-card--${theme} reveal" data-activity="${activity.id}" data-activity-type="classification">
+        <div class="activity-card-header">
+          <i data-lucide="grid-3x3"></i>
+          <h3>${activity.title}</h3>
+        </div>
+        <div class="activity-card-body">
+          ${activity.description ? `<p class="activity-description">${activity.description}</p>` : ''}
+          
+          <div class="classification-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 20px;">
+            ${categories.map(cat => `
+              <div class="classification-zone" data-category="${cat.id}" style="background: var(--bg-secondary); border: 2px dashed var(--border-light); border-radius: 12px; padding: 16px; min-height: 150px;">
+                <h4 style="margin: 0 0 8px 0; color: var(--text-primary); font-size: 16px;">${cat.label}</h4>
+                ${cat.description ? `<p style="margin: 0 0 12px 0; color: var(--text-secondary); font-size: 13px;">${cat.description}</p>` : ''}
+                <div class="classification-items" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+              </div>
+            `).join('')}
+          </div>
+          
+          <div class="classification-items-pool" style="background: var(--bg-secondary); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+            <p style="margin: 0 0 12px 0; color: var(--text-secondary); font-size: 14px;">
+              <i data-lucide="move" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i>
+              Drag items to categories or click to select then click category
+            </p>
+            <div class="classification-draggables" style="display: flex; flex-wrap: wrap; gap: 10px;">
+              ${items.map(item => `
+                <div class="classification-item" 
+                     data-item-id="${item.id}" 
+                     data-correct-category="${item.category}"
+                     draggable="true"
+                     style="background: white; border: 2px solid var(--border-light); border-radius: 8px; padding: 10px 16px; cursor: grab; user-select: none; font-size: 14px; touch-action: manipulation;">
+                  ${item.text}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          
+          <button class="check-classification-btn btn btn-primary">
+            <i data-lucide="check-circle"></i>
+            Check Answers
+          </button>
+        </div>
+      </div>
+    `;
+  },
+  
+  /**
+   * Render ordering activity (sequencing)
+   */
+  renderOrderingActivity(activity, theme) {
+    const items = activity.items || [];
+    const shuffled = [...items].sort(() => Math.random() - 0.5);
+    
+    return `
+      <div class="activity-card activity-card--${theme} reveal" data-activity="${activity.id}" data-activity-type="ordering">
+        <div class="activity-card-header">
+          <i data-lucide="arrow-up-down"></i>
+          <h3>${activity.title}</h3>
+        </div>
+        <div class="activity-card-body">
+          ${activity.description ? `<p class="activity-description">${activity.description}</p>` : ''}
+          ${activity.instructions ? `<p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 16px;">${activity.instructions}</p>` : ''}
+          
+          <div class="ordering-container" style="margin-bottom: 20px;">
+            <div class="ordering-list" style="display: flex; flex-direction: column; gap: 12px;">
+              ${shuffled.map((item, index) => `
+                <div class="ordering-item" 
+                     data-item-id="${item.id}"
+                     data-correct-position="${item.correctPosition}"
+                     style="background: white; border: 2px solid var(--border-light); border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 12px; cursor: grab; touch-action: manipulation;">
+                  <div class="ordering-handle" style="color: var(--text-tertiary); cursor: grab;">
+                    <i data-lucide="grip-vertical"></i>
+                  </div>
+                  <div class="ordering-number" style="background: var(--primary-light); color: var(--primary); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px;">${index + 1}</div>
+                  <div style="flex: 1;">
+                    <div style="font-weight: 500; color: var(--text-primary);">${item.text}</div>
+                    ${item.detail ? `<div style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">${item.detail}</div>` : ''}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          
+          <button class="check-ordering-btn btn btn-primary">
+            <i data-lucide="check-circle"></i>
+            Check Order
+          </button>
         </div>
       </div>
     `;
@@ -1311,41 +1393,6 @@ const LessonRenderer = {
   /**
    * Bind activity handlers
    */
-  bindActivityHandlers() {
-    // Matching activities
-    document.querySelectorAll('.check-matching-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const activity = e.target.closest('[data-activity]');
-        const items = activity.querySelectorAll('.matching-item');
-        
-        items.forEach(item => {
-          const select = item.querySelector('select');
-          const correct = item.dataset.correct;
-          const selected = select.value;
-          
-          item.classList.remove('correct', 'incorrect');
-          item.classList.add(selected === correct ? 'correct' : 'incorrect');
-        });
-      });
-    });
-    
-    // Fill blank activities
-    document.querySelectorAll('.check-fill-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const activity = e.target.closest('[data-activity]');
-        const inputs = activity.querySelectorAll('input[data-correct]');
-        
-        inputs.forEach(input => {
-          const correct = input.dataset.correct.toLowerCase();
-          const value = input.value.trim().toLowerCase();
-          
-          input.classList.remove('correct', 'incorrect');
-          input.classList.add(value === correct ? 'correct' : 'incorrect');
-        });
-      });
-    });
-  },
-  
   /**
    * Bind assessment handlers
    */
@@ -1655,8 +1702,10 @@ const LessonRenderer = {
           return this.renderMatchingActivity(activity, theme);
         case 'fill-blank':
           return this.renderFillBlankActivity(activity, theme);
+        case 'classification':
+          return this.renderClassificationActivity(activity, theme);
         case 'ordering':
-          return ActivityOrdering ? ActivityOrdering.render(activity, { theme }) : '';
+          return this.renderOrderingActivity(activity, theme);
         case 'labeling':
           return ActivityLabeling ? ActivityLabeling.render(activity, { theme }) : '';
         case 'fillBlank':
@@ -1791,6 +1840,85 @@ const LessonRenderer = {
         if (typeof lucide !== 'undefined') {
           lucide.createIcons();
         }
+      });
+    });
+    
+    // Classification activities
+    document.querySelectorAll('.check-classification-btn').forEach(btn => {
+      TouchUtils.bindTap(btn, (e) => {
+        const activity = e.target.closest('[data-activity]');
+        const zones = activity.querySelectorAll('.classification-zone');
+        let allCorrect = true;
+        
+        zones.forEach(zone => {
+          const categoryId = zone.dataset.category;
+          const items = zone.querySelectorAll('.classification-item');
+          
+          items.forEach(item => {
+            const correctCategory = item.dataset.correctCategory;
+            const isCorrect = categoryId === correctCategory;
+            
+            item.style.background = isCorrect ? '#d1fae5' : '#fee2e2';
+            item.style.borderColor = isCorrect ? '#10b981' : '#ef4444';
+            
+            if (!isCorrect) allCorrect = false;
+          });
+        });
+        
+        // Show explanation for each item
+        const items = activity.querySelectorAll('.classification-item');
+        items.forEach(item => {
+          const itemId = item.dataset.itemId;
+          const correctCategory = item.dataset.correctCategory;
+          const activityData = this.currentLesson?.activities?.find(a => a.id === activity.dataset.activity);
+          const itemData = activityData?.items?.find(i => i.id === itemId);
+          
+          if (itemData && itemData.explanation) {
+            const explanationEl = document.createElement('div');
+            explanationEl.className = 'item-explanation';
+            explanationEl.style.cssText = 'font-size: 12px; color: var(--text-secondary); margin-top: 6px; padding: 6px; background: rgba(0,0,0,0.05); border-radius: 4px;';
+            explanationEl.textContent = itemData.explanation;
+            item.appendChild(explanationEl);
+          }
+        });
+        
+        // Disable button after checking
+        btn.disabled = true;
+        btn.innerHTML = `
+          <i data-lucide="${allCorrect ? 'check-circle' : 'alert-circle'}"></i>
+          ${allCorrect ? 'All Correct!' : 'Review the answers above'}
+        `;
+        
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+    });
+    
+    // Ordering activities
+    document.querySelectorAll('.check-ordering-btn').forEach(btn => {
+      TouchUtils.bindTap(btn, (e) => {
+        const activity = e.target.closest('[data-activity]');
+        const items = activity.querySelectorAll('.ordering-item');
+        let allCorrect = true;
+        
+        items.forEach((item, index) => {
+          const correctPosition = parseInt(item.dataset.correctPosition);
+          const currentPosition = index + 1;
+          const isCorrect = correctPosition === currentPosition;
+          
+          item.style.borderColor = isCorrect ? '#10b981' : '#ef4444';
+          item.style.background = isCorrect ? '#d1fae5' : '#fee2e2';
+          
+          if (!isCorrect) allCorrect = false;
+        });
+        
+        // Disable button after checking
+        btn.disabled = true;
+        btn.innerHTML = `
+          <i data-lucide="${allCorrect ? 'check-circle' : 'alert-circle'}"></i>
+          ${allCorrect ? 'Perfect Order!' : 'Some items are out of order'}
+        `;
+        
+        if (typeof lucide !== 'undefined') lucide.createIcons();
       });
     });
 
