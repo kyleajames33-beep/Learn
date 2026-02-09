@@ -4,7 +4,7 @@
  * Strategy: Cache as you go (lazy caching)
  */
 
-const CACHE_NAME = 'science-hub-v1';
+const CACHE_NAME = 'science-hub-v2';
 
 // Assets to cache on install (critical assets only)
 // Use relative paths to work on GitHub Pages subdirectory deployments
@@ -79,8 +79,11 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Handle different resource types
-  if (isAsset(request)) {
-    // Stale-while-revalidate for assets
+  if (isCriticalAsset(request)) {
+    // Network-first for CSS/JS (always get fresh code to avoid caching bugs)
+    event.respondWith(networkFirst(request));
+  } else if (isAsset(request)) {
+    // Stale-while-revalidate for images/fonts (performance over freshness)
     event.respondWith(staleWhileRevalidate(request));
   } else if (isPage(request)) {
     // Network-first for pages (for fresh content)
@@ -196,6 +199,15 @@ async function networkFirst(request) {
 // ========================================
 // HELPERS
 // ========================================
+
+/**
+ * Check if request is for a critical asset (CSS, JS) that should always be fresh
+ */
+function isCriticalAsset(request) {
+  const criticalExtensions = ['.css', '.js'];
+  const url = new URL(request.url);
+  return criticalExtensions.some(ext => url.pathname.endsWith(ext));
+}
 
 /**
  * Check if request is for an asset (CSS, JS, images, fonts)

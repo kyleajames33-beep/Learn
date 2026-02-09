@@ -1,200 +1,268 @@
 {
   "id": "mod1-lesson06",
-  "title": "Lesson 6: Lysosomes, Peroxisomes and Cellular Digestion",
+  "title": "Lesson 6: Eukaryotic Plant Cells",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 6,
-  "description": "Understanding lysosomes and peroxisomes as membrane-bound organelles responsible for cellular digestion. Students learn about autophagy, heterophagy, and the clinical significance of lysosomal storage diseases.",
+  "description": "Understanding the unique structures of plant cells including chloroplasts, central vacuole, and cell wall. Students learn to distinguish plant and animal cells and calculate water potential.",
   "duration": "50 minutes",
   "difficulty": "Intermediate",
   "worksOffline": true,
   
   "learningIntentions": [
-    "Students can describe the structure and function of lysosomes (membrane-bound sac containing digestive enzymes).",
-    "Students can distinguish between autophagy (digesting own material) and heterophagy/phagocytosis (digesting foreign material).",
-    "Students can explain why lysosomes have an acidic interior and how this protects the cell."
+    "Students can identify structures unique to plant cells (chloroplasts, central vacuole, cell wall, plasmodesmata).",
+    "Students can distinguish between animal and plant cells using structural criteria.",
+    "Students can calculate water potential using ψ = ψs + ψp and predict water movement."
   ],
   
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Lysosomes, peroxisomes, and cellular digestion"
+    "focus": "Plant cell structures and water potential"
   },
   
   "successCriteria": [
-    "I can label a lysosome and list three types of molecules it digests.",
-    "I can explain what happens when a lysosome fuses with a food vacuole or a damaged mitochondrion.",
-    "I can predict what would happen if lysosomal enzymes leaked into the cytoplasm."
+    "I can label chloroplasts, central vacuole, and cell wall on a plant cell diagram.",
+    "I can complete a comparison table of animal vs plant cell features.",
+    "I can calculate water potential and predict water movement direction."
   ],
   
   "prerequisites": [
     {
       "lessonId": "module-1-cells-lesson-5",
-      "description": "Endomembrane system, Golgi apparatus, vesicle transport",
+      "description": "Endomembrane system, basic eukaryotic structures",
       "required": true
     }
   ],
   
   "engagementHook": {
-    "title": "The Recycling Centre",
-    "content": "Show an image of a child with Tay-Sachs disease (developmental delay, neurodegeneration). Explain: 'This child lacks one specific enzyme in their lysosomes. Without it, cellular 'trash' piles up in the brain. Lysosomes are the cell's recycling centres—when they fail, the cell fills with waste and dies. Today we explore how these 'suicide sacs' are actually essential for life.'"
+    "title": "The Green Factory",
+    "content": "Show a time-lapse of a seedling growing toward light. 'This tiny plant can make its own food from sunlight, water, and air. Inside each of its cells are structures no animal has—green chloroplasts that capture sunlight, a massive water-filled vacuole that keeps it upright, and a rigid wall that lets it grow tall without bones. How do these structures let plants thrive while animals wander?'"
   },
   
   "keyConcepts": [
     {
-      "term": "Lysosomes",
-      "definition": "Membrane-bound organelles containing hydrolytic enzymes (acid hydrolases) that break down carbohydrates, lipids, proteins, and nucleic acids. Formed by budding from the Golgi apparatus."
+      "term": "Chloroplasts",
+      "definition": "Double-membrane organelles containing thylakoids (stacked into grana) and stroma. Site of photosynthesis. Contain chlorophyll (green pigment), own DNA, and 70S ribosomes (endosymbiotic origin)."
     },
     {
-      "term": "Acidic Environment",
-      "definition": "Lysosomes maintain pH ~4.5–5.0 (more acidic than cytoplasm). This acidity activates the enzymes and keeps them contained—if leaked, they are less active at neutral pH."
+      "term": "Central Vacuole",
+      "definition": "Large, membrane-bound sac (tonoplast membrane) containing cell sap. Maintains turgor pressure against cell wall, stores water, ions, and pigments. Can occupy 30-80% of cell volume."
     },
     {
-      "term": "Autophagy",
-      "definition": "Lysosomes digest worn-out organelles or cell components (recycling)."
+      "term": "Cell Wall",
+      "definition": "Rigid outer layer composed of cellulose microfibrils embedded in matrix. Provides structural support, protection, and prevents osmotic lysis. Outside the plasma membrane."
     },
     {
-      "term": "Heterophagy/Phagocytosis",
-      "definition": "Lysosomes fuse with vesicles containing food or bacteria (digestion)."
+      "term": "Plasmodesmata",
+      "definition": "Channels through cell walls connecting adjacent plant cells, allowing transport and communication between cells."
     },
     {
-      "term": "Tay-Sachs Disease",
-      "definition": "Genetic disorder where a lysosomal enzyme is missing, causing fatty substances to accumulate in brain cells—demonstrates importance of lysosomal function."
+      "term": "Amyloplasts",
+      "definition": "Colourless plastids that store starch. Found in roots and seeds."
+    },
+    {
+      "term": "Water Potential (ψ)",
+      "definition": "Measure of potential energy of water, measured in MPa or kPa. ψ = ψs (solute potential) + ψp (pressure potential). Water moves from high ψ (less negative) to low ψ (more negative)."
     }
   ],
   
   "misconceptions": [
     {
-      "misconception": "Lysosomes digest the cell from the inside out randomly",
-      "correction": "Emphasise they are membrane-bound and only fuse with specific targets (vacuoles or damaged organelles) under control."
+      "misconception": "Plant cells have all the same organelles as animal cells plus extras",
+      "correction": "Plant cells LACK centrioles (used in animal cell division). Emphasise this difference."
     },
     {
-      "misconception": "Lysosomes are found only in animal cells",
-      "correction": "Plant cells have lysosome-like vacuoles with digestive functions, though typical lysosomes are animal cell features."
+      "misconception": "The vacuole is just empty space",
+      "correction": "It's filled with cell sap (water, ions, sugars, pigments) and is metabolically active."
     },
     {
-      "misconception": "Lysosomes make enzymes",
-      "correction": "Lysosomes contain enzymes made by the rough ER and packaged by the Golgi (link to Lesson 5)."
+      "misconception": "Cell walls are living structures",
+      "correction": "Cell walls are non-living secretions outside the plasma membrane."
     }
   ],
   
   "contentSections": [
     {
-      "id": "lysosome-formation",
+      "id": "plant-cell-diagram",
       "type": "diagram",
-      "title": "Lysosome Formation and Structure",
-      "icon": "recycle",
-      "content": "Golgi apparatus budding off vesicle → primary lysosome → fusing with food vacuole/phagosome → digestion. Shows single membrane enclosing enzymes.",
+      "title": "Plant Cell Structure",
+      "icon": "leaf",
+      "content": "Diagram showing chloroplasts (with thylakoids and stroma), large central vacuole, cell wall with plasmodesmata, amyloplasts, and other organelles.",
       "keyPoints": [
-        "Buds from trans-Golgi",
-        "Contains hydrolytic enzymes",
-        "Acidic pH",
-        "Membrane keeps enzymes contained"
+        "Chloroplasts: double membrane, thylakoids, own DNA",
+        "Central vacuole: maintains turgor pressure",
+        "Cell wall: cellulose, outside plasma membrane",
+        "Plasmodesmata: connecting channels"
       ],
-      "example": "White blood cell engulfing bacterium—lysosome fuses with phagosome to destroy invader.",
-      "checkForUnderstanding": "Why must lysosomal enzymes be enclosed by a membrane? (To protect cytoplasm from digestion.)",
+      "example": "Elodea leaf cells show chloroplasts moving in cytoplasmic streaming.",
+      "checkForUnderstanding": "Why don't plant cells burst in pure water like animal cells? (Cell wall prevents over-expansion)",
       "image": {
-        "src": "assets/images/mod1/lesson06/lysosome-formation.webp",
-        "alt": "Diagram showing Golgi apparatus budding vesicles that form lysosomes and fuse with vacuoles",
-        "caption": "Lysosome formation from the Golgi apparatus and fusion with target vesicles"
+        "src": "assets/images/mod1/lesson06/plant-cell-diagram.webp",
+        "alt": "Diagram of plant cell showing chloroplasts, central vacuole, cell wall",
+        "caption": "General structure of a plant cell"
       }
     },
     {
-      "id": "autophagy-vs-heterophagy",
+      "id": "chloroplast-structure",
+      "type": "diagram",
+      "title": "Chloroplast Structure",
+      "icon": "sun",
+      "content": "Double outer membrane, internal thylakoids (flattened sacs) stacked into grana, stroma (fluid matrix), DNA and ribosomes shown.",
+      "keyPoints": [
+        "Thylakoids contain chlorophyll",
+        "Grana = stacks of thylakoids",
+        "Stroma contains enzymes for photosynthesis",
+        "Own circular DNA and 70S ribosomes"
+      ],
+      "example": "Spinach leaves - each mesophyll cell contains 40-50 chloroplasts.",
+      "image": {
+        "src": "assets/images/mod1/lesson06/chloroplast-structure.webp",
+        "alt": "Diagram of chloroplast showing thylakoids, grana, stroma",
+        "caption": "Chloroplast structure with thylakoids and grana"
+      }
+    },
+    {
+      "id": "central-vacuole",
+      "type": "content",
+      "title": "The Central Vacuole",
+      "icon": "droplet",
+      "content": "The tonoplast (vacuole membrane) encloses cell sap - a solution of water, ions, sugars, pigments (anthocyanins), and waste products. When full, it presses the cytoplasm against the cell wall creating turgor pressure (0.1-1 MPa). This rigid pressure supports the plant. When water is scarce, the vacuole shrinks, turgor drops, and the plant wilts.",
+      "example": "Celery becomes limp when dehydrated (loss of turgor) but crisp when hydrated.",
+      "checkForUnderstanding": "What happens to a plant cell if the central vacuole loses water? (Plasmolysis - cell membrane pulls away from wall)"
+    },
+    {
+      "id": "animal-plant-comparison",
       "type": "grid",
-      "title": "Autophagy vs Heterophagy",
+      "title": "Animal vs Plant Cells",
       "icon": "columns",
       "gridItems": [
         {
           "header": "Feature",
-          "items": ["Target", "Vesicle Source", "Purpose"]
+          "items": ["Cell wall", "Chloroplasts", "Central vacuole", "Centrioles", "Shape"]
         },
         {
-          "header": "Autophagy",
-          "items": [
-            "Cell's own damaged organelles/cytoplasm",
-            "Membrane wraps around own material",
-            "Recycling, renewal"
-          ]
+          "header": "Animal Cells",
+          "items": ["Absent", "Absent", "Small/temporary", "Present", "Round/irregular"]
         },
         {
-          "header": "Heterophagy (Phagocytosis)",
-          "items": [
-            "Foreign material (bacteria, food particles)",
-            "Plasma membrane engulfs external material",
-            "Nutrition, defence"
-          ]
+          "header": "Plant Cells",
+          "items": ["Present (cellulose)", "Present", "Large, central", "Absent", "Fixed/rectangular"]
         }
       ],
-      "example": "Autophagy during starvation (recycling proteins for energy); heterophagy in amoeba feeding or immune response."
-    },
-    {
-      "id": "lysosomal-diseases",
-      "type": "content",
-      "title": "Lysosomal Storage Diseases",
-      "icon": "alert-triangle",
-      "content": "Tay-Sachs (missing enzyme hexosaminidase A → GM2 ganglioside accumulates in brain neurons). Pompe disease (glycogen accumulates in muscles). Shows genetic basis of organelle function.",
-      "example": "Enzyme replacement therapy for some lysosomal diseases (intravenous enzymes taken up by cells)."
+      "note": "Both have: nucleus, mitochondria, ribosomes, ER, Golgi, plasma membrane"
     }
   ],
   
   "activities": [
     {
-      "id": "digestion-classification",
-      "type": "matching",
-      "title": "Sort the Digestion Type",
-      "description": "Classify each scenario as autophagy or heterophagy.",
-      "learningObjective": "Distinguish lysosomal processes.",
-      "theme": "orange",
-      "xpReward": 50,
-      "items": [
-        { "id": "liver-mitochondrion", "text": "A liver cell digests its own damaged mitochondrion", "match": "Autophagy" },
-        { "id": "macrophage-virus", "text": "A macrophage destroys a virus", "match": "Heterophagy" },
-        { "id": "starvation-proteins", "text": "Cell recycles proteins during starvation", "match": "Autophagy" }
-      ],
-      "correctApproach": "Own material = Autophagy; Foreign = Heterophagy."
-    },
-    {
-      "id": "lysosome-labeling",
+      "id": "plant-cell-labeling",
       "type": "labeling",
-      "title": "Label the Lysosome Fusion",
-      "description": "Identify structures in the lysosome fusion diagram.",
-      "learningObjective": "Identify lysosome fusion components.",
+      "title": "Label the Plant Cell",
+      "description": "Identify plant cell structures on the diagram.",
+      "learningObjective": "Identify plant cell structures.",
       "theme": "teal",
       "xpReward": 50,
       "image": {
-        "src": "assets/images/mod1/lesson06/lysosome-fusion.webp",
-        "alt": "Diagram showing lysosome approaching food vacuole for fusion"
+        "src": "assets/images/mod1/lesson06/plant-cell-diagram.webp",
+        "alt": "Plant cell diagram for labeling"
       },
       "labels": [
         {
-          "id": "lysosome-membrane",
-          "zone": { "x": 20, "y": 40, "width": 15, "height": 10 },
-          "correctText": "Lysosome membrane",
-          "alternatives": ["Membrane"],
-          "hint": "The boundary that keeps enzymes contained"
+          "id": "chloroplast",
+          "zone": { "x": 20, "y": 30, "width": 15, "height": 12 },
+          "correctText": "Chloroplast",
+          "alternatives": ["Chloroplasts"],
+          "hint": "Green organelle with internal stacks - site of photosynthesis"
         },
         {
-          "id": "digestive-enzymes",
-          "zone": { "x": 25, "y": 45, "width": 10, "height": 8 },
-          "correctText": "Digestive enzymes",
-          "alternatives": ["Enzymes", "Acid hydrolases"],
-          "hint": "Hydrolytic enzymes inside the lysosome"
+          "id": "central-vacuole",
+          "zone": { "x": 50, "y": 35, "width": 25, "height": 30 },
+          "correctText": "Central vacuole",
+          "alternatives": ["Vacuole", "Large vacuole"],
+          "hint": "Large water-filled sac occupying most of cell interior"
         },
         {
-          "id": "food-vacuole",
-          "zone": { "x": 60, "y": 40, "width": 20, "height": 15 },
-          "correctText": "Food vacuole",
-          "alternatives": ["Phagosome", "Vacuole"],
-          "hint": "The vesicle containing material to be digested"
+          "id": "cell-wall",
+          "zone": { "x": 5, "y": 10, "width": 8, "height": 80 },
+          "correctText": "Cell wall",
+          "alternatives": ["Wall"],
+          "hint": "Rigid outer layer outside the cell membrane"
         },
         {
-          "id": "digested-products",
-          "zone": { "x": 75, "y": 60, "width": 15, "height": 10 },
-          "correctText": "Digested products",
-          "alternatives": ["Amino acids", "Sugars", "Products"],
-          "hint": "Small molecules released after digestion (amino acids, sugars)"
+          "id": "cell-membrane",
+          "zone": { "x": 15, "y": 15, "width": 5, "height": 70 },
+          "correctText": "Cell membrane",
+          "alternatives": ["Plasma membrane", "Membrane"],
+          "hint": "Flexible membrane just inside the rigid wall"
+        },
+        {
+          "id": "nucleus",
+          "zone": { "x": 45, "y": 25, "width": 12, "height": 10 },
+          "correctText": "Nucleus",
+          "alternatives": ["Nuclear envelope"],
+          "hint": "Control centre of the cell"
+        },
+        {
+          "id": "plasmodesmata",
+          "zone": { "x": 85, "y": 50, "width": 10, "height": 8 },
+          "correctText": "Plasmodesmata",
+          "alternatives": ["Plasmodesma"],
+          "hint": "Channels through the cell wall connecting adjacent cells"
+        }
+      ]
+    },
+    {
+      "id": "animal-plant-comparison-activity",
+      "type": "comparison-table",
+      "title": "Animal vs Plant Cell Comparison",
+      "description": "Toggle between animal and plant cells to identify unique features.",
+      "learningObjective": "Distinguish animal and plant cell features.",
+      "theme": "purple",
+      "xpReward": 75,
+      "categories": [
+        {
+          "id": "animal-only",
+          "name": "Animal Only",
+          "items": ["Centrioles"]
+        },
+        {
+          "id": "plant-only",
+          "name": "Plant Only",
+          "items": ["Chloroplasts", "Cell wall (cellulose)", "Large central vacuole", "Plasmodesmata"]
+        },
+        {
+          "id": "both",
+          "name": "Both Cell Types",
+          "items": ["Nucleus", "Mitochondria", "Ribosomes", "ER", "Golgi apparatus", "Plasma membrane"]
+        }
+      ]
+    },
+    {
+      "id": "water-potential-calculation",
+      "type": "problemSolving",
+      "title": "Water Potential Calculation",
+      "description": "Calculate water potential and predict water movement.",
+      "learningObjective": "Apply the water potential equation.",
+      "theme": "orange",
+      "xpReward": 100,
+      "problems": [
+        {
+          "id": "turgor-calc",
+          "question": "A plant cell has solute potential (ψs) of -0.5 MPa and pressure potential (ψp) of 0.3 MPa. Calculate its water potential (ψ).",
+          "context": "Will this cell gain or lose water if placed in pure water (0 MPa)?",
+          "formula": "ψ = ψs + ψp",
+          "workingSteps": [
+            "Water potential = solute potential + pressure potential",
+            "ψ = -0.5 MPa + 0.3 MPa",
+            "ψ = -0.2 MPa"
+          ],
+          "correctAnswer": -0.2,
+          "tolerance": 0.05,
+          "unit": "MPa",
+          "followUpQuestion": "Since -0.2 MPa < 0 MPa, water will move INTO the cell (gain water).",
+          "hint": "Add the two potentials together. Remember: water moves from high ψ to low ψ."
         }
       ]
     }
@@ -204,90 +272,93 @@
     "multipleChoice": [
       {
         "id": "mcq-1",
-        "question": "Lysosomes contain digestive enzymes that function best at:",
+        "question": "Which structure is found in plant cells but NOT in animal cells?",
         "options": [
-          "Neutral pH (same as cytoplasm)",
-          "Acidic pH",
-          "Alkaline pH",
-          "No specific pH requirement"
+          "Mitochondria",
+          "Chloroplast",
+          "Nucleus",
+          "Ribosome"
         ],
-        "correctAnswer": "Acidic pH",
-        "rationale": "Acidity activates enzymes and containment. pH ~4.5-5.0 activates acid hydrolases."
+        "correctAnswer": "Chloroplast",
+        "rationale": "Chloroplasts are unique to plant cells (and some algae). Mitochondria, nucleus, and ribosomes are found in both."
       },
       {
         "id": "mcq-2",
-        "question": "Which organelle packages the digestive enzymes that are found in lysosomes?",
+        "question": "A plant cell is placed in pure water. Which statement is correct?",
         "options": [
-          "Rough ER",
-          "Golgi apparatus",
-          "Nucleus",
-          "Mitochondria"
+          "Water will move out of the cell",
+          "The cell will burst due to osmotic lysis",
+          "Water will enter the cell, creating turgor pressure",
+          "No net water movement will occur"
         ],
-        "correctAnswer": "Golgi apparatus",
-        "rationale": "Link to endomembrane system. Rough ER makes enzymes; Golgi packages them into lysosomes."
+        "correctAnswer": "Water will enter the cell, creating turgor pressure",
+        "rationale": "Pure water (0 MPa) has higher water potential than cell contents. Water enters, pressing membrane against cell wall (turgor). Cell wall prevents bursting."
       },
       {
         "id": "mcq-3",
-        "question": "When a lysosome fuses with a vacuole containing a bacterium, this process is an example of:",
+        "question": "The cell walls of plants are composed of:",
         "options": [
-          "Autophagy",
-          "Heterophagy",
-          "Exocytosis",
-          "Binary fission"
+          "Peptidoglycan",
+          "Chitin",
+          "Cellulose",
+          "Glycogen"
         ],
-        "correctAnswer": "Heterophagy",
-        "rationale": "Distinguishing digestion types. Foreign material = heterophagy; own material = autophagy."
+        "correctAnswer": "Cellulose",
+        "rationale": "Plant cell walls contain cellulose. Bacteria = peptidoglycan, Fungi = chitin, Animals store glycogen (not in walls)."
       }
     ],
     "shortAnswer": [
       {
         "id": "sa-1",
-        "question": "Outline the role of lysosomes in digesting material within the cell. (2 marks)",
-        "marks": 2,
+        "question": "Explain the role of the large central vacuole in maintaining turgor pressure. [3 marks]",
+        "marks": 3,
         "markingCriteria": [
-          "1 mark: Contain hydrolytic/digestive enzymes that break down macromolecules (proteins, lipids, carbs)",
-          "1 mark: Fuse with vacuoles containing food/foreign material (heterophagy) or damaged organelles (autophagy)"
+          "1 mark: Vacuole contains cell sap (water, ions) pressing against cell wall",
+          "1 mark: This creates turgor pressure (hydrostatic pressure)",
+          "1 mark: Turgor pressure provides structural support/rigidity to the plant (prevents wilting)"
         ],
-        "commonError": "Saying they 'make' enzymes rather than contain them."
+        "commonError": "Not mentioning the role of the cell wall in resisting expansion."
       },
       {
         "id": "sa-2",
-        "question": "Explain why the membrane surrounding a lysosome is essential for the survival of the cell. (2 marks)",
+        "question": "Describe two pieces of evidence that suggest chloroplasts evolved from free-living prokaryotes. [2 marks]",
         "marks": 2,
         "markingCriteria": [
-          "1 mark: Membrane separates/isolates digestive enzymes from cytoplasm/prevents self-digestion",
-          "1 mark: Enzymes are acidic and would damage cytoplasm if released/maintains different pH"
+          "1 mark: Double membrane (suggests engulfing by host cell)",
+          "1 mark: Own circular DNA (similar to bacteria) OR 70S ribosomes (prokaryotic size) OR reproduce by binary fission"
         ],
-        "commonError": "Only mentioning 'protection' without explaining enzyme damage."
+        "commonError": "Mentioning 'has DNA' without specifying circular; confusing with mitochondria features."
       }
     ]
   },
   
   "copyToBook": {
     "definitions": [
-      "Lysosomes are membrane-bound sacs containing digestive enzymes (acid hydrolases).",
-      "They bud from the Golgi apparatus.",
-      "They have an acidic interior (pH ~5) to activate enzymes.",
-      "Autophagy = digesting own material; Heterophagy = digesting foreign material.",
-      "Lysosomal storage diseases (e.g., Tay-Sachs) occur when enzymes are missing."
+      "Plant cells have chloroplasts for photosynthesis (double membrane, own DNA, thylakoids).",
+      "Large central vacuole maintains turgor pressure against cell wall.",
+      "Cell walls provide structural support (cellulose microfibrils).",
+      "Plasmodesmata allow intercellular communication through cell walls.",
+      "Water potential (ψ) = ψs + ψp; water moves from high to low ψ."
     ],
     "keyPoints": [
-      "Lysosomes contain hydrolytic enzymes for breaking down macromolecules",
-      "Acidic pH (~4.5-5.0) activates enzymes and protects cytoplasm",
-      "Membrane keeps enzymes contained - leakage would digest the cell",
-      "Tay-Sachs: missing hexosaminidase A → brain damage"
+      "Chloroplasts: thylakoids contain chlorophyll; stroma contains enzymes",
+      "Central vacuole: 30-80% of cell volume; maintains turgor pressure",
+      "Cellulose cell wall: outside plasma membrane; prevents osmotic lysis",
+      "Plant cells lack centrioles (present in animal cells)",
+      "Pure water ψ = 0 MPa; adding solutes makes ψ negative"
     ],
     "diagrams": [
-      "Lysosome formation: Golgi → primary lysosome → fusion",
-      "Autophagy vs heterophagy comparison"
+      "Labelled plant cell showing chloroplasts, vacuole, cell wall",
+      "Chloroplast structure with thylakoids and grana",
+      "Animal vs plant comparison table"
     ]
   },
   
   "answerKey": {
-    "multipleChoice": ["B", "B", "B"],
+    "multipleChoice": ["B", "C", "C"],
     "shortAnswer": [
-      "Lysosomes are membrane-bound organelles that contain hydrolytic (acid hydrolase) enzymes capable of breaking down macromolecules including proteins, lipids, carbohydrates and nucleic acids. They fuse with vacuoles containing foreign material (heterophagy) or with vesicles containing damaged organelles (autophagy) to digest the contents into smaller molecules that can be recycled by the cell.",
-      "The membrane surrounding a lysosome is essential because it isolates the digestive enzymes from the cytoplasm, preventing the cell from digesting itself. The membrane maintains an acidic interior (pH ~4.5-5.0) which activates the enzymes. If the membrane were breached and enzymes leaked into the cytoplasm (which has neutral pH), they would be less active but could still cause significant damage to cellular components."
+      "The large central vacuole contains cell sap (a solution of water, ions, and sugars) which presses the cytoplasm against the cell wall. This creates turgor pressure (hydrostatic pressure) that provides structural support and rigidity to the plant. When the vacuole is full, the plant stands upright; when water is lost, turgor pressure drops and the plant wilts.",
+      "Evidence that chloroplasts evolved from free-living prokaryotes includes: (1) They have a double membrane, which suggests they were engulfed by an ancestral eukaryotic cell. (2) They contain their own circular DNA, similar to bacteria, rather than linear DNA like the nucleus. (3) They contain 70S ribosomes, which are the same size as prokaryotic ribosomes. (4) They reproduce by binary fission, like bacteria."
     ]
   },
   
@@ -295,41 +366,41 @@
     "previous": "module-1-cells-lesson-5",
     "previousTitle": "The Endomembrane System",
     "next": "mod1-lesson07",
-    "nextTitle": "Mitochondria, Chloroplasts and Endosymbiosis"
+    "nextTitle": "Technologies in Cytology"
   },
   
   "meta": {
     "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "createdAt": "2026-02-09",
+    "lastModified": "2026-02-09",
     "version": "1.0.0",
-    "tags": ["lysosomes", "peroxisomes", "autophagy", "heterophagy", "Tay-Sachs", "cellular digestion", "Module 1"]
+    "tags": ["plant cells", "chloroplasts", "vacuole", "cell wall", "water potential", "turgor pressure", "Module 1"]
   },
   
   "imageLibrary": [
     {
-      "id": "lysosome-formation",
-      "src": "assets/images/mod1/lesson06/lysosome-formation.webp",
-      "alt": "Diagram of lysosome formation from Golgi and fusion process",
-      "caption": "Lysosome formation and fusion with target vesicles"
+      "id": "plant-cell-diagram",
+      "src": "assets/images/mod1/lesson06/plant-cell-diagram.webp",
+      "alt": "Diagram of plant cell with labeled structures",
+      "caption": "Plant cell structure"
     },
     {
-      "id": "lysosome-fusion",
-      "src": "assets/images/mod1/lesson06/lysosome-fusion.webp",
-      "alt": "Diagram showing lysosome fusing with food vacuole",
-      "caption": "Lysosome fusion with phagosome for digestion"
+      "id": "chloroplast-structure",
+      "src": "assets/images/mod1/lesson06/chloroplast-structure.webp",
+      "alt": "Diagram of chloroplast showing thylakoids and grana",
+      "caption": "Chloroplast structure"
     },
     {
-      "id": "autophagy-tem",
-      "src": "assets/images/mod1/lesson06/autophagy-tem.webp",
-      "alt": "TEM image showing autophagy in progress",
-      "caption": "Transmission electron micrograph of autophagy"
+      "id": "central-vacuole",
+      "src": "assets/images/mod1/lesson06/central-vacuole.webp",
+      "alt": "Diagram showing central vacuole and turgor pressure",
+      "caption": "Central vacuole maintaining turgor pressure"
     },
     {
-      "id": "tay-sachs-brain",
-      "src": "assets/images/mod1/lesson06/tay-sachs-brain.webp",
-      "alt": "Brain tissue comparison showing Tay-Sachs disease effects",
-      "caption": "Neuronal damage in lysosomal storage disease"
+      "id": "plasmodesmata",
+      "src": "assets/images/mod1/lesson06/plasmodesmata.webp",
+      "alt": "Diagram showing plasmodesmata connecting cells",
+      "caption": "Plasmodesmata channels in cell walls"
     }
   ]
 }

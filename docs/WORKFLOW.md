@@ -1,7 +1,7 @@
 # Science Hub - App Completion Workflow
 
 **Purpose:** The single source of truth for HOW this app gets built, from today through to full completion.
-**Last Updated:** 2026-02-09
+**Last Updated:** 2026-02-09 (v2 — added verification gates)
 **Owner:** Project Manager (AI)
 
 ---
@@ -25,9 +25,15 @@ START SESSION
 [5] EXECUTE (code, test, fix)
   |
   v
-[6] Update tracker files          <-- Mark progress
-[7] Update docs/STATUS.md         <-- Log what was done
-[8] Commit with descriptive message
+[6] RUN VERIFICATION              <-- node scripts/run-all-checks.js
+  |
+  v
+[7] FIX any failures from step 6  <-- Loop back to [5] if needed
+  |
+  v
+[8] Update tracker files          <-- Mark progress
+[9] Update docs/STATUS.md         <-- Log what was done
+[10] Commit with descriptive message
   |
   v
 END SESSION
@@ -40,6 +46,7 @@ END SESSION
 - [ ] Check `docs/trackers/BUG-LOG.md` for critical issues
 
 ### Session End Checklist
+- [ ] **Verification suite passed** — `node scripts/run-all-checks.js` exits 0
 - [ ] All changed files committed
 - [ ] `docs/STATUS.md` updated with today's progress
 - [ ] Relevant tracker files updated
@@ -62,7 +69,8 @@ STAGE 2: JSON AUTHORING
   Full lesson JSON created with all required fields
   Owner: AI or Kyle (via Lesson Builder)
   Output: /data/lessons/{lesson-id}.json
-  Validation: Passes LessonSchema.validate()
+  Validation: node scripts/validate-lessons.js — MUST PASS for this lesson
+  Verification: node scripts/validate-spelling.js — no American spellings
   |
   v
 STAGE 3: RENDER INTEGRATION
@@ -70,6 +78,7 @@ STAGE 3: RENDER INTEGRATION
   Owner: AI
   Output: Lesson displays hero, content sections, activities, assessment
   Validation: Zero console errors, all sections visible
+  Verification: node scripts/validate-pages.js — HTML structure valid
   |
   v
 STAGE 4: ACTIVITY WIRING
@@ -285,10 +294,55 @@ Polish, optimise, add nice-to-haves only when everything above is done.
 
 ---
 
-## 8. DEPLOYMENT PIPELINE
+## 8. AUTOMATED VERIFICATION
+
+### Verification Scripts
+
+All scripts live in `/scripts/` and run via Node.js. **No npm install needed.**
+
+| Script | Command | What It Checks |
+|--------|---------|----------------|
+| **Master runner** | `node scripts/run-all-checks.js` | Runs ALL checks below, unified pass/fail |
+| **Cache-busting** | `node scripts/bump-versions.js` | Updates all ?v= params on CSS/JS (run BEFORE commit if you changed assets) |
+| HTML structure | `node scripts/validate-pages.js` | Required CSS/JS, meta tags, absolute paths |
+| Lesson JSON | `node scripts/validate-lessons.js` | Schema validation, content quality, activity types, navigation chain |
+| Spelling | `node scripts/validate-spelling.js` | American English in lesson content |
+
+### When to Run
+
+| Situation | Run This |
+|-----------|----------|
+| Before ANY commit | `node scripts/run-all-checks.js` |
+| After editing lesson JSON | `node scripts/validate-lessons.js` |
+| After editing HTML pages | `node scripts/validate-pages.js` |
+| After writing new content | `node scripts/validate-spelling.js` |
+
+### Interpreting Results
+
+- **PASS** = File is clean
+- **WARN** = Recommendation (not blocking, but should fix)
+- **FAIL/ERROR** = Must fix before committing
+- Exit code 0 = all passed, exit code 1 = failures exist
+
+### What the Validators Catch
+
+1. **Missing required JSON fields** (id, title, module, contentSections, etc.)
+2. **Unsupported activity types** (types not handled by the renderer switch statement)
+3. **MCQ answer mismatches** (correctAnswer not in options list)
+4. **American English spellings** (specialized, behavior, color, center, hemoglobin, etc.)
+5. **Broken navigation chains** (prev/next pointing to non-existent lessons)
+6. **Missing HTML infrastructure** (CSS/JS references, meta tags, absolute paths)
+7. **Content quality warnings** (too few activities, assessments, definitions)
+
+---
+
+## 9. DEPLOYMENT PIPELINE
 
 ```
 LOCAL DEV (Codespaces)
+  |
+  v
+RUN VERIFICATION (node scripts/run-all-checks.js — MUST PASS)
   |
   v
 GIT COMMIT (descriptive message)
@@ -307,10 +361,26 @@ UPDATE TRACKERS (mark lesson as LIVE)
 ```
 
 ### Cache-Busting Protocol
-When deploying CSS/JS changes:
+
+**MANDATORY before every commit that changes CSS or JS:**
+
+```bash
+node scripts/bump-versions.js
+```
+
+This script automatically:
+- Scans all HTML files in the project
+- Finds all local CSS and JS references
+- Adds/updates `?v=TIMESTAMP` on every reference
+- Uses a Unix timestamp so every run produces a unique version
+- Skips external URLs (https://)
+
+After running, verify the changes with `git diff` and commit them along with your CSS/JS changes.
+
+**Manual alternative** (if script fails):
 1. Increment the `?v=` parameter on all `<link>` and `<script>` tags
-2. Use a Unix timestamp for the version (e.g., `?v=1770581235`)
-3. Update ALL references in the affected HTML file
+2. Use a Unix timestamp: `?v=$(date +%s)`
+3. Update ALL references across ALL HTML files (not just one file)
 4. Test with hard refresh (Ctrl+Shift+R)
 
 ### Rollback Protocol

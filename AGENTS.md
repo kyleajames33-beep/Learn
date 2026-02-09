@@ -85,21 +85,38 @@ Update `docs/trackers/MODULE-1-LESSONS.md` when a lesson changes stage.
 ## Session End Checklist
 
 Before ending every session:
+- [ ] **Run `node scripts/run-all-checks.js`** — fix any errors
 - [ ] All changed files committed
-- [ ] `docs/STATUS.md` updated
+- [ ] `docs/STATUS.md` updated (include verification result)
 - [ ] Relevant tracker files updated
 - [ ] No unlogged critical bugs
 
 ---
 
+## Automated Verification (MANDATORY)
+
+Run before every commit: `node scripts/run-all-checks.js`
+
+Individual scripts:
+```bash
+node scripts/validate-pages.js      # HTML structure checks
+node scripts/validate-lessons.js     # JSON schema + content quality
+node scripts/validate-spelling.js    # Australian English check
+```
+
+Exit code 0 = passed. Exit code 1 = fix errors before committing.
+
+---
+
 ## Quality Checklist (Before Committing)
 
+- [ ] `node scripts/run-all-checks.js` passes (exit code 0)
+- [ ] **If CSS/JS changed:** `node scripts/bump-versions.js` (updates all ?v= params)
 - [ ] Zero console errors
 - [ ] Works on 375px width
 - [ ] Australian spelling
 - [ ] Touch targets 44px+
 - [ ] Relative paths (no `/assets/...`)
-- [ ] Cache-busting version bumped if CSS/JS changed
 
 Full checklist: `docs/QUALITY-GATES.md`
 

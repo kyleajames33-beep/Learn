@@ -1,165 +1,293 @@
 {
   "id": "mod1-lesson08",
-  "title": "Lesson 8: Cytoskeleton and Cell Walls",
+  "title": "Lesson 8: The Fluid Mosaic Model",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 8,
-  "description": "Understanding the cytoskeleton's role in cell structure and movement, and comparing cell wall composition across bacteria, fungi, plants, and animals.",
+  "description": "Understanding the fluid mosaic model of cell membranes including phospholipid bilayer structure, membrane proteins, cholesterol, and temperature effects on membrane fluidity.",
   "duration": "50 minutes",
   "difficulty": "Foundation Level",
   "worksOffline": true,
   
   "learningIntentions": [
-    "Students can describe the structure and function of the cytoskeleton (microtubules, microfilaments).",
-    "Students can compare the cell wall composition of plants (cellulose), fungi (chitin), and bacteria (peptidoglycan).",
-    "Students can explain why animal cells lack cell walls and how the cytoskeleton provides support instead."
+    "Students can describe the fluid mosaic model of the cell membrane (phospholipid bilayer, proteins, cholesterol, carbohydrates).",
+    "Students can explain the arrangement of phospholipids (hydrophilic heads outward, hydrophobic tails inward) based on the aqueous environment.",
+    "Students can predict how temperature affects membrane fluidity and explain the role of cholesterol in stabilising membranes."
   ],
   
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Cytoskeleton and cell walls"
+    "focus": "Cell membrane structure and fluid mosaic model"
   },
   
   "successCriteria": [
-    "I can name two components of the cytoskeleton and their functions.",
-    "I can state the chemical composition of plant, fungal, and bacterial cell walls.",
-    "I can explain the advantages and disadvantages of having a cell wall."
+    "I can draw a phospholipid bilayer with proteins embedded.",
+    "I can explain why the membrane is 'fluid' and 'mosaic'.",
+    "I can predict membrane behaviour at different temperatures."
   ],
   
   "prerequisites": [
     {
       "lessonId": "mod1-lesson07",
-      "description": "Organelle structure",
+      "description": "Microscopy techniques",
       "required": true
     }
   ],
   
   "engagementHook": {
-    "title": "The Bone and Muscle of the Cell",
-    "content": "Show video of amoeba moving (crawling) vs. plant cell with rigid walls. 'How does the amoeba change shape without a wall? And why can trees grow 100m tall without bones? Today we explore the cytoskeleton (cellular muscles and bones) and the walls that surround cells.'"
+    "title": "The Dynamic Border",
+    "content": "Show two videos: a cell membrane at 37°C (fluid, components moving) vs at 4°C (rigid, crystalline). 'Your cell membranes are not solid walls - they're fluid, dynamic sheets that change with temperature. How can a layer of fat molecules stay flexible in the heat but not fall apart? The answer lies in the fluid mosaic and a molecule called cholesterol.'"
   },
   
   "keyConcepts": [
     {
-      "term": "Cytoskeleton",
-      "definition": "Network of protein filaments providing shape, support, and movement. Includes microtubules, microfilaments, and intermediate filaments."
+      "term": "Fluid Mosaic Model",
+      "definition": "The membrane is a flexible (fluid) layer of phospholipids with proteins embedded (mosaic pattern). Proposed by Singer and Nicolson in 1972."
     },
     {
-      "term": "Microtubules",
-      "definition": "Hollow tubes (tubulin protein). Form cilia, flagella (9+2 arrangement), spindle fibres for cell division, and tracks for organelle movement."
+      "term": "Phospholipid Bilayer",
+      "definition": "Two layers of phospholipids. Hydrophilic (water-loving) phosphate heads face aqueous environments inside and outside cell. Hydrophobic (water-fearing) fatty acid tails face each other in membrane interior."
     },
     {
-      "term": "Microfilaments (Actin)",
-      "definition": "Solid threads. Muscle contraction, cell division (cleavage furrow), amoeboid movement."
+      "term": "Integral Proteins",
+      "definition": "Span the entire membrane (transmembrane). Functions: transport channels, receptors, enzymes."
     },
     {
-      "term": "Cell Walls",
-      "definition": "Rigid outer layers outside the plasma membrane. Plants: cellulose; Fungi: chitin; Bacteria: peptidoglycan; Animals: none."
+      "term": "Peripheral Proteins",
+      "definition": "Attached to membrane surface (not spanning). Functions: enzymes, structural support, cell signalling."
     },
     {
-      "term": "Plasmodesmata",
-      "definition": "Channels through plant cell walls connecting adjacent cells."
+      "term": "Cholesterol",
+      "definition": "Fits between phospholipids in animal cell membranes. At high temperatures: restrains phospholipid movement (reduces fluidity). At low temperatures: prevents tight packing (maintains fluidity). Stabilises membrane fluidity across temperatures."
+    },
+    {
+      "term": "Glycoproteins/Glycolipids",
+      "definition": "Carbohydrate chains attached to proteins or lipids on the extracellular surface. Functions: cell-cell recognition, immune response (self vs non-self), ABO blood typing."
     }
   ],
   
   "misconceptions": [
     {
-      "misconception": "Cell walls are alive/metabolically active",
-      "correction": "Cell walls are non-living secretions outside the plasma membrane. The living part is the cell membrane and cytoplasm."
+      "misconception": "The membrane is solid/static",
+      "correction": "Emphasise 'fluid' - components move laterally (fluidity). Phospholipids can diffuse sideways."
     },
     {
-      "misconception": "All cell walls are the same",
-      "correction": "Emphasise the three different chemicals (cellulose, chitin, peptidoglycan) and that animal cells lack them entirely."
+      "misconception": "Cholesterol makes membranes more fluid",
+      "correction": "Cholesterol MODERATES fluidity - reduces it at high temps, increases it at low temps. Acts as a buffer."
     },
     {
-      "misconception": "Cytoskeleton is only for movement",
-      "correction": "Also for structure and shape—like a skeleton for the cell."
+      "misconception": "Proteins are just stuck on the surface",
+      "correction": "Integral proteins span the membrane; only peripheral proteins are surface-bound."
     }
   ],
   
   "contentSections": [
     {
-      "id": "cytoskeleton-network",
+      "id": "phospholipid-bilayer",
       "type": "diagram",
-      "title": "The Cytoskeleton Network",
-      "icon": "network",
-      "content": "Cell showing microtubules (radiating from centre), microfilaments (cortex/mesh), intermediate filaments (structural).",
+      "title": "The Phospholipid Bilayer",
+      "icon": "layers",
+      "content": "Two layers of phospholipids (spherical heads with two tails) arranged heads-out, tails-in. Hydrophilic heads contact water; hydrophobic tails shielded from water in membrane interior.",
       "keyPoints": [
-        "Microtubules (hollow, tubulin) for shape and transport",
-        "Microfilaments (actin) for movement and division",
-        "No cell wall in animals"
+        "Hydrophilic phosphate heads face water",
+        "Hydrophobic fatty acid tails face each other",
+        "Creates hydrophobic core - barrier to polar molecules",
+        "Self-assembles in aqueous environments"
       ],
-      "example": "Cancer drugs (taxol) target microtubules to stop cell division; cystic fibrosis affects microtubule transport (cilia in lungs).",
+      "example": "Soap bubbles form similar bilayer structures - hydrophilic outside, hydrophobic inside.",
+      "checkForUnderstanding": "Why do phospholipids form bilayers rather than single layers in water? (Tails need to be shielded from water on both sides)",
       "image": {
-        "src": "assets/images/mod1/lesson08/cytoskeleton.webp",
-        "alt": "Diagram showing microtubules, microfilaments, and intermediate filaments",
-        "caption": "The cytoskeleton network"
+        "src": "assets/images/mod1/lesson08/phospholipid-bilayer.webp",
+        "alt": "Diagram of phospholipid bilayer showing hydrophilic heads and hydrophobic tails",
+        "caption": "The phospholipid bilayer structure"
       }
     },
     {
-      "id": "cell-wall-comparison",
+      "id": "membrane-components",
       "type": "grid",
-      "title": "Cell Wall Comparison",
-      "icon": "columns",
+      "title": "Membrane Components",
+      "icon": "grid-3x3",
       "gridItems": [
         {
-          "header": "Organism",
-          "items": ["Bacteria", "Fungi", "Plants", "Animals"]
+          "header": "Component",
+          "items": ["Phospholipids", "Integral proteins", "Peripheral proteins", "Cholesterol", "Carbohydrates"]
         },
         {
-          "header": "Wall Component",
-          "items": ["Peptidoglycan", "Chitin", "Cellulose", "None"]
-        },
-        {
-          "header": "Structure",
-          "items": ["Rigid mesh", "Tough, flexible", "Fibrous, rigid", "Flexible membrane"]
+          "header": "Location/Structure",
+          "items": [
+            "Bilayer, heads out/tails in",
+            "Span entire membrane",
+            "Surface-bound only",
+            "Between phospholipids",
+            "Attached to proteins/lipids (outer surface only)"
+          ]
         },
         {
           "header": "Function",
-          "items": ["Protection, shape", "Support, protection", "Structural support, prevents osmotic lysis", "Allows movement, phagocytosis"]
+          "items": [
+            "Barrier, controls entry/exit",
+            "Transport, receptors, enzymes",
+            "Enzymes, signalling, structure",
+            "Stabilises fluidity",
+            "Cell recognition, markers"
+          ]
         }
       ]
     },
     {
-      "id": "cilia-flagella",
+      "id": "abo-blood",
       "type": "content",
-      "title": "Cilia and Flagella (Eukaryotic)",
-      "icon": "move",
-      "content": "Microtubule-based structures (9+2 arrangement) for cell movement. Different from bacterial flagella (protein filament, no microtubules—recall Lesson 1).",
-      "example": "Tracheal cilia sweep mucus (with trapped dust/bacteria) out of lungs; sperm flagella for swimming."
+      "title": "ABO Blood Groups",
+      "icon": "droplet",
+      "content": "Carbohydrate chains on red blood cell surface determine blood type. Type A has specific sugar (N-acetylgalactosamine), Type B has different sugar (galactose), Type AB has both, Type O has neither. Immune system recognises these as 'self.' Transfusion mismatch causes immune reaction.",
+      "example": "Type A person has anti-B antibodies. If given Type B blood, antibodies attack the B antigens on donor cells."
     }
   ],
   
   "activities": [
     {
-      "id": "cytoskeleton-matching",
-      "type": "matching",
-      "title": "Match Cytoskeleton Components",
-      "description": "Match cytoskeleton components to their functions.",
-      "learningObjective": "Match components to functions.",
-      "theme": "purple",
+      "id": "membrane-labeling",
+      "type": "labeling",
+      "title": "Label the Fluid Mosaic",
+      "description": "Identify components in the membrane diagram.",
+      "learningObjective": "Identify membrane components.",
+      "theme": "teal",
       "xpReward": 50,
-      "items": [
-        { "id": "microtubules", "text": "Microtubules", "match": "Form spindle fibres/cilia/flagella" },
-        { "id": "microfilaments", "text": "Microfilaments", "match": "Muscle contraction/cell division" },
-        { "id": "intermediate", "text": "Intermediate filaments", "match": "Skin strength" }
+      "image": {
+        "src": "assets/images/mod1/lesson08/fluid-mosaic.webp",
+        "alt": "Fluid mosaic diagram for labeling"
+      },
+      "labels": [
+        {
+          "id": "phospholipid-head",
+          "zone": { "x": 25, "y": 20, "width": 10, "height": 8 },
+          "correctText": "Phospholipid head",
+          "alternatives": ["Hydrophilic head", "Polar head", "Head"],
+          "hint": "Round part facing water - hydrophilic and polar"
+        },
+        {
+          "id": "phospholipid-tail",
+          "zone": { "x": 25, "y": 28, "width": 10, "height": 15 },
+          "correctText": "Phospholipid tail",
+          "alternatives": ["Hydrophobic tail", "Fatty acid tail", "Tail"],
+          "hint": "Two lines facing interior - hydrophobic and non-polar"
+        },
+        {
+          "id": "integral-protein",
+          "zone": { "x": 50, "y": 30, "width": 8, "height": 25 },
+          "correctText": "Integral protein",
+          "alternatives": ["Transmembrane protein", "Channel protein", "Protein"],
+          "hint": "Spans entire membrane - for transport across"
+        },
+        {
+          "id": "peripheral-protein",
+          "zone": { "x": 70, "y": 18, "width": 10, "height": 8 },
+          "correctText": "Peripheral protein",
+          "alternatives": ["Surface protein", "External protein"],
+          "hint": "Attached to surface only - does not span membrane"
+        },
+        {
+          "id": "cholesterol",
+          "zone": { "x": 70, "y": 35, "width": 8, "height": 8 },
+          "correctText": "Cholesterol",
+          "alternatives": ["Cholesterol molecule"],
+          "hint": "Small molecule between phospholipids - regulates fluidity"
+        },
+        {
+          "id": "glycoprotein",
+          "zone": { "x": 40, "y": 15, "width": 8, "height": 8 },
+          "correctText": "Glycoprotein",
+          "alternatives": ["Carbohydrate chain", "Sugar chain", "Glycocalyx"],
+          "hint": "Branched chains on outer surface - for cell recognition"
+        },
+        {
+          "id": "extracellular",
+          "zone": { "x": 50, "y": 10, "width": 15, "height": 5 },
+          "correctText": "Extracellular environment",
+          "alternatives": ["Outside cell", "External"],
+          "hint": "Aqueous environment outside the cell"
+        }
       ]
     },
     {
-      "id": "wall-classification",
-      "type": "matching",
-      "title": "Identify Wall Types",
-      "description": "Sort organisms by their cell wall composition.",
-      "learningObjective": "Identify wall types.",
-      "theme": "teal",
-      "xpReward": 50,
+      "id": "permeability-classification",
+      "type": "classification",
+      "title": "Membrane Permeability",
+      "description": "Classify molecules by how they cross the membrane.",
+      "learningObjective": "Distinguish permeability of different molecules.",
+      "theme": "purple",
+      "xpReward": 75,
+      "categories": [
+        {
+          "id": "simple-diffusion",
+          "name": "Crosses by Simple Diffusion",
+          "description": "Small, non-polar molecules"
+        },
+        {
+          "id": "protein-required",
+          "name": "Requires Transport Protein",
+          "description": "Polar or charged molecules"
+        },
+        {
+          "id": "cannot-cross",
+          "name": "Cannot Cross Freely",
+          "description": "Large or charged molecules"
+        }
+      ],
       "items": [
-        { "id": "e-coli", "text": "E. coli", "match": "Peptidoglycan" },
-        { "id": "mushroom", "text": "Mushroom", "match": "Chitin" },
-        { "id": "grass", "text": "Grass", "match": "Cellulose" },
-        { "id": "human-skin", "text": "Human skin cell", "match": "No wall" }
+        { "id": "oxygen", "text": "O₂ (oxygen)", "correctCategory": "simple-diffusion" },
+        { "id": "co2", "text": "CO₂ (carbon dioxide)", "correctCategory": "simple-diffusion" },
+        { "id": "steroid", "text": "Steroid hormones", "correctCategory": "simple-diffusion" },
+        { "id": "glucose", "text": "Glucose", "correctCategory": "protein-required" },
+        { "id": "amino-acids", "text": "Amino acids", "correctCategory": "protein-required" },
+        { "id": "ions", "text": "Na⁺, K⁺, Ca²⁺ ions", "correctCategory": "protein-required" },
+        { "id": "proteins", "text": "Proteins", "correctCategory": "cannot-cross" },
+        { "id": "large-polar", "text": "Large polar molecules", "correctCategory": "cannot-cross" }
+      ]
+    },
+    {
+      "id": "temperature-fluidity",
+      "type": "interactive-slider",
+      "title": "Temperature and Membrane Fluidity",
+      "description": "Explore how temperature affects membrane fluidity.",
+      "learningObjective": "Understand temperature effects on membrane fluidity.",
+      "theme": "orange",
+      "xpReward": 75,
+      "slider": {
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "defaultValue": 25,
+        "unit": "°C",
+        "label": "Temperature"
+      },
+      "zones": [
+        {
+          "min": 0,
+          "max": 10,
+          "label": "Low Temperature",
+          "description": "Phospholipids pack tightly together. Membrane becomes gel-like and rigid. Reduced permeability. Without cholesterol, could solidify.",
+          "visualState": "rigid",
+          "cholesterolEffect": "Cholesterol prevents tight packing, maintains some fluidity"
+        },
+        {
+          "min": 10,
+          "max": 35,
+          "label": "Optimal Range",
+          "description": "Phospholipids move freely but maintain bilayer structure. Membrane is fluid and functional. Optimal for protein function.",
+          "visualState": "fluid",
+          "cholesterolEffect": "Cholesterol moderates movement"
+        },
+        {
+          "min": 35,
+          "max": 50,
+          "label": "High Temperature",
+          "description": "Phospholipids move too rapidly. Membrane becomes too fluid. Increased permeability. Proteins may denature.",
+          "visualState": "too-fluid",
+          "cholesterolEffect": "Cholesterol restricts movement, reduces fluidity"
+        }
       ]
     }
   ],
@@ -168,132 +296,135 @@
     "multipleChoice": [
       {
         "id": "mcq-1",
-        "question": "Which of the following is a component of the cytoskeleton?",
+        "question": "In the fluid mosaic model of the cell membrane, the 'mosaic' refers to:",
         "options": [
-          "Cell wall",
-          "Microtubule",
-          "Chloroplast",
-          "Nucleolus"
+          "The phospholipids arranged in a pattern",
+          "The proteins embedded in the phospholipid bilayer",
+          "The cholesterol covering the surface",
+          "The carbohydrates inside the membrane"
         ],
-        "correctAnswer": "Microtubule",
-        "rationale": "Basic cytoskeleton identification. Microtubules, microfilaments, and intermediate filaments make up the cytoskeleton."
+        "correctAnswer": "The proteins embedded in the phospholipid bilayer",
+        "rationale": "Mosaic refers to the scattered pattern of proteins embedded throughout the phospholipid bilayer."
       },
       {
         "id": "mcq-2",
-        "question": "The cell walls of fungi are composed of:",
+        "question": "What is the function of cholesterol in the plasma membrane?",
         "options": [
-          "Cellulose",
-          "Chitin",
-          "Peptidoglycan",
-          "Protein"
+          "To transport glucose across the membrane",
+          "To regulate/stabilise membrane fluidity",
+          "To attach cells to each other",
+          "To produce ATP"
         ],
-        "correctAnswer": "Chitin",
-        "rationale": "Distinguishing wall types. Plants = cellulose, Fungi = chitin, Bacteria = peptidoglycan."
+        "correctAnswer": "To regulate/stabilise membrane fluidity",
+        "rationale": "Cholesterol reduces fluidity at high temperatures and prevents tight packing at low temperatures, stabilising the membrane across temperature ranges."
       },
       {
         "id": "mcq-3",
-        "question": "Animal cells lack cell walls, which allows them to:",
+        "question": "The hydrophobic tails of phospholipids face:",
         "options": [
-          "Perform photosynthesis",
-          "Change shape and engulf particles by phagocytosis",
-          "Withstand high pressure",
-          "Store large amounts of water"
+          "The aqueous environment outside the cell",
+          "The aqueous cytoplasm inside the cell",
+          "Each other in the interior of the membrane",
+          "The cholesterol molecules only"
         ],
-        "correctAnswer": "Change shape and engulf particles by phagocytosis",
-        "rationale": "Functional advantage of no wall. Flexibility allows movement and phagocytosis."
+        "correctAnswer": "Each other in the interior of the membrane",
+        "rationale": "Hydrophobic tails are excluded from water and face each other in the membrane interior, creating a hydrophobic core."
       }
     ],
     "shortAnswer": [
       {
         "id": "sa-1",
-        "question": "Compare the cell wall composition of bacteria and plant cells. (2 marks)",
-        "marks": 2,
+        "question": "Describe the arrangement of phospholipids in the cell membrane and explain how this arrangement creates a barrier to polar molecules but allows non-polar molecules to cross. [3 marks]",
+        "marks": 3,
         "markingCriteria": [
-          "1 mark: Bacterial walls contain peptidoglycan",
-          "1 mark: Plant walls contain cellulose (fibrous polysaccharide providing rigidity)"
+          "1 mark: Phospholipids arranged in a bilayer (two layers)",
+          "1 mark: Hydrophilic heads face outward (aqueous environments), hydrophobic tails face inward",
+          "1 mark: Hydrophobic core repels polar/hydrophilic molecules but allows non-polar/lipid-soluble molecules to pass through"
         ],
-        "commonError": "Stating both have cellulose."
+        "commonError": "Not explaining WHY the hydrophobic core acts as a barrier (water exclusion)."
       },
       {
         "id": "sa-2",
-        "question": "Describe the role of microtubules in eukaryotic cells. (2 marks)",
+        "question": "Explain how cholesterol helps maintain membrane fluidity across different temperatures. [2 marks]",
         "marks": 2,
         "markingCriteria": [
-          "1 mark: Provide structural support/maintain cell shape OR form tracks for organelle movement",
-          "1 mark: Form spindle fibres during cell division OR form structure of cilia and flagella (9+2 arrangement)"
+          "1 mark: At high temperatures: cholesterol restricts phospholipid movement, reducing fluidity",
+          "1 mark: At low temperatures: cholesterol prevents tight packing of phospholipids, maintaining fluidity / preventing solidification"
         ],
-        "commonError": "Confusing with microfilaments/actin."
+        "commonError": "Saying cholesterol always increases fluidity (it moderates/buffers in both directions)."
       }
     ]
   },
   
   "copyToBook": {
     "definitions": [
-      "The cytoskeleton includes microtubules (shape, transport, division) and microfilaments (movement).",
-      "Plant cell walls contain cellulose; fungal walls contain chitin; bacterial walls contain peptidoglycan.",
-      "Animal cells lack cell walls, allowing flexibility and movement.",
-      "Eukaryotic cilia and flagella contain microtubules (9+2 structure).",
-      "Cell walls are non-living structures outside the cell membrane."
+      "Fluid mosaic model: Phospholipid bilayer with embedded proteins; membrane is flexible (fluid) with scattered protein pattern (mosaic).",
+      "Phospholipids: Hydrophilic heads face water; hydrophobic tails face each other in membrane interior.",
+      "Integral proteins span the membrane; peripheral proteins are surface-bound.",
+      "Cholesterol stabilises membrane fluidity: reduces fluidity at high temps, prevents solidification at low temps.",
+      "Glycoproteins/glycolipids on outer surface function in cell recognition (e.g., ABO blood groups)."
     ],
     "keyPoints": [
-      "Microtubules = hollow tubes made of tubulin",
-      "Microfilaments = actin fibres for muscle and movement",
-      "9+2 arrangement in eukaryotic flagella (different from bacterial)",
-      "Cellulose vs chitin vs peptidoglycan"
+      "Fluid = phospholipids can move laterally",
+      "Mosaic = proteins embedded throughout",
+      "Hydrophilic heads face aqueous environments",
+      "Hydrophobic core prevents polar molecules crossing",
+      "Cholesterol acts as a fluidity buffer across temperatures"
     ],
     "diagrams": [
-      "Cytoskeleton network showing three filament types",
-      "Cell wall comparison table"
+      "Fluid mosaic model with all components labeled",
+      "Phospholipid structure showing head and tails",
+      "Temperature effects on fluidity"
     ]
   },
   
   "answerKey": {
-    "multipleChoice": ["B", "B", "B"],
+    "multipleChoice": ["B", "B", "C"],
     "shortAnswer": [
-      "Bacterial cell walls are composed of peptidoglycan, which forms a rigid mesh structure that provides protection and shape. Plant cell walls are composed of cellulose, a fibrous polysaccharide that provides rigidity and structural support while preventing the cell from bursting in hypotonic solutions.",
-      "Microtubules are hollow tubes made of tubulin protein that provide structural support and maintain cell shape. They also form the spindle fibres during cell division and make up the internal structure of cilia and flagella (arranged in a 9+2 pattern). Additionally, they act as tracks for organelle movement within the cell."
+      "Phospholipids are arranged in a bilayer with their hydrophilic (water-loving) phosphate heads facing outward toward the aqueous environments inside and outside the cell, and their hydrophobic (water-fearing) fatty acid tails facing inward toward each other. This creates a hydrophobic core in the centre of the membrane. This arrangement creates a barrier to polar molecules because the hydrophobic core repels water and polar substances. However, non-polar molecules (lipid-soluble substances) can dissolve in the hydrophobic interior and pass through the membrane easily.",
+      "Cholesterol helps maintain membrane fluidity across different temperatures by acting as a buffer. At high temperatures, cholesterol restrains the movement of phospholipids, reducing fluidity and preventing the membrane from becoming too fluid. At low temperatures, cholesterol prevents phospholipids from packing too tightly together, maintaining fluidity and preventing the membrane from solidifying. This ensures the membrane remains functional across a range of temperatures."
     ]
   },
   
   "navigation": {
     "previous": "mod1-lesson07",
-    "previousTitle": "Mitochondria, Chloroplasts and Endosymbiosis",
+    "previousTitle": "Technologies in Cytology",
     "next": "mod1-lesson09",
-    "nextTitle": "The Cell Membrane – Fluid Mosaic Structure"
+    "nextTitle": "Diffusion and Concentration Gradients"
   },
   
   "meta": {
     "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "createdAt": "2026-02-09",
+    "lastModified": "2026-02-09",
     "version": "1.0.0",
-    "tags": ["cytoskeleton", "microtubules", "microfilaments", "cell walls", "cellulose", "chitin", "peptidoglycan", "Module 1"]
+    "tags": ["cell membrane", "fluid mosaic", "phospholipid bilayer", "hydrophilic", "hydrophobic", "cholesterol", "glycoproteins", "Module 1"]
   },
   
   "imageLibrary": [
     {
-      "id": "cytoskeleton",
-      "src": "assets/images/mod1/lesson08/cytoskeleton.webp",
-      "alt": "Diagram of cytoskeleton showing microtubules and filaments",
-      "caption": "The cytoskeleton network"
+      "id": "fluid-mosaic",
+      "src": "assets/images/mod1/lesson08/fluid-mosaic.webp",
+      "alt": "Diagram of fluid mosaic model showing all components",
+      "caption": "The fluid mosaic model of cell membrane"
     },
     {
-      "id": "cell-wall-comparison",
-      "src": "assets/images/mod1/lesson08/cell-wall-comparison.webp",
-      "alt": "Comparison of bacterial, fungal and plant cell walls",
-      "caption": "Cell wall composition comparison"
+      "id": "phospholipid",
+      "src": "assets/images/mod1/lesson08/phospholipid.webp",
+      "alt": "Diagram of phospholipid molecule",
+      "caption": "Phospholipid structure"
     },
     {
-      "id": "cilia-flagella",
-      "src": "assets/images/mod1/lesson08/cilia-flagella.webp",
-      "alt": "Diagram showing 9+2 microtubule arrangement",
-      "caption": "Eukaryotic flagella 9+2 structure"
+      "id": "temperature-fluidity",
+      "src": "assets/images/mod1/lesson08/temperature-fluidity.webp",
+      "alt": "Diagram showing membrane at different temperatures",
+      "caption": "Temperature effects on membrane fluidity"
     },
     {
-      "id": "amoeba-movement",
-      "src": "assets/images/mod1/lesson08/amoeba-movement.webp",
-      "alt": "Micrograph showing amoeba with pseudopodia",
-      "caption": "Amoeboid movement via cytoskeleton"
+      "id": "abo-blood",
+      "src": "assets/images/mod1/lesson08/abo-blood.webp",
+      "alt": "Diagram showing ABO blood group antigens",
+      "caption": "ABO blood group glycoproteins"
     }
   ]
 }

@@ -1,208 +1,245 @@
 {
   "id": "mod1-lesson09",
-  "title": "Lesson 9: The Cell Membrane – Fluid Mosaic Structure",
+  "title": "Lesson 9: Diffusion and Concentration Gradients",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 9,
-  "description": "Understanding the fluid mosaic model of cell membranes including phospholipid bilayer structure, membrane proteins, cholesterol, and glycoproteins.",
+  "description": "Understanding diffusion as a passive transport mechanism, factors affecting diffusion rates, and Fick's Law applications.",
   "duration": "50 minutes",
   "difficulty": "Foundation Level",
   "worksOffline": true,
   
   "learningIntentions": [
-    "Students can describe the fluid mosaic model of the cell membrane (phospholipid bilayer, proteins, cholesterol, carbohydrates).",
-    "Students can explain the arrangement of phospholipids (hydrophilic heads outward, hydrophobic tails inward) based on the aqueous environment.",
-    "Students can identify the roles of membrane proteins (transport, recognition, enzymes) and cholesterol (fluidity)."
+    "Students can define diffusion as the net movement of particles from high to low concentration.",
+    "Students can identify factors that affect the rate of diffusion (temperature, concentration gradient, surface area, thickness, molecular size).",
+    "Students can apply Fick's Law to predict diffusion rates in biological contexts."
   ],
   
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Cell membrane structure and fluid mosaic model"
+    "focus": "Diffusion and passive transport"
   },
   
   "successCriteria": [
-    "I can draw a phospholipid bilayer with proteins embedded.",
-    "I can explain why the membrane is 'fluid' and 'mosaic.'",
-    "I can state the function of glycoproteins in cell recognition."
+    "I can define diffusion and explain why it is a passive process.",
+    "I can rank factors by their effect on diffusion rate.",
+    "I can apply Fick's Law to predict diffusion rate changes."
   ],
   
   "prerequisites": [
     {
       "lessonId": "mod1-lesson08",
-      "description": "Cell structure foundation",
+      "description": "Membrane structure, fluid mosaic model",
       "required": true
     }
   ],
   
   "engagementHook": {
-    "title": "The Border Control",
-    "content": "'The cell membrane is the border between life and chaos. It must let nutrients in, keep toxins out, and recognise friend from foe—all while being flexible enough to move. How does a layer of fat molecules manage this? Today we explore the fluid mosaic that keeps your cells alive.'"
+    "title": "The Invisible Crowd",
+    "content": "Demonstration: Open a bottle of perfume at the front of the room. 'You can smell it at the back within minutes, but no one pushed the molecules. They moved on their own, from where there were many to where there were few. This is diffusion - the fundamental force that moves oxygen into your cells and carbon dioxide out. But what controls how fast it happens?'"
   },
   
   "keyConcepts": [
     {
-      "term": "Fluid Mosaic Model",
-      "definition": "The membrane is a flexible (fluid) layer of phospholipids with proteins embedded (mosaic pattern)."
+      "term": "Diffusion",
+      "definition": "The net movement of particles from an area of high concentration to an area of low concentration down a concentration gradient. Continues until equilibrium (equal concentration throughout)."
     },
     {
-      "term": "Phospholipid Bilayer",
-      "definition": "Two layers of phospholipids. Heads (hydrophilic/water-loving) face aqueous environment inside and outside cell. Tails (hydrophobic/water-fearing) face each other in membrane interior."
+      "term": "Concentration Gradient",
+      "definition": "The difference in concentration between two areas. Steeper gradient = faster diffusion. No gradient = no net diffusion (equilibrium)."
     },
     {
-      "term": "Membrane Proteins",
-      "definition": "Integral (spanning membrane): Channels for transport. Peripheral (on surface): Enzymes or recognition."
+      "term": "Passive Process",
+      "definition": "Requires no energy (ATP). Molecules move due to their own kinetic energy."
     },
     {
-      "term": "Cholesterol",
-      "definition": "Fits between phospholipids, stabilises membrane, affects fluidity (prevents over-solidification at low temperatures)."
+      "term": "Fick's Law",
+      "definition": "Rate of diffusion is proportional to: (surface area × concentration difference) ÷ diffusion distance. Larger surface area, steeper gradient, or shorter distance = faster diffusion."
     },
     {
-      "term": "Glycoproteins/Glycolipids",
-      "definition": "Carbohydrate chains on membrane surface for cell-cell recognition (e.g., immune system 'self' recognition, ABO blood types)."
+      "term": "Simple Diffusion",
+      "definition": "Small, non-polar molecules (O₂, CO₂, steroid hormones) pass directly through the phospholipid bilayer."
+    },
+    {
+      "term": "Facilitated Diffusion",
+      "definition": "Polar or charged molecules (glucose, amino acids, ions) use channel or carrier proteins. Still passive (no ATP) but protein-assisted."
     }
   ],
   
   "misconceptions": [
     {
-      "misconception": "The membrane is solid/static",
-      "correction": "Emphasise 'fluid'—components move laterally (fluidity)."
+      "misconception": "Molecules stop moving at equilibrium",
+      "correction": "Molecules continue to move, but there's no NET movement - equal numbers move each direction."
     },
     {
-      "misconception": "Proteins are just stuck on the surface",
-      "correction": "Many span the membrane (integral), not just sit on top."
+      "misconception": "Diffusion is fast over long distances",
+      "correction": "Diffusion is effective only over short distances (micrometres). Cells are small because diffusion is slow."
     },
     {
-      "misconception": "Cholesterol is always bad",
-      "correction": "In membranes it's essential for stability; dietary cholesterol is different context."
+      "misconception": "Facilitated diffusion uses energy",
+      "correction": "It uses proteins but NOT ATP - still passive transport down the gradient."
     }
   ],
   
   "contentSections": [
     {
-      "id": "phospholipid-bilayer",
+      "id": "diffusion-basics",
       "type": "diagram",
-      "title": "The Phospholipid Bilayer",
-      "icon": "layers",
-      "content": "Two layers of phospholipids (circles with two tails) arranged heads-out, tails-in. Proteins embedded (some spanning, some surface), cholesterol molecules between phospholipids, carbohydrate chains on outer surface.",
+      "title": "How Diffusion Works",
+      "icon": "arrow-right",
+      "content": "Diagram showing particles on left side (high concentration) spreading out to fill container evenly. Arrows show net movement from high to low concentration until equilibrium.",
       "keyPoints": [
-        "Hydrophilic phosphate heads",
-        "Hydrophobic fatty acid tails",
-        "Barrier properties",
-        "Proteins embedded"
+        "Net movement down concentration gradient",
+        "Continues until equilibrium",
+        "No energy required",
+        "Due to random molecular motion"
       ],
-      "example": "Artificial liposomes used in drug delivery (mRNA vaccines use lipid bilayers similar to cell membranes).",
+      "example": "Oxygen diffuses from blood (high) into muscle cells (low) during exercise.",
+      "checkForUnderstanding": "Why does diffusion eventually stop? (Equilibrium reached - equal concentration throughout)",
       "image": {
-        "src": "assets/images/mod1/lesson09/fluid-mosaic.webp",
-        "alt": "Diagram of fluid mosaic model showing phospholipid bilayer with proteins",
-        "caption": "The fluid mosaic model of the cell membrane"
+        "src": "assets/images/mod1/lesson09/diffusion-diagram.webp",
+        "alt": "Diagram showing diffusion from high to low concentration",
+        "caption": "Diffusion down a concentration gradient"
       }
     },
     {
-      "id": "membrane-components",
+      "id": "factors-affecting-diffusion",
       "type": "grid",
-      "title": "Membrane Components",
-      "icon": "grid-3x3",
+      "title": "Factors Affecting Diffusion Rate",
+      "icon": "gauge",
       "gridItems": [
         {
-          "header": "Component",
-          "items": ["Phospholipids", "Proteins", "Cholesterol", "Carbohydrates"]
+          "header": "Factor",
+          "items": ["Temperature", "Concentration gradient", "Surface area", "Thickness of membrane", "Molecular size"]
         },
         {
-          "header": "Structure",
+          "header": "Effect on Rate",
           "items": [
-            "Bilayer, heads out/tails in",
-            "Integral (span) or Peripheral (surface)",
-            "Between phospholipids",
-            "Attached to proteins/lipids (outer only)"
+            "Higher temp = faster (more kinetic energy)",
+            "Steeper gradient = faster",
+            "Larger area = faster",
+            "Thinner = faster",
+            "Smaller = faster"
           ]
         },
         {
-          "header": "Function",
+          "header": "Biological Example",
           "items": [
-            "Barrier, controls entry/exit",
-            "Transport, enzymes, receptors",
-            "Stabilises fluidity",
-            "Cell recognition, self markers"
+            "Fever increases metabolic rate",
+            "Active muscle takes up more O₂",
+            "Alveoli have large surface area",
+            "Alveolar wall is thin (one cell)",
+            "O₂ smaller than glucose"
           ]
         }
-      ]
+      ],
+      "note": "Fick's Law combines surface area, concentration gradient, and thickness: Rate ∝ (Area × Gradient) ÷ Thickness"
     },
     {
-      "id": "abo-blood-groups",
-      "type": "content",
-      "title": "ABO Blood Groups",
-      "icon": "droplet",
-      "content": "Carbohydrates on red blood cell surface determine blood type (A, B, AB, O). Immune system recognises these as 'self.' Transfusion mismatch causes immune reaction because membrane markers don't match.",
-      "example": "Blood typing for transfusions."
+      "id": "simple-vs-facilitated",
+      "type": "grid",
+      "title": "Simple vs Facilitated Diffusion",
+      "icon": "git-compare",
+      "gridItems": [
+        {
+          "header": "Feature",
+          "items": ["Molecule type", "Requires protein?", "Energy?", "Examples"]
+        },
+        {
+          "header": "Simple Diffusion",
+          "items": [
+            "Small, non-polar",
+            "No",
+            "No (passive)",
+            "O₂, CO₂, steroids"
+          ]
+        },
+        {
+          "header": "Facilitated Diffusion",
+          "items": [
+            "Polar, charged, large",
+            "Yes (channel/carrier)",
+            "No (passive)",
+            "Glucose, ions, amino acids"
+          ]
+        }
+      ],
+      "example": "Oxygen crosses by simple diffusion; glucose uses GLUT carrier proteins (facilitated)."
     }
   ],
   
   "activities": [
     {
-      "id": "membrane-labeling",
-      "type": "labeling",
-      "title": "Label the Fluid Mosaic",
-      "description": "Identify components in the membrane diagram.",
-      "learningObjective": "Identify membrane components.",
-      "theme": "teal",
+      "id": "diffusion-factors-ranking",
+      "type": "ordering",
+      "title": "Rank Factors by Importance",
+      "description": "Order factors by their typical impact on diffusion rate (most to least significant).",
+      "learningObjective": "Understand relative importance of diffusion factors.",
+      "theme": "purple",
       "xpReward": 50,
-      "image": {
-        "src": "assets/images/mod1/lesson09/fluid-mosaic.webp",
-        "alt": "Fluid mosaic diagram for labeling"
-      },
-      "labels": [
+      "items": [
+        { "id": "concentration", "text": "Concentration gradient", "correctOrder": 1 },
+        { "id": "surface-area", "text": "Surface area", "correctOrder": 2 },
+        { "id": "thickness", "text": "Thickness of exchange surface", "correctOrder": 3 },
+        { "id": "temperature", "text": "Temperature", "correctOrder": 4 },
+        { "id": "molecular-size", "text": "Molecular size", "correctOrder": 5 }
+      ]
+    },
+    {
+      "id": "ficks-law-calculation",
+      "type": "problemSolving",
+      "title": "Fick's Law Calculations",
+      "description": "Apply Fick's Law to predict diffusion rate changes.",
+      "learningObjective": "Apply Fick's Law to biological contexts.",
+      "theme": "orange",
+      "xpReward": 100,
+      "problems": [
         {
-          "id": "phospholipid-head",
-          "zone": { "x": 25, "y": 20, "width": 10, "height": 8 },
-          "correctText": "Phospholipid head",
-          "alternatives": ["Hydrophilic head", "Head"],
-          "hint": "Round part facing water - hydrophilic"
-        },
-        {
-          "id": "phospholipid-tail",
-          "zone": { "x": 25, "y": 28, "width": 10, "height": 15 },
-          "correctText": "Phospholipid tail",
-          "alternatives": ["Hydrophobic tail", "Fatty acid tail", "Tail"],
-          "hint": "Two lines facing interior - hydrophobic"
-        },
-        {
-          "id": "integral-protein",
-          "zone": { "x": 50, "y": 30, "width": 8, "height": 25 },
-          "correctText": "Integral protein",
-          "alternatives": ["Transmembrane protein", "Channel protein", "Protein"],
-          "hint": "Spans entire membrane - for transport"
-        },
-        {
-          "id": "cholesterol",
-          "zone": { "x": 70, "y": 35, "width": 8, "height": 8 },
-          "correctText": "Cholesterol",
-          "alternatives": ["Cholesterol molecule"],
-          "hint": "Small molecule between phospholipids - stabilises fluidity"
-        },
-        {
-          "id": "glycoprotein",
-          "zone": { "x": 40, "y": 15, "width": 8, "height": 8 },
-          "correctText": "Glycoprotein",
-          "alternatives": ["Carbohydrate chain", "Sugar chain"],
-          "hint": "Branched chains on outer surface - for cell recognition"
+          "id": "alveoli-change",
+          "question": "An alveolus has surface area A, thickness T, and concentration gradient C. If surface area increases 10×, thickness decreases by half, and concentration gradient doubles, by what factor does diffusion rate change?",
+          "context": "Rate ∝ (Surface Area × Concentration Difference) / Thickness",
+          "formula": "New Rate / Original Rate = (10 × 2) / 0.5",
+          "workingSteps": [
+            "New rate factor = (10 × Area × 2 × C) / (0.5 × T)",
+            "= (20 × A × C) / (0.5 × T)",
+            "= 40 × (A × C / T)"
+          ],
+          "correctAnswer": 40,
+          "tolerance": 0.05,
+          "unit": "×",
+          "hint": "Multiply the changes: 10 × 2 ÷ 0.5 = ?"
         }
       ]
     },
     {
-      "id": "component-matching",
-      "type": "matching",
-      "title": "Match Components to Functions",
-      "description": "Match membrane components to their functions.",
-      "learningObjective": "Match components to functions.",
-      "theme": "purple",
-      "xpReward": 50,
+      "id": "transport-classification",
+      "type": "classification",
+      "title": "Active vs Passive Transport",
+      "description": "Classify transport mechanisms by type.",
+      "learningObjective": "Distinguish active and passive transport mechanisms.",
+      "theme": "teal",
+      "xpReward": 75,
+      "categories": [
+        {
+          "id": "passive",
+          "name": "Passive Transport",
+          "description": "No ATP, down concentration gradient"
+        },
+        {
+          "id": "active",
+          "name": "Active Transport",
+          "description": "Requires ATP, against gradient"
+        }
+      ],
       "items": [
-        { "id": "phospholipids", "text": "Phospholipids", "match": "Selective barrier" },
-        { "id": "carbohydrates", "text": "Carbohydrates", "match": "Cell recognition" },
-        { "id": "integral", "text": "Integral protein", "match": "Transport channel" },
-        { "id": "cholesterol", "text": "Cholesterol", "match": "Fluidity control" }
+        { "id": "simple", "text": "Simple diffusion", "correctCategory": "passive" },
+        { "id": "facilitated", "text": "Facilitated diffusion", "correctCategory": "passive" },
+        { "id": "osmosis", "text": "Osmosis", "correctCategory": "passive" },
+        { "id": "primary", "text": "Primary active transport (sodium-potassium pump)", "correctCategory": "active" },
+        { "id": "secondary", "text": "Secondary active transport (using gradients)", "correctCategory": "active" },
+        { "id": "endocytosis", "text": "Endocytosis", "correctCategory": "active" }
       ]
     }
   ],
@@ -211,134 +248,137 @@
     "multipleChoice": [
       {
         "id": "mcq-1",
-        "question": "In the fluid mosaic model of the cell membrane, the 'mosaic' refers to:",
+        "question": "Which factors increase the rate of diffusion across a membrane? (Select all that apply)",
         "options": [
-          "The phospholipids arranged in a pattern",
-          "The proteins embedded in the phospholipid bilayer",
-          "The cholesterol covering the surface",
-          "The carbohydrates inside the membrane"
+          "Increased temperature",
+          "Increased concentration gradient",
+          "Increased membrane thickness",
+          "Increased molecular size",
+          "Increased surface area"
         ],
-        "correctAnswer": "The proteins embedded in the phospholipid bilayer",
-        "rationale": "Mosaic = scattered proteins embedded in the phospholipid bilayer."
+        "correctAnswer": "Increased temperature, Increased concentration gradient, Increased surface area",
+        "rationale": "Temperature increases kinetic energy; steeper gradient drives faster diffusion; larger surface area allows more molecules to cross. Thickness and molecular size DECREASE diffusion rate.",
+        "multiSelect": true
       },
       {
         "id": "mcq-2",
-        "question": "The hydrophobic tails of phospholipids face:",
+        "question": "Oxygen can cross the membrane by simple diffusion but glucose requires facilitated diffusion because:",
         "options": [
-          "The aqueous environment outside the cell",
-          "The aqueous cytoplasm inside the cell",
-          "Each other in the interior of the membrane",
-          "The cholesterol molecules only"
+          "Oxygen is smaller than glucose",
+          "Oxygen is non-polar while glucose is polar",
+          "Oxygen uses ATP while glucose does not",
+          "Oxygen moves against its gradient"
         ],
-        "correctAnswer": "Each other in the interior of the membrane",
-        "rationale": "Hydrophobic exclusion from water - tails face each other in membrane interior."
+        "correctAnswer": "Oxygen is non-polar while glucose is polar",
+        "rationale": "Simple diffusion works for small non-polar molecules that can pass through the hydrophobic core. Polar molecules like glucose need protein channels/carriers (facilitated diffusion)."
       },
       {
         "id": "mcq-3",
-        "question": "Glycoproteins on the cell surface are important for:",
+        "question": "According to Fick's Law, if the thickness of a respiratory membrane doubles, the rate of diffusion will:",
         "options": [
-          "Energy production",
-          "Cell-to-cell recognition",
-          "Transport of water-soluble molecules",
-          "Maintaining membrane thickness"
+          "Double",
+          "Stay the same",
+          "Halve",
+          "Quadruple"
         ],
-        "correctAnswer": "Cell-to-cell recognition",
-        "rationale": "Glycocalyx function. Carbohydrate chains act as identification markers."
+        "correctAnswer": "Halve",
+        "rationale": "Rate is inversely proportional to thickness. Doubling thickness halves the rate."
       }
     ],
     "shortAnswer": [
       {
         "id": "sa-1",
-        "question": "Describe the arrangement of phospholipids in the cell membrane and explain how this arrangement creates a barrier to water-soluble substances. (3 marks)",
+        "question": "Explain why oxygen can cross the membrane by simple diffusion while glucose requires a transport protein. [3 marks]",
         "marks": 3,
         "markingCriteria": [
-          "1 mark: Phospholipids arranged in a bilayer (two layers)",
-          "1 mark: Hydrophilic heads face outward (aqueous environment) and hydrophobic tails face inward/together",
-          "1 mark: Hydrophobic core prevents water-soluble/hydrophilic substances crossing easily (barrier properties)"
+          "1 mark: Oxygen is small and non-polar (can dissolve in/pass through hydrophobic interior)",
+          "1 mark: Glucose is polar/large and cannot cross the hydrophobic core",
+          "1 mark: Glucose uses channel/carrier proteins (facilitated diffusion) to cross"
         ],
-        "commonError": "Not mentioning the hydrophobic core as the barrier."
+        "commonError": "Saying glucose is too big without mentioning polarity/hydrophobicity."
       },
       {
         "id": "sa-2",
-        "question": "Explain why the cell membrane is described as 'fluid.' (2 marks)",
+        "question": "Describe two structural adaptations of the alveoli that maximise the rate of gas exchange by diffusion. [2 marks]",
         "marks": 2,
         "markingCriteria": [
-          "1 mark: Phospholipids can move laterally (side to side) within the layer",
-          "1 mark: Proteins can move within the membrane (or membrane is flexible/dynamic, not rigid)"
+          "1 mark: Large surface area (many alveoli) increases diffusion rate (Fick's Law)",
+          "1 mark: Thin walls (one cell thick/epithelium) reduce diffusion distance"
         ],
-        "commonError": "Saying 'it contains water' or 'it is liquid.'"
+        "commonError": "Mentioning 'moist surface' or 'good blood supply' without linking to diffusion rate."
       }
     ]
   },
   
   "copyToBook": {
     "definitions": [
-      "The cell membrane follows the fluid mosaic model: phospholipid bilayer with embedded proteins.",
-      "Phospholipids have hydrophilic heads (outer) and hydrophobic tails (inner).",
-      "Proteins function in transport, recognition, and as enzymes.",
-      "Cholesterol stabilises membrane fluidity.",
-      "Carbohydrates on the outer surface (glycoproteins/glycolipids) are involved in cell recognition."
+      "Diffusion: Net movement of particles from high to low concentration down a concentration gradient.",
+      "Simple diffusion: Small, non-polar molecules cross the phospholipid bilayer directly.",
+      "Facilitated diffusion: Polar/charged molecules use channel or carrier proteins (no ATP).",
+      "Fick's Law: Rate ∝ (Surface Area × Concentration Difference) / Thickness.",
+      "Factors increasing rate: higher temperature, steeper gradient, larger area, thinner membrane, smaller molecules."
     ],
     "keyPoints": [
-      "Fluid = phospholipids can move laterally",
-      "Mosaic = proteins embedded throughout",
-      "Hydrophilic heads face water (inside/outside)",
-      "Hydrophobic tails face each other (barrier)",
-      "ABO blood groups determined by membrane carbohydrates"
+      "Diffusion is passive (no ATP required)",
+      "Continues until equilibrium (no net movement)",
+      "Effective only over short distances",
+      "Non-polar = simple diffusion; Polar = facilitated diffusion",
+      "Alveoli: large surface area + thin walls = efficient gas exchange"
     ],
     "diagrams": [
-      "Fluid mosaic model with labeled components",
-      "Phospholipid structure showing head and tails"
+      "Diffusion down concentration gradient",
+      "Simple vs facilitated diffusion comparison",
+      "Fick's Law factors"
     ]
   },
   
   "answerKey": {
-    "multipleChoice": ["B", "C", "B"],
+    "multipleChoice": ["A, B, E", "B", "C"],
     "shortAnswer": [
-      "Phospholipids are arranged in a bilayer (two layers). The hydrophilic (water-loving) phosphate heads face outward toward the aqueous environments inside and outside the cell, while the hydrophobic (water-fearing) fatty acid tails face inward toward each other. This arrangement creates a hydrophobic core in the centre of the membrane that acts as a barrier, preventing water-soluble/hydrophilic substances from crossing easily while allowing lipid-soluble substances to pass through.",
-      "The cell membrane is described as 'fluid' because the phospholipid molecules are not fixed in place but can move laterally (side to side) within their layer. Additionally, the proteins embedded in the membrane can also move within the phospholipid bilayer. This gives the membrane flexibility and allows it to change shape, rather than being a rigid structure."
+      "Oxygen is a small, non-polar molecule that can dissolve in and pass directly through the hydrophobic interior of the phospholipid bilayer by simple diffusion. Glucose, however, is a large, polar molecule that cannot cross the lipid bilayer on its own because the hydrophobic core repels polar substances. Therefore, glucose requires channel proteins or carrier proteins to assist its movement across the membrane in a process called facilitated diffusion.",
+      "Two structural adaptations of the alveoli that maximise gas exchange are: (1) They have a very large total surface area due to the large number of alveoli (approximately 300 million in human lungs), which increases the rate of diffusion according to Fick's Law. (2) The alveolar walls and capillary walls are extremely thin (only one cell thick), which minimises the diffusion distance and therefore increases the rate of gas exchange."
     ]
   },
   
   "navigation": {
     "previous": "mod1-lesson08",
-    "previousTitle": "Cytoskeleton and Cell Walls",
+    "previousTitle": "The Fluid Mosaic Model",
     "next": "mod1-lesson10",
-    "nextTitle": "Transport Across Membranes"
+    "nextTitle": "Osmosis and Water Potential"
   },
   
   "meta": {
     "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "createdAt": "2026-02-09",
+    "lastModified": "2026-02-09",
     "version": "1.0.0",
-    "tags": ["cell membrane", "fluid mosaic", "phospholipid bilayer", "hydrophilic", "hydrophobic", "glycoproteins", "Module 1"]
+    "tags": ["diffusion", "concentration gradient", "Fick's Law", "simple diffusion", "facilitated diffusion", "passive transport", "Module 1"]
   },
   
   "imageLibrary": [
     {
-      "id": "fluid-mosaic",
-      "src": "assets/images/mod1/lesson09/fluid-mosaic.webp",
-      "alt": "Diagram of fluid mosaic model",
-      "caption": "The fluid mosaic model of cell membrane"
+      "id": "diffusion-diagram",
+      "src": "assets/images/mod1/lesson09/diffusion-diagram.webp",
+      "alt": "Diagram showing diffusion process",
+      "caption": "Diffusion down a concentration gradient"
     },
     {
-      "id": "phospholipid",
-      "src": "assets/images/mod1/lesson09/phospholipid.webp",
-      "alt": "Diagram of phospholipid molecule",
-      "caption": "Phospholipid structure with hydrophilic head and hydrophobic tails"
+      "id": "ficks-law",
+      "src": "assets/images/mod1/lesson09/ficks-law.webp",
+      "alt": "Diagram illustrating Fick's Law factors",
+      "caption": "Factors affecting diffusion rate"
     },
     {
-      "id": "membrane-tem",
-      "src": "assets/images/mod1/lesson09/membrane-tem.webp",
-      "alt": "TEM image of cell membrane showing bilayer",
-      "caption": "Transmission electron micrograph of membrane"
+      "id": "alveoli-structure",
+      "src": "assets/images/mod1/lesson09/alveoli-structure.webp",
+      "alt": "Diagram of alveoli showing thin walls and large surface area",
+      "caption": "Alveoli adaptations for gas exchange"
     },
     {
-      "id": "abo-blood",
-      "src": "assets/images/mod1/lesson09/abo-blood.webp",
-      "alt": "Diagram showing ABO blood group antigens",
-      "caption": "ABO blood group glycoproteins on red blood cells"
+      "id": "transport-comparison",
+      "src": "assets/images/mod1/lesson09/transport-comparison.webp",
+      "alt": "Comparison of simple and facilitated diffusion",
+      "caption": "Simple vs facilitated diffusion"
     }
   ]
 }

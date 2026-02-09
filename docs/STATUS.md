@@ -90,13 +90,14 @@ None currently.
 
 **Before ending your session, you MUST do these things:**
 
-1. **Update NEXT TASK above** — Change it to whatever should happen next. Be specific: which lesson, which action, which file.
-2. **Update LAST SESSION LOG above** — Replace with what YOU did this session, what you didn't do, and any open issues.
-3. **Update `docs/trackers/MODULE-1-LESSONS.md`** — Change pipeline status for any lessons you worked on.
-4. **Update `docs/trackers/BUG-LOG.md`** — Log any new bugs found, move fixed bugs to the Fixed table.
-5. **Update `docs/goals/PHASE-1-CONTENT.md`** — Check off any completed tasks in the active milestone.
-6. **Commit all changes** with a descriptive message.
-7. **Tell the user** what you did and what the next AI should pick up.
+1. **Run verification:** `node scripts/run-all-checks.js` — Fix any errors it reports. Warnings are OK to leave but log them.
+2. **Update NEXT TASK above** — Change it to whatever should happen next. Be specific: which lesson, which action, which file.
+3. **Update LAST SESSION LOG above** — Replace with what YOU did this session, what you didn't do, and any open issues. Include the verification result (pass/fail + error count).
+4. **Update `docs/trackers/MODULE-1-LESSONS.md`** — Change pipeline status for any lessons you worked on.
+5. **Update `docs/trackers/BUG-LOG.md`** — Log any new bugs found, move fixed bugs to the Fixed table.
+6. **Update `docs/goals/PHASE-1-CONTENT.md`** — Check off any completed tasks in the active milestone.
+7. **Commit all changes** with a descriptive message.
+8. **Tell the user** what you did and what the next AI should pick up.
 
 ---
 

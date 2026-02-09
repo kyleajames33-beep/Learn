@@ -1,217 +1,288 @@
 {
   "id": "mod1-lesson10",
-  "title": "Lesson 10: Transport Across Membranes",
+  "title": "Lesson 10: Osmosis and Water Potential",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 10,
-  "description": "Understanding transport mechanisms across cell membranes including passive transport, active transport, osmosis, and bulk transport.",
+  "description": "Understanding osmosis, water potential, and tonicity. Students learn to calculate water potential and predict cell behaviour in different solutions.",
   "duration": "50 minutes",
   "difficulty": "Intermediate",
   "worksOffline": true,
   
   "learningIntentions": [
-    "Students can distinguish between passive transport (simple diffusion, facilitated diffusion, osmosis) and active transport.",
-    "Students can explain the role of membrane proteins in facilitated diffusion and active transport.",
-    "Students can describe bulk transport mechanisms (endocytosis and exocytosis)."
+    "Students can define osmosis as the diffusion of water across a selectively permeable membrane.",
+    "Students can calculate water potential using ψ = ψs + ψp and predict water movement direction.",
+    "Students can predict and explain cell behaviour (lysis, crenation, turgidity, plasmolysis) in different tonicities."
   ],
   
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Transport across membranes"
+    "focus": "Osmosis, water potential, and tonicity"
   },
   
   "successCriteria": [
-    "I can define osmosis as the movement of water across a selectively permeable membrane.",
-    "I can explain why active transport requires energy and moves substances against their concentration gradient.",
-    "I can give examples of substances crossing by simple diffusion, facilitated diffusion, and active transport."
+    "I can calculate water potential from solute and pressure potential.",
+    "I can predict water movement direction between two solutions.",
+    "I can explain why animal and plant cells respond differently to hypotonic solutions."
   ],
   
   "prerequisites": [
     {
       "lessonId": "mod1-lesson09",
-      "description": "Membrane structure, phospholipid bilayer, proteins",
+      "description": "Diffusion, concentration gradients, membrane structure",
       "required": true
     }
   ],
   
   "engagementHook": {
-    "title": "The Cell's Border Control",
-    "content": "'How does a glucose molecule get into your muscle cells after you eat, when the cell already has high glucose inside? Why can't water just rush in and burst the cell? And how does a white blood cell eat a bacterium? Today we explore how the membrane controls what enters and leaves through different transport strategies.'"
+    "title": "To Burst or Not to Burst",
+    "content": "Show images: a wilted plant after watering (recovers), a red blood cell in pure water (bursts). 'Both cells are in pure water. One thrives, one dies. The difference lies in water potential and one critical structure that animal cells lack. Today we solve the mystery of osmotic survival.'"
   },
   
   "keyConcepts": [
     {
-      "term": "Passive Transport",
-      "definition": "No energy (ATP) required. Movement down concentration gradient (high to low)."
-    },
-    {
-      "term": "Simple Diffusion",
-      "definition": "Small, non-polar molecules (O₂, CO₂, lipids) pass through phospholipid bilayer."
-    },
-    {
-      "term": "Facilitated Diffusion",
-      "definition": "Polar/charged molecules (glucose, ions) use channel or carrier proteins."
-    },
-    {
       "term": "Osmosis",
-      "definition": "Diffusion of water across membrane (high water concentration/low solute to low water/high solute)."
+      "definition": "The net movement of water molecules from an area of high water potential (low solute concentration) to an area of low water potential (high solute concentration) across a selectively permeable membrane."
     },
     {
-      "term": "Active Transport",
-      "definition": "Requires ATP. Moves substances against concentration gradient (low to high). Uses carrier proteins (pumps)."
+      "term": "Water Potential (ψ)",
+      "definition": "Measure of the potential energy of water, measured in MPa (megapascals) or kPa. Determines direction of water movement. Higher ψ (less negative) to lower ψ (more negative). Pure water at atmospheric pressure = 0 MPa (reference point)."
     },
     {
-      "term": "Bulk Transport",
-      "definition": "For large molecules/particles. Endocytosis (brings in), Exocytosis (releases out)."
+      "term": "Solute Potential (ψs)",
+      "definition": "Effect of dissolved solutes on water potential. Always negative or zero (solutes reduce water potential). More solute = more negative ψs."
+    },
+    {
+      "term": "Pressure Potential (ψp)",
+      "definition": "Physical pressure on water. Can be positive (turgor pressure in plants) or zero (open beaker). Increases water potential."
+    },
+    {
+      "term": "Tonicity",
+      "definition": "Relative solute concentration of a solution compared to a cell. Isotonic = same concentration. Hypotonic = lower solute (higher water potential). Hypertonic = higher solute (lower water potential)."
     }
   ],
   
   "misconceptions": [
     {
-      "misconception": "Active transport means fast and passive means slow",
-      "correction": "Speed varies; the difference is energy use and direction relative to gradient."
+      "misconception": "Water moves toward high solute concentration",
+      "correction": "Water moves toward LOW water potential (which happens to be where solute concentration is high). Focus on water potential, not solute chasing."
     },
     {
-      "misconception": "Osmosis is only about concentration of solute",
-      "correction": "It's about water moving toward areas of lower water potential (higher solute), but emphasise water movement specifically."
+      "misconception": "Plants don't have osmotic problems",
+      "correction": "Plants face plasmolysis in hypertonic solutions (salt water, drought) - membrane pulls away from wall."
     },
     {
-      "misconception": "Facilitated diffusion doesn't use proteins",
-      "correction": "Explicitly requires channel or carrier proteins—distinguish from simple diffusion."
+      "misconception": "Pure water has negative water potential",
+      "correction": "Pure water at atmospheric pressure is the reference: ψ = 0. Adding solutes makes it negative."
     }
   ],
   
   "contentSections": [
     {
-      "id": "passive-vs-active",
+      "id": "water-potential-concept",
+      "type": "diagram",
+      "title": "Water Potential",
+      "icon": "droplets",
+      "content": "Diagram showing ψ = ψs + ψp equation. Solute potential always negative. Pressure potential positive in turgid plant cells. Water moves from high ψ to low ψ.",
+      "keyPoints": [
+        "ψ = ψs + ψp",
+        "ψs is always ≤ 0 (zero for pure water)",
+        "ψp is ≥ 0 (positive for pressure, zero for open system)",
+        "Water moves toward more negative ψ"
+      ],
+      "example": "Pure water: ψs = 0, ψp = 0, ψ = 0. Cell with solutes: ψs = -0.5, ψp = 0.3, ψ = -0.2.",
+      "checkForUnderstanding": "Which way will water move: from ψ = -0.2 MPa to ψ = -0.8 MPa, or the reverse? (From -0.2 to -0.8 - toward lower potential)",
+      "image": {
+        "src": "assets/images/mod1/lesson10/water-potential.webp",
+        "alt": "Diagram showing water potential equation and movement",
+        "caption": "Water potential and osmotic movement"
+      }
+    },
+    {
+      "id": "tonicity-effects",
       "type": "grid",
-      "title": "Passive vs Active Transport",
-      "icon": "arrow-right-left",
+      "title": "Tonicity Effects on Cells",
+      "icon": "columns",
       "gridItems": [
         {
-          "header": "Feature",
-          "items": ["Energy", "Direction", "Proteins", "Examples"]
+          "header": "Solution",
+          "items": ["Hypotonic (lower solute)", "Isotonic (equal solute)", "Hypertonic (higher solute)"]
         },
         {
-          "header": "Passive Transport",
+          "header": "Animal Cell",
           "items": [
-            "No ATP required",
-            "Down concentration gradient (high→low)",
-            "Facilitated needs proteins; simple does not",
-            "Oxygen, CO₂, water (osmosis), glucose (facilitated)"
+            "Swells, may burst (lysis)",
+            "Normal shape",
+            "Shrinks (crenation)"
           ]
         },
         {
-          "header": "Active Transport",
+          "header": "Plant Cell",
           "items": [
-            "Requires ATP",
-            "Against gradient (low→high)",
-            "Requires carrier/pump proteins",
-            "Mineral ions, amino acids, glucose (intestine/kidney)"
+            "Turgid (firm, normal)",
+            "Flaccid (limp)",
+            "Plasmolysis (membrane pulls away)"
           ]
         }
-      ]
+      ],
+      "note": "Plant cells have cell walls that prevent bursting in hypotonic solutions."
     },
     {
-      "id": "osmosis-diagram",
-      "type": "diagram",
-      "title": "Osmosis",
-      "icon": "droplets",
-      "content": "Two beakers separated by membrane. Side A: low solute (more water). Side B: high solute (less water). Arrow showing water movement from A to B. Cell in hypotonic solution (swelling) vs hypertonic (shrinking).",
-      "keyPoints": [
-        "Water moves toward higher solute concentration",
-        "Affects cell volume",
-        "Lysis/cytolysis vs crenation in animal cells",
-        "Turgidity/plasmolysis in plant cells"
-      ],
-      "example": "Red blood cells in distilled water (burst) vs seawater (shrink); plant cells in freshwater (turgid) vs salt water (plasmolysed).",
-      "image": {
-        "src": "assets/images/mod1/lesson10/osmosis.webp",
-        "alt": "Diagram showing osmosis with beakers and cells in different solutions",
-        "caption": "Osmosis: water movement across membranes"
-      }
-    },
-    {
-      "id": "bulk-transport",
-      "type": "diagram",
-      "title": "Bulk Transport",
-      "icon": "package-open",
-      "content": "Endocytosis (membrane wrapping around particle → vesicle) vs Exocytosis (vesicle fusing with membrane → release).",
-      "keyPoints": [
-        "Endocytosis brings large materials in",
-        "Exocytosis secretes materials out",
-        "Requires membrane flexibility"
-      ],
-      "example": "Phagocytosis by white blood cells (immune defence); secretion of digestive enzymes by pancreatic cells (exocytosis).",
-      "image": {
-        "src": "assets/images/mod1/lesson10/bulk-transport.webp",
-        "alt": "Diagram comparing endocytosis and exocytosis",
-        "caption": "Bulk transport mechanisms"
-      }
+      "id": "calculation-examples",
+      "type": "content",
+      "title": "Water Potential Calculations",
+      "icon": "calculator",
+      "content": "Example 1: ψs = -0.8 MPa, ψp = 0.4 MPa. ψ = -0.8 + 0.4 = -0.4 MPa. Example 2: Pure water ψ = 0. Flaccid plant cell in pure water: water enters (ψ cell < 0), cell swells, ψp increases until ψ cell = 0 (equilibrium with surroundings). At this point, cell is turgid.",
+      "example": "Marine algae in seawater (ψ ≈ -2.5 MPa) vs freshwater algae (ψ cell ≈ -0.3 MPa)."
     }
   ],
   
   "activities": [
     {
-      "id": "transport-classification",
-      "type": "matching",
-      "title": "Sort Transport Types",
-      "description": "Classify each scenario by transport mechanism.",
-      "learningObjective": "Sort transport types.",
+      "id": "water-potential-calculations",
+      "type": "problemSolving",
+      "title": "Water Potential Calculations",
+      "description": "Calculate water potential and predict water movement.",
+      "learningObjective": "Apply the water potential equation.",
       "theme": "orange",
-      "xpReward": 50,
-      "items": [
-        { "id": "oxygen", "text": "Oxygen entering lung cell", "match": "Simple diffusion" },
-        { "id": "water", "text": "Water moving into root hair cell", "match": "Osmosis" },
-        { "id": "glut", "text": "Glucose entering liver cell via GLUT protein", "match": "Facilitated diffusion" },
-        { "id": "sodium", "text": "Sodium pumped out of nerve cell", "match": "Active transport" },
-        { "id": "phagocytosis", "text": "White blood cell engulfs bacterium", "match": "Bulk transport" }
+      "xpReward": 100,
+      "problems": [
+        {
+          "id": "calc-psi-1",
+          "question": "A plant cell has solute potential (ψs) of -0.8 MPa and pressure potential (ψp) of 0.4 MPa. Calculate its water potential (ψ).",
+          "formula": "ψ = ψs + ψp",
+          "workingSteps": [
+            "ψ = -0.8 MPa + 0.4 MPa",
+            "ψ = -0.4 MPa"
+          ],
+          "correctAnswer": -0.4,
+          "tolerance": 0.05,
+          "unit": "MPa",
+          "hint": "Simply add the two values together."
+        },
+        {
+          "id": "calc-pure-water",
+          "question": "What is the water potential of pure water at atmospheric pressure? (Remember: no solutes, no pressure)",
+          "formula": "ψ = ψs + ψp = 0 + 0",
+          "workingSteps": [
+            "ψs = 0 (no solutes)",
+            "ψp = 0 (no pressure, open to atmosphere)",
+            "ψ = 0 MPa"
+          ],
+          "correctAnswer": 0,
+          "tolerance": 0.05,
+          "unit": "MPa",
+          "hint": "Pure water is the reference point."
+        },
+        {
+          "id": "predict-movement",
+          "question": "A flaccid plant cell has water potential of -0.6 MPa. It is placed in pure water (ψ = 0 MPa). What is the direction of water movement?",
+          "context": "Water moves from high ψ to low ψ",
+          "formula": "Compare ψ values: 0 MPa vs -0.6 MPa",
+          "workingSteps": [
+            "Pure water: ψ = 0 MPa (higher)",
+            "Cell: ψ = -0.6 MPa (lower)",
+            "Water moves into the cell"
+          ],
+          "correctAnswer": "Into the cell",
+          "isTextAnswer": true,
+          "acceptableAnswers": ["into cell", "into the cell", "enters cell", "in"],
+          "hint": "Water always moves toward the more negative water potential."
+        }
       ]
     },
     {
-      "id": "osmosis-prediction",
-      "type": "multiple-choice",
-      "title": "Predict Osmotic Outcomes",
-      "description": "Predict water movement and cell appearance in different solutions.",
-      "learningObjective": "Predict osmotic outcomes.",
+      "id": "tonicity-classification",
+      "type": "classification",
+      "title": "Tonicity Scenarios",
+      "description": "Predict cell behaviour in different solutions.",
+      "learningObjective": "Predict osmotic outcomes in different tonicities.",
+      "theme": "purple",
+      "xpReward": 75,
+      "categories": [
+        {
+          "id": "hypotonic",
+          "name": "Hypotonic Solution",
+          "description": "Lower solute, higher water potential"
+        },
+        {
+          "id": "isotonic",
+          "name": "Isotonic Solution",
+          "description": "Equal solute concentration"
+        },
+        {
+          "id": "hypertonic",
+          "name": "Hypertonic Solution",
+          "description": "Higher solute, lower water potential"
+        }
+      ],
+      "items": [
+        { "id": "rbc-saline", "text": "Red blood cell in 0.9% NaCl (normal saline)", "correctCategory": "isotonic" },
+        { "id": "plant-salt", "text": "Plant cell in concentrated salt water", "correctCategory": "hypertonic" },
+        { "id": "cell-pure", "text": "Cell placed in pure water", "correctCategory": "hypotonic" },
+        { "id": "blood-sea", "text": "Red blood cell in seawater", "correctCategory": "hypertonic" },
+        { "id": "elodea-pond", "text": "Elodea cell in pond water", "correctCategory": "hypotonic" }
+      ]
+    },
+    {
+      "id": "tonicity-simulator",
+      "type": "tonicity-simulator",
+      "title": "Tonicity Cell Simulator",
+      "description": "Visualise cell changes in different solutions.",
+      "learningObjective": "Visualise osmotic effects on cells.",
       "theme": "teal",
       "xpReward": 75,
-      "questions": [
+      "cellTypes": [
         {
-          "id": "rbc-water",
-          "question": "Red blood cell placed in distilled water (pure water) will:",
-          "options": [
-            "Shrink (crenation)",
-            "Stay the same",
-            "Swell and burst (lysis)",
-            "Divide"
-          ],
-          "correctAnswer": "Swell and burst (lysis)"
+          "id": "animal",
+          "name": "Animal Cell (Red Blood Cell)",
+          "hasCellWall": false
         },
         {
-          "id": "plant-salt",
-          "question": "Plant cell placed in concentrated salt water will:",
-          "options": [
-            "Become turgid",
-            "Undergo plasmolysis (shrink from wall)",
-            "Divide rapidly",
-            "Absorb more water"
-          ],
-          "correctAnswer": "Undergo plasmolysis (shrink from wall)"
-        },
-        {
-          "id": "bacteria-sugar",
-          "question": "Bacterium in hypertonic sugar solution will:",
-          "options": [
-            "Grow larger",
-            "Undergo crenation (shrink)",
-            "Reproduce faster",
-            "Absorb sugar"
-          ],
-          "correctAnswer": "Undergo crenation (shrink)"
+          "id": "plant",
+          "name": "Plant Cell",
+          "hasCellWall": true
         }
+      ],
+      "solutions": [
+        {
+          "id": "hypotonic",
+          "name": "Hypotonic (Pure Water)",
+          "waterPotential": 0,
+          "animalEffect": "Swells and bursts (lysis/cytolysis)",
+          "plantEffect": "Becomes turgid (normal, firm)"
+        },
+        {
+          "id": "isotonic",
+          "name": "Isotonic (0.9% Saline)",
+          "waterPotential": -0.3,
+          "animalEffect": "Normal shape",
+          "plantEffect": "Flaccid (limp)"
+        },
+        {
+          "id": "hypertonic",
+          "name": "Hypertonic (Concentrated Salt)",
+          "waterPotential": -1.0,
+          "animalEffect": "Shrinks (crenation)",
+          "plantEffect": "Plasmolysis (membrane pulls from wall)"
+        }
+      ]
+    },
+    {
+      "id": "term-matching",
+      "type": "matching",
+      "title": "Match Water Potential Terms",
+      "description": "Match terms to their definitions.",
+      "learningObjective": "Define water potential terminology.",
+      "theme": "orange",
+      "xpReward": 50,
+      "items": [
+        { "id": "water-potential", "text": "Water potential", "match": "Measure of free energy of water, determines direction of movement" },
+        { "id": "solute-potential", "text": "Solute potential", "match": "Effect of dissolved solutes (always negative or zero)" },
+        { "id": "pressure-potential", "text": "Pressure potential", "match": "Physical pressure on water (positive in turgid plant cells)" },
+        { "id": "osmosis-def", "text": "Osmosis", "match": "Net movement of water across selectively permeable membrane" }
       ]
     }
   ],
@@ -220,134 +291,136 @@
     "multipleChoice": [
       {
         "id": "mcq-1",
-        "question": "Which process requires ATP to move molecules across the membrane?",
+        "question": "A plant cell is placed in a solution with water potential of -0.2 MPa. The cell's water potential is -0.4 MPa. What will happen?",
         "options": [
-          "Simple diffusion",
-          "Osmosis",
-          "Facilitated diffusion",
-          "Active transport"
+          "Water will leave the cell",
+          "Water will enter the cell and it will become turgid",
+          "No net water movement",
+          "The cell will burst"
         ],
-        "correctAnswer": "Active transport",
-        "rationale": "Energy requirement definition. Active transport moves substances against their concentration gradient using ATP."
+        "correctAnswer": "Water will enter the cell and it will become turgid",
+        "rationale": "Water moves from high ψ (-0.2) to low ψ (-0.4). Cell gains water, becomes turgid. Cell wall prevents bursting."
       },
       {
         "id": "mcq-2",
-        "question": "The movement of water molecules across a selectively permeable membrane from an area of high water concentration to low water concentration is called:",
+        "question": "What is the water potential of pure water at atmospheric pressure?",
         "options": [
-          "Diffusion",
-          "Active transport",
-          "Osmosis",
-          "Endocytosis"
+          "-1.0 MPa",
+          "-0.5 MPa",
+          "0 MPa",
+          "+0.5 MPa"
         ],
-        "correctAnswer": "Osmosis",
-        "rationale": "Specific definition of osmosis - the diffusion of water across a membrane."
+        "correctAnswer": "0 MPa",
+        "rationale": "Pure water at atmospheric pressure is the reference point (0 MPa). Adding solutes makes it negative."
       },
       {
         "id": "mcq-3",
-        "question": "A substance moves across the membrane down its concentration gradient using a carrier protein but does not use ATP. This is:",
+        "question": "Why do animal cells burst in pure water but plant cells become turgid?",
         "options": [
-          "Simple diffusion",
-          "Facilitated diffusion",
-          "Active transport",
-          "Exocytosis"
+          "Animal cells have higher water potential",
+          "Plant cells have a cell wall that resists expansion",
+          "Animal cells have more solutes",
+          "Plant cells don't undergo osmosis"
         ],
-        "correctAnswer": "Facilitated diffusion",
-        "rationale": "Facilitated diffusion characteristics - uses proteins, no ATP, down gradient."
+        "correctAnswer": "Plant cells have a cell wall that resists expansion",
+        "rationale": "Both cells take in water in hypotonic solutions. Plant cell walls provide turgor pressure; animal cells lack walls and burst (lysis)."
       }
     ],
     "shortAnswer": [
       {
         "id": "sa-1",
-        "question": "Distinguish between simple diffusion and facilitated diffusion. (2 marks)",
+        "question": "Calculate the water potential of a cell with solute potential of -0.6 MPa and pressure potential of 0.2 MPa. Show your working. [2 marks]",
         "marks": 2,
         "markingCriteria": [
-          "1 mark: Simple diffusion = direct movement through phospholipid bilayer, no proteins needed (small/non-polar molecules)",
-          "1 mark: Facilitated diffusion = requires channel or carrier proteins, for molecules that cannot cross lipid bilayer (polar/charged/large)"
+          "1 mark: Correct formula: ψ = ψs + ψp",
+          "1 mark: Correct answer: -0.4 MPa"
         ],
-        "commonError": "Saying facilitated is 'helped by ATP' (confusing with active)."
+        "commonError": "Subtracting instead of adding; forgetting units."
       },
       {
         "id": "sa-2",
-        "question": "Explain why active transport is necessary for root hair cells to absorb mineral ions from soil. (3 marks)",
-        "marks": 3,
+        "question": "Explain why animal cells burst in pure water but plant cells become turgid. [4 marks]",
+        "marks": 4,
         "markingCriteria": [
-          "1 mark: Soil water has lower concentration of mineral ions than root hair cells (or concentration is against gradient)",
-          "1 mark: Therefore minerals must be moved against concentration gradient (from low to high)",
-          "1 mark: This requires energy (ATP) and specific carrier proteins (pumps)"
+          "1 mark: Both cells take in water in hypotonic solution (pure water has higher ψ than cell contents)",
+          "1 mark: Animal cells lack cell walls, so they swell until they burst (lysis/cytolysis)",
+          "1 mark: Plant cells have rigid cell walls that resist expansion",
+          "1 mark: Cell wall creates turgor pressure as vacuole fills, making cell firm/turgid but preventing bursting"
         ],
-        "commonError": "Describing diffusion instead; not mentioning concentration gradient."
+        "commonError": "Not mentioning turgor pressure or not explaining the structural difference (cell wall)."
       }
     ]
   },
   
   "copyToBook": {
     "definitions": [
-      "Passive transport requires no energy; moves down concentration gradient (high to low).",
-      "Simple diffusion: small/non-polar through bilayer; Facilitated: uses proteins for polar/large molecules.",
-      "Osmosis: diffusion of water across membrane (toward higher solute).",
-      "Active transport: requires ATP; moves against gradient (low to high); uses pumps.",
-      "Endocytosis (cell eating/drinking) and exocytosis (secretion) move large materials."
+      "Osmosis: Net movement of water from high water potential to low water potential across a selectively permeable membrane.",
+      "Water potential (ψ) = ψs (solute potential) + ψp (pressure potential).",
+      "Pure water ψ = 0 MPa (reference point). Adding solutes makes ψ negative.",
+      "Water moves from less negative (higher) ψ to more negative (lower) ψ.",
+      "Hypotonic: cell gains water; Hypertonic: cell loses water; Isotonic: no net change."
     ],
     "keyPoints": [
-      "Simple diffusion = no proteins, small/non-polar",
-      "Facilitated = proteins required, polar/large",
-      "Active = ATP required, against gradient",
-      "Osmosis = water moves to higher solute concentration",
-      "Lysis (burst) vs crenation (shrink) vs plasmolysis"
+      "ψs is always ≤ 0 (zero or negative)",
+      "ψp is ≥ 0 (positive for pressure, zero for open)",
+      "Animal cells: lyse in hypotonic, crenate in hypertonic",
+      "Plant cells: turgid in hypotonic, flaccid in isotonic, plasmolysis in hypertonic",
+      "Cell wall prevents plant cells from bursting"
     ],
     "diagrams": [
-      "Passive vs active transport comparison",
-      "Osmosis in different solutions"
+      "Water potential equation with labeled components",
+      "Tonicity effects comparison (animal vs plant)",
+      "Plasmolysis in plant cell"
     ]
   },
   
   "answerKey": {
-    "multipleChoice": ["D", "C", "B"],
+    "multipleChoice": ["B", "C", "B"],
     "shortAnswer": [
-      "Simple diffusion is the movement of small, non-polar molecules (such as oxygen, carbon dioxide, and lipids) directly through the phospholipid bilayer without the help of proteins. Facilitated diffusion is the movement of polar, charged, or large molecules (such as glucose and ions) that cannot cross the lipid bilayer on their own. These molecules require channel proteins or carrier proteins to assist their movement across the membrane. Both processes move substances down their concentration gradient and do not require ATP.",
-      "Active transport is necessary for root hair cells because the concentration of mineral ions in the soil water is lower than inside the root hair cells. This means minerals must be absorbed against their concentration gradient, from an area of low concentration to high concentration. Moving substances against their gradient requires energy in the form of ATP. Additionally, specific carrier proteins (pumps) are needed to bind and transport these ions across the membrane. Without active transport, the plant would be unable to accumulate sufficient minerals for growth."
+      "Water potential (ψ) = solute potential (ψs) + pressure potential (ψp) ψ = -0.6 MPa + 0.2 MPa = -0.4 MPa",
+      "Both animal and plant cells will take in water when placed in pure water because pure water has a higher water potential (0 MPa or 0 kPa) than the cell contents, which contain solutes. However, animal cells lack a cell wall, so as water enters, the cell swells and continues to expand until the cell membrane ruptures (lysis or cytolysis). Plant cells, on the other hand, have a rigid cell wall outside the cell membrane. As water enters the plant cell, the vacuole expands and presses the cytoplasm against the cell wall. The cell wall resists this expansion and creates turgor pressure, which makes the cell firm and turgid. The cell wall prevents the plant cell from bursting, so it becomes turgid instead."
     ]
   },
   
   "navigation": {
     "previous": "mod1-lesson09",
-    "previousTitle": "The Cell Membrane – Fluid Mosaic Structure",
+    "previousTitle": "Diffusion and Concentration Gradients",
     "next": null,
     "nextTitle": null
   },
   
   "meta": {
     "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "createdAt": "2026-02-09",
+    "lastModified": "2026-02-09",
     "version": "1.0.0",
-    "tags": ["transport", "diffusion", "osmosis", "active transport", "facilitated diffusion", "endocytosis", "exocytosis", "Module 1"]
+    "tags": ["osmosis", "water potential", "tonicity", "solute potential", "pressure potential", "turgid", "plasmolysis", "lysis", "Module 1"]
   },
   
   "imageLibrary": [
     {
-      "id": "osmosis",
-      "src": "assets/images/mod1/lesson10/osmosis.webp",
-      "alt": "Diagram showing osmosis with cells in different solutions",
-      "caption": "Osmosis and cell response to different solutions"
+      "id": "water-potential-diagram",
+      "src": "assets/images/mod1/lesson10/water-potential.webp",
+      "alt": "Diagram showing water potential equation and movement",
+      "caption": "Water potential components"
     },
     {
-      "id": "bulk-transport",
-      "src": "assets/images/mod1/lesson10/bulk-transport.webp",
-      "alt": "Diagram of endocytosis and exocytosis",
-      "caption": "Bulk transport mechanisms"
+      "id": "tonicity-comparison",
+      "src": "assets/images/mod1/lesson10/tonicity-comparison.webp",
+      "alt": "Comparison of cells in hypotonic, isotonic, and hypertonic solutions",
+      "caption": "Tonicity effects on animal and plant cells"
     },
     {
-      "id": "transport-proteins",
-      "src": "assets/images/mod1/lesson10/transport-proteins.webp",
-      "alt": "Diagram showing channel and carrier proteins",
-      "caption": "Membrane proteins in transport"
+      "id": "plasmolysis",
+      "src": "assets/images/mod1/lesson10/plasmolysis.webp",
+      "alt": "Micrograph showing plasmolysis in plant cell",
+      "caption": "Plasmolysis: membrane pulling away from cell wall"
     },
     {
-      "id": "phagocytosis",
-      "src": "assets/images/mod1/lesson10/phagocytosis.webp",
-      "alt": "Micrograph showing white blood cell engulfing bacterium",
-      "caption": "Phagocytosis in action"
+      "id": "red-blood-cells",
+      "src": "assets/images/mod1/lesson10/red-blood-cells.webp",
+      "alt": "Red blood cells in different solutions",
+      "caption": "Red blood cell responses to different tonicities"
     }
   ]
 }

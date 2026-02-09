@@ -3,61 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HSC Biology interactive lesson. Learn with activities, assessments, and progress tracking.">
+  <meta name="description" content="Interactive HSC Biology lesson">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Loading Lesson... | HSC Biology | Science Hub</title>
+  <title>Loading Lesson... | Science Hub</title>
   
-  <!-- Google Fonts - Inter -->
+  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Global Styles -->
-  <link rel="stylesheet" href="../assets/css/global.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/layout.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/components.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/streak.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/xp.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/achievements.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/diagrams.css?v=1770581235">
-  <link rel="stylesheet" href="../assets/css/loading-states.css?v=1770581235">
-  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../assets/css/global.css?v=1770633106">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1770633106">
+  <link rel="stylesheet" href="../assets/css/components.css?v=1770633106">
+  <link rel="stylesheet" href="../assets/css/diagrams.css?v=1770633106">
+  <link rel="stylesheet" href="../assets/css/activities.css?v=1770633106">
+  
+  <!-- PWA -->
   <link rel="manifest" href="../assets/manifest.json">
+  <meta name="theme-color" content="#93e4f9">
   
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  
-  <!-- Infrastructure Utilities -->
-  <script src="../assets/js/validation-utils.js?v=1770581236"></script>
-  <script src="../assets/js/touch-utils.js?v=1770581236"></script>
-  <script src="../assets/js/diagram-hotspots.js?v=1770581236"></script>
-  
-  <!-- Activity Modules -->
-  <script src="../assets/js/activity-fillblank.js?v=1770581235"></script>
-  <script src="../assets/js/activity-ordering.js?v=1770581235"></script>
-  <script src="../assets/js/activity-labeling.js?v=1770581235"></script>
-  
-  <!-- Lesson Data Schema & Renderer -->
-  <script src="js/lesson-data-schema.js?v=1770581235"></script>
-  <script src="js/lesson-renderer.js?v=1770581235"></script>
-  <script>
-    // Debug: Check if LessonRenderer loaded
-    console.log('LessonRenderer check:', typeof LessonRenderer);
-    if (typeof LessonRenderer !== 'undefined') {
-      console.log('LessonRenderer version:', LessonRenderer.version);
+  <style>
+    /* Loading state */
+    .lesson-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      padding: 24px;
     }
-  </script>
+    
+    .lesson-loading .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid var(--primary-light, #caf0f8);
+      border-top-color: var(--primary, #93e4f9);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .lesson-loading p {
+      margin-top: 16px;
+      color: var(--text-secondary, #4a5f7a);
+    }
+    
+    /* Error state */
+    .lesson-error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .lesson-error h2 {
+      color: var(--danger, #f87171);
+      margin-bottom: 16px;
+    }
+    
+    .lesson-error p {
+      color: var(--text-secondary, #4a5f7a);
+      max-width: 400px;
+    }
+    
+    .lesson-error .btn-primary {
+      margin-top: 24px;
+    }
+    
+    /* Lesson content container */
+    #lesson-content {
+      min-height: 100vh;
+    }
+    
+    /* Prerequisite lock screen */
+    .prerequisite-lock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .prerequisite-lock .lock-icon {
+      width: 64px;
+      height: 64px;
+      color: var(--warning, #fbbf24);
+      margin-bottom: 16px;
+    }
+    
+    .prerequisite-lock h2 {
+      margin-bottom: 12px;
+    }
+    
+    .prerequisite-lock p {
+      color: var(--text-secondary, #4a5f7a);
+      max-width: 400px;
+      margin-bottom: 24px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Skip to content link for accessibility -->
+  <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to content</a>
-
+  
   <!-- Top Navigation -->
-  <header class="top-nav">
+  <nav class="top-nav" role="navigation">
     <div class="nav-container">
-      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
       
@@ -70,107 +135,297 @@
         <input type="search" placeholder="Search lessons..." aria-label="Search lessons">
       </div>
       
-      <!-- Spacer for balance on mobile -->
       <div style="width: 40px;"></div>
     </div>
     
-    <!-- Breadcrumb -->
     <div class="breadcrumb-container">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../index.html">Home</a>
         <i data-lucide="chevron-right"></i>
         <a href="index.html">HSC Biology</a>
         <i data-lucide="chevron-right"></i>
-        <span>Loading...</span>
+        <span id="lesson-breadcrumb">Loading...</span>
       </nav>
     </div>
-  </header>
-
-  <!-- Sidebar Overlay (Mobile) -->
-  <div class="sidebar-overlay"></div>
-
-  <!-- Main Layout -->
+  </nav>
+  
+  <!-- Lesson Layout -->
   <div class="lesson-layout">
     <!-- Sidebar -->
-    <aside class="lesson-sidebar" id="lesson-sidebar" aria-label="Lesson navigation">
+    <aside class="lesson-sidebar" id="lesson-sidebar">
       <div class="sidebar-header">
-        <h3>Loading...</h3>
+        <h3>Module 1: Cells</h3>
         <span>HSC Biology</span>
       </div>
       
       <div class="sidebar-progress">
         <div class="progress-bar-wrapper">
-          <div class="progress-bar-fill" style="width: 0%"></div>
+          <div class="progress-bar-fill" id="module-progress" style="width: 0%"></div>
         </div>
-        <span class="progress-text">Loading...</span>
+        <span class="progress-text" id="progress-text">0/30 lessons</span>
       </div>
       
-      <nav class="lesson-list" aria-label="Lessons in this module">
-        <!-- Populated by renderer -->
-        <div style="padding: 24px; text-align: center; color: var(--text-secondary);">
-          <div class="loading-spinner" style="width: 24px; height: 24px; margin: 0 auto 12px;"></div>
-          <span style="font-size: 14px;">Loading lessons...</span>
-        </div>
+      <nav class="lesson-list" id="lesson-list">
+        <!-- Populated by JavaScript -->
       </nav>
     </aside>
-
+    
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" class="lesson-main">
       <!-- Loading State -->
-      <div class="loading-state" style="padding: 48px; text-align: center;">
-        <div class="loading-spinner" style="width: 48px; height: 48px; margin: 0 auto 24px;"></div>
-        <h2 style="margin-bottom: 8px;">Loading Lesson</h2>
-        <p style="color: var(--text-secondary);">Please wait while we fetch your lesson...</p>
+      <div id="loading-state" class="lesson-loading">
+        <div class="spinner"></div>
+        <p>Loading lesson...</p>
       </div>
+      
+      <!-- Error State (hidden by default) -->
+      <div id="error-state" class="lesson-error" style="display: none;">
+        <i data-lucide="alert-circle" style="width: 48px; height: 48px; color: var(--danger);"></i>
+        <h2>Unable to Load Lesson</h2>
+        <p id="error-message">There was a problem loading this lesson. Please try again.</p>
+        <a href="index.html" class="btn-primary">
+          <i data-lucide="arrow-left"></i>
+          Back to Module
+        </a>
+      </div>
+      
+      <!-- Prerequisite Lock (hidden by default) -->
+      <div id="prerequisite-lock" class="prerequisite-lock" style="display: none;">
+        <i data-lucide="lock" class="lock-icon"></i>
+        <h2>Lesson Locked</h2>
+        <p id="lock-message">Complete the previous lesson to unlock this one.</p>
+        <a href="#" id="prev-lesson-link" class="btn-primary">
+          <i data-lucide="arrow-left"></i>
+          Go to Previous Lesson
+        </a>
+      </div>
+      
+      <!-- Lesson Content -->
+      <div id="lesson-content" style="display: none;"></div>
     </main>
   </div>
-
+  
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="lesson-footer">
     <div class="footer-content">
-      <div class="footer-logo">
-        <i data-lucide="atom"></i>
-        <span>Science Hub</span>
-      </div>
-      <p class="footer-tagline">Making science education accessible, engaging, and effective.</p>
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="index.html">HSC Biology</a>
-        <a href="../year-7/index.html">Year 7</a>
-        <a href="../year-8/index.html">Year 8</a>
-      </div>
-      <p class="footer-copyright">© 2026 Science Learning Hub. All rights reserved.</p>
+      <p>&copy; 2026 Science Hub. Built for HSC Biology students.</p>
     </div>
   </footer>
-
-  <!-- Core Scripts -->
-  <script src="../assets/js/main.js?v=1770581235"></script>
-  <script src="../assets/js/streak.js?v=1770581235"></script>
-  <script src="../assets/js/xp.js?v=1770581235"></script>
-  <script src="../assets/js/achievements.js?v=1770581235"></script>
   
-  <!-- Initialize Lesson Renderer -->
+  <!-- Scripts -->
+  <script src="../assets/js/lucide.min.js?v=1770633106"></script>
+  <script src="../assets/js/lesson-renderer.js?v=1770633106"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Initialize Lucide Icons
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Get lesson ID from URL
+    function getLessonId() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('lesson') || 'module-1-cells-lesson-1';
+    }
+    
+    // Check prerequisites
+    function checkPrerequisites(lesson) {
+      if (!lesson.prerequisites || lesson.prerequisites.length === 0) {
+        return { canAccess: true };
       }
       
-      // Load the lesson
-      if (typeof LessonRenderer !== 'undefined') {
-        console.log('Initializing LessonRenderer...');
-        LessonRenderer.loadLessonFromURL();
-      } else {
-        console.error('LessonRenderer not loaded!');
-        document.getElementById('main-content').innerHTML = `
-          <div style="padding: 48px; text-align: center;">
-            <h2>Error Loading Lesson</h2>
-            <p>Lesson renderer failed to load. Please refresh the page.</p>
-          </div>
-        `;
+      for (const prereq of lesson.prerequisites) {
+        const key = `lesson-progress-${prereq.lessonId}`;
+        const progress = localStorage.getItem(key);
+        
+        if (prereq.required && !progress) {
+          return {
+            canAccess: false,
+            blockedBy: prereq.lessonId,
+            message: `Complete "${prereq.description}" to unlock this lesson.`
+          };
+        }
       }
-    });
+      
+      return { canAccess: true };
+    }
+    
+    // Update breadcrumb
+    function updateBreadcrumb(lesson) {
+      document.getElementById('lesson-breadcrumb').textContent = lesson.title;
+      document.title = `${lesson.title} | Science Hub`;
+    }
+    
+    // Update sidebar progress
+    function updateSidebar(lesson) {
+      // Calculate module progress
+      const lessons = [
+        'module-1-cells-lesson-1',
+        'module-1-cells-lesson-2',
+        'module-1-cells-lesson-3',
+        'module-1-cells-lesson-4',
+        'module-1-cells-lesson-5',
+        'mod1-lesson06',
+        'mod1-lesson07',
+        'mod1-lesson08',
+        'mod1-lesson09',
+        'mod1-lesson10'
+      ];
+      
+      let completed = 0;
+      lessons.forEach(id => {
+        if (localStorage.getItem(`lesson-progress-${id}`)) {
+          completed++;
+        }
+      });
+      
+      const percent = (completed / lessons.length) * 100;
+      document.getElementById('module-progress').style.width = `${percent}%`;
+      document.getElementById('progress-text').textContent = `${completed}/${lessons.length} lessons`;
+      
+      // Build lesson list
+      const lessonList = document.getElementById('lesson-list');
+      const lessonData = [
+        { id: 'module-1-cells-lesson-1', title: 'Prokaryotic Cell Structure' },
+        { id: 'module-1-cells-lesson-2', title: 'Eukaryotic Compartmentalisation' },
+        { id: 'module-1-cells-lesson-3', title: 'Microscopy and Cell Size' },
+        { id: 'module-1-cells-lesson-4', title: 'Cell Membrane Structure' },
+        { id: 'module-1-cells-lesson-5', title: 'Passive Transport' },
+        { id: 'mod1-lesson06', title: 'Eukaryotic Plant Cells' },
+        { id: 'mod1-lesson07', title: 'Technologies in Cytology' },
+        { id: 'mod1-lesson08', title: 'The Fluid Mosaic Model' },
+        { id: 'mod1-lesson09', title: 'Diffusion and Gradients' },
+        { id: 'mod1-lesson10', title: 'Osmosis and Water Potential' }
+      ];
+      
+      lessonList.innerHTML = lessonData.map((l, idx) => {
+        const isCompleted = localStorage.getItem(`lesson-progress-${l.id}`);
+        const isActive = l.id === lesson.id;
+        const number = idx + 1;
+        
+        return `
+          <a href="lesson.html?lesson=${l.id}" 
+             class="lesson-item ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}"
+             data-lesson="${l.id}">
+            <span class="lesson-number">${number}</span>
+            <span class="lesson-title-text">${l.title}</span>
+            ${isCompleted ? '<i data-lucide="check" class="lesson-check" style="width: 16px; height: 16px;"></i>' : ''}
+          </a>
+        `;
+      }).join('');
+    }
+    
+    // Mark lesson complete button
+    function addMarkCompleteButton(lesson) {
+      const existingBtn = document.querySelector('.mark-complete-container');
+      if (existingBtn) existingBtn.remove();
+      
+      const isCompleted = localStorage.getItem(`lesson-progress-${lesson.id}`);
+      
+      const container = document.createElement('div');
+      container.className = 'mark-complete-container';
+      container.style.cssText = 'text-align: center; padding: 48px 0; border-top: 2px solid var(--border-light); margin-top: 48px;';
+      
+      container.innerHTML = `
+        <button class="mark-complete-btn ${isCompleted ? 'completed' : ''}" id="mark-complete-btn">
+          <i data-lucide="${isCompleted ? 'check-circle' : 'circle'}"></i>
+          <span>${isCompleted ? 'Completed!' : 'Mark as Complete'}</span>
+        </button>
+      `;
+      
+      document.getElementById('lesson-content').appendChild(container);
+      
+      // Add click handler
+      document.getElementById('mark-complete-btn').addEventListener('click', function() {
+        localStorage.setItem(`lesson-progress-${lesson.id}`, JSON.stringify({
+          completed: true,
+          completedAt: new Date().toISOString()
+        }));
+        
+        this.classList.add('completed');
+        this.innerHTML = `
+          <i data-lucide="check-circle"></i>
+          <span>Completed!</span>
+        `;
+        lucide.createIcons();
+        
+        // Update sidebar
+        updateSidebar(lesson);
+        
+        // Dispatch event for gamification
+        window.dispatchEvent(new CustomEvent('lessonCompleted', { detail: { lessonId: lesson.id } }));
+      });
+    }
+    
+    // Main load function
+    async function loadLesson() {
+      const lessonId = getLessonId();
+      const renderer = new LessonRenderer('lesson-content');
+      
+      try {
+        // Show loading state
+        document.getElementById('loading-state').style.display = 'flex';
+        document.getElementById('error-state').style.display = 'none';
+        document.getElementById('prerequisite-lock').style.display = 'none';
+        document.getElementById('lesson-content').style.display = 'none';
+        
+        // Fetch lesson data
+        const response = await fetch(`../data/lessons/${lessonId}.json`);
+        if (!response.ok) {
+          throw new Error(`Lesson not found: ${lessonId}`);
+        }
+        
+        const lesson = await response.json();
+        
+        // Check prerequisites
+        const prereqCheck = checkPrerequisites(lesson);
+        if (!prereqCheck.canAccess) {
+          document.getElementById('loading-state').style.display = 'none';
+          document.getElementById('prerequisite-lock').style.display = 'flex';
+          document.getElementById('lock-message').textContent = prereqCheck.message;
+          document.getElementById('prev-lesson-link').href = `lesson.html?lesson=${prereqCheck.blockedBy}`;
+          lucide.createIcons();
+          return;
+        }
+        
+        // Render lesson
+        renderer.lesson = lesson;
+        renderer.render();
+        
+        // Update UI
+        updateBreadcrumb(lesson);
+        updateSidebar(lesson);
+        addMarkCompleteButton(lesson);
+        
+        // Show content
+        document.getElementById('loading-state').style.display = 'none';
+        document.getElementById('lesson-content').style.display = 'block';
+        
+        // Re-initialize icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const sidebar = document.getElementById('lesson-sidebar');
+        mobileToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('open');
+        });
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
+            sidebar.classList.remove('open');
+          }
+        });
+        
+      } catch (error) {
+        console.error('Failed to load lesson:', error);
+        document.getElementById('loading-state').style.display = 'none';
+        document.getElementById('error-state').style.display = 'flex';
+        document.getElementById('error-message').textContent = error.message;
+        lucide.createIcons();
+      }
+    }
+    
+    // Load lesson on page load
+    document.addEventListener('DOMContentLoaded', loadLesson);
   </script>
 </body>
 </html>
