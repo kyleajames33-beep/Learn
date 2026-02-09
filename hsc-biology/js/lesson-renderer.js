@@ -521,15 +521,7 @@ const LessonRenderer = {
       // Sanitize and store
       this.currentLesson = LessonSchema.sanitize(lessonData);
       
-      // Check prerequisites before rendering
-      const prereqStatus = this.checkPrerequisites(this.currentLesson);
-      if (!prereqStatus.met) {
-        // Show prerequisite lock screen
-        this.renderPrerequisiteLockScreen(this.currentLesson, prereqStatus);
-        this.hideLoading();
-        return;
-      }
-      
+      // Skip prerequisite locking — all lessons accessible
       // Render the lesson
       this.render(this.currentLesson);
       
