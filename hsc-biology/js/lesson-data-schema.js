@@ -26,7 +26,7 @@ const LessonSchema = {
     
     // Field types and validation
     fields: {
-      id: { type: 'string', pattern: '^module-[0-9]+-[a-z-]+-lesson-[0-9]+$' },
+      id: { type: 'string', pattern: '^(module-[0-9]+-[a-z-]+-lesson-[0-9]+|mod[0-9]+-lesson[0-9]+)$' },
       title: { type: 'string', minLength: 1, maxLength: 200 },
       module: { type: 'string', pattern: '^module-[0-9]+-[a-z-]+$' },
       moduleTitle: { type: 'string', minLength: 1 },
@@ -66,7 +66,7 @@ const LessonSchema = {
           type: 'object',
           required: ['lessonId'],
           fields: {
-            lessonId: { type: 'string', pattern: '^module-[0-9]+-[a-z-]+-lesson-[0-9]+$' },
+            lessonId: { type: 'string', pattern: '^(module-[0-9]+-[a-z-]+-lesson-[0-9]+|mod[0-9]+-lesson[0-9]+)$' },
             description: { type: 'string' },
             required: { type: 'boolean', default: true }
           }
