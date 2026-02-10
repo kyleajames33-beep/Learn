@@ -36,6 +36,25 @@
 - Lessons 21-25 JSON does not exist yet
 - Lesson 20 JSON exists in `/data/lessons/` but not copied to `/hsc-biology/data/lessons/`
 
+**New Content Stored:**
+- ✅ HSC Biology Module 2 (25 lessons) — Organisation of Living Things
+- ✅ HSC Biology Module 3 (25 lessons) — Biological Diversity  
+- ✅ HSC Biology Module 4 (25 lessons) — Ecosystem Dynamics
+- ✅ HSC Biology Module 5 (25 lessons) — Heredity (Year 12)
+- ✅ HSC Biology Module 6 (25 lessons) — Genetic Change
+- ✅ HSC Biology Module 7 (25 lessons) — Infectious Disease
+- ✅ HSC Biology Module 8 (25 lessons) — Non-Infectious Disease
+- ✅ HSC Chemistry Module 1 (25 lessons) — Properties & Structure of Matter
+- ✅ HSC Chemistry Module 2 (25 lessons) — Quantitative Chemistry
+- ✅ HSC Chemistry Module 3 (25 lessons) — Reactive Chemistry
+- ✅ HSC Chemistry Module 4 (25 lessons) — Drivers of Reactions
+- ✅ HSC Chemistry Module 5 (25 lessons) — Equilibrium & Acid Reactions
+- ✅ HSC Chemistry Module 6 (25 lessons) — Acid-Base Reactions
+- ✅ HSC Chemistry Module 7 (25 lessons) — Organic Chemistry
+- ✅ HSC Chemistry Module 8 (25 lessons) — Applying Chemical Ideas
+
+**Total Scope: 400 lessons across HSC Biology & Chemistry (16 modules)
+
 **Open issues:** See `docs/trackers/BUG-LOG.md` — 0 critical, 1 minor (duplicate render), 1 info
 
 ---

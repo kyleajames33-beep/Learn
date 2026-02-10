@@ -18,6 +18,11 @@ const SCRIPTS_DIR = path.join(__dirname);
 
 const CHECKS = [
   {
+    name: 'Smoke Test',
+    script: 'smoke-test.js',
+    description: 'Quick verification that all lessons load and render without errors'
+  },
+  {
     name: 'HTML Page Structure',
     script: 'validate-pages.js',
     description: 'Checks all HTML files for required CSS/JS, meta tags, absolute paths'
@@ -31,6 +36,11 @@ const CHECKS = [
     name: 'Australian English Spelling',
     script: 'validate-spelling.js',
     description: 'Scans lesson content for American English spellings'
+  },
+  {
+    name: 'Quality Scoring',
+    script: 'score-lessons.js',
+    description: 'Scores each lesson on quality metrics and detects regression'
   }
 ];
 

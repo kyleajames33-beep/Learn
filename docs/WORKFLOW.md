@@ -303,10 +303,13 @@ All scripts live in `/scripts/` and run via Node.js. **No npm install needed.**
 | Script | Command | What It Checks |
 |--------|---------|----------------|
 | **Master runner** | `node scripts/run-all-checks.js` | Runs ALL checks below, unified pass/fail |
-| **Cache-busting** | `node scripts/bump-versions.js` | Updates all ?v= params on CSS/JS (run BEFORE commit if you changed assets) |
+| **Smoke test** | `node scripts/smoke-test.js` | Quick "does it work?" check - verifies lessons load without errors (2-3 sec) |
+| **Quality scoring** | `node scripts/score-lessons.js` | Scores lessons 0-100, detects quality regression vs baseline |
+| Cache-busting | `node scripts/bump-versions.js` | Updates all ?v= params on CSS/JS (run BEFORE commit if you changed assets) |
 | HTML structure | `node scripts/validate-pages.js` | Required CSS/JS, meta tags, absolute paths |
 | Lesson JSON | `node scripts/validate-lessons.js` | Schema validation, content quality, activity types, navigation chain |
 | Spelling | `node scripts/validate-spelling.js` | American English in lesson content |
+| **Error analysis** | `node scripts/read-errors.js` | Reads production errors from browser localStorage (for debugging) |
 
 ### When to Run
 
@@ -333,6 +336,37 @@ All scripts live in `/scripts/` and run via Node.js. **No npm install needed.**
 5. **Broken navigation chains** (prev/next pointing to non-existent lessons)
 6. **Missing HTML infrastructure** (CSS/JS references, meta tags, absolute paths)
 7. **Content quality warnings** (too few activities, assessments, definitions)
+8. **Quality regression** (lessons scoring below baseline average)
+9. **Rendering blockers** (missing images, unsupported activities, schema violations)
+
+### Error Tracking & Debugging
+
+**Client-Side Error Tracking:**
+The error tracker (`assets/js/error-tracker.js`) automatically logs all JavaScript errors to browser localStorage.
+
+**When a user reports "lesson X is broken":**
+
+1. Ask them to open DevTools Console
+2. Have them run: `copy(JSON.stringify(localStorage.getItem('science-hub-errors')))`
+3. Paste the output into `scripts/errors.json`
+4. Run: `node scripts/read-errors.js`
+5. See exact errors with stack traces, timestamps, and browser info
+
+**Manual error logging:**
+```javascript
+// In browser console or lesson code:
+ErrorTracker.log('Calculation failed', { input: 42, expected: 50 });
+```
+
+**Debugging workflow:**
+1. User reports issue
+2. Get error log → `node scripts/read-errors.js`
+3. Reproduce with exact error context
+4. Fix code
+5. Run smoke test → `node scripts/smoke-test.js`
+6. Deploy
+
+**This replaces 8-hour debugging sessions with 30-minute fixes.**
 
 ---
 

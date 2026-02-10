@@ -96,18 +96,35 @@ Detailed goals for each phase live in `docs/goals/PHASE-X-*.md`.
 
 ### HSC Biology Module Structure
 
-| Module | Name | Lessons | Phase |
-|--------|------|---------|-------|
-| 1 | Cells as the Basis of Life | 25 | Phase 1 (ACTIVE) |
-| 2 | Organisation of Living Things | 20-25 | Phase 7 |
-| 3 | Biological Diversity | 20 | Phase 7 |
-| 4 | Ecosystem Dynamics | 20 | Phase 7 |
-| 5 | Heredity | 20 | Phase 7 |
-| 6 | Genetic Change | 20 | Phase 7 |
-| 7 | Infectious Disease | 15 | Phase 7 |
-| 8 | Non-Infectious Disease | 15 | Phase 7 |
+| Module | Name | Lessons | Phase | Tracker File |
+|--------|------|---------|-------|--------------|
+| 1 | Cells as the Basis of Life | 25 | Phase 1 (ACTIVE) | `MODULE-1-LESSONS.md` |
+| 2 | Organisation of Living Things | 25 | Phase 7 | `MODULE-2-LESSONS.md` |
+| 3 | Biological Diversity | 25 | Phase 7 | `MODULE-3-LESSONS.md` |
+| 4 | Ecosystem Dynamics | 25 | Phase 7 | `MODULE-4-LESSONS.md` |
+| 5 | Heredity | 25 | Phase 7 | `MODULE-5-LESSONS.md` |
+| 6 | Genetic Change | 25 | Phase 7 | `MODULE-6-LESSONS.md` |
+| 7 | Infectious Disease | 25 | Phase 7 | `MODULE-7-LESSONS.md` |
+| 8 | Non-Infectious Disease | 25 | Phase 7 | `MODULE-8-LESSONS.md` |
 
-### Other Subjects (Future)
+**Total HSC Biology Lessons: 200**
+
+### HSC Chemistry Module Structure
+
+| Module | Name | Lessons | Phase | Tracker File |
+|--------|------|---------|-------|--------------|
+| 1 | Properties and Structure of Matter | 25 | Phase 9 | `CHEM-MODULE-1-LESSONS.md` |
+| 2 | Introduction to Quantitative Chemistry | 25 | Phase 9 | `CHEM-MODULE-2-LESSONS.md` |
+| 3 | Reactive Chemistry | 25 | Phase 9 | `CHEM-MODULE-3-LESSONS.md` |
+| 4 | Drivers of Reactions | 25 | Phase 9 | `CHEM-MODULE-4-LESSONS.md` |
+| 5 | Equilibrium and Acid Reactions | 25 | Phase 9 | `CHEM-MODULE-5-LESSONS.md` |
+| 6 | Acid-Base Reactions | 25 | Phase 9 | `CHEM-MODULE-6-LESSONS.md` |
+| 7 | Organic Chemistry | 25 | Phase 9 | `CHEM-MODULE-7-LESSONS.md` |
+| 8 | Applying Chemical Ideas | 25 | Phase 9 | `CHEM-MODULE-8-LESSONS.md` |
+
+**Total HSC Chemistry Lessons: 200**
+
+### Junior Science (Future)
 
 | Subject | Phase | Status |
 |---------|-------|--------|
@@ -115,7 +132,6 @@ Detailed goals for each phase live in `docs/goals/PHASE-X-*.md`.
 | Year 8 Science | Phase 9 | Placeholder pages only |
 | Year 9 Science | Phase 9 | Placeholder pages only |
 | Year 10 Science | Phase 9 | Placeholder pages only |
-| HSC Chemistry | Phase 9 | No pages yet |
 | HSC Physics | Phase 9 | No pages yet |
 
 ---
@@ -143,6 +159,9 @@ Detailed goals for each phase live in `docs/goals/PHASE-X-*.md`.
 | 2026-02-09 | Created lesson-renderer.js | Supports 8 activity types including interactive sims |
 | 2026-02-09 | Dual lesson ID format | `module-1-cells-lesson-X` (old) + `mod1-lessonXX` (new) both valid |
 | 2026-02-09 | All lessons unlocked | Prerequisite locking disabled during development |
+| 2026-02-09 | Module 2 lesson sequence finalized | 25 lessons defined for Organisation of Living Things |
+| 2026-02-09 | All 8 modules lesson sequences stored | Complete HSC Biology syllabus: 200 lessons across Modules 1-8 |
+| 2026-02-09 | HSC Chemistry syllabus stored | Complete HSC Chemistry syllabus: 200 lessons across Modules 1-8 |
 
 ---
 

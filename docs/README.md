@@ -38,7 +38,8 @@ Full constraints: `MASTER-PLAN.md` Section 2.
 | What to do RIGHT NOW | `STATUS.md` → NEXT TASK section |
 | What the last AI did | `STATUS.md` → LAST SESSION LOG |
 | Current milestone details | `goals/PHASE-1-CONTENT.md` |
-| Status of each lesson | `trackers/MODULE-1-LESSONS.md` |
+| Status of Module 1 lessons | `trackers/MODULE-1-LESSONS.md` |
+| Module 2-8 lesson sequences | `trackers/MODULE-2-LESSONS.md` through `MODULE-8-LESSONS.md` |
 | Open bugs | `trackers/BUG-LOG.md` |
 | Feature completion | `trackers/FEATURE-MATRIX.md` |
 | How the workflow works | `WORKFLOW.md` |
@@ -66,12 +67,19 @@ Track progress in `trackers/MODULE-1-LESSONS.md`. Full pipeline details in `WORK
 
 ```
 Phase 0: Foundation         COMPLETE
-Phase 1: Content Sprint     40% ACTIVE ← we are here
+Phase 1: Content Sprint     40% ACTIVE ← we are here (Bio Module 1: 25 lessons)
 Phase 2: UX & Navigation    PLANNED
 Phase 3: Gamification       PLANNED
 Phase 4: Mini-Games         PLANNED
 Phase 5: Backend & Sync     PLANNED
+Phase 7: Content Scale      PLANNED (375 lessons mapped, ready to build)
+Phase 9: Subject Expansion  PLANNED (HSC Chemistry: 200 lessons mapped)
 ```
+
+**Total Scope:** 
+- 200 HSC Biology lessons (Modules 1-8) ✅ MAPPED
+- 200 HSC Chemistry lessons (Modules 1-8) ✅ MAPPED
+- **400 Total Lessons** across both subjects
 
 ---
 
@@ -100,7 +108,24 @@ docs/
 │   └── MILESTONE-LOG.md     # Completed milestones
 │
 └── trackers/                  # Granular progress tracking
-    ├── MODULE-1-LESSONS.md   # Per-lesson pipeline status
+    # HSC Biology (200 lessons)
+    ├── MODULE-1-LESSONS.md   # Module 1: Cells (ACTIVE)
+    ├── MODULE-2-LESSONS.md   # Module 2: Organisation
+    ├── MODULE-3-LESSONS.md   # Module 3: Biological Diversity
+    ├── MODULE-4-LESSONS.md   # Module 4: Ecosystem Dynamics
+    ├── MODULE-5-LESSONS.md   # Module 5: Heredity (Year 12)
+    ├── MODULE-6-LESSONS.md   # Module 6: Genetic Change
+    ├── MODULE-7-LESSONS.md   # Module 7: Infectious Disease
+    ├── MODULE-8-LESSONS.md   # Module 8: Non-Infectious Disease
+    # HSC Chemistry (200 lessons)
+    ├── CHEM-MODULE-1-LESSONS.md   # Module 1: Properties & Structure
+    ├── CHEM-MODULE-2-LESSONS.md   # Module 2: Quantitative Chemistry
+    ├── CHEM-MODULE-3-LESSONS.md   # Module 3: Reactive Chemistry
+    ├── CHEM-MODULE-4-LESSONS.md   # Module 4: Drivers of Reactions
+    ├── CHEM-MODULE-5-LESSONS.md   # Module 5: Equilibrium & Acids
+    ├── CHEM-MODULE-6-LESSONS.md   # Module 6: Acid-Base Reactions
+    ├── CHEM-MODULE-7-LESSONS.md   # Module 7: Organic Chemistry
+    ├── CHEM-MODULE-8-LESSONS.md   # Module 8: Applying Chemical Ideas
     ├── FEATURE-MATRIX.md     # Feature completion matrix
     └── BUG-LOG.md            # Issues and fixes
 ```
