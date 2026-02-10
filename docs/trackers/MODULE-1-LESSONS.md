@@ -46,7 +46,7 @@ Each lesson must have these elements to reach V2.0:
 
 | # | Lesson ID | Title | Pipeline | V2.0 Status | V2.0 Elements | Issues |
 |---|-----------|-------|----------|-------------|---------------|--------|
-| 1 | module-1-cells-lesson-1 | Prokaryotic Cell Structure | `LIVE` | `QA` | Hero, Intentions, Flow Diagram, Tables, Worked Example | Ready for mobile QA |
+| 1 | module-1-cells-lesson-1 | Prokaryotic vs Eukaryotic Cells | `LIVE` | `V2.0` | Complete V2 rewrite: 6 sections, 4 activities, 5 MCQ + 3 SAQ, comprehensive answers | **GOLD STANDARD** - Template for remaining lessons |
 | 2 | module-1-cells-lesson-2 | Eukaryotic Cell Compartmentalisation | `LIVE` | `PENDING` | - | - |
 | 3 | module-1-cells-lesson-3 | Microscopy and Cell Size | `LIVE` | `PENDING` | - | - |
 | 4 | module-1-cells-lesson-4 | Cell Membrane Structure | `LIVE` | `PENDING` | - | - |
@@ -195,8 +195,8 @@ E1.0 (Renderer):     [███████████████████�
 └── Dynamic CSS loading
 
 E1.1 (Lessons 1-5):  [████░░░░░░░░░░░░░░░░] 20%  IN PROGRESS
-├── Lesson 1: V2.0 COMPLETE (hero, flow diagram, worked example, comprehensive answers)
-├── Lessons 2-5: PENDING
+├── Lesson 1: ✅ **V2.0 GOLD STANDARD** (complete rewrite, all validation passes)
+├── Lessons 2-5: 🔄 Ready to enhance using Lesson 1 template
 E1.2 (Lessons 6-10): [░░░░░░░░░░░░░░░░░░░░] 0%  NOT STARTED
 E1.3 (Lessons 11-15):[░░░░░░░░░░░░░░░░░░░░] 0%  NOT STARTED
 E1.4 (Lessons 16-20):[░░░░░░░░░░░░░░░░░░░░] 0%  NOT STARTED
