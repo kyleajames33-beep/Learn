@@ -2188,7 +2188,71 @@ const LessonRenderer = {
       });
     });
     
-    // Classification activities
+    // Classification activities - DRAG AND DROP
+    document.querySelectorAll('.classification-item[draggable="true"]').forEach(item => {
+      // Drag start
+      item.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', item.dataset.itemId);
+        item.style.opacity = '0.5';
+      });
+      
+      // Drag end
+      item.addEventListener('dragend', () => {
+        item.style.opacity = '1';
+      });
+      
+      // Touch support for mobile
+      item.addEventListener('touchstart', (e) => {
+        item.dataset.touchDragging = 'true';
+        item.style.opacity = '0.5';
+      }, { passive: true });
+      
+      item.addEventListener('touchend', (e) => {
+        item.dataset.touchDragging = 'false';
+        item.style.opacity = '1';
+        
+        // Find what zone we're over
+        const touch = e.changedTouches[0];
+        const elemBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+        const zone = elemBelow?.closest('.classification-zone');
+        
+        if (zone) {
+          const itemsContainer = zone.querySelector('.classification-items');
+          if (itemsContainer) {
+            itemsContainer.appendChild(item);
+          }
+        }
+      });
+    });
+    
+    // Classification drop zones
+    document.querySelectorAll('.classification-zone').forEach(zone => {
+      zone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        zone.style.background = 'rgba(37, 99, 235, 0.1)';
+      });
+      
+      zone.addEventListener('dragleave', () => {
+        zone.style.background = '';
+      });
+      
+      zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.style.background = '';
+        
+        const itemId = e.dataTransfer.getData('text/plain');
+        const item = document.querySelector(`.classification-item[data-item-id="${itemId}"]`);
+        
+        if (item) {
+          const itemsContainer = zone.querySelector('.classification-items');
+          if (itemsContainer) {
+            itemsContainer.appendChild(item);
+          }
+        }
+      });
+    });
+    
+    // Classification check button
     document.querySelectorAll('.check-classification-btn').forEach(btn => {
       TouchUtils.bindTap(btn, (e) => {
         const activity = e.target.closest('[data-activity]');
