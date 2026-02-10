@@ -44,6 +44,7 @@ END SESSION
 - [ ] Read active phase file (currently `docs/goals/PHASE-1-CONTENT.md`)
 - [ ] Read `docs/trackers/MODULE-1-LESSONS.md` for lesson-level status
 - [ ] Check `docs/trackers/BUG-LOG.md` for critical issues
+- [ ] **If enhancing to V2.0:** Review `docs/LESSON-DESIGN-SPEC.md` for design reference
 
 ### Session End Checklist
 - [ ] **Verification suite passed** — `node scripts/run-all-checks.js` exits 0
@@ -101,6 +102,13 @@ STAGE 6: PRODUCTION
   Owner: AI
   Output: Live at kyleajames33-beep.github.io/Learn/...
   Validation: Loads without errors on mobile browser
+  |
+  v
+STAGE 7: V2.0 ENHANCEMENT (NEW)
+  Rich content with styled boxes, flow diagrams, worked examples
+  Owner: AI
+  Output: Enhanced lesson meeting LESSON-DESIGN-SPEC.md standards
+  Validation: All V2.0 elements present, mobile QA passes
 ```
 
 ### Stage Status Codes (used in trackers)
@@ -113,6 +121,7 @@ STAGE 6: PRODUCTION
 | `WIRED` | Stage 4 complete |
 | `QA` | Stage 5 complete |
 | `LIVE` | Stage 6 complete - in production |
+| `V2.0` | Stage 7 complete - meets enhanced quality standard |
 | `BLOCKED` | Cannot proceed - see BUG-LOG |
 
 ---
@@ -249,6 +258,7 @@ Polish, optimise, add nice-to-haves only when everything above is done.
 | `docs/goals/PHASE-X-*.md` | Mark milestone complete |
 | `docs/goals/MILESTONE-LOG.md` | Add milestone entry |
 | `docs/STATUS.md` | Update sprint goal |
+| `docs/trackers/MODULE-X-LESSONS.md` | Update V2.0 status for affected lessons |
 
 ### After completing a PHASE:
 | File | Update |
