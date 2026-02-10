@@ -1,21 +1,37 @@
 # Science Hub - Project Documentation
 
-## FOR AI AGENTS: START HERE
+## FOR AI AGENTS: AUTONOMOUS DEVELOPMENT CYCLE
 
-You are working on **Science Hub**, an interactive HSC Biology learning platform. This folder contains everything you need to know.
+**You are working on Science Hub**, an interactive HSC Biology & Chemistry learning platform (400 lessons across 16 modules).
 
-**Step 1:** Read `STATUS.md` in this folder. It has:
-- **NEXT TASK** — the exact thing to work on right now
-- **LAST SESSION LOG** — what the previous AI did, so you have context
-- **HANDOFF PROTOCOL** — what you MUST update before ending your session
+### 🔄 **AUTONOMOUS WORKFLOW SYSTEM**
 
-**Step 2:** If you need more context on the current milestone, read `goals/PHASE-1-CONTENT.md`.
+This project has a **fully autonomous closed-loop development system**:
 
-**Step 3:** If you need per-lesson status, read `trackers/MODULE-1-LESSONS.md`.
+1. **Read one file:** `AI-START-HERE.md` (in this folder)
+2. **Follow the 6-step cycle:** It orchestrates everything automatically
+3. **Tests auto-validate:** Code won't commit until it passes
+4. **Self-correcting:** If tests fail, you fix and re-test
+5. **Self-documenting:** You update STATUS.md before finishing
+6. **Report completion:** Tell user what was done and what's next
 
-**Step 4:** Do the work described in NEXT TASK.
+**Start here:** Read **[AI-START-HERE.md](AI-START-HERE.md)** now.
 
-**Step 5:** Before ending, follow the HANDOFF PROTOCOL in STATUS.md. This is critical — the next AI depends on it.
+---
+
+### 📋 **QUICK START (If You Want Manual Control)**
+
+**Step 1:** Read `STATUS.md` → **NEXT TASK** section (what to do right now)
+
+**Step 2:** Read `COMMON-MISTAKES.md` (known bugs to avoid — saves 8 hours of debugging)
+
+**Step 3:** Read `WORKFLOW.md` Section 1 (session workflow) and Section 8 (testing system)
+
+**Step 4:** Do the work described in NEXT TASK
+
+**Step 5:** Run tests: `node scripts/run-all-checks.js` (fix until it passes)
+
+**Step 6:** Update STATUS.md LAST SESSION LOG and commit
 
 ---
 

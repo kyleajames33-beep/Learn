@@ -8,33 +8,99 @@
 
 ## NEXT TASK
 
+**⚠️ IMPORTANT: If you're a new AI starting a cycle, read `docs/AI-START-HERE.md` first!**
+
 **Do this first. This is the single most important thing to work on right now.**
 
-> **Test Lesson 1 in the browser.** Open `hsc-biology/lesson.html?lesson=module-1-cells-lesson-1` and verify: hero renders, content sections visible, activities interactive, assessment works, zero console errors. If it works, update the tracker and move to Lesson 2. If it breaks, fix it and log the bug. Repeat for Lessons 1-5 (Milestone M1.1), then Lessons 6-10 (Milestone M1.2).
+### Task: Fix Unsupported Activity Types (Blockers)
 
-**Pipeline target:** Move lessons from `JSON` stage to `RENDER` (or further).
-**Key files:** `hsc-biology/lesson.html`, `hsc-biology/js/lesson-renderer.js`, `hsc-biology/data/lessons/*.json`
-**Constraints:** Zero console errors. Mobile-first (375px). Australian English. See `docs/MASTER-PLAN.md` Section 2.
+**Current state:** Smoke test shows 6 lessons have unsupported activity types:
+- mod1-lesson06: `comparison-table`, `problemSolving`
+- mod1-lesson07: `problemSolving`
+- mod1-lesson08: `interactive-slider`
+- mod1-lesson09: `problemSolving`
+- mod1-lesson10: `problemSolving`, `tonicity-simulator`
+- mod1-lesson14: `content`
+
+**Your task:**
+1. For each failing lesson, open the JSON file
+2. Find activities with unsupported types
+3. Change to a supported type: `matching`, `fill-blank`, `classification`, `ordering`, `labeling`, `fillBlank`, or `calculation`
+4. Preserve the learning objective, just change the activity mechanism
+5. Run `node scripts/smoke-test.js` after each fix
+6. Continue until all lessons pass
+
+**Supported activity types ONLY:**
+- `matching` — Match pairs
+- `fill-blank` — Fill in blanks in text
+- `classification` — Sort items into categories
+- `ordering` — Put items in correct sequence
+- `labeling` — Label diagram parts
+- `fillBlank` — Same as fill-blank (legacy)
+- `calculation` — Math/science calculations
+
+**When all smoke tests pass:**
+1. Run full test suite: `node scripts/run-all-checks.js`
+2. Update `docs/trackers/MODULE-1-LESSONS.md` with new statuses
+3. Update this file's LAST SESSION LOG
+4. Commit and report completion
+
+**Pipeline target:** Move lessons from `JSON` stage to `RENDER` stage.
+**Key files:** `hsc-biology/data/lessons/mod1-lesson*.json`
+**Constraints:** Zero console errors. Only supported activity types. Australian English.
 
 ---
 
 ## LAST SESSION LOG
 
-**Date:** 2026-02-09
-**AI:** Claude (Opus 4.6)
+**Date:** 2026-02-10
+**AI:** Claude Sonnet 4.5
+**Session:** Complete testing system + autonomous workflow
+
 **What was done:**
-1. Fixed service worker 404 — `document.currentScript` captured synchronously in `assets/js/main.js`
-2. Fixed content invisible below hero — CSS `.reveal` opacity bug in `assets/css/global.css`
-3. Fixed schema validation — updated regex in `hsc-biology/js/lesson-data-schema.js` to accept `mod1-lessonXX` IDs
-4. Auto-unregister stale service workers — added cleanup loop in `assets/js/main.js`
-5. Unlocked all lessons — disabled prerequisite check in `hsc-biology/js/lesson-renderer.js`
-6. Bumped all cache-busting versions in `hsc-biology/lesson.html`
-7. Built comprehensive documentation system (this file, goals/, trackers/, WORKFLOW.md)
+1. ✅ Built complete testing system:
+   - `scripts/score-lessons.js` — Quality scoring (0-100) with regression detection
+   - `scripts/smoke-test.js` — Fast 2-3 second "does it work?" verification
+   - `assets/js/error-tracker.js` — Client-side error logging to localStorage
+   - `scripts/read-errors.js` — Production error analysis
+   - `scripts/system-check.js` — System readiness verification
+   - Updated `scripts/run-all-checks.js` to include smoke test + quality scorer
+
+2. ✅ Built autonomous AI workflow system:
+   - `PROMPT.md` — Single prompt to send to any AI to start a cycle
+   - `docs/AI-START-HERE.md` — Complete workflow orchestration (6-step cycle)
+   - `docs/COMMON-MISTAKES.md` — Known bugs and solutions (18 documented mistakes)
+   - Updated `docs/WORKFLOW.md` with error tracking and debugging workflow
+   - Updated `docs/STATUS.md` with clearer NEXT TASK directives
+
+3. ✅ Integrated all 16 module lesson sequences:
+   - Bio modules 2-8: 175 lessons planned (docs/trackers/MODULE-*.md)
+   - Chem modules 1-8: 200 lessons planned (docs/trackers/CHEM-MODULE-*.md)
+   - Total: 400 lessons across HSC Biology & Chemistry
+
+4. ✅ Fixed caching issues completely:
+   - Created `scripts/bump-versions.js` — Automated cache-busting
+   - Fixed service worker to use network-first for CSS/JS (not stale-while-revalidate)
+   - Added cache-control meta tags to index.html, hsc-biology/index.html, lesson.html
+   - Bumped 212 CSS/JS references across 27 HTML files
+
+**Test Results:**
+- ✅ System check passed: All 8 scripts, 6 docs, 3 trackers verified
+- ⚠️  Smoke test: 39/45 lessons pass (6 have unsupported activity types — see NEXT TASK)
+- ⚠️  Quality score: 84.0/100 average (baseline: 91.6/100) — 7.6 point regression detected
+- ⚠️  Assessment quality: 67.3% (lowest category, needs improvement)
+
+**Issues Found:**
+- 6 lessons use unsupported activity types (comparison-table, problemSolving, interactive-slider, tonicity-simulator, content)
+- Quality regression: lessons 6+ score lower than baseline (lessons 1-5)
+- Many lessons only have 2 activities (recommend 4)
+- Some MCQs have incorrect answer keys (correctAnswer not in options)
 
 **What was NOT done:**
-- Lessons have not been tested beyond "does it load" — activities, assessment, mobile QA all pending
+- Unsupported activity types not yet fixed (blocking smoke test)
+- Quality regression not yet addressed
 - Lessons 21-25 JSON does not exist yet
-- Lesson 20 JSON exists in `/data/lessons/` but not copied to `/hsc-biology/data/lessons/`
+- Browser testing of deployed lessons pending
 
 **New Content Stored:**
 - ✅ HSC Biology Module 2 (25 lessons) — Organisation of Living Things
