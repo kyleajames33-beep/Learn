@@ -189,29 +189,18 @@
     },
     {
       "id": "ficks-law-calculation",
-      "type": "problemSolving",
-      "title": "Fick's Law Calculations",
+      "type": "calculation",
+      "title": "Fick's Law Calculation",
       "description": "Apply Fick's Law to predict diffusion rate changes.",
       "learningObjective": "Apply Fick's Law to biological contexts.",
       "theme": "orange",
       "xpReward": 100,
-      "problems": [
-        {
-          "id": "alveoli-change",
-          "question": "An alveolus has surface area A, thickness T, and concentration gradient C. If surface area increases 10×, thickness decreases by half, and concentration gradient doubles, by what factor does diffusion rate change?",
-          "context": "Rate ∝ (Surface Area × Concentration Difference) / Thickness",
-          "formula": "New Rate / Original Rate = (10 × 2) / 0.5",
-          "workingSteps": [
-            "New rate factor = (10 × Area × 2 × C) / (0.5 × T)",
-            "= (20 × A × C) / (0.5 × T)",
-            "= 40 × (A × C / T)"
-          ],
-          "correctAnswer": 40,
-          "tolerance": 0.05,
-          "unit": "×",
-          "hint": "Multiply the changes: 10 × 2 ÷ 0.5 = ?"
-        }
-      ]
+      "question": "An alveolus has surface area A, thickness T, and concentration gradient C. If surface area increases 10×, thickness decreases by half, and concentration gradient doubles, by what factor does diffusion rate change? (Rate ∝ (SA × Gradient) / Thickness)",
+      "formula": "Factor = (10 × 2) / 0.5",
+      "correctAnswer": 40,
+      "tolerance": 0.05,
+      "unit": "×",
+      "hint": "Multiply the changes: 10 × 2 ÷ 0.5 = ?"
     },
     {
       "id": "transport-classification",
@@ -248,17 +237,15 @@
     "multipleChoice": [
       {
         "id": "mcq-1",
-        "question": "Which factors increase the rate of diffusion across a membrane? (Select all that apply)",
+        "question": "Which of the following factors will increase the rate of diffusion across a membrane?",
         "options": [
-          "Increased temperature",
-          "Increased concentration gradient",
           "Increased membrane thickness",
           "Increased molecular size",
-          "Increased surface area"
+          "Increased surface area",
+          "Decreased temperature"
         ],
-        "correctAnswer": "Increased temperature, Increased concentration gradient, Increased surface area",
-        "rationale": "Temperature increases kinetic energy; steeper gradient drives faster diffusion; larger surface area allows more molecules to cross. Thickness and molecular size DECREASE diffusion rate.",
-        "multiSelect": true
+        "correctAnswer": "Increased surface area",
+        "rationale": "Larger surface area allows more molecules to cross simultaneously, increasing diffusion rate. Thickness and molecular size DECREASE diffusion rate. Higher temperature increases rate, not lower."
       },
       {
         "id": "mcq-2",

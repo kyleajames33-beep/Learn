@@ -1,0 +1,225 @@
+{
+  "id": "mod1-lesson22",
+  "title": "Enzyme Function and Catalysis",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 22,
+  "description": "Understanding enzymes as biological catalysts. Exploring enzyme structure, the active site, substrate specificity, and factors affecting enzyme activity including temperature and pH.",
+  "duration": "45 minutes",
+  "difficulty": "Advanced",
+  "worksOffline": true,
+  
+  "learningIntentions": [
+    "Students can explain how enzymes function as biological catalysts to lower activation energy.",
+    "Students can describe the relationship between enzyme structure and substrate specificity.",
+    "Students can analyse how temperature and pH affect enzyme activity and apply this to cellular conditions."
+  ],
+  
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Enzyme structure, function, and regulation"
+  },
+  
+  "successCriteria": [
+    "I can explain the lock-and-key and induced fit models of enzyme action.",
+    "I can describe how temperature and pH affect enzyme activity.",
+    "I can interpret graphs showing enzyme activity under different conditions."
+  ],
+  
+  "engagementHook": {
+    "title": "Nature's Speed Boosters",
+    "content": "Without enzymes, the chemical reactions necessary for life would take millions of years to complete. One enzyme in your body—carbonic anhydrase—can process 1 million molecules per second. Without it, you wouldn't be able to transport carbon dioxide efficiently, making exercise—and life as we know it—impossible."
+  },
+  
+  "keyConcepts": [
+    {
+      "term": "Activation Energy",
+      "definition": "The minimum amount of energy required to start a chemical reaction. Enzymes lower this barrier without being consumed."
+    },
+    {
+      "term": "Active Site",
+      "definition": "The specific region on an enzyme where the substrate binds and the chemical reaction occurs."
+    },
+    {
+      "term": "Substrate Specificity",
+      "definition": "The property of enzymes to catalyse specific reactions due to the precise shape and chemical properties of their active sites."
+    },
+    {
+      "term": "Induced Fit Model",
+      "definition": "The theory that the enzyme's active site changes shape slightly to better fit the substrate upon binding, enhancing catalytic efficiency."
+    },
+    {
+      "term": "Denaturation",
+      "definition": "The irreversible loss of enzyme structure and function caused by extreme temperature or pH changes that disrupt hydrogen bonds."
+    }
+  ],
+  
+  "contentSections": [
+    {
+      "id": "enzyme-basics",
+      "type": "content",
+      "title": "Enzymes as Biological Catalysts",
+      "icon": "zap",
+      "content": "<p>Enzymes are globular proteins that act as biological catalysts, speeding up chemical reactions without being consumed. Each enzyme catalyses a specific reaction due to the unique shape of its active site.</p><p><strong>Key properties:</strong></p><ul><li>Highly specific—each enzyme acts on particular substrates</li><li>Reusable—not permanently changed by the reaction</li><li>Work best under specific temperature and pH conditions</li><li>Can be regulated by inhibitors and activators</li></ul>"
+    },
+    {
+      "id": "enzyme-models",
+      "type": "diagram",
+      "title": "Models of Enzyme Action",
+      "icon": "hexagon",
+      "content": "Two models explain how enzymes interact with substrates. The lock-and-key model suggests the active site is rigid, while the induced fit model describes the active site as flexible, changing shape to accommodate the substrate.",
+      "keyPoints": [
+        "Lock-and-key: Rigid active site matching substrate shape",
+        "Induced fit: Flexible active site adjusts to substrate",
+        "Modern view favours induced fit for most enzymes"
+      ],
+      "example": "Hexokinase undergoes large conformational changes when binding glucose."
+    },
+    {
+      "id": "factors-affecting",
+      "type": "content",
+      "title": "Factors Affecting Enzyme Activity",
+      "icon": "thermometer",
+      "content": "<p>Enzyme activity is influenced by environmental conditions:</p><ul><li><strong>Temperature:</strong> Activity increases with temperature up to an optimum, then decreases as enzymes denature at high temperatures.</li><li><strong>pH:</strong> Each enzyme has an optimal pH; deviations cause loss of activity due to changes in ionisation of amino acid residues.</li><li><strong>Substrate concentration:</strong> Reaction rate increases with substrate concentration until all active sites are saturated.</li><li><strong>Enzyme concentration:</strong> Directly proportional to reaction rate when substrate is in excess.</li></ul><p>Most human enzymes work best at 37°C and pH 7.4, reflecting body conditions.</p>"
+    }
+  ],
+  
+  "activities": [
+    {
+      "id": "enzyme-labelling",
+      "type": "labeling",
+      "title": "Label the Enzyme-Substrate Complex",
+      "description": "Label the parts of the enzyme-substrate interaction:",
+      "theme": "teal",
+      "labels": [
+        {"id": "1", "text": "Substrate", "target": "substrate"},
+        {"id": "2", "text": "Active Site", "target": "active-site"},
+        {"id": "3", "text": "Enzyme", "target": "enzyme"},
+        {"id": "4", "text": "Products", "target": "products"}
+      ]
+    },
+    {
+      "id": "enzyme-matching",
+      "type": "matching",
+      "title": "Enzyme Concepts",
+      "description": "Match each term with its correct definition:",
+      "theme": "purple",
+      "items": [
+        {
+          "term": "Active site",
+          "correctValue": "b",
+          "options": [
+            {"value": "a", "label": "Energy needed to start a reaction"},
+            {"value": "b", "label": "Region where substrate binds"},
+            {"value": "c", "label": "Molecule that enzymes act upon"}
+          ]
+        },
+        {
+          "term": "Substrate",
+          "correctValue": "c",
+          "options": [
+            {"value": "a", "label": "Energy needed to start a reaction"},
+            {"value": "b", "label": "Region where substrate binds"},
+            {"value": "c", "label": "Molecule that enzymes act upon"}
+          ]
+        },
+        {
+          "term": "Activation energy",
+          "correctValue": "a",
+          "options": [
+            {"value": "a", "label": "Energy needed to start a reaction"},
+            {"value": "b", "label": "Region where substrate binds"},
+            {"value": "c", "label": "Molecule that enzymes act upon"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "factors-classification",
+      "type": "classification",
+      "title": "Factors and Their Effects",
+      "description": "Classify each factor as increasing, decreasing, or having variable effects on enzyme activity:",
+      "theme": "blue",
+      "categories": [
+        {"id": "increase", "label": "Generally Increases Activity"},
+        {"id": "decrease", "label": "Decreases Activity"},
+        {"id": "variable", "label": "Variable/Optimal Effect"}
+      ],
+      "items": [
+        {"id": "1", "text": "Optimal temperature", "category": "variable"},
+        {"id": "2", "text": "High temperature (above 50°C)", "category": "decrease"},
+        {"id": "3", "text": "Increased substrate concentration", "category": "increase"},
+        {"id": "4", "text": "Extreme pH", "category": "decrease"},
+        {"id": "5", "text": "Increased enzyme concentration", "category": "increase"},
+        {"id": "6", "text": "Presence of competitive inhibitor", "category": "decrease"}
+      ]
+    }
+  ],
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "According to the induced fit model, what happens when a substrate binds to an enzyme?",
+        "options": [
+          "The enzyme remains rigid and unchanged",
+          "The active site changes shape to better fit the substrate",
+          "The substrate permanently attaches to the enzyme",
+          "The enzyme is destroyed after the reaction"
+        ],
+        "correctAnswer": "The active site changes shape to better fit the substrate"
+      },
+      {
+        "id": "q2",
+        "question": "Why do enzymes denature at high temperatures?",
+        "options": [
+          "The amino acids are destroyed",
+          "Hydrogen bonds maintaining tertiary structure are disrupted",
+          "The substrate concentration becomes too high",
+          "The pH automatically decreases"
+        ],
+        "correctAnswer": "Hydrogen bonds maintaining tertiary structure are disrupted"
+      },
+      {
+        "id": "q3",
+        "question": "What is the primary role of enzymes in biochemical reactions?",
+        "options": [
+          "To provide energy for the reaction",
+          "To lower the activation energy required",
+          "To increase the temperature of the reaction",
+          "To change the pH of the cellular environment"
+        ],
+        "correctAnswer": "To lower the activation energy required"
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Explain the difference between the lock-and-key model and the induced fit model of enzyme action. (3 marks)",
+        "marks": 3
+      },
+      {
+        "id": "sa2",
+        "question": "Describe how pH affects enzyme activity and explain why most human enzymes have an optimal pH around 7.4. (2 marks)",
+        "marks": 2
+      }
+    ]
+  },
+  
+  "navigation": {
+    "previous": "mod1-lesson21",
+    "previousTitle": "Cell Signalling and Communication",
+    "next": "mod1-lesson23",
+    "nextTitle": "Cell Metabolism and Energy"
+  },
+  
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
+    "version": "1.0.0",
+    "tags": ["enzymes", "catalysis", "active-site", "HSC-biology", "module-1"]
+  }
+}

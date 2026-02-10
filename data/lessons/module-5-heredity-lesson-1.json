@@ -11,7 +11,7 @@
   "worksOffline": true,
   "learningIntentions": [
     "Understand what heredity means",
-    "Recognize key historical contributions to genetics",
+    "Recognise key historical contributions to genetics",
     "Define essential genetics terminology",
     "Appreciate the importance of heredity in biology"
   ],
@@ -49,7 +49,7 @@
       "title": "Key Definition",
       "icon": "book-open",
       "term": "Genetics",
-      "definition": "The scientific study of heredity and variation in living organisms. It examines how traits are passed down through generations and how genetic information is organized, expressed, and regulated."
+      "definition": "The scientific study of heredity and variation in living organisms. It examines how traits are passed down through generations and how genetic information is organised, expressed, and regulated."
     },
     {
       "id": "historical-context",
@@ -85,7 +85,7 @@
           "icon": "split",
           "items": [
             "Different versions of a gene",
-            "Example: eye color variants",
+            "Example: eye colour variants",
             "Can be dominant or recessive",
             "Two per gene (one from each parent)"
           ]
@@ -220,7 +220,7 @@
           "The study of ancient civilizations",
           "The study of chemical reactions"
         ],
-        "correctAnswer": "b"
+        "correctAnswer": "The scientific study of heredity and variation"
       },
       {
         "id": "q2",
@@ -231,7 +231,7 @@
           "James Watson",
           "Francis Crick"
         ],
-        "correctAnswer": "b"
+        "correctAnswer": "Gregor Mendel"
       },
       {
         "id": "q3",
@@ -242,7 +242,7 @@
           "Genotype is genetic makeup; phenotype is observable characteristics",
           "Genotype refers to plants; phenotype refers to animals"
         ],
-        "correctAnswer": "c"
+        "correctAnswer": "Genotype is genetic makeup; phenotype is observable characteristics"
       }
     ],
     "shortAnswer": [
@@ -272,8 +272,8 @@
   "navigation": {
     "previous": null,
     "previousTitle": null,
-    "next": "module-5-heredity-lesson-2",
-    "nextTitle": "DNA Structure & Discovery"
+    "next": null,
+    "nextTitle": null
   },
   "meta": {
     "author": "Science Hub",

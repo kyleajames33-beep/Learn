@@ -215,9 +215,9 @@
     },
     {
       "id": "animal-plant-comparison-activity",
-      "type": "comparison-table",
+      "type": "classification",
       "title": "Animal vs Plant Cell Comparison",
-      "description": "Toggle between animal and plant cells to identify unique features.",
+      "description": "Classify each feature as found only in animal cells, only in plant cells, or in both.",
       "learningObjective": "Distinguish animal and plant cell features.",
       "theme": "purple",
       "xpReward": 75,
@@ -225,46 +225,47 @@
         {
           "id": "animal-only",
           "name": "Animal Only",
-          "items": ["Centrioles"]
+          "description": "Found only in animal cells"
         },
         {
           "id": "plant-only",
           "name": "Plant Only",
-          "items": ["Chloroplasts", "Cell wall (cellulose)", "Large central vacuole", "Plasmodesmata"]
+          "description": "Found only in plant cells"
         },
         {
           "id": "both",
           "name": "Both Cell Types",
-          "items": ["Nucleus", "Mitochondria", "Ribosomes", "ER", "Golgi apparatus", "Plasma membrane"]
+          "description": "Found in both animal and plant cells"
         }
+      ],
+      "items": [
+        { "id": "centrioles", "text": "Centrioles", "correctCategory": "animal-only" },
+        { "id": "chloroplasts", "text": "Chloroplasts", "correctCategory": "plant-only" },
+        { "id": "cell-wall", "text": "Cell wall (cellulose)", "correctCategory": "plant-only" },
+        { "id": "central-vacuole", "text": "Large central vacuole", "correctCategory": "plant-only" },
+        { "id": "plasmodesmata", "text": "Plasmodesmata", "correctCategory": "plant-only" },
+        { "id": "nucleus", "text": "Nucleus", "correctCategory": "both" },
+        { "id": "mitochondria", "text": "Mitochondria", "correctCategory": "both" },
+        { "id": "ribosomes", "text": "Ribosomes", "correctCategory": "both" },
+        { "id": "er", "text": "ER", "correctCategory": "both" },
+        { "id": "golgi", "text": "Golgi apparatus", "correctCategory": "both" },
+        { "id": "plasma-membrane", "text": "Plasma membrane", "correctCategory": "both" }
       ]
     },
     {
       "id": "water-potential-calculation",
-      "type": "problemSolving",
+      "type": "calculation",
       "title": "Water Potential Calculation",
       "description": "Calculate water potential and predict water movement.",
       "learningObjective": "Apply the water potential equation.",
       "theme": "orange",
       "xpReward": 100,
-      "problems": [
-        {
-          "id": "turgor-calc",
-          "question": "A plant cell has solute potential (ψs) of -0.5 MPa and pressure potential (ψp) of 0.3 MPa. Calculate its water potential (ψ).",
-          "context": "Will this cell gain or lose water if placed in pure water (0 MPa)?",
-          "formula": "ψ = ψs + ψp",
-          "workingSteps": [
-            "Water potential = solute potential + pressure potential",
-            "ψ = -0.5 MPa + 0.3 MPa",
-            "ψ = -0.2 MPa"
-          ],
-          "correctAnswer": -0.2,
-          "tolerance": 0.05,
-          "unit": "MPa",
-          "followUpQuestion": "Since -0.2 MPa < 0 MPa, water will move INTO the cell (gain water).",
-          "hint": "Add the two potentials together. Remember: water moves from high ψ to low ψ."
-        }
-      ]
+      "question": "A plant cell has solute potential (ψs) of -0.5 MPa and pressure potential (ψp) of 0.3 MPa. Calculate its water potential (ψ).",
+      "formula": "ψ = ψs + ψp",
+      "correctAnswer": -0.2,
+      "tolerance": 0.05,
+      "unit": "MPa",
+      "hint": "Add the two potentials together. Remember: water moves from high ψ to low ψ."
     }
   ],
   
@@ -381,7 +382,7 @@
     {
       "id": "plant-cell-diagram",
       "src": "assets/images/mod1/lesson06/plant-cell-diagram.webp",
-      "alt": "Diagram of plant cell with labeled structures",
+      "alt": "Diagram of plant cell with labelled structures",
       "caption": "Plant cell structure"
     },
     {

@@ -166,12 +166,32 @@
     },
     {
       "id": "ethical-case-study",
-      "type": "content",
-      "title": "Ethical and Therapeutic Trade-offs",
-      "description": "Evaluate the options for a patient needing new heart cells.",
+      "type": "classification",
+      "title": "Stem Cell Therapy Trade-offs",
+      "description": "Classify characteristics as belonging to embryonic stem cells or adult stem cells.",
       "learningObjective": "Evaluate ethical and therapeutic trade-offs.",
       "theme": "teal",
-      "content": "Scenario: A patient needs new heart cells.\n\nOption A: Embryonic stem cells (pluripotent, grow well, but embryo destroyed)\nOption B: Adult stem cells from patient (no rejection, but hard to grow, limited types)\n\nConsider:\n- Therapeutic benefits of each\n- Ethical concerns\n- iPSCs (induced pluripotent) as future solution"
+      "xpReward": 75,
+      "categories": [
+        {
+          "id": "embryonic",
+          "name": "Embryonic Stem Cells",
+          "description": "Derived from blastocysts"
+        },
+        {
+          "id": "adult",
+          "name": "Adult Stem Cells",
+          "description": "Found in mature tissues"
+        }
+      ],
+      "items": [
+        { "id": "pluripotent", "text": "Pluripotent (can form all body cell types)", "correctCategory": "embryonic" },
+        { "id": "multipotent", "text": "Multipotent (limited cell types)", "correctCategory": "adult" },
+        { "id": "easy-grow", "text": "Easy to grow in culture", "correctCategory": "embryonic" },
+        { "id": "hard-grow", "text": "Difficult to grow in culture", "correctCategory": "adult" },
+        { "id": "embryo-destroyed", "text": "Requires destruction of embryo", "correctCategory": "embryonic" },
+        { "id": "no-rejection", "text": "No rejection if from patient", "correctCategory": "adult" }
+      ]
     }
   ],
   

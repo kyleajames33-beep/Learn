@@ -142,56 +142,18 @@
   "activities": [
     {
       "id": "water-potential-calculations",
-      "type": "problemSolving",
-      "title": "Water Potential Calculations",
-      "description": "Calculate water potential and predict water movement.",
+      "type": "calculation",
+      "title": "Water Potential Calculation",
+      "description": "Calculate water potential using the water potential equation.",
       "learningObjective": "Apply the water potential equation.",
       "theme": "orange",
       "xpReward": 100,
-      "problems": [
-        {
-          "id": "calc-psi-1",
-          "question": "A plant cell has solute potential (ψs) of -0.8 MPa and pressure potential (ψp) of 0.4 MPa. Calculate its water potential (ψ).",
-          "formula": "ψ = ψs + ψp",
-          "workingSteps": [
-            "ψ = -0.8 MPa + 0.4 MPa",
-            "ψ = -0.4 MPa"
-          ],
-          "correctAnswer": -0.4,
-          "tolerance": 0.05,
-          "unit": "MPa",
-          "hint": "Simply add the two values together."
-        },
-        {
-          "id": "calc-pure-water",
-          "question": "What is the water potential of pure water at atmospheric pressure? (Remember: no solutes, no pressure)",
-          "formula": "ψ = ψs + ψp = 0 + 0",
-          "workingSteps": [
-            "ψs = 0 (no solutes)",
-            "ψp = 0 (no pressure, open to atmosphere)",
-            "ψ = 0 MPa"
-          ],
-          "correctAnswer": 0,
-          "tolerance": 0.05,
-          "unit": "MPa",
-          "hint": "Pure water is the reference point."
-        },
-        {
-          "id": "predict-movement",
-          "question": "A flaccid plant cell has water potential of -0.6 MPa. It is placed in pure water (ψ = 0 MPa). What is the direction of water movement?",
-          "context": "Water moves from high ψ to low ψ",
-          "formula": "Compare ψ values: 0 MPa vs -0.6 MPa",
-          "workingSteps": [
-            "Pure water: ψ = 0 MPa (higher)",
-            "Cell: ψ = -0.6 MPa (lower)",
-            "Water moves into the cell"
-          ],
-          "correctAnswer": "Into the cell",
-          "isTextAnswer": true,
-          "acceptableAnswers": ["into cell", "into the cell", "enters cell", "in"],
-          "hint": "Water always moves toward the more negative water potential."
-        }
-      ]
+      "question": "A plant cell has solute potential (ψs) of -0.8 MPa and pressure potential (ψp) of 0.4 MPa. Calculate its water potential (ψ).",
+      "formula": "ψ = ψs + ψp",
+      "correctAnswer": -0.4,
+      "tolerance": 0.05,
+      "unit": "MPa",
+      "hint": "Simply add the two values together: -0.8 + 0.4 = ?"
     },
     {
       "id": "tonicity-classification",
@@ -228,46 +190,36 @@
     },
     {
       "id": "tonicity-simulator",
-      "type": "tonicity-simulator",
-      "title": "Tonicity Cell Simulator",
-      "description": "Visualise cell changes in different solutions.",
-      "learningObjective": "Visualise osmotic effects on cells.",
+      "type": "classification",
+      "title": "Tonicity Cell Responses",
+      "description": "Classify the cell response based on the solution type and cell type.",
+      "learningObjective": "Predict osmotic outcomes in different tonicities.",
       "theme": "teal",
       "xpReward": 75,
-      "cellTypes": [
+      "categories": [
         {
-          "id": "animal",
-          "name": "Animal Cell (Red Blood Cell)",
-          "hasCellWall": false
+          "id": "swells-bursts",
+          "name": "Swells and bursts (lysis)",
+          "description": "Cell takes in water and ruptures"
         },
         {
-          "id": "plant",
-          "name": "Plant Cell",
-          "hasCellWall": true
+          "id": "normal-turgid",
+          "name": "Normal or turgid",
+          "description": "Cell maintains normal shape or becomes firm"
+        },
+        {
+          "id": "shrinks",
+          "name": "Shrinks or plasmolysis",
+          "description": "Cell loses water and shrinks"
         }
       ],
-      "solutions": [
-        {
-          "id": "hypotonic",
-          "name": "Hypotonic (Pure Water)",
-          "waterPotential": 0,
-          "animalEffect": "Swells and bursts (lysis/cytolysis)",
-          "plantEffect": "Becomes turgid (normal, firm)"
-        },
-        {
-          "id": "isotonic",
-          "name": "Isotonic (0.9% Saline)",
-          "waterPotential": -0.3,
-          "animalEffect": "Normal shape",
-          "plantEffect": "Flaccid (limp)"
-        },
-        {
-          "id": "hypertonic",
-          "name": "Hypertonic (Concentrated Salt)",
-          "waterPotential": -1.0,
-          "animalEffect": "Shrinks (crenation)",
-          "plantEffect": "Plasmolysis (membrane pulls from wall)"
-        }
+      "items": [
+        { "id": "animal-hypotonic", "text": "Animal cell in pure water", "correctCategory": "swells-bursts" },
+        { "id": "plant-hypotonic", "text": "Plant cell in pure water", "correctCategory": "normal-turgid" },
+        { "id": "animal-isotonic", "text": "Animal cell in 0.9% saline", "correctCategory": "normal-turgid" },
+        { "id": "plant-isotonic", "text": "Plant cell in 0.9% saline", "correctCategory": "shrinks" },
+        { "id": "animal-hypertonic", "text": "Animal cell in concentrated salt", "correctCategory": "shrinks" },
+        { "id": "plant-hypertonic", "text": "Plant cell in concentrated salt", "correctCategory": "shrinks" }
       ]
     },
     {
@@ -368,7 +320,7 @@
       "Cell wall prevents plant cells from bursting"
     ],
     "diagrams": [
-      "Water potential equation with labeled components",
+      "Water potential equation with labelled components",
       "Tonicity effects comparison (animal vs plant)",
       "Plasmolysis in plant cell"
     ]

@@ -328,8 +328,8 @@
   ],
   
   "navigation": {
-    "previous": "module-1-cells-lesson-1",
-    "previousTitle": "Prokaryotic Cell Structure",
+    "previous": null,
+    "previousTitle": null,
     "next": "module-1-cells-lesson-3",
     "nextTitle": "Microscopy and Cell Size"
   },

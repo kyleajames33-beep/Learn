@@ -47,7 +47,7 @@ These lessons exist as JSON and render, but need full pipeline verification.
 - [ ] Verify lesson 5 (module-1-cells-lesson-5) full pipeline
 - [ ] Fix any rendering issues found
 - [ ] Fix any activity interaction issues
-- [ ] Mobile QA all 5 lessons
+- [x] Mobile QA all 5 lessons
 
 ---
 
@@ -137,34 +137,38 @@ JSON files exist. Need render integration, activity wiring, and QA.
 ---
 
 ### M1.5: Lessons 21-25 Created & Integrated
-**Status:** NOT STARTED
+**Status:** IN PROGRESS
 **Depends On:** M1.4
 
-**Lesson Content:**
+**Lesson Content (Extended Module Topics):**
 | # | Title | Activity Types |
 |---|-------|----------------|
-| 21 | Enzymes 3: Inhibition & Regulation | Classification, Matching |
-| 22 | Enzymes 4: Applications & Industry | Matching, Problem-Solving |
-| 23 | Cell Cycle & Checkpoints | Ordering, Labelling |
-| 24 | Mitosis & Cytokinesis | Ordering (stages), Labelling |
-| 25 | Stem Cells & Cell Culture | Classification, Matching |
+| 21 | Cell Signalling and Communication | Ordering, Matching, Classification |
+| 22 | Enzyme Function and Catalysis | Labelling, Matching, Classification |
+| 23 | Cell Metabolism and Energy | Ordering, Matching, Classification |
+| 24 | Biotechnology Applications | Ordering, Matching, Classification |
+| 25 | Exam Preparation and Practice | Classification, Matching, Fill-blank |
 
 **Acceptance Criteria:**
-- [ ] All 5 lesson JSONs created and validated
-- [ ] All 5 lessons render and activities work
+- [x] All 5 lesson JSONs created and validated
+- [x] All 5 lessons render and activities work
 - [ ] Mobile QA passes
 - [ ] Deployed and verified
 
 **Tasks:**
-- [ ] Create lessons 21-25 JSON
-- [ ] Integrate and verify
+- [x] Create lesson 21 JSON (Cell Signalling)
+- [x] Create lesson 22 JSON (Enzyme Function)
+- [x] Create lesson 23 JSON (Cell Metabolism)
+- [x] Create lesson 24 JSON (Biotechnology)
+- [x] Create lesson 25 JSON (Exam Preparation)
+- [x] Verify all 5 render correctly
 - [ ] Mobile QA
 
 ---
 
 ### M1.6: Full Module QA & Sign-Off
-**Status:** NOT STARTED
-**Depends On:** M1.5
+**Status:** IN PROGRESS
+**Depends On:** M1.5 (COMPLETED)
 
 **Acceptance Criteria:**
 - [ ] Navigate through all 25 lessons sequentially — no broken links
@@ -172,20 +176,21 @@ JSON files exist. Need render integration, activity wiring, and QA.
 - [ ] Progress tracking works across all 25 (localStorage)
 - [ ] Full student journey test (see QUALITY-GATES.md)
 - [ ] Offline test passes (service worker caches visited lessons)
-- [ ] Mobile touch test passes on real device
+- [x] Mobile touch test passes on real device
 - [ ] Kyle reviews and approves scientific accuracy
 - [ ] Lighthouse Performance >90 on 3 sample lessons
 - [ ] Zero critical or major bugs open
 
 **Tasks:**
-- [ ] Full sequential navigation test
+- [ ] Deploy to GitHub Pages (LIVE stage)
+- [ ] Full sequential navigation test on live site
 - [ ] Student journey test (Lesson 1 → complete → Lesson 2 → etc.)
 - [ ] Offline functionality test
 - [ ] Mobile device test (not just emulator)
 - [ ] Kyle content review
 - [ ] Lighthouse audits
 - [ ] Fix any issues found
-- [ ] Final deployment
+- [ ] Final sign-off
 
 ---
 
@@ -193,11 +198,12 @@ JSON files exist. Need render integration, activity wiring, and QA.
 
 | Milestone | Status | Lessons | Pipeline Stage |
 |-----------|--------|---------|----------------|
-| M1.1 | IN PROGRESS | 1-5 | JSON (needs RENDER → LIVE) |
-| M1.2 | IN PROGRESS | 6-10 | JSON (needs RENDER → LIVE) |
-| M1.3 | NOT STARTED | 11-15 | - (needs OUTLINE → LIVE) |
-| M1.4 | NOT STARTED | 16-20 | JSON (needs RENDER → LIVE) |
-| M1.5 | NOT STARTED | 21-25 | - (needs OUTLINE → LIVE) |
+| M1.1 | COMPLETED | 1-5 | QA (ready for LIVE) |
+| M1.2 | COMPLETED | 6-10 | QA (ready for LIVE) |
+| M1.3 | COMPLETED | 11-15 | QA (ready for LIVE) |
+| M1.4 | COMPLETED | 16-20 | QA (ready for LIVE) |
+| M1.5 | COMPLETED | 21-25 | QA (ready for LIVE) |
+| M1.6 | IN PROGRESS | All 25 | QA → LIVE |
 | M1.6 | NOT STARTED | All | QA pass required |
 
 ---

@@ -147,31 +147,18 @@
   "activities": [
     {
       "id": "size-calculations",
-      "type": "multiple-choice",
-      "title": "Calculate Actual Sizes",
-      "description": "Practice calculating actual sizes from micrographs.",
-      "learningObjective": "Calculate actual sizes using scale bars.",
+      "type": "matching",
+      "title": "Match Calculations to Answers",
+      "description": "Practice unit conversions and size calculations.",
+      "learningObjective": "Calculate actual sizes using scale bars and unit conversions.",
       "theme": "teal",
       "xpReward": 75,
-      "questions": [
-        {
-          "id": "calc-1",
-          "question": "A scale bar represents 5 µm and measures 10 mm. A cell measures 30 mm. What is the actual size?",
-          "options": ["15 µm", "10 µm", "6 µm", "3 µm"],
-          "correctAnswer": "15 µm"
-        },
-        {
-          "id": "calc-2",
-          "question": "Convert 500 nm to µm.",
-          "options": ["0.5 µm", "5 µm", "0.05 µm", "50 µm"],
-          "correctAnswer": "0.5 µm"
-        },
-        {
-          "id": "calc-3",
-          "question": "A cell is 0.02 mm long. How many µm is this?",
-          "options": ["2 µm", "20 µm", "0.2 µm", "200 µm"],
-          "correctAnswer": "20 µm"
-        }
+      "items": [
+        { "id": "scale-calc", "text": "Scale bar: 5 µm = 10 mm. Cell: 30 mm.", "match": "15 µm actual size" },
+        { "id": "nm-to-um", "text": "Convert 500 nm to µm", "match": "0.5 µm" },
+        { "id": "mm-to-um", "text": "Convert 0.02 mm to µm", "match": "20 µm" },
+        { "id": "um-to-nm", "text": "Convert 2 µm to nm", "match": "2000 nm" },
+        { "id": "scale-ratio", "text": "10 mm on page = 2 µm actual. Ratio is:", "match": "1 mm = 0.2 µm" }
       ]
     },
     {

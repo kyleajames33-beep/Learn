@@ -116,12 +116,37 @@
   "activities": [
     {
       "id": "extended-response",
-      "type": "content",
-      "title": "Extended Response Practice",
-      "description": "Answer an integrated HSC-style question combining multiple concepts.",
-      "learningObjective": "Synthesise multiple concepts.",
+      "type": "classification",
+      "title": "Module Integration Challenge",
+      "description": "Classify concepts by the module topics they connect to.",
+      "learningObjective": "Synthesise multiple concepts across the module.",
       "theme": "critical",
-      "content": "Question: A patient has a disease affecting mitochondria. Explain how defects in this organelle affect cellular respiration, and discuss one potential stem cell-based therapy, including ethical considerations.\n\nConsider:\n- Mitochondrial function in ATP production\n- Effects on high-energy tissues\n- Stem cell therapy potential\n- Ethical issues (embryonic vs adult)\n- Current limitations"
+      "xpReward": 100,
+      "categories": [
+        {
+          "id": "structure",
+          "name": "Cell Structure",
+          "description": "Organelles and components"
+        },
+        {
+          "id": "function",
+          "name": "Cell Function",
+          "description": "Processes and activities"
+        },
+        {
+          "id": "technology",
+          "name": "Technology/Medicine",
+          "description": "Tools and applications"
+        }
+      ],
+      "items": [
+        { "id": "70s-ribosomes", "text": "70S ribosomes in mitochondria", "correctCategory": "structure" },
+        { "id": "atp-production", "text": "ATP production via cellular respiration", "correctCategory": "function" },
+        { "id": "cell-culture", "text": "Cell culture for testing treatments", "correctCategory": "technology" },
+        { "id": "stem-cell", "text": "Stem cell therapy for mitochondrial disease", "correctCategory": "technology" },
+        { "id": "cftr-channel", "text": "CFTR channel protein defect", "correctCategory": "structure" },
+        { "id": "osmosis-transport", "text": "Osmosis and water transport", "correctCategory": "function" }
+      ]
     },
     {
       "id": "concept-connections",

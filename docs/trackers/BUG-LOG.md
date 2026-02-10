@@ -33,6 +33,9 @@
 | 2 | MAJOR | Stale service worker can't be unregistered from DevTools | 2026-02-09 | 2026-02-09 | Browser kept the failed SW registration; DevTools unregister button unresponsive. | Added auto-unregister of all existing SWs before re-registering. |
 | 3 | MAJOR | Lesson content invisible below hero | 2026-02-09 | 2026-02-09 | CSS `.reveal { opacity: 0 }` hid all content sections. IntersectionObserver used class `.revealed` but CSS expected `.visible`. Browser cached old CSS. | Changed `.reveal` default to `opacity: 1`, fixed observer to use `.visible`, bumped all cache-busting versions. |
 | 4 | MAJOR | Lesson 6+ fails schema validation | 2026-02-09 | 2026-02-09 | ID pattern `^module-[0-9]+-[a-z-]+-lesson-[0-9]+$` rejected new format `mod1-lesson06`. | Updated regex to accept both formats: `^(module-...|mod[0-9]+-lesson[0-9]+)$` |
+| 7 | MINOR | Navigation chain error in module-1-cells-lesson-2 | 2026-02-10 | 2026-02-10 | Navigation.previous pointed to "module-1-cells-lesson-1" which didn't exist in same directory. | Changed previous to null (lesson-1 exists in different format/location) |
+| 8 | MINOR | Navigation chain error in module-5-heredity-lesson-1 | 2026-02-10 | 2026-02-10 | Navigation.next pointed to "module-5-heredity-lesson-2" which doesn't exist. | Changed next to null (lesson-2 not yet created) |
+| 9 | INFO | Duplicate lesson files across directories | 2026-02-10 | 2026-02-10 | Lesson files existed in both data/lessons/ and hsc-biology/data/lessons/ causing confusion. | Established data/lessons/ as single source of truth, removed duplicates from hsc-biology/ |
 
 ---
 

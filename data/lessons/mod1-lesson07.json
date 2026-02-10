@@ -128,9 +128,9 @@
       "type": "content",
       "title": "Magnification Calculations",
       "icon": "calculator",
-      "content": "Formula: Magnification = Image size ÷ Actual size. Units MUST be the same before dividing. Common conversions: 1 mm = 1000 μm, 1 μm = 1000 nm. Scale bars on micrographs can be used: measure bar length, divide by labeled value.",
+      "content": "Formula: Magnification = Image size ÷ Actual size. Units MUST be the same before dividing. Common conversions: 1 mm = 1000 μm, 1 μm = 1000 nm. Scale bars on micrographs can be used: measure bar length, divide by labelled value.",
       "example": "Image measures 50 mm wide. Actual cell is 50 μm wide. Magnification = 50,000 μm ÷ 50 μm = ×1000.",
-      "checkForUnderstanding": "A micrograph shows a scale bar labeled '10 μm' measuring 20 mm on the page. What is the magnification?"
+      "checkForUnderstanding": "A micrograph shows a scale bar labelled '10 μm' measuring 20 mm on the page. What is the magnification?"
     },
     {
       "id": "sample-preparation",
@@ -180,54 +180,18 @@
     },
     {
       "id": "magnification-calculations",
-      "type": "problemSolving",
-      "title": "Magnification Calculations",
-      "description": "Practice calculating magnification and actual size.",
-      "learningObjective": "Apply magnification formulas with unit conversions.",
+      "type": "calculation",
+      "title": "Magnification Calculation",
+      "description": "Practice calculating magnification from image and actual size.",
+      "learningObjective": "Apply magnification formula with unit conversions.",
       "theme": "orange",
       "xpReward": 100,
-      "problems": [
-        {
-          "id": "calc-magnification",
-          "question": "A cell image measures 50 mm wide. The actual cell is 0.05 mm wide. Calculate the magnification.",
-          "formula": "Magnification = Image size ÷ Actual size",
-          "workingSteps": [
-            "Convert to same units: 50 mm ÷ 0.05 mm",
-            "Or: 50,000 μm ÷ 50 μm",
-            "Magnification = ×1000"
-          ],
-          "correctAnswer": 1000,
-          "tolerance": 0.05,
-          "unit": "×",
-          "hint": "Make sure units are the same, then divide."
-        },
-        {
-          "id": "calc-actual-size",
-          "question": "A microscope is set to ×400 magnification. A cell appears 2 mm wide on the image. What is the actual size in micrometres (μm)?",
-          "formula": "Actual size = Image size ÷ Magnification",
-          "workingSteps": [
-            "Actual = 2 mm ÷ 400 = 0.005 mm",
-            "Convert to μm: 0.005 mm × 1000 = 5 μm"
-          ],
-          "correctAnswer": 5,
-          "tolerance": 0.05,
-          "unit": "μm",
-          "hint": "First calculate in mm, then convert to μm (×1000)."
-        },
-        {
-          "id": "calc-from-scale-bar",
-          "question": "An image has a scale bar labeled '10 μm' that measures 50 mm on the page. What is the magnification?",
-          "formula": "Magnification = Measured bar length ÷ Bar label",
-          "workingSteps": [
-            "Convert: 50 mm = 50,000 μm",
-            "Magnification = 50,000 ÷ 10 = 5000"
-          ],
-          "correctAnswer": 5000,
-          "tolerance": 0.05,
-          "unit": "×",
-          "hint": "Measure the bar on the image, divide by what the bar represents."
-        }
-      ]
+      "question": "A cell image measures 50 mm wide. The actual cell is 0.05 mm wide. Calculate the magnification.",
+      "formula": "Magnification = Image size ÷ Actual size",
+      "correctAnswer": 1000,
+      "tolerance": 0.05,
+      "unit": "×",
+      "hint": "Make sure units are the same, then divide. 50 ÷ 0.05 = ?"
     },
     {
       "id": "microscope-matching",

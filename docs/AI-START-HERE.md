@@ -134,8 +134,13 @@ Update the lesson's pipeline status:
 - [List what was finished]
 - [Include test results: "All tests passed" or "39/45 lessons passed smoke test"]
 
-### Issues Found:
-- [Any bugs discovered and logged in BUG-LOG.md]
+### Issues Fixed:
+- [Bugs that were fixed in this session]
+
+### Bugs Found (out of scope):
+| # | Bug | Location | Severity | Notes |
+|---|-----|----------|----------|-------|
+| 1 | [Brief description] | [File/location] | [CRITICAL/MAJOR/MINOR/INFO] | [Any details] |
 
 ### Not Completed:
 - [Anything left unfinished]

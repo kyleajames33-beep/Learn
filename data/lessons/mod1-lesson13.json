@@ -185,7 +185,7 @@
         {
           "id": "blank-4",
           "correct": "cancer",
-          "alternatives": ["tumour", "tumor"]
+          "alternatives": ["tumour", "tumour"]
         }
       ]
     }

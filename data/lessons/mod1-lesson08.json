@@ -249,45 +249,18 @@
     },
     {
       "id": "temperature-fluidity",
-      "type": "interactive-slider",
+      "type": "matching",
       "title": "Temperature and Membrane Fluidity",
-      "description": "Explore how temperature affects membrane fluidity.",
+      "description": "Match temperature conditions to their effects on membrane fluidity.",
       "learningObjective": "Understand temperature effects on membrane fluidity.",
       "theme": "orange",
       "xpReward": 75,
-      "slider": {
-        "min": 0,
-        "max": 50,
-        "step": 1,
-        "defaultValue": 25,
-        "unit": "°C",
-        "label": "Temperature"
-      },
-      "zones": [
-        {
-          "min": 0,
-          "max": 10,
-          "label": "Low Temperature",
-          "description": "Phospholipids pack tightly together. Membrane becomes gel-like and rigid. Reduced permeability. Without cholesterol, could solidify.",
-          "visualState": "rigid",
-          "cholesterolEffect": "Cholesterol prevents tight packing, maintains some fluidity"
-        },
-        {
-          "min": 10,
-          "max": 35,
-          "label": "Optimal Range",
-          "description": "Phospholipids move freely but maintain bilayer structure. Membrane is fluid and functional. Optimal for protein function.",
-          "visualState": "fluid",
-          "cholesterolEffect": "Cholesterol moderates movement"
-        },
-        {
-          "min": 35,
-          "max": 50,
-          "label": "High Temperature",
-          "description": "Phospholipids move too rapidly. Membrane becomes too fluid. Increased permeability. Proteins may denature.",
-          "visualState": "too-fluid",
-          "cholesterolEffect": "Cholesterol restricts movement, reduces fluidity"
-        }
+      "items": [
+        { "id": "low-temp", "text": "Low temperature (0-10°C)", "match": "Phospholipids pack tightly; membrane becomes gel-like and rigid" },
+        { "id": "optimal-temp", "text": "Optimal range (10-35°C)", "match": "Phospholipids move freely; membrane is fluid and functional" },
+        { "id": "high-temp", "text": "High temperature (35-50°C)", "match": "Phospholipids move rapidly; membrane becomes too fluid" },
+        { "id": "cholesterol-low", "text": "Cholesterol at low temperature", "match": "Prevents tight packing, maintains fluidity" },
+        { "id": "cholesterol-high", "text": "Cholesterol at high temperature", "match": "Restricts movement, reduces fluidity" }
       ]
     }
   ],
@@ -372,7 +345,7 @@
       "Cholesterol acts as a fluidity buffer across temperatures"
     ],
     "diagrams": [
-      "Fluid mosaic model with all components labeled",
+      "Fluid mosaic model with all components labelled",
       "Phospholipid structure showing head and tails",
       "Temperature effects on fluidity"
     ]
