@@ -723,8 +723,11 @@ const LessonRenderer = {
       </div>
     `;
     
-    // Bind V2 activity handlers
+    // Bind V2 activity handlers (MCQ, SAQ)
     this.bindV2ActivityHandlers();
+    
+    // Bind all activity handlers (classification, matching, ordering, etc.)
+    this.bindActivityHandlers();
     
     // Bind assessment handlers
     this.bindAssessmentHandlers();

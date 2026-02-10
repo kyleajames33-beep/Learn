@@ -9,8 +9,9 @@
 **Every new chat session, read these files in order:**
 
 1. `docs/STATUS.md` — Where are we? What's the current task?
-2. `docs/goals/PHASE-1-CONTENT.md` — What milestone are we working on?
-3. `docs/trackers/MODULE-1-LESSONS.md` — What's the status of each lesson?
+2. `docs/AI-START-HERE.md` — Full workflow cycle (read this next!)
+3. `docs/goals/PHASE-1-CONTENT.md` — What milestone are we working on?
+4. `docs/trackers/MODULE-1-LESSONS.md` — What's the status of each lesson?
 
 **Then proceed with the highest-priority task from STATUS.md.**
 
@@ -23,7 +24,7 @@
 | **Name** | Science Hub |
 | **Type** | Interactive HSC Biology Learning Platform |
 | **Stack** | Vanilla JS, LocalStorage, GitHub Pages |
-| **Phase** | Phase 1 - Content Sprint (Module 1: 25 lessons) |
+| **Phase** | Phase 1 Enhancement - Module 1 V2.0 (Gold Standard lessons) |
 | **URL** | `https://kyleajames33-beep.github.io/Learn/` |
 
 ---
@@ -75,7 +76,7 @@
 Every lesson goes through these stages (see `docs/WORKFLOW.md`):
 
 ```
-OUTLINE → JSON → RENDER → WIRED → QA → LIVE
+OUTLINE → JSON → RENDER → WIRED → QA → LIVE → V2.0
 ```
 
 Update `docs/trackers/MODULE-1-LESSONS.md` when a lesson changes stage.
