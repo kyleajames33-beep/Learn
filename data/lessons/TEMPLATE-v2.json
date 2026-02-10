@@ -1,0 +1,97 @@
+{
+  "_comment": "SCIENCE HUB LESSON TEMPLATE V2.0 - Rich Content Standard",
+  "_reference": "See docs/LESSON-DESIGN-SPEC.md for complete specification",
+  
+  "id": "modX-lessonXX",
+  "title": "Lesson Title: Descriptive Subtitle",
+  "module": "module-X-topic",
+  "moduleTitle": "Module X: Full Topic Name",
+  "moduleNumber": X,
+  "lessonNumber": XX,
+  "description": "One sentence describing what students will learn and why it matters.",
+  "duration": "50 minutes",
+  "difficulty": "Foundational",
+  "worksOffline": true,
+  
+  "hero": {
+    "subjectBadge": "Biology",
+    "levelBadge": "Foundational",
+    "icon": "🧬",
+    "gradient": "blue-to-purple"
+  },
+  
+  "intentions": {
+    "learning": [
+      "Students can explain the main concept with specific examples",
+      "Students can analyse the relationship between X and Y",
+      "Students can apply the concept to solve problems",
+      "Students can evaluate the significance of the concept in biological contexts"
+    ],
+    "connections": [
+      {"topic": "Prior: Cell Structure", "link": "module-1-cells-lesson-1"},
+      {"topic": "Future: Metabolism", "link": "mod1-lesson23"}
+    ],
+    "success": [
+      "I can define and give examples of key terminology",
+      "I can explain the process step-by-step",
+      "I can solve problems using the learned concept",
+      "I can relate this concept to real-world applications"
+    ]
+  },
+  
+  "contentHTML": "<!-- HERO HEADER --><div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>Lesson Title: Descriptive Subtitle</h1><p class='hero-description'>Compelling description that hooks student interest and explains why this lesson matters.</p></div><div class='hero-icon'>🧬</div></div></div><!-- INTENTIONS GRID --><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can explain the main concept with specific examples</li><li>Students can analyse the relationship between X and Y</li><li>Students can apply the concept to solve problems</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Cell structure and function</li><li><strong>Future:</strong> Cellular respiration and energy</li><li><strong>Real World:</strong> Medical applications</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can define and give examples of key terminology</li><li>I can explain the process step-by-step</li><li>I can solve problems using the learned concept</li></ul></div></div><!-- CONTENT SECTION 1 --><div class='card'><div class='card-header'><div class='card-icon'>🔬</div><h2>Section 1: Main Topic</h2></div><p><strong>Key Concept:</strong> Introduction to the main topic with <span class='key-term'>bolded key terms</span> defined inline.</p><div class='info-box'><strong>Important Concept:</strong> This is an info box (green) for highlighting key information students need to remember.</div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> This is a highlight box (orange) for warning about common errors.</div><div class='worked-example'><h4>Worked Example 1: Step-by-Step Solution</h4><p><strong>Problem:</strong> [Clear problem statement]</p><p><strong>Solution:</strong></p><div class='step-box'><strong>Step 1:</strong> First step explanation</div><div class='step-box'><strong>Step 2:</strong> Second step explanation</div><div class='step-box'><strong>Step 3:</strong> Final answer with units</div><p><strong>Check:</strong> Verify the answer makes sense...</p></div></div><!-- CONTENT SECTION 2 WITH TABLE --><div class='card'><div class='card-header'><div class='card-icon'>📊</div><h2>Section 2: Comparative Analysis</h2></div><p>Explanation of comparison...</p><div class='table-wrap'><table><tr><th>Category A</th><th>Category B</th><th>Category C</th></tr><tr><td>Data 1A</td><td>Data 1B</td><td>Data 1C</td></tr><tr><td>Data 2A</td><td>Data 2B</td><td>Data 2C</td></tr></table></div><div class='formula-box'><strong>Formula:</strong> Formula Name = (component / total) × 100%<br><br><strong>Where:</strong><br>• component = description<br>• total = description</div></div><!-- CONTENT SECTION 3: FLOW DIAGRAM --><div class='card'><div class='card-header'><div class='card-icon'>📊</div><h2>Section 3: Process Flow</h2></div><p>Description of the hierarchical or sequential process...</p><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>🔬</span><h4>1. STAGE ONE</h4><p>Description of stage one</p><div class='examples'><strong>Examples:</strong> Specific examples</div></div><div class='flow-arrow'>↓</div><p style='text-align:center;color:var(--text-muted);font-size:14px'><strong>Transition explanation</strong></p><div class='flow-box level-2'><span class='icon'>🧵</span><h4>2. STAGE TWO</h4><p>Description of stage two</p><div class='examples'><strong>Examples:</strong> Specific examples</div></div></div></div><!-- COPY TO BOOKS --><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Topic 1</h4><ul><li>Key point 1</li><li>Key point 2</li><li>Key point 3</li></ul></div><div class='copy-item'><h4>Topic 2</h4><ul><li>Key point 1</li><li>Key point 2</li><li>Key point 3</li></ul></div></div></div><!-- ACTIVITY 1 --><div class='activity'><div class='activity-number'>ACTIVITY 01</div><h3>Activity Title</h3><p class='activity-meta'>Brief description of what students will learn/do.</p><p style='color:var(--text-muted);margin-bottom:16px'>Instructions for the activity...</p><div class='answer-area' style='min-height:100px'>Answer space for Activity 1</div></div><!-- ACTIVITY 2 --><div class='activity'><div class='activity-number'>ACTIVITY 02</div><h3>Analysis Activity</h3><p class='activity-meta'>Apply knowledge to analyse a scenario.</p><ol style='color:var(--text-muted);line-height:2;margin-left:20px'><li>Question 1 requiring analysis</li><div class='answer-area'></div><li>Question 2 requiring application</li><div class='answer-area'></div></ol></div><!-- ASSESSMENT --><div class='card'><div class='card-header'><div class='card-icon'>❓</div><h2>Assessment Questions</h2></div><h3>Multiple Choice <span class='marks'>5 MARKS</span></h3><div style='margin:24px 0'><p style='color:var(--text);margin-bottom:12px;font-weight:500'>1. Question text?</p><div class='mc-option'><div class='mc-letter'>A</div><span class='mc-text'>Option A text</span></div><div class='mc-option'><div class='mc-letter'>B</div><span class='mc-text'>Option B text</span></div><div class='mc-option'><div class='mc-letter'>C</div><span class='mc-text'>Option C text</span></div><div class='mc-option'><div class='mc-letter'>D</div><span class='mc-text'>Option D text</span></div></div><h3 style='margin-top:40px'>Short Answer <span class='marks'>5 MARKS</span></h3><div class='question-item'><p>Question requiring extended response. <span class='marks'>3 MARKS</span></p><div class='answer-area' style='min-height:120px'></div></div></div><!-- ANSWERS SECTION --><div class='answers'><div class='answers-header'><div style='font-size:32px'>✅</div><h2>Comprehensive Answers</h2></div><div class='answer-item'><h4>🎯 ACTIVITY 01 – Activity Title</h4><p><strong>Complete answer with explanation:</strong></p><p>Detailed answer showing all working and reasoning...</p></div><div class='answer-item'><h4>❓ MULTIPLE CHOICE</h4><p><strong>1. B</strong> | <strong>2. C</strong> | <strong>3. A</strong> | <strong>4. D</strong> | <strong>5. B</strong></p></div><div class='answer-item'><h4>📝 SHORT ANSWER</h4><p><strong>Q1:</strong> Complete answer with step-by-step explanation...</p><p><strong>Marking criteria:</strong> 1 mark for X, 1 mark for Y, 1 mark for Z</p></div></div>",
+  
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "q1",
+        "question": "Question text?",
+        "options": ["Option A", "Option B", "Option C", "Option D"],
+        "correctAnswer": "Option B",
+        "marks": 1
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "sa1",
+        "question": "Extended response question",
+        "marks": 3,
+        "markingCriteria": ["1 mark for X", "1 mark for Y", "1 mark for Z"]
+      }
+    ]
+  },
+  
+  "answers": {
+    "activities": [
+      {
+        "id": "activity-1",
+        "title": "Activity 01",
+        "answer": "Complete answer with explanation..."
+      }
+    ],
+    "assessment": {
+      "multipleChoice": [
+        {"id": "q1", "answer": "B", "explanation": "Why B is correct..."}
+      ],
+      "shortAnswer": [
+        {"id": "sa1", "answer": "Complete model answer...", "markingGuide": "1 mark for X..."}
+      ]
+    }
+  },
+  
+  "navigation": {
+    "previous": "modX-lessonXX-1",
+    "previousTitle": "Previous Lesson Title",
+    "next": "modX-lessonXX+1",
+    "nextTitle": "Next Lesson Title"
+  },
+  
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
+    "version": "2.0",
+    "templateVersion": "2.0",
+    "tags": ["tag1", "tag2", "HSC-biology", "module-X"]
+  }
+}

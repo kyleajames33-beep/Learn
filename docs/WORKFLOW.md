@@ -261,20 +261,104 @@ Polish, optimise, add nice-to-haves only when everything above is done.
 
 ---
 
-## 7. CONTENT STANDARDS
+## 7. CONTENT STANDARDS (V2.0)
 
-### Every Lesson JSON MUST Include
-| Section | Requirement |
-|---------|------------|
-| Hero | Title, description, duration, difficulty |
-| Learning Intentions | 3-4 measurable goals |
-| Success Criteria | 3-4 student-friendly criteria |
-| Engagement Hook | Compelling scenario or question |
-| Content Sections | 2+ sections (diagram, grid, content, accordion) |
-| Activities | 2+ distinct types (labelling, matching, ordering, etc.) |
-| Assessment | 3 MCQ + 2 short answer |
-| Copy to Book | 5 definitions + 4-5 key points |
-| Navigation | Previous/next lesson links |
+**Reference:** See `docs/LESSON-DESIGN-SPEC.md` for complete design specification with visual examples.
+
+### Lesson Structure (Option C: Hybrid JSON + HTML)
+
+Lessons now use **JSON for metadata** and **HTML for rich content**:
+
+```javascript
+// data/lessons/mod1-lessonXX.json
+{
+  "id": "mod1-lessonXX",
+  "title": "Lesson Title",
+  "module": "module-1-cells",
+  // ... metadata fields ...
+  
+  "hero": {
+    "subjectBadge": "Biology",
+    "levelBadge": "Foundational",
+    "icon": "🧬",
+    "description": "Brief description"
+  },
+  
+  "intentions": {
+    "learning": ["Students can...", "Students can..."],
+    "connections": [{"topic": "Prior topic", "link": "lesson-id"}],
+    "success": ["I can...", "I can..."]
+  },
+  
+  "contentHTML": "<!-- Rich HTML content here -->",
+  
+  "assessment": {
+    "multipleChoice": [...],
+    "shortAnswer": [...]
+  },
+  
+  "answers": {
+    "activities": [...],
+    "assessment": [...]
+  }
+}
+```
+
+### Required Sections (Minimum Standard)
+
+| Section | Requirement | Reference Example |
+|---------|------------|-------------------|
+| **Hero Header** | Badges, title, description, icon | See LESSON-DESIGN-SPEC |
+| **Intentions Grid** | 3-column: Learning, Connections, Success | Example 1, Example 2 |
+| **Flow Diagram** | Visual hierarchy with arrows and icons | Example 2 |
+| **Content Cards** | 3-4 sections with styled boxes | Example 1, Example 2 |
+| **Tables** | 2-3 data tables per lesson | Example 1, Example 2 |
+| **Copy to Books** | Summary grid with key points | Example 2 |
+| **Activities** | 3-4 activities with answer areas | Example 2 |
+| **Assessment** | 4-5 MCQ + 3-4 Short Answer | Example 2 |
+| **Answers** | Complete answer section | Example 1, Example 2 |
+
+### Content Quality Bar (NON-NEGOTIABLE)
+
+✅ **Minimum Content:**
+- 2-3 **worked examples** with step-by-step solutions
+- 4-5 **styled boxes** (formula, info, highlight, worked-example)
+- 2-3 **data tables** with clear headers
+- **All questions** must have complete answers
+- **Australian English** throughout
+- **Key terms** bolded on first use
+- **Real-world examples**, not just theory
+
+❌ **Not Acceptable:**
+- Sparse content with just definitions
+- No worked examples
+- Missing answer keys
+- Walls of text without visual breaks
+- American spellings
+
+### Example Lessons (Gold Standard)
+
+These lessons represent the **minimum quality** all lessons must meet:
+
+1. **Chemistry Workshop (Gravimetric Analysis)** - Comprehensive worked examples, formula boxes
+2. **Biology (Cells, Tissues, Organs)** - Visual flow diagrams, rich content cards
+
+### New CSS Classes Available
+
+```css
+/* Layout */
+.hero, .hero-grid, .intentions-grid, .card
+.flow-diagram, .flow-box, .flow-arrow
+.activity, .answers
+
+/* Styled Boxes */
+.formula-box, .info-box, .highlight-box
+.worked-example, .warning-box, .step-box
+
+/* Components */
+.badge, .table-wrap, .answer-area
+.mc-option, .question-item, .answer-item
+```
 
 ### Australian English (Mandatory)
 | Wrong | Correct |
