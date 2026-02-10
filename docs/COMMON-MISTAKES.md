@@ -1,6 +1,6 @@
 # Common Mistakes & Solutions
 
-**Last Updated:** 2026-02-10 (v2 — added V2.0 renderer bugs #19-22)
+**Last Updated:** 2026-02-10 (v3 — added Lesson V2.0 quality gaps #23-26)
 **Purpose:** Known bugs, pitfalls, and how to avoid them
 
 Read this file BEFORE starting any work to avoid repeating past mistakes.
@@ -49,605 +49,748 @@ Read this file BEFORE starting any work to avoid repeating past mistakes.
 
 ---
 
-## CRITICAL MISTAKES (Will Break Lessons)
+## CRITICAL: QUALITY OVER SPEED PRINCIPLE
 
-### 1. Using `document.currentScript` in Async Callbacks
+### The #1 Mistake: Rushing to Complete Multiple Lessons
 
-**Bug:** Service worker registration failed with 404 error
+**Bug:** Lessons are "functional" but don't match the design spec. Activities are broken or missing. Content is sparse. Layout doesn't match templates.
 
-**Cause:**
-```javascript
-// WRONG - document.currentScript is null inside async callbacks
-window.addEventListener('load', () => {
-  const scriptUrl = document.currentScript.src; // NULL!
-  navigator.serviceWorker.register(new URL('service-worker.js', scriptUrl));
-});
+**Root Cause:** Trying to enhance all 25 lessons quickly instead of making ONE lesson perfect first.
+
+**The Pattern That Fails:**
+```
+❌ LESSON 1 ( rushed ) → LESSON 2 ( rushed ) → LESSON 3 ( rushed )
+   Activities broken      Diagrams missing      Content sparse
+   Styling off            No answer keys        Tables ugly
+```
+
+**The Pattern That Works:**
+```
+✅ LESSON 1 ( perfect ) → Copy as template → LESSON 2 ( perfect ) → etc.
+   All activities work      Reuse patterns      All activities work
+   Matches design spec      Refine process      Matches design spec
+   Comprehensive          Document lessons    Comprehensive
 ```
 
 **Solution:**
-```javascript
-// RIGHT - Capture document.currentScript synchronously at module level
-const _scriptUrl = document.currentScript && document.currentScript.src;
-
-window.addEventListener('load', () => {
-  if (!_scriptUrl) return;
-  const swPath = new URL('service-worker.js', _scriptUrl).href;
-  navigator.serviceWorker.register(swPath);
-});
-```
+1. Pick ONE lesson (Lesson 1)
+2. Make it MATCH THE TEMPLATE exactly (pixel-perfect, fully interactive)
+3. Get Kyle sign-off: "This is the quality bar"
+4. Document the exact structure, CSS classes, activity patterns
+5. THEN replicate for other lessons
 
 **How to avoid:**
-- NEVER access `document.currentScript` inside event callbacks
-- Always capture it at the top level of your script file
+- **NEVER** start Lesson 2 until Lesson 1 is approved as "the gold standard"
+- **ALWAYS** compare side-by-side with the HTML template
+- **TEST every activity** before declaring a lesson "done"
+- **ACCEPT** that using more HTML (even if tedious) produces better results
 
 ---
 
-### 2. CSS `.reveal` Hiding All Content
+## V2.0 LESSON QUALITY GAPS (Feb 2026)
 
-**Bug:** Lesson content invisible below hero section
+### 23. Activities Render as Stubs Instead of Interactive Components
+
+**Bug:** Activities show title and description but the interactive elements (drag-drop, labels, matching) don't work. Just shows "Write your answer here..." placeholder.
 
 **Cause:**
-```css
-/* WRONG - Content starts hidden and never shows */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-}
-```
-
-And IntersectionObserver adds `.revealed` but CSS expects `.visible`:
 ```javascript
-// WRONG class name
-entry.target.classList.add('revealed');
+// WRONG - Generic activity renderer
+renderV2Activity(activity) {
+  return `
+    <div class="activity">
+      <h3>${activity.title}</h3>
+      <p>${activity.description}</p>
+      <div class="answer-area">Write your answer here...</div>
+    </div>
+  `;
+}
 ```
 
 **Solution:**
-```css
-/* RIGHT - Content starts visible */
-.reveal {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+```javascript
+// RIGHT - Type-specific rendering
+renderV2Activity(activity) {
+  switch(activity.type) {
+    case 'labeling':
+      return this.renderLabelingActivity(activity);
+    case 'matching':
+      return this.renderMatchingActivity(activity);
+    case 'classification':
+      return this.renderClassificationActivity(activity);
+    // ... etc
+  }
 }
 ```
 
-```javascript
-// RIGHT class name
-entry.target.classList.add('visible');
-```
-
 **How to avoid:**
-- Never set `opacity: 0` as default for content elements
-- Always check that CSS class names match JavaScript class names
-- Test on actual deployed page, not just local
+- Always check the activity `type` field
+- Route to the specific renderer for that type
+- Test EVERY activity type in the lesson
+- Look at the old V1 renderer for reference implementations
 
 ---
 
-### 3. Browser Caching Stale Files
+### 24. Drag-and-Drop Missing Event Handlers
 
-**Bug:** Code changes not appearing after deployment
+**Bug:** Classification items have `draggable="true"` but dragging does nothing. Items don't move between zones.
 
 **Cause:**
-- HTML file cached by browser
-- HTML references old `?v=` params
-- Browser serves old CSS/JS even after code push
-
-**Solution:**
-
-**Before every commit that changes CSS/JS:**
-```bash
-node scripts/bump-versions.js
+```javascript
+// WRONG - Only render HTML, no event binding
+renderClassificationActivity(activity) {
+  return `<div draggable="true">...</div>`;
+}
+// ... missing bindActivityHandlers code
 ```
 
-This updates ALL `?v=` params across ALL HTML files to current timestamp.
+**Solution:**
+```javascript
+// RIGHT - Bind drag events in bindActivityHandlers
+bindActivityHandlers() {
+  // Drag start
+  document.querySelectorAll('.classification-item[draggable="true"]').forEach(item => {
+    item.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text/plain', item.dataset.itemId);
+    });
+  });
+  
+  // Drop zones
+  document.querySelectorAll('.classification-zone').forEach(zone => {
+    zone.addEventListener('dragover', (e) => e.preventDefault());
+    zone.addEventListener('drop', (e) => {
+      const itemId = e.dataTransfer.getData('text/plain');
+      const item = document.querySelector(`[data-item-id="${itemId}"]`);
+      zone.querySelector('.classification-items').appendChild(item);
+    });
+  });
+}
+```
 
 **How to avoid:**
-- Run `bump-versions.js` BEFORE committing CSS/JS changes
-- Add cache-control meta tags to critical HTML pages
-- Hard refresh (Ctrl+Shift+R) when testing
+- When adding `draggable="true"`, ALWAYS add the 4 drag events (dragstart, dragover, dragleave, drop)
+- Test drag-and-drop immediately after implementing
+- Add touch event handlers for mobile support
+
+---
+
+### 25. Not Enough Assessment Questions
+
+**Bug:** Lessons only have 2-3 MCQ and 1-2 SAQ when the standard requires 5 MCQ and 3 SAQ.
+
+**Cause:** Creating minimum content to "check the box" instead of comprehensive assessment.
+
+**Solution:**
+```json
+// RIGHT - Full assessment
+"assessment": {
+  "multipleChoice": [
+    { "id": "mcq-1", ... },  // Question 1
+    { "id": "mcq-2", ... },  // Question 2
+    { "id": "mcq-3", ... },  // Question 3
+    { "id": "mcq-4", ... },  // Question 4
+    { "id": "mcq-5", ... }   // Question 5 (don't stop at 3!)
+  ],
+  "shortAnswer": [
+    { "id": "sa-1", ... },   // Question 1
+    { "id": "sa-2", ... },   // Question 2
+    { "id": "sa-3", ... }    // Question 3 (don't stop at 2!)
+  ]
+}
+```
+
+**How to avoid:**
+- Count questions BEFORE declaring lesson complete
+- Target: 5 MCQ, 3 SAQ minimum
+- Each question should test different understanding level
+- Include answer keys for ALL questions
+
+---
+
+### 26. V2 CSS Not Loading / Styling Looks "Old"
+
+**Bug:** Lesson renders with wrong styling. Buttons look plain. Boxes don't have gradients. Looks like V1 styling.
+
+**Cause:**
+```javascript
+// WRONG - Not loading V2 CSS
+renderV2Content(lesson) {
+  // Just renders HTML, no CSS loaded
+}
+```
+
+**Solution:**
+```javascript
+// RIGHT - Dynamically load V2 CSS
+loadV2Styles() {
+  if (document.getElementById('lesson-v2-styles')) return;
+  
+  const link = document.createElement('link');
+  link.id = 'lesson-v2-styles';
+  link.rel = 'stylesheet';
+  link.href = '../assets/css/lesson-v2.css';
+  document.head.appendChild(link);
+}
+```
+
+**How to avoid:**
+- Always call `loadV2Styles()` when rendering V2 content
+- Check that CSS file exists at the path
+- Verify styles are applied in browser DevTools
+- Compare rendered output side-by-side with template
+
+---
+
+## ORIGINAL MISTAKES (Pre-V2.0)
+
+### 1. Wrong Icon Names (Lucide)
+
+**Bug:** Console error: `Error: Icon 'protein' not found` or `Icon 'cell' not found`
+
+**Cause:**
+```json
+// WRONG - Using icon names that don't exist in Lucide
+"icon": "protein"
+"icon": "cell"
+"icon": "bacteria"
+```
+
+**Solution:**
+```json
+// RIGHT - Use valid Lucide icon names only
+"icon": "activity"      // For proteins/enzymes
+"icon": "microscope"    // For cells
+"icon": "bug"           // For bacteria
+```
+
+**How to avoid:**
+- Check `docs/VALID_ICONS.md` for allowed icon names
+- If icon doesn't exist, use a metaphor (e.g., "activity" for protein, "bug" for bacteria)
+- Run validation: `node scripts/validate-lessons.js` catches icon errors
+- Full Lucide list: https://lucide.dev/icons/
+
+---
+
+### 2. Using American English Spelling
+
+**Bug:** Validation fails with: `Found "color" — should be "colour"`
+
+**Cause:**
+```json
+// WRONG - American spellings
+"color": "#ff0000"
+"specialized": true
+"behavior": "adaptive"
+```
+
+**Solution:**
+```json
+// RIGHT - Australian/British spellings
+"colour": "#ff0000"
+"specialised": true
+"behaviour": "adaptive"
+```
+
+**How to avoid:**
+- Run `node scripts/validate-spelling.js` before committing
+- Common swaps: color→colour, center→centre, fiber→fibre, hemoglobin→haemoglobin
+- Set spell checker to Australian English if using VS Code
+
+---
+
+### 3. Absolute Paths Break GitHub Pages
+
+**Bug:** Images don't load on GitHub Pages. Console shows 404 errors for `/assets/...`
+
+**Cause:**
+```html
+<!-- WRONG - Absolute path (breaks on GitHub Pages) -->
+<img src="/assets/images/diagram.webp">
+<link rel="stylesheet" href="/assets/css/style.css">
+```
+
+**Solution:**
+```html
+<!-- RIGHT - Relative path (works everywhere) -->
+<img src="../assets/images/diagram.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+```
+
+**How to avoid:**
+- **NEVER** use paths starting with `/`
+- Always use `../` or `./` relative paths
+- Validator catches this: `node scripts/validate-pages.js`
+- Test on GitHub Pages URL, not just locally
 
 ---
 
 ### 4. Unsupported Activity Types
 
-**Bug:** Activity section renders blank or shows error
+**Bug:** Console error: `Unknown activity type: comparison-table` or activities don't render
 
 **Cause:**
 ```json
-{
-  "type": "multiple-choice"  // NOT SUPPORTED
-}
+// WRONG - Activity types the renderer doesn't support
+"type": "comparison-table"
+"type": "interactive-slider"
+"type": "tonicity-simulator"
+"type": "problemSolving"
 ```
 
-**Supported types ONLY:**
-- `matching`
-- `fill-blank`
-- `classification`
-- `ordering`
-- `labeling`
-- `fillBlank`
-- `calculation`
-
 **Solution:**
-Change to a supported type:
 ```json
-{
-  "type": "classification"  // SUPPORTED
-}
+// RIGHT - Only use supported activity types
+"type": "labeling"         // ✓ Supported
+"type": "matching"         // ✓ Supported
+"type": "ordering"         // ✓ Supported
+"type": "classification"   // ✓ Supported
+"type": "multiple-choice"  // ✓ Supported (in assessment)
+"type": "short-answer"     // ✓ Supported (in assessment)
+"type": "fillBlank"        // ✓ Supported
+"type": "calculation"      // ✓ Supported
 ```
 
 **How to avoid:**
-- Check `scripts/validate-lessons.js` SUPPORTED_ACTIVITY_TYPES array
-- Run smoke test: `node scripts/smoke-test.js`
-- Don't invent new activity types without building renderer first
+- Check `docs/SUPPORTED_ACTIVITIES.md` for current list
+- Run validation: `node scripts/validate-lessons.js` catches unsupported types
+- If you need a new type, build the renderer FIRST, then use it
 
 ---
 
-### 5. MCQ Answer Not in Options List
+### 5. Incorrect MCQ Answer Format
 
-**Bug:** Quiz marking fails, shows "incorrect" for right answer
+**Bug:** MCQ validation fails: `correctAnswer "Is not surrounded by a membrane" is not in options list`
 
 **Cause:**
 ```json
+// WRONG - correctAnswer doesn't match option format
+"options": [
+  "Is not surrounded by a membrane",  // Text only
+  "Contains RNA instead of DNA"
+],
+"correctAnswer": "B"  // Using letter when options are text
+```
+
+**Solution:**
+```json
+// RIGHT - correctAnswer must match option format
+"options": [
+  "Is not surrounded by a membrane",
+  "Contains RNA instead of DNA"
+],
+"correctAnswer": "Is not surrounded by a membrane"  // Match the text
+```
+
+**How to avoid:**
+- If options are strings, correctAnswer must be the string
+- If options are objects with {value, text}, correctAnswer must match value
+- Validator catches mismatches
+
+---
+
+### 6. Missing Required JSON Fields
+
+**Bug:** Validation error: `Schema: Missing required field: learningIntentions`
+
+**Cause:** V2 lessons use `intentions` object but still need V1 fields for backward compatibility.
+
+**Solution:**
+```json
+// RIGHT - Include BOTH V1 and V2 fields
 {
-  "question": "What is X?",
-  "options": ["A", "B", "C", "D"],
-  "correctAnswer": "Option B"  // WRONG - not in options array!
-}
-```
-
-**Solution:**
-```json
-{
-  "question": "What is X?",
-  "options": ["A", "B", "C", "D"],
-  "correctAnswer": "B"  // RIGHT - matches options exactly
-}
-```
-
-**How to avoid:**
-- `correctAnswer` must be EXACTLY one of the strings in `options` array
-- Copy-paste from options array, don't retype
-- Run validation: `node scripts/validate-lessons.js`
-
----
-
-## QUALITY MISTAKES (Tests Will Fail)
-
-### 6. American English Spelling
-
-**Bug:** Validation fails with spelling errors
-
-**Examples:**
-- ❌ specialized → ✅ specialised
-- ❌ behavior → ✅ behaviour
-- ❌ color → ✅ colour
-- ❌ center → ✅ centre
-- ❌ analyze → ✅ analyse
-- ❌ fiber → ✅ fibre
-- ❌ hemoglobin → ✅ haemoglobin
-- ❌ labeled → ✅ labelled
-- ❌ tumor → ✅ tumour
-
-**How to avoid:**
-- Use Australian English from the start
-- Run: `node scripts/validate-spelling.js`
-- Set your editor spell-check to "English (Australia)"
-
----
-
-### 7. Absolute Paths in HTML
-
-**Bug:** CSS/JS/images don't load on GitHub Pages
-
-**Cause:**
-```html
-<!-- WRONG - absolute path breaks on /Learn/ subdirectory -->
-<link rel="stylesheet" href="/assets/css/global.css">
-```
-
-**Solution:**
-```html
-<!-- RIGHT - relative path works everywhere -->
-<link rel="stylesheet" href="../assets/css/global.css">
-```
-
-**How to avoid:**
-- NEVER use paths starting with `/`
-- Always use `../` or `./` relative paths
-- Run: `node scripts/validate-pages.js`
-
----
-
-### 8. Missing Required JSON Fields
-
-**Bug:** Lesson fails to load, shows "Invalid lesson data"
-
-**Required fields:**
-```json
-{
-  "id": "mod1-lesson01",
-  "title": "...",
-  "module": "module-1-cells",
-  "moduleTitle": "...",
-  "lessonNumber": 1,
-  "duration": "45 minutes",
-  "difficulty": "Foundation Level",
-  "learningIntentions": [...],
-  "successCriteria": [...],
-  "contentSections": [...]
-}
-```
-
-**How to avoid:**
-- Copy from TEMPLATE.json
-- Run: `node scripts/validate-lessons.js`
-
----
-
-### 9. Lesson ID Format Mismatch
-
-**Bug:** Schema validation rejects lesson ID
-
-**Valid formats:**
-```json
-"id": "mod1-lesson01"           // ✅ VALID
-"id": "module-1-cells-lesson-1"  // ✅ VALID
-```
-
-**Invalid formats:**
-```json
-"id": "lesson-1"                 // ❌ INVALID
-"id": "mod-1-lesson-1"           // ❌ INVALID
-"id": "module1lesson1"           // ❌ INVALID
-```
-
-**Pattern:**
-- `mod[NUMBER]-lesson[NUMBER]` OR
-- `module-[NUMBER]-[NAME]-lesson-[NUMBER]`
-
-**How to avoid:**
-- Follow the pattern exactly
-- Run: `node scripts/validate-lessons.js`
-
----
-
-## PERFORMANCE MISTAKES
-
-### 10. Service Worker Stale-While-Revalidate for CSS/JS
-
-**Bug:** Users always see old cached code first
-
-**Cause:**
-```javascript
-// WRONG strategy for CSS/JS
-if (isAsset(request)) {
-  return staleWhileRevalidate(request); // Serves old code!
-}
-```
-
-**Solution:**
-```javascript
-// RIGHT strategy - network-first for CSS/JS
-if (isCriticalAsset(request)) { // CSS/JS only
-  return networkFirst(request); // Fetch fresh code
-}
-if (isAsset(request)) { // Images/fonts
-  return staleWhileRevalidate(request); // Cache OK for images
-}
-```
-
-**How to avoid:**
-- Use network-first for CSS/JS
-- Use stale-while-revalidate for images/fonts only
-- Bump service worker cache version when changing strategy
-
----
-
-### 11. Missing Cache-Control Meta Tags
-
-**Bug:** Browser caches HTML files aggressively
-
-**Solution:**
-Add to `<head>` of all critical pages:
-```html
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-```
-
-**How to avoid:**
-- Add to: `index.html`, `hsc-biology/index.html`, `lesson.html`
-- Don't add to static content pages (they can cache)
-
----
-
-## CONTENT QUALITY MISTAKES
-
-### 12. Too Few Activities
-
-**Bug:** Quality score drops below baseline
-
-**Minimum:**
-- 2 activities per lesson (but warns)
-
-**Recommended:**
-- 4 activities per lesson
-- At least 2 different activity types
-
-**How to avoid:**
-- Run: `node scripts/score-lessons.js`
-- Check quality score vs baseline (first 5 lessons)
-
----
-
-### 13. Missing Engagement Hook
-
-**Bug:** Lesson feels dry, quality score penalized
-
-**Solution:**
-```json
-{
-  "engagementHook": {
-    "title": "The Invisible Kingdom",
-    "content": "Compelling question or scenario that hooks student interest. Minimum 20 characters."
+  "learningIntentions": [...],  // V1 field
+  "successCriteria": [...],     // V1 field
+  "intentions": {               // V2 field
+    "learning": [...],
+    "connections": [...],
+    "success": [...]
   }
 }
 ```
 
 **How to avoid:**
-- Every lesson needs an engagement hook
-- Make it interesting, not generic
-- Minimum 20 characters
+- Check schema requirements in validation output
+- Keep V1 fields for backward compatibility until full migration
+- Test lesson renders in BOTH old and new renderer
 
 ---
 
-### 14. Weak Assessment Questions
+### 7. Broken Navigation Chains
 
-**Bug:** Quality score drops, insufficient assessment
+**Bug:** "Next Lesson" button goes to 404 page. Previous button missing on Lesson 2.
 
-**Minimum:**
-- 3 MCQs with 4 options each
-- 2 Short Answer Questions
-
-**Each MCQ must have:**
+**Cause:**
 ```json
-{
-  "id": "mcq-1",
-  "question": "...",
-  "options": ["A", "B", "C", "D"],  // Exactly 4
-  "correctAnswer": "B"               // One of the options
+// WRONG - Points to non-existent lesson
+"navigation": {
+  "next": "module-1-cells-lesson-99"  // This lesson doesn't exist!
+}
+```
+
+**Solution:**
+```json
+// RIGHT - Only link to lessons that exist
+"navigation": {
+  "previous": "module-1-cells-lesson-1",  // Real lesson
+  "next": "module-1-cells-lesson-3"       // Real lesson
+}
+// OR null for first/last lesson:
+"navigation": {
+  "previous": null,  // First lesson
+  "next": "module-1-cells-lesson-2"
 }
 ```
 
 **How to avoid:**
-- Run: `node scripts/validate-lessons.js`
-- Check: "Assessment: Only X MCQs (recommend 3)"
+- Always verify the lesson ID exists in `data/lessons/`
+- Check navigation on first and last lessons in a module
+- Run validation: catches broken navigation chains
 
 ---
 
-## WORKFLOW MISTAKES
+### 8. Activities Missing XP Rewards
 
-### 15. Committing Without Testing
-
-**Bug:** Breaks deployment, wastes time
-
-**WRONG workflow:**
-```bash
-git add -A
-git commit -m "add lesson"
-git push
-# OOPS - tests fail in production
-```
-
-**RIGHT workflow:**
-```bash
-node scripts/run-all-checks.js  # Test first!
-# Fix any failures
-git add -A
-git commit -m "add lesson"
-git push
-```
-
-**How to avoid:**
-- ALWAYS run tests before commit
-- Never skip validation
-- Add to muscle memory: test → commit → push
-
----
-
-### 16. Not Updating STATUS.md
-
-**Bug:** Next AI doesn't know what was done or what to do next
-
-**ALWAYS update:**
-1. LAST SESSION LOG (what you did)
-2. NEXT TASK (what should happen next)
-
-**How to avoid:**
-- Read `docs/AI-START-HERE.md` Step 4
-- Update before committing
-- Include test results in session log
-
----
-
-### 17. Duplicate Renders
-
-**Bug:** Lesson renders twice, duplicate console logs
+**Bug:** Activities don't award XP when completed. Gamification breaks.
 
 **Cause:**
-- lesson-renderer.js auto-initializes on DOMContentLoaded
-- lesson.html ALSO manually calls init()
+```json
+// WRONG - No xpReward field
+{
+  "id": "activity-1",
+  "type": "matching",
+  "title": "Match the terms"
+  // Missing xpReward!
+}
+```
 
 **Solution:**
-```javascript
-// Remove auto-init from lesson-renderer.js
-// ONLY initialize from lesson.html manually
+```json
+// RIGHT - Include xpReward
+{
+  "id": "activity-1",
+  "type": "matching",
+  "title": "Match the terms",
+  "xpReward": 50
+}
 ```
 
 **How to avoid:**
-- Don't add auto-init to modules
-- Let the HTML page control initialization
+- Every activity should have `xpReward` (typically 25-100)
+- Assessment questions don't need XP (they're separate)
+- Run validation: warns about missing XP
 
 ---
 
-## DEBUGGING MISTAKES
+### 9. Forgetting to Update Tracker Files
+
+**Bug:** `docs/trackers/MODULE-1-LESSONS.md` shows lesson as "JSON" stage but it's actually "LIVE".
+
+**Cause:** Focusing only on code, forgetting documentation.
+
+**Solution:** Update tracker immediately when lesson stage changes:
+```markdown
+| 5 | module-1-cells-lesson-5 | Passive Transport | data/ | `LIVE` | Labeling, Classification | Deployed |
+```
+
+**How to avoid:**
+- After completing work: update tracker BEFORE committing
+- Include in commit: "Updated MODULE-1-LESSONS.md"
+- STATUS.md handoff protocol requires tracker updates
+
+---
+
+### 10. Not Bumping Versions After CSS/JS Changes
+
+**Bug:** User reports "changes not showing" even after deployment. Browser cached old files.
+
+**Cause:** CSS/JS files have same `?v=` parameter, browser uses cache.
+
+**Solution:**
+```bash
+# After any CSS/JS change:
+node scripts/bump-versions.js  # Updates ?v= timestamp
+git add -A
+git commit -m "fix: updated styles"
+```
+
+**How to avoid:**
+- ALWAYS run `bump-versions.js` after editing CSS/JS
+- Check that HTML files have new version numbers
+- Tell users to hard refresh (Ctrl+Shift+R)
+
+---
+
+### 11. Missing Answer Keys
+
+**Bug:** Assessment section shows questions but no answers. Students can't check work.
+
+**Cause:**
+```json
+// WRONG - No answerKey or answers section
+{
+  "assessment": { "multipleChoice": [...], "shortAnswer": [...] }
+  // Missing answers!
+}
+```
+
+**Solution:**
+```json
+// RIGHT - Include comprehensive answers
+{
+  "assessment": { "multipleChoice": [...], "shortAnswer": [...] },
+  "answers": {
+    "activities": [...],
+    "assessment": [
+      { "questionId": "mcq-1", "correctAnswer": "B", "explanation": "..." },
+      { "questionId": "sa-1", "correctAnswer": "...", "markingCriteria": [...] }
+    ]
+  }
+}
+```
+
+**How to avoid:**
+- Every question MUST have an answer
+- Include explanations, not just correct choices
+- Add marking criteria for SAQ questions
+
+---
+
+### 12. Using Placeholder Content
+
+**Bug:** Lesson has "Lorem ipsum" or "TODO: add content here" in production.
+
+**Cause:** Rushing to complete lessons without real content.
+
+**Solution:** Write actual educational content:
+```json
+// WRONG
+"content": "TODO: explain cell structure here"
+
+// RIGHT
+"content": "Prokaryotic cells lack a membrane-bound nucleus. Instead, their DNA is concentrated in a region called the nucleoid..."
+```
+
+**How to avoid:**
+- Never commit placeholder text
+- If content isn't ready, don't mark lesson as complete
+- Use syllabus dot points as content guide
+
+---
+
+### 13. Images Missing or Wrong Paths
+
+**Bug:** Broken image icons in lesson. Console shows 404 for `.webp` files.
+
+**Cause:**
+```json
+// WRONG - Image doesn't exist or wrong path
+"image": "assets/images/mod1/nonexistent.webp"
+```
+
+**Solution:**
+```json
+// RIGHT - Verify image exists
+"image": "assets/images/mod1/lesson01/prokaryote-diagram.webp"
+// Check: Does this file actually exist in the repo?
+```
+
+**How to avoid:**
+- Only reference images that exist in `assets/images/`
+- Use WebP format (<100KB per image)
+- Include alt text for accessibility
+- Have fallback if image is missing
+
+---
+
+### 14. Not Testing Activities Actually Work
+
+**Bug:** Activity renders but clicking "Check Answers" does nothing. Or feedback is wrong.
+
+**Cause:** Only checking that activity appears, not that it functions.
+
+**Solution:** Test every activity:
+1. Render the lesson
+2. Complete the activity (enter answers)
+3. Click "Check Answers"
+4. Verify feedback is correct
+5. Check XP is awarded
+
+**How to avoid:**
+- Manual test every activity type in the lesson
+- Try wrong answers to verify feedback
+- Check console for JS errors
+- Test on mobile (touch) AND desktop (mouse)
+
+---
+
+### 15. Confusing Lesson IDs
+
+**Bug:** Multiple lessons with similar IDs: `mod1-lesson01`, `module-1-cells-lesson-1`, `lesson-1`
+
+**Cause:** Inconsistent naming convention across files.
+
+**Solution:** Use consistent format:
+```
+module-[number]-[topic]-lesson-[number]
+Examples:
+- module-1-cells-lesson-1
+- module-1-cells-lesson-2
+- module-5-heredity-lesson-1
+```
+
+**How to avoid:**
+- Check existing lessons for the pattern
+- Use hyphens, not underscores
+- Include full module name, not just "mod1"
+- Always 2-digit lesson numbers (01, 02, etc.)
+
+---
+
+### 16. Duplicating Content Between V1 and V2 Fields
+
+**Bug:** Same content in `contentSections` (V1) and `contentHTML` (V2), making files huge.
+
+**Cause:** Not understanding the migration strategy.
+
+**Solution:**
+```json
+// During transition: Keep V1 minimal, V2 comprehensive
+{
+  "contentSections": [
+    { "type": "content", "title": "Summary", "content": "See detailed content below" }
+  ],
+  "contentHTML": "<div class='card'>...</div>"  // Full V2 content
+}
+```
+
+**How to avoid:**
+- V1 contentSections can be minimal/summary
+- V2 contentHTML should be comprehensive
+- Eventually remove V1 fields when fully migrated
+
+---
+
+### 17. Forgetting to Run All Checks Before Committing
+
+**Bug:** Committed code with validation errors. Broke the build.
+
+**Cause:**
+```bash
+# WRONG - Committing without validation
+git add .
+git commit -m "new lesson"
+git push
+# Oops! Validation would have caught errors
+```
+
+**Solution:**
+```bash
+# RIGHT - Validate first
+node scripts/run-all-checks.js  # MUST PASS
+git add -A
+git commit -m "new lesson"
+git push
+```
+
+**How to avoid:**
+- **MANDATORY:** Run `run-all-checks.js` before EVERY commit
+- Fix ALL errors (don't ignore warnings)
+- If checks fail, fix before committing
+
+---
 
 ### 18. Not Using Error Tracker
 
-**Bug:** Spend 8 hours debugging 1 issue
+**Bug:** Production errors go unnoticed. Users report "lesson broken" but no details.
 
-**Solution:**
-1. Add error tracker to lesson.html:
-   ```html
-   <script src="../assets/js/error-tracker.js"></script>
-   ```
+**Cause:** Not checking error logs or not having tracking enabled.
 
-2. When user reports bug, get errors:
-   ```javascript
-   // In browser console
-   copy(JSON.stringify(localStorage.getItem('science-hub-errors')))
-   ```
+**Solution:** Use the error tracker:
+```javascript
+// In code:
+ErrorTracker.log('Activity failed', { activityId: 'xyz', error: e.message });
 
-3. Analyze:
-   ```bash
-   # Paste into scripts/errors.json
-   node scripts/read-errors.js
-   ```
+// To check errors:
+node scripts/read-errors.js
+```
 
 **How to avoid:**
-- Always use error tracker
-- Get production errors instead of guessing
-- Reduces debug time from hours to minutes
+- Wrap risky code in try-catch
+- Log errors with context
+- Check error logs regularly
 
 ---
 
-## V2.0 RENDERER MISTAKES (New Format)
-
 ### 19. V2 Lesson Crashes Renderer — Missing Format Detection
 
-**Bug:** Lesson shows "Failed to load lesson: TypeError: Cannot read properties of undefined (reading 'title')" — page is completely blank
+**Bug:** Lesson with `v2: true` crashes with `Cannot read properties of undefined (reading 'title')` at `renderEngagementHook`.
 
-**Cause:**
-```javascript
-// WRONG - render() always calls V1 methods, even for V2 lessons
-render() {
-  const html = `
-    ${this.renderEngagementHook()}  // V2 lessons have NO engagementHook!
-  `;
-}
-
-renderEngagementHook() {
-  const hook = this.lesson.engagementHook; // undefined for V2
-  return `<h3>${hook.title}</h3>`;  // CRASH: cannot read 'title' of undefined
-}
-```
+**Cause:** Renderer tries to access V1 fields (`engagementHook`) on V2 lesson before detecting it's V2 format.
 
 **Solution:**
 ```javascript
-// RIGHT - detect V2 format and route to V2 renderer
-render() {
-  if (this.isV2Format()) {
-    this.loadV2Styles();
-    this.renderV2();  // Uses V2 methods that understand contentHTML, hero, intentions
-    return;
-  }
-  // ... V1 rendering below
+// Add guard in renderEngagementHook
+renderEngagementHook(hook) {
+  if (!hook || typeof hook !== 'object') return '';  // Guard clause
+  return `...`;
 }
 
-isV2Format() {
-  return this.lesson && (this.lesson.v2 === true || this.lesson.contentHTML);
-}
-
-// Also guard V1 methods against missing fields
-renderEngagementHook() {
-  const hook = this.lesson.engagementHook;
-  if (!hook) return '';  // Guard!
-  // ...
+// And ensure V2 detection happens early
+isV2Format(lesson) {
+  return lesson.hero && lesson.intentions && (lesson.contentHTML || lesson.v2 === true);
 }
 ```
 
 **How to avoid:**
-- V2 lessons have `"v2": true` and `contentHTML` fields — no `engagementHook`
-- When adding V2 format support to ANY renderer method, always add null guards
-- Always add `isV2Format()` detection BEFORE accessing V1-specific fields
-- Test with BOTH V1 and V2 lessons after any renderer changes
+- Add null checks in all render methods
+- Detect V2 format BEFORE accessing any fields
+- Test V2 lesson immediately after creating
 
 ---
 
 ### 20. V2 Answer Formats Are Not Always Arrays
 
-**Bug:** "TypeError: act.answers.map is not a function" — Answer Key section crashes
+**Bug:** Answer key crashes when trying to `.map()` over answers that are objects or strings.
 
-**Cause:**
-V2 lessons have 3 different answer formats in `answers.activities`:
+**Cause:** Assuming all answers are arrays:
 ```javascript
-// Format 1: Array (labeling, matching) — works with .map()
-{ "answers": [{ "label": "Nucleoid", "description": "..." }] }
-
-// Format 2: Object with category keys (classification) — .map() CRASHES!
-{ "answers": { "prokaryotic": ["item1", "item2"], "eukaryotic": ["item3"] } }
-
-// Format 3: No answers property (ordering) — .map() CRASHES!
-{ "correctOrder": ["step1", "step2"], "explanation": "..." }
-```
-
-```javascript
-// WRONG - assumes all answers are arrays
-act.answers.map(a => `<li>${a.label}: ${a.description}</li>`)  // CRASH on format 2 & 3!
+// WRONG
+answers.activities.map(...)  // Crashes if activities is undefined
 ```
 
 **Solution:**
 ```javascript
-// RIGHT - handle all 3 formats
-renderV2ActivityAnswer(act) {
-  if (Array.isArray(act.answers)) {
-    return act.answers.map(a => `<li>${a.label}: ${a.description}</li>`).join('');
-  }
-  if (act.answers && typeof act.answers === 'object') {
-    return Object.entries(act.answers).map(([category, items]) =>
-      `<strong>${category}:</strong><ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>`
-    ).join('');
-  }
-  if (act.correctOrder) {
-    return `<ol>${act.correctOrder.map(i => `<li>${i}</li>`).join('')}</ol>`;
-  }
-  return '<p>See activity for answer.</p>';
+// RIGHT - Check format before mapping
+const activities = answers.activities || [];
+if (Array.isArray(activities)) {
+  activities.map(...)
 }
 ```
 
 **How to avoid:**
-- NEVER assume `act.answers` is an array — always check with `Array.isArray()`
-- Different activity types (labeling, classification, ordering) have different answer structures
-- When rendering answers, handle: array, object, and missing/undefined cases
-- Test the answer key section with ALL activity types in the lesson
+- Always check if field exists before accessing
+- Handle multiple formats (array, object, string)
+- Use defensive coding: `field || []`, `field || {}`
 
 ---
 
 ### 21. Missing Script References in lesson.html
 
-**Bug:** HTML validation fails; features like gamification don't work on lesson pages
+**Bug:** Activities don't work because `TouchUtils` or other libraries not loaded.
 
-**Cause:**
-```html
-<!-- WRONG - missing main.js (contains gamification engine, utilities) -->
-<script src="../assets/js/lucide.min.js"></script>
-<script src="../assets/js/lesson-renderer.js"></script>
-<!-- No main.js! -->
-```
+**Cause:** lesson.html missing script tags that exist in other pages.
 
-**Solution:**
+**Solution:** Copy working structure:
 ```html
-<!-- RIGHT - include all required scripts -->
-<script src="../assets/js/lucide.min.js"></script>
+<!-- Check a working lesson page -->
+<script src="../assets/js/touch-utils.js"></script>
+<script src="../assets/js/error-tracker.js"></script>
 <script src="../assets/js/lesson-renderer.js"></script>
-<script src="../assets/js/main.js"></script>
 ```
 
 **How to avoid:**
-- Check `index.html` and `hsc-biology/index.html` for the full script list
-- Run: `node scripts/validate-pages.js` — catches missing required scripts
 - When creating new HTML pages, copy script tags from an existing working page
+- Check browser console for "X is not defined" errors
 
 ---
 
@@ -696,6 +839,9 @@ While working:
 - [ ] Follow the lesson pipeline stages
 - [ ] If editing renderer: test with BOTH V1 and V2 lesson formats
 - [ ] If editing V2 answers: handle array, object, AND missing formats
+- [ ] **QUALITY OVER SPEED:** Make one lesson perfect before moving to next
+- [ ] **TEST EVERY ACTIVITY:** Don't assume it works—verify it
+- [ ] **COMPARE TO TEMPLATE:** Side-by-side with HTML example
 
 Before committing:
 - [ ] Run `node scripts/run-all-checks.js`

@@ -12,28 +12,39 @@
 
 **Do this first. This is the single most important thing to work on right now.**
 
-### Task: Phase 1 Enhancement - Upgrade Lessons to V2.0 Quality
+### Task: PERFECT Lesson 1 Before Moving On
 
 **Current state:** 
 - ✅ All 25 Module 1 lessons LIVE with basic functionality
 - ✅ V2.0 Design Specification complete (LESSON-DESIGN-SPEC.md)
 - ✅ V2.0 CSS created (lesson-v2.css)
 - ✅ V2.0 Template created (TEMPLATE-v2.json)
-- ✅ All 5 verification checks passing
-- 🔄 Ready to begin lesson enhancement
+- ✅ Lesson 1 converted to V2.0 format
+- 🔄 Lesson 1 needs POLISH to match template quality
 
-**Your task:**
-1. ✅ DONE - Modified lesson-renderer.js to support HTML content blocks
-2. ✅ DONE - Enhanced Lesson 1 (module-1-cells-lesson-1) to V2.0 format
-3. **Mobile QA Lesson 1** at 375px viewport:
-   - Test on actual device or emulator
-   - Check for horizontal scroll
-   - Verify touch targets 44px+
-   - Confirm all V2.0 elements render correctly
-4. **Enhance Lesson 2** (module-1-cells-lesson-2) to V2.0 format
-5. Run validation after each lesson
-6. Update MODULE-1-LESSONS.md with V2.0 status
-7. Commit after each lesson
+**LESSON 1 QUALITY GAPS (to fix):**
+- [ ] Activities should match template styling exactly
+- [ ] All drag-and-drop should work smoothly
+- [ ] Check button should look modern (not "old and bad")
+- [ ] Compare side-by-side with HTML template Kyle provided
+- [ ] Mobile: Touch targets 44px+, no horizontal scroll
+- [ ] Laptop: Full layout, hover states work
+- [ ] Get Kyle sign-off: "This is the gold standard"
+
+**YOUR TASK - QUALITY OVER SPEED:**
+1. **STOP** - Don't start Lesson 2 yet
+2. **COMPARE** - Open Lesson 1 and the HTML template side-by-side
+3. **LIST** - Every difference you see (styling, spacing, fonts, colors)
+4. **FIX** - Each difference one by one
+5. **TEST** - Every activity, every button, every hover state
+6. **REPEAT** - Until Lesson 1 looks EXACTLY like the template
+7. **DOCUMENT** - The exact structure so we can replicate it
+
+**Only after Kyle approves Lesson 1:**
+- THEN we enhance Lessons 2-5 using the same pattern
+- THEN Lessons 6-10, etc.
+
+**Pipeline target:** Make Lesson 1 PERFECT, then replicate. Not 25 lessons at 80% quality.
 
 **Pipeline target:** All 25 lessons meet V2.0 Quality Standard.
 **Key files:** 
