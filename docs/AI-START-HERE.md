@@ -29,6 +29,12 @@ Read these files **in this exact order:**
    - Understand the quality standards
    - Know the validation commands
 
+5. **[CONTENT-AUTHOR-GUIDE.md](CONTENT-AUTHOR-GUIDE.md)** — HTML content authoring reference
+   - **Read this if your task involves creating or enhancing V2.0 lessons**
+   - Lists every CSS class available for lesson HTML content
+   - Defines the required lesson structure (hero, intentions, cards, activities, assessment, answers)
+   - Used by external AIs generating lesson HTML — you wrap that HTML into V2 JSON
+
 ---
 
 ## STEP 2: DO THE WORK

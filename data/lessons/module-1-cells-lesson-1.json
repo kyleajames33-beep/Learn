@@ -1,521 +1,634 @@
 {
   "id": "module-1-cells-lesson-1",
-  "title": "Prokaryotic Cell Structure: The Invisible Army",
+  "title": "Prokaryotic vs Eukaryotic Cells: Evolution of Complexity",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 1,
-  "description": "Discover how bacteria survive without a nucleus. Learn to identify key prokaryotic structures including the nucleoid region, 70S ribosomes, and peptidoglycan cell wall. Understand why antibiotics can target bacterial cells without harming human cells.",
+  "description": "Discover the fundamental divide in cellular life: how membrane-bound organelles transformed simple prokaryotes into complex eukaryotes, enabling all multicellular life on Earth including humans.",
   "duration": "50 minutes",
   "difficulty": "Foundation Level",
   "worksOffline": true,
   "v2": true,
-
   "hero": {
     "subjectBadge": "HSC Biology",
     "levelBadge": "Foundational",
     "icon": "🦠",
     "gradient": "blue-to-purple"
   },
-
   "learningIntentions": [
-    "Identify the key structural features of prokaryotic cells (nucleoid region, cell wall, 70S ribosomes, flagella)",
-    "Distinguish between prokaryotic and eukaryotic cells using structural criteria",
-    "Explain why antibiotics that target prokaryotic ribosomes do not affect human cells"
+    "Distinguish between prokaryotic and eukaryotic cell structures",
+    "Identify membrane-bound organelles and explain their functions",
+    "Explain the evolutionary significance of compartmentalisation",
+    "Evaluate evidence for the endosymbiotic theory",
+    "Apply understanding to classify organisms by cell type"
   ],
-  
   "successCriteria": [
-    "I can draw and label a prokaryotic cell showing the nucleoid region, cell wall, and 70S ribosomes",
-    "I can state three ways prokaryotic cells differ from eukaryotic cells",
-    "I can explain the significance of the nucleoid region having no membrane"
+    "I can accurately label prokaryotic and eukaryotic cell diagrams",
+    "I can list at least 5 structural differences between cell types",
+    "I can explain three advantages of membrane-bound organelles",
+    "I can describe evidence supporting endosymbiotic theory",
+    "I can compare cell size and complexity using data"
   ],
-
-  "contentSections": [
-    {
-      "id": "intro",
-      "type": "content",
-      "title": "The Invisible Army",
-      "icon": "microscope",
-      "content": "Prokaryotic cells like bacteria have no nucleus, no mitochondria, and no membrane-bound organelles. Yet they can reproduce rapidly—one E. coli cell can become 17 million cells in just 12 hours."
-    },
-    {
-      "id": "key-structures",
-      "type": "definition",
-      "title": "Key Prokaryotic Structures",
-      "icon": "book-open",
-      "content": "Nucleoid region (DNA with no membrane), 70S ribosomes (smaller than eukaryotic 80S), peptidoglycan cell wall, flagella for movement, and plasmids for antibiotic resistance."
-    },
-    {
-      "id": "antibiotics",
-      "type": "content",
-      "title": "Why Antibiotics Work",
-      "icon": "shield",
-      "content": "Antibiotics exploit structural differences: bacterial 70S ribosomes differ from human 80S ribosomes, allowing selective toxicity. Penicillin targets the unique peptidoglycan cell wall."
-    }
-  ],
-
   "intentions": {
     "learning": [
-      "Identify the key structural features of prokaryotic cells (nucleoid region, cell wall, 70S ribosomes, flagella)",
-      "Distinguish between prokaryotic and eukaryotic cells using structural criteria",
-      "Explain why antibiotics that target prokaryotic ribosomes do not affect human cells"
+      "Students can distinguish between prokaryotic and eukaryotic cell structures",
+      "Students can identify membrane-bound organelles and explain their functions",
+      "Students can explain the evolutionary significance of compartmentalisation",
+      "Students can evaluate evidence for the endosymbiotic theory",
+      "Students can apply understanding to classify organisms by cell type"
     ],
     "connections": [
       {
-        "topic": "Cell Theory",
-        "description": "Prokaryotes represent the simplest cellular life forms, demonstrating the minimum requirements for life"
+        "topic": "Cell theory and basic cell structure",
+        "description": "Prior knowledge of what makes something a cell"
       },
       {
-        "topic": "Eukaryotic Cell Structure",
+        "topic": "Eukaryotic Cell Compartmentalisation",
         "link": "module-1-cells-lesson-2",
-        "description": "Understanding prokaryotic simplicity highlights the complexity of compartmentalised eukaryotic cells"
+        "description": "Deep dive into organelle structure and function"
       },
       {
         "topic": "Infectious Disease",
-        "description": "Antibiotic mechanisms exploit structural differences between prokaryotic and eukaryotic cells"
+        "description": "Antibiotic resistance in bacteria, human diseases caused by organelle dysfunction"
       }
     ],
     "success": [
-      "I can draw and label a prokaryotic cell showing the nucleoid region, cell wall, and 70S ribosomes",
-      "I can state three ways prokaryotic cells differ from eukaryotic cells",
-      "I can explain the significance of the nucleoid region having no membrane"
+      "I can accurately label prokaryotic and eukaryotic cell diagrams",
+      "I can list at least 5 structural differences between cell types",
+      "I can explain three advantages of membrane-bound organelles",
+      "I can describe evidence supporting endosymbiotic theory",
+      "I can compare cell size and complexity using data"
     ]
   },
-
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Prokaryotic cell structure and function"
+    "focus": "Prokaryotic vs eukaryotic cell structure and the evolution of complexity"
   },
-
-  "contentHTML": "<div class=\"card\">\n  <h3>🦠 The Invisible Army</h3>\n  <p>Imagine a single <strong>Escherichia coli</strong> bacterium settling on a nutrient-rich surface. Within 12 hours, that one cell can become <strong>17 million</strong> cells—enough to form a visible colony the size of a coin.</p>\n  <p>Yet this remarkable organism has:</p>\n  <ul>\n    <li>❌ <strong>No nucleus</strong>—just a nucleoid region</li>\n    <li>❌ <strong>No mitochondria</strong>—energy production happens at the cell membrane</li>\n    <li>❌ <strong>No membrane-bound organelles</strong>—just cytoplasm with 70S ribosomes</li>\n  </ul>\n  <div class=\"highlight-box\">\n    <strong>Critical Question:</strong> How does such a 'simple' cell survive, reproduce, and outcompete complex organisms? And why can penicillin kill bacteria but not harm your cells?\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>🔬 Basic Prokaryotic Structure</h3>\n  <div class=\"flow-diagram\">\n    <div class=\"flow-box level-1\">\n      <strong>Prokaryotic Cell</strong><br>\n      <small>1–10 µm diameter</small>\n    </div>\n    <div class=\"flow-arrow\">↓</div>\n    <div class=\"flow-box level-2\">\n      <strong>Nucleoid Region</strong><br>\n      <small>Circular DNA<br>No membrane</small>\n    </div>\n    <div class=\"flow-arrow\">↓</div>\n    <div class=\"flow-box level-3\">\n      <strong>70S Ribosomes</strong><br>\n      <small>Protein synthesis<br>50S + 30S subunits</small>\n    </div>\n    <div class=\"flow-arrow\">↓</div>\n    <div class=\"flow-box level-4\">\n      <strong>Peptidoglycan Cell Wall</strong><br>\n      <small>Protection & shape<br>Target of antibiotics</small>\n    </div>\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>📋 Key Prokaryotic Structures</h3>\n  <div class=\"table-wrap\">\n    <table>\n      <thead>\n        <tr>\n          <th>Structure</th>\n          <th>Description</th>\n          <th>Function</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td><strong>Nucleoid</strong></td>\n          <td>Region containing circular DNA; no surrounding membrane</td>\n          <td>Stores genetic information; controls cell activities</td>\n        </tr>\n        <tr>\n          <td><strong>70S Ribosomes</strong></td>\n          <td>Smaller than eukaryotic ribosomes (50S + 30S subunits)</td>\n          <td>Site of protein synthesis</td>\n        </tr>\n        <tr>\n          <td><strong>Cell Wall</strong></td>\n          <td>Made of peptidoglycan (bacteria) or pseudopeptidoglycan (archaea)</td>\n          <td>Provides structure and protection; maintains cell shape</td>\n        </tr>\n        <tr>\n          <td><strong>Plasmids</strong></td>\n          <td>Small circular DNA separate from main chromosome</td>\n          <td>Often carry antibiotic resistance genes</td>\n        </tr>\n        <tr>\n          <td><strong>Flagella</strong></td>\n          <td>Tail-like appendages (lack 9+2 microtubule arrangement)</td>\n          <td>Movement; chemotaxis</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>⚖️ Prokaryotic vs Eukaryotic Cells</h3>\n  <div class=\"table-wrap\">\n    <table>\n      <thead>\n        <tr>\n          <th>Feature</th>\n          <th>Prokaryotic</th>\n          <th>Eukaryotic</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td><strong>Nucleus</strong></td>\n          <td>Nucleoid region (no membrane)</td>\n          <td>True nucleus (double membrane)</td>\n        </tr>\n        <tr>\n          <td><strong>DNA Shape</strong></td>\n          <td>Circular</td>\n          <td>Linear (in nucleus)</td>\n        </tr>\n        <tr>\n          <td><strong>Ribosomes</strong></td>\n          <td>70S (smaller)</td>\n          <td>80S (larger)</td>\n        </tr>\n        <tr>\n          <td><strong>Organelles</strong></td>\n          <td>None membrane-bound</td>\n          <td>Mitochondria, ER, Golgi, etc.</td>\n        </tr>\n        <tr>\n          <td><strong>Cell Wall</strong></td>\n          <td>Peptidoglycan (bacteria)</td>\n          <td>Cellulose (plants) or chitin (fungi) or none</td>\n        </tr>\n        <tr>\n          <td><strong>Size</strong></td>\n          <td>1–10 µm</td>\n          <td>10–100 µm</td>\n        </tr>\n        <tr>\n          <td><strong>Examples</strong></td>\n          <td>Bacteria, Archaea</td>\n          <td>Animals, Plants, Fungi, Protists</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n  <div class=\"info-box\">\n    <strong>💡 Memory Tip:</strong> Think 'pro' = 'no' (prokaryotes have NO membrane-bound nucleus). 'Eu' = 'true' (eukaryotes have a TRUE nucleus).\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>💊 Case Study: Antibiotics and Selective Toxicity</h3>\n  <p>When you take antibiotics for a bacterial infection, how do they kill bacteria without harming your cells? The answer lies in <strong>selective toxicity</strong>—targeting structures unique to bacteria.</p>\n  \n  <div class=\"formula-box\">\n    <strong>Selective Toxicity Formula:</strong><br>\n    Target Structure = Bacterial Only (NOT in Human Cells)<br>\n    Examples: 70S ribosomes, peptidoglycan cell wall\n  </div>\n  \n  <h4>Antibiotic Mechanisms:</h4>\n  <ul>\n    <li><strong>Tetracycline:</strong> Binds to 30S ribosomal subunit → blocks protein synthesis</li>\n    <li><strong>Penicillin:</strong> Inhibits peptidoglycan synthesis → weakens cell wall → lysis</li>\n    <li><strong>Streptomycin:</strong> Binds to 16S rRNA → misreading of mRNA</li>\n  </ul>\n</div>\n\n<div class=\"worked-example\">\n  <h4>📝 Worked Example: Why Antibiotics Work</h4>\n  <p><strong>Question:</strong> Explain why tetracycline can kill bacteria without harming human cells.</p>\n  \n  <div class=\"step-box\">\n    <strong>Step 1: Identify the target structure</strong><br>\n    Tetracycline targets bacterial ribosomes (70S), which are smaller than human ribosomes (80S).\n  </div>\n  \n  <div class=\"step-box\">\n    <strong>Step 2: Explain the structural difference</strong><br>\n    70S ribosomes consist of 50S and 30S subunits with distinct shapes and rRNA sequences compared to the 60S and 40S subunits of 80S ribosomes.\n  </div>\n  \n  <div class=\"step-box\">\n    <strong>Step 3: Describe the mechanism</strong><br>\n    Tetracycline binds to the 30S subunit of 70S ribosomes, blocking the A-site and preventing tRNA attachment, thus stopping protein synthesis.\n  </div>\n  \n  <div class=\"step-box\">\n    <strong>Step 4: Explain selectivity</strong><br>\n    The 80S ribosomes in human cells have a different structure that does not bind tetracycline, so protein synthesis in human cells continues normally. This is selective toxicity.\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>⚠️ Common Misconceptions</h3>\n  <div class=\"warning-box\">\n    <strong>Misconception:</strong> 'Prokaryotes have a nucleus'\n    <p><strong>Correction:</strong> Students confuse 'nucleoid' with 'nucleus' due to similar names. <strong>Nucleoid = NO membrane</strong>; <strong>Nucleus = HAS membrane</strong>.</p>\n    <p><em>Analogy:</em> Nucleoid is like a pile of string in a room; nucleus is that string inside a sealed bag.</p>\n  </div>\n  \n  <div class=\"warning-box\">\n    <strong>Misconception:</strong> 'All bacteria are harmful'\n    <p><strong>Correction:</strong> Only a small percentage of bacteria cause disease. Gut bacteria (microbiome) aid digestion, produce vitamins, and protect against pathogens.</p>\n  </div>\n  \n  <div class=\"warning-box\">\n    <strong>Misconception:</strong> 'Prokaryotes are primitive/simple'\n    <p><strong>Correction:</strong> Simple structure does not mean simple function. Bacteria display incredible metabolic diversity: nitrogen fixation, extreme environment survival, complex communication (quorum sensing).</p>\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>🔬 Check Your Understanding</h3>\n  <div class=\"highlight-box\">\n    <strong>Question:</strong> Why can't we see ribosomes under a light microscope?\n    <p><em>Answer: 70S ribosomes are approximately 20–30 nm in size, well below the ~200 nm resolution limit of light microscopes. Electron microscopes are required to visualise them.</em></p>\n  </div>\n</div>",
-
+  "contentHTML": "<div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>HSC Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>Prokaryotic vs Eukaryotic Cells: Evolution of Complexity</h1><p class='hero-description'>Discover the fundamental divide in cellular life: how membrane-bound organelles transformed simple prokaryotes into complex eukaryotes, enabling all multicellular life on Earth including humans.</p></div><div class='hero-icon'>🦠</div></div></div><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can distinguish between prokaryotic and eukaryotic cell structures</li><li>Students can identify membrane-bound organelles and explain their functions</li><li>Students can explain the evolutionary significance of compartmentalisation</li><li>Students can evaluate evidence for the endosymbiotic theory</li><li>Students can apply understanding to classify organisms by cell type</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Cell theory and basic cell structure</li><li><strong>Future:</strong> Endosymbiotic theory, cellular respiration, photosynthesis</li><li><strong>Real World:</strong> Antibiotic resistance in bacteria, human diseases caused by organelle dysfunction</li><li><strong>Timeline:</strong> Prokaryotes 3.5 billion years ago → Eukaryotes 2 billion years ago</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can accurately label prokaryotic and eukaryotic cell diagrams</li><li>I can list at least 5 structural differences between cell types</li><li>I can explain three advantages of membrane-bound organelles</li><li>I can describe evidence supporting endosymbiotic theory</li><li>I can compare cell size and complexity using data</li></ul></div></div><div class='card'><div class='card-header'><div class='card-icon'>🔬</div><h2>The Fundamental Divide in Cellular Life</h2></div><p>All living organisms are made of cells, but cells come in two fundamentally different forms. The presence or absence of <span class='key-term'>membrane-bound organelles</span> divides all life into two domains: prokaryotes and eukaryotes.</p><div class='table-wrap'><table><thead><tr><th>Cell Type</th><th>Etymology</th><th>Defining Feature</th><th>Organisms</th></tr></thead><tbody><tr><td><strong>Prokaryotic</strong></td><td>Greek: <em>pro</em> = before, <em>karyon</em> = nucleus</td><td>No membrane-bound nucleus or organelles</td><td>Bacteria, Archaea</td></tr><tr><td><strong>Eukaryotic</strong></td><td>Greek: <em>eu</em> = true, <em>karyon</em> = nucleus</td><td>Membrane-bound nucleus and organelles</td><td>Animals, plants, fungi, protists</td></tr></tbody></table></div><div class='info-box'><strong>💡 Key Concept:</strong> The presence of membrane-bound organelles is the single most important distinction in cell biology. This difference affects DNA storage, energy production, protein synthesis location, and cell size limits.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🧬</div><h2>Prokaryotic Cells: Simple but Successful</h2></div><p><span class='key-term'>Prokaryotic cells</span> are typically 0.1–5 μm in diameter, making them much smaller than eukaryotic cells. Despite their structural simplicity, they are incredibly diverse and successful, inhabiting every environment on Earth from Antarctic ice to volcanic hot springs.</p><div class='table-wrap'><table><thead><tr><th>Structure</th><th>Description</th><th>Function</th></tr></thead><tbody><tr><td><strong>Cell wall</strong></td><td>Rigid outer layer (peptidoglycan in bacteria)</td><td>Protection, shape maintenance, prevents bursting</td></tr><tr><td><strong>Cell membrane</strong></td><td>Phospholipid bilayer</td><td>Controls substance movement, site of respiration</td></tr><tr><td><strong>Nucleoid region</strong></td><td>Circular DNA in cytoplasm (not membrane-enclosed)</td><td>Stores genetic information</td></tr><tr><td><strong>Ribosomes</strong></td><td>70S ribosomes (smaller than eukaryotic 80S)</td><td>Protein synthesis</td></tr><tr><td><strong>Plasmids</strong></td><td>Small circular DNA molecules (optional)</td><td>Carry extra genes (e.g. antibiotic resistance)</td></tr><tr><td><strong>Flagella</strong></td><td>Long whip-like structures (some species)</td><td>Movement through liquid environments</td></tr><tr><td><strong>Pili</strong></td><td>Short hair-like projections</td><td>Attachment to surfaces, DNA transfer</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> Students often think prokaryotes lack DNA. Incorrect! Prokaryotes have DNA; it's just not enclosed in a membrane-bound nucleus. The DNA is located in the <span class='key-term'>nucleoid region</span> of the cytoplasm.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🧫</div><h2>Eukaryotic Cells: Compartmentalised Complexity</h2></div><p><span class='key-term'>Eukaryotic cells</span> are typically 10–100 μm in diameter—up to 10 times larger than prokaryotic cells. Their defining feature is <span class='key-term'>compartmentalisation</span>: specialised membrane-bound organelles carry out specific functions in isolated environments.</p><div class='table-wrap'><table><thead><tr><th>Organelle</th><th>Membrane-Bound?</th><th>Function</th><th>Present In</th></tr></thead><tbody><tr><td><strong>Nucleus</strong></td><td>✅ YES (double membrane)</td><td>Stores DNA, controls cell activities</td><td>All eukaryotes</td></tr><tr><td><strong>Mitochondria</strong></td><td>✅ YES (double membrane)</td><td>Cellular respiration, ATP production</td><td>All eukaryotes</td></tr><tr><td><strong>Endoplasmic reticulum</strong></td><td>✅ YES</td><td>Protein and lipid synthesis, transport</td><td>All eukaryotes</td></tr><tr><td><strong>Golgi apparatus</strong></td><td>✅ YES</td><td>Processes and packages proteins</td><td>All eukaryotes</td></tr><tr><td><strong>Lysosomes</strong></td><td>✅ YES</td><td>Digests waste and old organelles</td><td>Animal cells mainly</td></tr><tr><td><strong>Chloroplasts</strong></td><td>✅ YES (double membrane)</td><td>Photosynthesis</td><td>Plant cells, algae</td></tr><tr><td><strong>Vacuole</strong></td><td>✅ YES</td><td>Storage of water, nutrients, waste</td><td>Plant cells (large), animal cells (small)</td></tr><tr><td><strong>Ribosomes</strong></td><td>❌ NO</td><td>Protein synthesis (80S, larger than prokaryotic)</td><td>All eukaryotes</td></tr><tr><td><strong>Cytoskeleton</strong></td><td>❌ NO</td><td>Structural support, intracellular transport</td><td>All eukaryotes</td></tr></tbody></table></div><div class='info-box'><strong>💡 Compartmentalisation Advantage:</strong> Membrane-bound organelles allow incompatible chemical reactions to occur simultaneously in different cellular locations. For example, protein synthesis (ribosomes in cytoplasm) and protein degradation (lysosomes) happen concurrently without interference.</div></div><div class='card'><div class='card-header'><div class='card-icon'>📊</div><h2>Direct Comparison: Prokaryotic vs Eukaryotic</h2></div><p>Understanding the differences between these cell types is fundamental to biology. This comparison table summarises the key structural and functional distinctions.</p><div class='table-wrap'><table><thead><tr><th>Feature</th><th>Prokaryotic Cells</th><th>Eukaryotic Cells</th></tr></thead><tbody><tr><td><strong>Typical size</strong></td><td>0.1–5 μm</td><td>10–100 μm</td></tr><tr><td><strong>Nucleus</strong></td><td>❌ No true nucleus (nucleoid region)</td><td>✅ Membrane-bound nucleus with nuclear envelope</td></tr><tr><td><strong>DNA organisation</strong></td><td>Single circular chromosome, no histones</td><td>Multiple linear chromosomes with histone proteins</td></tr><tr><td><strong>Membrane-bound organelles</strong></td><td>❌ Absent</td><td>✅ Present (mitochondria, ER, Golgi, lysosomes, etc.)</td></tr><tr><td><strong>Ribosomes</strong></td><td>70S (smaller)</td><td>80S (larger)</td></tr><tr><td><strong>Cell wall</strong></td><td>Present (peptidoglycan in bacteria)</td><td>Present in plants/fungi (cellulose/chitin), absent in animals</td></tr><tr><td><strong>Cell division</strong></td><td>Binary fission (simpler, asexual)</td><td>Mitosis/meiosis (complex, sexual reproduction possible)</td></tr><tr><td><strong>Metabolic diversity</strong></td><td>Extremely diverse (anaerobic and aerobic pathways)</td><td>Less diverse (mostly aerobic respiration/photosynthesis)</td></tr><tr><td><strong>Multicellularity</strong></td><td>Rare (mostly unicellular, some colonies)</td><td>Common (all complex multicellular organisms)</td></tr><tr><td><strong>Cytoskeleton</strong></td><td>Simple or absent</td><td>Complex network of protein filaments</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ Exam Trap:</strong> Ribosomes are present in BOTH cell types! The difference is size: prokaryotes have 70S ribosomes, eukaryotes have 80S ribosomes. Don't say 'eukaryotes have ribosomes, prokaryotes don't'—this loses marks.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🌍</div><h2>Evolutionary Significance of Membrane-Bound Organelles</h2></div><p>The evolution of membrane-bound organelles approximately 2 billion years ago was one of the most important events in the history of life. This innovation enabled dramatic increases in cell size, complexity, and ultimately the emergence of all multicellular organisms.</p><h3>Why Compartmentalisation Changed Everything</h3><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>🔬</span><h4>1. SEPARATION OF INCOMPATIBLE PROCESSES</h4><p>Destructive enzymes can be isolated from sensitive cellular components</p><div class='examples'><strong>Example:</strong> Lysosomes contain powerful digestive enzymes that would destroy the cell if not membrane-enclosed. The lysosomal membrane keeps these enzymes safely contained.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-2'><span class='icon'>⚡</span><h4>2. OPTIMISED MICROENVIRONMENTS</h4><p>Each organelle maintains ideal conditions for its specific reactions</p><div class='examples'><strong>Example:</strong> Mitochondria maintain a low pH across their inner membrane to drive ATP synthesis. The cytoplasm maintains a different pH for other reactions.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-3'><span class='icon'>🎯</span><h4>3. SPECIALISATION AND EFFICIENCY</h4><p>Organelles evolve specialised structures and functions</p><div class='examples'><strong>Example:</strong> The highly folded inner membrane of mitochondria (cristae) increases surface area for ATP production by 5–10 times compared to a smooth membrane.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-4'><span class='icon'>🧬</span><h4>4. COMPLEX MULTICELLULAR LIFE BECOMES POSSIBLE</h4><p>Cell specialisation and coordination enable tissue and organ formation</p><div class='examples'><strong>Result:</strong> All multicellular organisms (animals, plants, fungi) are eukaryotic. Prokaryotes remain mostly unicellular.</div></div></div><div class='info-box'><strong>💡 Size Advantage:</strong> Eukaryotic cells can be much larger than prokaryotic cells because compartmentalisation solves the problem of diffusion limits. Without organelles, a large cell would be too inefficient—nutrients couldn't reach the centre fast enough, and waste products would accumulate.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🔄</div><h2>Endosymbiotic Theory: How Organelles Evolved</h2></div><p>The most widely accepted explanation for the origin of mitochondria and chloroplasts is the <span class='key-term'>endosymbiotic theory</span>, proposed by Lynn Margulis in 1967. This theory revolutionised our understanding of cellular evolution.</p><div class='info-box'><strong>💡 Endosymbiotic Theory:</strong> Mitochondria and chloroplasts were once free-living prokaryotic cells that were engulfed by a larger host cell approximately 2 billion years ago. Instead of being digested, they formed a mutually beneficial (symbiotic) relationship. Over millions of years, they became permanent, essential organelles, losing the ability to live independently.</div><h3>The Endosymbiotic Process</h3><div class='worked-example'><h4>📝 How Endosymbiosis Created Mitochondria</h4><div class='step-box'><strong>Step 1:</strong> A large anaerobic prokaryote engulfs a smaller aerobic prokaryote (ancestor of mitochondria, likely an alpha-proteobacterium) through <span class='key-term'>endocytosis</span>.</div><div class='step-box'><strong>Step 2:</strong> The small cell is not digested. Instead, it survives inside the host cell, enclosed by a membrane vesicle.</div><div class='step-box'><strong>Step 3:</strong> The engulfed cell continues performing aerobic respiration, producing ATP. The host cell benefits from this energy supply.</div><div class='step-box'><strong>Step 4:</strong> Over millions of years, the relationship becomes obligate—neither can survive without the other. Many genes transfer from the endosymbiont to the host nucleus.</div><div class='step-box'><strong>Result:</strong> The engulfed cell becomes a mitochondrion with a double membrane (inner from original cell, outer from host vesicle), its own DNA, and 70S ribosomes.</div></div><h3>Six Lines of Evidence for Endosymbiotic Theory</h3><div class='table-wrap'><table><thead><tr><th>Evidence</th><th>Observation</th><th>Why It Supports the Theory</th></tr></thead><tbody><tr><td><strong>1. Double membrane</strong></td><td>Mitochondria and chloroplasts have two membranes</td><td>Inner membrane from original prokaryote; outer membrane from host cell's engulfing vesicle</td></tr><tr><td><strong>2. Own DNA</strong></td><td>Both organelles contain small, circular DNA molecules</td><td>Circular DNA is characteristic of prokaryotes, not eukaryotic nuclear DNA (which is linear)</td></tr><tr><td><strong>3. 70S ribosomes</strong></td><td>Their ribosomes are 70S, not 80S</td><td>70S ribosomes are prokaryotic; eukaryotic cytoplasmic ribosomes are 80S</td></tr><tr><td><strong>4. Independent replication</strong></td><td>They divide by binary fission, independently of cell division</td><td>Binary fission is how prokaryotes reproduce, not how eukaryotic organelles typically replicate</td></tr><tr><td><strong>5. Comparable size</strong></td><td>Size (~1–10 μm) similar to modern bacteria</td><td>Matches the expected size of ancestral prokaryotes</td></tr><tr><td><strong>6. DNA sequence similarity</strong></td><td>Mitochondrial DNA resembles alpha-proteobacteria; chloroplast DNA resembles cyanobacteria</td><td>Molecular phylogeny directly links organelles to specific groups of modern bacteria</td></tr></tbody></table></div><div class='warning-box'><strong>🚫 Exam Trap:</strong> The double membrane does NOT mean 'two cell membranes from two cells'. The inner membrane is from the original prokaryote. The outer membrane is from the host cell's vesicle that engulfed it. This distinction is critical for exam answers.</div><div class='highlight-box'><strong>⚠️ Timeline Context:</strong> Prokaryotic cells appeared ~3.5 billion years ago. Eukaryotic cells evolved ~2 billion years ago through endosymbiosis. This 1.5-billion-year gap represents the time prokaryotes dominated Earth before the evolutionary leap to cellular complexity occurred.</div></div><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Prokaryotic Cells</h4><ul><li>No membrane-bound nucleus (nucleoid region instead)</li><li>No membrane-bound organelles</li><li>Single circular chromosome, no histones</li><li>70S ribosomes (smaller)</li><li>Size: 0.1–5 μm</li><li>Examples: Bacteria, Archaea</li></ul></div><div class='copy-item'><h4>Eukaryotic Cells</h4><ul><li>Membrane-bound nucleus with DNA</li><li>Multiple membrane-bound organelles</li><li>Linear chromosomes with histone proteins</li><li>80S ribosomes (larger)</li><li>Size: 10–100 μm</li><li>Examples: Animals, plants, fungi, protists</li></ul></div><div class='copy-item'><h4>Key Membrane-Bound Organelles</h4><ul><li>Nucleus: stores DNA, controls cell</li><li>Mitochondria: cellular respiration, ATP</li><li>Endoplasmic reticulum: protein/lipid synthesis</li><li>Golgi apparatus: processes proteins</li><li>Lysosomes: digestion of waste</li><li>Chloroplasts (plants): photosynthesis</li></ul></div><div class='copy-item'><h4>Endosymbiotic Theory Evidence</h4><ul><li>Double membrane structure</li><li>Own circular DNA (like bacteria)</li><li>70S ribosomes (prokaryotic type)</li><li>Binary fission reproduction</li><li>DNA similarity to modern bacteria</li><li>Enabled evolution of complex life ~2 billion years ago</li></ul></div></div></div><div class='activity'><div class='activity-number'>ACTIVITY 01</div><h3>Diagram Comparison Task</h3><p class='activity-meta'>Draw and label prokaryotic and eukaryotic cells, identifying structural differences.</p><p style='margin-bottom:16px'>In your books, draw a prokaryotic cell (e.g. bacterium) and a eukaryotic cell (e.g. animal cell) side by side. Label at least 5 structures in each. Circle or star the features that are ONLY found in eukaryotic cells.</p><ol style='line-height:2;margin-left:20px'><li>Draw both cells to scale (eukaryotic should be noticeably larger—at least 5× larger).</li><li>Label prokaryotic cell: cell wall, cell membrane, nucleoid region, ribosomes, plasmid (optional), flagellum (optional).</li><li>Label eukaryotic cell: nucleus, mitochondria, ER, Golgi apparatus, lysosomes, ribosomes.</li><li>Write three key differences in a table below your diagrams.</li></ol><div class='answer-area' style='min-height:160px'></div></div><div class='activity'><div class='activity-number'>ACTIVITY 02</div><h3>Endosymbiotic Evidence Analysis</h3><p class='activity-meta'>Evaluate the strength of evidence supporting endosymbiotic theory.</p><p style='margin-bottom:16px'>Complete the table below by explaining how each piece of evidence supports the idea that mitochondria and chloroplasts were once independent prokaryotic cells.</p><div class='table-wrap'><table><thead><tr><th>Evidence</th><th>How It Supports Endosymbiotic Theory</th></tr></thead><tbody><tr><td><strong>Double membrane</strong></td><td><div class='answer-area' style='min-height:60px'></div></td></tr><tr><td><strong>Circular DNA</strong></td><td><div class='answer-area' style='min-height:60px'></div></td></tr><tr><td><strong>70S ribosomes</strong></td><td><div class='answer-area' style='min-height:60px'></div></td></tr><tr><td><strong>Binary fission</strong></td><td><div class='answer-area' style='min-height:60px'></div></td></tr></tbody></table></div></div><div class='activity'><div class='activity-number'>ACTIVITY 03</div><h3>Graphing Task: Cell Size Comparison</h3><p class='activity-meta'>Construct and interpret a graph comparing average cell sizes across different organisms.</p><p style='margin-bottom:16px'>Use the data below to create a bar graph comparing the average diameter of different cell types. Then answer the analysis questions.</p><div class='table-wrap'><table><thead><tr><th>Cell Type</th><th>Average Diameter (μm)</th></tr></thead><tbody><tr><td>Typical bacterium (prokaryotic)</td><td>2</td></tr><tr><td>Human red blood cell (eukaryotic)</td><td>8</td></tr><tr><td>Typical animal cell (eukaryotic)</td><td>25</td></tr><tr><td>Typical plant cell (eukaryotic)</td><td>50</td></tr></tbody></table></div><ol style='line-height:2;margin-left:20px'><li>Draw a bar graph with cell type on the x-axis and diameter (μm) on the y-axis. Use appropriate scale and labels.</li><div class='answer-area' style='min-height:120px'></div><li>Calculate: How many times larger is a typical animal cell compared to a bacterium?</li><div class='answer-area' style='min-height:60px'></div><li>Explain why eukaryotic cells can be much larger than prokaryotic cells. Reference organelles and diffusion in your answer.</li><div class='answer-area' style='min-height:100px'></div></ol></div><div class='activity'><div class='activity-number'>ACTIVITY 04</div><h3>Evolutionary Timeline Analysis</h3><p class='activity-meta'>Analyse the significance of the prokaryote-to-eukaryote transition in Earth's history.</p><p style='margin-bottom:16px'>Prokaryotic cells appeared approximately 3.5 billion years ago. Eukaryotic cells evolved approximately 2 billion years ago. Multicellular organisms appeared approximately 1 billion years ago.</p><ol style='line-height:2;margin-left:20px'><li>Calculate the time gap between the emergence of prokaryotic cells and eukaryotic cells.</li><div class='answer-area' style='min-height:60px'></div><li>Suggest why it took so long (1.5 billion years) for eukaryotic cells to evolve from prokaryotic ancestors.</li><div class='answer-area' style='min-height:100px'></div><li>Explain why multicellular life only evolved after eukaryotic cells appeared. What features of eukaryotic cells enabled the evolution of multicellularity?</li><div class='answer-area' style='min-height:120px'></div></ol></div><div class='card'><div class='card-header'><div class='card-icon'>❓</div><h2>Assessment Questions</h2></div><h3>Multiple Choice <span class='marks'>5 MARKS</span></h3><div style='margin:24px 0'><p style='margin-bottom:12px;font-weight:500'>1. Which feature is found in eukaryotic cells but NOT in prokaryotic cells?</p><div class='mc-option'><div class='mc-letter'>A</div><span class='mc-text'>DNA</span></div><div class='mc-option'><div class='mc-letter'>B</div><span class='mc-text'>Ribosomes</span></div><div class='mc-option'><div class='mc-letter'>C</div><span class='mc-text'>Membrane-bound nucleus</span></div><div class='mc-option'><div class='mc-letter'>D</div><span class='mc-text'>Cell membrane</span></div></div><div style='margin:24px 0'><p style='margin-bottom:12px;font-weight:500'>2. Which group consists entirely of prokaryotic organisms?</p><div class='mc-option'><div class='mc-letter'>A</div><span class='mc-text'>Plants and fungi</span></div><div class='mc-option'><div class='mc-letter'>B</div><span class='mc-text'>Animals and protists</span></div><div class='mc-option'><div class='mc-letter'>C</div><span class='mc-text'>Bacteria and archaea</span></div><div class='mc-option'><div class='mc-letter'>D</div><span class='mc-text'>Fungi and bacteria</span></div></div><div style='margin:24px 0'><p style='margin-bottom:12px;font-weight:500'>3. Which statement about mitochondria provides the STRONGEST evidence for endosymbiotic theory?</p><div class='mc-option'><div class='mc-letter'>A</div><span class='mc-text'>Mitochondria are found in all eukaryotic cells.</span></div><div class='mc-option'><div class='mc-letter'>B</div><span class='mc-text'>Mitochondria produce ATP through cellular respiration.</span></div><div class='mc-option'><div class='mc-letter'>C</div><span class='mc-text'>Mitochondria have their own circular DNA and 70S ribosomes, like bacteria.</span></div><div class='mc-option'><div class='mc-letter'>D</div><span class='mc-text'>Mitochondria are larger than prokaryotic cells.</span></div></div><div style='margin:24px 0'><p style='margin-bottom:12px;font-weight:500'>4. What is a major advantage of compartmentalisation in eukaryotic cells?</p><div class='mc-option'><div class='mc-letter'>A</div><span class='mc-text'>It makes cells smaller and more efficient.</span></div><div class='mc-option'><div class='mc-letter'>B</div><span class='mc-text'>It allows incompatible chemical processes to occur simultaneously in different locations.</span></div><div class='mc-option'><div class='mc-letter'>C</div><span class='mc-text'>It eliminates the need for DNA replication.</span></div><div class='mc-option'><div class='mc-letter'>D</div><span class='mc-text'>It prevents cells from dividing.</span></div></div><div style='margin:24px 0'><p style='margin-bottom:12px;font-weight:500'>5. Approximately when did eukaryotic cells first evolve?</p><div class='mc-option'><div class='mc-letter'>A</div><span class='mc-text'>3.5 billion years ago</span></div><div class='mc-option'><div class='mc-letter'>B</div><span class='mc-text'>2 billion years ago</span></div><div class='mc-option'><div class='mc-letter'>C</div><span class='mc-text'>1 billion years ago</span></div><div class='mc-option'><div class='mc-letter'>D</div><span class='mc-text'>500 million years ago</span></div></div><h3 style='margin-top:40px'>Short Answer <span class='marks'>12 MARKS</span></h3><div class='question-item'><p>6. List and explain three structural differences between prokaryotic and eukaryotic cells. <span class='marks'>3 MARKS</span></p><div class='answer-area' style='min-height:120px'></div></div><div class='question-item'><p>7. Describe the endosymbiotic theory for the origin of mitochondria. Include two pieces of evidence that support this theory. <span class='marks'>4 MARKS</span></p><div class='answer-area' style='min-height:140px'></div></div><div class='question-item'><p>8. Explain two advantages that membrane-bound organelles provide to eukaryotic cells. Use specific examples of organelles in your answer. <span class='marks'>5 MARKS</span></p><div class='answer-area' style='min-height:160px'></div></div></div><div class='answers'><div class='answers-header'><div style='font-size:32px'>✅</div><h2>Comprehensive Answers</h2></div><div class='answer-item'><h4>🎯 ACTIVITY 01 — Diagram Comparison</h4><p><strong>Diagram requirements:</strong> Prokaryotic cell should show cell wall, cell membrane, nucleoid region (circular DNA), ribosomes, and optionally plasmids and flagella. Eukaryotic cell should show nucleus, nuclear membrane, mitochondria, endoplasmic reticulum, Golgi apparatus, lysosomes, and ribosomes. Eukaryotic cell should be drawn 5–10 times larger than prokaryotic cell.</p><p><strong>Features unique to eukaryotes to circle:</strong> Nucleus, mitochondria, ER, Golgi apparatus, lysosomes, any membrane-bound organelle.</p><p><strong>Three key differences:</strong> (1) Eukaryotes have membrane-bound nucleus, prokaryotes have nucleoid region; (2) Eukaryotes have membrane-bound organelles, prokaryotes do not; (3) Eukaryotes are typically 10–100 μm, prokaryotes are 0.1–5 μm.</p></div><div class='answer-item'><h4>🎯 ACTIVITY 02 — Endosymbiotic Evidence</h4><p><strong>Double membrane:</strong> The inner membrane came from the original prokaryotic cell that was engulfed. The outer membrane came from the host cell's vesicle that surrounded it during endocytosis. This two-layer structure matches what we'd expect if a cell was engulfed and retained.</p><p><strong>Circular DNA:</strong> Prokaryotes have circular chromosomes, while eukaryotic nuclear DNA is linear. Mitochondria and chloroplasts having circular DNA suggests they descended from prokaryotic ancestors that had this DNA structure.</p><p><strong>70S ribosomes:</strong> Prokaryotic cells have 70S ribosomes, while eukaryotic cytoplasmic ribosomes are 80S (larger). The fact that mitochondria and chloroplasts have 70S ribosomes links them directly to prokaryotic origins, not eukaryotic cell components.</p><p><strong>Binary fission:</strong> These organelles divide by binary fission, the same method bacteria use to reproduce. This is different from how most eukaryotic organelles replicate, suggesting these organelles retain their prokaryotic reproductive mechanism from their ancestral free-living state.</p></div><div class='answer-item'><h4>🎯 ACTIVITY 03 — Cell Size Graphing</h4><p><strong>Graph:</strong> Should show bacterium (2 μm), human RBC (8 μm), animal cell (25 μm), plant cell (50 μm) as bars with clearly labelled axes and appropriate scale.</p><p><strong>Calculation:</strong> Animal cell (25 μm) ÷ bacterium (2 μm) = 12.5 times larger.</p><p><strong>Explanation:</strong> Eukaryotic cells can be much larger because membrane-bound organelles solve the diffusion problem that limits prokaryotic cell size. In prokaryotes, all materials must diffuse through the cytoplasm—the larger the cell, the slower this becomes, limiting efficiency. Eukaryotes compartmentalise functions: mitochondria concentrate energy production, the ER handles protein synthesis in dedicated regions, and the nucleus protects DNA. This organisation allows materials to be processed locally without needing to diffuse across the entire cell, enabling much larger cell sizes while maintaining efficiency.</p></div><div class='answer-item'><h4>🎯 ACTIVITY 04 — Evolutionary Timeline</h4><p><strong>1. Time gap:</strong> 3.5 billion years – 2 billion years = 1.5 billion years between prokaryotic and eukaryotic cell emergence.</p><p><strong>2. Why so long:</strong> Endosymbiosis was an extremely rare, complex event. It required: (a) one cell to successfully engulf another without digesting it—most attempts would have failed; (b) the establishment of a stable, mutually beneficial relationship over many generations; (c) specific environmental conditions, such as increasing atmospheric oxygen from cyanobacteria, which made aerobic respiration advantageous; (d) genetic integration, with many genes transferring from the endosymbiont to the host nucleus. Each of these steps was improbable, making the overall process extraordinarily unlikely and time-consuming.</p><p><strong>3. Why multicellularity requires eukaryotes:</strong> Multicellular organisms need cells to specialise and communicate effectively. Eukaryotic cells have the necessary machinery: (a) membrane-bound organelles allow different cells to specialise for different functions (e.g. nerve cells with extensive ER for neurotransmitter production, muscle cells packed with mitochondria); (b) cytoskeleton provides structure, enables cell shape changes, and facilitates intracellular transport for signalling; (c) ability to produce extracellular matrices and adhesion proteins to hold cells together; (d) complex gene regulation systems involving the nucleus enable precise control of cell differentiation. Prokaryotic cells lack this organisational complexity, limiting them to mostly unicellular life (though some form simple colonies).</p></div><div class='answer-item'><h4>❓ MULTIPLE CHOICE</h4><p><strong>1. C</strong> — Membrane-bound nucleus. Option A (DNA) is incorrect because prokaryotes have DNA in the nucleoid region. Option B (ribosomes) is incorrect because both cell types have ribosomes (70S in prokaryotes, 80S in eukaryotes). Option D (cell membrane) is incorrect because all cells have a cell membrane. Only eukaryotes have a true, membrane-bound nucleus.</p><p><strong>2. C</strong> — Bacteria and archaea. These are the two domains of prokaryotic life. Option A is incorrect because plants and fungi are eukaryotes. Option B is incorrect because animals and protists are eukaryotes. Option D is incorrect because fungi are eukaryotes.</p><p><strong>3. C</strong> — Circular DNA and 70S ribosomes like bacteria. This directly links mitochondria to prokaryotic ancestry. Option A doesn't support endosymbiotic theory (presence in all eukaryotes just means they're important). Option B describes function, not origin. Option D is factually incorrect—mitochondria are similar in size to bacteria, not larger.</p><p><strong>4. B</strong> — Allows incompatible processes to occur simultaneously. For example, lysosomes can digest proteins while ribosomes synthesise proteins elsewhere in the cell. Option A is incorrect—compartmentalisation allows cells to be larger, not smaller. Option C makes no sense—DNA replication is still necessary. Option D is wrong—cells with organelles do divide.</p><p><strong>5. B</strong> — 2 billion years ago. Prokaryotes appeared 3.5 billion years ago, eukaryotes 2 billion years ago, multicellular organisms 1 billion years ago. The 500-million-year mark corresponds to the Cambrian explosion of animal diversity, not the origin of eukaryotes.</p></div><div class='answer-item'><h4>📝 SHORT ANSWER</h4><p><strong>Q6 (3 marks):</strong></p><p><strong>Difference 1:</strong> Prokaryotic cells lack a membrane-bound nucleus; their DNA is located in a nucleoid region in the cytoplasm. Eukaryotic cells have a true nucleus surrounded by a double membrane (nuclear envelope) that separates DNA from the cytoplasm. <em>(1 mark)</em></p><p><strong>Difference 2:</strong> Prokaryotic cells have no membrane-bound organelles. Eukaryotic cells contain multiple membrane-bound organelles including mitochondria, endoplasmic reticulum, Golgi apparatus, and lysosomes, which compartmentalise cellular functions. <em>(1 mark)</em></p><p><strong>Difference 3:</strong> Prokaryotic cells are much smaller (typically 0.1–5 μm diameter) than eukaryotic cells (typically 10–100 μm diameter)—up to 100 times smaller by volume. <em>(1 mark)</em></p><p><strong>Q7 (4 marks):</strong></p><p><strong>Theory description:</strong> The endosymbiotic theory proposes that mitochondria originated approximately 2 billion years ago when a large anaerobic prokaryotic cell engulfed a smaller aerobic prokaryote (likely an alpha-proteobacterium). Instead of digesting this engulfed cell, a stable symbiotic relationship formed where the smaller cell provided ATP through aerobic respiration, and the host provided protection and nutrients. Over millions of years, this relationship became obligate, with many genes transferring from the endosymbiont to the host nucleus, creating a permanent organelle. <em>(2 marks)</em></p><p><strong>Evidence 1:</strong> Mitochondria have double membranes—the inner membrane from the original prokaryotic cell and the outer membrane from the host cell's engulfing vesicle during endocytosis. <em>(1 mark)</em></p><p><strong>Evidence 2:</strong> Mitochondria contain their own circular DNA molecules, similar to bacterial chromosomes, rather than the linear chromosomes found in eukaryotic nuclei. Additionally, they have 70S ribosomes (prokaryotic-type) rather than 80S ribosomes (eukaryotic-type). <em>(1 mark)</em></p><p><strong>Q8 (5 marks):</strong></p><p><strong>Advantage 1 — Separation of incompatible processes:</strong> Lysosomes contain powerful digestive enzymes (proteases, lipases, nucleases) that would destroy cellular components if released into the cytoplasm. The lysosomal membrane isolates these enzymes, allowing safe breakdown of old organelles, engulfed pathogens, and cellular waste without damaging the rest of the cell. This compartmentalisation means destructive and constructive processes (like protein degradation in lysosomes versus protein synthesis at ribosomes) can occur simultaneously without interference. <em>(2 marks)</em></p><p><strong>Advantage 2 — Optimised microenvironments for specialised reactions:</strong> Mitochondria can maintain specific internal conditions optimal for cellular respiration. The intermembrane space maintains a low pH (high H⁺ concentration) while the matrix has a higher pH. This pH gradient across the inner mitochondrial membrane drives ATP synthase to produce ATP efficiently. Additionally, the highly folded inner membrane (cristae) increases surface area by 5–10 times, dramatically increasing the space available for electron transport chain proteins and ATP production. Without this membrane-bound compartment, these optimised conditions couldn't be maintained, and energy production would be far less efficient. <em>(3 marks: 1 for identifying mitochondria, 1 for explaining optimised conditions/pH gradient, 1 for explaining increased efficiency through cristae/surface area)</em></p></div></div>",
+  "contentSections": [
+    {
+      "id": "fundamental-divide",
+      "type": "content",
+      "title": "The Fundamental Divide in Cellular Life",
+      "icon": "microscope",
+      "content": "All living organisms are made of cells, but cells come in two fundamentally different forms. The presence or absence of membrane-bound organelles divides all life into two domains: prokaryotes and eukaryotes."
+    },
+    {
+      "id": "prokaryotic-cells",
+      "type": "content",
+      "title": "Prokaryotic Cells: Simple but Successful",
+      "icon": "book-open",
+      "content": "Prokaryotic cells are typically 0.1–5 μm in diameter. Despite their structural simplicity, they are incredibly diverse and successful, inhabiting every environment on Earth."
+    },
+    {
+      "id": "eukaryotic-cells",
+      "type": "content",
+      "title": "Eukaryotic Cells: Compartmentalised Complexity",
+      "icon": "layers",
+      "content": "Eukaryotic cells are typically 10–100 μm in diameter. Their defining feature is compartmentalisation: specialised membrane-bound organelles carry out specific functions."
+    },
+    {
+      "id": "direct-comparison",
+      "type": "content",
+      "title": "Direct Comparison: Prokaryotic vs Eukaryotic",
+      "icon": "bar-chart-2",
+      "content": "Understanding the differences between these cell types is fundamental to biology."
+    },
+    {
+      "id": "evolutionary-significance",
+      "type": "content",
+      "title": "Evolutionary Significance of Membrane-Bound Organelles",
+      "icon": "globe",
+      "content": "The evolution of membrane-bound organelles approximately 2 billion years ago was one of the most important events in the history of life."
+    },
+    {
+      "id": "endosymbiotic-theory",
+      "type": "content",
+      "title": "Endosymbiotic Theory: How Organelles Evolved",
+      "icon": "refresh-cw",
+      "content": "The most widely accepted explanation for the origin of mitochondria and chloroplasts is the endosymbiotic theory, proposed by Lynn Margulis in 1967."
+    }
+  ],
   "activities": [
     {
-      "id": "prokaryotic-labeling",
-      "type": "labeling",
-      "title": "Label the Prokaryotic Cell",
-      "description": "Drag labels to identify prokaryotic structures on the diagram. Pay special attention to the nucleoid region—remember, it has NO membrane!",
-      "theme": "teal",
-      "xpReward": 50,
-      "image": {
-        "src": "assets/images/mod1/lesson01/prokaryote-diagram.webp",
-        "alt": "Prokaryotic cell diagram showing unlabelled structures for identification"
-      },
-      "labels": [
-        {
-          "id": "nucleoid-label",
-          "zone": { "x": 35, "y": 45, "width": 25, "height": 20 },
-          "correctText": "Nucleoid",
-          "alternatives": ["Nucleus", "DNA region"],
-          "hint": "This is where the circular DNA is found - NO membrane around it!"
-        },
-        {
-          "id": "cell-wall-label",
-          "zone": { "x": 10, "y": 20, "width": 15, "height": 60 },
-          "correctText": "Cell wall",
-          "alternatives": ["Cell membrane", "Plasma membrane"],
-          "hint": "Outer protective layer made of peptidoglycan"
-        },
-        {
-          "id": "ribosome-label",
-          "zone": { "x": 60, "y": 35, "width": 10, "height": 10 },
-          "correctText": "Ribosome",
-          "alternatives": ["70S ribosome"],
-          "hint": "Small dots scattered in cytoplasm - protein factories (70S)"
-        },
-        {
-          "id": "flagellum-label",
-          "zone": { "x": 85, "y": 70, "width": 12, "height": 25 },
-          "correctText": "Flagellum",
-          "alternatives": ["Flagella"],
-          "hint": "Tail-like structure for movement"
-        },
-        {
-          "id": "plasmid-label",
-          "zone": { "x": 55, "y": 55, "width": 12, "height": 8 },
-          "correctText": "Plasmid",
-          "alternatives": ["Plasmid DNA"],
-          "hint": "Small circular DNA separate from main chromosome"
-        },
-        {
-          "id": "capsule-label",
-          "zone": { "x": 5, "y": 20, "width": 8, "height": 60 },
-          "correctText": "Capsule",
-          "alternatives": ["Slime layer"],
-          "hint": "Outer protective gel-like layer"
-        }
-      ],
-      "answerArea": true
-    },
-    {
-      "id": "structure-function-matching",
-      "type": "matching",
-      "title": "Match Structures to Functions",
-      "description": "Match each prokaryotic structure with its correct function. Understanding structure-function relationships is key to HSC success!",
-      "theme": "purple",
-      "xpReward": 50,
-      "items": [
-        { "id": "nucleoid", "text": "Nucleoid", "match": "Contains genetic information (circular DNA)" },
-        { "id": "ribosome", "text": "70S ribosome", "match": "Site of protein synthesis" },
-        { "id": "wall", "text": "Peptidoglycan wall", "match": "Provides protection and structure" },
-        { "id": "plasmid", "text": "Plasmid", "match": "Carries antibiotic resistance genes" },
-        { "id": "flagella", "text": "Flagella", "match": "Enables cell movement" }
-      ],
-      "answerArea": true
-    },
-    {
-      "id": "prokaryotic-vs-eukaryotic-classification",
+      "id": "cell-feature-classification",
       "type": "classification",
       "title": "Classify Cell Features",
-      "description": "Drag each feature into the correct category.",
-      "theme": "amber",
+      "description": "Drag each feature into the correct category: Prokaryotic only, Eukaryotic only, or Found in both.",
+      "theme": "teal",
       "xpReward": 60,
       "categories": [
-        { "id": "prokaryotic", "label": "Prokaryotic only", "description": "Features found only in bacteria and archaea" },
-        { "id": "eukaryotic", "label": "Eukaryotic only", "description": "Features found only in animals, plants, fungi, protists" },
-        { "id": "both", "label": "Found in both", "description": "Features common to all cells" }
+        {
+          "id": "prokaryotic",
+          "label": "Prokaryotic Only",
+          "description": "Features found only in bacteria and archaea"
+        },
+        {
+          "id": "eukaryotic",
+          "label": "Eukaryotic Only",
+          "description": "Features found only in animals, plants, fungi, protists"
+        },
+        {
+          "id": "both",
+          "label": "Found in Both",
+          "description": "Features common to all cells"
+        }
       ],
       "items": [
-        { "id": "nucleoid", "text": "Nucleoid region", "category": "prokaryotic" },
-        { "id": "70s", "text": "70S ribosomes", "category": "prokaryotic" },
-        { "id": "peptido", "text": "Peptidoglycan cell wall", "category": "prokaryotic" },
-        { "id": "plasmid", "text": "Plasmids", "category": "prokaryotic" },
-        { "id": "nucleus", "text": "Membrane-bound nucleus", "category": "eukaryotic" },
-        { "id": "80s", "text": "80S ribosomes", "category": "eukaryotic" },
-        { "id": "mitochondria", "text": "Mitochondria", "category": "eukaryotic" },
-        { "id": "linear", "text": "Linear DNA in chromosomes", "category": "eukaryotic" },
-        { "id": "ribosomes", "text": "Ribosomes present", "category": "both" },
-        { "id": "dna", "text": "DNA as genetic material", "category": "both" },
-        { "id": "cellwall", "text": "Cell wall present", "category": "both" },
-        { "id": "cytoplasm", "text": "Cytoplasm", "category": "both" }
+        {
+          "id": "nucleoid",
+          "text": "Nucleoid region (no membrane)",
+          "category": "prokaryotic"
+        },
+        {
+          "id": "70s",
+          "text": "70S ribosomes",
+          "category": "prokaryotic"
+        },
+        {
+          "id": "peptidoglycan",
+          "text": "Peptidoglycan cell wall",
+          "category": "prokaryotic"
+        },
+        {
+          "id": "plasmids",
+          "text": "Plasmids",
+          "category": "prokaryotic"
+        },
+        {
+          "id": "binary-fission",
+          "text": "Binary fission",
+          "category": "prokaryotic"
+        },
+        {
+          "id": "nucleus",
+          "text": "Membrane-bound nucleus",
+          "category": "eukaryotic"
+        },
+        {
+          "id": "80s",
+          "text": "80S ribosomes",
+          "category": "eukaryotic"
+        },
+        {
+          "id": "mitochondria",
+          "text": "Mitochondria",
+          "category": "eukaryotic"
+        },
+        {
+          "id": "golgi",
+          "text": "Golgi apparatus",
+          "category": "eukaryotic"
+        },
+        {
+          "id": "er",
+          "text": "Endoplasmic reticulum",
+          "category": "eukaryotic"
+        },
+        {
+          "id": "linear-dna",
+          "text": "Linear chromosomes with histones",
+          "category": "eukaryotic"
+        },
+        {
+          "id": "dna",
+          "text": "DNA as genetic material",
+          "category": "both"
+        },
+        {
+          "id": "ribosomes",
+          "text": "Ribosomes (protein synthesis)",
+          "category": "both"
+        },
+        {
+          "id": "cell-membrane",
+          "text": "Cell membrane",
+          "category": "both"
+        },
+        {
+          "id": "cytoplasm",
+          "text": "Cytoplasm",
+          "category": "both"
+        }
       ]
     },
     {
-      "id": "antibiotic-mechanism-ordering",
+      "id": "organelle-function-matching",
+      "type": "matching",
+      "title": "Match Organelles to Functions",
+      "description": "Match each eukaryotic organelle with its primary function.",
+      "theme": "purple",
+      "xpReward": 50,
+      "items": [
+        {
+          "id": "nucleus",
+          "text": "Nucleus",
+          "match": "Stores DNA and controls cell activities"
+        },
+        {
+          "id": "mitochondria",
+          "text": "Mitochondria",
+          "match": "Cellular respiration and ATP production"
+        },
+        {
+          "id": "er",
+          "text": "Endoplasmic reticulum",
+          "match": "Protein and lipid synthesis and transport"
+        },
+        {
+          "id": "golgi",
+          "text": "Golgi apparatus",
+          "match": "Processes and packages proteins for export"
+        },
+        {
+          "id": "lysosomes",
+          "text": "Lysosomes",
+          "match": "Digests waste and old organelles"
+        },
+        {
+          "id": "chloroplasts",
+          "text": "Chloroplasts",
+          "match": "Photosynthesis in plant cells and algae"
+        }
+      ]
+    },
+    {
+      "id": "endosymbiosis-ordering",
       "type": "ordering",
-      "title": "Sequence: How Antibiotics Work",
-      "description": "Put the steps in the correct order to explain how antibiotics selectively kill bacteria without harming human cells.",
+      "title": "Sequence: How Endosymbiosis Created Mitochondria",
+      "description": "Put the steps of endosymbiotic theory in the correct chronological order.",
       "theme": "emerald",
       "xpReward": 50,
       "items": [
-        { "id": "step1", "text": "Antibiotic enters bacterial cell", "order": 1 },
-        { "id": "step2", "text": "Antibiotic binds to 70S ribosome (30S subunit)", "order": 2 },
-        { "id": "step3", "text": "Protein synthesis is blocked", "order": 3 },
-        { "id": "step4", "text": "Bacterial cell cannot make essential proteins", "order": 4 },
-        { "id": "step5", "text": "Bacterial cell dies", "order": 5 }
+        {
+          "id": "step1",
+          "text": "Large anaerobic prokaryote engulfs smaller aerobic prokaryote",
+          "order": 1
+        },
+        {
+          "id": "step2",
+          "text": "Engulfed cell survives inside host, enclosed by membrane vesicle",
+          "order": 2
+        },
+        {
+          "id": "step3",
+          "text": "Engulfed cell performs aerobic respiration, producing ATP for the host",
+          "order": 3
+        },
+        {
+          "id": "step4",
+          "text": "Symbiotic relationship becomes obligate over millions of years",
+          "order": 4
+        },
+        {
+          "id": "step5",
+          "text": "Genes transfer from endosymbiont to host nucleus",
+          "order": 5
+        },
+        {
+          "id": "step6",
+          "text": "Engulfed cell becomes a mitochondrion with double membrane, own DNA, and 70S ribosomes",
+          "order": 6
+        }
       ],
-      "explanation": "This sequence demonstrates selective toxicity—antibiotics exploit structural differences between bacterial (70S) and human (80S) ribosomes.",
-      "answerArea": true
+      "explanation": "This sequence shows how a once-independent prokaryotic cell became a permanent organelle through endosymbiosis approximately 2 billion years ago."
+    },
+    {
+      "id": "endosymbiotic-evidence-matching",
+      "type": "matching",
+      "title": "Match Endosymbiotic Evidence to Explanation",
+      "description": "Match each piece of evidence for endosymbiotic theory with the correct explanation of why it supports the theory.",
+      "theme": "amber",
+      "xpReward": 50,
+      "items": [
+        {
+          "id": "double-membrane",
+          "text": "Double membrane",
+          "match": "Inner from original prokaryote, outer from host's engulfing vesicle"
+        },
+        {
+          "id": "circular-dna",
+          "text": "Own circular DNA",
+          "match": "Circular DNA is characteristic of prokaryotes, not eukaryotic nuclear DNA"
+        },
+        {
+          "id": "70s-ribosomes",
+          "text": "70S ribosomes",
+          "match": "Prokaryotic ribosome size, not the 80S found in eukaryotic cytoplasm"
+        },
+        {
+          "id": "binary-fission",
+          "text": "Divide by binary fission",
+          "match": "Binary fission is how prokaryotes reproduce, not typical of eukaryotic organelles"
+        },
+        {
+          "id": "dna-similarity",
+          "text": "DNA sequence similarity to bacteria",
+          "match": "Molecular phylogeny links organelles directly to specific bacterial groups"
+        }
+      ]
     }
   ],
-
   "assessment": {
     "multipleChoice": [
       {
         "id": "mcq-1",
-        "question": "Which structure is found in prokaryotic cells but absent from eukaryotic cells?",
+        "question": "Which feature is found in eukaryotic cells but NOT in prokaryotic cells?",
         "marks": 1,
         "options": [
+          "DNA",
           "Ribosomes",
           "Membrane-bound nucleus",
-          "Peptidoglycan cell wall",
-          "DNA"
+          "Cell membrane"
         ],
-        "correctAnswer": "Peptidoglycan cell wall",
-        "rationale": "Both cell types have ribosomes and DNA. Only eukaryotes have membrane-bound nucleus. Peptidoglycan cell wall is specific to bacteria (prokaryotes)."
+        "correctAnswer": "Membrane-bound nucleus",
+        "rationale": "Both cell types have DNA, ribosomes, and cell membranes. Only eukaryotes have a true membrane-bound nucleus."
       },
       {
         "id": "mcq-2",
-        "question": "The main difference between the nucleoid of a bacterium and the nucleus of an animal cell is that the nucleoid:",
+        "question": "Which group consists entirely of prokaryotic organisms?",
         "marks": 1,
         "options": [
-          "Contains RNA instead of DNA",
-          "Is not surrounded by a membrane",
-          "Contains linear chromosomes",
-          "Is larger than the nucleus"
+          "Plants and fungi",
+          "Animals and protists",
+          "Bacteria and archaea",
+          "Fungi and bacteria"
         ],
-        "correctAnswer": "Is not surrounded by a membrane",
-        "rationale": "Students often think 'nucleoid' means 'small nucleus' with membrane. The key difference is nucleoid has NO membrane, while nucleus HAS a double membrane."
+        "correctAnswer": "Bacteria and archaea",
+        "rationale": "Bacteria and archaea are the two domains of prokaryotic life. Plants, fungi, animals, and protists are all eukaryotes."
       },
       {
         "id": "mcq-3",
-        "question": "Antibiotics such as tetracycline are effective against bacteria because they:",
+        "question": "Which statement about mitochondria provides the STRONGEST evidence for endosymbiotic theory?",
         "marks": 1,
         "options": [
-          "Destroy the cell wall",
-          "Target the 70S ribosomes",
-          "Break down the nucleoid",
-          "Prevent flagella movement"
+          "Mitochondria are found in all eukaryotic cells.",
+          "Mitochondria produce ATP through cellular respiration.",
+          "Mitochondria have their own circular DNA and 70S ribosomes, like bacteria.",
+          "Mitochondria are larger than prokaryotic cells."
         ],
-        "correctAnswer": "Target the 70S ribosomes",
-        "rationale": "Antibiotics exploit the difference between 70S (bacterial) and 80S (human) ribosomes. Penicillin destroys cell walls; tetracycline targets ribosomes."
+        "correctAnswer": "Mitochondria have their own circular DNA and 70S ribosomes, like bacteria.",
+        "rationale": "Circular DNA and 70S ribosomes directly link mitochondria to prokaryotic ancestry. The other options describe function or location, not origin."
       },
       {
         "id": "mcq-4",
-        "question": "Which of the following statements about prokaryotic ribosomes is CORRECT?",
+        "question": "What is a major advantage of compartmentalisation in eukaryotic cells?",
         "marks": 1,
         "options": [
-          "They are larger than eukaryotic ribosomes",
-          "They are composed of 60S and 40S subunits",
-          "They are the target of many antibiotics",
-          "They are not involved in protein synthesis"
+          "It makes cells smaller and more efficient.",
+          "It allows incompatible chemical processes to occur simultaneously in different locations.",
+          "It eliminates the need for DNA replication.",
+          "It prevents cells from dividing."
         ],
-        "correctAnswer": "They are the target of many antibiotics",
-        "rationale": "Prokaryotic ribosomes are 70S (smaller than 80S eukaryotic ribosomes) and consist of 50S and 30S subunits. They ARE the site of protein synthesis and ARE targeted by antibiotics like tetracycline and streptomycin."
+        "correctAnswer": "It allows incompatible chemical processes to occur simultaneously in different locations.",
+        "rationale": "Compartmentalisation allows different reactions to occur in isolated environments. For example, lysosomes digest proteins while ribosomes synthesise them elsewhere."
       },
       {
         "id": "mcq-5",
-        "question": "A student observes a cell under the microscope and notes: membrane-bound nucleus, 80S ribosomes, mitochondria, and linear DNA. The cell is MOST likely:",
+        "question": "Approximately when did eukaryotic cells first evolve?",
         "marks": 1,
         "options": [
-          "A bacterial cell",
-          "An archaeal cell",
-          "A eukaryotic cell",
-          "A virus"
+          "3.5 billion years ago",
+          "2 billion years ago",
+          "1 billion years ago",
+          "500 million years ago"
         ],
-        "correctAnswer": "A eukaryotic cell",
-        "rationale": "All the features listed (membrane-bound nucleus, 80S ribosomes, mitochondria, linear DNA) are characteristic of eukaryotic cells. Prokaryotes (bacteria and archaea) lack membrane-bound nuclei and mitochondria, and have 70S ribosomes and circular DNA."
+        "correctAnswer": "2 billion years ago",
+        "rationale": "Prokaryotes appeared 3.5 billion years ago, eukaryotes 2 billion years ago, multicellular organisms 1 billion years ago."
       }
     ],
     "shortAnswer": [
       {
         "id": "sa-1",
-        "question": "Distinguish between prokaryotic and eukaryotic cells with reference to the presence of a nucleus and the structure of ribosomes. (2 marks)",
-        "marks": 2,
-        "lines": 4,
-        "markingCriteria": [
-          "1 mark: Prokaryotes have nucleoid region (no membrane) vs eukaryotes have membrane-bound nucleus",
-          "1 mark: Prokaryotes have 70S ribosomes vs eukaryotes have 80S ribosomes"
-        ],
-        "commonError": "Stating prokaryotes have 'no DNA' or confusing 70S/80S sizes. Remember: 70S are SMALLER (found in prokaryotes)."
-      },
-      {
-        "id": "sa-2",
-        "question": "Explain why bacterial cells can be killed by antibiotics that target their ribosomes, while human cells are not affected. (2 marks)",
-        "marks": 2,
-        "lines": 4,
-        "markingCriteria": [
-          "1 mark: Bacterial ribosomes are 70S (small) while human ribosomes are 80S (different structure)",
-          "1 mark: Antibiotics can bind to/block 70S ribosomes but not 80S ribosomes (selective toxicity)"
-        ],
-        "commonError": "Saying 'bacteria are weaker' rather than explaining structural difference. Focus on the 70S vs 80S distinction."
-      },
-      {
-        "id": "sa-3",
-        "question": "Describe the structure and function of plasmids in prokaryotic cells. Explain why plasmids are significant in the context of antibiotic resistance. (3 marks)",
+        "question": "List and explain three structural differences between prokaryotic and eukaryotic cells.",
         "marks": 3,
         "lines": 6,
         "markingCriteria": [
-          "1 mark: Plasmids are small, circular DNA molecules separate from the main bacterial chromosome",
-          "1 mark: They carry extra genes (e.g., antibiotic resistance, toxin production) that provide survival advantages",
-          "1 mark: They can be transferred between bacteria via conjugation, spreading antibiotic resistance through populations"
-        ],
-        "commonError": "Confusing plasmids with the main chromosome. Plasmids are NOT essential for normal cell function (unlike the chromosome), but provide advantages."
+          "1 mark: Prokaryotes lack a membrane-bound nucleus (have nucleoid region); eukaryotes have a true nucleus with nuclear envelope",
+          "1 mark: Prokaryotes have no membrane-bound organelles; eukaryotes have mitochondria, ER, Golgi, lysosomes, etc.",
+          "1 mark: Prokaryotes are smaller (0.1–5 μm); eukaryotes are larger (10–100 μm)"
+        ]
+      },
+      {
+        "id": "sa-2",
+        "question": "Describe the endosymbiotic theory for the origin of mitochondria. Include two pieces of evidence that support this theory.",
+        "marks": 4,
+        "lines": 8,
+        "markingCriteria": [
+          "1 mark: Large anaerobic prokaryote engulfed smaller aerobic prokaryote",
+          "1 mark: Symbiotic relationship formed—engulfed cell provided ATP, host provided protection; became obligate over time",
+          "1 mark: Evidence 1 (e.g. double membrane, circular DNA, 70S ribosomes, binary fission, DNA similarity to bacteria)",
+          "1 mark: Evidence 2 (different from Evidence 1)"
+        ]
+      },
+      {
+        "id": "sa-3",
+        "question": "Explain two advantages that membrane-bound organelles provide to eukaryotic cells. Use specific examples of organelles in your answer.",
+        "marks": 5,
+        "lines": 10,
+        "markingCriteria": [
+          "1 mark: Advantage 1 identified (e.g. separation of incompatible processes)",
+          "1 mark: Specific organelle example for advantage 1 (e.g. lysosomes isolate digestive enzymes)",
+          "1 mark: Advantage 2 identified (e.g. optimised microenvironments)",
+          "1 mark: Specific organelle example for advantage 2 (e.g. mitochondria maintain pH gradient)",
+          "1 mark: Explanation of how this increases efficiency (e.g. cristae increase surface area for ATP production)"
+        ]
       }
     ]
   },
-
   "answers": {
     "activities": [
       {
-        "activityId": "prokaryotic-labeling",
-        "title": "Label the Prokaryotic Cell - Answer Key",
-        "answers": [
-          { "label": "Nucleoid", "description": "The region containing the circular bacterial chromosome. Key point: NO membrane surrounds it (unlike a true nucleus)." },
-          { "label": "Cell wall", "description": "Rigid layer made of peptidoglycan that provides structural support and protection. Found external to the plasma membrane." },
-          { "label": "Ribosome", "description": "70S ribosomes (smaller than eukaryotic 80S) scattered throughout the cytoplasm. Site of protein synthesis." },
-          { "label": "Flagellum", "description": "Long, whip-like appendage used for locomotion. Lacks the 9+2 microtubule arrangement of eukaryotic flagella." },
-          { "label": "Plasmid", "description": "Small, circular, extrachromosomal DNA molecule. Often carries antibiotic resistance genes and can be transferred between bacteria." },
-          { "label": "Capsule", "description": "Gel-like layer outside the cell wall. Provides protection and helps bacteria adhere to surfaces." }
-        ],
-        "keyPoint": "The most critical distinction is the nucleoid vs nucleus—prokaryotes have no membrane-bound nucleus!"
-      },
-      {
-        "activityId": "structure-function-matching",
-        "title": "Match Structures to Functions - Answer Key",
-        "answers": [
-          { "label": "Nucleoid → Contains genetic information (circular DNA)", "description": "The nucleoid is not a true organelle but a concentrated region of DNA that controls cellular activities." },
-          { "label": "70S ribosome → Site of protein synthesis", "description": "Composed of 50S and 30S subunits. The 'S' unit refers to Svedberg units (sedimentation rate)." },
-          { "label": "Peptidoglycan wall → Provides protection and structure", "description": "Unique to bacteria (archaea have different cell wall compositions). Target of penicillin antibiotics." },
-          { "label": "Plasmid → Carries antibiotic resistance genes", "description": "Can replicate independently and be transferred between bacteria via conjugation." },
-          { "label": "Flagella → Enables cell movement", "description": "Rotates like a propeller (different from the whipping motion of eukaryotic flagella)." }
-        ],
-        "keyPoint": "Understanding structure-function relationships is essential for HSC questions on cell biology."
-      },
-      {
-        "activityId": "prokaryotic-vs-eukaryotic-classification",
-        "title": "Classify Cell Features - Answer Key",
+        "activityId": "cell-feature-classification",
+        "title": "Classify Cell Features — Answer Key",
         "answers": {
           "prokaryotic": [
             "Nucleoid region (no membrane)",
-            "70S ribosomes (smaller)",
-            "Peptidoglycan cell wall (bacteria)",
-            "Plasmids (circular extrachromosomal DNA)"
+            "70S ribosomes",
+            "Peptidoglycan cell wall",
+            "Plasmids",
+            "Binary fission"
           ],
           "eukaryotic": [
-            "Membrane-bound nucleus (true nucleus)",
-            "80S ribosomes (larger)",
-            "Mitochondria (membrane-bound organelles)",
-            "Linear DNA in chromosomes"
+            "Membrane-bound nucleus",
+            "80S ribosomes",
+            "Mitochondria",
+            "Golgi apparatus",
+            "Endoplasmic reticulum",
+            "Linear chromosomes with histones"
           ],
           "both": [
-            "Ribosomes present (protein synthesis)",
             "DNA as genetic material",
-            "Cell wall present (though composition differs)",
-            "Cytoplasm (gel-like matrix)"
+            "Ribosomes (protein synthesis)",
+            "Cell membrane",
+            "Cytoplasm"
           ]
         },
-        "keyPoint": "The critical distinction is membrane-bound organelles—prokaryotes have NONE, eukaryotes have many."
+        "keyPoint": "The critical distinction is membrane-bound organelles—prokaryotes have NONE, eukaryotes have many. Both cell types share fundamental features like DNA, ribosomes, and cell membranes."
       },
       {
-        "activityId": "antibiotic-mechanism-ordering",
-        "title": "Sequence: How Antibiotics Work - Answer Key",
+        "activityId": "organelle-function-matching",
+        "title": "Match Organelles to Functions — Answer Key",
+        "answers": [
+          {
+            "label": "Nucleus → Stores DNA and controls cell activities",
+            "description": "The nucleus is enclosed by a double membrane (nuclear envelope) with pores that regulate transport of molecules in and out."
+          },
+          {
+            "label": "Mitochondria → Cellular respiration and ATP production",
+            "description": "Often called the 'powerhouse of the cell'. Has its own DNA and 70S ribosomes (evidence for endosymbiotic theory)."
+          },
+          {
+            "label": "Endoplasmic reticulum → Protein and lipid synthesis and transport",
+            "description": "Rough ER (with ribosomes) makes proteins; smooth ER synthesises lipids and detoxifies substances."
+          },
+          {
+            "label": "Golgi apparatus → Processes and packages proteins for export",
+            "description": "Receives proteins from the ER, modifies them (e.g. adds sugar groups), and packages them in vesicles for secretion."
+          },
+          {
+            "label": "Lysosomes → Digests waste and old organelles",
+            "description": "Contains powerful digestive enzymes at low pH. The membrane prevents these enzymes from damaging the rest of the cell."
+          },
+          {
+            "label": "Chloroplasts → Photosynthesis in plant cells and algae",
+            "description": "Has its own DNA and 70S ribosomes. Contains chlorophyll in thylakoid membranes. Also evidence for endosymbiotic theory."
+          }
+        ]
+      },
+      {
+        "activityId": "endosymbiosis-ordering",
+        "title": "Sequence: How Endosymbiosis Created Mitochondria — Answer Key",
         "correctOrder": [
-          "Antibiotic enters bacterial cell",
-          "Antibiotic binds to 70S ribosome (30S subunit)",
-          "Protein synthesis is blocked",
-          "Bacterial cell cannot make essential proteins",
-          "Bacterial cell dies"
+          "Large anaerobic prokaryote engulfs smaller aerobic prokaryote",
+          "Engulfed cell survives inside host, enclosed by membrane vesicle",
+          "Engulfed cell performs aerobic respiration, producing ATP for the host",
+          "Symbiotic relationship becomes obligate over millions of years",
+          "Genes transfer from endosymbiont to host nucleus",
+          "Engulfed cell becomes a mitochondrion with double membrane, own DNA, and 70S ribosomes"
         ],
-        "explanation": "This demonstrates SELECTIVE TOXICITY. Antibiotics can bind to bacterial 70S ribosomes but NOT to human 80S ribosomes due to structural differences. This is why antibiotics kill bacteria without harming human cells.",
-        "examTip": "Remember: 70S is SMALLER (prokaryotic), 80S is LARGER (eukaryotic). The numbers are Svedberg units (sedimentation rate), not size directly!"
+        "explanation": "This process took millions of years. The key insight is that the double membrane of mitochondria results from this engulfing event: the inner membrane is the original prokaryote's membrane, the outer membrane is the host's vesicle membrane."
+      },
+      {
+        "activityId": "endosymbiotic-evidence-matching",
+        "title": "Match Endosymbiotic Evidence to Explanation — Answer Key",
+        "answers": [
+          {
+            "label": "Double membrane → Inner from original prokaryote, outer from host's engulfing vesicle",
+            "description": "This is exactly what we'd expect if one cell was engulfed by another through endocytosis."
+          },
+          {
+            "label": "Own circular DNA → Circular DNA is characteristic of prokaryotes, not eukaryotic nuclear DNA",
+            "description": "Eukaryotic nuclear DNA is linear. The circular DNA in mitochondria mirrors prokaryotic chromosomes."
+          },
+          {
+            "label": "70S ribosomes → Prokaryotic ribosome size, not the 80S found in eukaryotic cytoplasm",
+            "description": "This is why some antibiotics target 70S ribosomes can affect mitochondrial function as a side effect."
+          },
+          {
+            "label": "Divide by binary fission → Binary fission is how prokaryotes reproduce, not typical of eukaryotic organelles",
+            "description": "Mitochondria replicate independently of the cell cycle, just as free-living bacteria would."
+          },
+          {
+            "label": "DNA sequence similarity to bacteria → Molecular phylogeny links organelles directly to specific bacterial groups",
+            "description": "Mitochondrial DNA closely resembles alpha-proteobacteria; chloroplast DNA resembles cyanobacteria."
+          }
+        ]
       }
     ],
     "assessment": [
       {
         "questionId": "mcq-1",
-        "question": "Which structure is found in prokaryotic cells but absent from eukaryotic cells?",
-        "correctAnswer": "C - Peptidoglycan cell wall",
-        "explanation": "Both cell types have ribosomes and DNA. Eukaryotes have membrane-bound nuclei (not prokaryotes). Peptidoglycan cell walls are unique to bacteria (a type of prokaryote). Plant cells have cellulose walls; fungi have chitin walls—but these are eukaryotes with different wall compositions."
+        "question": "Which feature is found in eukaryotic cells but NOT in prokaryotic cells?",
+        "correctAnswer": "C — Membrane-bound nucleus",
+        "explanation": "Both cell types have DNA (A), ribosomes (B), and cell membranes (D). Only eukaryotes have a true, membrane-bound nucleus. Prokaryotes have a nucleoid region with no membrane."
       },
       {
         "questionId": "mcq-2",
-        "question": "The main difference between the nucleoid of a bacterium and the nucleus of an animal cell is that the nucleoid:",
-        "correctAnswer": "B - Is not surrounded by a membrane",
-        "explanation": "The name 'nucleoid' sounds like 'nucleus' but they differ fundamentally. The nucleoid is simply a region where DNA is concentrated—there is no membrane envelope. The eukaryotic nucleus is surrounded by a double membrane (nuclear envelope) with pores. The nucleoid contains circular DNA; the nucleus contains linear DNA."
+        "question": "Which group consists entirely of prokaryotic organisms?",
+        "correctAnswer": "C — Bacteria and archaea",
+        "explanation": "Bacteria and archaea are the two domains of prokaryotic life. Plants, fungi (A, D), animals, and protists (B) are all eukaryotes."
       },
       {
         "questionId": "mcq-3",
-        "question": "Antibiotics such as tetracycline are effective against bacteria because they:",
-        "correctAnswer": "B - Target the 70S ribosomes",
-        "explanation": "Selective toxicity is the principle here. Bacterial ribosomes are 70S (50S + 30S subunits) while human ribosomes are 80S (60S + 40S subunits). Tetracycline binds to the 30S subunit and blocks protein synthesis in bacteria. Human ribosomes are unaffected because their different structure prevents antibiotic binding."
+        "question": "Which statement about mitochondria provides the STRONGEST evidence for endosymbiotic theory?",
+        "correctAnswer": "C — Mitochondria have their own circular DNA and 70S ribosomes, like bacteria.",
+        "explanation": "Circular DNA and 70S ribosomes directly link mitochondria to prokaryotic ancestry. Option A (presence in all eukaryotes) doesn't support origin theory. Option B (function) doesn't address origin. Option D is factually incorrect."
       },
       {
         "questionId": "mcq-4",
-        "question": "Which of the following statements about prokaryotic ribosomes is CORRECT?",
-        "correctAnswer": "They are the target of many antibiotics",
-        "explanation": "Prokaryotic ribosomes are 70S (composed of 50S and 30S subunits), which makes them SMALLER than 80S eukaryotic ribosomes (60S + 40S). They ARE the site of protein synthesis. Their different structure makes them targets for antibiotics like tetracycline (30S) and erythromycin (50S)."
+        "question": "What is a major advantage of compartmentalisation in eukaryotic cells?",
+        "correctAnswer": "B — It allows incompatible chemical processes to occur simultaneously in different locations.",
+        "explanation": "Compartmentalisation lets destructive processes (lysosomes) and constructive processes (ribosomes) happen simultaneously without interference."
       },
       {
         "questionId": "mcq-5",
-        "question": "A student observes a cell under the microscope and notes: membrane-bound nucleus, 80S ribosomes, mitochondria, and linear DNA. The cell is MOST likely:",
-        "correctAnswer": "A eukaryotic cell",
-        "explanation": "All listed features are hallmarks of eukaryotic cells. Prokaryotes lack membrane-bound nuclei and mitochondria, have 70S ribosomes and circular DNA. Viruses are not cells and lack ribosomes entirely."
+        "question": "Approximately when did eukaryotic cells first evolve?",
+        "correctAnswer": "B — 2 billion years ago",
+        "explanation": "Prokaryotes appeared ~3.5 billion years ago (A), eukaryotes ~2 billion years ago (B), multicellular organisms ~1 billion years ago (C). 500 million years ago (D) was the Cambrian explosion."
       },
       {
         "questionId": "sa-1",
-        "question": "Distinguish between prokaryotic and eukaryotic cells with reference to the presence of a nucleus and the structure of ribosomes. (2 marks)",
-        "correctAnswer": "Prokaryotic cells have a nucleoid region (not surrounded by a membrane) whereas eukaryotic cells have a membrane-bound nucleus (1 mark). Prokaryotes have 70S ribosomes which are smaller than the 80S ribosomes found in eukaryotes (1 mark).",
-        "explanation": "Full marks require clear distinction on both criteria. Note that 'nucleoid' must be described as lacking a membrane. For ribosomes, mentioning the Svedberg values (70S vs 80S) or simply stating prokaryotic ribosomes are smaller earns the mark."
+        "question": "List and explain three structural differences between prokaryotic and eukaryotic cells.",
+        "correctAnswer": "Difference 1: Prokaryotic cells lack a membrane-bound nucleus; their DNA is in a nucleoid region. Eukaryotic cells have a true nucleus with a double membrane (1 mark). Difference 2: Prokaryotes have no membrane-bound organelles. Eukaryotes have mitochondria, ER, Golgi, lysosomes, etc. (1 mark). Difference 3: Prokaryotes are smaller (0.1–5 μm) than eukaryotes (10–100 μm) (1 mark)."
       },
       {
         "questionId": "sa-2",
-        "question": "Explain why bacterial cells can be killed by antibiotics that target their ribosomes, while human cells are not affected. (2 marks)",
-        "correctAnswer": "Bacterial cells have 70S ribosomes which have a different structure from the 80S ribosomes in human cells (1 mark). Antibiotics like tetracycline can bind to the 70S ribosomes and block protein synthesis in bacteria, but they cannot bind to the larger 80S ribosomes in human cells, so protein synthesis in human cells is not affected. This is called selective toxicity (1 mark).",
-        "explanation": "The key concept is selective toxicity—exploiting structural differences. The answer must mention 70S vs 80S ribosomes and explain that the antibiotic can bind to bacterial but not human ribosomes. The term 'selective toxicity' is excellent but not essential if the concept is clearly explained."
+        "question": "Describe the endosymbiotic theory for the origin of mitochondria. Include two pieces of evidence.",
+        "correctAnswer": "A large anaerobic prokaryote engulfed a smaller aerobic prokaryote (1 mark). A stable symbiotic relationship formed—engulfed cell provided ATP through aerobic respiration, host provided protection and nutrients. Over millions of years, this became obligate with genes transferring to the host nucleus (1 mark). Evidence 1: Mitochondria have double membranes—inner from the original prokaryote, outer from the host's vesicle (1 mark). Evidence 2: Mitochondria have their own circular DNA and 70S ribosomes, both characteristic of prokaryotes rather than eukaryotes (1 mark)."
       },
       {
         "questionId": "sa-3",
-        "question": "Describe the structure and function of plasmids in prokaryotic cells. Explain why plasmids are significant in the context of antibiotic resistance. (3 marks)",
-        "correctAnswer": "Plasmids are small, circular DNA molecules that are separate from the main bacterial chromosome (1 mark). They carry extra genes such as those for antibiotic resistance or toxin production, providing survival advantages to the bacterium (1 mark). Plasmids can be transferred between bacteria through a process called conjugation, which allows antibiotic resistance to spread rapidly through bacterial populations (1 mark).",
-        "explanation": "Full marks require understanding both the structure (small circular DNA, separate from chromosome) and function (carrying advantageous genes, horizontal transfer). The significance of plasmids in antibiotic resistance is a major public health concern—this is how superbugs like MRSA develop and spread."
+        "question": "Explain two advantages that membrane-bound organelles provide to eukaryotic cells.",
+        "correctAnswer": "Advantage 1—Separation of incompatible processes: Lysosomes contain powerful digestive enzymes (proteases, lipases) that would destroy the cell if released. The lysosomal membrane isolates these enzymes, allowing safe digestion of waste while protein synthesis occurs elsewhere (2 marks). Advantage 2—Optimised microenvironments: Mitochondria maintain a specific pH gradient across their inner membrane that drives ATP synthase. The highly folded inner membrane (cristae) increases surface area by 5–10 times, dramatically increasing ATP production efficiency. Without this compartment, these optimal conditions could not be maintained (3 marks)."
       }
     ]
   },
-
   "copyToBook": {
-    "title": "Key Points to Copy",
     "definitions": [
-      "Prokaryotic cells have no membrane-bound nucleus (have nucleoid region instead)",
-      "Prokaryotic DNA is circular; eukaryotic DNA is linear",
-      "Prokaryotic ribosomes are 70S (smaller than eukaryotic 80S ribosomes)",
-      "Cell walls contain peptidoglycan (not cellulose like plants)",
-      "Nucleoid = region of DNA with NO surrounding membrane"
+      "Prokaryotic cell: A cell with no membrane-bound nucleus or organelles (e.g. bacteria, archaea).",
+      "Eukaryotic cell: A cell with a membrane-bound nucleus and membrane-bound organelles (e.g. animals, plants, fungi).",
+      "Nucleoid region: The area in a prokaryotic cell where circular DNA is concentrated, with no surrounding membrane.",
+      "Endosymbiotic theory: The theory that mitochondria and chloroplasts originated from prokaryotic cells engulfed by a larger host cell.",
+      "Compartmentalisation: The division of a eukaryotic cell into membrane-bound compartments (organelles), allowing incompatible chemical reactions to occur simultaneously.",
+      "Mitochondria: Double-membraned organelles that carry out cellular respiration and produce ATP; have their own circular DNA and 70S ribosomes.",
+      "Chloroplast: Double-membraned organelle found in plant cells and algae that carries out photosynthesis; also has its own DNA and 70S ribosomes."
     ],
-    "sections": [
-      {
-        "title": "Definitions",
-        "items": [
-          "Prokaryotic cells have no membrane-bound nucleus (have nucleoid region instead)",
-          "Prokaryotic DNA is circular; eukaryotic DNA is linear",
-          "Prokaryotic ribosomes are 70S (smaller than eukaryotic 80S ribosomes)",
-          "Cell walls contain peptidoglycan (not cellulose like plants)",
-          "Nucleoid = region of DNA with NO surrounding membrane"
-        ]
-      },
-      {
-        "title": "Key Comparisons",
-        "items": [
-          "Prokaryotes: No nucleus, 70S ribosomes, circular DNA, peptidoglycan wall, no membrane-bound organelles",
-          "Eukaryotes: True nucleus, 80S ribosomes, linear DNA, cellulose/chitin walls (or none), membrane-bound organelles",
-          "Size: Prokaryotes 1–10 µm; Eukaryotes 10–100 µm"
-        ]
-      },
-      {
-        "title": "Exam Tips",
-        "items": [
-          "Always emphasise 'NO membrane' around the nucleoid—this is a common exam focus",
-          "Remember 70S = prokaryotic (smaller), 80S = eukaryotic (larger)",
-          "Antibiotics work by selective toxicity—targeting structures unique to bacteria",
-          "Draw clear, labelled diagrams showing the nucleoid, cell wall, and ribosomes"
-        ]
-      }
+    "keyPoints": [
+      "Prokaryotes: no nucleus, no membrane-bound organelles, circular DNA, 70S ribosomes, 0.1–5 μm",
+      "Eukaryotes: membrane-bound nucleus, membrane-bound organelles, linear chromosomes with histones, 80S ribosomes, 10–100 μm",
+      "Key organelles: nucleus, mitochondria, ER, Golgi apparatus, lysosomes, chloroplasts (plants)",
+      "Endosymbiotic evidence: double membrane, own circular DNA, 70S ribosomes, binary fission, DNA similarity to bacteria",
+      "Prokaryotes appeared ~3.5 billion years ago; eukaryotes ~2 billion years ago"
+    ],
+    "diagrams": [
+      "Comparison table of prokaryotic vs eukaryotic cell features",
+      "Timeline: prokaryotes (3.5 bya) → endosymbiosis → eukaryotes (2 bya) → multicellular life (1 bya)"
     ]
   },
-
   "prerequisites": [],
-
   "navigation": {
     "previous": null,
     "previousTitle": null,
     "next": "module-1-cells-lesson-2",
     "nextTitle": "Eukaryotic Cell Compartmentalisation"
   },
-
   "meta": {
-    "author": "HSC Biology Team",
+    "author": "Science Hub",
     "createdAt": "2026-02-08",
     "lastModified": "2026-02-10",
     "version": "2.0.0",
     "format": "V2.0",
-    "tags": ["prokaryotic", "bacteria", "nucleoid", "70S ribosomes", "antibiotics", "cell wall", "Module 1"]
-  },
-
-  "imageLibrary": [
-    {
-      "id": "prokaryote-diagram",
-      "src": "assets/images/mod1/lesson01/prokaryote-diagram.webp",
-      "alt": "Diagram of a prokaryotic cell",
-      "caption": "General structure of a prokaryotic cell"
-    },
-    {
-      "id": "nucleoid-tem",
-      "src": "assets/images/mod1/lesson01/nucleoid-tem.webp",
-      "alt": "TEM image of bacterial nucleoid region",
-      "caption": "Transmission electron micrograph showing nucleoid region"
-    },
-    {
-      "id": "70s-ribosome",
-      "src": "assets/images/mod1/lesson01/70s-ribosome.webp",
-      "alt": "Diagram of 70S ribosome structure",
-      "caption": "70S ribosome structure (50S + 30S subunits)"
-    },
-    {
-      "id": "flagella-sem",
-      "src": "assets/images/mod1/lesson01/flagella-sem.webp",
-      "alt": "SEM image of bacterial flagella",
-      "caption": "Scanning electron micrograph of bacterial flagella"
-    }
-  ]
+    "tags": [
+      "prokaryotic",
+      "eukaryotic",
+      "endosymbiotic theory",
+      "compartmentalisation",
+      "organelles",
+      "cell structure",
+      "Module 1"
+    ]
+  }
 }

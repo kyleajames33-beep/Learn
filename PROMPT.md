@@ -24,6 +24,7 @@ Copy and paste this prompt to any coding AI to start a development cycle:
 - If you find bugs OUTSIDE your task scope, document them in STATUS.md's "Bugs Found" table
 - Do NOT commit until tests pass
 - Update STATUS.md LAST SESSION LOG when done
+- **If creating/enhancing V2.0 lessons:** Read `docs/CONTENT-AUTHOR-GUIDE.md` for CSS classes and `docs/CONTENT_WORKFLOW.md` for the dual-approach workflow (external AI generates HTML → you wrap in V2 JSON)
 
 Start by reading `docs/AI-START-HERE.md`.
 

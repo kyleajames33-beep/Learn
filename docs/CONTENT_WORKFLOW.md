@@ -1,220 +1,209 @@
 # Content Creation & Review Workflow
 
-## Phase 0.4 Status: CORE COMPLETE (Manual Rebuild)
-
-⚠️ **Important:** Automated migration tool failed. Lessons 4-5 manually recreated.
-
-**Completed:** 
-- Lessons 1-3: Created in Phase 0.2 (simplified)
-- Lessons 4-5: Manually recreated with full content
-- Lesson M5L1: Heredity (created in Builder)
-
-**Pending:** Lessons 6-8 creation (to be done in Phase 1 by Kyle)
+**Version:** 2.0 (V2 Dual-Approach)
+**Last Updated:** 2026-02-10
+**Status:** ACTIVE
 
 ---
 
-## Migration Tool Status
+## Overview
 
-⚠️ **DEPRECATED:** The automated migration tool (`migration-tool.js`) did not work correctly:
-- Generated corrupted JSON with HTML embedded
-- Stripped content incorrectly
-- Failed to extract activities and assessment
+Lessons are created using a **dual-approach workflow**:
 
-**New Process:** Manual creation in Lesson Builder for all new lessons.
+1. **External AI (or human)** generates the rich HTML content using CSS classes from `docs/CONTENT-AUTHOR-GUIDE.md`
+2. **Project AI (Claude Code)** wraps that HTML into a V2 JSON file with metadata, interactive activities, assessment, and answers
 
----
-
-## Current Lesson Status
-
-| Lesson | Status | Fidelity | Notes |
-|--------|--------|----------|-------|
-| M1L1: Introduction to Cells | ✅ Ready | Simplified (70%) | Phase 0.2 - Core content only |
-| M1L2: Prokaryotic Cells | ✅ Ready | Simplified (70%) | Phase 0.2 - Core content only |
-| M1L3: Eukaryotic Cells | ✅ Ready | Simplified (70%) | Phase 0.2 - Core content only |
-| M1L4: Cell Membrane | ✅ Ready | Full | Manually recreated |
-| M1L5: Passive Transport | ✅ Ready | Full | Manually recreated |
-| M5L1: Heredity | ✅ Ready | Full | Created in Builder |
-| M1L6: Active Transport | ⏳ Phase 1 | - | Kyle creates NEW |
-| M1L7: Osmosis | ⏳ Phase 1 | - | Kyle creates NEW |
-| M1L8: Enzymes | ⏳ Phase 1 | - | Kyle creates NEW |
-
-**Legend:**
-- M1 = Module 1: Cells
-- M5 = Module 5: Heredity
-- L1-8 = Lesson numbers
+This scales to hundreds of lessons because all styling and behaviour live in CSS and the renderer — content is just HTML.
 
 ---
 
-## Tools
+## The Workflow
 
-### 1. Lesson Builder
+```
+┌─────────────────────────────────────────────────────────┐
+│ STEP 1: PREPARE                                          │
+│                                                          │
+│ Kyle provides:                                           │
+│   - Lesson topic and syllabus dot points                 │
+│   - Level (Foundational / Advanced)                      │
+│   - Subject (HSC Biology, HSC Chemistry, etc.)           │
+│   - Any specific requirements (worked examples, etc.)    │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│ STEP 2: GENERATE HTML                                    │
+│                                                          │
+│ External AI generates lesson HTML using:                 │
+│   - docs/CONTENT-AUTHOR-GUIDE.md (CSS classes + rules)   │
+│   - The prompt template at the bottom of that guide      │
+│                                                          │
+│ Output: Raw HTML string using Science Hub CSS classes     │
+│ Quality: Must pass the checklist in the guide            │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│ STEP 3: WRAP IN V2 JSON                                  │
+│                                                          │
+│ Project AI (Claude Code) takes the HTML and creates:     │
+│   - V2 JSON file with "v2": true flag                    │
+│   - Metadata: id, title, module, navigation, hero        │
+│   - contentHTML: the provided HTML                        │
+│   - activities: interactive JSON (classification,         │
+│     matching, ordering, labeling, fill-blank)             │
+│   - assessment: MCQ + short answer with correct answers   │
+│   - answers: comprehensive answer keys                    │
+│   - copyToBook: structured note-taking data               │
+│                                                          │
+│ Reference: docs/TEMPLATE-v2.json                         │
+│ Output: data/lessons/{lesson-id}.json                    │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│ STEP 4: VALIDATE & TEST                                  │
+│                                                          │
+│   - Run: node scripts/run-all-checks.js                  │
+│   - Open lesson in browser, verify rendering              │
+│   - Check all interactive activities work                 │
+│   - Test mobile at 375px                                  │
+│   - Verify Australian English throughout                  │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│ STEP 5: DEPLOY                                           │
+│                                                          │
+│   - Commit and push to main                              │
+│   - GitHub Pages auto-deploys                            │
+│   - Verify on live URL                                   │
+│   - Update tracker: lesson status → V2.0                 │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Key Documents
+
+| Document | Purpose | Who Uses It |
+|----------|---------|-------------|
+| `docs/CONTENT-AUTHOR-GUIDE.md` | CSS class reference, HTML structure rules, quality checklist | External AI / human writing HTML |
+| `docs/LESSON-DESIGN-SPEC.md` | Visual design specification, minimum content requirements | Everyone |
+| `docs/TEMPLATE-v2.json` | Complete V2 JSON structure template | Project AI wrapping HTML |
+| `assets/css/lesson-v2.css` | All V2 CSS classes (source of truth for styling) | Reference only |
+
+---
+
+## How to Generate HTML (for Kyle)
+
+### Option A: Use Another AI
+
+1. Copy the entire `docs/CONTENT-AUTHOR-GUIDE.md` file
+2. Paste it to any AI (ChatGPT, Gemini, Claude, etc.)
+3. Use the prompt template at the bottom of the guide:
+
+> Generate the HTML content for a Science Hub lesson on **[TOPIC]** for **HSC Biology** at **Foundational** level.
+>
+> Follow the structure and CSS classes defined in the Content Author Guide exactly.
+>
+> [Paste the guide]
+>
+> The lesson should cover:
+> - [Syllabus dot point 1]
+> - [Syllabus dot point 2]
+>
+> Output ONLY the HTML. No JSON wrapper, no explanation.
+
+4. Copy the HTML output
+5. Paste it to Claude Code with: "Here's the HTML for lesson X, please wrap it in V2 JSON"
+
+### Option B: Write HTML Manually
+
+Use the CSS classes from `docs/CONTENT-AUTHOR-GUIDE.md` and follow the structure. This gives maximum control but takes longer.
+
+### Option C: Use the Lesson Builder (Legacy)
+
+The Lesson Builder at `/lesson-builder.html` still works for creating V1-style lessons, but does NOT produce V2 quality. Use Options A or B for V2 lessons.
+
+---
+
+## V2 JSON Structure (Quick Reference)
+
+```json
+{
+  "id": "mod1-lesson01",
+  "title": "Lesson Title",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 1,
+  "description": "Brief description",
+  "duration": "50 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  "v2": true,
+
+  "hero": { "subjectBadge", "levelBadge", "icon", "gradient" },
+  "intentions": { "learning": [], "connections": [], "success": [] },
+  "learningIntentions": [],
+  "successCriteria": [],
+
+  "contentHTML": "<!-- HTML from external AI goes here -->",
+
+  "activities": [
+    { "id", "type", "title", "description", "theme", "xpReward", ... }
+  ],
+
+  "assessment": {
+    "multipleChoice": [{ "id", "question", "options", "correctAnswer", "marks" }],
+    "shortAnswer": [{ "id", "question", "marks", "markingCriteria" }]
+  },
+
+  "answers": {
+    "activities": [{ "activityId", "title", "answers" }],
+    "assessment": [{ "questionId", "correctAnswer", "explanation" }]
+  },
+
+  "copyToBook": { "title", "sections": [{ "title", "items": [] }] },
+  "navigation": { "previous", "previousTitle", "next", "nextTitle" },
+  "meta": { "author", "createdAt", "lastModified", "version", "tags" }
+}
+```
+
+Full template: `docs/TEMPLATE-v2.json`
+
+---
+
+## Why This Approach Scales
+
+| Scenario | JSON + Renderer | Pure HTML (25 files) | Pure HTML (500 files) |
+|----------|----------------|---------------------|----------------------|
+| Change button colour | Edit 1 CSS file | Edit 25 files | Edit 500 files |
+| Fix a bug | Edit 1 JS file | Edit 25 files | Edit 500 files |
+| Add bookmarks feature | Edit renderer once | Edit 25 files | Edit 500 files |
+| Add a new lesson | Create 1 JSON file | Create 1 HTML file | Create 1 HTML file |
+
+With hundreds of lessons planned, the JSON + renderer approach is the only viable path.
+
+---
+
+## Legacy Tools (Still Available)
+
+### Lesson Builder
 **URL:** `/lesson-builder.html`
+Creates V1-style JSON. Useful for quick prototyping but does not produce V2 quality.
 
-Use this tool to:
-- Create new lessons from scratch (Kyle's primary tool for Phase 1)
-- Edit existing lessons
-- Export lessons as JSON files
-
-**Features:**
-- Form-based lesson creation (no coding required)
-- Rich text editor for formatting
-- Live preview of lesson
-- Auto-save to browser storage
-- JSON export for deployment
-
-**To Edit Existing Lesson:**
-```
-https://kyleajames33-beep.github.io/Learn/lesson-builder.html?edit=module-1-cells-lesson-1
-```
-
-### 2. Content Review
+### Content Review
 **URL:** `/content-review.html`
-
-Use this tool to:
-- Review migrated lessons
-- Validate lesson structure
-- Approve lessons for deployment
-- Track review progress
-
----
-
-## Workflow for Kyle (Phase 1)
-
-### Creating NEW Lessons (Lessons 6-8)
-
-1. **Open Lesson Builder**
-   ```
-   https://kyleajames33-beep.github.io/Learn/lesson-builder.html
-   ```
-
-2. **Fill in Lesson Metadata**
-   - Lesson Title (e.g., "Lesson 6: Active Transport")
-   - Select Module: "Module 1: Cells"
-   - Lesson Number: 6
-   - Duration: 45 minutes
-   - Difficulty: Intermediate
-   - Description: Brief overview
-
-3. **Add Learning Intentions** (3-4 items)
-   - Click "Add" button for each
-   - Write measurable goals
-   - Example: "Explain how active transport differs from passive transport"
-
-4. **Add Success Criteria** (3-4 items)
-   - Define what students should demonstrate
-   - Example: "Compare ATP usage in active vs passive transport"
-
-5. **Add Content Sections**
-   - Click "Add Section" dropdown
-   - Choose type: Text, Definition, Grid, Accordion, Worked Example
-   - Fill in content using rich text editor
-
-6. **Add Activities** (1-2 per lesson)
-   - Matching activities
-   - Fill-in-blank exercises
-
-7. **Add Assessment** (3-5 MCQs)
-   - Click "Add MCQ"
-   - Write question + 4 options
-   - Select correct answer
-
-8. **Preview & Export**
-   - Check Live Preview panel
-   - Click "Export JSON"
-   - Fix any validation errors
-   - Download JSON file
-
-9. **Submit to Developer**
-   - Send JSON file
-   - Include any notes
-
----
-
-## Important Notes for Kyle
-
-### Content Fidelity Differences
-
-**Lessons 1-3:** These were created early in Phase 0.2 as simplified versions. They have:
-- Core content present
-- Fewer activity items
-- Simplified assessments
-- **Will be enhanced in Phase 1.5**
-
-**Lessons 4-5:** These were migrated from existing HTML and have:
-- Full original content
-- Complete activities
-- Full assessments
-- **Production-ready**
-
-**Lessons 6-8:** These will be created by you using the Builder tool with:
-- Full fidelity from the start
-- All activities and assessments
-- **Set the standard for future lessons**
-
-### When Creating New Lessons
-
-✅ **Do:**
-- Write 3-4 specific learning intentions
-- Include 1-2 interactive activities
-- Add 3-5 assessment questions
-- Use the rich text editor for formatting
-- Keep paragraphs short (2-3 sentences)
-
-❌ **Don't:**
-- Skip the assessment section
-- Create lessons without activities
-- Use only plain text (use formatting)
-- Rush through - quality over speed
-
----
-
-## File Deployment
-
-### After Kyle Exports JSON:
-1. Developer reviews via content-review.html
-2. Developer validates and approves
-3. JSON moved to: `/hsc-biology/data/lessons/`
-4. Module index updated
-5. Test deployed lesson
-
----
-
-## Validation Requirements
-
-### Required Fields (Must Have)
-- [ ] Lesson Title
-- [ ] Module selection
-- [ ] Lesson number
-- [ ] Description
-- [ ] 1+ learning intentions
-- [ ] 1+ content sections
-
-### Recommended (Should Have)
-- [ ] 2+ activities
-- [ ] 3+ assessment questions
-- [ ] Engagement hook
-- [ ] Success criteria
+Reviews lesson structure and validates JSON.
 
 ---
 
 ## Support
 
-For technical issues: Developer  
-For content questions: Kyle (self-directed)  
-
----
-
-## Timeline
-
-**Phase 1 (Weeks 1-2):**
-- Kyle creates Lessons 6, 7, 8
-- Developer deploys and tests
-- Module 1 complete (8 lessons)
-
-**Phase 1.5 (Week 3):**
-- Optional: Enhance Lessons 1-3 to full fidelity
-- If time permits
-
-**Phase 2+:**
-- Scale to other modules
-- 1 lesson per day target
+- **HTML content questions:** Refer to `docs/CONTENT-AUTHOR-GUIDE.md`
+- **JSON structure questions:** Refer to `docs/TEMPLATE-v2.json`
+- **Design/styling questions:** Refer to `docs/LESSON-DESIGN-SPEC.md`
+- **Technical issues:** Developer (Claude Code)
+- **Content accuracy:** Kyle

@@ -45,6 +45,7 @@ END SESSION
 - [ ] Read `docs/trackers/MODULE-1-LESSONS.md` for lesson-level status
 - [ ] Check `docs/trackers/BUG-LOG.md` for critical issues
 - [ ] **If enhancing to V2.0:** Review `docs/LESSON-DESIGN-SPEC.md` for design reference
+- [ ] **If wrapping HTML into JSON:** Review `docs/CONTENT-AUTHOR-GUIDE.md` for CSS classes and structure
 
 ### Session End Checklist
 - [ ] **Verification suite passed** — `node scripts/run-all-checks.js` exits 0
@@ -104,11 +105,41 @@ STAGE 6: PRODUCTION
   Validation: Loads without errors on mobile browser
   |
   v
-STAGE 7: V2.0 ENHANCEMENT (NEW)
+STAGE 7: V2.0 ENHANCEMENT
   Rich content with styled boxes, flow diagrams, worked examples
-  Owner: AI
+  Owner: AI (wrapping HTML) + External AI or Human (generating HTML)
   Output: Enhanced lesson meeting LESSON-DESIGN-SPEC.md standards
   Validation: All V2.0 elements present, mobile QA passes
+
+  V2.0 CONTENT WORKFLOW (Dual-Approach):
+  ┌─────────────────────────────────────────────────────┐
+  │ 1. GENERATE HTML                                     │
+  │    External AI or human generates lesson HTML         │
+  │    using docs/CONTENT-AUTHOR-GUIDE.md as reference   │
+  │    Output: Raw HTML using Science Hub CSS classes     │
+  └──────────────────┬──────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────┐
+  │ 2. WRAP IN V2 JSON                                   │
+  │    Project AI (Claude Code) takes the HTML and:      │
+  │    - Creates V2 JSON with "v2": true flag            │
+  │    - Adds metadata (id, title, module, navigation)   │
+  │    - Adds interactive activities as structured JSON   │
+  │    - Adds assessment data (correct answers, marks)   │
+  │    - Adds comprehensive answer keys                  │
+  │    - Sets contentHTML field to the provided HTML      │
+  │    Reference: docs/TEMPLATE-v2.json                  │
+  └──────────────────┬──────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────┐
+  │ 3. VALIDATE & QA                                     │
+  │    - Run: node scripts/run-all-checks.js             │
+  │    - Verify lesson renders correctly in browser      │
+  │    - Check mobile at 375px                           │
+  │    - Verify all activities are functional             │
+  └─────────────────────────────────────────────────────┘
 ```
 
 ### Stage Status Codes (used in trackers)
@@ -273,7 +304,10 @@ Polish, optimise, add nice-to-haves only when everything above is done.
 
 ## 7. CONTENT STANDARDS (V2.0)
 
-**Reference:** See `docs/LESSON-DESIGN-SPEC.md` for complete design specification with visual examples.
+**References:**
+- `docs/LESSON-DESIGN-SPEC.md` — Complete design specification with visual examples
+- `docs/CONTENT-AUTHOR-GUIDE.md` — CSS class reference for HTML content authors (give this to external AIs)
+- `docs/TEMPLATE-v2.json` — Complete V2 JSON structure template
 
 ### Lesson Structure (Option C: Hybrid JSON + HTML)
 
