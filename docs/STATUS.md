@@ -55,7 +55,7 @@
 
 **Date:** 2026-02-10
 **AI:** Claude Sonnet 4.5
-**Session:** Complete testing system + autonomous workflow
+**Session:** Autonomous workflow + self-improving mistake documentation
 
 **What was done:**
 1. ✅ Built complete testing system:
@@ -73,12 +73,20 @@
    - Updated `docs/WORKFLOW.md` with error tracking and debugging workflow
    - Updated `docs/STATUS.md` with clearer NEXT TASK directives
 
-3. ✅ Integrated all 16 module lesson sequences:
+3. ✅ Added self-improving documentation system:
+   - Updated `docs/AI-START-HERE.md` STEP 4 with instructions to add new bugs to COMMON-MISTAKES.md
+   - Updated `docs/WORKFLOW.md` Session End Checklist to mandate documenting new bugs
+   - Updated `docs/STATUS.md` HANDOFF PROTOCOL to include mistake documentation requirement
+   - Updated `PROMPT.md` to mention adding new bugs to the knowledge base
+   - Added detailed "HOW TO ADD NEW MISTAKES" section to COMMON-MISTAKES.md with format template
+   - System now automatically grows smarter as AIs encounter and solve new issues
+
+4. ✅ Integrated all 16 module lesson sequences:
    - Bio modules 2-8: 175 lessons planned (docs/trackers/MODULE-*.md)
    - Chem modules 1-8: 200 lessons planned (docs/trackers/CHEM-MODULE-*.md)
    - Total: 400 lessons across HSC Biology & Chemistry
 
-4. ✅ Fixed caching issues completely:
+5. ✅ Fixed caching issues completely:
    - Created `scripts/bump-versions.js` — Automated cache-busting
    - Fixed service worker to use network-first for CSS/JS (not stale-while-revalidate)
    - Added cache-control meta tags to index.html, hsc-biology/index.html, lesson.html
@@ -180,9 +188,10 @@ None currently.
 3. **Update LAST SESSION LOG above** — Replace with what YOU did this session, what you didn't do, and any open issues. Include the verification result (pass/fail + error count).
 4. **Update `docs/trackers/MODULE-1-LESSONS.md`** — Change pipeline status for any lessons you worked on.
 5. **Update `docs/trackers/BUG-LOG.md`** — Log any new bugs found, move fixed bugs to the Fixed table.
-6. **Update `docs/goals/PHASE-1-CONTENT.md`** — Check off any completed tasks in the active milestone.
-7. **Commit all changes** with a descriptive message.
-8. **Tell the user** what you did and what the next AI should pick up.
+6. **Update `docs/COMMON-MISTAKES.md`** — If you discovered and fixed a NEW bug (not already documented), add it with symptom, cause, solution, and how to avoid. This prevents future AIs from repeating the same mistake.
+7. **Update `docs/goals/PHASE-1-CONTENT.md`** — Check off any completed tasks in the active milestone.
+8. **Commit all changes** with a descriptive message.
+9. **Tell the user** what you did and what the next AI should pick up.
 
 ---
 

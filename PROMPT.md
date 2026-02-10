@@ -20,6 +20,7 @@ Copy and paste this prompt to any coding AI to start a development cycle:
 **CRITICAL:**
 - Follow the guidelines in `docs/WORKFLOW.md`
 - Avoid mistakes in `docs/COMMON-MISTAKES.md`
+- If you discover NEW bugs, add them to `docs/COMMON-MISTAKES.md`
 - Do NOT commit until tests pass
 - Update STATUS.md LAST SESSION LOG when done
 

@@ -51,6 +51,7 @@ END SESSION
 - [ ] `docs/STATUS.md` updated with today's progress
 - [ ] Relevant tracker files updated
 - [ ] No unresolved critical bugs left unlogged
+- [ ] **New bugs documented in `docs/COMMON-MISTAKES.md`** (if any new bugs were discovered and fixed during this session)
 
 ---
 

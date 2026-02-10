@@ -163,7 +163,79 @@ If you discovered bugs, log them in `docs/trackers/BUG-LOG.md`:
 | X | MINOR | [Description] | mod1-lessonXX | YYYY-MM-DD | OPEN |
 ```
 
-### D. Update Phase Progress (if milestone complete)
+### D. Update COMMON-MISTAKES.md (if new bugs discovered)
+
+**CRITICAL:** If you discovered a NEW bug (not already documented in COMMON-MISTAKES.md), you MUST add it to prevent future AIs from repeating the same mistake.
+
+**Process:**
+1. Read `docs/COMMON-MISTAKES.md` to confirm this is a NEW bug
+2. Determine the severity category:
+   - **CRITICAL MISTAKES** — Breaks lessons completely
+   - **QUALITY MISTAKES** — Tests will fail
+   - **PERFORMANCE MISTAKES** — Causes slowdowns or caching issues
+   - **CONTENT QUALITY MISTAKES** — Degrades lesson quality
+   - **WORKFLOW MISTAKES** — Process failures
+   - **DEBUGGING MISTAKES** — Makes debugging harder
+
+3. Add entry using this format:
+
+```markdown
+### X. [Short Title of the Bug]
+
+**Bug:** [One sentence describing the symptom users see]
+
+**Cause:**
+```language
+// WRONG - Show the code that causes the problem
+example code that's wrong
+```
+
+**Solution:**
+```language
+// RIGHT - Show the correct code
+example code that's right
+```
+
+**How to avoid:**
+- Specific rule to prevent this bug
+- Command to run or check to perform
+- Test that catches this problem
+```
+
+4. Update the mistake number (increment from the last one)
+5. Add to the appropriate category section
+6. Include real code examples from the bug you just fixed
+
+**Example of a good mistake entry:**
+
+```markdown
+### 19. Missing Activity Type Validation
+
+**Bug:** Lesson renders blank activity section, no error shown
+
+**Cause:**
+```json
+{
+  "type": "problem-solving"  // NOT SUPPORTED - renderer has no case for this
+}
+```
+
+**Solution:**
+```json
+{
+  "type": "classification"  // SUPPORTED - renderer handles this
+}
+```
+
+**How to avoid:**
+- Only use supported types: matching, fill-blank, classification, ordering, labeling, fillBlank, calculation
+- Run: `node scripts/smoke-test.js` — catches unsupported types
+- Check: `scripts/validate-lessons.js` SUPPORTED_ACTIVITY_TYPES array
+```
+
+**Why this matters:** Every bug you document saves the next AI 2-8 hours of debugging time. The COMMON-MISTAKES.md file is the knowledge base that makes this system smarter over time.
+
+### E. Update Phase Progress (if milestone complete)
 
 If you completed a milestone, update `docs/goals/PHASE-X-XXX.md`:
 - Check off completed tasks

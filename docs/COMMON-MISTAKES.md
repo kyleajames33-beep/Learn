@@ -1,9 +1,51 @@
 # Common Mistakes & Solutions
 
-**Last Updated:** 2026-02-09
+**Last Updated:** 2026-02-10
 **Purpose:** Known bugs, pitfalls, and how to avoid them
 
 Read this file BEFORE starting any work to avoid repeating past mistakes.
+
+---
+
+## FOR AI DEVELOPERS: GROWING THIS FILE
+
+**This file is a living knowledge base.** Every time you discover and fix a NEW bug (not already documented here), you MUST add it to this file.
+
+**Why?** Each bug documented saves the next AI 2-8 hours of debugging time. This file makes the autonomous system progressively smarter.
+
+**When to add a new mistake:**
+1. You encounter a bug that isn't already listed in this file
+2. You spend more than 30 minutes debugging it
+3. The bug could reasonably happen again
+4. You fixed it and understand the root cause
+
+**Format for new entries:**
+```markdown
+### X. [Short Title]
+
+**Bug:** [One sentence describing the symptom]
+
+**Cause:**
+```language
+// WRONG - Show the problematic code
+```
+
+**Solution:**
+```language
+// RIGHT - Show the correct code
+```
+
+**How to avoid:**
+- Specific rule to prevent this
+- Command to run that catches it
+- Test that validates it
+```
+
+**After adding a new mistake:**
+- Update the mistake number (increment from the last one)
+- Update "Last Updated" date at the top of this file
+- Mention it in your LAST SESSION LOG in STATUS.md
+- This is mandatory, not optional
 
 ---
 
