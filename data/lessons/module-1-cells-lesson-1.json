@@ -168,13 +168,13 @@
       "id": "prokaryotic-vs-eukaryotic-classification",
       "type": "classification",
       "title": "Classify Cell Features",
-      "description": "Drag each feature into the correct category: Prokaryotic only, Eukaryotic only, or Found in both.",
+      "description": "Drag each feature into the correct category.",
       "theme": "amber",
       "xpReward": 60,
       "categories": [
-        { "id": "prokaryotic", "label": "Prokaryotic only", "colour": "#dc2626" },
-        { "id": "eukaryotic", "label": "Eukaryotic only", "colour": "#2563eb" },
-        { "id": "both", "label": "Found in both", "colour": "#059669" }
+        { "id": "prokaryotic", "label": "Prokaryotic only", "description": "Features found only in bacteria and archaea" },
+        { "id": "eukaryotic", "label": "Eukaryotic only", "description": "Features found only in animals, plants, fungi, protists" },
+        { "id": "both", "label": "Found in both", "description": "Features common to all cells" }
       ],
       "items": [
         { "id": "nucleoid", "text": "Nucleoid region", "category": "prokaryotic" },
@@ -189,8 +189,7 @@
         { "id": "dna", "text": "DNA as genetic material", "category": "both" },
         { "id": "cellwall", "text": "Cell wall present", "category": "both" },
         { "id": "cytoplasm", "text": "Cytoplasm", "category": "both" }
-      ],
-      "answerArea": true
+      ]
     },
     {
       "id": "antibiotic-mechanism-ordering",
@@ -251,6 +250,32 @@
         ],
         "correctAnswer": "Target the 70S ribosomes",
         "rationale": "Antibiotics exploit the difference between 70S (bacterial) and 80S (human) ribosomes. Penicillin destroys cell walls; tetracycline targets ribosomes."
+      },
+      {
+        "id": "mcq-4",
+        "question": "Which of the following statements about prokaryotic ribosomes is CORRECT?",
+        "marks": 1,
+        "options": [
+          "They are larger than eukaryotic ribosomes",
+          "They are composed of 60S and 40S subunits",
+          "They are the target of many antibiotics",
+          "They are not involved in protein synthesis"
+        ],
+        "correctAnswer": "They are the target of many antibiotics",
+        "rationale": "Prokaryotic ribosomes are 70S (smaller than 80S eukaryotic ribosomes) and consist of 50S and 30S subunits. They ARE the site of protein synthesis and ARE targeted by antibiotics like tetracycline and streptomycin."
+      },
+      {
+        "id": "mcq-5",
+        "question": "A student observes a cell under the microscope and notes: membrane-bound nucleus, 80S ribosomes, mitochondria, and linear DNA. The cell is MOST likely:",
+        "marks": 1,
+        "options": [
+          "A bacterial cell",
+          "An archaeal cell",
+          "A eukaryotic cell",
+          "A virus"
+        ],
+        "correctAnswer": "A eukaryotic cell",
+        "rationale": "All the features listed (membrane-bound nucleus, 80S ribosomes, mitochondria, linear DNA) are characteristic of eukaryotic cells. Prokaryotes (bacteria and archaea) lack membrane-bound nuclei and mitochondria, and have 70S ribosomes and circular DNA."
       }
     ],
     "shortAnswer": [
@@ -275,6 +300,18 @@
           "1 mark: Antibiotics can bind to/block 70S ribosomes but not 80S ribosomes (selective toxicity)"
         ],
         "commonError": "Saying 'bacteria are weaker' rather than explaining structural difference. Focus on the 70S vs 80S distinction."
+      },
+      {
+        "id": "sa-3",
+        "question": "Describe the structure and function of plasmids in prokaryotic cells. Explain why plasmids are significant in the context of antibiotic resistance. (3 marks)",
+        "marks": 3,
+        "lines": 6,
+        "markingCriteria": [
+          "1 mark: Plasmids are small, circular DNA molecules separate from the main bacterial chromosome",
+          "1 mark: They carry extra genes (e.g., antibiotic resistance, toxin production) that provide survival advantages",
+          "1 mark: They can be transferred between bacteria via conjugation, spreading antibiotic resistance through populations"
+        ],
+        "commonError": "Confusing plasmids with the main chromosome. Plasmids are NOT essential for normal cell function (unlike the chromosome), but provide advantages."
       }
     ]
   },
@@ -365,6 +402,18 @@
         "explanation": "Selective toxicity is the principle here. Bacterial ribosomes are 70S (50S + 30S subunits) while human ribosomes are 80S (60S + 40S subunits). Tetracycline binds to the 30S subunit and blocks protein synthesis in bacteria. Human ribosomes are unaffected because their different structure prevents antibiotic binding."
       },
       {
+        "questionId": "mcq-4",
+        "question": "Which of the following statements about prokaryotic ribosomes is CORRECT?",
+        "correctAnswer": "They are the target of many antibiotics",
+        "explanation": "Prokaryotic ribosomes are 70S (composed of 50S and 30S subunits), which makes them SMALLER than 80S eukaryotic ribosomes (60S + 40S). They ARE the site of protein synthesis. Their different structure makes them targets for antibiotics like tetracycline (30S) and erythromycin (50S)."
+      },
+      {
+        "questionId": "mcq-5",
+        "question": "A student observes a cell under the microscope and notes: membrane-bound nucleus, 80S ribosomes, mitochondria, and linear DNA. The cell is MOST likely:",
+        "correctAnswer": "A eukaryotic cell",
+        "explanation": "All listed features are hallmarks of eukaryotic cells. Prokaryotes lack membrane-bound nuclei and mitochondria, have 70S ribosomes and circular DNA. Viruses are not cells and lack ribosomes entirely."
+      },
+      {
         "questionId": "sa-1",
         "question": "Distinguish between prokaryotic and eukaryotic cells with reference to the presence of a nucleus and the structure of ribosomes. (2 marks)",
         "correctAnswer": "Prokaryotic cells have a nucleoid region (not surrounded by a membrane) whereas eukaryotic cells have a membrane-bound nucleus (1 mark). Prokaryotes have 70S ribosomes which are smaller than the 80S ribosomes found in eukaryotes (1 mark).",
@@ -375,6 +424,12 @@
         "question": "Explain why bacterial cells can be killed by antibiotics that target their ribosomes, while human cells are not affected. (2 marks)",
         "correctAnswer": "Bacterial cells have 70S ribosomes which have a different structure from the 80S ribosomes in human cells (1 mark). Antibiotics like tetracycline can bind to the 70S ribosomes and block protein synthesis in bacteria, but they cannot bind to the larger 80S ribosomes in human cells, so protein synthesis in human cells is not affected. This is called selective toxicity (1 mark).",
         "explanation": "The key concept is selective toxicity—exploiting structural differences. The answer must mention 70S vs 80S ribosomes and explain that the antibiotic can bind to bacterial but not human ribosomes. The term 'selective toxicity' is excellent but not essential if the concept is clearly explained."
+      },
+      {
+        "questionId": "sa-3",
+        "question": "Describe the structure and function of plasmids in prokaryotic cells. Explain why plasmids are significant in the context of antibiotic resistance. (3 marks)",
+        "correctAnswer": "Plasmids are small, circular DNA molecules that are separate from the main bacterial chromosome (1 mark). They carry extra genes such as those for antibiotic resistance or toxin production, providing survival advantages to the bacterium (1 mark). Plasmids can be transferred between bacteria through a process called conjugation, which allows antibiotic resistance to spread rapidly through bacterial populations (1 mark).",
+        "explanation": "Full marks require understanding both the structure (small circular DNA, separate from chromosome) and function (carrying advantageous genes, horizontal transfer). The significance of plasmids in antibiotic resistance is a major public health concern—this is how superbugs like MRSA develop and spread."
       }
     ]
   },
