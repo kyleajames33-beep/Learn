@@ -650,6 +650,13 @@ const LessonRenderer = {
   },
 
   /**
+   * Check if lesson is in V2.0 format
+   */
+  isV2Format(lesson) {
+    return lesson.hero && lesson.intentions && (lesson.contentHTML || lesson.v2 === true);
+  },
+
+  /**
    * Render main content area
    */
   renderMainContent(lesson) {
@@ -660,6 +667,14 @@ const LessonRenderer = {
     }
     
     console.log('Rendering lesson:', lesson.id);
+    
+    // Check for V2.0 format and render accordingly
+    if (this.isV2Format(lesson)) {
+      console.log('Using V2.0 renderer');
+      this.renderV2Content(lesson, main);
+      return;
+    }
+    
     console.log('Content sections:', lesson.contentSections?.length || 0);
     
     const contentSectionsHtml = this.renderContentSections(lesson.contentSections);
@@ -686,6 +701,292 @@ const LessonRenderer = {
     
     // Trigger reveal animations
     this.initRevealAnimations();
+  },
+
+  /**
+   * Render V2.0 lesson content
+   */
+  renderV2Content(lesson, main) {
+    // Load V2 CSS if not already loaded
+    this.loadV2Styles();
+    
+    main.innerHTML = `
+      <div class="lesson-content-v2">
+        ${this.renderV2Hero(lesson)}
+        ${this.renderV2Intentions(lesson)}
+        ${this.renderV2ContentHTML(lesson)}
+        ${this.renderV2Activities(lesson)}
+        ${this.renderV2Assessment(lesson)}
+        ${this.renderV2Answers(lesson)}
+        ${this.renderMarkComplete(lesson)}
+        ${this.renderNavigation(lesson.navigation)}
+      </div>
+    `;
+    
+    // Bind V2 activity handlers
+    this.bindV2ActivityHandlers();
+    
+    // Bind assessment handlers
+    this.bindAssessmentHandlers();
+    
+    // Trigger reveal animations
+    this.initRevealAnimations();
+    
+    // Re-initialize Lucide icons for new content
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  },
+
+  /**
+   * Load V2 CSS styles dynamically
+   */
+  loadV2Styles() {
+    if (document.getElementById('lesson-v2-styles')) return;
+    
+    const link = document.createElement('link');
+    link.id = 'lesson-v2-styles';
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/lesson-v2.css';
+    document.head.appendChild(link);
+  },
+
+  /**
+   * Render V2.0 hero section
+   */
+  renderV2Hero(lesson) {
+    const hero = lesson.hero || {};
+    const gradientClass = hero.gradient === 'blue-to-purple' ? 'gradient-blue-purple' : 
+                          hero.gradient === 'green-to-blue' ? 'gradient-green-blue' : '';
+    
+    return `
+      <div class="hero ${gradientClass}">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-meta">
+              ${hero.subjectBadge ? `<span class="badge badge-module">${hero.subjectBadge}</span>` : ''}
+              ${hero.levelBadge ? `<span class="badge ${hero.levelBadge === 'Foundational' ? 'badge-foundational' : 'badge-advanced'}">${hero.levelBadge}</span>` : ''}
+            </div>
+            <h1>${lesson.title}</h1>
+            <p class="hero-description">${lesson.description || ''}</p>
+          </div>
+          ${hero.icon ? `<div class="hero-icon">${hero.icon}</div>` : ''}
+        </div>
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 intentions grid
+   */
+  renderV2Intentions(lesson) {
+    const intentions = lesson.intentions || {};
+    
+    return `
+      <div class="intentions-grid">
+        ${intentions.learning ? `
+          <div class="intention-card blue">
+            <h3><i data-lucide="target"></i> Learning Intentions</h3>
+            <ul>
+              ${intentions.learning.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+        ${intentions.connections ? `
+          <div class="intention-card purple">
+            <h3><i data-lucide="link"></i> Key Connections</h3>
+            <ul>
+              ${Array.isArray(intentions.connections) ? 
+                intentions.connections.map(item => {
+                  if (typeof item === 'string') return `<li>${item}</li>`;
+                  return `<li>${item.topic}${item.link ? ` <a href="${item.link}">→</a>` : ''}</li>`;
+                }).join('') : ''}
+            </ul>
+          </div>
+        ` : ''}
+        ${intentions.success ? `
+          <div class="intention-card green">
+            <h3><i data-lucide="check-circle"></i> Success Criteria</h3>
+            <ul>
+              ${intentions.success.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 HTML content
+   */
+  renderV2ContentHTML(lesson) {
+    if (!lesson.contentHTML) return '';
+    
+    return `
+      <div class="v2-content-body">
+        ${lesson.contentHTML}
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 activities
+   */
+  renderV2Activities(lesson) {
+    if (!lesson.activities || lesson.activities.length === 0) return '';
+    
+    return `
+      <div class="v2-activities">
+        ${lesson.activities.map((activity, index) => this.renderV2Activity(activity, index + 1)).join('')}
+      </div>
+    `;
+  },
+
+  /**
+   * Render a single V2.0 activity
+   */
+  renderV2Activity(activity, number) {
+    return `
+      <div class="activity" data-activity-id="${activity.id || number}">
+        <div class="activity-number">Activity ${number}</div>
+        <h3>${activity.title || 'Activity'}</h3>
+        ${activity.description ? `<p class="activity-meta">${activity.description}</p>` : ''}
+        <div class="activity-content">
+          ${activity.content || ''}
+          ${activity.answerArea !== false ? `<div class="answer-area">Write your answer here...</div>` : ''}
+        </div>
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 assessment
+   */
+  renderV2Assessment(lesson) {
+    if (!lesson.assessment) return '';
+    const assessment = lesson.assessment;
+    
+    return `
+      <div class="v2-assessment">
+        <h2><i data-lucide="clipboard-check"></i> Assessment</h2>
+        ${assessment.multipleChoice ? this.renderV2MCQ(assessment.multipleChoice) : ''}
+        ${assessment.shortAnswer ? this.renderV2ShortAnswer(assessment.shortAnswer) : ''}
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 multiple choice questions
+   */
+  renderV2MCQ(questions) {
+    if (!questions || questions.length === 0) return '';
+    
+    return `
+      <div class="v2-mcq-section">
+        <h3>Multiple Choice</h3>
+        ${questions.map((q, index) => `
+          <div class="question-item" data-question-id="${q.id || index}">
+            <span class="marks"><i data-lucide="award"></i> ${q.marks || 1} mark${q.marks > 1 ? 's' : ''}</span>
+            <p><strong>Question ${index + 1}:</strong> ${q.question}</p>
+            <div class="mc-options">
+              ${q.options.map((opt, optIndex) => `
+                <div class="mc-option" data-value="${opt.value || optIndex}">
+                  <span class="mc-letter">${String.fromCharCode(65 + optIndex)}</span>
+                  <span class="mc-text">${opt.text || opt}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 short answer questions
+   */
+  renderV2ShortAnswer(questions) {
+    if (!questions || questions.length === 0) return '';
+    
+    return `
+      <div class="v2-saq-section">
+        <h3>Short Answer</h3>
+        ${questions.map((q, index) => `
+          <div class="question-item" data-question-id="${q.id || index}">
+            <span class="marks"><i data-lucide="award"></i> ${q.marks || 2} marks</span>
+            <p><strong>Question ${index + 1}:</strong> ${q.question}</p>
+            <div class="answer-area" data-lines="${q.lines || 4}">
+              ${Array(q.lines || 4).fill(0).map(() => '<div class="answer-line"></div>').join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  },
+
+  /**
+   * Render V2.0 answer key
+   */
+  renderV2Answers(lesson) {
+    if (!lesson.answers && !lesson.answerKey) return '';
+    
+    const answers = lesson.answers || lesson.answerKey;
+    
+    return `
+      <div class="answers">
+        <div class="answers-header">
+          <h2><i data-lucide="key"></i> Answer Key</h2>
+        </div>
+        ${answers.activities ? `
+          <div class="answer-section">
+            <h3>Activity Answers</h3>
+            ${answers.activities.map((ans, index) => `
+              <div class="answer-item">
+                <h4>Activity ${index + 1}</h4>
+                <p>${ans}</p>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+        ${answers.assessment ? `
+          <div class="answer-section">
+            <h3>Assessment Answers</h3>
+            ${answers.assessment.map((ans, index) => `
+              <div class="answer-item">
+                <h4>Question ${index + 1}</h4>
+                <p>${typeof ans === 'object' ? ans.explanation || ans.answer : ans}</p>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  },
+
+  /**
+   * Bind V2.0 activity handlers
+   */
+  bindV2ActivityHandlers() {
+    // MCQ option selection
+    document.querySelectorAll('.mc-option').forEach(option => {
+      option.addEventListener('click', () => {
+        const questionItem = option.closest('.question-item');
+        questionItem.querySelectorAll('.mc-option').forEach(opt => {
+          opt.classList.remove('selected');
+        });
+        option.classList.add('selected');
+      });
+    });
+    
+    // Answer area focus
+    document.querySelectorAll('.answer-area').forEach(area => {
+      area.addEventListener('focus', () => {
+        area.classList.add('focused');
+      });
+      area.addEventListener('blur', () => {
+        area.classList.remove('focused');
+      });
+    });
   },
   
   /**
