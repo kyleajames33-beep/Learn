@@ -37,11 +37,36 @@ class LessonRenderer {
   }
 
   /**
+   * Detect V2 format lessons
+   */
+  isV2Format() {
+    return this.lesson && (this.lesson.v2 === true || this.lesson.contentHTML);
+  }
+
+  /**
+   * Dynamically load V2 CSS if not already loaded
+   */
+  loadV2Styles() {
+    if (document.getElementById('lesson-v2-css')) return;
+    const link = document.createElement('link');
+    link.id = 'lesson-v2-css';
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/lesson-v2.css';
+    document.head.appendChild(link);
+  }
+
+  /**
    * Render the complete lesson
    */
   render() {
     if (!this.lesson) return;
-    
+
+    if (this.isV2Format()) {
+      this.loadV2Styles();
+      this.renderV2();
+      return;
+    }
+
     const html = `
       ${this.renderHero()}
       ${this.renderLearningIntentions()}
@@ -52,9 +77,287 @@ class LessonRenderer {
       ${this.renderCopyToBook()}
       ${this.renderNavigation()}
     `;
-    
+
     this.container.innerHTML = html;
     this.attachEventListeners();
+  }
+
+  /**
+   * V2 Format: Render the complete lesson
+   */
+  renderV2() {
+    const html = `
+      <div class="lesson-content">
+        ${this.renderV2Hero()}
+        ${this.renderV2Intentions()}
+        ${this.renderV2ContentHTML()}
+        ${this.renderV2Activities()}
+        ${this.renderV2Assessment()}
+        ${this.renderV2Answers()}
+        ${this.renderV2CopyToBook()}
+        ${this.renderNavigation()}
+      </div>
+    `;
+
+    this.container.innerHTML = html;
+    this.bindV2ActivityHandlers();
+    this.attachEventListeners();
+  }
+
+  /**
+   * V2: Render hero with badges, gradient, icon
+   */
+  renderV2Hero() {
+    const hero = this.lesson.hero || {};
+    return `
+      <header class="hero">
+        <div class="hero-grid">
+          <div>
+            <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+              ${hero.subjectBadge ? `<span class="badge">${hero.subjectBadge}</span>` : ''}
+              ${hero.levelBadge ? `<span class="badge">${hero.levelBadge}</span>` : ''}
+              ${this.lesson.difficulty ? `<span class="badge">${this.lesson.difficulty}</span>` : ''}
+            </div>
+            <h1>${hero.icon ? hero.icon + ' ' : ''}${this.lesson.title}</h1>
+            <p>${this.lesson.description || ''}</p>
+            <div class="lesson-hero-meta" style="margin-top:16px">
+              <span class="hero-meta-item">
+                <i data-lucide="clock"></i>
+                <span>${this.lesson.duration || ''}</span>
+              </span>
+              <span class="hero-meta-item">
+                <i data-lucide="book-open"></i>
+                <span>Lesson ${this.lesson.lessonNumber || ''}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+    `;
+  }
+
+  /**
+   * V2: Render intentions grid (3-column: Learning, Connections, Success)
+   */
+  renderV2Intentions() {
+    const intentions = this.lesson.intentions;
+    if (!intentions) {
+      // Fall back to V1 fields
+      if (this.lesson.learningIntentions) {
+        return this.renderLearningIntentions();
+      }
+      return '';
+    }
+
+    return `
+      <section class="intentions-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:32px">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-wrapper"><i data-lucide="target"></i></div>
+            <h2 class="card-title">Learning Intentions</h2>
+          </div>
+          <div class="card-content">
+            <ul class="intention-list">
+              ${(intentions.learning || []).map(li => `<li>${li}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-wrapper icon-wrapper-secondary"><i data-lucide="link"></i></div>
+            <h2 class="card-title">Connections</h2>
+          </div>
+          <div class="card-content">
+            <ul class="intention-list">
+              ${(intentions.connections || []).map(c => `<li><strong>${c.topic}:</strong> ${c.description}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-wrapper"><i data-lucide="check-circle"></i></div>
+            <h2 class="card-title">Success Criteria</h2>
+          </div>
+          <div class="card-content">
+            <ul class="criteria-list">
+              ${(intentions.success || []).map(sc => `<li>${sc}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  /**
+   * V2: Render rich HTML content
+   */
+  renderV2ContentHTML() {
+    if (!this.lesson.contentHTML) return '';
+    return `<section class="v2-content">${this.lesson.contentHTML}</section>`;
+  }
+
+  /**
+   * V2: Render activities with enhanced styling
+   */
+  renderV2Activities() {
+    if (!this.lesson.activities || this.lesson.activities.length === 0) return '';
+
+    return `
+      <section class="activities-section" style="margin-top:40px">
+        <h2 class="section-title"><i data-lucide="activity"></i> Activities</h2>
+        ${this.lesson.activities.map((activity, idx) => `
+          <div style="margin-bottom:8px"><span class="badge">${idx + 1}</span></div>
+          ${this.renderActivity(activity)}
+        `).join('')}
+      </section>
+    `;
+  }
+
+  /**
+   * V2: Render assessment with enhanced styling
+   */
+  renderV2Assessment() {
+    const assessment = this.lesson.assessment;
+    if (!assessment) return '';
+
+    return `
+      <section class="assessment-section" style="margin-top:40px">
+        <h2 class="section-title"><i data-lucide="help-circle"></i> Assessment</h2>
+
+        ${assessment.multipleChoice ? `
+          <div class="mcq-section">
+            <h3>Multiple Choice Questions</h3>
+            ${assessment.multipleChoice.map((mcq, idx) => `
+              <div class="mcq-item card" data-mcq-id="${mcq.id}" style="padding:20px;margin-bottom:16px">
+                <p class="mcq-question"><strong>Q${idx + 1}:</strong> ${mcq.question}</p>
+                <div class="mcq-options">
+                  ${mcq.options.map(opt => `
+                    <label class="quiz-option">
+                      <input type="${mcq.multiSelect ? 'checkbox' : 'radio'}"
+                             name="${mcq.id}"
+                             value="${opt}"
+                             data-correct="${Array.isArray(mcq.correctAnswer) ? mcq.correctAnswer.includes(opt) : mcq.correctAnswer === opt}">
+                      <span class="quiz-option-circle"></span>
+                      <span class="quiz-option-text">${opt}</span>
+                    </label>
+                  `).join('')}
+                </div>
+                <div class="mcq-rationale" style="display:none">
+                  <p><strong>Answer:</strong> ${mcq.correctAnswer}</p>
+                  <p>${mcq.rationale || ''}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        ${assessment.shortAnswer ? `
+          <div class="short-answer-section">
+            <h3>Short Answer Questions</h3>
+            ${assessment.shortAnswer.map((sa, idx) => `
+              <div class="sa-item card" data-sa-id="${sa.id}" style="padding:20px;margin-bottom:16px">
+                <p class="sa-question"><strong>Q${idx + 1}:</strong> ${sa.question}</p>
+                <p class="sa-marks">[${sa.marks} marks]</p>
+                <textarea class="modern-input sa-answer" rows="${sa.lines || 4}" placeholder="Type your answer here..."></textarea>
+                <details class="answer-key" style="margin-top:12px">
+                  <summary>View marking guide</summary>
+                  <div class="marking-criteria">
+                    <h4>Marking Criteria:</h4>
+                    <ul>
+                      ${sa.markingCriteria.map(c => `<li>${c}</li>`).join('')}
+                    </ul>
+                    ${sa.commonError ? `<p class="common-error"><strong>Common error:</strong> ${sa.commonError}</p>` : ''}
+                  </div>
+                </details>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </section>
+    `;
+  }
+
+  /**
+   * V2: Render answer key section
+   */
+  renderV2Answers() {
+    const answers = this.lesson.answers;
+    if (!answers) return '';
+
+    return `
+      <section class="answers-section" style="margin-top:40px">
+        <details class="card" style="padding:20px">
+          <summary style="cursor:pointer;font-weight:600;font-size:1.1em">
+            <i data-lucide="check-square"></i> Complete Answer Key
+          </summary>
+          <div style="margin-top:16px">
+            ${answers.activities ? answers.activities.map(act => `
+              <div style="margin-bottom:24px">
+                <h4>${act.title}</h4>
+                <ul>
+                  ${act.answers.map(a => `<li><strong>${a.label}:</strong> ${a.description}</li>`).join('')}
+                </ul>
+                ${act.keyPoint ? `<div class="info-box"><strong>Key Point:</strong> ${act.keyPoint}</div>` : ''}
+              </div>
+            `).join('') : ''}
+
+            ${answers.assessment ? `
+              <h4>Assessment Answers</h4>
+              ${answers.assessment.map(a => `
+                <div style="margin-bottom:16px;padding:12px;background:#f8fafc;border-radius:8px">
+                  <p><strong>${a.questionId}:</strong> ${a.question}</p>
+                  <p style="color:#059669;font-weight:600">${a.correctAnswer}</p>
+                  <p style="color:#64748b;font-size:0.9em">${a.explanation}</p>
+                </div>
+              `).join('')}
+            ` : ''}
+          </div>
+        </details>
+      </section>
+    `;
+  }
+
+  /**
+   * V2: Render copy to book with sections support
+   */
+  renderV2CopyToBook() {
+    const ctb = this.lesson.copyToBook;
+    if (!ctb) return '';
+
+    // V2 format has sections array
+    if (ctb.sections) {
+      return `
+        <section class="copy-to-book-section" style="margin-top:40px">
+          <details class="card" style="padding:20px">
+            <summary>
+              <div class="icon-wrapper" style="display:inline-block"><i data-lucide="book-open"></i></div>
+              <span>Copy Into Your Book</span>
+            </summary>
+            <div class="card-content" style="margin-top:16px">
+              ${ctb.sections.map(section => `
+                <h4>${section.title}</h4>
+                <ul>
+                  ${section.items.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+              `).join('')}
+            </div>
+          </details>
+        </section>
+      `;
+    }
+
+    // Fall back to V1 format
+    return this.renderCopyToBook();
+  }
+
+  /**
+   * V2: Bind interactive handlers for activities
+   */
+  bindV2ActivityHandlers() {
+    // MCQ click handlers
+    this.container.querySelectorAll('.quiz-option input').forEach(input => {
+      input.addEventListener('change', (e) => this.checkMCQ(e));
+    });
   }
 
   /**
@@ -130,6 +433,7 @@ class LessonRenderer {
    */
   renderEngagementHook() {
     const hook = this.lesson.engagementHook;
+    if (!hook) return '';
     return `
       <section class="engagement-hook">
         <div class="hook-box">
@@ -147,6 +451,7 @@ class LessonRenderer {
    * Render content sections
    */
   renderContentSections() {
+    if (!this.lesson.contentSections) return '';
     return this.lesson.contentSections.map(section => {
       switch (section.type) {
         case 'diagram':
