@@ -1,6 +1,6 @@
 # Common Mistakes & Solutions
 
-**Last Updated:** 2026-02-10
+**Last Updated:** 2026-02-10 (v2 — added V2.0 renderer bugs #19-22)
 **Purpose:** Known bugs, pitfalls, and how to avoid them
 
 Read this file BEFORE starting any work to avoid repeating past mistakes.
@@ -522,6 +522,165 @@ git push
 
 ---
 
+## V2.0 RENDERER MISTAKES (New Format)
+
+### 19. V2 Lesson Crashes Renderer — Missing Format Detection
+
+**Bug:** Lesson shows "Failed to load lesson: TypeError: Cannot read properties of undefined (reading 'title')" — page is completely blank
+
+**Cause:**
+```javascript
+// WRONG - render() always calls V1 methods, even for V2 lessons
+render() {
+  const html = `
+    ${this.renderEngagementHook()}  // V2 lessons have NO engagementHook!
+  `;
+}
+
+renderEngagementHook() {
+  const hook = this.lesson.engagementHook; // undefined for V2
+  return `<h3>${hook.title}</h3>`;  // CRASH: cannot read 'title' of undefined
+}
+```
+
+**Solution:**
+```javascript
+// RIGHT - detect V2 format and route to V2 renderer
+render() {
+  if (this.isV2Format()) {
+    this.loadV2Styles();
+    this.renderV2();  // Uses V2 methods that understand contentHTML, hero, intentions
+    return;
+  }
+  // ... V1 rendering below
+}
+
+isV2Format() {
+  return this.lesson && (this.lesson.v2 === true || this.lesson.contentHTML);
+}
+
+// Also guard V1 methods against missing fields
+renderEngagementHook() {
+  const hook = this.lesson.engagementHook;
+  if (!hook) return '';  // Guard!
+  // ...
+}
+```
+
+**How to avoid:**
+- V2 lessons have `"v2": true` and `contentHTML` fields — no `engagementHook`
+- When adding V2 format support to ANY renderer method, always add null guards
+- Always add `isV2Format()` detection BEFORE accessing V1-specific fields
+- Test with BOTH V1 and V2 lessons after any renderer changes
+
+---
+
+### 20. V2 Answer Formats Are Not Always Arrays
+
+**Bug:** "TypeError: act.answers.map is not a function" — Answer Key section crashes
+
+**Cause:**
+V2 lessons have 3 different answer formats in `answers.activities`:
+```javascript
+// Format 1: Array (labeling, matching) — works with .map()
+{ "answers": [{ "label": "Nucleoid", "description": "..." }] }
+
+// Format 2: Object with category keys (classification) — .map() CRASHES!
+{ "answers": { "prokaryotic": ["item1", "item2"], "eukaryotic": ["item3"] } }
+
+// Format 3: No answers property (ordering) — .map() CRASHES!
+{ "correctOrder": ["step1", "step2"], "explanation": "..." }
+```
+
+```javascript
+// WRONG - assumes all answers are arrays
+act.answers.map(a => `<li>${a.label}: ${a.description}</li>`)  // CRASH on format 2 & 3!
+```
+
+**Solution:**
+```javascript
+// RIGHT - handle all 3 formats
+renderV2ActivityAnswer(act) {
+  if (Array.isArray(act.answers)) {
+    return act.answers.map(a => `<li>${a.label}: ${a.description}</li>`).join('');
+  }
+  if (act.answers && typeof act.answers === 'object') {
+    return Object.entries(act.answers).map(([category, items]) =>
+      `<strong>${category}:</strong><ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>`
+    ).join('');
+  }
+  if (act.correctOrder) {
+    return `<ol>${act.correctOrder.map(i => `<li>${i}</li>`).join('')}</ol>`;
+  }
+  return '<p>See activity for answer.</p>';
+}
+```
+
+**How to avoid:**
+- NEVER assume `act.answers` is an array — always check with `Array.isArray()`
+- Different activity types (labeling, classification, ordering) have different answer structures
+- When rendering answers, handle: array, object, and missing/undefined cases
+- Test the answer key section with ALL activity types in the lesson
+
+---
+
+### 21. Missing Script References in lesson.html
+
+**Bug:** HTML validation fails; features like gamification don't work on lesson pages
+
+**Cause:**
+```html
+<!-- WRONG - missing main.js (contains gamification engine, utilities) -->
+<script src="../assets/js/lucide.min.js"></script>
+<script src="../assets/js/lesson-renderer.js"></script>
+<!-- No main.js! -->
+```
+
+**Solution:**
+```html
+<!-- RIGHT - include all required scripts -->
+<script src="../assets/js/lucide.min.js"></script>
+<script src="../assets/js/lesson-renderer.js"></script>
+<script src="../assets/js/main.js"></script>
+```
+
+**How to avoid:**
+- Check `index.html` and `hsc-biology/index.html` for the full script list
+- Run: `node scripts/validate-pages.js` — catches missing required scripts
+- When creating new HTML pages, copy script tags from an existing working page
+
+---
+
+### 22. Forgetting to Bump Versions After Code Changes
+
+**Bug:** Code changes pushed to GitHub but browser still shows old behaviour. Console shows old version number (e.g. `?v=1770751117`) instead of new one.
+
+**Cause:**
+```bash
+# WRONG - commit JS changes without bumping versions
+git add assets/js/lesson-renderer.js
+git commit -m "fix renderer"
+git push
+# Browser STILL serves cached old file because ?v= hasn't changed!
+```
+
+**Solution:**
+```bash
+# RIGHT - bump versions AFTER code changes, BEFORE commit
+node scripts/bump-versions.js   # Updates all ?v= params
+git add -A                       # Stage BOTH code AND version bumps
+git commit -m "fix renderer"
+git push
+```
+
+**How to avoid:**
+- **ALWAYS** run `node scripts/bump-versions.js` after changing ANY CSS or JS file
+- Commit the version bumps together with the code change
+- Verify the new version number appears in the HTML files before pushing
+- If user reports "fix didn't work", first check if versions were bumped
+
+---
+
 ## SUMMARY: PRE-FLIGHT CHECKLIST
 
 Before starting ANY work:
@@ -535,10 +694,13 @@ While working:
 - [ ] Use relative paths only
 - [ ] Only use supported activity types
 - [ ] Follow the lesson pipeline stages
+- [ ] If editing renderer: test with BOTH V1 and V2 lesson formats
+- [ ] If editing V2 answers: handle array, object, AND missing formats
 
 Before committing:
 - [ ] Run `node scripts/run-all-checks.js`
 - [ ] Fix all errors (don't skip!)
+- [ ] Run `node scripts/bump-versions.js` (if CSS/JS changed)
 - [ ] Update docs/STATUS.md
 - [ ] Update tracker files
 
