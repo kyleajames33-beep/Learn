@@ -24,31 +24,31 @@
 
 | # | Lesson ID | Title | JSON | Pipeline | Activities | Issues |
 |---|-----------|-------|------|----------|------------|--------|
-| 1 | module-1-cells-lesson-1 | Prokaryotic Cell Structure | data/ | `QA` | Labelling, Matching | Mobile QA pass |
-| 2 | module-1-cells-lesson-2 | Eukaryotic Cell Compartmentalisation | data/ | `QA` | Labelling, Ordering, Matching | Mobile QA pass |
-| 3 | module-1-cells-lesson-3 | Microscopy and Cell Size | data/ | `QA` | Matching (2) | Mobile QA pass |
-| 4 | module-1-cells-lesson-4 | Cell Membrane Structure | data/ | `QA` | Labelling, Classification | Mobile QA pass |
-| 5 | module-1-cells-lesson-5 | Passive Transport | data/ | `QA` | Ordering, Classification | Mobile QA pass |
-| 6 | mod1-lesson06 | Plant Cells & Water Potential | data/ | `QA` | Labelling, Classification, Calculation | Mobile QA pass |
-| 7 | mod1-lesson07 | Technologies in Cytology | data/ | `QA` | Classification, Calculation, Matching | Mobile QA pass |
-| 8 | mod1-lesson08 | The Fluid Mosaic Model | data/ | `QA` | Labelling, Classification, Matching | Mobile QA pass |
-| 9 | mod1-lesson09 | Diffusion & Concentration Gradients | data/ | `QA` | Ordering, Calculation, Classification | Mobile QA pass |
-| 10 | mod1-lesson10 | Osmosis & Water Potential | data/ | `QA` | Calculation, Classification, Matching | Mobile QA pass |
-| 11 | mod1-lesson11 | Cell Theory & History | data/ | `QA` | Matching, Fill-blank | Mobile QA pass |
-| 12 | mod1-lesson12 | Cell Division Overview | data/ | `QA` | Matching, Ordering | Mobile QA pass |
-| 13 | mod1-lesson13 | Cytokinesis | data/ | `QA` | Matching, Fill-blank | Mobile QA pass |
-| 14 | mod1-lesson14 | Stem Cells & Differentiation | data/ | `QA` | Matching, Classification | Mobile QA pass |
-| 15 | mod1-lesson15 | Cell Culture | data/ | `QA` | Matching, Classification | Mobile QA pass |
-| 16 | mod1-lesson16 | Staining Techniques | data/ | `QA` | Matching, Classification | Mobile QA pass |
-| 17 | mod1-lesson17 | Cell Disease & Disorder | data/ | `QA` | Matching, Fill-blank | Mobile QA pass |
-| 18 | mod1-lesson18 | Specialised Cells | data/ | `QA` | Matching (2) | Mobile QA pass |
-| 19 | mod1-lesson19 | Working Scientifically | data/ | `QA` | Matching, Fill-blank | Mobile QA pass |
-| 20 | mod1-lesson20 | Module Synthesis | data/ | `QA` | Classification, Matching | Mobile QA pass |
-| 21 | mod1-lesson21 | Cell Signalling and Communication | data/ | `QA` | Ordering, Matching, Classification | Mobile QA pass |
-| 22 | mod1-lesson22 | Enzyme Function and Catalysis | data/ | `QA` | Labelling, Matching, Classification | Mobile QA pass |
-| 23 | mod1-lesson23 | Cell Metabolism and Energy | data/ | `QA` | Ordering, Matching, Classification | Mobile QA pass |
-| 24 | mod1-lesson24 | Biotechnology Applications | data/ | `QA` | Ordering, Matching, Classification | Mobile QA pass |
-| 25 | mod1-lesson25 | Exam Preparation and Practice | data/ | `QA` | Classification, Matching, Fill-blank | Mobile QA pass |
+| 1 | module-1-cells-lesson-1 | Prokaryotic Cell Structure | data/ | `LIVE` | Labelling, Matching | Deployed |
+| 2 | module-1-cells-lesson-2 | Eukaryotic Cell Compartmentalisation | data/ | `LIVE` | Labelling, Ordering, Matching | Deployed |
+| 3 | module-1-cells-lesson-3 | Microscopy and Cell Size | data/ | `LIVE` | Matching (2) | Deployed |
+| 4 | module-1-cells-lesson-4 | Cell Membrane Structure | data/ | `LIVE` | Labelling, Classification | Deployed |
+| 5 | module-1-cells-lesson-5 | Passive Transport | data/ | `LIVE` | Ordering, Classification | Deployed |
+| 6 | mod1-lesson06 | Plant Cells & Water Potential | data/ | `LIVE` | Labelling, Classification, Calculation | Deployed |
+| 7 | mod1-lesson07 | Technologies in Cytology | data/ | `LIVE` | Classification, Calculation, Matching | Deployed |
+| 8 | mod1-lesson08 | The Fluid Mosaic Model | data/ | `LIVE` | Labelling, Classification, Matching | Deployed |
+| 9 | mod1-lesson09 | Diffusion & Concentration Gradients | data/ | `LIVE` | Ordering, Calculation, Classification | Deployed |
+| 10 | mod1-lesson10 | Osmosis & Water Potential | data/ | `LIVE` | Calculation, Classification, Matching | Deployed |
+| 11 | mod1-lesson11 | Cell Theory & History | data/ | `LIVE` | Matching, Fill-blank | Deployed |
+| 12 | mod1-lesson12 | Cell Division Overview | data/ | `LIVE` | Matching, Ordering | Deployed |
+| 13 | mod1-lesson13 | Cytokinesis | data/ | `LIVE` | Matching, Fill-blank | Deployed |
+| 14 | mod1-lesson14 | Stem Cells & Differentiation | data/ | `LIVE` | Matching, Classification | Deployed |
+| 15 | mod1-lesson15 | Cell Culture | data/ | `LIVE` | Matching, Classification | Deployed |
+| 16 | mod1-lesson16 | Staining Techniques | data/ | `LIVE` | Matching, Classification | Deployed |
+| 17 | mod1-lesson17 | Cell Disease & Disorder | data/ | `LIVE` | Matching, Fill-blank | Deployed |
+| 18 | mod1-lesson18 | Specialised Cells | data/ | `LIVE` | Matching (2) | Deployed |
+| 19 | mod1-lesson19 | Working Scientifically | data/ | `LIVE` | Matching, Fill-blank | Deployed |
+| 20 | mod1-lesson20 | Module Synthesis | data/ | `LIVE` | Classification, Matching | Deployed |
+| 21 | mod1-lesson21 | Cell Signalling and Communication | data/ | `LIVE` | Ordering, Matching, Classification | Deployed |
+| 22 | mod1-lesson22 | Enzyme Function and Catalysis | data/ | `LIVE` | Labelling, Matching, Classification | Deployed |
+| 23 | mod1-lesson23 | Cell Metabolism and Energy | data/ | `LIVE` | Ordering, Matching, Classification | Deployed |
+| 24 | mod1-lesson24 | Biotechnology Applications | data/ | `LIVE` | Ordering, Matching, Classification | Deployed |
+| 25 | mod1-lesson25 | Exam Preparation and Practice | data/ | `LIVE` | Classification, Matching, Fill-blank | Deployed |
 
 ---
 
