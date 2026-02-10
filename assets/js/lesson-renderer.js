@@ -247,6 +247,11 @@ class LessonRenderer {
         return this.renderOrderingActivity(activity);
       case 'classification':
         return this.renderClassificationActivity(activity);
+      case 'fillBlank':
+      case 'fill-blank':
+        return this.renderFillBlankActivity(activity);
+      case 'calculation':
+        return this.renderCalculationActivity(activity);
       case 'problemSolving':
         return this.renderProblemSolvingActivity(activity);
       case 'comparison-table':
@@ -609,6 +614,80 @@ class LessonRenderer {
               </div>
             `).join('')}
           </div>
+        </div>
+      </div>
+    `;
+  }
+
+  /**
+   * Fill-in-the-Blank Activity
+   */
+  renderFillBlankActivity(activity) {
+    return `
+      <div class="activity-card activity-card--${activity.theme}" data-activity-id="${activity.id}">
+        <div class="activity-card-header">
+          <i data-lucide="edit-3"></i>
+          <h3>${activity.title}</h3>
+          <span class="xp-badge">+${activity.xpReward || 10} XP</span>
+        </div>
+        <div class="activity-card-body">
+          <p class="activity-description">${activity.description}</p>
+          <div class="fillblank-activity">
+            ${activity.items.map((item, index) => `
+              <div class="fillblank-item" data-index="${index}">
+                <span class="fillblank-text">${item.text.replace('__________', `<input type="text" class="fillblank-input" data-answer="${item.answer}" data-index="${index}" placeholder="Type answer...">`)}</span>
+              </div>
+            `).join('')}
+          </div>
+          <div class="activity-feedback" id="feedback-${activity.id}"></div>
+          <button class="btn btn-primary check-activity-btn" data-activity="${activity.id}">Check Answers</button>
+        </div>
+      </div>
+    `;
+  }
+
+  /**
+   * Calculation Activity
+   */
+  renderCalculationActivity(activity) {
+    return `
+      <div class="activity-card activity-card--${activity.theme}" data-activity-id="${activity.id}">
+        <div class="activity-card-header">
+          <i data-lucide="calculator"></i>
+          <h3>${activity.title}</h3>
+          <span class="xp-badge">+${activity.xpReward || 15} XP</span>
+        </div>
+        <div class="activity-card-body">
+          <p class="activity-description">${activity.description}</p>
+          ${activity.problem ? `<div class="calculation-problem">${activity.problem}</div>` : ''}
+          ${activity.formula ? `
+            <div class="formula-box">
+              <strong>Formula:</strong> ${activity.formula}
+            </div>
+          ` : ''}
+          <div class="calculation-activity">
+            ${activity.steps ? activity.steps.map((step, index) => `
+              <div class="calculation-step">
+                <span class="step-number">${index + 1}.</span>
+                <span class="step-text">${step.text}</span>
+                ${step.input ? `<input type="text" class="calculation-input" data-answer="${step.answer}" placeholder="${step.placeholder || 'Answer'}">` : ''}
+              </div>
+            `).join('') : activity.items ? activity.items.map((item, index) => `
+              <div class="calculation-item">
+                <p class="calculation-question">${item.question}</p>
+                <input type="text" class="calculation-input" data-answer="${item.answer}" placeholder="Enter your answer">
+                ${item.units ? `<span class="calculation-units">${item.units}</span>` : ''}
+              </div>
+            `).join('') : ''}
+          </div>
+          <div class="activity-feedback" id="feedback-${activity.id}"></div>
+          <button class="btn btn-primary check-activity-btn" data-activity="${activity.id}">Check Answers</button>
+          ${activity.hints ? `
+            <details class="calculation-hints">
+              <summary>Need a hint?</summary>
+              <ul>${activity.hints.map(hint => `<li>${hint}</li>`).join('')}</ul>
+            </details>
+          ` : ''}
         </div>
       </div>
     `;

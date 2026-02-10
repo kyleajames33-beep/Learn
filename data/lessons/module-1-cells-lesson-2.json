@@ -132,7 +132,7 @@
       "id": "80s-ribosomes-content",
       "type": "content",
       "title": "80S Ribosomes and Protein Synthesis",
-      "icon": "protein",
+      "icon": "activity",
       "content": "80S ribosomes made of 60S and 40S subunits. Free ribosomes make proteins for use inside the cell. Bound ribosomes (attached to ER) make proteins for export or insertion into membranes.",
       "example": "Pancreatic cells have many bound ribosomes to make digestive enzymes for export.",
       "checkForUnderstanding": "Would a cell producing insulin for export have many free or bound ribosomes? Why?"
