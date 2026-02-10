@@ -1,6 +1,6 @@
 # Science Hub - Current Status
 
-**Last Updated:** 2026-02-09
+**Last Updated:** 2026-02-10
 **Active Phase:** Phase 1 Enhancement - Module 1 V2.0
 **Active Milestone:** E1.1 (Enhance Lessons 1-5 to V2.0 quality)
 
@@ -23,19 +23,17 @@
 - 🔄 Ready to begin lesson enhancement
 
 **Your task:**
-1. ✅ **DONE** - Modified lesson-renderer.js to support HTML content blocks in JSON
-2. **Enhance Lesson 1** (module-1-cells-lesson-1) to V2.0 format:
-   - Add hero object with gradient title, badges, icon
-   - Add intentions object (learning, connections, success)
-   - Create contentHTML with styled boxes, diagrams
-   - Convert existing content to rich HTML format
-   - Update activities to V2 format with numbered badges
-   - Expand answer key with explanations
-3. Run validation after enhancement
-4. Mobile QA at 375px
-5. Update MODULE-1-LESSONS.md with V2.0 status
-6. Commit when Lesson 1 complete
-7. Repeat for Lessons 2-5
+1. ✅ DONE - Modified lesson-renderer.js to support HTML content blocks
+2. ✅ DONE - Enhanced Lesson 1 (module-1-cells-lesson-1) to V2.0 format
+3. **Mobile QA Lesson 1** at 375px viewport:
+   - Test on actual device or emulator
+   - Check for horizontal scroll
+   - Verify touch targets 44px+
+   - Confirm all V2.0 elements render correctly
+4. **Enhance Lesson 2** (module-1-cells-lesson-2) to V2.0 format
+5. Run validation after each lesson
+6. Update MODULE-1-LESSONS.md with V2.0 status
+7. Commit after each lesson
 
 **Pipeline target:** All 25 lessons meet V2.0 Quality Standard.
 **Key files:** 
@@ -49,6 +47,49 @@
 ---
 
 ## LAST SESSION LOG
+
+**Date:** 2026-02-10
+**AI:** Claude Sonnet 4.5
+**Session:** Enhanced Lesson 1 (module-1-cells-lesson-1) to V2.0 format
+
+**What was done:**
+1. ✅ Created V2.0 format JSON for Lesson 1
+   - Added hero object with gradient title, badges, emoji icon
+   - Added intentions object with 3-column grid structure
+   - Created contentHTML with rich HTML content
+
+2. ✅ ContentHTML includes all V2.0 elements:
+   - Hero card with "The Invisible Army" engagement hook
+   - Flow diagram showing prokaryotic cell hierarchy
+   - Key structures table (Nucleoid, 70S, Cell Wall, Plasmids, Flagella)
+   - Prokaryotic vs Eukaryotic comparison table
+   - Formula box for selective toxicity
+   - Worked example with step boxes explaining antibiotics
+   - Warning boxes for common misconceptions
+
+3. ✅ Enhanced activities and assessment:
+   - 2 activities (labeling + matching) with answer areas
+   - 3 MCQ + 2 SAQ with comprehensive marking criteria
+   - Detailed answer key with explanations and exam tips
+
+4. ✅ Maintained backward compatibility:
+   - Kept contentSections for V1 renderer
+   - Kept learningIntentions and successCriteria fields
+   - All validation checks pass
+
+**Test Results:**
+- ✅ All 5 checks passed (exit code 0)
+- ✅ Smoke test: 31/31 lessons pass
+- ✅ Lesson validation: 31/31 valid (0 errors)
+- ✅ Australian English: 31/31 clean
+- ✅ Quality score: Improved
+
+**Updated Trackers:**
+- MODULE-1-LESSONS.md: Lesson 1 status → QA, E1.1 progress → 20%
+
+**Next:** Mobile QA Lesson 1, then enhance Lessons 2-5
+
+---
 
 **Date:** 2026-02-10
 **AI:** Claude Sonnet 4.5

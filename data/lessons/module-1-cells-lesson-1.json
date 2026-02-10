@@ -1,161 +1,113 @@
 {
   "id": "module-1-cells-lesson-1",
-  "title": "Prokaryotic Cell Structure",
+  "title": "Prokaryotic Cell Structure: The Invisible Army",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 1,
-  "description": "Introduction to prokaryotic cell structure including nucleoid region, cell wall, ribosomes, and flagella. Students learn to distinguish prokaryotic from eukaryotic cells using key structural criteria.",
+  "description": "Discover how bacteria survive without a nucleus. Learn to identify key prokaryotic structures including the nucleoid region, 70S ribosomes, and peptidoglycan cell wall. Understand why antibiotics can target bacterial cells without harming human cells.",
   "duration": "50 minutes",
   "difficulty": "Foundation Level",
   "worksOffline": true,
-  
+  "v2": true,
+
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "🦠",
+    "gradient": "blue-to-purple"
+  },
+
   "learningIntentions": [
-    "Students can identify the key structural features of prokaryotic cells (nucleoid region, cell wall, ribosomes, flagelia).",
-    "Students can distinguish between prokaryotic and eukaryotic cells using four basic criteria (presence/absence of nucleus, ribosome size, cell wall composition, DNA shape).",
-    "Students can explain why antibiotics that target prokaryotic ribosomes do not affect human cells."
+    "Identify the key structural features of prokaryotic cells (nucleoid region, cell wall, 70S ribosomes, flagella)",
+    "Distinguish between prokaryotic and eukaryotic cells using structural criteria",
+    "Explain why antibiotics that target prokaryotic ribosomes do not affect human cells"
   ],
   
+  "successCriteria": [
+    "I can draw and label a prokaryotic cell showing the nucleoid region, cell wall, and 70S ribosomes",
+    "I can state three ways prokaryotic cells differ from eukaryotic cells",
+    "I can explain the significance of the nucleoid region having no membrane"
+  ],
+
+  "contentSections": [
+    {
+      "id": "intro",
+      "type": "content",
+      "title": "The Invisible Army",
+      "icon": "microscope",
+      "content": "Prokaryotic cells like bacteria have no nucleus, no mitochondria, and no membrane-bound organelles. Yet they can reproduce rapidly—one E. coli cell can become 17 million cells in just 12 hours."
+    },
+    {
+      "id": "key-structures",
+      "type": "definition",
+      "title": "Key Prokaryotic Structures",
+      "icon": "book-open",
+      "content": "Nucleoid region (DNA with no membrane), 70S ribosomes (smaller than eukaryotic 80S), peptidoglycan cell wall, flagella for movement, and plasmids for antibiotic resistance."
+    },
+    {
+      "id": "antibiotics",
+      "type": "content",
+      "title": "Why Antibiotics Work",
+      "icon": "shield",
+      "content": "Antibiotics exploit structural differences: bacterial 70S ribosomes differ from human 80S ribosomes, allowing selective toxicity. Penicillin targets the unique peptidoglycan cell wall."
+    }
+  ],
+
+  "intentions": {
+    "learning": [
+      "Identify the key structural features of prokaryotic cells (nucleoid region, cell wall, 70S ribosomes, flagella)",
+      "Distinguish between prokaryotic and eukaryotic cells using structural criteria",
+      "Explain why antibiotics that target prokaryotic ribosomes do not affect human cells"
+    ],
+    "connections": [
+      {
+        "topic": "Cell Theory",
+        "description": "Prokaryotes represent the simplest cellular life forms, demonstrating the minimum requirements for life"
+      },
+      {
+        "topic": "Eukaryotic Cell Structure",
+        "link": "module-1-cells-lesson-2",
+        "description": "Understanding prokaryotic simplicity highlights the complexity of compartmentalised eukaryotic cells"
+      },
+      {
+        "topic": "Infectious Disease",
+        "description": "Antibiotic mechanisms exploit structural differences between prokaryotic and eukaryotic cells"
+      }
+    ],
+    "success": [
+      "I can draw and label a prokaryotic cell showing the nucleoid region, cell wall, and 70S ribosomes",
+      "I can state three ways prokaryotic cells differ from eukaryotic cells",
+      "I can explain the significance of the nucleoid region having no membrane"
+    ]
+  },
+
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
     "focus": "Prokaryotic cell structure and function"
   },
-  
-  "successCriteria": [
-    "I can draw and label a prokaryotic cell showing the nucleoid region, cell wall, and 70S ribosomes.",
-    "I can state three ways prokaryotic cells differ from eukaryotic cells.",
-    "I can explain the significance of the nucleoid region having no membrane."
-  ],
-  
-  "engagementHook": {
-    "title": "The Invisible Army",
-    "content": "Show an image of E. coli next to a human hair. Explain that one bacterial cell can become 17 million in 12 hours. Ask: 'This cell has no nucleus, no mitochondria, and no complex internal structures. How does it survive and reproduce so successfully? And why can penicillin kill it but not harm your cells?'"
-  },
-  
-  "keyConcepts": [
-    {
-      "term": "Prokaryotic Cells",
-      "definition": "Simple cells with no membrane-bound organelles. Examples include bacteria and archaea. Size range 1–10 µm."
-    },
-    {
-      "term": "Nucleoid Region",
-      "definition": "Area where the circular DNA is located. Not surrounded by a membrane (unlike the nucleus in eukaryotes)."
-    },
-    {
-      "term": "70S Ribosomes",
-      "definition": "Smaller than eukaryotic ribosomes (site of protein synthesis). Target of antibiotics like tetracycline."
-    },
-    {
-      "term": "Cell Wall",
-      "definition": "Provides structure and protection. Made of peptidoglycan in bacteria (different from cellulose in plants or chitin in fungi)."
-    },
-    {
-      "term": "Plasmids",
-      "definition": "Small circular pieces of DNA separate from the main chromosome, often carrying antibiotic resistance genes."
-    },
-    {
-      "term": "Flagella",
-      "definition": "Used for movement. Lack the 9+2 microtubule arrangement found in eukaryotic flagella."
-    }
-  ],
-  
-  "misconceptions": [
-    {
-      "misconception": "Prokaryotes have a nucleus",
-      "correction": "Students confuse 'nucleoid' with 'nucleus' due to similar names. Emphasise 'nucleoid = NO membrane' and 'nucleus = HAS membrane.' Use analogy: nucleoid is like a pile of string in a room; nucleus is that string inside a sealed bag."
-    },
-    {
-      "misconception": "All bacteria are harmful",
-      "correction": "Students associate bacteria only with disease. Discuss gut bacteria (microbiome) and decomposition. Only a small percentage cause disease."
-    },
-    {
-      "misconception": "Prokaryotes are primitive/simple",
-      "correction": "Students think simple structure means simple function. Explain metabolic diversity (nitrogen fixation, extreme environment survival)."
-    }
-  ],
-  
-  "contentSections": [
-    {
-      "id": "prokaryotic-structure-diagram",
-      "type": "diagram",
-      "title": "Basic Prokaryotic Structure",
-      "icon": "microscope",
-      "content": "Simple diagram showing cell wall, plasma membrane, nucleoid (circular DNA), ribosomes (small dots), flagellum, and capsule. No internal organelles shown.",
-      "keyPoints": [
-        "Nucleoid contains circular DNA; no membrane-bound nucleus",
-        "70S ribosomes scattered in cytoplasm",
-        "Cell wall provides shape",
-        "Flagella for movement"
-      ],
-      "example": "Escherichia coli in the human intestine—some strains helpful, some harmful.",
-      "checkForUnderstanding": "Why can't we see ribosomes under a light microscope? (Too small—need electron microscope.)",
-      "image": {
-        "src": "assets/images/mod1/lesson01/prokaryote-diagram.webp",
-        "alt": "Diagram of a prokaryotic cell showing cell wall, plasma membrane, nucleoid region with circular DNA, 70S ribosomes, flagellum, and capsule",
-        "caption": "General structure of a prokaryotic cell (bacterium)"
-      }
-    },
-    {
-      "id": "prokaryotic-vs-eukaryotic-preview",
-      "type": "grid",
-      "title": "Prokaryotic vs Eukaryotic Preview",
-      "icon": "columns",
-      "gridItems": [
-        {
-          "header": "Prokaryotic",
-          "items": [
-            "No nucleus (nucleoid instead)",
-            "70S ribosomes",
-            "Circular DNA",
-            "Peptidoglycan cell wall",
-            "No membrane-bound organelles"
-          ]
-        },
-        {
-          "header": "Eukaryotic",
-          "items": [
-            "True nucleus with membrane",
-            "80S ribosomes",
-            "Linear DNA",
-            "Cellulose/chitin walls (or none)",
-            "Membrane-bound organelles"
-          ]
-        }
-      ],
-      "note": "We will explore the right column in detail in Lesson 2.",
-      "example": "Comparing a bacterial cell (prokaryote) with a human cheek cell (eukaryote)."
-    },
-    {
-      "id": "antibiotics-ribosomes-case-study",
-      "type": "content",
-      "title": "Antibiotics and Ribosomes",
-      "icon": "shield",
-      "content": "Antibiotics like tetracycline bind to 70S ribosomes and stop protein synthesis in bacteria. Human cells have 80S ribosomes (different shape), so the antibiotic does not affect them. This is called selective toxicity.",
-      "example": "Treating bacterial infections (strep throat) with antibiotics without harming human cells. MRSA (antibiotic-resistant bacteria) evolves when bacteria develop ways to block the antibiotic.",
-      "checkForUnderstanding": "Why don't antibiotics kill human cells when you take them for a throat infection?"
-    }
-  ],
-  
+
+  "contentHTML": "<div class=\"card\">\n  <h3>🦠 The Invisible Army</h3>\n  <p>Imagine a single <strong>Escherichia coli</strong> bacterium settling on a nutrient-rich surface. Within 12 hours, that one cell can become <strong>17 million</strong> cells—enough to form a visible colony the size of a coin.</p>\n  <p>Yet this remarkable organism has:</p>\n  <ul>\n    <li>❌ <strong>No nucleus</strong>—just a nucleoid region</li>\n    <li>❌ <strong>No mitochondria</strong>—energy production happens at the cell membrane</li>\n    <li>❌ <strong>No membrane-bound organelles</strong>—just cytoplasm with 70S ribosomes</li>\n  </ul>\n  <div class=\"highlight-box\">\n    <strong>Critical Question:</strong> How does such a 'simple' cell survive, reproduce, and outcompete complex organisms? And why can penicillin kill bacteria but not harm your cells?\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>🔬 Basic Prokaryotic Structure</h3>\n  <div class=\"flow-diagram\">\n    <div class=\"flow-box level-1\">\n      <strong>Prokaryotic Cell</strong><br>\n      <small>1–10 µm diameter</small>\n    </div>\n    <div class=\"flow-arrow\">↓</div>\n    <div class=\"flow-box level-2\">\n      <strong>Nucleoid Region</strong><br>\n      <small>Circular DNA<br>No membrane</small>\n    </div>\n    <div class=\"flow-arrow\">↓</div>\n    <div class=\"flow-box level-3\">\n      <strong>70S Ribosomes</strong><br>\n      <small>Protein synthesis<br>50S + 30S subunits</small>\n    </div>\n    <div class=\"flow-arrow\">↓</div>\n    <div class=\"flow-box level-4\">\n      <strong>Peptidoglycan Cell Wall</strong><br>\n      <small>Protection & shape<br>Target of antibiotics</small>\n    </div>\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>📋 Key Prokaryotic Structures</h3>\n  <div class=\"table-wrap\">\n    <table>\n      <thead>\n        <tr>\n          <th>Structure</th>\n          <th>Description</th>\n          <th>Function</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td><strong>Nucleoid</strong></td>\n          <td>Region containing circular DNA; no surrounding membrane</td>\n          <td>Stores genetic information; controls cell activities</td>\n        </tr>\n        <tr>\n          <td><strong>70S Ribosomes</strong></td>\n          <td>Smaller than eukaryotic ribosomes (50S + 30S subunits)</td>\n          <td>Site of protein synthesis</td>\n        </tr>\n        <tr>\n          <td><strong>Cell Wall</strong></td>\n          <td>Made of peptidoglycan (bacteria) or pseudopeptidoglycan (archaea)</td>\n          <td>Provides structure and protection; maintains cell shape</td>\n        </tr>\n        <tr>\n          <td><strong>Plasmids</strong></td>\n          <td>Small circular DNA separate from main chromosome</td>\n          <td>Often carry antibiotic resistance genes</td>\n        </tr>\n        <tr>\n          <td><strong>Flagella</strong></td>\n          <td>Tail-like appendages (lack 9+2 microtubule arrangement)</td>\n          <td>Movement; chemotaxis</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>⚖️ Prokaryotic vs Eukaryotic Cells</h3>\n  <div class=\"table-wrap\">\n    <table>\n      <thead>\n        <tr>\n          <th>Feature</th>\n          <th>Prokaryotic</th>\n          <th>Eukaryotic</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td><strong>Nucleus</strong></td>\n          <td>Nucleoid region (no membrane)</td>\n          <td>True nucleus (double membrane)</td>\n        </tr>\n        <tr>\n          <td><strong>DNA Shape</strong></td>\n          <td>Circular</td>\n          <td>Linear (in nucleus)</td>\n        </tr>\n        <tr>\n          <td><strong>Ribosomes</strong></td>\n          <td>70S (smaller)</td>\n          <td>80S (larger)</td>\n        </tr>\n        <tr>\n          <td><strong>Organelles</strong></td>\n          <td>None membrane-bound</td>\n          <td>Mitochondria, ER, Golgi, etc.</td>\n        </tr>\n        <tr>\n          <td><strong>Cell Wall</strong></td>\n          <td>Peptidoglycan (bacteria)</td>\n          <td>Cellulose (plants) or chitin (fungi) or none</td>\n        </tr>\n        <tr>\n          <td><strong>Size</strong></td>\n          <td>1–10 µm</td>\n          <td>10–100 µm</td>\n        </tr>\n        <tr>\n          <td><strong>Examples</strong></td>\n          <td>Bacteria, Archaea</td>\n          <td>Animals, Plants, Fungi, Protists</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n  <div class=\"info-box\">\n    <strong>💡 Memory Tip:</strong> Think 'pro' = 'no' (prokaryotes have NO membrane-bound nucleus). 'Eu' = 'true' (eukaryotes have a TRUE nucleus).\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>💊 Case Study: Antibiotics and Selective Toxicity</h3>\n  <p>When you take antibiotics for a bacterial infection, how do they kill bacteria without harming your cells? The answer lies in <strong>selective toxicity</strong>—targeting structures unique to bacteria.</p>\n  \n  <div class=\"formula-box\">\n    <strong>Selective Toxicity Formula:</strong><br>\n    Target Structure = Bacterial Only (NOT in Human Cells)<br>\n    Examples: 70S ribosomes, peptidoglycan cell wall\n  </div>\n  \n  <h4>Antibiotic Mechanisms:</h4>\n  <ul>\n    <li><strong>Tetracycline:</strong> Binds to 30S ribosomal subunit → blocks protein synthesis</li>\n    <li><strong>Penicillin:</strong> Inhibits peptidoglycan synthesis → weakens cell wall → lysis</li>\n    <li><strong>Streptomycin:</strong> Binds to 16S rRNA → misreading of mRNA</li>\n  </ul>\n</div>\n\n<div class=\"worked-example\">\n  <h4>📝 Worked Example: Why Antibiotics Work</h4>\n  <p><strong>Question:</strong> Explain why tetracycline can kill bacteria without harming human cells.</p>\n  \n  <div class=\"step-box\">\n    <strong>Step 1: Identify the target structure</strong><br>\n    Tetracycline targets bacterial ribosomes (70S), which are smaller than human ribosomes (80S).\n  </div>\n  \n  <div class=\"step-box\">\n    <strong>Step 2: Explain the structural difference</strong><br>\n    70S ribosomes consist of 50S and 30S subunits with distinct shapes and rRNA sequences compared to the 60S and 40S subunits of 80S ribosomes.\n  </div>\n  \n  <div class=\"step-box\">\n    <strong>Step 3: Describe the mechanism</strong><br>\n    Tetracycline binds to the 30S subunit of 70S ribosomes, blocking the A-site and preventing tRNA attachment, thus stopping protein synthesis.\n  </div>\n  \n  <div class=\"step-box\">\n    <strong>Step 4: Explain selectivity</strong><br>\n    The 80S ribosomes in human cells have a different structure that does not bind tetracycline, so protein synthesis in human cells continues normally. This is selective toxicity.\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>⚠️ Common Misconceptions</h3>\n  <div class=\"warning-box\">\n    <strong>Misconception:</strong> 'Prokaryotes have a nucleus'\n    <p><strong>Correction:</strong> Students confuse 'nucleoid' with 'nucleus' due to similar names. <strong>Nucleoid = NO membrane</strong>; <strong>Nucleus = HAS membrane</strong>.</p>\n    <p><em>Analogy:</em> Nucleoid is like a pile of string in a room; nucleus is that string inside a sealed bag.</p>\n  </div>\n  \n  <div class=\"warning-box\">\n    <strong>Misconception:</strong> 'All bacteria are harmful'\n    <p><strong>Correction:</strong> Only a small percentage of bacteria cause disease. Gut bacteria (microbiome) aid digestion, produce vitamins, and protect against pathogens.</p>\n  </div>\n  \n  <div class=\"warning-box\">\n    <strong>Misconception:</strong> 'Prokaryotes are primitive/simple'\n    <p><strong>Correction:</strong> Simple structure does not mean simple function. Bacteria display incredible metabolic diversity: nitrogen fixation, extreme environment survival, complex communication (quorum sensing).</p>\n  </div>\n</div>\n\n<div class=\"card\">\n  <h3>🔬 Check Your Understanding</h3>\n  <div class=\"highlight-box\">\n    <strong>Question:</strong> Why can't we see ribosomes under a light microscope?\n    <p><em>Answer: 70S ribosomes are approximately 20–30 nm in size, well below the ~200 nm resolution limit of light microscopes. Electron microscopes are required to visualise them.</em></p>\n  </div>\n</div>",
+
   "activities": [
     {
       "id": "prokaryotic-labeling",
       "type": "labeling",
       "title": "Label the Prokaryotic Cell",
-      "description": "Drag labels to identify prokaryotic structures on the diagram.",
-      "learningObjective": "Identify prokaryotic structures.",
+      "description": "Drag labels to identify prokaryotic structures on the diagram. Pay special attention to the nucleoid region—remember, it has NO membrane!",
       "theme": "teal",
       "xpReward": 50,
       "image": {
         "src": "assets/images/mod1/lesson01/prokaryote-diagram.webp",
-        "alt": "Prokaryotic cell diagram for labeling"
+        "alt": "Prokaryotic cell diagram showing unlabelled structures for identification"
       },
       "labels": [
         {
           "id": "nucleoid-label",
           "zone": { "x": 35, "y": 45, "width": 25, "height": 20 },
           "correctText": "Nucleoid",
-          "alternatives": ["Nucleus"],
+          "alternatives": ["Nucleus", "DNA region"],
           "hint": "This is where the circular DNA is found - NO membrane around it!"
         },
         {
@@ -170,7 +122,7 @@
           "zone": { "x": 60, "y": 35, "width": 10, "height": 10 },
           "correctText": "Ribosome",
           "alternatives": ["70S ribosome"],
-          "hint": "Small dots scattered in cytoplasm - protein factories"
+          "hint": "Small dots scattered in cytoplasm - protein factories (70S)"
         },
         {
           "id": "flagellum-label",
@@ -194,33 +146,32 @@
           "hint": "Outer protective gel-like layer"
         }
       ],
-      "setup": "Diagram of bacterium with leader lines. Labels: Nucleoid, Cell wall, Plasma membrane, Ribosome, Flagellum, Plasmid.",
-      "correctApproach": "Drag labels to correct locations. Nucleoid must be inside cytoplasm (not in membrane-bound compartment)."
+      "answerArea": true
     },
     {
       "id": "structure-function-matching",
       "type": "matching",
       "title": "Match Structures to Functions",
-      "description": "Match each prokaryotic structure with its correct function.",
-      "learningObjective": "Match structures to functions.",
+      "description": "Match each prokaryotic structure with its correct function. Understanding structure-function relationships is key to HSC success!",
       "theme": "purple",
       "xpReward": 50,
       "items": [
         { "id": "nucleoid", "text": "Nucleoid", "match": "Contains genetic information (circular DNA)" },
         { "id": "ribosome", "text": "70S ribosome", "match": "Site of protein synthesis" },
         { "id": "wall", "text": "Peptidoglycan wall", "match": "Provides protection and structure" },
-        { "id": "plasmid", "text": "Plasmid", "match": "Carries antibiotic resistance genes" }
+        { "id": "plasmid", "text": "Plasmid", "match": "Carries antibiotic resistance genes" },
+        { "id": "flagella", "text": "Flagella", "match": "Enables cell movement" }
       ],
-      "setup": "Cards with Structures and Functions to match.",
-      "correctApproach": "Nucleoid-DNA; Ribosome-Protein; Wall-Protection; Plasmid-Resistance genes."
+      "answerArea": true
     }
   ],
-  
+
   "assessment": {
     "multipleChoice": [
       {
         "id": "mcq-1",
         "question": "Which structure is found in prokaryotic cells but absent from eukaryotic cells?",
+        "marks": 1,
         "options": [
           "Ribosomes",
           "Membrane-bound nucleus",
@@ -233,6 +184,7 @@
       {
         "id": "mcq-2",
         "question": "The main difference between the nucleoid of a bacterium and the nucleus of an animal cell is that the nucleoid:",
+        "marks": 1,
         "options": [
           "Contains RNA instead of DNA",
           "Is not surrounded by a membrane",
@@ -245,6 +197,7 @@
       {
         "id": "mcq-3",
         "question": "Antibiotics such as tetracycline are effective against bacteria because they:",
+        "marks": 1,
         "options": [
           "Destroy the cell wall",
           "Target the 70S ribosomes",
@@ -260,69 +213,147 @@
         "id": "sa-1",
         "question": "Distinguish between prokaryotic and eukaryotic cells with reference to the presence of a nucleus and the structure of ribosomes. (2 marks)",
         "marks": 2,
+        "lines": 4,
         "markingCriteria": [
           "1 mark: Prokaryotes have nucleoid region (no membrane) vs eukaryotes have membrane-bound nucleus",
           "1 mark: Prokaryotes have 70S ribosomes vs eukaryotes have 80S ribosomes"
         ],
-        "commonError": "Stating prokaryotes have 'no DNA' or confusing 70S/80S sizes."
+        "commonError": "Stating prokaryotes have 'no DNA' or confusing 70S/80S sizes. Remember: 70S are SMALLER (found in prokaryotes)."
       },
       {
         "id": "sa-2",
         "question": "Explain why bacterial cells can be killed by antibiotics that target their ribosomes, while human cells are not affected. (2 marks)",
         "marks": 2,
+        "lines": 4,
         "markingCriteria": [
           "1 mark: Bacterial ribosomes are 70S (small) while human ribosomes are 80S (different structure)",
           "1 mark: Antibiotics can bind to/block 70S ribosomes but not 80S ribosomes (selective toxicity)"
         ],
-        "commonError": "Saying 'bacteria are weaker' rather than explaining structural difference."
+        "commonError": "Saying 'bacteria are weaker' rather than explaining structural difference. Focus on the 70S vs 80S distinction."
       }
     ]
   },
-  
+
+  "answers": {
+    "activities": [
+      {
+        "activityId": "prokaryotic-labeling",
+        "title": "Label the Prokaryotic Cell - Answer Key",
+        "answers": [
+          { "label": "Nucleoid", "description": "The region containing the circular bacterial chromosome. Key point: NO membrane surrounds it (unlike a true nucleus)." },
+          { "label": "Cell wall", "description": "Rigid layer made of peptidoglycan that provides structural support and protection. Found external to the plasma membrane." },
+          { "label": "Ribosome", "description": "70S ribosomes (smaller than eukaryotic 80S) scattered throughout the cytoplasm. Site of protein synthesis." },
+          { "label": "Flagellum", "description": "Long, whip-like appendage used for locomotion. Lacks the 9+2 microtubule arrangement of eukaryotic flagella." },
+          { "label": "Plasmid", "description": "Small, circular, extrachromosomal DNA molecule. Often carries antibiotic resistance genes and can be transferred between bacteria." },
+          { "label": "Capsule", "description": "Gel-like layer outside the cell wall. Provides protection and helps bacteria adhere to surfaces." }
+        ],
+        "keyPoint": "The most critical distinction is the nucleoid vs nucleus—prokaryotes have no membrane-bound nucleus!"
+      },
+      {
+        "activityId": "structure-function-matching",
+        "title": "Match Structures to Functions - Answer Key",
+        "answers": [
+          { "label": "Nucleoid → Contains genetic information (circular DNA)", "description": "The nucleoid is not a true organelle but a concentrated region of DNA that controls cellular activities." },
+          { "label": "70S ribosome → Site of protein synthesis", "description": "Composed of 50S and 30S subunits. The 'S' unit refers to Svedberg units (sedimentation rate)." },
+          { "label": "Peptidoglycan wall → Provides protection and structure", "description": "Unique to bacteria (archaea have different cell wall compositions). Target of penicillin antibiotics." },
+          { "label": "Plasmid → Carries antibiotic resistance genes", "description": "Can replicate independently and be transferred between bacteria via conjugation." },
+          { "label": "Flagella → Enables cell movement", "description": "Rotates like a propeller (different from the whipping motion of eukaryotic flagella)." }
+        ],
+        "keyPoint": "Understanding structure-function relationships is essential for HSC questions on cell biology."
+      }
+    ],
+    "assessment": [
+      {
+        "questionId": "mcq-1",
+        "question": "Which structure is found in prokaryotic cells but absent from eukaryotic cells?",
+        "correctAnswer": "C - Peptidoglycan cell wall",
+        "explanation": "Both cell types have ribosomes and DNA. Eukaryotes have membrane-bound nuclei (not prokaryotes). Peptidoglycan cell walls are unique to bacteria (a type of prokaryote). Plant cells have cellulose walls; fungi have chitin walls—but these are eukaryotes with different wall compositions."
+      },
+      {
+        "questionId": "mcq-2",
+        "question": "The main difference between the nucleoid of a bacterium and the nucleus of an animal cell is that the nucleoid:",
+        "correctAnswer": "B - Is not surrounded by a membrane",
+        "explanation": "The name 'nucleoid' sounds like 'nucleus' but they differ fundamentally. The nucleoid is simply a region where DNA is concentrated—there is no membrane envelope. The eukaryotic nucleus is surrounded by a double membrane (nuclear envelope) with pores. The nucleoid contains circular DNA; the nucleus contains linear DNA."
+      },
+      {
+        "questionId": "mcq-3",
+        "question": "Antibiotics such as tetracycline are effective against bacteria because they:",
+        "correctAnswer": "B - Target the 70S ribosomes",
+        "explanation": "Selective toxicity is the principle here. Bacterial ribosomes are 70S (50S + 30S subunits) while human ribosomes are 80S (60S + 40S subunits). Tetracycline binds to the 30S subunit and blocks protein synthesis in bacteria. Human ribosomes are unaffected because their different structure prevents antibiotic binding."
+      },
+      {
+        "questionId": "sa-1",
+        "question": "Distinguish between prokaryotic and eukaryotic cells with reference to the presence of a nucleus and the structure of ribosomes. (2 marks)",
+        "correctAnswer": "Prokaryotic cells have a nucleoid region (not surrounded by a membrane) whereas eukaryotic cells have a membrane-bound nucleus (1 mark). Prokaryotes have 70S ribosomes which are smaller than the 80S ribosomes found in eukaryotes (1 mark).",
+        "explanation": "Full marks require clear distinction on both criteria. Note that 'nucleoid' must be described as lacking a membrane. For ribosomes, mentioning the Svedberg values (70S vs 80S) or simply stating prokaryotic ribosomes are smaller earns the mark."
+      },
+      {
+        "questionId": "sa-2",
+        "question": "Explain why bacterial cells can be killed by antibiotics that target their ribosomes, while human cells are not affected. (2 marks)",
+        "correctAnswer": "Bacterial cells have 70S ribosomes which have a different structure from the 80S ribosomes in human cells (1 mark). Antibiotics like tetracycline can bind to the 70S ribosomes and block protein synthesis in bacteria, but they cannot bind to the larger 80S ribosomes in human cells, so protein synthesis in human cells is not affected. This is called selective toxicity (1 mark).",
+        "explanation": "The key concept is selective toxicity—exploiting structural differences. The answer must mention 70S vs 80S ribosomes and explain that the antibiotic can bind to bacterial but not human ribosomes. The term 'selective toxicity' is excellent but not essential if the concept is clearly explained."
+      }
+    ]
+  },
+
   "copyToBook": {
+    "title": "Key Points to Copy",
     "definitions": [
-      "Prokaryotic cells have no membrane-bound nucleus (have nucleoid region instead).",
-      "Prokaryotic DNA is circular; eukaryotic DNA is linear.",
-      "Prokaryotic ribosomes are 70S (smaller than eukaryotic 80S ribosomes).",
-      "Cell walls contain peptidoglycan (not cellulose like plants).",
-      "Antibiotics target prokaryotic-specific structures (e.g., 70S ribosomes)."
+      "Prokaryotic cells have no membrane-bound nucleus (have nucleoid region instead)",
+      "Prokaryotic DNA is circular; eukaryotic DNA is linear",
+      "Prokaryotic ribosomes are 70S (smaller than eukaryotic 80S ribosomes)",
+      "Cell walls contain peptidoglycan (not cellulose like plants)",
+      "Nucleoid = region of DNA with NO surrounding membrane"
     ],
-    "keyPoints": [
-      "Nucleoid region = NO membrane, contains circular DNA",
-      "70S ribosomes are smaller than 80S and targeted by antibiotics",
-      "Flagella lack the 9+2 arrangement found in eukaryotes",
-      "Plasmids carry antibiotic resistance genes"
-    ],
-    "diagrams": [
-      "Labelled diagram of prokaryotic cell showing nucleoid, cell wall, ribosomes, flagellum"
+    "sections": [
+      {
+        "title": "Definitions",
+        "items": [
+          "Prokaryotic cells have no membrane-bound nucleus (have nucleoid region instead)",
+          "Prokaryotic DNA is circular; eukaryotic DNA is linear",
+          "Prokaryotic ribosomes are 70S (smaller than eukaryotic 80S ribosomes)",
+          "Cell walls contain peptidoglycan (not cellulose like plants)",
+          "Nucleoid = region of DNA with NO surrounding membrane"
+        ]
+      },
+      {
+        "title": "Key Comparisons",
+        "items": [
+          "Prokaryotes: No nucleus, 70S ribosomes, circular DNA, peptidoglycan wall, no membrane-bound organelles",
+          "Eukaryotes: True nucleus, 80S ribosomes, linear DNA, cellulose/chitin walls (or none), membrane-bound organelles",
+          "Size: Prokaryotes 1–10 µm; Eukaryotes 10–100 µm"
+        ]
+      },
+      {
+        "title": "Exam Tips",
+        "items": [
+          "Always emphasise 'NO membrane' around the nucleoid—this is a common exam focus",
+          "Remember 70S = prokaryotic (smaller), 80S = eukaryotic (larger)",
+          "Antibiotics work by selective toxicity—targeting structures unique to bacteria",
+          "Draw clear, labelled diagrams showing the nucleoid, cell wall, and ribosomes"
+        ]
+      }
     ]
   },
-  
-  "answerKey": {
-    "multipleChoice": ["C", "B", "B"],
-    "shortAnswer": [
-      "Prokaryotic cells have a nucleoid region (not surrounded by a membrane) whereas eukaryotic cells have a membrane-bound nucleus. Prokaryotes have 70S ribosomes which are smaller than the 80S ribosomes found in eukaryotes.",
-      "Bacterial cells have 70S ribosomes which have a different structure from the 80S ribosomes in human cells. Antibiotics like tetracycline can bind to the 70S ribosomes and block protein synthesis in bacteria, but they cannot bind to the larger 80S ribosomes in human cells, so protein synthesis in human cells is not affected. This is called selective toxicity."
-    ]
-  },
-  
+
   "prerequisites": [],
-  
+
   "navigation": {
     "previous": null,
     "previousTitle": null,
     "next": "module-1-cells-lesson-2",
     "nextTitle": "Eukaryotic Cell Compartmentalisation"
   },
-  
+
   "meta": {
     "author": "HSC Biology Team",
     "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "lastModified": "2026-02-10",
     "version": "2.0.0",
+    "format": "V2.0",
     "tags": ["prokaryotic", "bacteria", "nucleoid", "70S ribosomes", "antibiotics", "cell wall", "Module 1"]
   },
-  
+
   "imageLibrary": [
     {
       "id": "prokaryote-diagram",
