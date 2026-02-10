@@ -846,14 +846,57 @@ const LessonRenderer = {
    * Render a single V2.0 activity
    */
   renderV2Activity(activity, number) {
+    const theme = activity.theme || 'teal';
+    
+    // Render based on activity type
+    let activityContent = '';
+    switch (activity.type) {
+      case 'labeling':
+        activityContent = this.renderLabelingActivity(activity, theme);
+        break;
+      case 'matching':
+        activityContent = this.renderMatchingActivity(activity, theme);
+        break;
+      case 'ordering':
+        activityContent = this.renderOrderingActivity(activity, theme);
+        break;
+      case 'classification':
+        activityContent = this.renderClassificationActivity(activity, theme);
+        break;
+      case 'fillBlank':
+        activityContent = this.renderFillBlankActivity(activity, theme);
+        break;
+      case 'calculation':
+        activityContent = this.renderCalculationActivity(activity, theme);
+        break;
+      default:
+        activityContent = this.renderGenericActivity(activity, theme);
+    }
+    
     return `
-      <div class="activity" data-activity-id="${activity.id || number}">
-        <div class="activity-number">Activity ${number}</div>
-        <h3>${activity.title || 'Activity'}</h3>
-        ${activity.description ? `<p class="activity-meta">${activity.description}</p>` : ''}
-        <div class="activity-content">
-          ${activity.content || ''}
-          ${activity.answerArea !== false ? `<div class="answer-area">Write your answer here...</div>` : ''}
+      <div class="v2-activity-wrapper" data-activity-number="${number}">
+        <div class="activity-header-v2">
+          <span class="activity-badge">Activity ${number}</span>
+          <span class="activity-xp">+${activity.xpReward || 50} XP</span>
+        </div>
+        ${activityContent}
+      </div>
+    `;
+  },
+  
+  /**
+   * Render generic activity for V2
+   */
+  renderGenericActivity(activity, theme) {
+    return `
+      <div class="activity-card activity-card--${theme}" data-activity="${activity.id}">
+        <div class="activity-card-header">
+          <i data-lucide="activity"></i>
+          <h3>${activity.title || 'Activity'}</h3>
+        </div>
+        <div class="activity-card-body">
+          ${activity.description ? `<p>${activity.description}</p>` : ''}
+          <div class="answer-area">Complete this activity in your workbook...</div>
         </div>
       </div>
     `;

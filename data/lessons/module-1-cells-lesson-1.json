@@ -163,6 +163,51 @@
         { "id": "flagella", "text": "Flagella", "match": "Enables cell movement" }
       ],
       "answerArea": true
+    },
+    {
+      "id": "prokaryotic-vs-eukaryotic-classification",
+      "type": "classification",
+      "title": "Classify Cell Features",
+      "description": "Drag each feature into the correct category: Prokaryotic only, Eukaryotic only, or Found in both.",
+      "theme": "amber",
+      "xpReward": 60,
+      "categories": [
+        { "id": "prokaryotic", "label": "Prokaryotic only", "colour": "#dc2626" },
+        { "id": "eukaryotic", "label": "Eukaryotic only", "colour": "#2563eb" },
+        { "id": "both", "label": "Found in both", "colour": "#059669" }
+      ],
+      "items": [
+        { "id": "nucleoid", "text": "Nucleoid region", "category": "prokaryotic" },
+        { "id": "70s", "text": "70S ribosomes", "category": "prokaryotic" },
+        { "id": "peptido", "text": "Peptidoglycan cell wall", "category": "prokaryotic" },
+        { "id": "plasmid", "text": "Plasmids", "category": "prokaryotic" },
+        { "id": "nucleus", "text": "Membrane-bound nucleus", "category": "eukaryotic" },
+        { "id": "80s", "text": "80S ribosomes", "category": "eukaryotic" },
+        { "id": "mitochondria", "text": "Mitochondria", "category": "eukaryotic" },
+        { "id": "linear", "text": "Linear DNA in chromosomes", "category": "eukaryotic" },
+        { "id": "ribosomes", "text": "Ribosomes present", "category": "both" },
+        { "id": "dna", "text": "DNA as genetic material", "category": "both" },
+        { "id": "cellwall", "text": "Cell wall present", "category": "both" },
+        { "id": "cytoplasm", "text": "Cytoplasm", "category": "both" }
+      ],
+      "answerArea": true
+    },
+    {
+      "id": "antibiotic-mechanism-ordering",
+      "type": "ordering",
+      "title": "Sequence: How Antibiotics Work",
+      "description": "Put the steps in the correct order to explain how antibiotics selectively kill bacteria without harming human cells.",
+      "theme": "emerald",
+      "xpReward": 50,
+      "items": [
+        { "id": "step1", "text": "Antibiotic enters bacterial cell", "order": 1 },
+        { "id": "step2", "text": "Antibiotic binds to 70S ribosome (30S subunit)", "order": 2 },
+        { "id": "step3", "text": "Protein synthesis is blocked", "order": 3 },
+        { "id": "step4", "text": "Bacterial cell cannot make essential proteins", "order": 4 },
+        { "id": "step5", "text": "Bacterial cell dies", "order": 5 }
+      ],
+      "explanation": "This sequence demonstrates selective toxicity—antibiotics exploit structural differences between bacterial (70S) and human (80S) ribosomes.",
+      "answerArea": true
     }
   ],
 
@@ -260,6 +305,44 @@
           { "label": "Flagella → Enables cell movement", "description": "Rotates like a propeller (different from the whipping motion of eukaryotic flagella)." }
         ],
         "keyPoint": "Understanding structure-function relationships is essential for HSC questions on cell biology."
+      },
+      {
+        "activityId": "prokaryotic-vs-eukaryotic-classification",
+        "title": "Classify Cell Features - Answer Key",
+        "answers": {
+          "prokaryotic": [
+            "Nucleoid region (no membrane)",
+            "70S ribosomes (smaller)",
+            "Peptidoglycan cell wall (bacteria)",
+            "Plasmids (circular extrachromosomal DNA)"
+          ],
+          "eukaryotic": [
+            "Membrane-bound nucleus (true nucleus)",
+            "80S ribosomes (larger)",
+            "Mitochondria (membrane-bound organelles)",
+            "Linear DNA in chromosomes"
+          ],
+          "both": [
+            "Ribosomes present (protein synthesis)",
+            "DNA as genetic material",
+            "Cell wall present (though composition differs)",
+            "Cytoplasm (gel-like matrix)"
+          ]
+        },
+        "keyPoint": "The critical distinction is membrane-bound organelles—prokaryotes have NONE, eukaryotes have many."
+      },
+      {
+        "activityId": "antibiotic-mechanism-ordering",
+        "title": "Sequence: How Antibiotics Work - Answer Key",
+        "correctOrder": [
+          "Antibiotic enters bacterial cell",
+          "Antibiotic binds to 70S ribosome (30S subunit)",
+          "Protein synthesis is blocked",
+          "Bacterial cell cannot make essential proteins",
+          "Bacterial cell dies"
+        ],
+        "explanation": "This demonstrates SELECTIVE TOXICITY. Antibiotics can bind to bacterial 70S ribosomes but NOT to human 80S ribosomes due to structural differences. This is why antibiotics kill bacteria without harming human cells.",
+        "examTip": "Remember: 70S is SMALLER (prokaryotic), 80S is LARGER (eukaryotic). The numbers are Svedberg units (sedimentation rate), not size directly!"
       }
     ],
     "assessment": [
