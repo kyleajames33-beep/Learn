@@ -1087,12 +1087,13 @@ const LessonRenderer = {
    * Render engagement hook
    */
   renderEngagementHook(hook) {
+    if (!hook || typeof hook !== 'object') return '';
     return `
       <div class="engagement-hook reveal">
         <i data-lucide="lightbulb"></i>
         <div>
           <h4>${hook.title || 'Think About This...'}</h4>
-          <p>${hook.content}</p>
+          <p>${hook.content || ''}</p>
         </div>
       </div>
     `;
