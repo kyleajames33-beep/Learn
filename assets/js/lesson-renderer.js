@@ -293,11 +293,10 @@ class LessonRenderer {
           <div style="margin-top:16px">
             ${answers.activities ? answers.activities.map(act => `
               <div style="margin-bottom:24px">
-                <h4>${act.title}</h4>
-                <ul>
-                  ${act.answers.map(a => `<li><strong>${a.label}:</strong> ${a.description}</li>`).join('')}
-                </ul>
+                <h4>${act.title || act.activityId || 'Activity'}</h4>
+                ${this.renderV2ActivityAnswer(act)}
                 ${act.keyPoint ? `<div class="info-box"><strong>Key Point:</strong> ${act.keyPoint}</div>` : ''}
+                ${act.examTip ? `<div class="highlight-box"><strong>Exam Tip:</strong> ${act.examTip}</div>` : ''}
               </div>
             `).join('') : ''}
 
@@ -315,6 +314,39 @@ class LessonRenderer {
         </details>
       </section>
     `;
+  }
+
+  /**
+   * V2: Render a single activity answer (handles array, object, or missing formats)
+   */
+  renderV2ActivityAnswer(act) {
+    // Format 1: answers is an array of {label, description}
+    if (Array.isArray(act.answers)) {
+      return `<ul>${act.answers.map(a => `<li><strong>${a.label}:</strong> ${a.description}</li>`).join('')}</ul>`;
+    }
+
+    // Format 2: answers is an object with category keys (e.g. classification)
+    if (act.answers && typeof act.answers === 'object') {
+      return Object.entries(act.answers).map(([category, items]) => `
+        <div style="margin-bottom:8px">
+          <strong>${category}:</strong>
+          ${Array.isArray(items) ? `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>` : `<p>${items}</p>`}
+        </div>
+      `).join('');
+    }
+
+    // Format 3: no answers property — use correctOrder/explanation
+    if (act.correctOrder) {
+      return `
+        <p><strong>Correct Order:</strong></p>
+        <ol>${(Array.isArray(act.correctOrder) ? act.correctOrder : [act.correctOrder]).map(item => `<li>${item}</li>`).join('')}</ol>
+        ${act.explanation ? `<p>${act.explanation}</p>` : ''}
+      `;
+    }
+
+    // Fallback: render whatever text fields are available
+    if (act.explanation) return `<p>${act.explanation}</p>`;
+    return '<p><em>See activity for answer.</em></p>';
   }
 
   /**
