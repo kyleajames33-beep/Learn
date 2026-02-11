@@ -81,7 +81,7 @@ Detailed goals for each phase live in `docs/goals/PHASE-X-*.md`.
 | 0 | Foundation | Architecture, schemas, build pipeline | COMPLETE | `PHASE-0-FOUNDATION.md` |
 | 1 | Content Sprint | 25 lessons: Cells as Basis of Life | **ACTIVE** | `PHASE-1-CONTENT.md` |
 | 2 | Learning Experience | Navigation, UX polish, onboarding | PLANNED | `PHASE-2-UX.md` |
-| 3 | Gamification Expansion | Study plans, weak area detection | PLANNED | `PHASE-3-GAMIFICATION.md` |
+| 3 | Gamification Expansion | Fix wiring gaps, add study plans, weak area detection (NOTE: XP, streaks, 22 achievements, dashboard already built — see PHASE-3 doc) | PLANNED | `PHASE-3-GAMIFICATION.md` |
 | 4 | Mini-Games | 8+ game types for difficult concepts | PLANNED | `PHASE-4-GAMES.md` |
 | 5 | Backend & Sync | Firebase, user accounts, cross-device | PLANNED | `PHASE-5-BACKEND.md` |
 | 6 | Advanced Features | AI tutor hints, adaptive difficulty | PLANNED | — |
@@ -158,6 +158,7 @@ Detailed goals for each phase live in `docs/goals/PHASE-X-*.md`.
 | 2026-02-09 | Lessons 6-10 content complete | Full biology content with new activity types |
 | 2026-02-09 | Created lesson-renderer.js | Supports 8 activity types including interactive sims |
 | 2026-02-09 | Dual lesson ID format | `module-1-cells-lesson-X` (old) + `mod1-lessonXX` (new) both valid |
+| 2026-02-11 | Gamification audit completed | ~6000 lines of gamification code already built (XP, streaks, 22 achievements, dashboard, event bus, mini-games). Phase 3 updated to reflect "extend, don't rebuild" approach. Known wiring gaps documented. |
 | 2026-02-09 | All lessons unlocked | Prerequisite locking disabled during development |
 | 2026-02-09 | Module 2 lesson sequence finalized | 25 lessons defined for Organisation of Living Things |
 | 2026-02-09 | All 8 modules lesson sequences stored | Complete HSC Biology syllabus: 200 lessons across Modules 1-8 |
@@ -192,6 +193,8 @@ Detailed goals for each phase live in `docs/goals/PHASE-X-*.md`.
 | What's the quality bar? | `docs/QUALITY-GATES.md` |
 | How are files organised? | `docs/ARCHITECTURE.md` |
 | What milestones are completed? | `docs/goals/MILESTONE-LOG.md` |
+| What tech debt exists? | `docs/trackers/TECH-DEBT.md` |
+| What gamification is built? | `docs/goals/PHASE-3-GAMIFICATION.md` |
 
 ---
 

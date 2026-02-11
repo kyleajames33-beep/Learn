@@ -1,0 +1,467 @@
+{
+  "id": "module-1-cells-lesson-6",
+  "title": "Scaling and Calculation: Measuring the Microscopic World",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 6,
+  "description": "Master the essential microscopy calculations that allow us to determine the true size of cells and organelles from magnified images—a critical HSC practical skill.",
+  "duration": "60 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  "v2": true,
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "📏",
+    "gradient": "blue-to-purple"
+  },
+  "learningIntentions": [
+    "Students can calculate total magnification of a compound microscope",
+    "Students can measure field of view diameter at different magnifications",
+    "Students can calculate actual size of specimens from images",
+    "Students can convert between units (mm, μm, nm)",
+    "Students can apply the magnification formula in various contexts"
+  ],
+  "successCriteria": [
+    "I can calculate total magnification correctly",
+    "I can measure and calculate field of view diameter at different powers",
+    "I can use the magnification formula to find actual size",
+    "I can convert between mm, μm, and nm confidently",
+    "I can show all working and include correct units"
+  ],
+  "intentions": {
+    "learning": [
+      "Students can calculate total magnification of a compound microscope",
+      "Students can measure field of view diameter at different magnifications",
+      "Students can calculate actual size of specimens from images",
+      "Students can convert between units (mm, μm, nm)",
+      "Students can apply the magnification formula in various contexts"
+    ],
+    "connections": [
+      {
+        "topic": "Microscope types and resolution",
+        "description": "Prior: understanding how microscopes work"
+      },
+      {
+        "topic": "Biological drawing and practical skills",
+        "description": "Future: applying calculations to real specimens"
+      },
+      {
+        "topic": "Real World",
+        "description": "Medical diagnostics, forensics, research microscopy"
+      }
+    ],
+    "success": [
+      "I can calculate total magnification correctly",
+      "I can measure and calculate field of view diameter",
+      "I can use the magnification formula",
+      "I can convert between mm, μm, and nm",
+      "I can show all working with correct units"
+    ]
+  },
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Microscopy calculations: magnification, field of view, and actual size"
+  },
+  "contentHTML": "<div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>HSC Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>Scaling and Calculation: Measuring the Microscopic World</h1><p class='hero-description'>Master the essential microscopy calculations that allow us to determine the true size of cells and organelles from magnified images—a critical HSC practical skill.</p></div><div class='hero-icon'>📏</div></div></div><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can calculate total magnification of a compound microscope</li><li>Students can measure field of view diameter at different magnifications</li><li>Students can calculate actual size of specimens from images</li><li>Students can convert between units (mm, μm, nm)</li><li>Students can apply the magnification formula in various contexts</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Microscope types, resolution, common cell sizes</li><li><strong>Future:</strong> Biological drawing, wet-mount preparation</li><li><strong>Real World:</strong> Medical diagnostics, forensics, research microscopy</li><li><strong>HSC Skills:</strong> Processing data, mathematical calculations</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can calculate total magnification correctly</li><li>I can measure and calculate field of view diameter</li><li>I can use the magnification formula to find actual size</li><li>I can convert between mm, μm, and nm confidently</li><li>I can show all working with correct units</li></ul></div></div><div class='card'><div class='card-header'><div class='card-icon'>🔢</div><h2>Unit Conversions: The Language of Microscopy</h2></div><p>Microscopic structures range from millimetres to nanometres. Understanding <span class='key-term'>unit conversions</span> is essential for accurate measurements.</p><div class='table-wrap'><table><thead><tr><th>Unit</th><th>Symbol</th><th>Metres</th><th>Conversion</th><th>Typical Use</th></tr></thead><tbody><tr><td><strong>Millimetre</strong></td><td>mm</td><td>10⁻³ m</td><td>1 mm = 1000 μm</td><td>Field of view, large specimens</td></tr><tr><td><strong>Micrometre</strong></td><td>μm</td><td>10⁻⁶ m</td><td>1 μm = 1000 nm</td><td>Cells, organelles, bacteria</td></tr><tr><td><strong>Nanometre</strong></td><td>nm</td><td>10⁻⁹ m</td><td>1 nm = 0.001 μm</td><td>Viruses, molecules, proteins</td></tr></tbody></table></div><div class='info-box'><strong>💡 Memory Aid:</strong> Each step down multiplies by 1000: mm → μm → nm. Going up, divide by 1000.</div><h3>Conversion Examples</h3><div class='worked-example'><h4>📝 Example 1: mm to μm</h4><p><strong>Question:</strong> A field of view is 4.5 mm. Express in μm.</p><p><strong>Solution:</strong> 4.5 mm × 1000 = <strong>4500 μm</strong></p></div><div class='worked-example'><h4>📝 Example 2: μm to nm</h4><p><strong>Question:</strong> A bacterium measures 2.5 μm. Express in nm.</p><p><strong>Solution:</strong> 2.5 μm × 1000 = <strong>2500 nm</strong></p></div><div class='worked-example'><h4>📝 Example 3: nm to μm</h4><p><strong>Question:</strong> A ribosome is 25 nm. Express in μm.</p><p><strong>Solution:</strong> 25 nm ÷ 1000 = <strong>0.025 μm</strong></p></div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> Always convert units before calculating. If the answer should be in μm, convert everything to μm first.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🔬</div><h2>Calculating Total Magnification</h2></div><p>A <span class='key-term'>compound light microscope</span> uses two lens systems. <span class='key-term'>Total magnification</span> is the product of eyepiece and objective magnifications.</p><div class='formula-box'><strong>Formula:</strong> Total Magnification = Eyepiece × Objective<br><br><strong>Where:</strong><br>• Eyepiece is usually 10×<br>• Objective varies: 4×, 10×, 40×, 100×</div><div class='worked-example'><h4>📝 Example 4: Total Magnification</h4><p><strong>Question:</strong> 10× eyepiece and 40× objective. Total magnification?</p><p><strong>Solution:</strong> 10 × 40 = <strong>400×</strong></p></div><div class='table-wrap'><table><thead><tr><th>Eyepiece</th><th>Objective</th><th>Total</th><th>Use</th></tr></thead><tbody><tr><td>10×</td><td>4×</td><td>40×</td><td>Scanning: locating specimen</td></tr><tr><td>10×</td><td>10×</td><td>100×</td><td>Low power: cells and tissues</td></tr><tr><td>10×</td><td>40×</td><td>400×</td><td>High power: detailed observation (HSC)</td></tr><tr><td>10×</td><td>100×</td><td>1000×</td><td>Oil immersion: bacteria, blood</td></tr></tbody></table></div></div><div class='card'><div class='card-header'><div class='card-icon'>⭕</div><h2>Field of View (FOV)</h2></div><p>The <span class='key-term'>field of view (FOV)</span> is the diameter of the circular area visible through the microscope. As magnification increases, FOV decreases.</p><div class='info-box'><strong>💡 Key Concept:</strong> FOV and magnification have an inverse relationship. Double the magnification → halve the FOV.</div><h3>Measuring Field of View</h3><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>📏</span><h4>STEP 1: MEASURE AT LOW POWER</h4><p>Place ruler on stage. Focus at lowest magnification. Count mm across diameter.</p><div class='examples'><strong>Example:</strong> At 40×, FOV = 4.5 mm.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-2'><span class='icon'>🔢</span><h4>STEP 2: CALCULATE AT HIGHER POWERS</h4><p>Use magnification ratio: FOV<sub>high</sub> = FOV<sub>low</sub> × (Mag<sub>low</sub> ÷ Mag<sub>high</sub>)</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-3'><span class='icon'>🔄</span><h4>STEP 3: CONVERT UNITS</h4><p>Convert to μm if measuring cells: 1 mm = 1000 μm.</p></div></div><div class='worked-example'><h4>📝 Example 5: FOV at Higher Magnification</h4><p><strong>Question:</strong> FOV at 40× is 4.5 mm. What is FOV at 400×?</p><p><strong>Solution:</strong></p><div class='step-box'>FOV<sub>400×</sub> = 4.5 mm × (40 ÷ 400) = 4.5 × 0.1 = 0.45 mm = <strong>450 μm</strong></div></div></div><div class='card'><div class='card-header'><div class='card-icon'>📐</div><h2>The Magnification Formula</h2></div><p>The <span class='key-term'>magnification formula</span> is the most important calculation in microscopy. It relates image size, actual size, and magnification.</p><div class='formula-box'><strong>The Magnification Triangle:</strong><br><br>M = I ÷ A &nbsp;&nbsp;&nbsp; I = M × A &nbsp;&nbsp;&nbsp; A = I ÷ M<br><br><strong>Where:</strong><br>• M = Magnification (no units, or ×)<br>• I = Image size (measured from micrograph)<br>• A = Actual size (real size of specimen)<br><br><strong>Golden Rule:</strong> Always use the same units for I and A!</div><div class='worked-example'><h4>📝 Example 6: Finding Actual Size</h4><p><strong>Question:</strong> A micrograph at 400× shows a cell measuring 20 mm across. What is the actual size in μm?</p><p><strong>Solution:</strong></p><div class='step-box'><strong>Step 1:</strong> Convert image size to μm: 20 mm = 20,000 μm.</div><div class='step-box'><strong>Step 2:</strong> Use A = I ÷ M.</div><div class='step-box'><strong>Step 3:</strong> A = 20,000 μm ÷ 400 = <strong>50 μm</strong>.</div></div><div class='worked-example'><h4>📝 Example 7: Finding Magnification</h4><p><strong>Question:</strong> An onion cell is 300 μm long. In a micrograph it measures 60 mm. What is the magnification?</p><p><strong>Solution:</strong></p><div class='step-box'><strong>Step 1:</strong> Convert to same units: 60 mm = 60,000 μm.</div><div class='step-box'><strong>Step 2:</strong> Use M = I ÷ A.</div><div class='step-box'><strong>Step 3:</strong> M = 60,000 ÷ 300 = <strong>200×</strong>.</div></div><div class='worked-example'><h4>📝 Example 8: Finding Image Size</h4><p><strong>Question:</strong> A red blood cell is 7 μm in diameter. At 1000× magnification, how large will it appear in mm?</p><p><strong>Solution:</strong></p><div class='step-box'><strong>Step 1:</strong> Use I = M × A.</div><div class='step-box'><strong>Step 2:</strong> I = 1000 × 7 μm = 7000 μm.</div><div class='step-box'><strong>Step 3:</strong> Convert to mm: 7000 μm = <strong>7 mm</strong>.</div></div></div><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Unit Conversions</h4><ul><li>1 mm = 1000 μm</li><li>1 μm = 1000 nm</li><li>mm → μm: × 1000</li><li>μm → nm: × 1000</li><li>nm → μm: ÷ 1000</li><li>μm → mm: ÷ 1000</li></ul></div><div class='copy-item'><h4>Total Magnification</h4><ul><li>Total Mag = Eyepiece × Objective</li><li>Common: 10× eyepiece</li><li>Objectives: 4×, 10×, 40×, 100×</li><li>40× objective = 400× total</li></ul></div><div class='copy-item'><h4>Field of View</h4><ul><li>FOV decreases as magnification increases</li><li>FOV<sub>high</sub> = FOV<sub>low</sub> × (Mag<sub>low</sub> ÷ Mag<sub>high</sub>)</li><li>Measure at low power, calculate for high</li></ul></div><div class='copy-item'><h4>Magnification Formula</h4><ul><li>M = I ÷ A (Magnification)</li><li>I = M × A (Image size)</li><li>A = I ÷ M (Actual size)</li><li><strong>Always use same units!</strong></li></ul></div></div></div>",
+  "contentSections": [
+    {
+      "id": "unit-conversions",
+      "type": "content",
+      "title": "Unit Conversions: mm, μm, nm",
+      "icon": "arrow-right-left",
+      "content": "Understanding conversions between millimetres, micrometres, and nanometres. Each step multiplies or divides by 1000."
+    },
+    {
+      "id": "total-magnification",
+      "type": "content",
+      "title": "Calculating Total Magnification",
+      "icon": "zoom-in",
+      "content": "Total magnification = eyepiece magnification × objective magnification. Common combinations from 40× to 1000×."
+    },
+    {
+      "id": "field-of-view",
+      "type": "content",
+      "title": "Field of View (FOV)",
+      "icon": "circle",
+      "content": "FOV is the visible diameter. Inverse relationship with magnification. Calculate FOV at higher powers using the magnification ratio."
+    },
+    {
+      "id": "magnification-formula",
+      "type": "content",
+      "title": "The Magnification Formula",
+      "icon": "calculator",
+      "content": "M = I ÷ A, I = M × A, A = I ÷ M. The fundamental relationship between image size, actual size, and magnification."
+    }
+  ],
+  "activities": [
+    {
+      "id": "unit-conversion-matching",
+      "type": "matching",
+      "title": "Match Equivalent Measurements",
+      "description": "Match each measurement with its equivalent in a different unit.",
+      "theme": "blue",
+      "xpReward": 50,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "2.5 mm",
+          "right": "2500 μm"
+        },
+        {
+          "id": "pair2",
+          "left": "500 nm",
+          "right": "0.5 μm"
+        },
+        {
+          "id": "pair3",
+          "left": "3 μm",
+          "right": "3000 nm"
+        },
+        {
+          "id": "pair4",
+          "left": "1500 μm",
+          "right": "1.5 mm"
+        },
+        {
+          "id": "pair5",
+          "left": "0.025 mm",
+          "right": "25 μm"
+        }
+      ]
+    },
+    {
+      "id": "magnification-calculation",
+      "type": "matching",
+      "title": "Calculate Total Magnification",
+      "description": "Match each eyepiece and objective combination with the correct total magnification.",
+      "theme": "teal",
+      "xpReward": 40,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "10× eyepiece + 4× objective",
+          "right": "40×"
+        },
+        {
+          "id": "pair2",
+          "left": "10× eyepiece + 10× objective",
+          "right": "100×"
+        },
+        {
+          "id": "pair3",
+          "left": "10× eyepiece + 40× objective",
+          "right": "400×"
+        },
+        {
+          "id": "pair4",
+          "left": "10× eyepiece + 100× objective",
+          "right": "1000×"
+        },
+        {
+          "id": "pair5",
+          "left": "15× eyepiece + 40× objective",
+          "right": "600×"
+        }
+      ]
+    },
+    {
+      "id": "formula-matching",
+      "type": "matching",
+      "title": "Match Calculation to Formula",
+      "description": "Match each type of calculation with the correct formula arrangement.",
+      "theme": "indigo",
+      "xpReward": 60,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Finding actual size",
+          "right": "A = I ÷ M"
+        },
+        {
+          "id": "pair2",
+          "left": "Finding magnification",
+          "right": "M = I ÷ A"
+        },
+        {
+          "id": "pair3",
+          "left": "Finding image size",
+          "right": "I = M × A"
+        },
+        {
+          "id": "pair4",
+          "left": "Finding FOV at higher power",
+          "right": "FOV_high = FOV_low × (Mag_low ÷ Mag_high)"
+        }
+      ]
+    },
+    {
+      "id": "calculation-ordering",
+      "type": "ordering",
+      "title": "Steps for Calculating Actual Size",
+      "description": "Arrange the steps for calculating actual specimen size from a micrograph in the correct order.",
+      "theme": "orange",
+      "xpReward": 50,
+      "items": [
+        {
+          "id": "step1",
+          "text": "Measure image size from micrograph",
+          "position": 1
+        },
+        {
+          "id": "step2",
+          "text": "Convert image size to same units as needed for answer",
+          "position": 2
+        },
+        {
+          "id": "step3",
+          "text": "Identify the magnification",
+          "position": 3
+        },
+        {
+          "id": "step4",
+          "text": "Apply formula A = I ÷ M",
+          "position": 4
+        },
+        {
+          "id": "step5",
+          "text": "State final answer with correct units",
+          "position": 5
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "mcq": [
+      {
+        "id": "mcq1",
+        "question": "A microscope has a 10× eyepiece and a 40× objective. What is the total magnification?",
+        "options": [
+          "40×",
+          "50×",
+          "400×",
+          "4000×"
+        ],
+        "correct": 2,
+        "explanation": "Total magnification = 10 × 40 = 400×.",
+        "marks": 1
+      },
+      {
+        "id": "mcq2",
+        "question": "Convert 2.5 mm to micrometres.",
+        "options": [
+          "0.0025 μm",
+          "25 μm",
+          "250 μm",
+          "2500 μm"
+        ],
+        "correct": 3,
+        "explanation": "2.5 mm × 1000 = 2500 μm.",
+        "marks": 1
+      },
+      {
+        "id": "mcq3",
+        "question": "The field of view at 40× is 5 mm. What is the FOV at 400×?",
+        "options": [
+          "0.5 mm",
+          "5 mm",
+          "50 mm",
+          "500 mm"
+        ],
+        "correct": 0,
+        "explanation": "FOV decreases proportionally: 5 mm × (40÷400) = 0.5 mm.",
+        "marks": 1
+      },
+      {
+        "id": "mcq4",
+        "question": "A cell measures 12 mm across in a micrograph taken at 300× magnification. What is the actual size?",
+        "options": [
+          "0.04 mm",
+          "0.04 μm",
+          "40 μm",
+          "3600 μm"
+        ],
+        "correct": 2,
+        "explanation": "A = I ÷ M = 12,000 μm ÷ 300 = 40 μm.",
+        "marks": 1
+      },
+      {
+        "id": "mcq5",
+        "question": "Which formula correctly calculates magnification?",
+        "options": [
+          "M = A ÷ I",
+          "M = I ÷ A",
+          "M = I × A",
+          "M = I + A"
+        ],
+        "correct": 1,
+        "explanation": "Magnification = Image size ÷ Actual size (M = I ÷ A).",
+        "marks": 1
+      }
+    ],
+    "saq": [
+      {
+        "id": "saq1",
+        "question": "A student observes a plant cell using a microscope with a 10× eyepiece and a 40× objective lens. The cell appears to measure 16 mm across in the field of view. Calculate the actual size of the cell in micrometres. Show all working.",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Calculate total magnification (400×)",
+          "1 mark: Convert image size to μm (16,000 μm) OR set up formula correctly",
+          "1 mark: Correct final answer (40 μm) with units"
+        ],
+        "modelAnswer": "Total magnification = 10 × 40 = 400×. Image size = 16 mm = 16,000 μm. Actual size = Image size ÷ Magnification = 16,000 μm ÷ 400 = 40 μm."
+      },
+      {
+        "id": "saq2",
+        "question": "The field of view at 100× magnification is measured as 2 mm. Calculate the field of view at 400× magnification. Express your answer in micrometres.",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Set up FOV formula correctly",
+          "1 mark: Calculate FOV in mm (0.5 mm)",
+          "1 mark: Convert to μm (500 μm) with correct units"
+        ],
+        "modelAnswer": "FOV at 400× = FOV at 100× × (100÷400) = 2 mm × 0.25 = 0.5 mm. Converting: 0.5 mm × 1000 = 500 μm."
+      },
+      {
+        "id": "saq3",
+        "question": "A red blood cell has an actual diameter of 7 μm. Calculate how large it would appear in a micrograph taken at 500× magnification. Express your answer in millimetres.",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Set up formula I = M × A correctly",
+          "1 mark: Calculate image size in μm (3500 μm)",
+          "1 mark: Convert to mm (3.5 mm) with correct units"
+        ],
+        "modelAnswer": "Image size = Magnification × Actual size = 500 × 7 μm = 3500 μm. Converting: 3500 μm ÷ 1000 = 3.5 mm."
+      }
+    ]
+  },
+  "answers": {
+    "activities": [
+      {
+        "activityId": "unit-conversion-matching",
+        "title": "Activity 1: Unit Conversions",
+        "content": "<p>2.5 mm = 2500 μm | 500 nm = 0.5 μm | 3 μm = 3000 nm | 1500 μm = 1.5 mm | 0.025 mm = 25 μm</p><p>Remember: mm → μm × 1000, μm → nm × 1000. Going reverse: ÷ 1000.</p>"
+      },
+      {
+        "activityId": "magnification-calculation",
+        "title": "Activity 2: Total Magnification",
+        "content": "<p>10× + 4× = 40× | 10× + 10× = 100× | 10× + 40× = 400× | 10× + 100× = 1000× | 15× + 40× = 600×</p><p>Formula: Total Mag = Eyepiece × Objective</p>"
+      },
+      {
+        "activityId": "formula-matching",
+        "title": "Activity 3: Formula Selection",
+        "content": "<p>Finding actual size: A = I ÷ M</p><p>Finding magnification: M = I ÷ A</p><p>Finding image size: I = M × A</p><p>Finding FOV: FOV_high = FOV_low × (Mag_low ÷ Mag_high)</p>"
+      },
+      {
+        "activityId": "calculation-ordering",
+        "title": "Activity 4: Calculation Steps",
+        "content": "<p>Correct order:</p><ol><li>Measure image size from micrograph</li><li>Convert to appropriate units</li><li>Identify magnification</li><li>Apply formula A = I ÷ M</li><li>State answer with units</li></ol>"
+      }
+    ],
+    "assessment": [
+      {
+        "questionId": "mcq1",
+        "question": "Total magnification with 10× eyepiece and 40× objective?",
+        "answer": "C - 400×",
+        "explanation": "10 × 40 = 400×"
+      },
+      {
+        "questionId": "mcq2",
+        "question": "Convert 2.5 mm to μm?",
+        "answer": "D - 2500 μm",
+        "explanation": "2.5 × 1000 = 2500 μm"
+      },
+      {
+        "questionId": "mcq3",
+        "question": "FOV at 40× is 5 mm. FOV at 400×?",
+        "answer": "A - 0.5 mm",
+        "explanation": "Magnification increases 10×, so FOV decreases 10×: 5 ÷ 10 = 0.5 mm"
+      },
+      {
+        "questionId": "mcq4",
+        "question": "Cell is 12 mm at 300×. Actual size?",
+        "answer": "C - 40 μm",
+        "explanation": "12,000 μm ÷ 300 = 40 μm"
+      },
+      {
+        "questionId": "mcq5",
+        "question": "Formula for magnification?",
+        "answer": "B - M = I ÷ A",
+        "explanation": "Magnification = Image size ÷ Actual size"
+      },
+      {
+        "questionId": "saq1",
+        "question": "Calculate actual cell size.",
+        "answer": "Total mag = 10 × 40 = 400×. Image = 16 mm = 16,000 μm. Actual = 16,000 ÷ 400 = 40 μm."
+      },
+      {
+        "questionId": "saq2",
+        "question": "Calculate FOV at 400×.",
+        "answer": "FOV = 2 mm × (100÷400) = 0.5 mm = 500 μm."
+      },
+      {
+        "questionId": "saq3",
+        "question": "Calculate image size at 500×.",
+        "answer": "Image = 500 × 7 μm = 3500 μm = 3.5 mm."
+      }
+    ]
+  },
+  "copyToBook": {
+    "title": "Scaling and Calculation",
+    "sections": [
+      {
+        "title": "Unit Conversions",
+        "content": [
+          "1 mm = 1000 μm",
+          "1 μm = 1000 nm",
+          "mm → μm: × 1000",
+          "μm → nm: × 1000",
+          "nm → μm: ÷ 1000",
+          "μm → mm: ÷ 1000"
+        ]
+      },
+      {
+        "title": "Total Magnification",
+        "content": [
+          "Total Mag = Eyepiece × Objective",
+          "Common: 10× eyepiece",
+          "Objectives: 4×, 10×, 40×, 100×",
+          "40× objective = 400× total"
+        ]
+      },
+      {
+        "title": "Field of View",
+        "content": [
+          "FOV decreases as magnification increases",
+          "FOV_high = FOV_low × (Mag_low ÷ Mag_high)",
+          "Measure at low power, calculate for high"
+        ]
+      },
+      {
+        "title": "Magnification Formula",
+        "content": [
+          "M = I ÷ A (Magnification)",
+          "I = M × A (Image size)",
+          "A = I ÷ M (Actual size)",
+          "Always use same units!"
+        ]
+      }
+    ]
+  },
+  "navigation": {
+    "previous": "module-1-cells-lesson-5",
+    "previousTitle": "Technologies in Cytology: How We See Cells",
+    "next": "module-1-cells-lesson-7",
+    "nextTitle": "Skills Lab: Wet Mount Slides and Biological Diagrams"
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
+    "version": "2.0.0",
+    "format": "V2.0",
+    "tags": ["magnification", "microscopy", "calculations", "field-of-view", "unit-conversion"]
+  }
+}

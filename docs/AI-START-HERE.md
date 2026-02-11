@@ -50,6 +50,24 @@ Execute that task following these rules:
 - **Australian English:** Use "specialised", "behaviour", "colour", "centre"
 - **Cache-busting:** If you change CSS/JS, run `node scripts/bump-versions.js`
 
+### Existing Gamification Systems (DO NOT REBUILD)
+
+The following systems are **already fully implemented** (~6000 lines of code). Do NOT create duplicate systems:
+
+| System | File | Lines |
+|--------|------|-------|
+| XP & Levels | `assets/js/xp.js` | 513 |
+| Streaks | `assets/js/streak.js` | 479 |
+| 22 Achievements | `assets/js/achievements.js` | 723 |
+| Gamification Engine | `assets/js/gamification-engine.js` | 999 |
+| Dashboard Analytics | `assets/js/dashboard.js` | 607 |
+| Mini-Games | `assets/js/minigames.js` | 600+ |
+| Progress Tracking | `assets/js/progress.js` | 223 |
+| Event Bus | `assets/js/event-bus.js` | 120+ |
+| UI Controller | `assets/js/ui-controller.js` | 200+ |
+
+**See `docs/goals/PHASE-3-GAMIFICATION.md`** for the full inventory, known wiring gaps, and what still needs building.
+
 ### Code Standards
 
 - **No absolute paths:** Use relative paths only (e.g., `../assets/css/` not `/assets/css/`)

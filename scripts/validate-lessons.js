@@ -30,10 +30,12 @@ const LESSON_DIRS = [
 // Files to skip
 const SKIP_FILES = ['TEMPLATE.json', 'index.json'];
 
-// Supported activity types in the renderer
+// Supported activity types in the renderer (V1 + V2)
 const SUPPORTED_ACTIVITY_TYPES = [
   'matching', 'fill-blank', 'classification', 'ordering',
-  'labeling', 'fillBlank', 'calculation'
+  'labeling', 'fillBlank', 'calculation',
+  'problemSolving', 'comparison-table', 'interactive-slider',
+  'tonicity-simulator', 'multiple-choice'
 ];
 
 // American spellings to flag
@@ -78,6 +80,7 @@ function validateLessonContent(data, filePath) {
   const warnings = [];
   const errors = [];
   const fileName = path.basename(filePath);
+  const isV2 = data.v2 === true || data.version === 2 || data.version === '2.0' || !!data.contentHTML;
 
   // 1. Schema validation
   const schemaResult = LessonSchema.validate(data);
@@ -85,9 +88,9 @@ function validateLessonContent(data, filePath) {
     errors.push(...schemaResult.errors.map(e => `Schema: ${e}`));
   }
 
-  // 2. Activity count check
+  // 2. Activity count check (V2 embeds activities in assessment)
   const activities = data.activities || [];
-  if (activities.length < 2) {
+  if (!isV2 && activities.length < 2) {
     warnings.push(`Content: Only ${activities.length} activities (minimum 2 recommended)`);
   }
 
@@ -99,26 +102,33 @@ function validateLessonContent(data, filePath) {
   }
 
   // 4. Activity type diversity check
-  const activityTypes = new Set(activities.map(a => a.type));
-  if (activities.length >= 2 && activityTypes.size < 2) {
-    warnings.push(`Content: All ${activities.length} activities are the same type "${[...activityTypes][0]}" (recommend 2+ distinct types)`);
+  if (!isV2) {
+    const activityTypes = new Set(activities.map(a => a.type));
+    if (activities.length >= 2 && activityTypes.size < 2) {
+      warnings.push(`Content: All ${activities.length} activities are the same type "${[...activityTypes][0]}" (recommend 2+ distinct types)`);
+    }
   }
 
-  // 5. Assessment check
-  const mcqs = data.assessment?.multipleChoice || [];
-  const saqs = data.assessment?.shortAnswer || [];
+  // 5. Assessment check (support both field names)
+  const mcqs = data.assessment?.multipleChoice || data.assessment?.mcq || [];
+  const saqs = data.assessment?.shortAnswer || data.assessment?.saq || [];
   if (mcqs.length < 3) {
     warnings.push(`Assessment: Only ${mcqs.length} MCQs (recommend 3)`);
   }
-  if (saqs.length < 2) {
+  if (!isV2 && saqs.length < 2) {
     warnings.push(`Assessment: Only ${saqs.length} short answer questions (recommend 2)`);
   }
 
-  // 6. MCQ validation
+  // 6. MCQ validation (support correctAnswer text or correct index)
   for (const mcq of mcqs) {
     if (mcq.options && mcq.correctAnswer) {
       if (!mcq.options.includes(mcq.correctAnswer)) {
         errors.push(`MCQ "${mcq.id || '?'}": correctAnswer "${mcq.correctAnswer}" is not in options list`);
+      }
+    }
+    if (mcq.options && mcq.correct !== undefined) {
+      if (mcq.correct < 0 || mcq.correct >= mcq.options.length) {
+        errors.push(`MCQ "${mcq.id || '?'}": correct index ${mcq.correct} is out of range (0-${mcq.options.length - 1})`);
       }
     }
     if (mcq.options && mcq.options.length < 4) {
@@ -126,14 +136,16 @@ function validateLessonContent(data, filePath) {
     }
   }
 
-  // 7. Copy to book check
-  const definitions = data.copyToBook?.definitions || [];
-  if (definitions.length < 5) {
-    warnings.push(`CopyToBook: Only ${definitions.length} definitions (recommend 5)`);
+  // 7. Copy to book check (V1 only — V2 uses contentHTML)
+  if (!isV2) {
+    const definitions = data.copyToBook?.definitions || [];
+    if (definitions.length < 5) {
+      warnings.push(`CopyToBook: Only ${definitions.length} definitions (recommend 5)`);
+    }
   }
 
-  // 8. Engagement hook check
-  if (!data.engagementHook || !data.engagementHook.content) {
+  // 8. Engagement hook check (V1 only — V2 embeds hooks in contentHTML)
+  if (!isV2 && (!data.engagementHook || !data.engagementHook.content)) {
     warnings.push('Content: Missing engagement hook');
   }
 
@@ -142,13 +154,20 @@ function validateLessonContent(data, filePath) {
     warnings.push('Navigation: Missing navigation object (prev/next links)');
   }
 
-  // 10. Content sections check
-  const sections = data.contentSections || [];
-  if (sections.length < 2) {
-    warnings.push(`Content: Only ${sections.length} content sections (recommend 2+)`);
+  // 10. Content sections check (V1 only — V2 uses contentHTML)
+  if (!isV2) {
+    const sections = data.contentSections || [];
+    if (sections.length < 2) {
+      warnings.push(`Content: Only ${sections.length} content sections (recommend 2+)`);
+    }
   }
 
-  // 11. Australian spelling check (search all string values)
+  // 11. V2-specific: contentHTML must be non-empty
+  if (isV2 && (!data.contentHTML || data.contentHTML.trim().length < 100)) {
+    warnings.push('V2 Content: contentHTML is missing or very short');
+  }
+
+  // 12. Australian spelling check (search all string values)
   const jsonText = JSON.stringify(data);
   for (const spelling of AMERICAN_SPELLINGS) {
     const matches = jsonText.match(spelling.wrong);

@@ -12,7 +12,26 @@
  * Last updated: February 4, 2026
  */
 
-const STORAGE_PREFIX = 'scienceHub_';
+const STORAGE_PREFIX = 'sh_';
+
+// Migrate old keys from 'scienceHub_' to 'sh_' (one-time, non-destructive)
+(function migrateStorageKeys() {
+  try {
+    const OLD_PREFIX = 'scienceHub_';
+    const keys = Object.keys(localStorage);
+    keys.forEach(key => {
+      if (key.startsWith(OLD_PREFIX)) {
+        const newKey = STORAGE_PREFIX + key.slice(OLD_PREFIX.length);
+        if (!localStorage.getItem(newKey)) {
+          localStorage.setItem(newKey, localStorage.getItem(key));
+        }
+        localStorage.removeItem(key);
+      }
+    });
+  } catch (e) {
+    // Silent fail — storage may not be available
+  }
+})();
 
 
 // ============================================

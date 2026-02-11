@@ -86,6 +86,41 @@
   /* TRANSITIONS */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
+
+  /* CONTAINER WIDTHS */
+  --wide: 1200px;
+  --desktop: 1024px;
+
+  /* EXTENDED SPACING */
+  --space-10: 64px;
+  --space-12: 80px;
+  --space-16: 128px;
+  --space-20: 160px;
+
+  /* FONT WEIGHTS */
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* LINE HEIGHTS */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* EXTENDED FONT SIZES */
+  --text-4xl: 40px;
+
+  /* EXTENDED BACKGROUNDS */
+  --bg-secondary: #e0f2fe;
+
+  /* EXTENDED BORDERS */
+  --border: #bae6fd;
+  --border-strong: #7dd3fc;
+
+  /* EXTENDED COLOURS */
+  --error: #f87171;
+  --text-tertiary: #8b9dc0;
 }
 
 /* ========================================

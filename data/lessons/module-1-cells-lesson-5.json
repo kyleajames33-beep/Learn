@@ -1,314 +1,534 @@
 {
   "id": "module-1-cells-lesson-5",
-  "title": "The Endomembrane System",
+  "title": "Technologies in Cytology: How We See Cells",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 5,
-  "description": "Tracing the pathway of proteins from synthesis to export through the endomembrane system, including rough and smooth ER, and the Golgi apparatus.",
+  "description": "From Hooke's first glimpse of cork cells in 1665 to modern electron microscopes revealing molecular detail, discover how microscopy technology revolutionised our understanding of life at the cellular level.",
   "duration": "50 minutes",
-  "difficulty": "Intermediate",
+  "difficulty": "Foundation Level",
   "worksOffline": true,
-  
+  "v2": true,
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "🔬",
+    "gradient": "blue-to-purple"
+  },
   "learningIntentions": [
-    "Students can trace the pathway of a protein from synthesis to export through the endomembrane system.",
-    "Students can distinguish between rough ER (protein synthesis) and smooth ER (lipid synthesis/detox).",
-    "Students can describe the role of the Golgi apparatus in modifying, sorting, and packaging proteins."
+    "Explain how light microscopes work and their limitations",
+    "Distinguish between SEM and TEM electron microscopes",
+    "Compare resolution and magnification across microscope types",
+    "Evaluate which microscope is appropriate for different specimens",
+    "Interpret electron micrographs and identify cellular structures"
   ],
-  
+  "successCriteria": [
+    "I can describe how light microscopes form magnified images",
+    "I can explain the difference between magnification and resolution",
+    "I can compare light, SEM, and TEM microscopes using a table",
+    "I can identify which microscope produced a given image",
+    "I can justify microscope choice for specific biological questions"
+  ],
+  "intentions": {
+    "learning": [
+      "Students can explain how light microscopes work and their limitations",
+      "Students can distinguish between SEM and TEM electron microscopes",
+      "Students can compare resolution and magnification across microscope types",
+      "Students can evaluate which microscope is appropriate for different specimens",
+      "Students can interpret electron micrographs and identify cellular structures"
+    ],
+    "connections": [
+      {
+        "topic": "Cell structure, organelles, prokaryotic vs eukaryotic cells",
+        "description": "Prior knowledge of what we need to see"
+      },
+      {
+        "topic": "Calculating magnification and actual size",
+        "link": "module-1-cells-lesson-4",
+        "description": "Next lesson: quantitative microscopy"
+      },
+      {
+        "topic": "Real World",
+        "description": "Medical diagnostics, forensics, materials science, quality control"
+      }
+    ],
+    "success": [
+      "I can describe how light microscopes form magnified images",
+      "I can explain the difference between magnification and resolution",
+      "I can compare light, SEM, and TEM microscopes using a table",
+      "I can identify which microscope produced a given image",
+      "I can justify microscope choice for specific biological questions"
+    ]
+  },
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Endomembrane system: ER, Golgi, vesicles, protein transport"
+    "focus": "Technologies in cytology: light and electron microscopy"
   },
-  
-  "successCriteria": [
-    "I can describe the journey of a protein from the RER through the Golgi to a vesicle.",
-    "I can explain why the RER appears 'rough' and the SER appears 'smooth.'",
-    "I can explain what happens to proteins in the Golgi apparatus."
-  ],
-  
-  "engagementHook": {
-    "title": "The Cellular Production Line",
-    "content": "'Your pancreas makes insulin—a protein hormone that must be exported into the blood to control sugar. If the cell just released insulin immediately after making it, it wouldn't work properly. It needs folding, modification, and packaging. Today we follow the cellular production line from the factory floor (RER) to the shipping department (Golgi).'"
-  },
-  
-  "keyConcepts": [
-    {
-      "term": "Endomembrane System",
-      "definition": "A group of organelles (nuclear envelope, ER, Golgi, lysosomes, vesicles, plasma membrane) that work together to modify, package, and transport lipids and proteins."
-    },
-    {
-      "term": "Rough ER (RER)",
-      "definition": "Studded with ribosomes (80S). Synthesises proteins that are either inserted into membranes or exported from the cell. Continuous with the nuclear envelope."
-    },
-    {
-      "term": "Smooth ER (SER)",
-      "definition": "No ribosomes. Synthesises lipids (including hormones), detoxifies drugs (in liver cells), and stores calcium ions (in muscle cells)."
-    },
-    {
-      "term": "Transport Vesicles",
-      "definition": "Small membrane sacs that move materials between ER and Golgi, and Golgi to other destinations."
-    },
-    {
-      "term": "Golgi Apparatus",
-      "definition": "Stack of flattened membranes (cisternae). Receives proteins from ER, modifies them (adds carbohydrates), sorts them, and packages them into vesicles for shipping to lysosomes or export from cell."
-    }
-  ],
-  
-  "misconceptions": [
-    {
-      "misconception": "The Golgi just packages like a post office",
-      "correction": "It also modifies proteins (adds carbohydrate groups), not just packages."
-    },
-    {
-      "misconception": "RER and SER are completely separate",
-      "correction": "They are continuous with each other and the nuclear envelope."
-    },
-    {
-      "misconception": "All proteins go through the Golgi",
-      "correction": "Only those destined for membranes, export, or lysosomes. Proteins for use in cytosol are made on free ribosomes and stay in cytoplasm."
-    }
-  ],
-  
+  "contentHTML": "<div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>HSC Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>Technologies in Cytology: How We See Cells</h1><p class='hero-description'>From Hooke's first glimpse of cork cells in 1665 to modern electron microscopes revealing molecular detail, discover how microscopy technology revolutionised our understanding of life at the cellular level.</p></div><div class='hero-icon'>🔬</div></div></div><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can explain how light microscopes work and their limitations</li><li>Students can distinguish between SEM and TEM electron microscopes</li><li>Students can compare resolution and magnification across microscope types</li><li>Students can evaluate which microscope is appropriate for different specimens</li><li>Students can interpret electron micrographs and identify cellular structures</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Cell structure, organelles, prokaryotic vs eukaryotic cells</li><li><strong>Future:</strong> Calculating magnification and actual size (next lesson)</li><li><strong>Real World:</strong> Medical diagnostics, forensics, materials science, quality control</li><li><strong>HSC Skills:</strong> Analysing microscope images, selecting appropriate technologies</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can describe how light microscopes form magnified images</li><li>I can explain the difference between magnification and resolution</li><li>I can compare light, SEM, and TEM microscopes using a table</li><li>I can identify which microscope produced a given image</li><li>I can justify microscope choice for specific biological questions</li></ul></div></div><div class='card'><div class='card-header'><div class='card-icon'>👁️</div><h2>Why We Need Microscopes: The Scale Problem</h2></div><p>Most cells are invisible to the naked eye. The <span class='key-term'>resolution</span> of the human eye is approximately 0.1 mm (100 μm)—we cannot distinguish two points closer together than this distance. Since most animal cells are 10–30 μm and bacteria are 1–5 μm, microscopes are essential for studying cellular biology.</p><div class='table-wrap'><table><thead><tr><th>Structure</th><th>Typical Size</th><th>Visible to Naked Eye?</th><th>Technology Needed</th></tr></thead><tbody><tr><td>Human height</td><td>~1.7 m (1,700,000 μm)</td><td>✅ Yes</td><td>None</td></tr><tr><td>Human egg cell</td><td>~120 μm</td><td>✅ Just visible (barely)</td><td>None, but microscope helps</td></tr><tr><td>Typical plant cell</td><td>10–100 μm</td><td>❌ No</td><td>Light microscope</td></tr><tr><td>Typical animal cell</td><td>10–30 μm</td><td>❌ No</td><td>Light microscope</td></tr><tr><td>Mitochondrion</td><td>1–10 μm</td><td>❌ No</td><td>Light microscope (limited detail)</td></tr><tr><td>Bacterium</td><td>0.5–5 μm</td><td>❌ No</td><td>Light microscope</td></tr><tr><td>Ribosome</td><td>~0.025 μm (25 nm)</td><td>❌ No</td><td>Electron microscope only</td></tr><tr><td>DNA double helix width</td><td>~0.002 μm (2 nm)</td><td>❌ No</td><td>Electron microscope only</td></tr></tbody></table></div><div class='info-box'><strong>💡 Key Concept:</strong> <span class='key-term'>Magnification</span> is how much larger an image appears compared to the actual specimen. <span class='key-term'>Resolution</span> is the ability to distinguish two points as separate. High magnification is useless without high resolution—you'll just see a blurry, enlarged image.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🔍</div><h2>Light Microscopes (Optical Microscopes)</h2></div><p>The <span class='key-term'>light microscope</span> (also called an optical or compound microscope) uses visible light and glass lenses to magnify specimens. First developed in the late 1500s and perfected by the 1800s, light microscopes remain essential tools in biology laboratories worldwide.</p><h3>How Light Microscopes Work</h3><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>💡</span><h4>1. ILLUMINATION</h4><p>Light source (lamp or mirror) provides visible light that passes through the specimen</p><div class='examples'><strong>Note:</strong> Specimens must be thin enough for light to pass through (transparent or translucent)</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-2'><span class='icon'>🎯</span><h4>2. OBJECTIVE LENS</h4><p>First magnification step—lens close to specimen creates enlarged image</p><div class='examples'><strong>Common powers:</strong> 4×, 10×, 40×, 100× (oil immersion)</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-3'><span class='icon'>👁️</span><h4>3. EYEPIECE LENS</h4><p>Second magnification step—further enlarges the image from the objective</p><div class='examples'><strong>Standard power:</strong> 10× (occasionally 15× or 20×)</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-4'><span class='icon'>🖼️</span><h4>4. FINAL IMAGE</h4><p>Total magnification = objective × eyepiece</p><div class='examples'><strong>Example:</strong> 40× objective × 10× eyepiece = 400× total magnification</div></div></div><h3>Light Microscope Specifications</h3><div class='table-wrap'><table><thead><tr><th>Property</th><th>Value</th><th>Explanation</th></tr></thead><tbody><tr><td><strong>Maximum useful magnification</strong></td><td>~1500×</td><td>Higher magnification produces blurry images due to resolution limits</td></tr><tr><td><strong>Maximum resolution</strong></td><td>~0.2 μm (200 nm)</td><td>Limited by wavelength of visible light (~400–700 nm)</td></tr><tr><td><strong>Image type</strong></td><td>Colour (natural or stained)</td><td>Uses visible light, so specimens appear in colour</td></tr><tr><td><strong>Specimen preparation</strong></td><td>Can view living or dead cells</td><td>Wet mounts allow observation of living, moving organisms</td></tr><tr><td><strong>Specimen thickness</strong></td><td>Must be thin and transparent</td><td>Light must pass through; thick specimens appear dark/opaque</td></tr><tr><td><strong>Cost</strong></td><td>Low (AU$500–$10,000)</td><td>Affordable for schools and basic research</td></tr></tbody></table></div><div class='info-box'><strong>💡 Staining:</strong> Most cells are transparent and colourless, making them difficult to see under a light microscope. <span class='key-term'>Biological stains</span> are coloured dyes that bind to specific structures, increasing contrast. Examples include iodine (stains starch in plant cells), methylene blue (stains nuclei), and eosin (stains cytoplasm pink).</div><h3>Advantages and Limitations</h3><div class='table-wrap'><table><thead><tr><th>Advantages ✅</th><th>Limitations ❌</th></tr></thead><tbody><tr><td>Can observe living specimens in real time</td><td>Limited resolution (~200 nm)—cannot see organelles clearly</td></tr><tr><td>Relatively inexpensive and portable</td><td>Limited magnification (~1500× maximum useful)</td></tr><tr><td>Easy sample preparation (wet mounts)</td><td>Specimens must be thin and transparent</td></tr><tr><td>Produces colour images (natural or stained)</td><td>Cannot resolve structures smaller than ~200 nm (e.g. ribosomes, viruses)</td></tr><tr><td>Simple to operate, minimal training required</td><td>Image quality decreases at high magnifications</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> Students often confuse magnification with resolution. You can magnify an image to 10,000× with a light microscope, but it will be blurry because the resolution limit is ~200 nm. Resolution is determined by the wavelength of light/electrons used, not the power of the lenses.</div></div><div class='card'><div class='card-header'><div class='card-icon'>⚡</div><h2>Electron Microscopes: Breaking the Light Barrier</h2></div><p>Invented in the 1930s, <span class='key-term'>electron microscopes</span> use beams of electrons instead of visible light. Because electrons have much shorter wavelengths than light (~0.005 nm compared to ~500 nm), electron microscopes achieve resolution up to 0.1 nm—2000 times better than light microscopes.</p><div class='info-box'><strong>💡 The Wavelength-Resolution Relationship:</strong> Resolution is limited by the wavelength of the illumination source. Shorter wavelengths allow finer detail to be resolved. Electrons behave as waves with wavelengths ~100,000 times shorter than visible light, enabling vastly superior resolution.</div><p>There are two main types of electron microscopes, each with distinct advantages and applications: <span class='key-term'>Transmission Electron Microscopes (TEM)</span> and <span class='key-term'>Scanning Electron Microscopes (SEM)</span>.</p><h3>Transmission Electron Microscope (TEM)</h3><p>The <span class='key-term'>TEM</span> transmits a beam of electrons through an ultra-thin specimen (50–100 nm thick). Electrons that pass through are detected to form a two-dimensional image showing internal structures.</p><div class='table-wrap'><table><thead><tr><th>Property</th><th>Value</th><th>Explanation</th></tr></thead><tbody><tr><td><strong>Maximum magnification</strong></td><td>~50,000,000× (50 million)</td><td>Can visualise individual molecules and atomic structures</td></tr><tr><td><strong>Resolution</strong></td><td>~0.1 nm</td><td>Can resolve individual proteins and even large atoms</td></tr><tr><td><strong>Image type</strong></td><td>2D cross-section, black and white</td><td>Shows internal structure; electrons absorbed = dark, transmitted = light</td></tr><tr><td><strong>Specimen preparation</strong></td><td>Dead cells only; ultra-thin slices (50–100 nm)</td><td>Specimens fixed, dehydrated, embedded in resin, sliced with ultramicrotome</td></tr><tr><td><strong>Environment</strong></td><td>High vacuum required</td><td>Air molecules would scatter electrons; living tissue cannot survive</td></tr><tr><td><strong>Best for</strong></td><td>Internal ultrastructure of organelles</td><td>Viewing nucleus, mitochondria, ER, ribosomes, cell membranes</td></tr><tr><td><strong>Cost</strong></td><td>Very high (AU$500,000–$5 million)</td><td>Requires specialised facility and trained operators</td></tr></tbody></table></div><div class='worked-example'><h4>📝 Reading a TEM Image</h4><p><strong>Appearance:</strong> TEM images are black and white (grayscale). Dark regions indicate areas where electrons were absorbed (dense structures like membranes, DNA, ribosomes). Light regions indicate areas where electrons passed through (less dense cytoplasm, empty spaces).</p><p><strong>What you can see:</strong> Double membrane of nucleus, cristae inside mitochondria, rough ER with ribosomes attached, stacks of Golgi cisternae, individual ribosomes (~25 nm), cell membranes (~7 nm thick).</p><p><strong>What you cannot see:</strong> Colour, 3D surface detail, living cells, structures larger than the ultra-thin slice.</p></div><h3>Scanning Electron Microscope (SEM)</h3><p>The <span class='key-term'>SEM</span> scans a focused beam of electrons across the surface of a specimen. Electrons that bounce back (reflected or secondary electrons) are detected to create a three-dimensional image of the surface topology.</p><div class='table-wrap'><table><thead><tr><th>Property</th><th>Value</th><th>Explanation</th></tr></thead><tbody><tr><td><strong>Maximum magnification</strong></td><td>~2,000,000× (2 million)</td><td>Lower than TEM but still vastly exceeds light microscopes</td></tr><tr><td><strong>Resolution</strong></td><td>~0.5–10 nm</td><td>Lower than TEM but sufficient for surface detail</td></tr><tr><td><strong>Image type</strong></td><td>3D surface view, black and white (or false colour)</td><td>Shows surface texture and shape; depth of field creates 3D appearance</td></tr><tr><td><strong>Specimen preparation</strong></td><td>Dead cells; coated with thin metal layer (gold or platinum)</td><td>Metal coating conducts electrons and prevents charging; specimens dried</td></tr><tr><td><strong>Environment</strong></td><td>High vacuum required</td><td>Same reason as TEM; no living specimens possible</td></tr><tr><td><strong>Best for</strong></td><td>Surface structure and 3D shape</td><td>Viewing cell surface features, bacteria shape, pollen grains, insects</td></tr><tr><td><strong>Cost</strong></td><td>High (AU$300,000–$2 million)</td><td>Less expensive than TEM but still requires specialised facility</td></tr></tbody></table></div><div class='worked-example'><h4>📝 Reading an SEM Image</h4><p><strong>Appearance:</strong> SEM images appear three-dimensional with depth and shadow, like a landscape photograph. They are grayscale but often artificially coloured for visual appeal or to highlight features (these colours are not real).</p><p><strong>What you can see:</strong> External shape of cells, surface texture, 3D arrangement of bacteria, pollen grain surface patterns, red blood cell biconcave shape, microvilli on intestinal cells.</p><p><strong>What you cannot see:</strong> Internal structures (no cross-section), true colour, living cells, fine internal detail like TEM shows.</p></div><div class='warning-box'><strong>🚫 Exam Trap:</strong> SEM and TEM images are always black and white (grayscale). Any colours you see in electron micrographs are 'false colour' added artificially by computers to enhance contrast or highlight structures. Do not describe electron microscope images as 'coloured' in exams—this loses marks.</div></div><div class='card'><div class='card-header'><div class='card-icon'>⚖️</div><h2>Comparing the Three Microscope Types</h2></div><p>Choosing the appropriate microscope depends on your research question, specimen type, and the level of detail required. This comparison table summarises the key differences.</p><div class='table-wrap'><table><thead><tr><th>Feature</th><th>Light Microscope</th><th>TEM</th><th>SEM</th></tr></thead><tbody><tr><td><strong>Illumination source</strong></td><td>Visible light</td><td>Electron beam (transmitted)</td><td>Electron beam (reflected/scattered)</td></tr><tr><td><strong>Maximum magnification</strong></td><td>~1500×</td><td>~50,000,000×</td><td>~2,000,000×</td></tr><tr><td><strong>Resolution</strong></td><td>~200 nm</td><td>~0.1 nm</td><td>~0.5–10 nm</td></tr><tr><td><strong>Image appearance</strong></td><td>Colour (natural/stained)</td><td>2D cross-section, grayscale</td><td>3D surface, grayscale (or false colour)</td></tr><tr><td><strong>Living specimens?</strong></td><td>✅ Yes</td><td>❌ No (vacuum kills cells)</td><td>❌ No (vacuum kills cells)</td></tr><tr><td><strong>Specimen preparation</strong></td><td>Simple (wet mount, staining)</td><td>Complex (fixation, ultra-thin slicing)</td><td>Complex (fixation, metal coating)</td></tr><tr><td><strong>Best for viewing</strong></td><td>Whole cells, tissues, living organisms</td><td>Internal ultrastructure of organelles</td><td>Surface details and 3D shape</td></tr><tr><td><strong>Can see ribosomes?</strong></td><td>❌ No (too small, ~25 nm)</td><td>✅ Yes</td><td>✅ Sometimes (on surfaces)</td></tr><tr><td><strong>Can see viruses?</strong></td><td>❌ No (20–300 nm, below resolution)</td><td>✅ Yes</td><td>✅ Yes</td></tr><tr><td><strong>Depth of field</strong></td><td>Shallow (single focal plane)</td><td>Very shallow (2D slice)</td><td>Excellent (3D appearance)</td></tr><tr><td><strong>Cost</strong></td><td>Low ($500–$10,000)</td><td>Very high ($500,000–$5 million)</td><td>High ($300,000–$2 million)</td></tr><tr><td><strong>Accessibility</strong></td><td>Available in schools</td><td>Universities and research institutes only</td><td>Universities and research institutes only</td></tr></tbody></table></div><div class='info-box'><strong>💡 Choosing the Right Tool:</strong> If you need to observe living cells, movement, or cell behaviour, use a light microscope. If you need to see internal organelle structure at high resolution, use TEM. If you need 3D surface detail or want to view the shape/arrangement of cells, use SEM.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🔬</div><h2>Real-World Applications of Microscopy</h2></div><p>Microscopy technologies are essential across medicine, research, forensics, and industry. Understanding which microscope to use for each application is a key HSC skill.</p><div class='table-wrap'><table><thead><tr><th>Application</th><th>Microscope Type</th><th>Reason</th></tr></thead><tbody><tr><td><strong>Diagnosing malaria from blood smear</strong></td><td>Light microscope</td><td>Parasites visible in red blood cells; staining with Giemsa dye shows parasites clearly; rapid, inexpensive diagnosis</td></tr><tr><td><strong>Counting sperm motility (fertility testing)</strong></td><td>Light microscope</td><td>Must observe living, moving sperm; light microscope allows real-time observation of motility</td></tr><tr><td><strong>Identifying pollen grains (forensics/allergies)</strong></td><td>SEM</td><td>3D surface patterns are species-specific and crucial for identification; SEM reveals detailed surface ornamentation</td></tr><tr><td><strong>Studying mitochondrial cristae structure</strong></td><td>TEM</td><td>Cristae are internal membrane folds requiring ultra-high resolution cross-sections to visualise; only TEM has sufficient resolution</td></tr><tr><td><strong>Detecting viruses in infected tissue</strong></td><td>TEM</td><td>Viruses (20–300 nm) are below the resolution limit of light microscopes; TEM can resolve viral particles and internal structure</td></tr><tr><td><strong>Examining cancer cell surface changes</strong></td><td>SEM</td><td>Cancer cells often have altered surface features (microvilli loss, membrane blebbing); 3D surface imaging shows these changes</td></tr><tr><td><strong>Observing onion cell mitosis stages</strong></td><td>Light microscope</td><td>Whole cells and chromosome movement visible with staining; living or freshly prepared tissue required</td></tr><tr><td><strong>Quality control: bacteria contamination in food</strong></td><td>Light microscope</td><td>Quick, inexpensive detection; bacteria size (~1–5 μm) within light microscope resolution; can use gram staining</td></tr><tr><td><strong>Research: protein localisation within cells</strong></td><td>TEM (with immunogold labelling)</td><td>Requires ultra-high resolution to see subcellular protein distribution; gold nanoparticles attached to antibodies appear as dark dots in TEM</td></tr><tr><td><strong>Viewing red blood cell shape (biconcave discs)</strong></td><td>SEM</td><td>3D shape is the key feature; SEM clearly shows biconcave disc topology and any abnormalities (e.g. sickle cell disease)</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ HSC Exam Strategy:</strong> When asked to select an appropriate microscope, justify your answer by referencing: (1) whether the specimen is living or dead, (2) the size of structures you need to see, (3) whether you need surface or internal detail, and (4) whether 2D or 3D imaging is required. Always link your choice to resolution requirements.</div></div><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Light Microscope</h4><ul><li>Uses visible light and glass lenses</li><li>Max magnification: ~1500×</li><li>Resolution: ~200 nm (limited by light wavelength)</li><li>Can view living specimens</li><li>Produces colour images (natural or stained)</li><li>Inexpensive and widely accessible</li></ul></div><div class='copy-item'><h4>Transmission Electron Microscope (TEM)</h4><ul><li>Transmits electron beam through ultra-thin specimen</li><li>Max magnification: ~50,000,000×</li><li>Resolution: ~0.1 nm</li><li>Dead cells only (vacuum required)</li><li>2D cross-section, grayscale images</li><li>Best for internal ultrastructure</li></ul></div><div class='copy-item'><h4>Scanning Electron Microscope (SEM)</h4><ul><li>Scans electron beam across specimen surface</li><li>Max magnification: ~2,000,000×</li><li>Resolution: ~0.5–10 nm</li><li>Dead cells only (vacuum required)</li><li>3D surface view, grayscale (or false colour)</li><li>Best for surface topology and shape</li></ul></div><div class='copy-item'><h4>Key Concepts</h4><ul><li>Magnification = how much larger image appears</li><li>Resolution = ability to distinguish two points</li><li>Shorter wavelength = better resolution</li><li>Electron wavelength ~100,000× shorter than light</li><li>All electron microscope images are grayscale</li><li>Choose microscope based on specimen and question</li></ul></div></div></div>",
   "contentSections": [
     {
-      "id": "endomembrane-pathway",
-      "type": "diagram",
-      "title": "The Endomembrane System Pathway",
-      "icon": "arrow-path",
-      "content": "Flow diagram: Nuclear envelope → RER → Transport vesicle → Golgi (cis to trans) → Secretory vesicle → Plasma membrane (exocytosis).",
-      "keyPoints": [
-        "RER makes proteins → vesicle to Golgi",
-        "Golgi modifies and sorts → vesicle to destination",
-        "Secretory vesicles fuse with plasma membrane for export"
-      ],
-      "example": "I-cell disease: Failure to add 'address label' (mannose-6-phosphate) to enzymes → enzymes shipped out instead of going to lysosomes → disease symptoms.",
-      "image": {
-        "src": "assets/images/mod1/lesson05/endomembrane-pathway.webp",
-        "alt": "Diagram showing protein pathway from RER through Golgi to export",
-        "caption": "The endomembrane system: protein synthesis to export"
-      }
-    },
-    {
-      "id": "rough-vs-smooth-er",
-      "type": "grid",
-      "title": "Rough vs Smooth ER",
-      "icon": "scale",
-      "gridItems": [
-        {
-          "header": "Feature",
-          "items": ["Appearance", "Function", "Cell types"]
-        },
-        {
-          "header": "Rough ER",
-          "items": [
-            "Studded with ribosomes (rough)",
-            "Protein synthesis and folding",
-            "Abundant in cells making secretory proteins (pancreas)"
-          ]
-        },
-        {
-          "header": "Smooth ER",
-          "items": [
-            "No ribosomes (smooth)",
-            "Lipid synthesis, detoxification, Ca²⁺ storage",
-            "Abundant in liver (detox) and muscle (Ca²⁺ storage)"
-          ]
-        }
-      ],
-      "example": "Liver cells have lots of SER to detoxify alcohol and drugs."
-    },
-    {
-      "id": "golgi-modification",
+      "id": "scale-problem",
       "type": "content",
-      "title": "The Golgi Modification Centre",
-      "icon": "package",
-      "content": "Proteins arrive from ER in vesicles. Golgi modifies proteins (adds carbohydrate groups—glycoproteins), sorts them (uses molecular 'zip codes'), packages them into new vesicles. Some go to lysosomes, some to plasma membrane for export.",
-      "example": "Processing of digestive enzymes in pancreatic cells—if Golgi fails, enzymes don't reach stomach."
+      "title": "Why We Need Microscopes: The Scale Problem",
+      "icon": "eye",
+      "content": "Most cells are invisible to the naked eye. The resolution of the human eye is approximately 0.1 mm (100 μm)."
+    },
+    {
+      "id": "light-microscopes",
+      "type": "content",
+      "title": "Light Microscopes (Optical Microscopes)",
+      "icon": "search",
+      "content": "Light microscopes use visible light and glass lenses to magnify specimens. Maximum resolution ~200 nm."
+    },
+    {
+      "id": "electron-microscopes",
+      "type": "content",
+      "title": "Electron Microscopes: Breaking the Light Barrier",
+      "icon": "zap",
+      "content": "Electron microscopes use electron beams instead of visible light, achieving resolution up to 0.1 nm."
+    },
+    {
+      "id": "microscope-comparison",
+      "type": "content",
+      "title": "Comparing the Three Microscope Types",
+      "icon": "scale",
+      "content": "Light vs TEM vs SEM: choosing the appropriate microscope depends on research question and specimen."
+    },
+    {
+      "id": "real-world",
+      "type": "content",
+      "title": "Real-World Applications of Microscopy",
+      "icon": "microscope",
+      "content": "Microscopy technologies are essential across medicine, research, forensics, and industry."
     }
   ],
-  
   "activities": [
     {
-      "id": "protein-transport-ordering",
-      "type": "ordering",
-      "title": "Trace the Protein Pathway",
-      "description": "Arrange the stages of protein transport through the endomembrane system.",
-      "learningObjective": "Sequence protein transport through organelles.",
-      "theme": "teal",
+      "id": "microscope-classification",
+      "type": "classification",
+      "title": "Classify Microscope Features",
+      "description": "Drag each feature into the correct category: Light Microscope, TEM, or SEM.",
+      "theme": "blue",
       "xpReward": 50,
-      "shuffleDisplay": true,
+      "categories": [
+        {
+          "id": "light",
+          "label": "Light Microscope",
+          "description": "Uses visible light and glass lenses"
+        },
+        {
+          "id": "tem",
+          "label": "TEM",
+          "description": "Transmission Electron Microscope"
+        },
+        {
+          "id": "sem",
+          "label": "SEM",
+          "description": "Scanning Electron Microscope"
+        }
+      ],
       "items": [
-        { "id": "step-1", "text": "Synthesis on RER", "correctPosition": 1 },
-        { "id": "step-2", "text": "Transport to Golgi", "correctPosition": 2 },
-        { "id": "step-3", "text": "Modification in Golgi", "correctPosition": 3 },
-        { "id": "step-4", "text": "Packaging into vesicle", "correctPosition": 4 },
-        { "id": "step-5", "text": "Export from cell", "correctPosition": 5 }
+        {
+          "id": "living",
+          "text": "Can view living specimens",
+          "category": "light"
+        },
+        {
+          "id": "2d-cross",
+          "text": "Produces 2D cross-section images",
+          "category": "tem"
+        },
+        {
+          "id": "3d-surface",
+          "text": "Shows 3D surface topology",
+          "category": "sem"
+        },
+        {
+          "id": "colour-images",
+          "text": "Produces colour images",
+          "category": "light"
+        },
+        {
+          "id": "50-million",
+          "text": "Maximum ~50,000,000× magnification",
+          "category": "tem"
+        },
+        {
+          "id": "metal-coat",
+          "text": "Specimens coated with gold/platinum",
+          "category": "sem"
+        },
+        {
+          "id": "200-nm",
+          "text": "Resolution ~200 nm",
+          "category": "light"
+        },
+        {
+          "id": "01-nm",
+          "text": "Resolution ~0.1 nm",
+          "category": "tem"
+        },
+        {
+          "id": "internal-ultra",
+          "text": "Best for internal ultrastructure",
+          "category": "tem"
+        },
+        {
+          "id": "surface-detail",
+          "text": "Best for surface detail",
+          "category": "sem"
+        }
       ]
     },
     {
-      "id": "er-function-classification",
+      "id": "image-identification",
       "type": "matching",
-      "title": "RER or SER?",
-      "description": "Match each function with the correct type of endoplasmic reticulum.",
-      "learningObjective": "Distinguish RER and SER functions.",
-      "theme": "orange",
-      "xpReward": 50,
-      "items": [
-        { "id": "insulin", "text": "Makes insulin", "match": "Rough ER" },
-        { "id": "detox", "text": "Detoxifies alcohol", "match": "Smooth ER" },
-        { "id": "membrane-lipids", "text": "Synthesises membrane lipids", "match": "Smooth ER" },
-        { "id": "folding", "text": "Folds newly made proteins", "match": "Rough ER" }
-      ],
-      "correctApproach": "Insulin/folding = RER; Detox/lipids = SER."
-    }
-  ],
-  
-  "assessment": {
-    "multipleChoice": [
-      {
-        "id": "mcq-1",
-        "question": "The rough endoplasmic reticulum is described as 'rough' because it:",
-        "options": [
-          "Has a bumpy appearance under the microscope due to ribosomes attached to its surface",
-          "Is covered in small vesicles",
-          "Contains folded membranes inside",
-          "Is rough to the touch"
-        ],
-        "correctAnswer": "Has a bumpy appearance under the microscope due to ribosomes attached to its surface",
-        "rationale": "Tests structural basis of name. The ribosomes attached to the cytosolic surface give it a rough appearance in electron micrographs."
-      },
-      {
-        "id": "mcq-2",
-        "question": "Which organelle modifies, sorts, and packages proteins for secretion?",
-        "options": [
-          "Nucleus",
-          "Ribosome",
-          "Golgi apparatus",
-          "Mitochondria"
-        ],
-        "correctAnswer": "Golgi apparatus",
-        "rationale": "Core Golgi function. Nucleus stores DNA; ribosomes synthesise proteins; mitochondria produce ATP."
-      },
-      {
-        "id": "mcq-3",
-        "question": "Proteins destined for export from the cell are synthesised on ribosomes attached to the:",
-        "options": [
-          "Smooth ER",
-          "Rough ER",
-          "Nucleolus",
-          "Mitochondria"
-        ],
-        "correctAnswer": "Rough ER",
-        "rationale": "RER role in secretory protein synthesis. Smooth ER makes lipids; nucleolus makes ribosomes; mitochondria do cellular respiration."
-      }
-    ],
-    "shortAnswer": [
-      {
-        "id": "sa-1",
-        "question": "Outline the pathway of a secretory protein (such as a digestive enzyme) from synthesis to release from the cell, naming the organelles involved. (3 marks)",
-        "marks": 3,
-        "markingCriteria": [
-          "1 mark: Synthesised on ribosomes attached to rough ER (enters RER lumen)",
-          "1 mark: Transported via vesicles to Golgi apparatus (where modified/sorted)",
-          "1 mark: Packaged into secretory vesicles and released/exocytosed from plasma membrane"
-        ],
-        "commonError": "Mentioning nucleus (transcription, not translation) or missing Golgi step."
-      },
-      {
-        "id": "sa-2",
-        "question": "Distinguish between the rough endoplasmic reticulum and the smooth endoplasmic reticulum in terms of structure and function. (2 marks)",
-        "marks": 2,
-        "markingCriteria": [
-          "1 mark: RER has ribosomes attached and is involved in protein synthesis; SER lacks ribosomes",
-          "1 mark: SER is involved in lipid synthesis and/or detoxification (or Ca²⁺ storage in muscle)"
-        ],
-        "commonError": "Stating RER makes lipids or SER makes proteins."
-      }
-    ]
-  },
-  
-  "copyToBook": {
-    "definitions": [
-      "The endomembrane system includes the ER, Golgi, vesicles, and nuclear envelope.",
-      "Rough ER has ribosomes attached and makes proteins for export or membranes.",
-      "Smooth ER makes lipids and detoxifies chemicals (e.g., in liver).",
-      "The Golgi apparatus modifies, sorts, and packages proteins into vesicles.",
-      "Transport vesicles move materials between organelles."
-    ],
-    "keyPoints": [
-      "Pathway: RER → vesicle → Golgi → vesicle → export",
-      "RER = ribosomes attached = protein synthesis",
-      "SER = no ribosomes = lipids + detox",
-      "Golgi modifies (adds sugars), sorts (zip codes), packages"
-    ],
-    "diagrams": [
-      "Endomembrane system pathway diagram",
-      "Comparison of RER and SER"
-    ]
-  },
-  
-  "answerKey": {
-    "multipleChoice": ["A", "C", "B"],
-    "shortAnswer": [
-      "A secretory protein is synthesised on ribosomes attached to the rough endoplasmic reticulum (RER) and enters the RER lumen for folding. It is then transported via vesicles to the Golgi apparatus, where it is modified and sorted. Finally, it is packaged into secretory vesicles that move to the plasma membrane and release the protein outside the cell through exocytosis.",
-      "The rough endoplasmic reticulum has ribosomes attached to its surface and is involved in protein synthesis and folding. The smooth endoplasmic reticulum lacks ribosomes and is involved in lipid synthesis, detoxification of drugs and poisons (particularly in liver cells), and calcium ion storage (in muscle cells)."
-    ]
-  },
-  
-  "prerequisites": [
-    {
-      "lessonId": "module-1-cells-lesson-2",
-      "description": "Nucleus, membrane-bound organelles intro",
-      "required": true
+      "title": "Match Image Description to Microscope",
+      "description": "Match each image description with the microscope type that produced it.",
+      "theme": "teal",
+      "xpReward": 60,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Grayscale image showing mitochondrial cristae and ribosomes",
+          "right": "TEM"
+        },
+        {
+          "id": "pair2",
+          "left": "Colour image with stained nuclei, cells appear transparent",
+          "right": "Light Microscope"
+        },
+        {
+          "id": "pair3",
+          "left": "3D view of pollen grain with surface spikes and ridges",
+          "right": "SEM"
+        },
+        {
+          "id": "pair4",
+          "left": "Black and white cross-section showing nuclear envelope layers",
+          "right": "TEM"
+        },
+        {
+          "id": "pair5",
+          "left": "Living paramecium swimming in pond water",
+          "right": "Light Microscope"
+        }
+      ]
     },
     {
-      "lessonId": "module-1-cells-lesson-4",
-      "description": "Ribosomes, nucleolus",
-      "required": true
+      "id": "wavelength-ordering",
+      "type": "ordering",
+      "title": "Order by Resolution Quality",
+      "description": "Arrange from lowest to highest resolution (worst to best ability to distinguish detail).",
+      "theme": "indigo",
+      "xpReward": 40,
+      "items": [
+        {
+          "id": "human-eye",
+          "text": "Human eye (~100 μm resolution)",
+          "position": 1
+        },
+        {
+          "id": "light-micro",
+          "text": "Light microscope (~200 nm resolution)",
+          "position": 2
+        },
+        {
+          "id": "sem-res",
+          "text": "SEM (~1 nm resolution)",
+          "position": 3
+        },
+        {
+          "id": "tem-res",
+          "text": "TEM (~0.1 nm resolution)",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "id": "application-selection",
+      "type": "matching",
+      "title": "Match Application to Microscope",
+      "description": "Match each research application with the most appropriate microscope type.",
+      "theme": "orange",
+      "xpReward": 60,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Diagnosing malaria from blood smear",
+          "right": "Light Microscope"
+        },
+        {
+          "id": "pair2",
+          "left": "Counting sperm motility",
+          "right": "Light Microscope"
+        },
+        {
+          "id": "pair3",
+          "left": "Identifying pollen grains forensically",
+          "right": "SEM"
+        },
+        {
+          "id": "pair4",
+          "left": "Studying mitochondrial cristae structure",
+          "right": "TEM"
+        },
+        {
+          "id": "pair5",
+          "left": "Detecting viruses in infected tissue",
+          "right": "TEM"
+        }
+      ]
     }
   ],
-  
+  "assessment": {
+    "mcq": [
+      {
+        "id": "mcq1",
+        "question": "What is the primary advantage of electron microscopes over light microscopes?",
+        "options": [
+          "They are less expensive and more portable",
+          "They can view living specimens in real time",
+          "They have much higher resolution due to shorter electron wavelengths",
+          "They produce natural colour images"
+        ],
+        "correct": 2,
+        "explanation": "Electron microscopes achieve resolution up to 0.1 nm compared to light microscopes' ~200 nm limit. This is because electrons have wavelengths ~100,000 times shorter than visible light.",
+        "marks": 1
+      },
+      {
+        "id": "mcq2",
+        "question": "Which microscope would be most appropriate for observing the 3D surface structure of a pollen grain?",
+        "options": [
+          "Light microscope",
+          "Transmission electron microscope (TEM)",
+          "Scanning electron microscope (SEM)",
+          "Any of the above would be equally suitable"
+        ],
+        "correct": 2,
+        "explanation": "SEM specialises in 3D surface imaging with excellent depth of field, perfect for viewing pollen surface patterns.",
+        "marks": 1
+      },
+      {
+        "id": "mcq3",
+        "question": "A biology student observes a cell image showing mitochondrial cristae and individual ribosomes as dark dots. The image is grayscale and appears as a 2D cross-section. Which microscope produced this image?",
+        "options": [
+          "Light microscope with staining",
+          "Scanning electron microscope (SEM)",
+          "Transmission electron microscope (TEM)",
+          "Light microscope with phase contrast"
+        ],
+        "correct": 2,
+        "explanation": "The combination of grayscale image, internal ultrastructure (cristae), visible ribosomes (~25 nm, below light microscope resolution), and 2D cross-section appearance all indicate TEM.",
+        "marks": 1
+      },
+      {
+        "id": "mcq4",
+        "question": "Why can electron microscopes NOT be used to observe living cells?",
+        "options": [
+          "Electrons are too large to pass through cell membranes",
+          "The high vacuum required would kill the cells",
+          "Living cells are too large to fit in the microscope chamber",
+          "Living cells do not absorb electrons"
+        ],
+        "correct": 1,
+        "explanation": "Electron microscopes require a vacuum because air molecules would scatter electrons. This vacuum instantly kills living cells by removing all water and air.",
+        "marks": 1
+      },
+      {
+        "id": "mcq5",
+        "question": "What limits the resolution of a light microscope to approximately 200 nm?",
+        "options": [
+          "The maximum magnification of the objective lens",
+          "The wavelength of visible light",
+          "The thickness of glass lenses",
+          "The brightness of the light source"
+        ],
+        "correct": 1,
+        "explanation": "Resolution is fundamentally limited by the wavelength of the illumination source (~400-700 nm for visible light). Structures smaller than approximately half the wavelength cannot be resolved.",
+        "marks": 1
+      }
+    ],
+    "saq": [
+      {
+        "id": "saq1",
+        "question": "Explain the difference between magnification and resolution. Why is resolution more important than magnification when viewing small cellular structures?",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Correct definition of magnification (degree of enlargement)",
+          "1 mark: Correct definition of resolution (ability to distinguish separate points)",
+          "1 mark: Explanation that resolution determines detail/clarity, high magnification without resolution just shows blur"
+        ],
+        "modelAnswer": "Magnification is the degree to which an object's image is enlarged compared to its actual size. Resolution is the ability to distinguish two points as separate—the minimum distance at which two points can be seen as distinct. Resolution is more important because it determines the level of detail visible. You can magnify an image to any size, but if resolution is insufficient, the image will simply be a larger blur without revealing fine structures."
+      },
+      {
+        "id": "saq2",
+        "question": "A researcher needs to study the internal structure of mitochondria, specifically the arrangement and spacing of cristae (inner membrane folds). Recommend the most appropriate microscope and justify your choice with reference to resolution and image type.",
+        "marks": 4,
+        "markingCriteria": [
+          "1 mark: Correct recommendation of TEM",
+          "2 marks: Explanation of resolution requirements (cristae ~7 nm thick, TEM ~0.1 nm resolution, light microscope ~200 nm insufficient)",
+          "1 mark: Explanation of TEM's 2D cross-section advantage for internal structures"
+        ],
+        "modelAnswer": "Transmission electron microscope (TEM). Mitochondrial cristae are internal membrane folds approximately 7 nm thick with spacing of 10-30 nm between folds. These structures are far below the ~200 nm resolution limit of light microscopes. TEM provides resolution of ~0.1 nm, which easily resolves cristae structure and allows precise measurement of membrane spacing. Additionally, TEM produces 2D cross-sectional images that clearly show the internal arrangement of cristae within mitochondria."
+      },
+      {
+        "id": "saq3",
+        "question": "Compare TEM and SEM electron microscopes. Include in your answer: (a) How each type produces an image (2 marks), (b) The type of information each provides (2 marks), (c) One advantage of each type over the other (2 marks)",
+        "marks": 6,
+        "markingCriteria": [
+          "2 marks: TEM transmits electrons through ultra-thin specimen; SEM scans electrons across surface",
+          "2 marks: TEM shows internal ultrastructure; SEM shows 3D surface topology",
+          "2 marks: TEM advantage (higher resolution ~0.1 nm); SEM advantage (3D surface view, depth of field)"
+        ],
+        "modelAnswer": "(a) TEM transmits a beam of electrons through an ultra-thin specimen (50-100 nm). Electrons that pass through are detected to form a 2D image. SEM scans a focused electron beam across the specimen's surface. Electrons that bounce back are detected to create a 3D surface image. (b) TEM provides information about internal cellular ultrastructure—cross-sections of organelles and membrane layers. SEM provides information about external surface topology, 3D shape, and spatial arrangement. (c) TEM advantage: Much higher resolution (~0.1 nm vs ~0.5-10 nm), allowing visualisation of molecular structures. SEM advantage: Provides 3D surface images with excellent depth of field, whereas TEM only produces 2D cross-sections."
+      }
+    ]
+  },
+  "answers": {
+    "activities": [
+      {
+        "activityId": "microscope-classification",
+        "title": "Activity 1: Classify Microscope Features",
+        "content": "<p><strong>Light Microscope:</strong> Can view living specimens, Produces colour images, Resolution ~200 nm</p><p><strong>TEM:</strong> Produces 2D cross-section images, Maximum ~50,000,000× magnification, Resolution ~0.1 nm, Best for internal ultrastructure</p><p><strong>SEM:</strong> Shows 3D surface topology, Specimens coated with gold/platinum, Best for surface detail</p>"
+      },
+      {
+        "activityId": "image-identification",
+        "title": "Activity 2: Match Image to Microscope",
+        "content": "<p><strong>TEM images:</strong> Grayscale, 2D cross-sections showing internal structures (cristae, ribosomes, nuclear envelope)</p><p><strong>Light Microscope images:</strong> Colour (natural or stained), transparent cells, living specimens visible</p><p><strong>SEM images:</strong> 3D surface view with depth and shadow, grayscale, shows external topology</p>"
+      },
+      {
+        "activityId": "wavelength-ordering",
+        "title": "Activity 3: Resolution Order",
+        "content": "<p>Correct order (lowest to highest resolution):</p><ol><li>Human eye (~100 μm = 100,000 nm)</li><li>Light microscope (~200 nm)</li><li>SEM (~1 nm or better)</li><li>TEM (~0.1 nm)</li></ol><p>Resolution improves as wavelength decreases. Visible light (~500 nm) limits light microscopes. Electrons have wavelengths ~0.005 nm, enabling vastly superior resolution.</p>"
+      },
+      {
+        "activityId": "application-selection",
+        "title": "Activity 4: Match Application to Microscope",
+        "content": "<p><strong>Malaria diagnosis:</strong> Light microscope - parasites visible in stained blood; rapid, inexpensive</p><p><strong>Sperm motility:</strong> Light microscope - must observe living, moving sperm in real time</p><p><strong>Pollen identification:</strong> SEM - 3D surface patterns are species-specific; SEM reveals detailed ornamentation</p><p><strong>Cristae structure:</strong> TEM - internal membrane structures require ultra-high resolution cross-sections</p><p><strong>Virus detection:</strong> TEM - viruses (20-300 nm) are below light microscope resolution</p>"
+      }
+    ],
+    "assessment": [
+      {
+        "questionId": "mcq1",
+        "question": "What is the primary advantage of electron microscopes over light microscopes?",
+        "answer": "C - They have much higher resolution due to shorter electron wavelengths",
+        "explanation": "Electrons have wavelengths ~100,000 times shorter than visible light, enabling resolution up to 0.1 nm compared to light microscopes' ~200 nm limit."
+      },
+      {
+        "questionId": "mcq2",
+        "question": "Which microscope would be most appropriate for observing the 3D surface structure of a pollen grain?",
+        "answer": "C - Scanning electron microscope (SEM)",
+        "explanation": "SEM specialises in 3D surface imaging with excellent depth of field, perfect for viewing pollen surface patterns."
+      },
+      {
+        "questionId": "mcq3",
+        "question": "A biology student observes a cell image showing mitochondrial cristae and individual ribosomes as dark dots. The image is grayscale and appears as a 2D cross-section. Which microscope produced this image?",
+        "answer": "C - Transmission electron microscope (TEM)",
+        "explanation": "The combination of grayscale image, internal ultrastructure (cristae), visible ribosomes (~25 nm, below light microscope resolution), and 2D cross-section appearance all indicate TEM."
+      },
+      {
+        "questionId": "mcq4",
+        "question": "Why can electron microscopes NOT be used to observe living cells?",
+        "answer": "B - The high vacuum required would kill the cells",
+        "explanation": "Electron microscopes require a vacuum because air molecules would scatter electrons. This vacuum instantly kills living cells by removing all water and air."
+      },
+      {
+        "questionId": "mcq5",
+        "question": "What limits the resolution of a light microscope to approximately 200 nm?",
+        "answer": "B - The wavelength of visible light",
+        "explanation": "Resolution is fundamentally limited by the wavelength of the illumination source (~400-700 nm for visible light). Structures smaller than approximately half the wavelength cannot be resolved."
+      },
+      {
+        "questionId": "saq1",
+        "question": "Explain the difference between magnification and resolution. Why is resolution more important than magnification when viewing small cellular structures?",
+        "answer": "Magnification is the degree to which an object's image is enlarged compared to its actual size. Resolution is the ability to distinguish two points as separate—the minimum distance at which two points can be seen as distinct rather than blurred together. Resolution is more important than magnification because it determines the level of detail and clarity that can be observed. You can magnify an image to any size, but if the resolution is insufficient, the image will simply be a larger blur without revealing fine structures. For example, a light microscope can magnify to 10,000×, but if the resolution limit is 200 nm, structures smaller than this (like ribosomes at 25 nm) will never be visible no matter how much you magnify."
+      },
+      {
+        "questionId": "saq2",
+        "question": "A researcher needs to study the internal structure of mitochondria, specifically the arrangement and spacing of cristae. Recommend the most appropriate microscope and justify your choice.",
+        "answer": "Recommended microscope: Transmission electron microscope (TEM). Justification: Mitochondrial cristae are internal membrane folds approximately 7 nm thick with spacing of 10-30 nm between folds. These structures are far below the ~200 nm resolution limit of light microscopes, making them invisible or appearing only as vague shadows. TEM provides resolution of ~0.1 nm, which easily resolves cristae structure and allows precise measurement of membrane spacing. Additionally, TEM produces 2D cross-sectional images that clearly show the internal arrangement of cristae within mitochondria. The ultra-thin slicing technique allows visualization of cristae in different planes. SEM would not be suitable as it only shows external surfaces, and light microscopy lacks the resolution for this level of detail."
+      },
+      {
+        "questionId": "saq3",
+        "question": "Compare TEM and SEM electron microscopes.",
+        "answer": "(a) Image formation: TEM transmits a beam of electrons through an ultra-thin specimen (50-100 nm). Electrons that pass through are detected by sensors below the specimen. Dense structures absorb more electrons and appear dark; less dense regions appear light, creating a 2D grayscale cross-sectional image. SEM scans a focused electron beam across the specimen's surface in a raster pattern. Electrons that bounce back (secondary or backscattered electrons) are detected. The intensity of reflected electrons at each point determines brightness, building up a 3D surface image with depth and shadow. (b) Information provided: TEM provides information about internal cellular ultrastructure and subcellular organisation. Shows cross-sections of organelles (mitochondrial cristae, rough ER with ribosomes, nuclear envelope). SEM provides information about external surface topology, 3D shape, and spatial arrangement. Shows surface texture, patterns, and overall morphology with excellent depth of field. (c) Advantages: TEM advantage over SEM—much higher resolution (~0.1 nm vs ~0.5-10 nm), allowing visualisation of molecular-level structures such as individual proteins and ribosomes. Higher magnification capability (~50 million× vs ~2 million×). SEM advantage over TEM—provides 3D surface images with excellent depth of field, whereas TEM only produces 2D cross-sections. Sample preparation is simpler (metal coating vs ultra-thin slicing)."
+      }
+    ]
+  },
+  "copyToBook": {
+    "title": "Microscopy Technologies",
+    "sections": [
+      {
+        "title": "Light Microscope",
+        "content": [
+          "Uses visible light and glass lenses",
+          "Max magnification: ~1500×",
+          "Resolution: ~200 nm (limited by light wavelength)",
+          "Can view living specimens",
+          "Produces colour images (natural or stained)",
+          "Inexpensive and widely accessible"
+        ]
+      },
+      {
+        "title": "TEM (Transmission Electron Microscope)",
+        "content": [
+          "Transmits electron beam through ultra-thin specimen",
+          "Max magnification: ~50,000,000×",
+          "Resolution: ~0.1 nm",
+          "Dead cells only (vacuum required)",
+          "2D cross-section, grayscale images",
+          "Best for internal ultrastructure"
+        ]
+      },
+      {
+        "title": "SEM (Scanning Electron Microscope)",
+        "content": [
+          "Scans electron beam across specimen surface",
+          "Max magnification: ~2,000,000×",
+          "Resolution: ~0.5-10 nm",
+          "Dead cells only (vacuum required)",
+          "3D surface view, grayscale (or false colour)",
+          "Best for surface topology and shape"
+        ]
+      },
+      {
+        "title": "Key Concepts",
+        "content": [
+          "Magnification = how much larger image appears",
+          "Resolution = ability to distinguish two points",
+          "Shorter wavelength = better resolution",
+          "Electron wavelength ~100,000× shorter than light",
+          "All electron microscope images are grayscale",
+          "Choose microscope based on specimen and question"
+        ]
+      },
+      {
+        "title": "Choosing the Right Microscope",
+        "content": [
+          "Living cells → Light microscope",
+          "Internal ultrastructure → TEM",
+          "3D surface detail → SEM",
+          "Resolution must match structure size",
+          "Always justify: living/dead, size, 2D/3D, surface/internal"
+        ]
+      }
+    ]
+  },
   "navigation": {
     "previous": "module-1-cells-lesson-4",
-    "previousTitle": "Nucleus, Chromatin and Ribosomes",
+    "previousTitle": "The Plant Cell: Specialised for Photosynthesis and Support",
     "next": null,
     "nextTitle": null
   },
-  
   "meta": {
-    "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
     "version": "2.0.0",
-    "tags": ["endomembrane system", "rough ER", "smooth ER", "Golgi apparatus", "vesicles", "protein transport", "Module 1"]
-  },
-  
-  "imageLibrary": [
-    {
-      "id": "endomembrane-pathway",
-      "src": "assets/images/mod1/lesson05/endomembrane-pathway.webp",
-      "alt": "Diagram of endomembrane system pathway",
-      "caption": "Protein pathway through the endomembrane system"
-    },
-    {
-      "id": "rer-tem",
-      "src": "assets/images/mod1/lesson05/rer-tem.webp",
-      "alt": "TEM image of rough ER",
-      "caption": "Transmission electron micrograph of rough ER with ribosomes"
-    },
-    {
-      "id": "golgi-diagram",
-      "src": "assets/images/mod1/lesson05/golgi-diagram.webp",
-      "alt": "Diagram of Golgi apparatus structure",
-      "caption": "Structure of the Golgi apparatus showing cis and trans faces"
-    },
-    {
-      "id": "vesicle-formation",
-      "src": "assets/images/mod1/lesson05/vesicle-formation.webp",
-      "alt": "Diagram of vesicle budding and fusion",
-      "caption": "Vesicle formation and transport between organelles"
-    }
-  ]
+    "format": "V2.0",
+    "tags": ["microscopy", "TEM", "SEM", "light-microscope", "resolution", "magnification"]
+  }
 }

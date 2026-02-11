@@ -607,17 +607,30 @@
 
 .hero-stats {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--space-5);
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.stat-item {
+.hero-stats .stat-item {
   text-align: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  min-width: 120px;
+  transition: all 0.2s ease;
+}
+
+.hero-stats .stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
 }
 
 .stat-number {
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   font-weight: var(--weight-extrabold);
   color: var(--primary-dark);
   line-height: 1;
@@ -625,9 +638,11 @@
 }
 
 .stat-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--text-muted);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Features Section */
@@ -1845,5 +1860,111 @@
 
   .lesson-nav-home {
     order: -1;
+  }
+}
+
+
+/* ========================================
+   MODULE HERO SECTION (Module Overview Pages)
+   ======================================== */
+
+.module-hero {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 50%, var(--bg-surface) 100%);
+  padding: var(--space-12) 0 var(--space-8);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.module-hero-content {
+  max-width: var(--wide);
+  margin: 0 auto;
+}
+
+.module-hero-badges {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.module-hero-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--text-primary);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+.module-hero-description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+  max-width: 700px;
+}
+
+.module-hero-meta {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.module-hero-meta .hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+  background: rgba(255, 255, 255, 0.6);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+}
+
+.module-hero-meta .hero-meta-item .icon-sm {
+  color: var(--primary-dark);
+}
+
+.module-progress {
+  max-width: 400px;
+}
+
+.module-progress .progress-bar-wrapper {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-light);
+  height: 10px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.module-progress .progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--secondary-dark));
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+.module-progress .progress-text {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .module-hero {
+    padding: var(--space-8) 0 var(--space-6);
+  }
+
+  .module-hero-title {
+    font-size: var(--text-3xl);
+  }
+
+  .module-hero-description {
+    font-size: var(--text-base);
+  }
+
+  .module-hero-meta {
+    gap: var(--space-3);
   }
 }

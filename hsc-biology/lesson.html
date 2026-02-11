@@ -17,11 +17,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Core CSS -->
-  <link rel="stylesheet" href="../assets/css/global.css?v=1770755753">
-  <link rel="stylesheet" href="../assets/css/layout.css?v=1770755753">
-  <link rel="stylesheet" href="../assets/css/components.css?v=1770755753">
-  <link rel="stylesheet" href="../assets/css/diagrams.css?v=1770755753">
-  <link rel="stylesheet" href="../assets/css/activities.css?v=1770755753">
+  <link rel="stylesheet" href="../assets/css/global.css?v=1770791403">
+  <link rel="stylesheet" href="../assets/css/layout.css?v=1770791403">
+  <link rel="stylesheet" href="../assets/css/components.css?v=1770791403">
+  <link rel="stylesheet" href="../assets/css/diagrams.css?v=1770791403">
+  <link rel="stylesheet" href="../assets/css/activities.css?v=1770791403">
+
+  <!-- V2 Lesson CSS (static to prevent FOUC) -->
+  <link rel="stylesheet" href="../assets/css/lesson-v2.css?v=1770791403">
+
+  <!-- Gamification CSS -->
+  <link rel="stylesheet" href="../assets/css/xp.css?v=1770791403">
+  <link rel="stylesheet" href="../assets/css/streak.css?v=1770791403">
+  <link rel="stylesheet" href="../assets/css/achievements.css?v=1770791403">
   
   <!-- PWA -->
   <link rel="manifest" href="../assets/manifest.json">
@@ -213,9 +221,17 @@
   </footer>
   
   <!-- Scripts -->
-  <script src="../assets/js/lucide.min.js?v=1770755753"></script>
-  <script src="../assets/js/lesson-renderer.js?v=1770755753"></script>
-  <script src="../assets/js/main.js?v=1770755753"></script>
+  <script src="../assets/js/lucide.min.js?v=1770791403"></script>
+  <script src="../assets/js/touch-utils.js?v=1770791403"></script>
+  <script src="../assets/js/storage.js?v=1770791403"></script>
+  <script src="../assets/js/event-bus.js?v=1770791403"></script>
+  <script src="../assets/js/xp.js?v=1770791403"></script>
+  <script src="../assets/js/streak.js?v=1770791403"></script>
+  <script src="../assets/js/achievements.js?v=1770791403"></script>
+  <script src="../assets/js/gamification-engine.js?v=1770791403"></script>
+  <script src="../assets/js/ui-controller.js?v=1770791403"></script>
+  <script src="../assets/js/lesson-renderer.js?v=1770791403"></script>
+  <script src="../assets/js/main.js?v=1770791403"></script>
   <script>
     // Initialize Lucide icons
     lucide.createIcons();
@@ -350,8 +366,15 @@
         // Update sidebar
         updateSidebar(lesson);
         
-        // Dispatch event for gamification
-        window.dispatchEvent(new CustomEvent('lessonCompleted', { detail: { lessonId: lesson.id } }));
+        // Trigger gamification via EventBus (if loaded)
+        if (window.EventBus) {
+          EventBus.emit('lesson:completed', {
+            lesson: lesson.id,
+            module: lesson.module || 'module-1-cells',
+            yearLevel: 'hsc-biology',
+            timestamp: new Date().toISOString()
+          });
+        }
       });
     }
     

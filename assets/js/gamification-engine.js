@@ -933,11 +933,26 @@ const GamificationEngine = (function() {
 
   function handleActivityCompleted(eventData) {
     const { activityId, lessonId } = eventData;
-    
+
     XPSystem.awardXP(XP_CONFIG.ACTIVITY_COMPLETE, 'activity', {
       activityId,
       lessonId
     });
+  }
+
+  // Track deep dives opened per page session (for knowledge_seeker badge)
+  let deepDivesThisSession = 0;
+
+  function handleDeepDiveOpened() {
+    deepDivesThisSession++;
+
+    if (deepDivesThisSession >= 3) {
+      AchievementSystem.checkAll({
+        deepDivesInLesson: deepDivesThisSession,
+        totalLessonsCompleted: getAchievementData().lessonsCompleted.length,
+        currentStreak: StreakSystem.getInfo().currentStreak
+      });
+    }
   }
 
   // ============================================
@@ -950,6 +965,7 @@ const GamificationEngine = (function() {
       EventBus.on('lesson:completed', handleLessonCompleted);
       EventBus.on('quiz:completed', handleQuizCompleted);
       EventBus.on('activity:completed', handleActivityCompleted);
+      EventBus.on('deep-dive:opened', handleDeepDiveOpened);
     }
 
     // Record first visit achievement

@@ -1,330 +1,543 @@
 {
   "id": "module-1-cells-lesson-3",
-  "title": "Microscopy and Cell Size",
+  "title": "The Animal Cell",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 3,
-  "description": "Understanding microscopy techniques including magnification, resolution, and calculations. Students learn to distinguish between light and electron microscopy and calculate actual cell sizes.",
-  "duration": "50 minutes",
+  "description": "Explore the structures and functions of animal cells, from the command centre nucleus to the power-producing mitochondria and the protein synthesis pathway through ER and Golgi.",
+  "duration": "60 minutes",
   "difficulty": "Foundation Level",
   "worksOffline": true,
-  
+  "v2": true,
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "🐭",
+    "gradient": "blue-to-purple"
+  },
   "learningIntentions": [
-    "Students can calculate magnification and actual size using scale bars and the formula: Actual size = Image size ÷ Magnification.",
-    "Students can distinguish between resolution and magnification.",
-    "Students can select the appropriate microscope (light vs electron) for viewing specific cell structures."
+    "Students can identify and describe the structure of major animal cell organelles",
+    "Students can explain the function of each organelle in cellular processes",
+    "Students can trace the pathway of protein synthesis and transport",
+    "Students can relate organelle structure to its specific function",
+    "Students can distinguish between animal and plant cell structures"
   ],
-  
+  "successCriteria": [
+    "I can label a diagram of an animal cell with all major organelles",
+    "I can explain the function of the nucleus, mitochondria, ER, and Golgi apparatus",
+    "I can describe the journey of a protein from synthesis to export",
+    "I can explain how organelle structure relates to function",
+    "I can identify at least 3 differences between animal and plant cells"
+  ],
+  "intentions": {
+    "learning": [
+      "Students can identify and describe the structure of major animal cell organelles",
+      "Students can explain the function of each organelle in cellular processes",
+      "Students can trace the pathway of protein synthesis and transport",
+      "Students can relate organelle structure to its specific function",
+      "Students can distinguish between animal and plant cell structures"
+    ],
+    "connections": [
+      {
+        "topic": "Cell theory and prokaryotic vs eukaryotic cells",
+        "description": "Prior: cells as basic units, presence of membrane-bound organelles"
+      },
+      {
+        "topic": "The Plant Cell",
+        "link": "module-1-cells-lesson-4",
+        "description": "Next: comparing plant cell structures"
+      },
+      {
+        "topic": "Cellular respiration and energy",
+        "description": "Future: how mitochondria produce ATP"
+      }
+    ],
+    "success": [
+      "I can label a diagram of an animal cell with all major organelles",
+      "I can explain the function of the nucleus, mitochondria, ER, and Golgi apparatus",
+      "I can describe the journey of a protein from synthesis to export",
+      "I can explain how organelle structure relates to function",
+      "I can identify at least 3 differences between animal and plant cells"
+    ]
+  },
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "Microscopy techniques and cell size calculations"
+    "focus": "Animal cell structure and organelle function"
   },
-  
-  "successCriteria": [
-    "I can calculate the actual size of a cell from a micrograph using a scale bar.",
-    "I can explain why electron microscopes are needed to view ribosomes.",
-    "I can convert between mm, µm, and nm."
-  ],
-  
-  "engagementHook": {
-    "title": "Breaking the Light Barrier",
-    "content": "Show beautiful LM image of Paramecium vs grainy TEM of bacterium. 'The colourful one looks better, but the grainy one actually shows more detail. Why can't our most powerful light microscopes see the structures inside cells clearly?' Demo: Two pens held together—when close to eye, look like one object. 'Resolution is the limit.'"
-  },
-  
-  "keyConcepts": [
-    {
-      "term": "Resolution",
-      "definition": "The ability to distinguish two separate points as distinct. Limited by wavelength of light (~200 nm for light microscopes)."
-    },
-    {
-      "term": "Magnification",
-      "definition": "How much larger the image is than the actual object. Empty magnification (increasing size without resolution) shows blurry images."
-    },
-    {
-      "term": "Light Microscopy (LM)",
-      "definition": "Uses visible light and glass lenses. Max resolution ~200 nm. Can view living cells. Stains add contrast (iodine, methylene blue)."
-    },
-    {
-      "term": "Electron Microscopy (EM)",
-      "definition": "Uses electron beams. TEM (Transmission) shows internal structure; SEM (Scanning) shows 3D surface. Resolution ~0.2 nm. Requires dead, fixed specimens."
-    },
-    {
-      "term": "Scale Bar Calculations",
-      "definition": "Actual size = measured image size ÷ magnification. Unit conversions: 1 mm = 1000 µm; 1 µm = 1000 nm."
-    }
-  ],
-  
-  "misconceptions": [
-    {
-      "misconception": "Higher magnification always means better detail",
-      "correction": "Show blurry vs sharp images. Without resolution, high magnification is just a bigger blur (empty magnification)."
-    },
-    {
-      "misconception": "Electron microscopes use light",
-      "correction": "They use electrons, not photons. Requires vacuum (so specimens must be dead)."
-    },
-    {
-      "misconception": "You can see ribosomes with a light microscope",
-      "correction": "Ribosomes ~20–30 nm; light microscope limit ~200 nm. Need EM."
-    }
-  ],
-  
+  "contentHTML": "<div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>HSC Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>The Animal Cell</h1><p class='hero-description'>Explore the structures and functions of animal cells, from the command centre nucleus to the power-producing mitochondria and the protein synthesis pathway through ER and Golgi.</p></div><div class='hero-icon'>🐭</div></div></div><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can identify and describe the structure of major animal cell organelles</li><li>Students can explain the function of each organelle in cellular processes</li><li>Students can trace the pathway of protein synthesis and transport</li><li>Students can relate organelle structure to its specific function</li><li>Students can distinguish between animal and plant cell structures</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Cell theory, prokaryotic vs eukaryotic cells</li><li><strong>Next:</strong> The Plant Cell (Lesson 4)</li><li><strong>Future:</strong> Cellular respiration, protein synthesis</li><li><strong>Skills:</strong> Diagram labelling, structure-function reasoning</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can label an animal cell diagram with all major organelles</li><li>I can explain nucleus, mitochondria, ER, and Golgi functions</li><li>I can describe protein journey from synthesis to export</li><li>I can explain structure-function relationships</li><li>I can identify 3+ differences between animal and plant cells</li></ul></div></div><div class='card'><div class='card-header'><div class='card-icon'>🏢</div><h2>Overview: The Animal Cell</h2></div><p>Animal cells are eukaryotic cells that make up the tissues and organs of animals. Unlike plant cells, they lack a cell wall and chloroplasts, but they contain a sophisticated array of membrane-bound organelles that work together to maintain life.</p><div class='info-box'><strong>💡 Key Concept:</strong> Each organelle has a specific structure that enables its function. This <span class='key-term'>structure-function relationship</span> is a fundamental principle in biology. For example, mitochondria have folded inner membranes to maximise surface area for energy production.</div><div class='table-wrap'><table><thead><tr><th>Organelle</th><th>Primary Function</th><th>Key Structural Feature</th></tr></thead><tbody><tr><td><strong>Nucleus</strong></td><td>Control centre; stores genetic information</td><td>Double membrane with pores; contains chromatin</td></tr><tr><td><strong>Mitochondria</strong></td><td>Energy production (ATP) via cellular respiration</td><td>Double membrane; folded inner membrane (cristae)</td></tr><tr><td><strong>Rough ER</strong></td><td>Protein synthesis and modification</td><td>Network of membranes with ribosomes attached</td></tr><tr><td><strong>Smooth ER</strong></td><td>Lipid synthesis and detoxification</td><td>Network of membranes without ribosomes</td></tr><tr><td><strong>Golgi Apparatus</strong></td><td>Protein processing, packaging, and distribution</td><td>Stack of flattened membrane-bound cisternae</td></tr><tr><td><strong>Lysosomes</strong></td><td>Digestion and waste removal</td><td>Membrane-bound vesicles containing enzymes</td></tr><tr><td><strong>Ribosomes</strong></td><td>Protein synthesis</td><td>Small颗粒 composed of rRNA and protein</td></tr><tr><td><strong>Cytoskeleton</strong></td><td>Structural support and intracellular transport</td><td>Network of microfilaments and microtubules</td></tr><tr><td><strong>Cell Membrane</strong></td><td>Regulates entry and exit of substances</td><td>Phospholipid bilayer with embedded proteins</td></tr></tbody></table></div></div><div class='card'><div class='card-header'><div class='card-icon'>🧬</div><h2>The Nucleus: Command Centre</h2></div><p>The <span class='key-term'>nucleus</span> is the largest and most prominent organelle in animal cells. It houses the cell's genetic material (DNA) and controls cellular activities by regulating gene expression.</p><h3>Structure of the Nucleus</h3><div class='table-wrap'><table><thead><tr><th>Component</th><th>Structure</th><th>Function</th></tr></thead><tbody><tr><td><strong>Nuclear Envelope</strong></td><td>Double membrane with nuclear pores</td><td>Separates nucleus from cytoplasm; controls transport via pores</td></tr><tr><td><strong>Chromatin</strong></td><td>DNA wound around histone proteins</td><td>Stores genetic information; condenses into chromosomes during division</td></tr><tr><td><strong>Nucleolus</strong></td><td>Dense region inside nucleus</td><td>Produces ribosomal RNA (rRNA) and assembles ribosomes</td></tr><tr><td><strong>Nuclear Pores</strong></td><td>Protein complexes in envelope</td><td>Regulate passage of molecules between nucleus and cytoplasm</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> Students often confuse the nucleolus with the entire nucleus. The nucleolus is a structure <em>inside</em> the nucleus responsible for making ribosomes, while the nucleus is the entire organelle containing chromatin.</div><div class='worked-example'><h4>📝 Worked Example: Nucleus Function</h4><p><strong>Question:</strong> Explain why the nucleus is called the 'control centre' of the cell and how its structure supports this function.</p><p><strong>Answer:</strong> The nucleus is the control centre because it contains the cell's DNA, which carries instructions for all cellular activities. The nuclear envelope with its pores allows selective transport—mRNA can exit to be translated into proteins, while transcription factors can enter to regulate gene expression. This structural arrangement ensures that genetic information is protected yet accessible when needed.</p></div></div><div class='card'><div class='card-header'><div class='card-icon'>⚡</div><h2>Mitochondria: Powerhouses</h2></div><p><span class='key-term'>Mitochondria</span> are often called the 'powerhouses' of the cell because they generate ATP (adenosine triphosphate), the cell's energy currency, through cellular respiration. Remarkably, mitochondria contain their own DNA and likely evolved from ancient bacteria.</p><h3>Structure and Function</h3><div class='table-wrap'><table><thead><tr><th>Feature</th><th>Structure</th><th>Functional Significance</th></tr></thead><tbody><tr><td><strong>Outer Membrane</strong></td><td>Smooth, permeable boundary</td><td>Separates mitochondrion from cytoplasm</td></tr><tr><td><strong>Inner Membrane</strong></td><td>Highly folded into cristae</td><td>Increases surface area for ATP synthesis</td></tr><tr><td><strong>Matrix</strong></td><td>Fluid-filled interior space</td><td>Contains enzymes for Krebs cycle; mitochondrial DNA</td></tr><tr><td><strong>Cristae</strong></td><td>Folds of inner membrane</td><td>Contain electron transport chain proteins for ATP production</td></tr></tbody></table></div><div class='info-box'><strong>💡 Endosymbiotic Theory:</strong> Mitochondria have their own DNA, ribosomes (70S like bacteria), and reproduce by binary fission. This evidence supports the theory that they evolved from ancient prokaryotes that formed symbiotic relationships with early eukaryotic cells.</div><div class='worked-example'><h4>📝 Worked Example: Mitochondrial Structure-Function</h4><p><strong>Question:</strong> Explain how the structure of the inner mitochondrial membrane is adapted for its function.</p><p><strong>Answer:</strong> The inner mitochondrial membrane is extensively folded into cristae, dramatically increasing surface area. This structural adaptation accommodates more electron transport chain proteins and ATP synthase enzymes. Greater surface area means more sites for ATP production, enabling the mitochondrion to meet high energy demands. This is why muscle cells, which need abundant energy, contain mitochondria with especially dense cristae.</p></div></div><div class='card'><div class='card-header'><div class='card-icon'>🏭</div><h2>The Endomembrane System: Protein Factory</h2></div><p>The <span class='key-term'>endomembrane system</span> is a network of membranes that work together to synthesise, modify, package, and transport proteins and lipids. It includes the endoplasmic reticulum (ER), Golgi apparatus, and transport vesicles.</p><h3>Endoplasmic Reticulum (ER)</h3><p>The ER is a network of membranous tubules and sacs continuous with the nuclear envelope. It exists in two forms:</p><div class='table-wrap'><table><thead><tr><th>Feature</th><th>Rough ER</th><th>Smooth ER</th></tr></thead><tbody><tr><td><strong>Appearance</strong></td><td>Studded with ribosomes (looks 'rough')</td><td>Lacks ribosomes (looks 'smooth')</td></tr><tr><td><strong>Function</strong></td><td>Protein synthesis and modification</td><td>Lipid synthesis and detoxification</td></tr><tr><td><strong>Location</strong></td><td>Abundant in cells secreting proteins (pancreas, plasma cells)</td><td>Abundant in liver cells (detoxification) and hormone-producing cells</td></tr><tr><td><strong>Products</strong></td><td>Membrane proteins, secretory proteins, lysosomal enzymes</td><td>Steroid hormones, phospholipids, detoxified compounds</td></tr></tbody></table></div><h3>Golgi Apparatus</h3><p>The <span class='key-term'>Golgi apparatus</span> acts as the cell's 'post office'—it receives proteins from the ER, modifies them, packages them into vesicles, and ships them to their final destinations.</p><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>🧬</span><h4>1. CIS FACE (Receiving)</h4><p>Transport vesicles from ER fuse with cis face and release proteins into Golgi.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-2'><span class='icon'>⚙️</span><h4>2. PROCESSING</h4><p>Proteins are modified—carbohydrate groups added (glycosylation), phosphate groups attached, or proteins folded correctly.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-3'><span class='icon'>📦</span><h4>3. TRANS FACE (Shipping)</h4><p>Modified proteins are sorted and packaged into vesicles for transport to final destinations.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-4'><span class='icon'>🚚</span><h4>4. DESTINATION</h4><p>Vesicles transport proteins to: cell membrane (for secretion), lysosomes, or other organelles.</p></div></div></div><div class='card'><div class='card-header'><div class='card-icon'>🔄</div><h2>Protein Synthesis and Transport Pathway</h2></div><p>Understanding how proteins travel from synthesis to their final destination illustrates how organelles work together as an integrated system.</p><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>🧬</span><h4>STEP 1: NUCLEUS</h4><p>Gene transcription: DNA → mRNA. mRNA exits through nuclear pores.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-2'><span class='icon'>🏭</span><h4>STEP 2: RIBOSOME</h4><p>Translation: mRNA → polypeptide chain. Free ribosomes make cytosolic proteins; bound ribosomes make membrane/secreted proteins.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-3'><span class='icon'>📍</span><h4>STEP 3: ROUGH ER</h4><p>Protein folding and modification. Signal sequences direct proteins into ER lumen.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-4'><span class='icon'>⚙️</span><h4>STEP 4: GOLGI APPARATUS</h4><p>Further modification, sorting, and packaging into transport vesicles.</p></div><div class='flow-arrow'>↓</div><div class='flow-box level-1'><span class='icon'>🚚</span><h4>STEP 5: DESTINATION</h4><p>Secreted proteins → plasma membrane → exocytosis. Lysosomal proteins → lysosomes. Membrane proteins → plasma membrane.</p></div></div><div class='worked-example'><h4>📝 Worked Example: Protein Journey</h4><p><strong>Question:</strong> Trace the journey of an enzyme that will be secreted from a pancreatic cell, naming each organelle involved.</p><p><strong>Answer:</strong> (1) <strong>Nucleus</strong>: Gene for enzyme is transcribed into mRNA. (2) mRNA exits nuclear pores and binds to ribosomes on the <strong>rough ER</strong> where the enzyme is synthesised. (3) Enzyme enters ER lumen for folding. (4) Transport vesicles carry enzyme to <strong>Golgi apparatus</strong> for modification and packaging. (5) Secretory vesicles transport enzyme to plasma membrane. (6) <strong>Exocytosis</strong> releases enzyme outside cell.</p></div></div><div class='card'><div class='card-header'><div class='card-icon'>🗑️</div><h2>Lysosomes: Cellular Recycling</h2></div><p><span class='key-term'>Lysosomes</span> are membrane-bound vesicles containing hydrolytic enzymes (acid hydrolases) that break down waste materials, cellular debris, and foreign invaders. They function as the cell's recycling and waste disposal system.</p><div class='table-wrap'><table><thead><tr><th>Function</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td><strong>Digestion</strong></td><td>Break down macromolecules into monomers</td><td>Digesting food particles brought in by endocytosis</td></tr><tr><td><strong>Autophagy</strong></td><td>Recycle damaged organelles</td><td>Breaking down old mitochondria (mitophagy)</td></tr><tr><td><strong>Apoptosis</strong></td><td>Programmed cell death</td><td>Digesting cell components during development</td></tr><tr><td><strong>Defence</strong></td><td>Destroy bacteria and viruses</td><td>White blood cells digesting pathogens</td></tr></tbody></table></div><div class='warning-box'><strong>🚫 Exam Trap:</strong> Lysosomes are found mainly in <em>animal</em> cells. Plant cells have vacuoles that perform some similar functions but true lysosomes are rare in plants. Do not say lysosomes are present in all eukaryotic cells.</div></div><div class='card'><div class='card-header'><div class='card-icon'>⚖️</div><h2>Animal vs Plant Cells</h2></div><p>While animal and plant cells are both eukaryotic and share many organelles, they have distinct structural differences that reflect their different functions and lifestyles.</p><div class='table-wrap'><table><thead><tr><th>Feature</th><th>Animal Cell</th><th>Plant Cell</th></tr></thead><tbody><tr><td><strong>Cell Wall</strong></td><td>❌ Absent</td><td>✅ Present (cellulose)</td></tr><tr><td><strong>Chloroplasts</strong></td><td>❌ Absent</td><td>✅ Present (photosynthesis)</td></tr><tr><td><strong>Large Central Vacuole</strong></td><td>❌ Small or absent</td><td>✅ Large, maintains turgor pressure</td></tr><tr><td><strong>Lysosomes</strong></td><td>✅ Present</td><td>❌ Rare/absent (vacuole does digestion)</td></tr><tr><td><strong>Centrioles</strong></td><td>✅ Present (cell division)</td><td>❌ Absent (except lower plants)</td></tr><tr><td><strong>Shape</strong></td><td>Irregular, flexible</td><td>Fixed, rectangular (due to cell wall)</td></tr><tr><td><strong>Energy Storage</strong></td><td>Glycogen</td><td>Starch</td></tr><tr><td><strong>Nucleus Position</strong></td><td>Central</td><td>Peripheral (pushed to edge by vacuole)</td></tr></tbody></table></div><div class='info-box'><strong>💡 Shared Features:</strong> Both cell types contain: nucleus, mitochondria, ER (rough and smooth), Golgi apparatus, ribosomes, cell membrane, and cytoplasm. These shared organelles reflect their common eukaryotic ancestry.</div></div><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Nucleus</h4><ul><li>Control centre containing DNA</li><li>Double membrane with pores</li><li>Nucleolus makes ribosomes</li><li>Chromatin stores genetic info</li></ul></div><div class='copy-item'><h4>Mitochondria</h4><ul><li>Powerhouse—produces ATP</li><li>Double membrane; inner folded (cristae)</li><li>Own DNA (evidence for endosymbiosis)</li><li>Site of cellular respiration</li></ul></div><div class='copy-item'><h4>Endomembrane System</h4><ul><li>Rough ER: protein synthesis + ribosomes</li><li>Smooth ER: lipid synthesis, detox</li><li>Golgi: modifies, packages, ships proteins</li><li>Vesicles transport between components</li></ul></div><div class='copy-item'><h4>Lysosomes</h4><ul><li>Contain digestive enzymes</li><li>Break down waste and debris</li><li>Autophagy: recycle old organelles</li><li>Mostly in animal cells</li></ul></div><div class='copy-item'><h4>Animal vs Plant</h4><ul><li>Animals: centrioles, lysosomes, no wall</li><li>Plants: cell wall, chloroplasts, large vacuole</li><li>Both: nucleus, mitochondria, ER, Golgi</li></ul></div><div class='copy-item'><h4>Protein Pathway</h4><ul><li>1. Nucleus: DNA → mRNA</li><li>2. Ribosome: mRNA → protein</li><li>3. Rough ER: folding</li><li>4. Golgi: modification + packaging</li><li>5. Vesicle → destination</li></ul></div></div></div>",
   "contentSections": [
     {
-      "id": "scale-bar-calculation",
-      "type": "worked-example",
-      "title": "Calculation 1 – Using Scale Bars",
-      "icon": "calculator",
-      "content": "Step-by-step worked example for calculating actual size using a scale bar.",
-      "problem": "A micrograph shows a bacterial cell. The scale bar represents 2 µm and measures 10 mm on the page. The cell image measures 25 mm. What is the actual length?",
-      "steps": [
-        "Find the ratio: 10 mm on page = 2 µm actual",
-        "Calculate: 1 mm on page = 2/10 = 0.2 µm actual",
-        "Multiply: 25 mm × 0.2 µm/mm = 5 µm",
-        "Answer: The actual cell length is 5 µm (within prokaryotic range)"
-      ],
-      "checkForUnderstanding": "Why must we use the same units for calculation? (To cancel correctly.)"
-    },
-    {
-      "id": "unit-conversions",
-      "type": "worked-example",
-      "title": "Calculation 2 – Unit Conversions",
-      "icon": "arrow-right-left",
-      "content": "Converting between common units in microscopy.",
-      "problem": "A mitochondrion is 1 µm long. How many nm is this? How many mm?",
-      "steps": [
-        "Conversion ladder: mm → µm → nm (each step ×1000)",
-        "1 µm = 1 × 1000 = 1000 nm",
-        "1 µm = 1 ÷ 1000 = 0.001 mm",
-        "Answer: 1 µm = 1000 nm = 0.001 mm"
-      ]
-    },
-    {
-      "id": "light-vs-electron",
-      "type": "grid",
-      "title": "Light vs Electron Microscopy",
-      "icon": "microscope",
-      "gridItems": [
-        {
-          "header": "Feature",
-          "items": ["Radiation", "Resolution", "Living cells?", "Colour?", "Best for"]
-        },
-        {
-          "header": "Light Microscope",
-          "items": [
-            "Light",
-            "~200 nm",
-            "Yes",
-            "Yes (or stained)",
-            "Whole cells, large organelles (nucleus)"
-          ]
-        },
-        {
-          "header": "Electron Microscope",
-          "items": [
-            "Electrons",
-            "~0.2 nm",
-            "No (must be dead/fixed)",
-            "Black/white",
-            "Small organelles (ribosomes), membranes"
-          ]
-        }
-      ],
-      "example": "Viewing COVID-19: LM shows infected cells; EM shows viral particles."
-    },
-    {
-      "id": "specimen-preparation",
+      "id": "overview",
       "type": "content",
-      "title": "Specimen Preparation",
-      "icon": "flask",
-      "content": "For EM: Fixation (preserves structure), dehydration (removes water), staining with heavy metals (adds contrast). For LM: Wet mounts, simple stains (iodine).",
-      "example": "Diagnosing viral infections—EM used to identify virus shape in early outbreaks."
+      "title": "Overview: The Animal Cell",
+      "icon": "building",
+      "content": "Animal cells are eukaryotic cells lacking cell walls and chloroplasts but containing sophisticated membrane-bound organelles working together to maintain life."
+    },
+    {
+      "id": "nucleus",
+      "type": "content",
+      "title": "The Nucleus: Command Centre",
+      "icon": "dna",
+      "content": "The nucleus houses genetic material (DNA) and controls cellular activities. Contains nuclear envelope with pores, chromatin, and nucleolus."
+    },
+    {
+      "id": "mitochondria",
+      "type": "content",
+      "title": "Mitochondria: Powerhouses",
+      "icon": "zap",
+      "content": "Mitochondria generate ATP through cellular respiration. Double membrane with folded cristae. Evidence supports endosymbiotic origin."
+    },
+    {
+      "id": "endomembrane",
+      "type": "content",
+      "title": "The Endomembrane System",
+      "icon": "factory",
+      "content": "Network of membranes including rough ER (protein synthesis), smooth ER (lipid synthesis), and Golgi apparatus (processing and packaging)."
+    },
+    {
+      "id": "protein-transport",
+      "type": "content",
+      "title": "Protein Synthesis and Transport",
+      "icon": "refresh-cw",
+      "content": "Proteins travel from nucleus → ribosome → rough ER → Golgi → destination. Illustrates integrated organelle function."
+    },
+    {
+      "id": "lysosomes",
+      "type": "content",
+      "title": "Lysosomes: Cellular Recycling",
+      "icon": "trash-2",
+      "content": "Membrane-bound vesicles with digestive enzymes. Break down waste, recycle organelles (autophagy), and defend against pathogens."
+    },
+    {
+      "id": "animal-vs-plant",
+      "type": "content",
+      "title": "Animal vs Plant Cells",
+      "icon": "scale",
+      "content": "Key differences: animals lack cell walls and chloroplasts; plants lack centrioles and lysosomes. Both share core eukaryotic organelles."
     }
   ],
-  
   "activities": [
     {
-      "id": "size-calculations",
+      "id": "organelle-matching",
       "type": "matching",
-      "title": "Match Calculations to Answers",
-      "description": "Practice unit conversions and size calculations.",
-      "learningObjective": "Calculate actual sizes using scale bars and unit conversions.",
-      "theme": "teal",
-      "xpReward": 75,
-      "items": [
-        { "id": "scale-calc", "text": "Scale bar: 5 µm = 10 mm. Cell: 30 mm.", "match": "15 µm actual size" },
-        { "id": "nm-to-um", "text": "Convert 500 nm to µm", "match": "0.5 µm" },
-        { "id": "mm-to-um", "text": "Convert 0.02 mm to µm", "match": "20 µm" },
-        { "id": "um-to-nm", "text": "Convert 2 µm to nm", "match": "2000 nm" },
-        { "id": "scale-ratio", "text": "10 mm on page = 2 µm actual. Ratio is:", "match": "1 mm = 0.2 µm" }
+      "title": "Match Organelle to Function",
+      "description": "Match each organelle with its primary function.",
+      "theme": "blue",
+      "xpReward": 50,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Nucleus",
+          "right": "Stores genetic information and controls cell activities"
+        },
+        {
+          "id": "pair2",
+          "left": "Mitochondria",
+          "right": "Produces ATP through cellular respiration"
+        },
+        {
+          "id": "pair3",
+          "left": "Rough ER",
+          "right": "Synthesises and modifies proteins"
+        },
+        {
+          "id": "pair4",
+          "left": "Smooth ER",
+          "right": "Synthesises lipids and detoxifies"
+        },
+        {
+          "id": "pair5",
+          "left": "Golgi Apparatus",
+          "right": "Processes, packages, and distributes proteins"
+        },
+        {
+          "id": "pair6",
+          "left": "Lysosomes",
+          "right": "Digests waste and recycles organelles"
+        }
       ]
     },
     {
-      "id": "microscope-selection",
-      "type": "matching",
-      "title": "Select the Right Microscope",
-      "description": "Match each scenario with the appropriate microscope type.",
-      "learningObjective": "Select appropriate microscope for viewing specific structures.",
-      "theme": "purple",
-      "xpReward": 50,
+      "id": "protein-pathway-ordering",
+      "type": "ordering",
+      "title": "Order the Protein Pathway",
+      "description": "Arrange the steps of protein synthesis and transport in the correct sequence.",
+      "theme": "teal",
+      "xpReward": 60,
       "items": [
-        { "id": "living-amoeba", "text": "View living amoeba moving", "match": "Light microscope" },
-        { "id": "ribosomes", "text": "See ribosomes on ER", "match": "TEM (Transmission EM)" },
-        { "id": "pollen-surface", "text": "View 3D surface of pollen grain", "match": "SEM (Scanning EM)" },
-        { "id": "chromosomes", "text": "Count chromosomes during mitosis", "match": "Light microscope" }
+        {
+          "id": "step1",
+          "text": "Nucleus: Gene transcribed to mRNA",
+          "position": 1
+        },
+        {
+          "id": "step2",
+          "text": "Ribosome: mRNA translated to protein",
+          "position": 2
+        },
+        {
+          "id": "step3",
+          "text": "Rough ER: Protein folding and modification",
+          "position": 3
+        },
+        {
+          "id": "step4",
+          "text": "Golgi Apparatus: Processing and packaging",
+          "position": 4
+        },
+        {
+          "id": "step5",
+          "text": "Vesicle: Transport to destination",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "id": "structure-function-matching",
+      "type": "matching",
+      "title": "Match Structure to Function",
+      "description": "Match each structural feature with how it enables function.",
+      "theme": "indigo",
+      "xpReward": 50,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Mitochondrial cristae",
+          "right": "Increased surface area for ATP production"
+        },
+        {
+          "id": "pair2",
+          "left": "Nuclear pores",
+          "right": "Allow selective transport between nucleus and cytoplasm"
+        },
+        {
+          "id": "pair3",
+          "left": "Ribosomes on rough ER",
+          "right": "Enable protein synthesis close to modification site"
+        },
+        {
+          "id": "pair4",
+          "left": "Golgi cisternae",
+          "right": "Provide compartments for sequential processing"
+        }
+      ]
+    },
+    {
+      "id": "animal-plant-classification",
+      "type": "classification",
+      "title": "Animal vs Plant Cell Features",
+      "description": "Classify each feature as found in animal cells, plant cells, or both.",
+      "theme": "green",
+      "xpReward": 60,
+      "categories": [
+        {
+          "id": "animal",
+          "label": "Animal Only",
+          "description": "Features found only in animal cells"
+        },
+        {
+          "id": "plant",
+          "label": "Plant Only",
+          "description": "Features found only in plant cells"
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "description": "Features found in both cell types"
+        }
       ],
-      "correctApproach": "Living amoeba = Light; Ribosomes = TEM; Surface = SEM; Chromosomes = Light (stained)."
+      "items": [
+        {
+          "id": "centrioles",
+          "text": "Centrioles",
+          "category": "animal"
+        },
+        {
+          "id": "cell-wall",
+          "text": "Cell wall",
+          "category": "plant"
+        },
+        {
+          "id": "chloroplasts",
+          "text": "Chloroplasts",
+          "category": "plant"
+        },
+        {
+          "id": "lysosomes",
+          "text": "Lysosomes",
+          "category": "animal"
+        },
+        {
+          "id": "mitochondria",
+          "text": "Mitochondria",
+          "category": "both"
+        },
+        {
+          "id": "nucleus",
+          "text": "Nucleus",
+          "category": "both"
+        },
+        {
+          "id": "large-vacuole",
+          "text": "Large central vacuole",
+          "category": "plant"
+        },
+        {
+          "id": "golgi",
+          "text": "Golgi apparatus",
+          "category": "both"
+        }
+      ]
     }
   ],
-  
   "assessment": {
-    "multipleChoice": [
+    "mcq": [
       {
-        "id": "mcq-1",
-        "question": "The maximum resolution of a compound light microscope is approximately:",
-        "options": [
-          "0.2 nm",
-          "200 nm",
-          "2 µm",
-          "2 mm"
-        ],
-        "correctAnswer": "200 nm",
-        "rationale": "Tests the Abbe limit/basic specification. Light microscopes are limited by wavelength of visible light to about 200 nm resolution."
-      },
-      {
-        "id": "mcq-2",
-        "question": "If the magnification of a micrograph is ×400 and the image size is 20 mm, the actual size is:",
-        "options": [
-          "0.05 mm",
-          "0.5 mm = 500 µm",
-          "0.05 mm = 50 µm",
-          "8000 mm"
-        ],
-        "correctAnswer": "0.05 mm = 50 µm",
-        "rationale": "Tests formula manipulation and unit conversion. Actual size = Image size ÷ Magnification = 20mm ÷ 400 = 0.05mm = 50µm."
-      },
-      {
-        "id": "mcq-3",
-        "question": "Which structure requires an electron microscope to be seen?",
+        "id": "mcq1",
+        "question": "Which organelle is responsible for producing ATP through cellular respiration?",
         "options": [
           "Nucleus",
-          "Chloroplast",
-          "Ribosomes",
-          "Cell wall"
+          "Mitochondria",
+          "Golgi apparatus",
+          "Lysosomes"
         ],
-        "correctAnswer": "Ribosomes",
-        "rationale": "Tests size vs resolution limit. Ribosomes (~25 nm) are smaller than the 200 nm limit of light microscopes. Nucleus, chloroplasts and cell walls are visible with LM."
-      }
-    ],
-    "shortAnswer": [
-      {
-        "id": "sa-1",
-        "question": "Distinguish between magnification and resolution. (2 marks)",
-        "marks": 2,
-        "markingCriteria": [
-          "1 mark: Magnification is the degree of enlargement of the image",
-          "1 mark: Resolution is the ability to distinguish two separate points as distinct/level of detail"
-        ],
-        "commonError": "Defining resolution as 'how big it looks.'"
+        "correct": 1,
+        "explanation": "Mitochondria are the powerhouses of the cell, producing ATP through cellular respiration.",
+        "marks": 1
       },
       {
-        "id": "sa-2",
-        "question": "A student views a cell using a ×40 objective lens and a ×10 eyepiece. The field of view at this magnification is 0.4 mm. Calculate the actual width of a cell that takes up half the field of view. Show your working. (2 marks)",
-        "marks": 2,
-        "markingCriteria": [
-          "1 mark: Correct calculation of actual size (0.2 mm or 200 µm)",
-          "1 mark: Correct working shown (0.4 mm ÷ 2, or total mag = 400× then calculation)"
+        "id": "mcq2",
+        "question": "What is the function of the nuclear pores?",
+        "options": [
+          "To produce ribosomes",
+          "To allow selective transport between nucleus and cytoplasm",
+          "To store genetic information",
+          "To synthesise proteins"
         ],
-        "note": "Accept 200 µm or 0.2 mm."
+        "correct": 1,
+        "explanation": "Nuclear pores regulate the passage of molecules between the nucleus and cytoplasm.",
+        "marks": 1
+      },
+      {
+        "id": "mcq3",
+        "question": "Which statement correctly distinguishes rough ER from smooth ER?",
+        "options": [
+          "Rough ER lacks ribosomes; smooth ER has ribosomes",
+          "Rough ER has ribosomes; smooth ER lacks ribosomes",
+          "Rough ER produces lipids; smooth ER produces proteins",
+          "There is no difference between them"
+        ],
+        "correct": 1,
+        "explanation": "Rough ER is studded with ribosomes for protein synthesis, while smooth ER lacks ribosomes and synthesises lipids.",
+        "marks": 1
+      },
+      {
+        "id": "mcq4",
+        "question": "Which feature is found in plant cells but NOT in animal cells?",
+        "options": [
+          "Mitochondria",
+          "Cell wall",
+          "Nucleus",
+          "Ribosomes"
+        ],
+        "correct": 1,
+        "explanation": "Plant cells have a cell wall made of cellulose; animal cells lack a cell wall.",
+        "marks": 1
+      },
+      {
+        "id": "mcq5",
+        "question": "What is the correct order of protein transport through the endomembrane system?",
+        "options": [
+          "Golgi → Rough ER → Nucleus",
+          "Rough ER → Golgi → Final destination",
+          "Nucleus → Golgi → Rough ER",
+          "Final destination → Golgi → Rough ER"
+        ],
+        "correct": 1,
+        "explanation": "Proteins are synthesised on rough ER, modified in the Golgi, then transported to their final destination.",
+        "marks": 1
+      }
+    ],
+    "saq": [
+      {
+        "id": "saq1",
+        "question": "Describe the structure of the mitochondrion and explain how its structure is adapted for ATP production.",
+        "marks": 4,
+        "markingCriteria": [
+          "1 mark: Double membrane structure described",
+          "1 mark: Cristae mentioned as folds of inner membrane",
+          "2 marks: Explanation of how cristae increase surface area for ATP synthesis"
+        ],
+        "modelAnswer": "The mitochondrion has a double membrane structure. The outer membrane is smooth, while the inner membrane is highly folded into structures called cristae. These folds dramatically increase the surface area available for the electron transport chain and ATP synthase enzymes. Greater surface area means more proteins can be embedded in the membrane, enabling more ATP to be produced simultaneously. This structural adaptation allows mitochondria to meet high cellular energy demands efficiently."
+      },
+      {
+        "id": "saq2",
+        "question": "Outline the pathway of a secretory protein from gene to export, naming each organelle involved and its role.",
+        "marks": 5,
+        "markingCriteria": [
+          "1 mark: Nucleus - transcription of gene to mRNA",
+          "1 mark: Ribosome - translation to protein",
+          "1 mark: Rough ER - protein folding",
+          "1 mark: Golgi apparatus - modification and packaging",
+          "1 mark: Vesicle transport and exocytosis"
+        ],
+        "modelAnswer": "(1) Nucleus: The gene is transcribed into mRNA which exits through nuclear pores. (2) Ribosomes on rough ER: mRNA is translated into a polypeptide chain. (3) Rough ER: The protein folds into its functional shape and enters the ER lumen. (4) Golgi apparatus: The protein is further modified, sorted, and packaged into secretory vesicles. (5) Vesicles transport the protein to the plasma membrane where exocytosis releases it outside the cell."
+      },
+      {
+        "id": "saq3",
+        "question": "Compare and contrast animal and plant cells, identifying at least three structural differences and explaining how each difference relates to function.",
+        "marks": 6,
+        "markingCriteria": [
+          "2 marks per difference: 1 for identifying difference, 1 for explaining function (×3 differences)"
+        ],
+        "modelAnswer": "(1) Cell wall: Plant cells have a rigid cellulose cell wall providing structural support and protection; animal cells lack this, allowing flexibility for movement. (2) Chloroplasts: Plant cells contain chloroplasts for photosynthesis, enabling them to produce their own food; animal cells must obtain energy by consuming other organisms. (3) Large central vacuole: Plants have a large vacuole that maintains turgor pressure against the cell wall; animal cells have small or no vacuoles, as they do not need turgor pressure for rigidity. These differences reflect plants' sessile, autotrophic lifestyle versus animals' mobile, heterotrophic lifestyle."
       }
     ]
   },
-  
-  "copyToBook": {
-    "definitions": [
-      "Resolution = ability to distinguish detail; limited by wavelength of light (~200 nm for LM).",
-      "Magnification = how much bigger the image is than the object.",
-      "Light microscopes: use light, max resolution 200 nm, can view living cells.",
-      "Electron microscopes: use electrons, resolution ~0.2 nm, specimens must be dead.",
-      "Conversion: 1 mm = 1000 µm = 1,000,000 nm."
+  "answers": {
+    "activities": [
+      {
+        "activityId": "organelle-matching",
+        "title": "Activity 1: Match Organelle to Function",
+        "content": "<p><strong>Nucleus</strong> → Stores genetic information</p><p><strong>Mitochondria</strong> → Produces ATP</p><p><strong>Rough ER</strong> → Synthesises proteins</p><p><strong>Smooth ER</strong> → Synthesises lipids</p><p><strong>Golgi Apparatus</strong> → Processes and packages proteins</p><p><strong>Lysosomes</strong> → Digests waste</p>"
+      },
+      {
+        "activityId": "protein-pathway-ordering",
+        "title": "Activity 2: Protein Pathway",
+        "content": "<p>Correct order:</p><ol><li>Nucleus: Gene transcribed to mRNA</li><li>Ribosome: mRNA translated to protein</li><li>Rough ER: Protein folding and modification</li><li>Golgi Apparatus: Processing and packaging</li><li>Vesicle: Transport to destination</li></ol>"
+      },
+      {
+        "activityId": "structure-function-matching",
+        "title": "Activity 3: Structure-Function",
+        "content": "<p><strong>Cristae</strong> → Increased surface area for ATP</p><p><strong>Nuclear pores</strong> → Selective transport</p><p><strong>Ribosomes on ER</strong> → Protein synthesis near modification site</p><p><strong>Golgi cisternae</strong> → Compartments for sequential processing</p>"
+      },
+      {
+        "activityId": "animal-plant-classification",
+        "title": "Activity 4: Animal vs Plant",
+        "content": "<p><strong>Animal Only:</strong> Centrioles, lysosomes</p><p><strong>Plant Only:</strong> Cell wall, chloroplasts, large central vacuole</p><p><strong>Both:</strong> Mitochondria, nucleus, Golgi apparatus</p>"
+      }
     ],
-    "keyPoints": [
-      "Formula: Actual size = Image size ÷ Magnification",
-      "Empty magnification = bigger but not clearer (no resolution)",
-      "TEM = internal structures; SEM = 3D surface",
-      "Ribosomes need EM (< 200 nm); nucleus visible with LM"
-    ],
-    "diagrams": []
-  },
-  
-  "answerKey": {
-    "multipleChoice": ["B", "C", "C"],
-    "shortAnswer": [
-      "Magnification refers to how much larger the image is compared to the actual object, calculated as image size divided by actual size. Resolution is the ability to distinguish two separate points as distinct objects, which determines the level of detail visible.",
-      "Working: Total magnification = 40 × 10 = 400×. Cell takes up half the field of view = 0.4 mm ÷ 2 = 0.2 mm. Converting to µm: 0.2 mm = 200 µm. Therefore, the actual cell width is 0.2 mm or 200 µm."
+    "assessment": [
+      {
+        "questionId": "mcq1",
+        "question": "Which organelle produces ATP?",
+        "answer": "B - Mitochondria",
+        "explanation": "Mitochondria are the powerhouses of the cell, producing ATP through cellular respiration."
+      },
+      {
+        "questionId": "mcq2",
+        "question": "What is the function of nuclear pores?",
+        "answer": "B - Allow selective transport between nucleus and cytoplasm",
+        "explanation": "Nuclear pores regulate molecular passage between nucleus and cytoplasm."
+      },
+      {
+        "questionId": "mcq3",
+        "question": "Rough ER vs smooth ER distinction?",
+        "answer": "B - Rough ER has ribosomes; smooth ER lacks ribosomes",
+        "explanation": "Rough ER is studded with ribosomes for protein synthesis; smooth ER lacks ribosomes and makes lipids."
+      },
+      {
+        "questionId": "mcq4",
+        "question": "Feature in plant cells but not animal cells?",
+        "answer": "B - Cell wall",
+        "explanation": "Plant cells have a cellulose cell wall; animal cells lack this structure."
+      },
+      {
+        "questionId": "mcq5",
+        "question": "Correct protein transport order?",
+        "answer": "B - Rough ER → Golgi → Final destination",
+        "explanation": "Proteins are made on rough ER, processed in Golgi, then shipped to destination."
+      },
+      {
+        "questionId": "saq1",
+        "question": "Mitochondrion structure and ATP production.",
+        "answer": "The mitochondrion has a double membrane with the inner membrane folded into cristae. These folds increase surface area for electron transport chain proteins and ATP synthase, enabling more ATP production simultaneously."
+      },
+      {
+        "questionId": "saq2",
+        "question": "Secretory protein pathway.",
+        "answer": "Nucleus (transcription) → Ribosomes on rough ER (translation) → Rough ER (folding) → Golgi (modification/packaging) → Vesicles → Exocytosis at plasma membrane."
+      },
+      {
+        "questionId": "saq3",
+        "question": "Animal vs plant cell comparison.",
+        "answer": "Cell wall (plants only) provides rigidity; chloroplasts (plants) enable photosynthesis; large vacuole (plants) maintains turgor; centrioles (animals) aid division; lysosomes (animals) digest waste."
+      }
     ]
   },
-  
-  "prerequisites": [
-    {
-      "lessonId": "module-1-cells-lesson-1",
-      "description": "Cell sizes: prokaryotes 1–10 µm",
-      "required": true
-    },
-    {
-      "lessonId": "module-1-cells-lesson-2",
-      "description": "Eukaryotes 10–100 µm; nucleoid vs nucleus, ribosomes",
-      "required": true
-    }
-  ],
-  
+  "copyToBook": {
+    "title": "The Animal Cell",
+    "sections": [
+      {
+        "title": "Nucleus",
+        "content": [
+          "Control centre containing DNA",
+          "Double membrane with pores",
+          "Nucleolus makes ribosomes",
+          "Chromatin stores genetic info"
+        ]
+      },
+      {
+        "title": "Mitochondria",
+        "content": [
+          "Powerhouse—produces ATP",
+          "Double membrane; inner folded (cristae)",
+          "Own DNA (endosymbiosis evidence)",
+          "Site of cellular respiration"
+        ]
+      },
+      {
+        "title": "Endomembrane System",
+        "content": [
+          "Rough ER: protein synthesis + ribosomes",
+          "Smooth ER: lipid synthesis, detox",
+          "Golgi: modifies, packages, ships proteins",
+          "Vesicles transport between components"
+        ]
+      },
+      {
+        "title": "Lysosomes",
+        "content": [
+          "Contain digestive enzymes",
+          "Break down waste and debris",
+          "Autophagy: recycle old organelles",
+          "Mostly in animal cells"
+        ]
+      },
+      {
+        "title": "Protein Pathway",
+        "content": [
+          "1. Nucleus: DNA → mRNA",
+          "2. Ribosome: mRNA → protein",
+          "3. Rough ER: folding",
+          "4. Golgi: modification + packaging",
+          "5. Vesicle → destination"
+        ]
+      },
+      {
+        "title": "Animal vs Plant",
+        "content": [
+          "Animals: centrioles, lysosomes, no wall",
+          "Plants: cell wall, chloroplasts, large vacuole",
+          "Both: nucleus, mitochondria, ER, Golgi"
+        ]
+      }
+    ]
+  },
   "navigation": {
     "previous": "module-1-cells-lesson-2",
-    "previousTitle": "Eukaryotic Cell Compartmentalisation",
+    "previousTitle": "Prokaryotic vs Eukaryotic Cells: Evolution of Complexity",
     "next": "module-1-cells-lesson-4",
-    "nextTitle": "Nucleus, Chromatin and Ribosomes"
+    "nextTitle": "The Plant Cell: Specialised for Photosynthesis and Support"
   },
-  
   "meta": {
-    "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
     "version": "2.0.0",
-    "tags": ["microscopy", "magnification", "resolution", "light microscope", "electron microscope", "calculations", "Module 1"]
-  },
-  
-  "imageLibrary": [
-    {
-      "id": "light-microscope-diagram",
-      "src": "assets/images/mod1/lesson03/light-microscope-diagram.webp",
-      "alt": "Diagram of compound light microscope",
-      "caption": "Compound light microscope structure"
-    },
-    {
-      "id": "lm-vs-tem-comparison",
-      "src": "assets/images/mod1/lesson03/lm-vs-tem-comparison.webp",
-      "alt": "Comparison of light vs electron microscope images",
-      "caption": "Comparing LM and TEM images of the same cell type"
-    },
-    {
-      "id": "scale-bar-example",
-      "src": "assets/images/mod1/lesson03/scale-bar-example.webp",
-      "alt": "Micrograph showing scale bar measurement",
-      "caption": "Using a scale bar to calculate actual size"
-    },
-    {
-      "id": "tem-mitochondria",
-      "src": "assets/images/mod1/lesson03/tem-mitochondria.webp",
-      "alt": "TEM image of mitochondria",
-      "caption": "Transmission electron micrograph showing internal membrane structure"
-    },
-    {
-      "id": "sem-pollen",
-      "src": "assets/images/mod1/lesson03/sem-pollen.webp",
-      "alt": "SEM image of pollen grains",
-      "caption": "Scanning electron micrograph showing 3D surface detail"
-    }
-  ]
+    "format": "V2.0",
+    "tags": ["animal-cell", "organelles", "nucleus", "mitochondria", "endomembrane-system", "lysosomes"]
+  }
 }

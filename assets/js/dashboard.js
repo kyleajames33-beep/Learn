@@ -77,7 +77,7 @@ const DashboardManager = {
         <span class="quick-stat-label">Day Streak</span>
       </div>
       <div class="quick-stat">
-        <span class="quick-stat-value">${stats.xp.currentXP || 0}</span>
+        <span class="quick-stat-value">${stats.xp.totalXP || 0}</span>
         <span class="quick-stat-label">XP Total</span>
       </div>
       <div class="quick-stat">
@@ -96,11 +96,11 @@ const DashboardManager = {
     if (!container) return;
     
     const xpData = stats.xp;
-    const level = XPManager.calculateLevel(xpData.currentXP);
+    const level = XPManager.calculateLevel(xpData.totalXP);
     const rank = XPManager.getRankForLevel(level);
     const nextLevelXP = level * 200;
     const currentLevelXP = (level - 1) * 200;
-    const xpInLevel = xpData.currentXP - currentLevelXP;
+    const xpInLevel = xpData.totalXP - currentLevelXP;
     const xpNeeded = nextLevelXP - currentLevelXP;
     const progress = Math.min(100, Math.round((xpInLevel / xpNeeded) * 100));
     
@@ -457,7 +457,7 @@ const DashboardManager = {
         icon: 'flame',
         title: 'Start a Learning Streak',
         reason: 'Build consistency with daily practice',
-        link: './module-1-cells/lesson-1.html'
+        link: './lesson.html?lesson=module-1-cells-lesson-1'
       });
     }
     
@@ -466,7 +466,7 @@ const DashboardManager = {
         icon: 'book-open',
         title: 'Complete Module 1: Cells',
         reason: 'Foundation for all HSC Biology',
-        link: './module-1-cells/lesson-1.html'
+        link: './lesson.html?lesson=module-1-cells-lesson-1'
       });
     }
     
@@ -483,7 +483,7 @@ const DashboardManager = {
       icon: 'zap',
       title: 'Practice with Mini-Games',
       reason: 'Reinforce learning through play',
-      link: './module-1-cells/lesson-4.html'
+      link: './lesson.html?lesson=module-1-cells-lesson-4'
     });
     
     container.innerHTML = recommendations.slice(0, 3).map(rec => `

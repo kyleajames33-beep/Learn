@@ -1379,6 +1379,23 @@ const LessonRenderer = {
    * Render fill-in-the-blank activity
    */
   renderFillBlankActivity(activity, theme) {
+    const items = activity.items || [];
+    
+    if (items.length === 0) {
+      return `
+        <div class="activity-card activity-card--${theme} reveal" data-activity="${activity.id}">
+          <div class="activity-card-header">
+            <i data-lucide="list-checks"></i>
+            <h3>${activity.title || 'Activity'}</h3>
+          </div>
+          <div class="activity-card-body">
+            ${activity.description ? `<p style="margin-bottom: 16px;">${activity.description}</p>` : ''}
+            <div class="answer-area">Complete this activity in your workbook...</div>
+          </div>
+        </div>
+      `;
+    }
+    
     return `
       <div class="activity-card activity-card--${theme} reveal" data-activity="${activity.id}">
         <div class="activity-card-header">
@@ -1389,12 +1406,12 @@ const LessonRenderer = {
           ${activity.description ? `<p style="margin-bottom: 16px;">${activity.description}</p>` : ''}
           <div class="fill-blank-form">
             <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-              ${activity.items.map((item, index) => `
+              ${items.map((item, index) => `
                 <div style="flex: 1; min-width: 200px;">
-                  <label style="display: block; margin-bottom: 8px; font-weight: 600;">${index + 1}. ${item.label}</label>
+                  <label style="display: block; margin-bottom: 8px; font-weight: 600;">${index + 1}. ${item.label || item.text || 'Item'}</label>
                   <input type="text" 
                          class="modern-input modern-input--small" 
-                         data-correct="${item.correctAnswer}" 
+                         data-correct="${item.correctAnswer || ''}" 
                          maxlength="${item.maxLength || 10}" 
                          placeholder="${item.placeholder || 'Answer'}">
                 </div>

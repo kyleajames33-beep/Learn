@@ -46,6 +46,7 @@ END SESSION
 - [ ] Check `docs/trackers/BUG-LOG.md` for critical issues
 - [ ] **If enhancing to V2.0:** Review `docs/LESSON-DESIGN-SPEC.md` for design reference
 - [ ] **If wrapping HTML into JSON:** Review `docs/CONTENT-AUTHOR-GUIDE.md` for CSS classes and structure
+- [ ] **If touching gamification:** Check `docs/goals/PHASE-3-GAMIFICATION.md` "Already Built" section — do NOT rebuild existing systems
 
 ### Session End Checklist
 - [ ] **Verification suite passed** — `node scripts/run-all-checks.js` exits 0

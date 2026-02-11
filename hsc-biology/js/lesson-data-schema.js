@@ -409,12 +409,25 @@ const LessonSchema = {
    */
   validate(data) {
     const errors = [];
-    
+
+    // Determine format
+    const isV2 = data.v2 === true || data.version === 2 || data.version === '2.0' || !!data.contentHTML;
+
+    // V2 lessons require contentHTML instead of contentSections
+    const requiredFields = isV2
+      ? this.definition.required.filter(f => f !== 'contentSections')
+      : this.definition.required;
+
     // Check required fields
-    for (const field of this.definition.required) {
+    for (const field of requiredFields) {
       if (data[field] === undefined || data[field] === null) {
         errors.push(`Missing required field: ${field}`);
       }
+    }
+
+    // V2-specific: must have contentHTML
+    if (isV2 && (!data.contentHTML || typeof data.contentHTML !== 'string')) {
+      errors.push('V2 lesson missing required field: contentHTML');
     }
     
     // Check field types

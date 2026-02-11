@@ -1,348 +1,503 @@
 {
   "id": "module-1-cells-lesson-4",
-  "title": "Nucleus, Chromatin and Ribosomes",
+  "title": "The Plant Cell: Specialised for Photosynthesis and Support",
   "module": "module-1-cells",
   "moduleTitle": "Cells as the Basis of Life",
   "moduleNumber": 1,
   "lessonNumber": 4,
-  "description": "Detailed exploration of DNA organisation from double helix to chromatin to chromosomes, nucleolus function, and the structural differences between 70S and 80S ribosomes.",
-  "duration": "50 minutes",
-  "difficulty": "Intermediate",
+  "description": "Investigate how the plant cell is adapted for photosynthesis, structural support, and water storage through unique features such as the cell wall, large vacuole, and chloroplasts.",
+  "duration": "60 minutes",
+  "difficulty": "Foundation Level",
   "worksOffline": true,
-  
+  "v2": true,
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "🌿",
+    "gradient": "blue-to-purple"
+  },
   "learningIntentions": [
-    "Students can describe the levels of DNA organisation from DNA double helix to chromatin to chromosomes.",
-    "Students can explain the function of the nucleolus in ribosome production.",
-    "Students can distinguish between 70S and 80S ribosomes in terms of location and antibiotic sensitivity."
+    "Students can identify the key distinguishing structures of a plant cell: cell wall, large central vacuole, and chloroplasts",
+    "Students can describe the role of the cell wall, vacuole, and chloroplasts in support, storage, and photosynthesis",
+    "Students can compare and contrast plant and animal cells, highlighting structural differences and their functional consequences",
+    "Students can use terms like chloroplast, cell wall, tonoplast, and central vacuole correctly in explanations"
   ],
-  
+  "successCriteria": [
+    "I can label the main features of a plant cell on a diagram",
+    "I can state the function of each plant-specific structure in 1-2 sentences",
+    "I can compare plant and animal cells in a short table",
+    "I can explain how the large vacuole contributes to water balance and turgor pressure",
+    "I can explain how chloroplasts are adapted for photosynthesis"
+  ],
+  "intentions": {
+    "learning": [
+      "Students can identify the key distinguishing structures of a plant cell: cell wall, large central vacuole, and chloroplasts",
+      "Students can describe the role of the cell wall, vacuole, and chloroplasts in support, storage, and photosynthesis",
+      "Students can compare and contrast plant and animal cells, highlighting structural differences and their functional consequences",
+      "Students can use terms like chloroplast, cell wall, tonoplast, and central vacuole correctly in explanations"
+    ],
+    "connections": [
+      {
+        "topic": "Animal cell organelles",
+        "description": "Prior: nucleus, mitochondria, ER, Golgi"
+      },
+      {
+        "topic": "Photosynthesis",
+        "description": "Future: light-dependent and light-independent stages"
+      },
+      {
+        "topic": "Real World",
+        "description": "Agriculture, plant breeding, drought responses"
+      }
+    ],
+    "success": [
+      "I can label the main features of a plant cell on a diagram",
+      "I can state the function of each plant-specific structure",
+      "I can compare plant and animal cells in a table",
+      "I can explain vacuole role in turgor pressure",
+      "I can explain chloroplast adaptations for photosynthesis"
+    ]
+  },
   "syllabusLinks": {
     "module": "Module 1: Cells as the Basis of Life",
     "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
-    "focus": "DNA organisation, nucleolus function, ribosome structure"
+    "focus": "Plant cell structure: cell wall, vacuole, and chloroplasts"
   },
-  
-  "successCriteria": [
-    "I can describe how DNA is packaged with proteins to form chromatin.",
-    "I can explain why the nucleolus is visible as a dark spot in the nucleus.",
-    "I can explain why antibiotics affect bacterial but not human protein synthesis."
-  ],
-  
-  "engagementHook": {
-    "title": "The Ribosome Factory",
-    "content": "'If a cell needs to make thousands of proteins per second, it needs thousands of ribosomes. Where are these protein-making machines manufactured? In the nucleolus—a factory inside the nucleus that exports ribosome parts 24/7. When cells are very active (like cancer cells), the nucleolus is large and dark. When cells are quiet, it's small.'"
-  },
-  
-  "keyConcepts": [
-    {
-      "term": "Chromatin",
-      "definition": "DNA wrapped around histone proteins forming nucleosomes ('beads on a string'). Allows long DNA (2m) to fit in nucleus (6 µm). Condenses into visible chromosomes during cell division."
-    },
-    {
-      "term": "Nucleolus",
-      "definition": "Dark staining region in nucleus where ribosomal RNA (rRNA) is made and combined with proteins to form ribosomal subunits (40S and 60S). Not membrane-bound."
-    },
-    {
-      "term": "Ribosome Assembly",
-      "definition": "Subunits made in nucleolus → exported through nuclear pores to cytoplasm → assemble into 80S ribosomes when protein synthesis begins."
-    },
-    {
-      "term": "70S vs 80S Ribosomes",
-      "definition": "70S: In prokaryotes (and mitochondria/chloroplasts). Target of antibiotics. 80S: In eukaryotic cytoplasm. Not affected by antibiotics targeting 70S."
-    }
-  ],
-  
-  "misconceptions": [
-    {
-      "misconception": "The nucleolus is a separate organelle",
-      "correction": "It's a region within the nucleus, not a separate membrane-bound structure."
-    },
-    {
-      "misconception": "Ribosomes are only made in the cytoplasm",
-      "correction": "Subunits made in nucleolus, assembled in cytoplasm."
-    },
-    {
-      "misconception": "All ribosomes in human cells are 80S",
-      "correction": "Mitochondria have 70S (evolutionary remnant—preview Lesson 6)."
-    }
-  ],
-  
+  "contentHTML": "<div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>HSC Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>The Plant Cell: Specialised for Photosynthesis and Support</h1><p class='hero-description'>Investigate how the plant cell is adapted for photosynthesis, structural support, and water storage through unique features such as the cell wall, large vacuole, and chloroplasts.</p></div><div class='hero-icon'>🌿</div></div></div><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can identify the key distinguishing structures of a plant cell: cell wall, large central vacuole, and chloroplasts</li><li>Students can describe the role of the cell wall, vacuole, and chloroplasts in support, storage, and photosynthesis</li><li>Students can compare and contrast plant and animal cells, highlighting structural differences and their functional consequences</li><li>Students can use terms like chloroplast, cell wall, tonoplast, and central vacuole correctly in explanations</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Animal cell organelles, organelle function</li><li><strong>Future:</strong> Photosynthesis (light-dependent and light-independent stages)</li><li><strong>Real World:</strong> Agriculture, plant breeding, drought responses</li><li><strong>HSC Skills:</strong> Interpreting diagrams, explaining structure-function</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can label the main features of a plant cell on a diagram</li><li>I can state the function of each plant-specific structure</li><li>I can compare plant and animal cells in a short table</li><li>I can explain how the large vacuole contributes to turgor pressure</li><li>I can explain how chloroplasts are adapted for photosynthesis</li></ul></div></div><div class='card'><div class='card-header'><div class='card-icon'>📊</div><h2>Overview of the Plant Cell</h2></div><p>Plant cells are <span class='key-term'>eukaryotic cells</span> that share many organelles with animal cells (nucleus, mitochondria, ER, Golgi, ribosomes), but are specialised by three key features: the <span class='key-term'>cell wall</span>, the <span class='key-term'>large central vacuole</span>, and <span class='key-term'>chloroplasts</span>.</p><div class='info-box'><strong>💡 Quick Orientation:</strong> In a typical plant cell you will see: A rectangular or fixed-shape outline (due to the <strong>cell wall</strong>); A very large <strong>central vacuole</strong> taking up much of the cell interior; Green-ish bodies scattered near the cell edges—the <strong>chloroplasts</strong>.</div><h3>Core Plant-Specific Structures</h3><div class='table-wrap'><table><thead><tr><th>Structure</th><th>Location</th><th>Core Function</th></tr></thead><tbody><tr><td>Cell wall</td><td>Outside the cell membrane</td><td>Provides mechanical strength, support, and protection</td></tr><tr><td>Large central vacuole</td><td>Centrally located fluid-filled sac</td><td>Stores water, ions, pigments and waste; maintains turgor pressure</td></tr><tr><td>Chloroplasts</td><td>Scattered in cytoplasm, often near edges</td><td>Site of photosynthesis; converts light energy into chemical energy</td></tr></tbody></table></div></div><div class='card'><div class='card-header'><div class='card-icon'>🧱</div><h2>The Cell Wall and Plant Shape</h2></div><p>The <span class='key-term'>cell wall</span> is a rigid structure outside the plasma membrane. It is mostly made of <span class='key-term'>cellulose</span>, a polysaccharide that forms strong fibres and gives plant tissues their stiffness.</p><div class='info-box'><strong>💬 Key Vocabulary:</strong> <strong>Cellulose:</strong> long-chain carbohydrate providing tensile strength. <strong>Vacuole:</strong> membrane-bound sac; in plants, the large central vacuole dominates the cell interior. <strong>Turgor pressure:</strong> outward pressure of the vacuole pushing the cytoplasm against the cell wall.</div><h3>Why the Cell Wall Matters</h3><ul><li>It prevents the cell from bursting in dilute (hypotonic) environments because the wall is rigid.</li><li>It helps maintain the overall shape of plant organs such as leaves and stems.</li><li>It provides structural support for the whole plant body, reducing reliance on a skeleton.</li></ul><div class='worked-example'><h4>📝 Worked Example: Turgor pressure</h4><p><strong>Question:</strong> Explain how the cell wall and central vacuole work together to maintain plant rigidity.</p><p><strong>Answer:</strong></p><div class='step-box'>Water enters the central vacuole, increasing its volume and creating outward hydrostatic pressure (turgor).</div><div class='step-box'>The vacuole pushes the cytoplasm and membrane against the rigid cell wall.</div><div class='step-box'>The strong cellulose-based cell wall resists this pressure, keeping the cell firm and the plant upright.</div></div></div><div class='card'><div class='card-header'><div class='card-icon'>💧</div><h2>The Large Central Vacuole</h2></div><p>In mature plant cells, a single <span class='key-term'>large central vacuole</span> can occupy 80-90% of the cell volume. It is surrounded by a membrane called the <span class='key-term'>tonoplast</span>, similar in nature to the plasma membrane.</p><div class='info-box'><strong>💡 What the vacuole stores:</strong> Water and dissolved ions (osmotic balance); Nutrients such as sugars and amino acids; Waste products and toxins; Pigments (e.g. anthocyanins) affecting flower and leaf colour.</div><h3>Functions of the Central Vacuole</h3><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>🚰</span><h4>Water uptake</h4><p>Water enters the vacuole by osmosis when the cell is in a hypotonic environment.</p></div><div class='flow-arrow'>→</div><div class='flow-box level-2'><span class='icon'>💪</span><h4>Turgor pressure</h4><p>The enlarging vacuole expands and presses the cytoplasm against the cell wall.</p></div><div class='flow-arrow'>→</div><div class='flow-box level-3'><span class='icon'>🔄</span><h4>Cell expansion</h4><p>Cells can grow without tearing because the strong wall supports the inflated cells.</p></div></div><div class='worked-example'><h4>📝 Worked Example: Effect of dehydration</h4><p><strong>Question:</strong> Describe what happens to a plant cell placed in a very concentrated (hypertonic) solution.</p><p><strong>Answer:</strong></p><div class='step-box'>Water leaves the central vacuole by osmosis, decreasing its volume.</div><div class='step-box'>Turgor pressure drops, so the cell becomes flaccid and the plant wilts.</div><div class='step-box'>If severe and prolonged, the vacuole shrinks so much that the cytoplasm pulls away from the wall (plasmolysis).</div></div></div><div class='card'><div class='card-header'><div class='card-icon'>☀️</div><h2>Chloroplasts and Photosynthesis</h2></div><p><span class='key-term'>Chloroplasts</span> are the key photosynthetic organelles of plant cells. They contain the pigment <span class='key-term'>chlorophyll</span> and specialised internal membranes called <span class='key-term'>thylakoids</span> arranged in stacks (<span class='key-term'>grana</span>).</p><div class='info-box'><strong>💡 Chloroplast 'big picture':</strong> Chloroplasts convert light energy into glucose using: Light-dependent reactions (on thylakoid membranes); Light-independent reactions (in the stroma). In later lessons you will explore these stages in detail.</div><h3>Structure-Function of Chloroplasts</h3><div class='table-wrap'><table><thead><tr><th>Part of chloroplast</th><th>Key structural feature</th><th>Functional consequence</th></tr></thead><tbody><tr><td>Outer and inner membrane</td><td>Double envelope</td><td>Isolates the chloroplast interior from the cytoplasm and regulates entry/exit of molecules.</td></tr><tr><td>Grana (thylakoid stacks)</td><td>Flattened membrane sacs</td><td>Large surface area for light-absorbing pigments and electron transport chains.</td></tr><tr><td>Stroma</td><td>Fluid-filled space around grana</td><td>Site of carbon fixation (Calvin cycle) and contains chloroplast DNA and ribosomes.</td></tr></tbody></table></div><div class='worked-example'><h4>📝 Worked Example: Adaptations for photosynthesis</h4><p><strong>Question:</strong> Explain how the structure of a chloroplast helps maximise photosynthesis.</p><p><strong>Answer:</strong></p><div class='step-box'>The stacked grana provide a large surface area of thylakoid membrane to house photosystems and electron carriers.</div><div class='step-box'>The surrounding stroma contains enzymes for the Calvin cycle and metabolites needed for carbon fixation.</div><div class='step-box'>This separation of light-dependent (thylakoids) and light-independent (stroma) stages makes photosynthesis more efficient.</div></div></div><div class='card'><div class='card-header'><div class='card-icon'>↔️</div><h2>Plant vs Animal Cells</h2></div><p>Plant and animal cells share many organelles, but plants are specialised for support, photosynthesis, and water storage, while animals are more flexible and mobile.</p><div class='table-wrap'><table><thead><tr><th>Feature</th><th>Plant cells</th><th>Animal cells</th></tr></thead><tbody><tr><td>Cell wall</td><td>Present (cellulose)</td><td>Absent</td></tr><tr><td>Central vacuole</td><td>Large central vacuole prominent</td><td>Small or temporary vacuoles only</td></tr><tr><td>Chloroplasts</td><td>Present in photosynthetic cells</td><td>Absent</td></tr><tr><td>Shape</td><td>Generally fixed, rectangular boxes</td><td>More rounded, flexible shape</td></tr><tr><td>Centrioles</td><td>Absent (except lower plants)</td><td>Present</td></tr><tr><td>Lysosomes</td><td>Rare/absent</td><td>Present</td></tr></tbody></table></div><div class='info-box'><strong>💡 Functional upshot:</strong> The <strong>cell wall and vacuole</strong> help plants withstand gravity and stay upright without a rigid skeleton. <strong>Chloroplasts</strong> allow plants to be autotrophic (make their own food). <strong>Animal cells</strong> trade this support and autotrophy for more flexible movement and shape-change.</div></div><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Cell Wall</h4><ul><li>Rigid outer layer of cellulose</li><li>Provides shape and support</li><li>Prevents bursting in hypotonic environments</li><li>Freely permeable to water and solutes</li></ul></div><div class='copy-item'><h4>Central Vacuole</h4><ul><li>Occupies 80-90% of mature plant cell</li><li>Surrounded by tonoplast membrane</li><li>Stores water, ions, nutrients, pigments</li><li>Creates turgor pressure for rigidity</li></ul></div><div class='copy-item'><h4>Chloroplasts</h4><ul><li>Site of photosynthesis</li><li>Contain chlorophyll in thylakoids</li><li>Grana = stacks of thylakoids</li><li>Stroma = fluid with Calvin cycle enzymes</li><li>Own DNA (endosymbiotic origin)</li></ul></div><div class='copy-item'><h4>Plant vs Animal</h4><ul><li>Plants: cell wall, large vacuole, chloroplasts</li><li>Animals: centrioles, lysosomes, flexible shape</li><li>Both: nucleus, mitochondria, ER, Golgi</li><li>Plants autotrophic; animals heterotrophic</li></ul></div></div></div>",
   "contentSections": [
     {
-      "id": "dna-to-chromatin-diagram",
-      "type": "diagram",
-      "title": "From DNA to Chromatin",
-      "icon": "dna",
-      "content": "Simple diagram showing: DNA double helix → wrapped around histone (nucleosome) → 30nm fibre.",
-      "keyPoints": [
-        "DNA + histones = chromatin",
-        "Allows compaction of 2m DNA into 6 µm nucleus",
-        "Chromatin condenses into chromosomes (Lesson 5 preview)"
-      ],
-      "example": "Chromatin modifications in cancer (chemotherapy targets rapidly dividing cells with decondensed chromatin).",
-      "image": {
-        "src": "assets/images/mod1/lesson04/chromatin-structure.webp",
-        "alt": "Diagram showing DNA packaging from double helix to nucleosomes to chromatin fibre",
-        "caption": "DNA packaging: from double helix to chromatin"
-      }
+      "id": "overview",
+      "type": "content",
+      "title": "Overview of the Plant Cell",
+      "icon": "layout",
+      "content": "Plant cells share nucleus, mitochondria, ER, Golgi with animals, but have three unique features: cell wall, large central vacuole, and chloroplasts."
     },
     {
-      "id": "nucleolus-export-diagram",
-      "type": "diagram",
-      "title": "The Nucleolus and Ribosome Export",
-      "icon": "arrow-right",
-      "content": "Nucleus showing nucleolus, ribosomal subunits exiting pores, assembling in cytoplasm.",
-      "keyPoints": [
-        "rRNA made in nucleolus + proteins from cytoplasm = subunits",
-        "Subunits exported through nuclear pores",
-        "Assemble into 80S at start of protein synthesis"
-      ],
-      "example": "Nucleolar stress in cancer cells (chemotherapy can inhibit ribosome production).",
-      "image": {
-        "src": "assets/images/mod1/lesson04/nucleolus-export.webp",
-        "alt": "Diagram showing ribosome subunit production in nucleolus and export through pores",
-        "caption": "Ribosome production and export from the nucleolus"
-      }
+      "id": "cell-wall",
+      "type": "content",
+      "title": "The Cell Wall and Plant Shape",
+      "icon": "square",
+      "content": "Rigid cellulose structure outside membrane provides support, prevents bursting, and maintains plant shape without a skeleton."
     },
     {
-      "id": "ribosome-comparison",
-      "type": "grid",
-      "title": "Ribosome Comparison (70S vs 80S)",
-      "icon": "scale",
-      "gridItems": [
-        {
-          "header": "Feature",
-          "items": ["Location", "Size", "Subunits", "Antibiotics"]
-        },
-        {
-          "header": "70S (Prokaryotic)",
-          "items": [
-            "Cytoplasm of bacteria",
-            "Smaller",
-            "50S + 30S",
-            "Affected by (e.g., tetracycline)"
-          ]
-        },
-        {
-          "header": "80S (Eukaryotic)",
-          "items": [
-            "Cytoplasm of eukaryotes",
-            "Larger",
-            "60S + 40S",
-            "Not affected by these"
-          ]
-        }
-      ],
-      "example": "Why antibiotics work (target 70S) without killing human cells (80S)."
+      "id": "vacuole",
+      "type": "content",
+      "title": "The Large Central Vacuole",
+      "icon": "droplet",
+      "content": "Occupies 80-90% of cell volume; surrounded by tonoplast; stores water, ions, nutrients; creates turgor pressure for rigidity."
+    },
+    {
+      "id": "chloroplasts",
+      "type": "content",
+      "title": "Chloroplasts and Photosynthesis",
+      "icon": "sun",
+      "content": "Contain chlorophyll and thylakoid membranes arranged in grana; site of photosynthesis with light-dependent reactions on thylakoids and Calvin cycle in stroma."
+    },
+    {
+      "id": "comparison",
+      "type": "content",
+      "title": "Plant vs Animal Cells",
+      "icon": "git-compare",
+      "content": "Structural and functional comparison highlighting adaptations for support, photosynthesis, and autotrophy in plants versus flexibility and mobility in animals."
     }
   ],
-  
   "activities": [
     {
-      "id": "chromatin-labeling",
-      "type": "labeling",
-      "title": "Label the DNA Packaging",
-      "description": "Identify components of chromatin structure.",
-      "learningObjective": "Identify nuclear components related to DNA organisation.",
-      "theme": "purple",
+      "id": "plant-structure-matching",
+      "type": "matching",
+      "title": "Match Plant Structure to Function",
+      "description": "Match each plant-specific structure with its primary function.",
+      "theme": "green",
       "xpReward": 50,
-      "image": {
-        "src": "assets/images/mod1/lesson04/chromatin-structure.webp",
-        "alt": "Chromatin structure diagram for labeling"
-      },
-      "labels": [
+      "pairs": [
         {
-          "id": "dna-label",
-          "zone": { "x": 20, "y": 70, "width": 60, "height": 15 },
-          "correctText": "DNA double helix",
-          "alternatives": ["DNA"],
-          "hint": "The genetic material itself"
+          "id": "pair1",
+          "left": "Cell wall",
+          "right": "Provides mechanical strength and support"
         },
         {
-          "id": "histone-label",
-          "zone": { "x": 35, "y": 45, "width": 10, "height": 10 },
-          "correctText": "Histone protein",
-          "alternatives": ["Histone"],
-          "hint": "Proteins that DNA wraps around"
+          "id": "pair2",
+          "left": "Central vacuole",
+          "right": "Stores water and maintains turgor pressure"
         },
         {
-          "id": "nucleosome-label",
-          "zone": { "x": 25, "y": 35, "width": 50, "height": 15 },
-          "correctText": "Nucleosome",
-          "alternatives": ["Beads on a string"],
-          "hint": "DNA wrapped around histone = 'bead'"
+          "id": "pair3",
+          "left": "Chloroplast",
+          "right": "Site of photosynthesis"
         },
         {
-          "id": "chromatin-label",
-          "zone": { "x": 20, "y": 15, "width": 60, "height": 15 },
-          "correctText": "Chromatin fibre",
-          "alternatives": ["Chromatin", "30nm fibre"],
-          "hint": "Packed nucleosomes forming a fibre"
+          "id": "pair4",
+          "left": "Tonoplast",
+          "right": "Membrane surrounding the vacuole"
+        },
+        {
+          "id": "pair5",
+          "left": "Cellulose",
+          "right": "Polysaccharide providing tensile strength"
         }
       ]
     },
     {
-      "id": "ribosome-production-ordering",
+      "id": "turgor-pressure-ordering",
       "type": "ordering",
-      "title": "Sequence Ribosome Production",
-      "description": "Arrange the steps of ribosome production in the correct order.",
-      "learningObjective": "Sequence ribosome production steps.",
+      "title": "Order Turgor Pressure Formation",
+      "description": "Arrange the steps in the formation of turgor pressure in the correct sequence.",
       "theme": "teal",
-      "xpReward": 50,
-      "shuffleDisplay": true,
+      "xpReward": 40,
       "items": [
-        { "id": "step-1", "text": "rRNA made in nucleolus", "correctPosition": 1 },
-        { "id": "step-2", "text": "Proteins imported from cytoplasm", "correctPosition": 2 },
-        { "id": "step-3", "text": "Subunits assembled", "correctPosition": 3 },
-        { "id": "step-4", "text": "Exported through pore", "correctPosition": 4 },
-        { "id": "step-5", "text": "Functional ribosome in cytoplasm", "correctPosition": 5 }
+        {
+          "id": "step1",
+          "text": "Water enters the central vacuole by osmosis",
+          "position": 1
+        },
+        {
+          "id": "step2",
+          "text": "Vacuole volume increases",
+          "position": 2
+        },
+        {
+          "id": "step3",
+          "text": "Cytoplasm pushes against cell wall",
+          "position": 3
+        },
+        {
+          "id": "step4",
+          "text": "Cell wall resists expansion",
+          "position": 4
+        },
+        {
+          "id": "step5",
+          "text": "Cell becomes firm and turgid",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "id": "chloroplast-structure-matching",
+      "type": "matching",
+      "title": "Match Chloroplast Structure to Function",
+      "description": "Match each chloroplast structure with its functional significance.",
+      "theme": "indigo",
+      "xpReward": 50,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Grana (thylakoid stacks)",
+          "right": "Large surface area for light absorption"
+        },
+        {
+          "id": "pair2",
+          "left": "Stroma",
+          "right": "Site of Calvin cycle (carbon fixation)"
+        },
+        {
+          "id": "pair3",
+          "left": "Chlorophyll",
+          "right": "Pigment that captures light energy"
+        },
+        {
+          "id": "pair4",
+          "left": "Double membrane",
+          "right": "Regulates entry/exit of molecules"
+        }
+      ]
+    },
+    {
+      "id": "plant-animal-classification",
+      "type": "classification",
+      "title": "Plant or Animal Cell Feature?",
+      "description": "Classify each feature as found in plant cells, animal cells, or both.",
+      "theme": "orange",
+      "xpReward": 60,
+      "categories": [
+        {
+          "id": "plant",
+          "label": "Plant Only",
+          "description": "Features unique to plant cells"
+        },
+        {
+          "id": "animal",
+          "label": "Animal Only",
+          "description": "Features unique to animal cells"
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "description": "Features found in both cell types"
+        }
+      ],
+      "items": [
+        {
+          "id": "cell-wall",
+          "text": "Cell wall",
+          "category": "plant"
+        },
+        {
+          "id": "chloroplasts",
+          "text": "Chloroplasts",
+          "category": "plant"
+        },
+        {
+          "id": "large-vacuole",
+          "text": "Large central vacuole",
+          "category": "plant"
+        },
+        {
+          "id": "centrioles",
+          "text": "Centrioles",
+          "category": "animal"
+        },
+        {
+          "id": "lysosomes",
+          "text": "Lysosomes",
+          "category": "animal"
+        },
+        {
+          "id": "nucleus",
+          "text": "Nucleus",
+          "category": "both"
+        },
+        {
+          "id": "mitochondria",
+          "text": "Mitochondria",
+          "category": "both"
+        },
+        {
+          "id": "golgi",
+          "text": "Golgi apparatus",
+          "category": "both"
+        }
       ]
     }
   ],
-  
   "assessment": {
-    "multipleChoice": [
+    "mcq": [
       {
-        "id": "mcq-1",
-        "question": "The nucleolus is responsible for:",
+        "id": "mcq1",
+        "question": "Which of the following is NOT found in a typical plant cell?",
         "options": [
-          "Storing the cell's DNA",
-          "Producing ribosomal RNA and assembling ribosome subunits",
-          "Controlling what enters the nucleus",
-          "Packaging proteins for export"
+          "Cell wall",
+          "Chloroplasts",
+          "Centrioles",
+          "Large central vacuole"
         ],
-        "correctAnswer": "Producing ribosomal RNA and assembling ribosome subunits",
-        "rationale": "Core nucleolus function. DNA is stored as chromatin; pores control entry/exit; Golgi packages proteins."
+        "correct": 2,
+        "explanation": "Centrioles are typically absent in plant cells (except lower plants), while cell walls, chloroplasts, and large vacuoles are characteristic plant features.",
+        "marks": 1
       },
       {
-        "id": "mcq-2",
-        "question": "Eukaryotic ribosomes (80S) differ from prokaryotic ribosomes (70S) in that they:",
+        "id": "mcq2",
+        "question": "What is the primary function of the large central vacuole in plant cells?",
         "options": [
-          "Are smaller",
-          "Are found only in the nucleus",
-          "Are not affected by antibiotics that target bacterial ribosomes",
-          "Do not contain RNA"
+          "Photosynthesis",
+          "Protein synthesis",
+          "Water storage and turgor pressure",
+          "Cell division"
         ],
-        "correctAnswer": "Are not affected by antibiotics that target bacterial ribosomes",
-        "rationale": "Reinforces antibiotic selectivity from L1-L2. 80S ribosomes are larger, found in cytoplasm, and contain rRNA."
+        "correct": 2,
+        "explanation": "The large central vacuole stores water, ions, and nutrients, and creates turgor pressure that helps maintain plant rigidity.",
+        "marks": 1
       },
       {
-        "id": "mcq-3",
-        "question": "DNA is packaged with proteins called histones to form:",
+        "id": "mcq3",
+        "question": "The cell wall of plant cells is primarily composed of:",
         "options": [
-          "Chromosomes only during division",
-          "Chromatin",
-          "The nucleolus",
-          "Ribosomes"
+          "Protein",
+          "Lipids",
+          "Cellulose",
+          "Chitin"
         ],
-        "correctAnswer": "Chromatin",
-        "rationale": "Chromatin is the DNA-protein complex. Chromosomes are condensed chromatin during division; nucleolus makes ribosomes."
+        "correct": 2,
+        "explanation": "The plant cell wall is primarily composed of cellulose, a polysaccharide that provides tensile strength and rigidity.",
+        "marks": 1
+      },
+      {
+        "id": "mcq4",
+        "question": "In which part of the chloroplast does the Calvin cycle (light-independent reactions) occur?",
+        "options": [
+          "Thylakoid membranes",
+          "Grana",
+          "Stroma",
+          "Outer membrane"
+        ],
+        "correct": 2,
+        "explanation": "The Calvin cycle occurs in the stroma, the fluid-filled space surrounding the grana within the chloroplast.",
+        "marks": 1
+      },
+      {
+        "id": "mcq5",
+        "question": "What happens to a plant cell placed in a hypertonic solution?",
+        "options": [
+          "It bursts",
+          "Water leaves the vacuole and the cell becomes flaccid",
+          "It gains turgor pressure",
+          "Nothing changes"
+        ],
+        "correct": 1,
+        "explanation": "In a hypertonic solution, water leaves the central vacuole by osmosis, causing turgor pressure to drop and the cell to become flaccid (wilting).",
+        "marks": 1
       }
     ],
-    "shortAnswer": [
+    "saq": [
       {
-        "id": "sa-1",
-        "question": "Outline the role of the nucleolus in producing ribosomes. (2 marks)",
-        "marks": 2,
+        "id": "saq1",
+        "question": "Explain how the structure of the chloroplast is adapted for photosynthesis.",
+        "marks": 4,
         "markingCriteria": [
-          "1 mark: Site of ribosomal RNA (rRNA) synthesis/production",
-          "1 mark: Assembly of ribosomal subunits (40S and 60S) which are then exported to the cytoplasm"
+          "1 mark: Grana/thylakoids provide large surface area",
+          "1 mark: Stroma contains Calvin cycle enzymes",
+          "1 mark: Chlorophyll absorbs light energy",
+          "1 mark: Double membrane regulates transport"
         ],
-        "commonError": "Saying 'protein synthesis happens here' (confusing with cytoplasmic ribosomes)."
+        "modelAnswer": "The chloroplast has several structural adaptations for photosynthesis: (1) The thylakoids are arranged in stacks called grana, providing a large surface area for light-absorbing pigments and electron transport chains. (2) The stroma contains enzymes for the Calvin cycle (carbon fixation). (3) Chlorophyll molecules embedded in thylakoid membranes capture light energy. (4) The double membrane regulates the entry and exit of molecules, maintaining optimal conditions for photosynthesis."
       },
       {
-        "id": "sa-2",
-        "question": "Explain why antibiotics that stop protein synthesis in bacteria do not stop protein synthesis in human cells. (2 marks)",
-        "marks": 2,
+        "id": "saq2",
+        "question": "Describe the role of the central vacuole in maintaining plant cell turgor pressure.",
+        "marks": 3,
         "markingCriteria": [
-          "1 mark: Bacteria have 70S ribosomes; human cells have 80S ribosomes",
-          "1 mark: Antibiotics bind to/attack 70S ribosomes but cannot bind to 80S ribosomes (structural difference)"
+          "1 mark: Water enters vacuole by osmosis",
+          "1 mark: Vacuole expands creating pressure against cell wall",
+          "1 mark: Rigid cell wall resists pressure keeping cell firm"
         ],
-        "commonError": "Saying 'human cells are stronger' or 'antibiotics only like bacteria.'"
+        "modelAnswer": "The central vacuole maintains turgor pressure by accumulating water via osmosis, causing it to expand. This expansion pushes the cytoplasm against the rigid cell wall. The cell wall resists this outward pressure, creating turgor pressure that keeps the plant cell firm and the whole plant upright. When water is lost, turgor pressure drops and the plant wilts."
+      },
+      {
+        "id": "saq3",
+        "question": "Compare and contrast plant and animal cells, identifying at least three structural differences and explaining the functional significance of each.",
+        "marks": 6,
+        "markingCriteria": [
+          "2 marks per difference (structure + functional significance) × 3 differences"
+        ],
+        "modelAnswer": "(1) Cell wall: Plant cells have a rigid cellulose cell wall providing structural support and protection against osmotic lysis; animal cells lack this, allowing greater flexibility. (2) Chloroplasts: Plants contain chloroplasts for photosynthesis, making them autotrophic; animals lack chloroplasts and must obtain energy by consuming other organisms. (3) Large central vacuole: Plants have a prominent vacuole that stores water and maintains turgor pressure for rigidity; animals have small, temporary vacuoles focused on transport rather than support. These differences reflect plants' sessile, photosynthetic lifestyle versus animals' mobile, heterotrophic existence."
       }
     ]
   },
-  
+  "answers": {
+    "activities": [
+      {
+        "activityId": "plant-structure-matching",
+        "title": "Activity 1: Match Plant Structure to Function",
+        "content": "<p><strong>Cell wall</strong> → Provides mechanical strength and support</p><p><strong>Central vacuole</strong> → Stores water and maintains turgor pressure</p><p><strong>Chloroplast</strong> → Site of photosynthesis</p><p><strong>Tonoplast</strong> → Membrane surrounding the vacuole</p><p><strong>Cellulose</strong> → Polysaccharide providing tensile strength</p>"
+      },
+      {
+        "activityId": "turgor-pressure-ordering",
+        "title": "Activity 2: Turgor Pressure Formation",
+        "content": "<p>Correct order:</p><ol><li>Water enters the central vacuole by osmosis</li><li>Vacuole volume increases</li><li>Cytoplasm pushes against cell wall</li><li>Cell wall resists expansion</li><li>Cell becomes firm and turgid</li></ol>"
+      },
+      {
+        "activityId": "chloroplast-structure-matching",
+        "title": "Activity 3: Chloroplast Structure-Function",
+        "content": "<p><strong>Grana</strong> → Large surface area for light absorption</p><p><strong>Stroma</strong> → Site of Calvin cycle</p><p><strong>Chlorophyll</strong> → Captures light energy</p><p><strong>Double membrane</strong> → Regulates molecule transport</p>"
+      },
+      {
+        "activityId": "plant-animal-classification",
+        "title": "Activity 4: Plant or Animal?",
+        "content": "<p><strong>Plant Only:</strong> Cell wall, chloroplasts, large central vacuole</p><p><strong>Animal Only:</strong> Centrioles, lysosomes</p><p><strong>Both:</strong> Nucleus, mitochondria, Golgi apparatus</p>"
+      }
+    ],
+    "assessment": [
+      {
+        "questionId": "mcq1",
+        "question": "Which is NOT found in a typical plant cell?",
+        "answer": "C - Centrioles",
+        "explanation": "Centrioles are typically absent in plant cells; cell walls, chloroplasts, and large vacuoles are characteristic features."
+      },
+      {
+        "questionId": "mcq2",
+        "question": "Primary function of large central vacuole?",
+        "answer": "C - Water storage and turgor pressure",
+        "explanation": "The vacuole stores water and creates turgor pressure that maintains plant rigidity."
+      },
+      {
+        "questionId": "mcq3",
+        "question": "Cell wall is primarily composed of:",
+        "answer": "C - Cellulose",
+        "explanation": "The plant cell wall is made of cellulose, a polysaccharide providing strength and rigidity."
+      },
+      {
+        "questionId": "mcq4",
+        "question": "Where does the Calvin cycle occur?",
+        "answer": "C - Stroma",
+        "explanation": "The Calvin cycle (light-independent reactions) occurs in the stroma, the fluid-filled space within the chloroplast."
+      },
+      {
+        "questionId": "mcq5",
+        "question": "What happens in a hypertonic solution?",
+        "answer": "B - Water leaves the vacuole and the cell becomes flaccid",
+        "explanation": "In hypertonic conditions, water leaves by osmosis, causing the cell to lose turgor and wilt."
+      },
+      {
+        "questionId": "saq1",
+        "question": "How is chloroplast structure adapted for photosynthesis?",
+        "answer": "Grana provide large surface area for light absorption; stroma contains Calvin cycle enzymes; chlorophyll captures light; double membrane regulates transport."
+      },
+      {
+        "questionId": "saq2",
+        "question": "Role of central vacuole in turgor pressure.",
+        "answer": "Water enters by osmosis, vacuole expands pushing cytoplasm against cell wall; rigid wall resists pressure keeping cell firm."
+      },
+      {
+        "questionId": "saq3",
+        "question": "Compare plant and animal cells.",
+        "answer": "Cell wall (plants) provides support; chloroplasts (plants) enable photosynthesis; large vacuole (plants) maintains turgor; centrioles/lysosomes (animals) aid division and digestion."
+      }
+    ]
+  },
   "copyToBook": {
-    "definitions": [
-      "DNA is wrapped around histone proteins to form chromatin.",
-      "The nucleolus makes ribosomal RNA (rRNA) and assembles ribosome subunits.",
-      "Ribosome subunits leave the nucleus through nuclear pores.",
-      "Eukaryotic ribosomes are 80S (60S + 40S subunits).",
-      "Bacterial ribosomes are 70S—these are targeted by antibiotics."
-    ],
-    "keyPoints": [
-      "Nucleosomes = DNA wrapped around histone proteins ('beads on a string')",
-      "Chromatin condenses to form chromosomes during cell division",
-      "Nucleolus = dark region, NOT membrane-bound, makes rRNA",
-      "Antibiotic selectivity = exploits 70S vs 80S difference"
-    ],
-    "diagrams": [
-      "DNA packaging diagram: double helix → nucleosome → chromatin",
-      "Nucleolus showing subunit export through nuclear pores"
+    "title": "The Plant Cell",
+    "sections": [
+      {
+        "title": "Cell Wall",
+        "content": [
+          "Rigid outer layer of cellulose",
+          "Provides shape and support",
+          "Prevents bursting in hypotonic environments",
+          "Freely permeable to water and solutes"
+        ]
+      },
+      {
+        "title": "Central Vacuole",
+        "content": [
+          "Occupies 80-90% of mature plant cell",
+          "Surrounded by tonoplast membrane",
+          "Stores water, ions, nutrients, pigments",
+          "Creates turgor pressure for rigidity"
+        ]
+      },
+      {
+        "title": "Chloroplasts",
+        "content": [
+          "Site of photosynthesis",
+          "Contain chlorophyll in thylakoids",
+          "Grana = stacks of thylakoids",
+          "Stroma = fluid with Calvin cycle enzymes",
+          "Own DNA (endosymbiotic origin)"
+        ]
+      },
+      {
+        "title": "Plant vs Animal",
+        "content": [
+          "Plants: cell wall, large vacuole, chloroplasts",
+          "Animals: centrioles, lysosomes, flexible shape",
+          "Both: nucleus, mitochondria, ER, Golgi",
+          "Plants autotrophic; animals heterotrophic"
+        ]
+      }
     ]
   },
-  
-  "answerKey": {
-    "multipleChoice": ["B", "C", "B"],
-    "shortAnswer": [
-      "The nucleolus is the site of ribosomal RNA (rRNA) synthesis. It assembles ribosomal subunits (40S and 60S) by combining rRNA with proteins imported from the cytoplasm. These subunits are then exported through nuclear pores to the cytoplasm where they assemble into functional 80S ribosomes.",
-      "Bacteria have 70S ribosomes which have a different structure from the 80S ribosomes in human cells. Antibiotics such as tetracycline can bind specifically to the 70S ribosomes and block protein synthesis in bacteria, but they cannot bind effectively to the larger 80S ribosomes in human cells. This structural difference means human protein synthesis is not affected."
-    ]
-  },
-  
-  "prerequisites": [
-    {
-      "lessonId": "module-1-cells-lesson-2",
-      "description": "Basic nucleus structure, 80S ribosomes",
-      "required": true
-    },
-    {
-      "lessonId": "module-1-cells-lesson-3",
-      "description": "Microscopy shows chromatin",
-      "required": true
-    }
-  ],
-  
   "navigation": {
     "previous": "module-1-cells-lesson-3",
-    "previousTitle": "Microscopy and Cell Size",
+    "previousTitle": "The Animal Cell",
     "next": "module-1-cells-lesson-5",
-    "nextTitle": "The Endomembrane System"
+    "nextTitle": "Technologies in Cytology: How We See Cells"
   },
-  
   "meta": {
-    "author": "HSC Biology Team",
-    "createdAt": "2026-02-08",
-    "lastModified": "2026-02-08",
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
     "version": "2.0.0",
-    "tags": ["chromatin", "histones", "nucleolus", "rRNA", "ribosome assembly", "70S vs 80S", "Module 1"]
-  },
-  
-  "imageLibrary": [
-    {
-      "id": "chromatin-structure",
-      "src": "assets/images/mod1/lesson04/chromatin-structure.webp",
-      "alt": "Diagram of DNA packaging from helix to chromatin",
-      "caption": "DNA packaging: double helix → nucleosomes → chromatin"
-    },
-    {
-      "id": "nucleolus-export",
-      "src": "assets/images/mod1/lesson04/nucleolus-export.webp",
-      "alt": "Diagram of nucleolus and ribosome export",
-      "caption": "Ribosome production and export from nucleolus"
-    },
-    {
-      "id": "ribosome-70s-structure",
-      "src": "assets/images/mod1/lesson04/ribosome-70s-structure.webp",
-      "alt": "Diagram comparing 70S and 80S ribosome structures",
-      "caption": "Structural comparison of 70S and 80S ribosomes"
-    },
-    {
-      "id": "nucleolus-tem",
-      "src": "assets/images/mod1/lesson04/nucleolus-tem.webp",
-      "alt": "TEM image showing nucleolus",
-      "caption": "Transmission electron micrograph of nucleolus"
-    }
-  ]
+    "format": "V2.0",
+    "tags": ["plant-cell", "cell-wall", "chloroplast", "vacuole", "turgor-pressure", "photosynthesis"]
+  }
 }

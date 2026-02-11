@@ -38,9 +38,17 @@ class LessonRenderer {
 
   /**
    * Detect V2 format lessons
+   * Supports: v2: true, version: 2, or contentHTML fallback
    */
   isV2Format() {
-    return this.lesson && (this.lesson.v2 === true || this.lesson.contentHTML);
+    if (!this.lesson) return false;
+    if (this.lesson.v2 === true) return true;
+    if (this.lesson.version === 2 || this.lesson.version === '2.0') return true;
+    if (this.lesson.contentHTML) {
+      console.warn(`Lesson "${this.lesson.id}" uses contentHTML but missing v2:true flag`);
+      return true;
+    }
+    return false;
   }
 
   /**
@@ -100,7 +108,6 @@ class LessonRenderer {
     `;
 
     this.container.innerHTML = html;
-    this.bindV2ActivityHandlers();
     this.attachEventListeners();
   }
 
@@ -220,41 +227,57 @@ class LessonRenderer {
     const assessment = this.lesson.assessment;
     if (!assessment) return '';
 
+    // Support both field names: multipleChoice/mcq, shortAnswer/saq
+    const mcqs = assessment.multipleChoice || assessment.mcq || [];
+    const saqs = assessment.shortAnswer || assessment.saq || [];
+
     return `
       <section class="assessment-section" style="margin-top:40px">
         <h2 class="section-title"><i data-lucide="help-circle"></i> Assessment</h2>
 
-        ${assessment.multipleChoice ? `
+        ${mcqs.length > 0 ? `
           <div class="mcq-section">
             <h3>Multiple Choice Questions</h3>
-            ${assessment.multipleChoice.map((mcq, idx) => `
+            ${mcqs.map((mcq, idx) => {
+              // Support both correctAnswer (text) and correct (index) formats
+              const isCorrectFn = (opt, optIdx) => {
+                if (mcq.correctAnswer !== undefined) {
+                  return Array.isArray(mcq.correctAnswer) ? mcq.correctAnswer.includes(opt) : mcq.correctAnswer === opt;
+                }
+                if (mcq.correct !== undefined) {
+                  return mcq.correct === optIdx;
+                }
+                return false;
+              };
+              const correctText = mcq.correctAnswer || (mcq.correct !== undefined ? mcq.options[mcq.correct] : '');
+              return `
               <div class="mcq-item card" data-mcq-id="${mcq.id}" style="padding:20px;margin-bottom:16px">
                 <p class="mcq-question"><strong>Q${idx + 1}:</strong> ${mcq.question}</p>
                 <div class="mcq-options">
-                  ${mcq.options.map(opt => `
+                  ${mcq.options.map((opt, optIdx) => `
                     <label class="quiz-option">
                       <input type="${mcq.multiSelect ? 'checkbox' : 'radio'}"
                              name="${mcq.id}"
                              value="${opt}"
-                             data-correct="${Array.isArray(mcq.correctAnswer) ? mcq.correctAnswer.includes(opt) : mcq.correctAnswer === opt}">
+                             data-correct="${isCorrectFn(opt, optIdx)}">
                       <span class="quiz-option-circle"></span>
                       <span class="quiz-option-text">${opt}</span>
                     </label>
                   `).join('')}
                 </div>
                 <div class="mcq-rationale" style="display:none">
-                  <p><strong>Answer:</strong> ${mcq.correctAnswer}</p>
-                  <p>${mcq.rationale || ''}</p>
+                  <p><strong>Answer:</strong> ${correctText}</p>
+                  <p>${mcq.rationale || mcq.explanation || ''}</p>
                 </div>
               </div>
-            `).join('')}
+            `;}).join('')}
           </div>
         ` : ''}
 
-        ${assessment.shortAnswer ? `
+        ${saqs.length > 0 ? `
           <div class="short-answer-section">
             <h3>Short Answer Questions</h3>
-            ${assessment.shortAnswer.map((sa, idx) => `
+            ${saqs.map((sa, idx) => `
               <div class="sa-item card" data-sa-id="${sa.id}" style="padding:20px;margin-bottom:16px">
                 <p class="sa-question"><strong>Q${idx + 1}:</strong> ${sa.question}</p>
                 <p class="sa-marks">[${sa.marks} marks]</p>
@@ -262,10 +285,13 @@ class LessonRenderer {
                 <details class="answer-key" style="margin-top:12px">
                   <summary>View marking guide</summary>
                   <div class="marking-criteria">
-                    <h4>Marking Criteria:</h4>
-                    <ul>
-                      ${sa.markingCriteria.map(c => `<li>${c}</li>`).join('')}
-                    </ul>
+                    ${sa.markingCriteria ? `
+                      <h4>Marking Criteria:</h4>
+                      <ul>
+                        ${sa.markingCriteria.map(c => `<li>${c}</li>`).join('')}
+                      </ul>
+                    ` : ''}
+                    ${sa.modelAnswer ? `<p><strong>Model Answer:</strong> ${sa.modelAnswer}</p>` : ''}
                     ${sa.commonError ? `<p class="common-error"><strong>Common error:</strong> ${sa.commonError}</p>` : ''}
                   </div>
                 </details>
@@ -380,16 +406,6 @@ class LessonRenderer {
 
     // Fall back to V1 format
     return this.renderCopyToBook();
-  }
-
-  /**
-   * V2: Bind interactive handlers for activities
-   */
-  bindV2ActivityHandlers() {
-    // MCQ click handlers
-    this.container.querySelectorAll('.quiz-option input').forEach(input => {
-      input.addEventListener('change', (e) => this.checkMCQ(e));
-    });
   }
 
   /**
@@ -700,7 +716,7 @@ class LessonRenderer {
             <p class="ordering-instruction">Drag to order: Most significant factor (top) to least significant (bottom)</p>
             <div class="ordering-list" id="ordering-${activity.id}">
               ${activity.items.map(item => `
-                <div class="ordering-item" draggable="true" data-id="${item.id}" data-order="${item.correctOrder}">
+                <div class="ordering-item" draggable="true" data-id="${item.id}" data-order="${item.correctOrder || item.order || item.position}">
                   <span class="order-number">?</span>
                   <span class="order-text">${item.text}</span>
                   <i data-lucide="grip-vertical"></i>
@@ -732,7 +748,7 @@ class LessonRenderer {
             <div class="classification-categories">
               ${activity.categories.map(cat => `
                 <div class="category-box" data-category="${cat.id}">
-                  <h4>${cat.name}</h4>
+                  <h4>${cat.label || cat.name}</h4>
                   <p class="category-desc">${cat.description}</p>
                   <div class="category-dropzone"></div>
                 </div>
@@ -741,7 +757,7 @@ class LessonRenderer {
             <div class="classification-items">
               <h4>Items to classify:</h4>
               ${activity.items.map(item => `
-                <div class="classification-item draggable" draggable="true" data-id="${item.id}" data-category="${item.correctCategory}">
+                <div class="classification-item draggable" draggable="true" data-id="${item.id}" data-category="${item.correctCategory || item.category}">
                   ${item.text}
                 </div>
               `).join('')}
@@ -960,6 +976,7 @@ class LessonRenderer {
    * Fill-in-the-Blank Activity
    */
   renderFillBlankActivity(activity) {
+    const items = activity.items || activity.blanks || [];
     return `
       <div class="activity-card activity-card--${activity.theme}" data-activity-id="${activity.id}">
         <div class="activity-card-header">
@@ -968,11 +985,11 @@ class LessonRenderer {
           <span class="xp-badge">+${activity.xpReward || 10} XP</span>
         </div>
         <div class="activity-card-body">
-          <p class="activity-description">${activity.description}</p>
+          <p class="activity-description">${activity.description || ''}</p>
           <div class="fillblank-activity">
-            ${activity.items.map((item, index) => `
+            ${items.map((item, index) => `
               <div class="fillblank-item" data-index="${index}">
-                <span class="fillblank-text">${item.text.replace('__________', `<input type="text" class="fillblank-input" data-answer="${item.answer}" data-index="${index}" placeholder="Type answer...">`)}</span>
+                <span class="fillblank-text">${(item.text || '').replace('__________', `<input type="text" class="fillblank-input" data-answer="${item.answer || item.correct || ''}" data-index="${index}" placeholder="Type answer...">`)}</span>
               </div>
             `).join('')}
           </div>
@@ -1237,10 +1254,10 @@ class LessonRenderer {
   handleMatchingTargetClick(e) {
     const target = e.currentTarget;
     const selectedItem = this.container.querySelector('.matching-item.selected');
-    
+
     if (selectedItem) {
       const isCorrect = selectedItem.dataset.match === target.dataset.match;
-      target.classList.add(isCorrect ? 'correct' : 'incorrect');
+      target.classList.add(isCorrect ? 'matched' : 'mismatched');
       selectedItem.classList.remove('selected');
       selectedItem.classList.add(isCorrect ? 'matched' : 'mismatched');
     }
@@ -1493,14 +1510,18 @@ class LessonRenderer {
     const input = e.target;
     const option = input.closest('.quiz-option');
     const isCorrect = input.dataset.correct === 'true';
-    
-    option.classList.remove('correct', 'incorrect');
-    option.classList.add(isCorrect ? 'correct' : 'incorrect');
-    
-    // Show rationale
     const mcqItem = option.closest('.mcq-item');
+
+    // Clear previous selections in this question
+    mcqItem.querySelectorAll('.quiz-option').forEach(opt => {
+      opt.classList.remove('correct', 'incorrect');
+    });
+
+    option.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+    // Show rationale
     const rationale = mcqItem.querySelector('.mcq-rationale');
-    rationale.style.display = 'block';
+    if (rationale) rationale.style.display = 'block';
   }
 }
 

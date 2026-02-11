@@ -861,3 +861,78 @@ Before committing:
 **This file prevents you from spending hours fixing bugs that were already solved.**
 
 **Read it every time. Save yourself 8 hours.**
+
+### 22. Activities Not Working - Missing touch-utils.js
+
+**Bug:** Activities don't respond to clicks, drag-and-drop doesn't work, Check Answer buttons do nothing.
+
+**Cause:** `lesson.html` is missing the `touch-utils.js` script that provides `TouchUtils.bindTap()` for activity handlers.
+
+**Error in console:**
+```
+TypeError: Cannot read properties of undefined (reading 'bindTap')
+```
+
+**Solution:** Add touch-utils.js BEFORE lesson-renderer.js:
+```html
+<script src="../assets/js/touch-utils.js?v=1770755753"></script>
+<script src="../assets/js/lesson-renderer.js?v=1770755753"></script>
+```
+
+**Location:** `hsc-biology/lesson.html`
+
+---
+
+### 23. Check Answer Buttons Look Bad
+
+**Bug:** Activity "Check Answer" buttons have poor styling - wrong colors, no hover effects, misaligned text.
+
+**Cause:** V2 lessons use button classes (`.btn`, `.btn-primary`) that aren't styled in `lesson-v2.css`.
+
+**Solution:** Add button styles to `assets/css/lesson-v2.css`:
+```css
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--gradient-1);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+```
+
+---
+
+### 24. renderFillBlankActivity Crashes
+
+**Bug:** Lesson fails to load with error: `Cannot read properties of undefined (reading 'map')`
+
+**Cause:** `renderFillBlankActivity` expects `activity.items` array but some activities don't have items.
+
+**Solution:** Add null check at start of method:
+```javascript
+renderFillBlankActivity(activity, theme) {
+  const items = activity.items || [];
+  
+  if (items.length === 0) {
+    // Return generic activity fallback
+    return renderGenericActivity(activity, theme);
+  }
+  // ... rest of method
+}
+```
+

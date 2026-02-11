@@ -843,7 +843,8 @@
   background: rgba(74, 222, 128, 0.1);
 }
 
-.matching-item.mismatched {
+.matching-item.mismatched,
+.matching-target.mismatched {
   border-color: var(--danger, #f87171);
   background: rgba(248, 113, 113, 0.1);
 }

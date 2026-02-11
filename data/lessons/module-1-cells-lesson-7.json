@@ -1,0 +1,502 @@
+{
+  "id": "module-1-cells-lesson-7",
+  "title": "Skills Lab: Wet Mount Slides and Biological Diagrams",
+  "module": "module-1-cells",
+  "moduleTitle": "Cells as the Basis of Life",
+  "moduleNumber": 1,
+  "lessonNumber": 7,
+  "description": "Learn how to prepare high-quality wet mount slides and draw biological diagrams that meet NESA standards—core practical skills for HSC Biology and beyond.",
+  "duration": "60 minutes",
+  "difficulty": "Foundation Level",
+  "worksOffline": true,
+  "v2": true,
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "🧪",
+    "gradient": "blue-to-purple"
+  },
+  "learningIntentions": [
+    "Students can safely prepare wet mount slides of plant and animal cells",
+    "Students can focus a light microscope and choose appropriate magnification",
+    "Students can construct biological diagrams that meet NESA conventions",
+    "Students can add scale bars and labels accurately to diagrams",
+    "Students can evaluate the quality of their own practical work"
+  ],
+  "successCriteria": [
+    "I can prepare a safe, air-bubble-free wet mount slide",
+    "I can bring a specimen into focus at low and high power",
+    "I can draw a labelled diagram with correct proportions and no shading",
+    "I can calculate and include a scale bar on my diagram",
+    "I can annotate diagrams to explain structure-function relationships"
+  ],
+  "intentions": {
+    "learning": [
+      "Students can safely prepare wet mount slides of plant and animal cells",
+      "Students can focus a light microscope and choose appropriate magnification",
+      "Students can construct biological diagrams that meet NESA conventions",
+      "Students can add scale bars and labels accurately to diagrams",
+      "Students can evaluate the quality of their own practical work"
+    ],
+    "connections": [
+      {
+        "topic": "Cell structure, microscope use, magnification calculations",
+        "description": "Prior knowledge of what to look for"
+      },
+      {
+        "topic": "Practical investigations, first-hand data collection",
+        "description": "Foundation for all future lab work"
+      },
+      {
+        "topic": "Real World",
+        "description": "Laboratory skills in research, pathology, and diagnostics"
+      }
+    ],
+    "success": [
+      "I can prepare a safe, air-bubble-free wet mount slide",
+      "I can bring a specimen into focus at low and high power",
+      "I can draw a labelled diagram with correct proportions and no shading",
+      "I can calculate and include a scale bar on my diagram",
+      "I can annotate diagrams to explain structure-function relationships"
+    ]
+  },
+  "syllabusLinks": {
+    "module": "Module 1: Cells as the Basis of Life",
+    "inquiryQuestion": "IQ1: What distinguishes one cell from another?",
+    "focus": "Practical skills: wet mount preparation and biological diagrams"
+  },
+  "contentHTML": "<div class='hero'><div class='hero-grid'><div class='hero-content'><div class='hero-meta'><span class='badge badge-module'>HSC Biology</span><span class='badge badge-foundational'>Foundational</span></div><h1>Skills Lab: Wet Mount Slides and Biological Diagrams</h1><p class='hero-description'>Learn how to prepare high-quality wet mount slides and draw biological diagrams that meet NESA standards—core practical skills for HSC Biology and beyond.</p></div><div class='hero-icon'>🧪</div></div></div><div class='intentions-grid'><div class='intention-card blue'><h3>🎯 LEARNING INTENTIONS</h3><ul><li>Students can safely prepare wet mount slides of plant and animal cells</li><li>Students can focus a light microscope and choose appropriate magnification</li><li>Students can construct biological diagrams that meet NESA conventions</li><li>Students can add scale bars and labels accurately to diagrams</li><li>Students can evaluate the quality of their own practical work</li></ul></div><div class='intention-card purple'><h3>🔗 KEY CONNECTIONS</h3><ul><li><strong>Prior:</strong> Cell structure, microscope use, magnification calculations</li><li><strong>Future:</strong> Practical investigations, first-hand data collection, exam drawing questions</li><li><strong>Real World:</strong> Laboratory skills in research, pathology, and diagnostics</li><li><strong>Skills:</strong> Following procedures, handling equipment, communicating visually</li></ul></div><div class='intention-card green'><h3>✅ SUCCESS CRITERIA</h3><ul><li>I can prepare a safe, air-bubble-free wet mount slide</li><li>I can bring a specimen into focus at low and high power</li><li>I can draw a labelled diagram with correct proportions and no shading</li><li>I can calculate and include a scale bar on my diagram</li><li>I can annotate diagrams to explain structure-function relationships</li></ul></div></div><div class='card'><div class='card-header'><div class='card-icon'>💧</div><h2>Wet Mount Slides: Purpose and Principles</h2></div><p>A <span class='key-term'>wet mount slide</span> is a temporary slide preparation where the specimen is suspended in a drop of liquid (usually water or stain) between a glass slide and a coverslip. Wet mounts are ideal for viewing living cells, fresh tissues, and small aquatic organisms.</p><div class='info-box'><strong>💡 Key Concept:</strong> A good wet mount minimises air bubbles, keeps the specimen flat and thin, and prevents the sample from drying out. This improves image clarity and protects both the specimen and the microscope lens.</div><div class='table-wrap'><table><thead><tr><th>Component</th><th>Description</th><th>Function in Wet Mount</th></tr></thead><tbody><tr><td><strong>Glass slide</strong></td><td>Rectangular glass sheet</td><td>Supports specimen and coverslip; placed on stage</td></tr><tr><td><strong>Coverslip</strong></td><td>Thin square glass/plastic</td><td>Flattens specimen; protects objective lens; reduces evaporation</td></tr><tr><td><strong>Mounting medium</strong></td><td>Drop of water or stain</td><td>Suspends specimen; may stain structures for better contrast</td></tr><tr><td><strong>Specimen</strong></td><td>Thin slice of tissue or single layer of cells</td><td>Object being observed and drawn</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> Thick specimens prevent light passing through and produce blurry images. Always use the thinnest possible sample—aim for a single cell layer when observing tissues like onion epidermis or cheek cells.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🔧</div><h2>Step-by-Step: Preparing a Wet Mount (Onion Epidermis)</h2></div><p>This procedure outlines how to prepare a classic onion epidermis wet mount to observe plant cells and their cell walls, nuclei, and vacuoles.</p><div class='flow-diagram'><div class='flow-box level-1'><span class='icon'>🧅</span><h4>1. PREPARE THE TISSUE</h4><p>Peel a thin, translucent layer of epidermis from the inside of an onion scale.</p><div class='examples'><strong>Tip:</strong> Use forceps to gently pull a very thin membrane—if it looks opaque or thick, discard and try again.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-2'><span class='icon'>💧</span><h4>2. ADD WATER/STAIN</h4><p>Place a small drop of water or iodine solution in the centre of a clean slide.</p><div class='examples'><strong>Iodine:</strong> Stains the nucleus and cell wall, increasing contrast so cells are easier to see.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-3'><span class='icon'>📍</span><h4>3. POSITION THE SPECIMEN</h4><p>Lay the onion epidermis flat in the drop using forceps. Ensure it is not folded or wrinkled.</p><div class='examples'><strong>Note:</strong> Gently smooth with a blunt needle if needed—avoid tearing the tissue.</div></div><div class='flow-arrow'>↓</div><div class='flow-box level-4'><span class='icon'>🪟</span><h4>4. LOWER THE COVERSLIP</h4><p>Hold the coverslip at a 45° angle, one edge touching the liquid, then slowly lower it.</p><div class='examples'><strong>Goal:</strong> Push air out as the liquid spreads, minimising bubbles.</div></div></div><div class='worked-example'><h4>📝 Worked Example: Onion Epidermis Wet Mount</h4><p><strong>Question:</strong> Describe a method to prepare a wet mount of onion epidermis and explain how it avoids air bubbles and thick specimens.</p><p><strong>Solution:</strong></p><div class='step-box'><strong>Step 1:</strong> Place a drop of water or iodine on a clean slide.</div><div class='step-box'><strong>Step 2:</strong> Use forceps to peel a very thin piece of onion epidermis and place it flat in the drop.</div><div class='step-box'><strong>Step 3:</strong> Hold the coverslip at about 45° with one edge touching the liquid, then lower it slowly so the liquid spreads and no air is trapped.</div><div class='step-box'><strong>Step 4:</strong> Gently blot any excess stain around the coverslip with filter paper.</div><p><strong>Explanation:</strong> Using a very thin epidermis ensures light can pass through and individual cells are visible. Lowering the coverslip at an angle pushes air out, reducing air bubbles that can obscure cells.</p></div><div class='warning-box'><strong>🚫 Exam Trap:</strong> Do not write 'put the coverslip on top' without describing the angled lowering technique. Marking criteria often require mentioning the 45° angle and avoiding air bubbles.</div></div><div class='card'><div class='card-header'><div class='card-icon'>🧼</div><h2>Safe Microscope Use and Focusing</h2></div><p>Correct microscope technique prevents damage to equipment and ensures sharp images suitable for accurate biological drawings.</p><div class='table-wrap'><table><thead><tr><th>Step</th><th>Action</th><th>Reason</th></tr></thead><tbody><tr><td><strong>1. Transport</strong></td><td>Carry the microscope with two hands: one on the arm, one under the base.</td><td>Prevents dropping and damage to lenses and internal components.</td></tr><tr><td><strong>2. Setup</strong></td><td>Place on a flat bench, plug in, and switch on light.</td><td>Stable platform prevents vibration and focus drift.</td></tr><tr><td><strong>3. Start on low power</strong></td><td>Always begin with the lowest power objective (e.g. 4×).</td><td>Wider field of view makes locating specimen easier and safer.</td></tr><tr><td><strong>4. Coarse focus first</strong></td><td>Use coarse focus only on low power.</td><td>Prevents objective from crashing into slide on high power.</td></tr><tr><td><strong>5. Centre specimen</strong></td><td>Move slide so specimen is centred before increasing magnification.</td><td>Ensures specimen remains in view when FOV becomes smaller.</td></tr><tr><td><strong>6. High power focus</strong></td><td>Switch to higher power and use fine focus only.</td><td>Fine focus gives sharp image without risking lens–slide contact.</td></tr><tr><td><strong>7. Clean up</strong></td><td>Lower stage, turn off light, unplug, and cover microscope.</td><td>Protects microscope and prolongs lifespan.</td></tr></tbody></table></div><div class='highlight-box'><strong>⚠️ Common Mistake:</strong> Never use coarse focus with the 40× or 100× objective. This can crack the slide and damage the objective lens—a very expensive mistake.</div></div><div class='card'><div class='card-header'><div class='card-icon'>✏️</div><h2>NESA-Standard Biological Diagrams</h2></div><p>A <span class='key-term'>biological diagram</span> is a clear, labelled line drawing that represents observed specimens accurately and to scale. It is not artwork—its purpose is to communicate scientific information.</p><div class='info-box'><strong>💡 NESA Conventions:</strong> Biological diagrams must be in pencil, use clear lines with <u>no shading</u>, include a descriptive title, have labels written horizontally in print, and show relative proportions accurately. Scale bars or magnification should be included whenever possible.</div><h3>Key Features of a Good Biological Diagram</h3><div class='table-wrap'><table><thead><tr><th>Feature</th><th>What to Do</th><th>Why It Matters</th></tr></thead><tbody><tr><td><strong>Title</strong></td><td>Write a clear title beneath the diagram (e.g. 'Diagram of Onion Epidermis Cells').</td><td>Identifies what is shown; aligns with NESA requirement for clarity.</td></tr><tr><td><strong>Lines</strong></td><td>Use single, sharp pencil lines. No sketching, no shading, no colouring.</td><td>Avoids confusion; emphasises structure, not artistic style.</td></tr><tr><td><strong>Proportion</strong></td><td>Keep shapes in correct proportion and orientation based on what you see.</td><td>Ensures scientific accuracy; diagrams should reflect actual observation.</td></tr><tr><td><strong>Labels</strong></td><td>Use straight horizontal lines (rulers) leading to structures. Labels in print, not cursive.</td><td>Improves readability and avoids overlapping lines.</td></tr><tr><td><strong>Scale</strong></td><td>Include magnification or scale bar where possible.</td><td>Allows others to understand actual size of structures.</td></tr><tr><td><strong>Detail level</strong></td><td>Include only structures you actually observe at that magnification.</td><td>Prevents adding imagined features; maintains integrity of observations.</td></tr></tbody></table></div><div class='worked-example'><h4>📝 Worked Example: Onion Cell Diagram Checklist</h4><p><strong>Question:</strong> List features that must be included in a NESA-standard biological diagram of onion epidermis cells.</p><p><strong>Model answer:</strong></p><div class='step-box'><strong>1.</strong> Use a sharp HB pencil and draw single, continuous lines for cell walls—no sketching or shading.</div><div class='step-box'><strong>2.</strong> Draw several adjoining rectangular cells to show their arrangement, keeping sizes and shapes in proportion to what is seen.</div><div class='step-box'><strong>3.</strong> Add straight, horizontal label lines with a ruler, labelling: cell wall, cytoplasm, nucleus, vacuole (if visible).</div><div class='step-box'><strong>4.</strong> Write a descriptive title underneath the diagram, e.g. 'Diagram of Onion Epidermis Cells'.</div><div class='step-box'><strong>5.</strong> Include either the magnification used (e.g. 'Observed at 400×') or a scale bar with a labelled length (e.g. 50 μm).</div></div><div class='warning-box'><strong>🚫 Exam Trap:</strong> Diagrams with shading, colour, or untidy sketch lines can lose marks even if the biology is correct. Keep diagrams clean, simple, and clearly labelled.</div></div><div class='card'><div class='card-header'><div class='card-icon'>📏</div><h2>Scale Bars in Diagrams</h2></div><p>A <span class='key-term'>scale bar</span> is a line drawn on a diagram that represents a specific actual distance (e.g. 10 μm). It allows anyone viewing the diagram to estimate sizes even without knowing the original magnification.</p><div class='formula-box'><strong>Key Idea:</strong> Use the magnification formula to calculate how long the scale bar should be on the page.<br><br><strong>Steps:</strong><br>1. Choose an actual length for the scale bar (e.g. 10 μm).<br>2. Multiply by magnification to find the image length (in μm or mm).<br>3. Draw a line of that length and label it (e.g. '10 μm').<br><br><strong>Example:</strong> Magnification = ×400, scale bar = 20 μm actual.<br>Image size = 20 μm × 400 = 8000 μm = 8 mm → draw an 8 mm line and label '20 μm'.</div><div class='worked-example'><h4>📝 Worked Example: Designing a Scale Bar</h4><p><strong>Question:</strong> You drew an onion cell diagram based on observations at ×400 magnification. You want to include a scale bar representing 50 μm. How long should the scale bar be on your page in mm?</p><p><strong>Solution:</strong></p><div class='step-box'><strong>Step 1:</strong> Use Image Size = Actual Size × Magnification.</div><div class='step-box'><strong>Step 2:</strong> Image size = 50 μm × 400 = 20,000 μm.</div><div class='step-box'><strong>Step 3:</strong> Convert to mm: 20,000 μm ÷ 1000 = 20 mm.</div><div class='step-box'><strong>Answer:</strong> Draw a 20 mm line and label it '50 μm'.</div><p><strong>Check:</strong> At ×400, 50 μm should appear 400× larger, so a length in the centimetre range is sensible.</p></div></div><div class='copy-section'><h2>📋 COPY INTO YOUR BOOKS</h2><div class='copy-grid'><div class='copy-item'><h4>Wet Mount Slides</h4><ul><li>Wet mount = specimen in a drop of liquid under a coverslip</li><li>Use thin specimens so light can pass through</li><li>Lower coverslip at 45° to avoid air bubbles</li><li>Use water or stains (iodine, methylene blue) to increase contrast</li><li>Blot excess liquid with filter paper</li></ul></div><div class='copy-item'><h4>Microscope Technique</h4><ul><li>Always start on low power (4× objective)</li><li>Use coarse focus on low power only</li><li>Centre specimen before increasing magnification</li><li>Use fine focus only on high power (40× objective)</li><li>Carry microscope with two hands; turn off and cover after use</li></ul></div><div class='copy-item'><h4>Biological Diagrams</h4><ul><li>Use sharp pencil, single lines, no shading</li><li>Draw what you see, in correct proportion</li><li>Horizontal labels with ruler, printed text</li><li>Include descriptive title under diagram</li><li>Add magnification or scale bar where possible</li></ul></div><div class='copy-item'><h4>Scale Bars</h4><ul><li>Scale bar shows actual distance (e.g. 20 μm)</li><li>Image length = actual length × magnification</li><li>Convert μm ↔ mm before drawing</li><li>Label the bar with actual length only</li><li>Check that scale bar matches diagram proportions</li></ul></div></div></div>",
+  "contentSections": [
+    {
+      "id": "wet-mount-purpose",
+      "type": "content",
+      "title": "Wet Mount Slides: Purpose and Principles",
+      "icon": "droplet",
+      "content": "A wet mount slide suspends the specimen in liquid between slide and coverslip. Key components: glass slide, coverslip, mounting medium, specimen."
+    },
+    {
+      "id": "wet-mount-procedure",
+      "type": "content",
+      "title": "Step-by-Step: Preparing a Wet Mount",
+      "icon": "tool",
+      "content": "Four-step process: prepare tissue, add water/stain, position specimen, lower coverslip at 45° angle."
+    },
+    {
+      "id": "microscope-technique",
+      "type": "content",
+      "title": "Safe Microscope Use and Focusing",
+      "icon": "settings",
+      "content": "Seven-step procedure from transport to cleanup. Key rule: never use coarse focus on high power."
+    },
+    {
+      "id": "nesa-diagrams",
+      "type": "content",
+      "title": "NESA-Standard Biological Diagrams",
+      "icon": "edit",
+      "content": "Biological diagrams are line drawings in pencil, no shading, clear titles, horizontal labels with ruler, correct proportions."
+    },
+    {
+      "id": "scale-bars",
+      "type": "content",
+      "title": "Scale Bars in Diagrams",
+      "icon": "ruler",
+      "content": "Scale bars show actual distance. Calculate: Image size = Actual × Magnification, then convert to mm for drawing."
+    }
+  ],
+  "activities": [
+    {
+      "id": "wet-mount-procedure-plan",
+      "type": "matching",
+      "title": "Match Wet Mount Steps to Purpose",
+      "description": "Match each step of wet mount preparation with its purpose.",
+      "theme": "blue",
+      "xpReward": 50,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "Use thin epidermis",
+          "right": "Allows light to pass through"
+        },
+        {
+          "id": "pair2",
+          "left": "Lower coverslip at 45°",
+          "right": "Minimises air bubbles"
+        },
+        {
+          "id": "pair3",
+          "left": "Add iodine stain",
+          "right": "Increases contrast for visibility"
+        },
+        {
+          "id": "pair4",
+          "left": "Use coverslip",
+          "right": "Flattens specimen and protects lens"
+        },
+        {
+          "id": "pair5",
+          "left": "Blot excess liquid",
+          "right": "Prevents mess and improves clarity"
+        }
+      ]
+    },
+    {
+      "id": "microscope-errors",
+      "type": "classification",
+      "title": "Classify Microscope Errors",
+      "description": "Sort each error description into the correct category.",
+      "theme": "teal",
+      "xpReward": 60,
+      "categories": [
+        {
+          "id": "user-error",
+          "label": "User Technique Error",
+          "description": "Mistakes in how the microscope is used"
+        },
+        {
+          "id": "equipment-issue",
+          "label": "Equipment/Setup Issue",
+          "description": "Problems with microscope settings or slide"
+        },
+        {
+          "id": "specimen-problem",
+          "label": "Specimen Problem",
+          "description": "Issues with the sample being viewed"
+        }
+      ],
+      "items": [
+        {
+          "id": "coarse-high",
+          "text": "Using coarse focus on 40× objective",
+          "category": "user-error"
+        },
+        {
+          "id": "not-centred",
+          "text": "Specimen disappears when switching magnification",
+          "category": "user-error"
+        },
+        {
+          "id": "dark-field",
+          "text": "Field of view is completely dark",
+          "category": "equipment-issue"
+        },
+        {
+          "id": "thick-specimen",
+          "text": "Everything looks blurry with many layers",
+          "category": "specimen-problem"
+        },
+        {
+          "id": "air-bubbles",
+          "text": "Circular black rings obscure cells",
+          "category": "specimen-problem"
+        },
+        {
+          "id": "one-hand-carry",
+          "text": "Carrying microscope with one hand",
+          "category": "user-error"
+        }
+      ]
+    },
+    {
+      "id": "diagram-checklist",
+      "type": "ordering",
+      "title": "Order the Diagram Drawing Process",
+      "description": "Arrange the steps for creating a NESA-standard biological diagram in the correct sequence.",
+      "theme": "indigo",
+      "xpReward": 40,
+      "items": [
+        {
+          "id": "step1",
+          "text": "Observe specimen under microscope",
+          "position": 1
+        },
+        {
+          "id": "step2",
+          "text": "Sketch outline with single pencil lines",
+          "position": 2
+        },
+        {
+          "id": "step3",
+          "text": "Draw observed structures in correct proportion",
+          "position": 3
+        },
+        {
+          "id": "step4",
+          "text": "Add straight horizontal label lines",
+          "position": 4
+        },
+        {
+          "id": "step5",
+          "text": "Write descriptive title and scale bar",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "id": "scale-bar-matching",
+      "type": "matching",
+      "title": "Match Scale Bar Calculations",
+      "description": "Match each scenario with the correct scale bar length.",
+      "theme": "orange",
+      "xpReward": 70,
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": "×400 mag, 25 μm actual",
+          "right": "10 mm scale bar"
+        },
+        {
+          "id": "pair2",
+          "left": "×1000 mag, 10 μm actual",
+          "right": "10 mm scale bar"
+        },
+        {
+          "id": "pair3",
+          "left": "×800 mag, 40 μm actual",
+          "right": "32 mm scale bar"
+        },
+        {
+          "id": "pair4",
+          "left": "×200 mag, 50 μm actual",
+          "right": "10 mm scale bar"
+        },
+        {
+          "id": "pair5",
+          "left": "×400 mag, 50 μm actual",
+          "right": "20 mm scale bar"
+        }
+      ]
+    }
+  ],
+  "assessment": {
+    "mcq": [
+      {
+        "id": "mcq1",
+        "question": "Which statement best describes how to lower a coverslip when preparing a wet mount?",
+        "options": [
+          "Drop it straight down onto the specimen to trap it firmly",
+          "Lower it at a 45° angle so one edge touches the liquid first",
+          "Place it on the bench, then push it under the sample",
+          "Hold it vertically and press it onto the slide"
+        ],
+        "correct": 1,
+        "explanation": "Lowering the coverslip at a 45° angle allows the liquid to spread and pushes air out, reducing bubbles.",
+        "marks": 1
+      },
+      {
+        "id": "mcq2",
+        "question": "Which feature is NOT part of a NESA-standard biological diagram?",
+        "options": [
+          "Single pencil lines with no shading",
+          "A clear, descriptive title below the diagram",
+          "Coloured shading to make the diagram look realistic",
+          "Straight horizontal label lines drawn with a ruler"
+        ],
+        "correct": 2,
+        "explanation": "Coloured shading is not part of NESA diagram conventions and can lose marks. Diagrams should be clear line drawings in pencil.",
+        "marks": 1
+      },
+      {
+        "id": "mcq3",
+        "question": "Why should coarse focus NOT be used with the high-power objective (e.g. 40×)?",
+        "options": [
+          "It makes the field of view too bright",
+          "It can drive the objective lens into the slide and cause damage",
+          "It automatically changes the magnification",
+          "It turns off the microscope light"
+        ],
+        "correct": 1,
+        "explanation": "Coarse focus on high power can force the objective into the slide, cracking the glass and damaging the lens.",
+        "marks": 1
+      },
+      {
+        "id": "mcq4",
+        "question": "A student draws a neat onion cell diagram with correct labels but forgets to include a title. Which statement is most accurate?",
+        "options": [
+          "The diagram is acceptable because titles are optional",
+          "The diagram will lose marks because all diagrams should have a clear title",
+          "Titles are only required for graphs, not diagrams",
+          "The title can be replaced by writing the magnification only"
+        ],
+        "correct": 1,
+        "explanation": "All biological diagrams should have a clear title so the reader knows exactly what is being shown.",
+        "marks": 1
+      },
+      {
+        "id": "mcq5",
+        "question": "A student wants to include a scale bar representing 40 μm on a diagram drawn from a ×800 magnification image. How long should the scale bar be on the page?",
+        "options": [
+          "0.05 mm",
+          "0.5 mm",
+          "32 mm",
+          "40 mm"
+        ],
+        "correct": 2,
+        "explanation": "Image size = Actual × Magnification = 40 μm × 800 = 32,000 μm = 32 mm. The bar should be 32 mm long.",
+        "marks": 1
+      }
+    ],
+    "saq": [
+      {
+        "id": "saq1",
+        "question": "Describe the correct method for placing a coverslip when preparing a wet mount and explain why this method is used.",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Describe 45° angle with one edge touching liquid",
+          "1 mark: Describe slow lowering to spread liquid",
+          "1 mark: Explain it minimises air bubbles and protects specimen"
+        ],
+        "modelAnswer": "Hold the coverslip at approximately 45° with one edge touching the drop of liquid on the slide. Slowly lower the coverslip so the liquid spreads underneath and air is pushed out in front of the coverslip. This method is used because it minimises trapping air bubbles, which can obscure the specimen, and helps the specimen lie flat in a thin, even layer, improving clarity and protecting the objective lens."
+      },
+      {
+        "id": "saq2",
+        "question": "Outline three conventions of a NESA-standard biological diagram and justify why each convention is important.",
+        "marks": 6,
+        "markingCriteria": [
+          "2 marks per convention: 1 for stating, 1 for justification (×3 conventions)"
+        ],
+        "modelAnswer": "Convention 1: Use clear, single pencil lines with no shading. This makes structures easy to distinguish and avoids confusion caused by artistic effects. Convention 2: Labels should be written in printed text with straight, horizontal lines drawn using a ruler. This keeps the diagram tidy and ensures labels are easy to read and clearly associated with the correct structures. Convention 3: Include a descriptive title and either magnification or a scale bar. The title tells the reader exactly what specimen and view is shown, while the magnification/scale bar allows interpretation of actual size, making the diagram scientifically meaningful rather than just a picture."
+      },
+      {
+        "id": "saq3",
+        "question": "A diagram of a blood cell smear is drawn from an image taken at ×1000 magnification. The student wants to draw a scale bar representing 10 μm. (a) Calculate how long the scale bar should be on the page in mm. (b) Explain why including a scale bar is useful for someone reading the diagram.",
+        "marks": 3,
+        "markingCriteria": [
+          "1 mark: Correct calculation (10 μm × 1000 = 10,000 μm = 10 mm)",
+          "1 mark: Correct units and final answer (10 mm)",
+          "1 mark: Explanation of scale bar utility"
+        ],
+        "modelAnswer": "(a) Image size = Actual × Magnification = 10 μm × 1000 = 10,000 μm. Convert to mm: 10,000 μm ÷ 1000 = 10 mm. The scale bar should be 10 mm long. (b) A scale bar allows anyone viewing the diagram to estimate actual sizes even if they do not know the original magnification. It makes the diagram useful for quantitative comparisons, not just qualitative description."
+      }
+    ]
+  },
+  "answers": {
+    "activities": [
+      {
+        "activityId": "wet-mount-procedure-plan",
+        "title": "Activity 1: Match Wet Mount Steps",
+        "content": "<p><strong>Use thin epidermis</strong> → Allows light to pass through</p><p><strong>Lower coverslip at 45°</strong> → Minimises air bubbles</p><p><strong>Add iodine stain</strong> → Increases contrast</p><p><strong>Use coverslip</strong> → Flattens specimen and protects lens</p><p><strong>Blot excess liquid</strong> → Prevents mess and improves clarity</p>"
+      },
+      {
+        "activityId": "microscope-errors",
+        "title": "Activity 2: Classify Microscope Errors",
+        "content": "<p><strong>User Technique Errors:</strong> Using coarse focus on 40×, specimen not centred, carrying with one hand</p><p><strong>Equipment/Setup Issues:</strong> Dark field of view (light/diaphragm issues)</p><p><strong>Specimen Problems:</strong> Thick specimen, air bubbles</p>"
+      },
+      {
+        "activityId": "diagram-checklist",
+        "title": "Activity 3: Diagram Drawing Process",
+        "content": "<p>Correct order:</p><ol><li>Observe specimen under microscope</li><li>Sketch outline with single pencil lines</li><li>Draw observed structures in correct proportion</li><li>Add straight horizontal label lines</li><li>Write descriptive title and scale bar</li></ol>"
+      },
+      {
+        "activityId": "scale-bar-matching",
+        "title": "Activity 4: Scale Bar Calculations",
+        "content": "<p>Formula: Image length = Actual × Magnification, then convert μm to mm (÷1000)</p><p>×400, 25 μm → 10 mm | ×1000, 10 μm → 10 mm | ×800, 40 μm → 32 mm | ×200, 50 μm → 10 mm | ×400, 50 μm → 20 mm</p>"
+      }
+    ],
+    "assessment": [
+      {
+        "questionId": "mcq1",
+        "question": "Which statement best describes how to lower a coverslip when preparing a wet mount?",
+        "answer": "B - Lower it at a 45° angle so one edge touches the liquid first",
+        "explanation": "Lowering the coverslip at a 45° angle allows the liquid to spread and pushes air out, reducing bubbles."
+      },
+      {
+        "questionId": "mcq2",
+        "question": "Which feature is NOT part of a NESA-standard biological diagram?",
+        "answer": "C - Coloured shading to make the diagram look realistic",
+        "explanation": "Coloured shading is not part of NESA diagram conventions. Diagrams should be clear line drawings in pencil with no shading."
+      },
+      {
+        "questionId": "mcq3",
+        "question": "Why should coarse focus NOT be used with the high-power objective (e.g. 40×)?",
+        "answer": "B - It can drive the objective lens into the slide and cause damage",
+        "explanation": "Coarse focus on high power can force the objective into the slide, cracking the glass and damaging the expensive lens."
+      },
+      {
+        "questionId": "mcq4",
+        "question": "A student draws a neat onion cell diagram with correct labels but forgets to include a title. Which statement is most accurate?",
+        "answer": "B - The diagram will lose marks because all diagrams should have a clear title",
+        "explanation": "All biological diagrams should have a clear title so the reader knows exactly what is being shown."
+      },
+      {
+        "questionId": "mcq5",
+        "question": "A student wants to include a scale bar representing 40 μm on a diagram drawn from a ×800 magnification image. How long should the scale bar be on the page?",
+        "answer": "C - 32 mm",
+        "explanation": "Image size = Actual × Magnification = 40 μm × 800 = 32,000 μm = 32 mm."
+      },
+      {
+        "questionId": "saq1",
+        "question": "Describe the correct method for placing a coverslip when preparing a wet mount and explain why this method is used.",
+        "answer": "Hold the coverslip at approximately 45° with one edge touching the drop of liquid on the slide. Slowly lower the coverslip so the liquid spreads underneath and air is pushed out in front of the coverslip. This method is used because it minimises trapping air bubbles, which can obscure the specimen, and helps the specimen lie flat in a thin, even layer, improving clarity and protecting the objective lens."
+      },
+      {
+        "questionId": "saq2",
+        "question": "Outline three conventions of a NESA-standard biological diagram and justify why each convention is important.",
+        "answer": "Convention 1: Use clear, single pencil lines with no shading. This makes structures easy to distinguish and avoids confusion caused by artistic effects. Convention 2: Labels should be written in printed text with straight, horizontal lines drawn using a ruler. This keeps the diagram tidy and ensures labels are easy to read and clearly associated with the correct structures. Convention 3: Include a descriptive title and either magnification or a scale bar. The title tells the reader exactly what specimen and view is shown, while the magnification/scale bar allows interpretation of actual size, making the diagram scientifically meaningful rather than just a picture."
+      },
+      {
+        "questionId": "saq3",
+        "question": "A diagram of a blood cell smear is drawn from an image taken at ×1000 magnification. The student wants to draw a scale bar representing 10 μm.",
+        "answer": "(a) Image size = Actual × Magnification = 10 μm × 1000 = 10,000 μm. Convert to mm: 10,000 μm ÷ 1000 = 10 mm. The scale bar should be 10 mm long. (b) A scale bar allows anyone viewing the diagram to estimate actual sizes even if they do not know the original magnification. It makes the diagram useful for quantitative comparisons, not just qualitative description."
+      }
+    ]
+  },
+  "copyToBook": {
+    "title": "Wet Mounts and Biological Diagrams",
+    "sections": [
+      {
+        "title": "Wet Mount Slides",
+        "content": [
+          "Wet mount = specimen in a drop of liquid under a coverslip",
+          "Use thin specimens so light can pass through",
+          "Lower coverslip at 45° to avoid air bubbles",
+          "Use water or stains (iodine, methylene blue) to increase contrast",
+          "Blot excess liquid with filter paper"
+        ]
+      },
+      {
+        "title": "Microscope Technique",
+        "content": [
+          "Always start on low power (4× objective)",
+          "Use coarse focus on low power only",
+          "Centre specimen before increasing magnification",
+          "Use fine focus only on high power (40× objective)",
+          "Carry microscope with two hands; turn off and cover after use"
+        ]
+      },
+      {
+        "title": "Biological Diagrams",
+        "content": [
+          "Use sharp pencil, single lines, no shading",
+          "Draw what you see, in correct proportion",
+          "Horizontal labels with ruler, printed text",
+          "Include descriptive title under diagram",
+          "Add magnification or scale bar where possible"
+        ]
+      },
+      {
+        "title": "Scale Bars",
+        "content": [
+          "Scale bar shows actual distance (e.g. 20 μm)",
+          "Image length = actual length × magnification",
+          "Convert μm ↔ mm before drawing",
+          "Label the bar with actual length only",
+          "Check that scale bar matches diagram proportions"
+        ]
+      }
+    ]
+  },
+  "navigation": {
+    "previous": null,
+    "previousTitle": null,
+    "next": null,
+    "nextTitle": null
+  },
+  "meta": {
+    "author": "Science Hub",
+    "createdAt": "2026-02-10",
+    "lastModified": "2026-02-10",
+    "version": "2.0.0",
+    "format": "V2.0",
+    "tags": ["wet-mount", "microscope", "biological-diagrams", "NESA", "practical-skills", "scale-bar"]
+  }
+}
