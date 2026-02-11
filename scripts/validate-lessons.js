@@ -176,6 +176,72 @@ function validateLessonContent(data, filePath) {
     }
   }
 
+  // 13. Field name consistency checks (V2 format - prefer standardized names)
+  if (isV2) {
+    // Check matching activities
+    for (const activity of activities) {
+      if (activity.type === 'matching') {
+        if (activity.pairs) {
+          warnings.push(`Activity "${activity.id}": Uses deprecated "pairs" field — prefer "items" with "text"/"match" properties`);
+        }
+        if (activity.items && activity.items[0]) {
+          const firstItem = activity.items[0];
+          if (firstItem.left || firstItem.right) {
+            warnings.push(`Activity "${activity.id}": Uses deprecated "left"/"right" fields — prefer "text"/"match"`);
+          }
+        }
+      }
+
+      // Check classification activities
+      if (activity.type === 'classification') {
+        if (activity.categories && activity.categories[0]?.name) {
+          warnings.push(`Activity "${activity.id}": Classification uses "name" — prefer "label" for categories`);
+        }
+        if (activity.items && activity.items[0]?.correctCategory) {
+          warnings.push(`Activity "${activity.id}": Classification uses "correctCategory" — prefer "category" for items`);
+        }
+      }
+
+      // Check ordering activities
+      if (activity.type === 'ordering') {
+        if (activity.items && activity.items[0]) {
+          const firstItem = activity.items[0];
+          if (firstItem.correctOrder !== undefined) {
+            warnings.push(`Activity "${activity.id}": Uses deprecated "correctOrder" — prefer "order" or "position"`);
+          }
+        }
+      }
+    }
+
+    // Check assessment field names
+    if (data.assessment) {
+      if (data.assessment.mcq) {
+        warnings.push(`Assessment: Uses deprecated "mcq" field — prefer "multipleChoice"`);
+      }
+      if (data.assessment.saq) {
+        warnings.push(`Assessment: Uses deprecated "saq" field — prefer "shortAnswer"`);
+      }
+
+      // Check MCQ format (prefer text-based correctAnswer over index-based correct)
+      for (const mcq of mcqs) {
+        if (mcq.correct !== undefined && !mcq.correctAnswer) {
+          warnings.push(`MCQ "${mcq.id || '?'}": Uses index-based "correct" — prefer text-based "correctAnswer"`);
+        }
+      }
+    }
+
+    // Check copyToBook section field names
+    if (data.copyToBook?.sections) {
+      for (let i = 0; i < data.copyToBook.sections.length; i++) {
+        const section = data.copyToBook.sections[i];
+        if (section.content) {
+          warnings.push(`CopyToBook section ${i + 1}: Uses deprecated "content" — prefer "items"`);
+          break; // Only warn once
+        }
+      }
+    }
+  }
+
   return { errors, warnings };
 }
 

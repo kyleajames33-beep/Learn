@@ -1,0 +1,129 @@
+{
+  "id": "module-X-name-lesson-Y",
+  "version": 2,
+  "v2": true,
+  "title": "Lesson Title Here",
+  "description": "A brief description of what students will learn in this lesson.",
+  "module": "Module X: Module Name",
+  "duration": "60 minutes",
+
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "moduleBadge": "Year 11",
+    "icon": "dna",
+    "duration": "60 minutes"
+  },
+
+  "learningIntentions": [
+    "Students will understand...",
+    "Students will be able to..."
+  ],
+
+  "contentHTML": "<h2>Section 1: Introduction</h2><p>Rich HTML content goes here...</p>",
+
+  "activities": [
+    {
+      "id": "activity-1",
+      "type": "matching",
+      "title": "Match Terms to Definitions",
+      "description": "Match each term with its correct definition.",
+      "theme": "blue",
+      "xpReward": 50,
+      "items": [
+        {
+          "id": "item1",
+          "text": "Term to match",
+          "match": "Definition text"
+        }
+      ]
+    },
+    {
+      "id": "activity-2",
+      "type": "classification",
+      "title": "Classify by Category",
+      "description": "Drag each item to the correct category.",
+      "theme": "green",
+      "xpReward": 60,
+      "categories": [
+        {
+          "id": "cat1",
+          "label": "Category Name",
+          "description": "Description of what belongs here"
+        }
+      ],
+      "items": [
+        {
+          "id": "item1",
+          "text": "Item to classify",
+          "category": "cat1"
+        }
+      ]
+    },
+    {
+      "id": "activity-3",
+      "type": "ordering",
+      "title": "Order the Steps",
+      "description": "Arrange the steps in the correct order.",
+      "theme": "purple",
+      "xpReward": 50,
+      "items": [
+        {
+          "id": "step1",
+          "text": "First step description",
+          "order": 1
+        }
+      ],
+      "explanation": "Why this order is correct..."
+    }
+  ],
+
+  "assessment": {
+    "multipleChoice": [
+      {
+        "id": "mcq1",
+        "question": "Question text here?",
+        "options": [
+          "Option A",
+          "Option B",
+          "Option C",
+          "Option D"
+        ],
+        "correctAnswer": "Option B",
+        "rationale": "Explanation of why this is correct and others are wrong."
+      }
+    ],
+    "shortAnswer": [
+      {
+        "id": "saq1",
+        "question": "Short answer question here?",
+        "marks": 3,
+        "markingCriteria": [
+          "Point 1 worth 1 mark",
+          "Point 2 worth 1 mark",
+          "Point 3 worth 1 mark"
+        ],
+        "modelAnswer": "A complete model answer showing students what a full-mark response looks like."
+      }
+    ]
+  },
+
+  "copyToBook": {
+    "title": "Copy Into Your Book",
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          "Bullet point 1",
+          "Bullet point 2",
+          "Bullet point 3"
+        ]
+      }
+    ]
+  },
+
+  "navigation": {
+    "prev": "module-X-name-lesson-Y-minus-1",
+    "next": "module-X-name-lesson-Y-plus-1",
+    "home": "../module-X-name/index.html"
+  }
+}
