@@ -961,9 +961,7 @@ const LessonRenderer = {
           <div class="question-item" data-question-id="${q.id || index}">
             <span class="marks"><i data-lucide="award"></i> ${q.marks || 2} marks</span>
             <p><strong>Question ${index + 1}:</strong> ${q.question}</p>
-            <div class="answer-area" data-lines="${q.lines || 4}">
-              ${Array(q.lines || 4).fill(0).map(() => '<div class="answer-line"></div>').join('')}
-            </div>
+            <textarea class="answer-area" rows="${q.lines || 4}" placeholder="Type your answer here..."></textarea>
           </div>
         `).join('')}
       </div>

@@ -392,12 +392,14 @@ class LessonRenderer {
               <span>Copy Into Your Book</span>
             </summary>
             <div class="card-content" style="margin-top:16px">
-              ${ctb.sections.map(section => `
+              ${ctb.sections.map(section => {
+                const items = section.items || section.content || [];
+                return `
                 <h4>${section.title}</h4>
                 <ul>
-                  ${section.items.map(item => `<li>${item}</li>`).join('')}
+                  ${items.map(item => `<li>${item}</li>`).join('')}
                 </ul>
-              `).join('')}
+              `}).join('')}
             </div>
           </details>
         </section>
