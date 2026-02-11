@@ -38,6 +38,11 @@ const CHECKS = [
     description: 'Scans lesson content for American English spellings'
   },
   {
+    name: 'CSS Variable Validation',
+    script: 'validate-css.js',
+    description: 'Validates all CSS custom properties are defined in global.css :root'
+  },
+  {
     name: 'Quality Scoring',
     script: 'score-lessons.js',
     description: 'Scores each lesson on quality metrics and detects regression'

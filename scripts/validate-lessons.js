@@ -240,6 +240,56 @@ function validateLessonContent(data, filePath) {
         }
       }
     }
+
+    // 14. V2 Structure Validation (ensures V2 lessons have required sections)
+    // Check hero object
+    if (!data.hero) {
+      errors.push(`${fileName}: V2 lesson missing "hero" object`);
+    } else {
+      if (!data.hero.subjectBadge) {
+        warnings.push(`${fileName}: hero missing "subjectBadge"`);
+      }
+      if (!data.hero.moduleBadge) {
+        warnings.push(`${fileName}: hero missing "moduleBadge"`);
+      }
+      if (!data.hero.icon) {
+        warnings.push(`${fileName}: hero missing "icon"`);
+      }
+      if (!data.hero.duration) {
+        warnings.push(`${fileName}: hero missing "duration"`);
+      }
+    }
+
+    // Check learning intentions
+    if (!data.learningIntentions || !Array.isArray(data.learningIntentions)) {
+      errors.push(`${fileName}: V2 lesson missing "learningIntentions" array`);
+    } else if (data.learningIntentions.length < 2) {
+      warnings.push(`${fileName}: V2 lesson should have ≥2 learningIntentions (has ${data.learningIntentions.length})`);
+    }
+
+    // Check contentHTML
+    if (!data.contentHTML) {
+      errors.push(`${fileName}: V2 lesson missing "contentHTML" field`);
+    } else if (data.contentHTML.length < 500) {
+      warnings.push(`${fileName}: contentHTML seems short (${data.contentHTML.length} chars) — recommend ≥500 chars for meaningful content`);
+    }
+
+    // Check copyToBook structure (V2 uses sections with items)
+    if (!data.copyToBook) {
+      warnings.push(`${fileName}: V2 lesson missing "copyToBook" section`);
+    } else if (!data.copyToBook.sections || !Array.isArray(data.copyToBook.sections)) {
+      warnings.push(`${fileName}: copyToBook missing "sections" array`);
+    } else if (data.copyToBook.sections.length === 0) {
+      warnings.push(`${fileName}: copyToBook has no sections`);
+    } else {
+      // Check that sections have items (not content)
+      for (let i = 0; i < data.copyToBook.sections.length; i++) {
+        const section = data.copyToBook.sections[i];
+        if (!section.items && !section.content) {
+          warnings.push(`${fileName}: copyToBook section ${i + 1} missing "items" array`);
+        }
+      }
+    }
   }
 
   return { errors, warnings };
