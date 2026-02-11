@@ -35,6 +35,12 @@ Read these files **in this exact order:**
    - Defines the required lesson structure (hero, intentions, cards, activities, assessment, answers)
    - Used by external AIs generating lesson HTML — you wrap that HTML into V2 JSON
 
+6. **[V2-LESSON-STANDARDS.md](V2-LESSON-STANDARDS.md)** — V2 Lesson Field Name Standards
+   - **MANDATORY reading if creating or editing V2 lessons**
+   - Defines correct field names (items vs pairs, multipleChoice vs mcq, etc.)
+   - Shows what NOT to use (deprecated field names)
+   - Template file: `data/lessons/TEMPLATE-V2.json`
+
 ---
 
 ## STEP 2: DO THE WORK
@@ -82,6 +88,21 @@ The following systems are **already fully implemented** (~6000 lines of code). D
 - **Assessment:** Minimum 3 MCQs + 2 SAQs
 - **Copy-to-Book:** Minimum 5 definitions
 - **Engagement hook:** Required, compelling question or scenario
+
+### V2 Lesson Field Names (CRITICAL)
+
+**ALWAYS use these field names in V2 lessons** (see `docs/V2-LESSON-STANDARDS.md` for details):
+
+- ✅ Matching: Use `items` with `text`/`match` (NOT `pairs` with `left`/`right`)
+- ✅ Classification: Use `label` for categories, `category` for items (NOT `name`/`correctCategory`)
+- ✅ Ordering: Use `order` or `position` (NOT `correctOrder`)
+- ✅ Assessment: Use `multipleChoice` (NOT `mcq`), `shortAnswer` (NOT `saq`)
+- ✅ MCQ answers: Use `correctAnswer: "text"` (NOT `correct: 1` index-based)
+- ✅ CopyToBook: Use `items` in sections (NOT `content`)
+
+**Copy from template:** Start with `data/lessons/TEMPLATE-V2.json` to avoid mistakes.
+
+**Validation:** `node scripts/validate-lessons.js` will WARN if you use deprecated field names.
 
 ---
 

@@ -1,6 +1,6 @@
 # Common Mistakes & Solutions
 
-**Last Updated:** 2026-02-10 (v3 — added Lesson V2.0 quality gaps #23-26)
+**Last Updated:** 2026-02-11 (v4 — added V2 field name inconsistencies #25)
 **Purpose:** Known bugs, pitfalls, and how to avoid them
 
 Read this file BEFORE starting any work to avoid repeating past mistakes.
@@ -936,3 +936,125 @@ renderFillBlankActivity(activity, theme) {
 }
 ```
 
+
+---
+
+### 25. V2 Lesson Field Name Inconsistencies
+
+**Bug:** Activities don't render, assessment shows "undefined", matching/classification broken despite valid JSON.
+
+**Cause:** V2 lessons evolved with two different field name conventions. Renderer supports both via fallbacks, but new lessons should use standardized names.
+
+**Wrong field names (deprecated):**
+```json
+{
+  "activities": [
+    {
+      "type": "matching",
+      "pairs": [                    // ❌ WRONG - Use "items"
+        {
+          "left": "Term",           // ❌ WRONG - Use "text"
+          "right": "Definition"     // ❌ WRONG - Use "match"
+        }
+      ]
+    },
+    {
+      "type": "classification",
+      "categories": [
+        { "name": "Cat 1" }         // ❌ WRONG - Use "label"
+      ],
+      "items": [
+        { "correctCategory": "cat1" } // ❌ WRONG - Use "category"
+      ]
+    },
+    {
+      "type": "ordering",
+      "items": [
+        { "correctOrder": 1 }       // ❌ WRONG - Use "order" or "position"
+      ]
+    }
+  ],
+  "assessment": {
+    "mcq": [                        // ❌ WRONG - Use "multipleChoice"
+      {
+        "correct": 1,               // ❌ WRONG - Use "correctAnswer" with text
+        "explanation": "..."        // ❌ WRONG - Use "rationale"
+      }
+    ],
+    "saq": [...]                    // ❌ WRONG - Use "shortAnswer"
+  },
+  "copyToBook": {
+    "sections": [
+      { "content": [...] }          // ❌ WRONG - Use "items"
+    ]
+  }
+}
+```
+
+**Correct field names (standardized):**
+```json
+{
+  "activities": [
+    {
+      "type": "matching",
+      "items": [                    // ✅ RIGHT
+        {
+          "text": "Term",           // ✅ RIGHT
+          "match": "Definition"     // ✅ RIGHT
+        }
+      ]
+    },
+    {
+      "type": "classification",
+      "categories": [
+        { "label": "Cat 1" }        // ✅ RIGHT
+      ],
+      "items": [
+        { "category": "cat1" }      // ✅ RIGHT
+      ]
+    },
+    {
+      "type": "ordering",
+      "items": [
+        { "order": 1 }              // ✅ RIGHT (or "position")
+      ]
+    }
+  ],
+  "assessment": {
+    "multipleChoice": [             // ✅ RIGHT
+      {
+        "correctAnswer": "Option B", // ✅ RIGHT (text-based)
+        "rationale": "..."          // ✅ RIGHT
+      }
+    ],
+    "shortAnswer": [...]            // ✅ RIGHT
+  },
+  "copyToBook": {
+    "sections": [
+      { "items": [...] }            // ✅ RIGHT
+    ]
+  }
+}
+```
+
+**How to avoid:**
+1. **Use the template:** Copy `data/lessons/TEMPLATE-V2.json` when creating new lessons
+2. **Read the standards:** `docs/V2-LESSON-STANDARDS.md` defines all correct field names
+3. **Run validation:** `node scripts/validate-lessons.js` warns about deprecated field names
+4. **Check PASS status:** Lesson 2 uses correct names → no warnings. Use it as reference.
+
+**Example validation output:**
+```
+PASS  data/lessons/module-1-cells-lesson-2.json  ← Correct field names
+WARN  data/lessons/module-1-cells-lesson-1.json  ← Deprecated field names
+  WARN: Activity "tenet-matching": Uses deprecated "pairs" field
+  WARN: Assessment: Uses deprecated "mcq" field
+```
+
+**Why it matters:**
+- Renderer has fallback logic (`items || pairs`, `label || name`) so both work
+- But consistency makes code maintainable and prevents confusion
+- Future versions may remove fallback support
+- Validation catches mistakes before they reach production
+
+**Status:** All 7 existing lessons work (renderer supports both formats). New lessons should use standardized names.
