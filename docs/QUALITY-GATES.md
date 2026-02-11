@@ -39,6 +39,29 @@
 - [ ] **Alt text** for all images
 - [ ] **No console errors** on load or interaction
 
+### Browser Testing Requirements (MANDATORY Before Commit)
+
+**CRITICAL:** Do not commit lesson changes without browser testing. Automated scripts catch JSON/HTML structure issues, but not runtime rendering problems.
+
+- [ ] **Console check:** Open DevTools Console (F12), check for JavaScript errors
+- [ ] **Visual check:** Does the lesson look correct? (hero, content sections, activities, assessment)
+- [ ] **Activity functionality:** Click through all activities, verify feedback works
+- [ ] **Mobile viewport:** Test at 375px width, verify no horizontal scroll
+- [ ] **Navigation:** Test Previous/Next/Module Overview links
+- [ ] **Local storage:** Mark complete, refresh page, verify completion persists
+
+**Why this matters:** Validation scripts catch schema errors, but not runtime issues like:
+- CSS variables undefined → entire page looks unstyled
+- Field name mismatches → activities show "undefined"
+- Wrong data → module index shows wrong lesson titles
+- Event binding failures → buttons don't respond
+
+**When to test:**
+- After creating/editing a lesson JSON file
+- After modifying CSS/JS files
+- After updating module index pages
+- Before committing ANY lesson-related changes
+
 ---
 
 ## PER BATCH CHECKLIST (5 Lessons)
@@ -175,15 +198,19 @@ node scripts/validate-pages.js
 
 # 3. Check for American English spellings in lesson content
 node scripts/validate-spelling.js
+
+# 4. Validate CSS variables (catch undefined variables that cause silent failures)
+node scripts/validate-css.js
 ```
 
 ### What Each Script Catches
 
 | Script | Catches |
 |--------|---------|
-| `validate-lessons.js` | Missing required fields, unsupported activity types, MCQ answer mismatches, broken navigation, content quality (activity count, assessment count, definitions) |
+| `validate-lessons.js` | Missing required fields, unsupported activity types, MCQ answer mismatches, broken navigation, content quality (activity count, assessment count, definitions), deprecated V2 field names |
 | `validate-pages.js` | Missing CSS/JS includes, absolute paths, missing viewport/charset meta tags |
 | `validate-spelling.js` | American spellings (-ize, -or, -er, hemoglobin, etc.) with exact field location |
+| `validate-css.js` | Undefined CSS custom properties (var(--variable) references without :root definitions) |
 
 ---
 
@@ -226,9 +253,21 @@ node scripts/validate-spelling.js
 
 ### Failure: Australian Spelling Errors
 
-**Symptom:** "behavior" instead of "behaviour"  
-**Cause:** Copy-paste from American sources  
+**Symptom:** "behavior" instead of "behaviour"
+**Cause:** Copy-paste from American sources
 **Fix:** Run grep check, fix all occurrences
+
+### Failure: Undefined CSS Variables
+
+**Symptom:** Page looks unstyled, plain text appearance, no colors/spacing
+**Cause:** CSS uses `var(--variable)` that isn't defined in `global.css :root`
+**Fix:** Run `node scripts/validate-css.js`, add missing variables to `assets/css/global.css`
+
+### Failure: Module Index Shows Wrong Lesson Titles
+
+**Symptom:** Module index card titles don't match actual lesson JSON data
+**Cause:** Static HTML in module index not synced with lesson JSON files
+**Fix:** Read lesson JSON, manually update module index HTML with correct titles/descriptions
 
 ---
 

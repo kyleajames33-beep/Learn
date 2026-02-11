@@ -54,7 +54,7 @@ Execute that task following these rules:
 - **Read before write:** Always read a file before editing it
 - **Edit, don't rewrite:** Use Edit tool for changes, not Write
 - **Australian English:** Use "specialised", "behaviour", "colour", "centre"
-- **Cache-busting:** If you change CSS/JS, run `node scripts/bump-versions.js`
+- **Cache-busting:** ❌ NEVER manually update `?v=` parameters → ✅ ALWAYS run `node scripts/bump-versions.js` after changing CSS/JS
 
 ### Existing Gamification Systems (DO NOT REBUILD)
 
@@ -110,16 +110,49 @@ The following systems are **already fully implemented** (~6000 lines of code). D
 
 **MANDATORY before any commit:**
 
+### A. Browser Testing (REQUIRED for lesson changes)
+
+**CRITICAL:** Validation scripts catch JSON/HTML structure errors, but NOT runtime rendering issues.
+
+Before running automated checks, **manually test in browser:**
+
+1. Open the lesson page in a browser
+2. Open DevTools Console (F12) — check for JavaScript errors
+3. Visual check — does it look correct? (hero, content, activities, assessment)
+4. Click through all activities — do they work? Does feedback appear?
+5. Test at 375px mobile viewport — any horizontal scroll?
+6. Test navigation — do Previous/Next/Module Overview links work?
+
+**Why this matters:** Prevents issues like:
+- Undefined CSS variables → page looks completely unstyled
+- Field name mismatches → activities show "undefined"
+- Wrong static data → module index shows wrong lesson titles
+
+### B. Automated Validation
+
 ```bash
 node scripts/run-all-checks.js
 ```
 
-This runs 5 checks:
+This runs 6 checks:
 1. Smoke Test (lessons load without errors)
 2. HTML Validation (structure correct)
 3. JSON Validation (schema + content quality)
 4. Spelling Check (Australian English)
-5. Quality Scoring (no regression)
+5. CSS Validation (no undefined variables)
+6. Quality Scoring (no regression)
+
+### C. Cache Busting (if you modified CSS/JS)
+
+**If you changed any CSS or JavaScript files:**
+
+```bash
+node scripts/bump-versions.js
+```
+
+This automatically updates `?v=TIMESTAMP` on all CSS/JS references across all HTML files.
+
+❌ **NEVER manually update `?v=` parameters** — this is the #1 time-wasting mistake.
 
 ### If Tests PASS ✅
 
@@ -142,6 +175,16 @@ This runs 5 checks:
 - **MCQ answer mismatch** → Ensure correctAnswer is in options array
 - **Missing required field** → Add the field to lesson JSON
 - **Quality regression** → Add more activities, better assessments
+- **Undefined CSS variables** → Add missing variables to `assets/css/global.css :root` block
+
+**Systemic issue protocol:**
+
+If you find a bug in one file, **STOP** — check scope across ALL files before fixing:
+- Use Grep/Glob to search for similar patterns
+- Identify all affected files
+- Fix them all together in one commit
+- Add validation to catch future instances
+- Document in COMMON-MISTAKES.md
 
 ---
 

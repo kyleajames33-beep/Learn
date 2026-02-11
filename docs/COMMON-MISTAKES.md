@@ -1058,3 +1058,168 @@ WARN  data/lessons/module-1-cells-lesson-1.json  ← Deprecated field names
 - Validation catches mistakes before they reach production
 
 **Status:** All 7 existing lessons work (renderer supports both formats). New lessons should use standardized names.
+
+---
+
+### 26. Manual Cache Busting Instead of Using Automation
+
+**Bug:** Manually updating `?v=TIMESTAMP` across 20+ HTML files, wasting time and risking typos.
+
+**Cause:** Not using the existing `bump-versions.js` script that automates this.
+
+**Wrong approach:**
+```bash
+# ❌ WRONG - Manual find/replace across files
+# Editing 22 files one by one
+# Prone to missing files or typos
+```
+
+**Correct approach:**
+```bash
+# ✅ RIGHT - Use the automation script
+node scripts/bump-versions.js
+
+# Output:
+#   UPDATED  index.html (9 references)
+#   UPDATED  hsc-biology/lesson.html (12 references)
+#   ...
+#   Version: v=1770791403
+#   Files modified: 22
+#   References: 167
+```
+
+**How to avoid:**
+1. **ALWAYS run** `node scripts/bump-versions.js` after changing CSS/JS files
+2. Commit the HTML changes along with the CSS/JS changes
+3. AI-START-HERE.md mentions this but it's easy to miss — now it's in COMMON-MISTAKES
+
+**When to run:**
+- After editing any `.css` file
+- After editing any `.js` file  
+- Before committing
+- Part of pre-commit checklist
+
+**Why it matters:**
+- Browser caching means users won't see your changes without cache busting
+- Manual updates are error-prone and time-consuming
+- Automated approach is faster and catches all files
+
+---
+
+### 27. Reactive Bug Fixing Without Proactive Testing
+
+**Bug:** User reports issues one at a time. Multiple back-and-forth cycles to fix bugs that could have been caught earlier.
+
+**Cause:** No proactive browser testing before committing. Only testing with validators/scripts, not actual browser rendering.
+
+**Wrong approach:**
+```
+1. Make changes to CSS/renderer
+2. Run validators (they pass)
+3. Commit and push
+4. User reports: "Activities don't render"
+5. Fix issue #1, commit, push
+6. User reports: "Assessment shows undefined"
+7. Fix issue #2, commit, push
+8. User reports: "Matching broken"
+9. Fix issue #3, commit, push
+```
+
+**Correct approach:**
+```
+1. Make changes to CSS/renderer
+2. Run validators
+3. OPEN PAGES IN BROWSER ← This step was missing
+   - Load home page → Check console for errors
+   - Load module index → Verify lesson cards
+   - Load 2-3 lessons → Test activities work
+   - Check responsive (mobile/tablet/desktop)
+4. Fix any issues found
+5. Commit once with all fixes together
+```
+
+**How to avoid:**
+1. **Browser Testing Checklist** (add to QUALITY-GATES.md):
+   - [ ] Open index.html — home page renders correctly
+   - [ ] Open module index — lesson cards show correct data
+   - [ ] Open 2-3 lessons — activities render and function
+   - [ ] Check console — no errors
+   - [ ] Check mobile view — responsive layout works
+2. **Test before commit**, not after user reports
+3. **Group related fixes** — don't commit piecemeal
+
+**Why it matters:**
+- Validators check structure, not visual rendering
+- Console errors only show in browser
+- User frustration from broken features
+- Multiple commits for related issues pollute git history
+
+---
+
+### 28. Fixing Systemic Issues One File at a Time
+
+**Bug:** Fix field name mismatch in lesson 1, discover lessons 3-7 have the same issue, fix them later one by one.
+
+**Cause:** Not checking scope of systemic issues before fixing.
+
+**Wrong approach:**
+```
+1. Find field name bug in lesson 1
+2. Fix lesson 1
+3. Commit fix for lesson 1
+4. Later discover lesson 3 has same bug
+5. Fix lesson 3
+6. Later discover lessons 4-7 have same bug
+7. Fix them one by one...
+```
+
+**Correct approach:**
+```
+1. Find field name bug in lesson 1
+2. STOP — Don't fix yet
+3. Check scope: grep/search all lessons for same pattern
+4. Find: Lessons 1, 3-7 all have the issue
+5. Understand the pattern
+6. Fix renderer to handle all variations
+7. Test all affected lessons
+8. Commit once with complete fix
+```
+
+**How to avoid:**
+1. **When you find a pattern bug:**
+   - Pause before fixing
+   - Search ALL files for the same pattern
+   - Document the scope
+   - Fix systematically, not incrementally
+
+2. **Commands to check scope:**
+   ```bash
+   # Find all matching activities
+   grep -r '"type": "matching"' data/lessons/
+   
+   # Find all using "pairs" field
+   grep -r '"pairs":' data/lessons/
+   
+   # Check all assessment formats
+   grep -r '"mcq":' data/lessons/
+   ```
+
+3. **Fix pattern:**
+   - Identify all affected files
+   - Fix root cause (renderer logic)
+   - Test all affected cases
+   - Commit atomic fix
+
+**Why it matters:**
+- Multiple commits for same issue → messy git history
+- Risk missing files → incomplete fix
+- Wastes time discovering same bug repeatedly
+- Better to solve systemically than incrementally
+
+**Example from this session:**
+- Found field name mismatches: `pairs` vs `items`, `mcq` vs `multipleChoice`, etc.
+- Instead of fixing lessons 1-7 individually, we:
+  1. Audited all 7 lessons systematically
+  2. Updated renderer to handle both formats
+  3. Created validation to prevent future issues
+  4. One comprehensive fix instead of 7 separate ones

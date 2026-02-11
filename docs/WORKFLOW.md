@@ -49,12 +49,78 @@ END SESSION
 - [ ] **If touching gamification:** Check `docs/goals/PHASE-3-GAMIFICATION.md` "Already Built" section — do NOT rebuild existing systems
 
 ### Session End Checklist
+- [ ] **Browser testing completed** (console errors, visual check, activity functionality) — See QUALITY-GATES.md
 - [ ] **Verification suite passed** — `node scripts/run-all-checks.js` exits 0
 - [ ] All changed files committed
 - [ ] `docs/STATUS.md` updated with today's progress
 - [ ] Relevant tracker files updated
 - [ ] No unresolved critical bugs left unlogged
 - [ ] **New bugs documented in `docs/COMMON-MISTAKES.md`** (if any new bugs were discovered and fixed during this session)
+
+### Commit Strategy
+
+**Group related fixes, test together, commit once:**
+
+❌ **Wrong Approach:**
+- Fix bug 1 → commit
+- Fix bug 2 → commit
+- Fix bug 3 → commit
+- Update cache versions → commit
+- Update docs → commit
+- Result: 5 commits for one logical change
+
+✅ **Right Approach:**
+- Fix all related bugs
+- Run cache busting script (`node scripts/bump-versions.js`)
+- Run full verification (`node scripts/run-all-checks.js`)
+- Update all docs (STATUS.md, trackers, BUG-LOG.md, COMMON-MISTAKES.md)
+- Commit once with descriptive message listing all changes
+- Result: 1 commit with complete, tested changes
+
+**Benefits:**
+- Easier to review git history
+- Easier to rollback if needed
+- Ensures related changes are atomic
+- Forces comprehensive testing before commit
+
+**Exception:** If token budget is running low, commit working state to preserve progress, but note in commit message that it's a checkpoint.
+
+### Systemic Issue Protocol
+
+**When you find a bug in one file, check the scope across ALL files before fixing:**
+
+❌ **Wrong Approach:**
+- Find field name bug in lesson 1
+- Fix lesson 1
+- Commit
+- Later discover lessons 3-7 have same bug
+- Fix them one at a time across multiple sessions
+
+✅ **Right Approach:**
+- Find field name bug in lesson 1
+- **STOP** - before fixing, check scope:
+  - Search codebase for similar patterns (use Grep/Glob)
+  - Identify all affected files (e.g., "all 7 V2 lessons")
+  - Check if renderer already handles both formats
+- Fix systematically:
+  - If renderer needs update, fix renderer first
+  - Document the pattern in validation scripts
+  - Add to COMMON-MISTAKES.md
+  - Create template/standards doc to prevent recurrence
+- Test all affected files
+- Commit once with full scope of fix
+
+**Why this matters:**
+- Prevents regression
+- Saves time (fix 7 files once, not 7 times across 7 sessions)
+- Ensures consistent patterns across codebase
+- Allows validation scripts to catch future instances
+
+**Common systemic issues to watch for:**
+- Field name inconsistencies across lesson JSON files
+- Missing CSS variables used across multiple stylesheets
+- Module index data out of sync with lesson JSON data
+- Cache-busting needed across all HTML files
 
 ---
 
@@ -532,6 +598,10 @@ UPDATE TRACKERS (mark lesson as LIVE)
 node scripts/bump-versions.js
 ```
 
+❌ **NEVER manually update `?v=` parameters** — this is error-prone and wastes time updating 20+ files
+
+✅ **ALWAYS use the automation script** — it's faster, more reliable, and guaranteed consistent
+
 This script automatically:
 - Scans all HTML files in the project
 - Finds all local CSS and JS references
@@ -541,11 +611,13 @@ This script automatically:
 
 After running, verify the changes with `git diff` and commit them along with your CSS/JS changes.
 
-**Manual alternative** (if script fails):
+**Manual alternative** (ONLY if script fails):
 1. Increment the `?v=` parameter on all `<link>` and `<script>` tags
 2. Use a Unix timestamp: `?v=$(date +%s)`
 3. Update ALL references across ALL HTML files (not just one file)
 4. Test with hard refresh (Ctrl+Shift+R)
+
+**If you manually updated cache versions, add to COMMON-MISTAKES.md as a reminder to use the script next time.**
 
 ### Rollback Protocol
 If a deployment breaks something:
