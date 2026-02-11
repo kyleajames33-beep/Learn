@@ -664,9 +664,18 @@ class LessonRenderer {
    * Matching Activity
    */
   renderMatchingActivity(activity) {
-    const shuffledItems = [...activity.items].sort(() => Math.random() - 0.5);
-    const shuffledMatches = [...activity.items].sort(() => Math.random() - 0.5);
-    
+    // Support both field name formats:
+    // Format A: activity.items with item.text / item.match
+    // Format B: activity.pairs with pair.left / pair.right
+    const rawItems = activity.items || activity.pairs || [];
+    const normalised = rawItems.map(item => ({
+      id: item.id,
+      text: item.text || item.left,
+      match: item.match || item.right
+    }));
+    const shuffledItems = [...normalised].sort(() => Math.random() - 0.5);
+    const shuffledMatches = [...normalised].sort(() => Math.random() - 0.5);
+
     return `
       <div class="activity-card activity-card--${activity.theme}" data-activity-id="${activity.id}">
         <div class="activity-card-header">
