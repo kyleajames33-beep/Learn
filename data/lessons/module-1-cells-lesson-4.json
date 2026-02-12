@@ -12,8 +12,10 @@
   "v2": true,
   "hero": {
     "subjectBadge": "HSC Biology",
+    "moduleBadge": "Module 1: Cells",
     "levelBadge": "Foundational",
     "icon": "🌿",
+    "duration": "60 minutes",
     "gradient": "blue-to-purple"
   },
   "learningIntentions": [
@@ -109,31 +111,31 @@
       "description": "Match each plant-specific structure with its primary function.",
       "theme": "green",
       "xpReward": 50,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Cell wall",
-          "right": "Provides mechanical strength and support"
+          "text": "Cell wall",
+          "match": "Provides mechanical strength and support"
         },
         {
           "id": "pair2",
-          "left": "Central vacuole",
-          "right": "Stores water and maintains turgor pressure"
+          "text": "Central vacuole",
+          "match": "Stores water and maintains turgor pressure"
         },
         {
           "id": "pair3",
-          "left": "Chloroplast",
-          "right": "Site of photosynthesis"
+          "text": "Chloroplast",
+          "match": "Site of photosynthesis"
         },
         {
           "id": "pair4",
-          "left": "Tonoplast",
-          "right": "Membrane surrounding the vacuole"
+          "text": "Tonoplast",
+          "match": "Membrane surrounding the vacuole"
         },
         {
           "id": "pair5",
-          "left": "Cellulose",
-          "right": "Polysaccharide providing tensile strength"
+          "text": "Cellulose",
+          "match": "Polysaccharide providing tensile strength"
         }
       ]
     },
@@ -179,26 +181,26 @@
       "description": "Match each chloroplast structure with its functional significance.",
       "theme": "indigo",
       "xpReward": 50,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Grana (thylakoid stacks)",
-          "right": "Large surface area for light absorption"
+          "text": "Grana (thylakoid stacks)",
+          "match": "Large surface area for light absorption"
         },
         {
           "id": "pair2",
-          "left": "Stroma",
-          "right": "Site of Calvin cycle (carbon fixation)"
+          "text": "Stroma",
+          "match": "Site of Calvin cycle (carbon fixation)"
         },
         {
           "id": "pair3",
-          "left": "Chlorophyll",
-          "right": "Pigment that captures light energy"
+          "text": "Chlorophyll",
+          "match": "Pigment that captures light energy"
         },
         {
           "id": "pair4",
-          "left": "Double membrane",
-          "right": "Regulates entry/exit of molecules"
+          "text": "Double membrane",
+          "match": "Regulates entry/exit of molecules"
         }
       ]
     },
@@ -271,7 +273,7 @@
     }
   ],
   "assessment": {
-    "mcq": [
+    "multipleChoice": [
       {
         "id": "mcq1",
         "question": "Which of the following is NOT found in a typical plant cell?",
@@ -338,7 +340,7 @@
         "marks": 1
       }
     ],
-    "saq": [
+    "shortAnswer": [
       {
         "id": "saq1",
         "question": "Explain how the structure of the chloroplast is adapted for photosynthesis.",
@@ -498,6 +500,13 @@
     "lastModified": "2026-02-10",
     "version": "2.0.0",
     "format": "V2.0",
-    "tags": ["plant-cell", "cell-wall", "chloroplast", "vacuole", "turgor-pressure", "photosynthesis"]
+    "tags": [
+      "plant-cell",
+      "cell-wall",
+      "chloroplast",
+      "vacuole",
+      "turgor-pressure",
+      "photosynthesis"
+    ]
   }
 }

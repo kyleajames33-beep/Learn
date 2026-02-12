@@ -12,8 +12,10 @@
   "v2": true,
   "hero": {
     "subjectBadge": "HSC Biology",
+    "moduleBadge": "Module 1: Cells",
     "levelBadge": "Foundational",
     "icon": "🔬",
+    "duration": "50 minutes",
     "gradient": "blue-to-purple"
   },
   "learningIntentions": [
@@ -189,31 +191,31 @@
       "description": "Match each image description with the microscope type that produced it.",
       "theme": "teal",
       "xpReward": 60,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Grayscale image showing mitochondrial cristae and ribosomes",
-          "right": "TEM"
+          "text": "Grayscale image showing mitochondrial cristae and ribosomes",
+          "match": "TEM"
         },
         {
           "id": "pair2",
-          "left": "Colour image with stained nuclei, cells appear transparent",
-          "right": "Light Microscope"
+          "text": "Colour image with stained nuclei, cells appear transparent",
+          "match": "Light Microscope"
         },
         {
           "id": "pair3",
-          "left": "3D view of pollen grain with surface spikes and ridges",
-          "right": "SEM"
+          "text": "3D view of pollen grain with surface spikes and ridges",
+          "match": "SEM"
         },
         {
           "id": "pair4",
-          "left": "Black and white cross-section showing nuclear envelope layers",
-          "right": "TEM"
+          "text": "Black and white cross-section showing nuclear envelope layers",
+          "match": "TEM"
         },
         {
           "id": "pair5",
-          "left": "Living paramecium swimming in pond water",
-          "right": "Light Microscope"
+          "text": "Living paramecium swimming in pond water",
+          "match": "Light Microscope"
         }
       ]
     },
@@ -254,37 +256,37 @@
       "description": "Match each research application with the most appropriate microscope type.",
       "theme": "orange",
       "xpReward": 60,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Diagnosing malaria from blood smear",
-          "right": "Light Microscope"
+          "text": "Diagnosing malaria from blood smear",
+          "match": "Light Microscope"
         },
         {
           "id": "pair2",
-          "left": "Counting sperm motility",
-          "right": "Light Microscope"
+          "text": "Counting sperm motility",
+          "match": "Light Microscope"
         },
         {
           "id": "pair3",
-          "left": "Identifying pollen grains forensically",
-          "right": "SEM"
+          "text": "Identifying pollen grains forensically",
+          "match": "SEM"
         },
         {
           "id": "pair4",
-          "left": "Studying mitochondrial cristae structure",
-          "right": "TEM"
+          "text": "Studying mitochondrial cristae structure",
+          "match": "TEM"
         },
         {
           "id": "pair5",
-          "left": "Detecting viruses in infected tissue",
-          "right": "TEM"
+          "text": "Detecting viruses in infected tissue",
+          "match": "TEM"
         }
       ]
     }
   ],
   "assessment": {
-    "mcq": [
+    "multipleChoice": [
       {
         "id": "mcq1",
         "question": "What is the primary advantage of electron microscopes over light microscopes?",
@@ -351,7 +353,7 @@
         "marks": 1
       }
     ],
-    "saq": [
+    "shortAnswer": [
       {
         "id": "saq1",
         "question": "Explain the difference between magnification and resolution. Why is resolution more important than magnification when viewing small cellular structures?",
@@ -529,6 +531,13 @@
     "lastModified": "2026-02-10",
     "version": "2.0.0",
     "format": "V2.0",
-    "tags": ["microscopy", "TEM", "SEM", "light-microscope", "resolution", "magnification"]
+    "tags": [
+      "microscopy",
+      "TEM",
+      "SEM",
+      "light-microscope",
+      "resolution",
+      "magnification"
+    ]
   }
 }

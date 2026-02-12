@@ -12,8 +12,10 @@
   "v2": true,
   "hero": {
     "subjectBadge": "HSC Biology",
+    "moduleBadge": "Module 1: Cells",
     "levelBadge": "Foundational",
     "icon": "🦠",
+    "duration": "50 minutes",
     "gradient": "blue-to-purple"
   },
   "learningIntentions": [
@@ -587,25 +589,36 @@
     ]
   },
   "copyToBook": {
-    "definitions": [
-      "Prokaryotic cell: A cell with no membrane-bound nucleus or organelles (e.g. bacteria, archaea).",
-      "Eukaryotic cell: A cell with a membrane-bound nucleus and membrane-bound organelles (e.g. animals, plants, fungi).",
-      "Nucleoid region: The area in a prokaryotic cell where circular DNA is concentrated, with no surrounding membrane.",
-      "Endosymbiotic theory: The theory that mitochondria and chloroplasts originated from prokaryotic cells engulfed by a larger host cell.",
-      "Compartmentalisation: The division of a eukaryotic cell into membrane-bound compartments (organelles), allowing incompatible chemical reactions to occur simultaneously.",
-      "Mitochondria: Double-membraned organelles that carry out cellular respiration and produce ATP; have their own circular DNA and 70S ribosomes.",
-      "Chloroplast: Double-membraned organelle found in plant cells and algae that carries out photosynthesis; also has its own DNA and 70S ribosomes."
-    ],
-    "keyPoints": [
-      "Prokaryotes: no nucleus, no membrane-bound organelles, circular DNA, 70S ribosomes, 0.1–5 μm",
-      "Eukaryotes: membrane-bound nucleus, membrane-bound organelles, linear chromosomes with histones, 80S ribosomes, 10–100 μm",
-      "Key organelles: nucleus, mitochondria, ER, Golgi apparatus, lysosomes, chloroplasts (plants)",
-      "Endosymbiotic evidence: double membrane, own circular DNA, 70S ribosomes, binary fission, DNA similarity to bacteria",
-      "Prokaryotes appeared ~3.5 billion years ago; eukaryotes ~2 billion years ago"
-    ],
-    "diagrams": [
-      "Comparison table of prokaryotic vs eukaryotic cell features",
-      "Timeline: prokaryotes (3.5 bya) → endosymbiosis → eukaryotes (2 bya) → multicellular life (1 bya)"
+    "sections": [
+      {
+        "title": "Key Definitions",
+        "items": [
+          "Prokaryotic cell: A cell with no membrane-bound nucleus or organelles (e.g. bacteria, archaea).",
+          "Eukaryotic cell: A cell with a membrane-bound nucleus and membrane-bound organelles (e.g. animals, plants, fungi).",
+          "Nucleoid region: The area in a prokaryotic cell where circular DNA is concentrated, with no surrounding membrane.",
+          "Endosymbiotic theory: The theory that mitochondria and chloroplasts originated from prokaryotic cells engulfed by a larger host cell.",
+          "Compartmentalisation: The division of a eukaryotic cell into membrane-bound compartments (organelles), allowing incompatible chemical reactions to occur simultaneously.",
+          "Mitochondria: Double-membraned organelles that carry out cellular respiration and produce ATP; have their own circular DNA and 70S ribosomes.",
+          "Chloroplast: Double-membraned organelle found in plant cells and algae that carries out photosynthesis; also has its own DNA and 70S ribosomes."
+        ]
+      },
+      {
+        "title": "Key Points",
+        "items": [
+          "Prokaryotes: no nucleus, no membrane-bound organelles, circular DNA, 70S ribosomes, 0.1–5 μm",
+          "Eukaryotes: membrane-bound nucleus, membrane-bound organelles, linear chromosomes with histones, 80S ribosomes, 10–100 μm",
+          "Key organelles: nucleus, mitochondria, ER, Golgi apparatus, lysosomes, chloroplasts (plants)",
+          "Endosymbiotic evidence: double membrane, own circular DNA, 70S ribosomes, binary fission, DNA similarity to bacteria",
+          "Prokaryotes appeared ~3.5 billion years ago; eukaryotes ~2 billion years ago"
+        ]
+      },
+      {
+        "title": "Important Diagrams",
+        "items": [
+          "Comparison table of prokaryotic vs eukaryotic cell features",
+          "Timeline: prokaryotes (3.5 bya) → endosymbiosis → eukaryotes (2 bya) → multicellular life (1 bya)"
+        ]
+      }
     ]
   },
   "prerequisites": [],

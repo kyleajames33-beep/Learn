@@ -12,8 +12,10 @@
   "v2": true,
   "hero": {
     "subjectBadge": "HSC Biology",
+    "moduleBadge": "Module 1: Cells",
     "levelBadge": "Foundational",
     "icon": "🔬",
+    "duration": "60 minutes",
     "gradient": "blue-to-purple"
   },
   "learningIntentions": [
@@ -261,32 +263,32 @@
       "description": "Match each tenet with evidence that supports it.",
       "theme": "orange",
       "xpReward": 50,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Tenet 1: All living things are cells",
-          "right": "Microscopy shows cells in all examined organisms"
+          "text": "Tenet 1: All living things are cells",
+          "match": "Microscopy shows cells in all examined organisms"
         },
         {
           "id": "pair2",
-          "left": "Tenet 2: Cell is basic unit",
-          "right": "Tissues are composed of cells in specific patterns"
+          "text": "Tenet 2: Cell is basic unit",
+          "match": "Tissues are composed of cells in specific patterns"
         },
         {
           "id": "pair3",
-          "left": "Tenet 3: Cells from cells",
-          "right": "Embryos develop from single cells through division"
+          "text": "Tenet 3: Cells from cells",
+          "match": "Embryos develop from single cells through division"
         },
         {
           "id": "pair4",
-          "left": "Modern extension",
-          "right": "All cells contain DNA as hereditary material"
+          "text": "Modern extension",
+          "match": "All cells contain DNA as hereditary material"
         }
       ]
     }
   ],
   "assessment": {
-    "mcq": [
+    "multipleChoice": [
       {
         "id": "mcq1",
         "question": "Which scientist first observed and named 'cells'?",
@@ -353,7 +355,7 @@
         "marks": 1
       }
     ],
-    "saq": [
+    "shortAnswer": [
       {
         "id": "saq1",
         "question": "Outline the contribution of TWO scientists to the development of cell theory.",
@@ -511,6 +513,13 @@
     "lastModified": "2026-02-10",
     "version": "2.0.0",
     "format": "V2.0",
-    "tags": ["cell-theory", "history", "Hooke", "Schwann", "Virchow", "living-vs-nonliving"]
+    "tags": [
+      "cell-theory",
+      "history",
+      "Hooke",
+      "Schwann",
+      "Virchow",
+      "living-vs-nonliving"
+    ]
   }
 }

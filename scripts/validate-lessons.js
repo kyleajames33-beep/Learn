@@ -182,12 +182,12 @@ function validateLessonContent(data, filePath) {
     for (const activity of activities) {
       if (activity.type === 'matching') {
         if (activity.pairs) {
-          warnings.push(`Activity "${activity.id}": Uses deprecated "pairs" field — prefer "items" with "text"/"match" properties`);
+          errors.push(`Activity "${activity.id}": Uses deprecated "pairs" field — must use "items" with "text"/"match" properties (V2 standard)`);
         }
         if (activity.items && activity.items[0]) {
           const firstItem = activity.items[0];
           if (firstItem.left || firstItem.right) {
-            warnings.push(`Activity "${activity.id}": Uses deprecated "left"/"right" fields — prefer "text"/"match"`);
+            errors.push(`Activity "${activity.id}": Uses deprecated "left"/"right" fields — must use "text"/"match" (V2 standard)`);
           }
         }
       }
@@ -216,10 +216,10 @@ function validateLessonContent(data, filePath) {
     // Check assessment field names
     if (data.assessment) {
       if (data.assessment.mcq) {
-        warnings.push(`Assessment: Uses deprecated "mcq" field — prefer "multipleChoice"`);
+        errors.push(`Assessment: Uses deprecated "mcq" field — must use "multipleChoice" (V2 standard)`);
       }
       if (data.assessment.saq) {
-        warnings.push(`Assessment: Uses deprecated "saq" field — prefer "shortAnswer"`);
+        errors.push(`Assessment: Uses deprecated "saq" field — must use "shortAnswer" (V2 standard)`);
       }
 
       // Check MCQ format (prefer text-based correctAnswer over index-based correct)
@@ -247,16 +247,16 @@ function validateLessonContent(data, filePath) {
       errors.push(`${fileName}: V2 lesson missing "hero" object`);
     } else {
       if (!data.hero.subjectBadge) {
-        warnings.push(`${fileName}: hero missing "subjectBadge"`);
+        errors.push(`${fileName}: hero missing "subjectBadge" (required for V2)`);
       }
       if (!data.hero.moduleBadge) {
-        warnings.push(`${fileName}: hero missing "moduleBadge"`);
+        errors.push(`${fileName}: hero missing "moduleBadge" (required for V2)`);
       }
       if (!data.hero.icon) {
-        warnings.push(`${fileName}: hero missing "icon"`);
+        errors.push(`${fileName}: hero missing "icon" (required for V2)`);
       }
       if (!data.hero.duration) {
-        warnings.push(`${fileName}: hero missing "duration"`);
+        errors.push(`${fileName}: hero missing "duration" (required for V2)`);
       }
     }
 
@@ -278,7 +278,7 @@ function validateLessonContent(data, filePath) {
     if (!data.copyToBook) {
       warnings.push(`${fileName}: V2 lesson missing "copyToBook" section`);
     } else if (!data.copyToBook.sections || !Array.isArray(data.copyToBook.sections)) {
-      warnings.push(`${fileName}: copyToBook missing "sections" array`);
+      errors.push(`${fileName}: copyToBook missing "sections" array (required for V2)`);
     } else if (data.copyToBook.sections.length === 0) {
       warnings.push(`${fileName}: copyToBook has no sections`);
     } else {

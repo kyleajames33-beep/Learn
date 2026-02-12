@@ -7,10 +7,11 @@
   "module": "Module X: Module Name",
   "duration": "60 minutes",
 
+  "_comment_hero": "REQUIRED: hero must have subjectBadge, moduleBadge, icon, duration",
   "hero": {
     "subjectBadge": "HSC Biology",
-    "moduleBadge": "Year 11",
-    "icon": "dna",
+    "moduleBadge": "Module 1: Cells",
+    "icon": "🔬",
     "duration": "60 minutes"
   },
 
@@ -21,6 +22,7 @@
 
   "contentHTML": "<h2>Section 1: Introduction</h2><p>Rich HTML content goes here...</p>",
 
+  "_comment_activities": "REQUIRED: Use 'items' with 'text'/'match' (NOT 'pairs' with 'left'/'right')",
   "activities": [
     {
       "id": "activity-1",
@@ -77,6 +79,7 @@
     }
   ],
 
+  "_comment_assessment": "REQUIRED: Use 'multipleChoice' (NOT 'mcq') and 'shortAnswer' (NOT 'saq')",
   "assessment": {
     "multipleChoice": [
       {
@@ -107,6 +110,7 @@
     ]
   },
 
+  "_comment_copyToBook": "REQUIRED: Use 'sections' array with 'items' (NOT 'definitions', 'keyPoints', 'diagrams')",
   "copyToBook": {
     "title": "Copy Into Your Book",
     "sections": [

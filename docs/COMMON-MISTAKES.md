@@ -1,6 +1,6 @@
 # Common Mistakes & Solutions
 
-**Last Updated:** 2026-02-11 (v4 — added V2 field name inconsistencies #25)
+**Last Updated:** 2026-02-12 (v5 — added V2 hero fields, deprecated pairs/mcq/saq, copyToBook format #29-32)
 **Purpose:** Known bugs, pitfalls, and how to avoid them
 
 Read this file BEFORE starting any work to avoid repeating past mistakes.
@@ -1223,3 +1223,211 @@ node scripts/bump-versions.js
   2. Updated renderer to handle both formats
   3. Created validation to prevent future issues
   4. One comprehensive fix instead of 7 separate ones
+
+---
+
+### 29. V2 Lessons Missing Required Hero Fields
+
+**Bug:** Validation warnings "hero missing moduleBadge" and "hero missing duration"
+
+**Cause:**
+```json
+// WRONG - Incomplete hero object
+{
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "levelBadge": "Foundational",
+    "icon": "🔬",
+    "gradient": "blue-to-purple"
+  }
+}
+```
+
+**Solution:**
+```json
+// RIGHT - Complete hero object with all required fields
+{
+  "hero": {
+    "subjectBadge": "HSC Biology",
+    "moduleBadge": "Module 1: Cells",
+    "levelBadge": "Foundational",
+    "icon": "🔬",
+    "duration": "60 minutes",
+    "gradient": "blue-to-purple"
+  }
+}
+```
+
+**How to avoid:**
+1. Use template: `data/lessons/TEMPLATE-V2.json` (has all required fields)
+2. Run validation: `node scripts/validate-lessons.js` (now blocks with ERRORS, not warnings)
+3. Check V2 standards: `docs/V2-LESSON-STANDARDS.md`
+
+**Why it matters:**
+- Hero section displays badge info to students
+- moduleBadge shows which module (e.g., "Module 1: Cells")
+- duration shows time estimate for lesson planning
+
+**Fixed in:** Lessons 1-5 (2026-02-11)
+
+---
+
+### 30. Using Deprecated "pairs" Field in Matching Activities
+
+**Bug:** Validation errors: Activity uses deprecated "pairs" field
+
+**Cause:**
+```json
+// WRONG - Old V1 format with pairs/left/right
+{
+  "type": "matching",
+  "pairs": [
+    {
+      "id": "pair1",
+      "left": "Mitochondria",
+      "right": "Produces ATP"
+    }
+  ]
+}
+```
+
+**Solution:**
+```json
+// RIGHT - V2 format with items/text/match
+{
+  "type": "matching",
+  "items": [
+    {
+      "id": "item1",
+      "text": "Mitochondria",
+      "match": "Produces ATP"
+    }
+  ]
+}
+```
+
+**How to avoid:**
+1. Use template: `data/lessons/TEMPLATE-V2.json`
+2. Read standards: `docs/V2-LESSON-STANDARDS.md`
+3. Run validation: `node scripts/validate-lessons.js` (now blocks with ERROR)
+
+**Automated conversion:**
+```python
+# Convert pairs to items
+for activity in lesson['activities']:
+    if 'pairs' in activity:
+        activity['items'] = [
+            {'id': p['id'], 'text': p['left'], 'match': p['right']}
+            for p in activity['pairs']
+        ]
+        del activity['pairs']
+```
+
+**Why it matters:**
+- Renderer supports both but V2 standard is items/text/match
+- Consistency across all lessons
+- Validation now enforces this (ERRORS, not warnings)
+
+**Fixed in:** Lessons 1, 3, 4, 5 (2026-02-11)
+
+---
+
+### 31. Using Deprecated "mcq"/"saq" Fields in Assessment
+
+**Bug:** Validation errors: Assessment uses deprecated "mcq" field
+
+**Cause:**
+```json
+// WRONG - Old V1 format
+{
+  "assessment": {
+    "mcq": [...],
+    "saq": [...]
+  }
+}
+```
+
+**Solution:**
+```json
+// RIGHT - V2 format
+{
+  "assessment": {
+    "multipleChoice": [...],
+    "shortAnswer": [...]
+  }
+}
+```
+
+**How to avoid:**
+1. Use template: `data/lessons/TEMPLATE-V2.json`
+2. Read standards: `docs/V2-LESSON-STANDARDS.md`
+3. Run validation: `node scripts/validate-lessons.js` (now blocks with ERROR)
+
+**Automated conversion:**
+```python
+# Convert mcq/saq to multipleChoice/shortAnswer
+if 'mcq' in lesson['assessment']:
+    lesson['assessment']['multipleChoice'] = lesson['assessment'].pop('mcq')
+if 'saq' in lesson['assessment']:
+    lesson['assessment']['shortAnswer'] = lesson['assessment'].pop('saq')
+```
+
+**Why it matters:**
+- Field names must match V2 standards
+- multipleChoice and shortAnswer are more descriptive than abbreviations
+- Consistency across all V2 lessons
+- Validation now enforces this (ERRORS, not warnings)
+
+**Fixed in:** Lesson 1 (2026-02-11)
+
+---
+
+### 32. V2 Lessons Using V1 copyToBook Format
+
+**Bug:** Validation errors: copyToBook missing "sections" array
+
+**Cause:**
+```json
+// WRONG - V1 format with definitions/keyPoints/diagrams
+{
+  "copyToBook": {
+    "definitions": [...],
+    "keyPoints": [...],
+    "diagrams": [...]
+  }
+}
+```
+
+**Solution:**
+```json
+// RIGHT - V2 format with sections array
+{
+  "copyToBook": {
+    "sections": [
+      {
+        "title": "Key Definitions",
+        "items": [...]
+      },
+      {
+        "title": "Key Points",
+        "items": [...]
+      }
+    ]
+  }
+}
+```
+
+**How to avoid:**
+1. Use template: `data/lessons/TEMPLATE-V2.json`
+2. Read standards: `docs/V2-LESSON-STANDARDS.md`
+3. Run validation: `node scripts/validate-lessons.js` (now blocks with ERROR)
+
+**Why it matters:**
+- V2 uses structured sections for better organisation
+- Renderer expects sections array
+- Allows multiple categorised copy-to-book sections
+- Validation now enforces this (ERROR for missing sections)
+
+**Fixed in:** Lesson 2 (2026-02-11)
+
+---

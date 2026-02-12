@@ -12,8 +12,10 @@
   "v2": true,
   "hero": {
     "subjectBadge": "HSC Biology",
+    "moduleBadge": "Module 1: Cells",
     "levelBadge": "Foundational",
     "icon": "🐭",
+    "duration": "60 minutes",
     "gradient": "blue-to-purple"
   },
   "learningIntentions": [
@@ -126,36 +128,36 @@
       "description": "Match each organelle with its primary function.",
       "theme": "blue",
       "xpReward": 50,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Nucleus",
-          "right": "Stores genetic information and controls cell activities"
+          "text": "Nucleus",
+          "match": "Stores genetic information and controls cell activities"
         },
         {
           "id": "pair2",
-          "left": "Mitochondria",
-          "right": "Produces ATP through cellular respiration"
+          "text": "Mitochondria",
+          "match": "Produces ATP through cellular respiration"
         },
         {
           "id": "pair3",
-          "left": "Rough ER",
-          "right": "Synthesises and modifies proteins"
+          "text": "Rough ER",
+          "match": "Synthesises and modifies proteins"
         },
         {
           "id": "pair4",
-          "left": "Smooth ER",
-          "right": "Synthesises lipids and detoxifies"
+          "text": "Smooth ER",
+          "match": "Synthesises lipids and detoxifies"
         },
         {
           "id": "pair5",
-          "left": "Golgi Apparatus",
-          "right": "Processes, packages, and distributes proteins"
+          "text": "Golgi Apparatus",
+          "match": "Processes, packages, and distributes proteins"
         },
         {
           "id": "pair6",
-          "left": "Lysosomes",
-          "right": "Digests waste and recycles organelles"
+          "text": "Lysosomes",
+          "match": "Digests waste and recycles organelles"
         }
       ]
     },
@@ -201,26 +203,26 @@
       "description": "Match each structural feature with how it enables function.",
       "theme": "indigo",
       "xpReward": 50,
-      "pairs": [
+      "items": [
         {
           "id": "pair1",
-          "left": "Mitochondrial cristae",
-          "right": "Increased surface area for ATP production"
+          "text": "Mitochondrial cristae",
+          "match": "Increased surface area for ATP production"
         },
         {
           "id": "pair2",
-          "left": "Nuclear pores",
-          "right": "Allow selective transport between nucleus and cytoplasm"
+          "text": "Nuclear pores",
+          "match": "Allow selective transport between nucleus and cytoplasm"
         },
         {
           "id": "pair3",
-          "left": "Ribosomes on rough ER",
-          "right": "Enable protein synthesis close to modification site"
+          "text": "Ribosomes on rough ER",
+          "match": "Enable protein synthesis close to modification site"
         },
         {
           "id": "pair4",
-          "left": "Golgi cisternae",
-          "right": "Provide compartments for sequential processing"
+          "text": "Golgi cisternae",
+          "match": "Provide compartments for sequential processing"
         }
       ]
     },
@@ -293,7 +295,7 @@
     }
   ],
   "assessment": {
-    "mcq": [
+    "multipleChoice": [
       {
         "id": "mcq1",
         "question": "Which organelle is responsible for producing ATP through cellular respiration?",
@@ -360,7 +362,7 @@
         "marks": 1
       }
     ],
-    "saq": [
+    "shortAnswer": [
       {
         "id": "saq1",
         "question": "Describe the structure of the mitochondrion and explain how its structure is adapted for ATP production.",
@@ -538,6 +540,13 @@
     "lastModified": "2026-02-10",
     "version": "2.0.0",
     "format": "V2.0",
-    "tags": ["animal-cell", "organelles", "nucleus", "mitochondria", "endomembrane-system", "lysosomes"]
+    "tags": [
+      "animal-cell",
+      "organelles",
+      "nucleus",
+      "mitochondria",
+      "endomembrane-system",
+      "lysosomes"
+    ]
   }
 }
